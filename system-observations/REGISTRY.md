@@ -5,7 +5,7 @@ Status: **generated, experimental, non-normative**
 Generated from the raw JSON records in this directory by `render_registry.py`.
 Raw evidence payloads remain only in the raw record; this table is an identity/provenance projection, not a second result database.
 
-Raw observations: **65**
+Raw observations: **66**
 
 | System | Canonical harness | Observation | Evidence surface(s) | Kind | Provenance | Compatibility | Raw record |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -66,6 +66,7 @@ Raw observations: **65**
 | Squad | [squad](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/squad.md) | `squad-marble-aligned-coordination-ablation` | MARBLE aligned four-domain re-run | `native-mechanism-ablation` | `first-party-reported` | `native-system` | [squad.json](squad.json) |
 | Squad | [squad](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/squad.md) | `squad-marble-completion-ablation` | MARBLE factorial ablation | `native-mechanism-ablation` | `first-party-reported` | `native-system` | [squad.json](squad.json) |
 | Squad | [squad](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/squad.md) | `squad-shared-state-conflict-attenuation-2026-03` | immutable first-party repository history plus first-party public operational case study | `operational-history-witness` | `first-party-reported` | `native-system` | [squad-operational-history.json](squad-operational-history.json) |
+| STALE benchmark organization | — | `stale-semantic-interference-communication-2026` | STALE synthetic, corrected mined-real, and real-derived semantic-interference study | `semantic-interference-communication-study` | `first-party-reported` | `benchmark-scaffolded` | [stale-bench.json](stale-bench.json) |
 | SupervisorAgent + SMAS | — | `supervisoragent-smas-gaia-pass1-2026` | SupervisorAgent SMAS GAIA validation pass@1 | `system-benchmark-result` | `first-party-reported` | `benchmark-scaffolded` | [supervisoragent-smas.json](supervisoragent-smas.json) |
 | SWE-agent | [swe-agent](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/swe-agent.md) | `swe-agent__swe-bench-verified__claude-4-sonnet-20250514__20250522` | SWE-bench Verified | `system-benchmark-result` | `external-reproduced` | `native-system` | [swe-agent-benchmark-results-external-reproduced-native-system.json](swe-agent-benchmark-results-external-reproduced-native-system.json) |
 | SWE-Review-Bench | — | `swe-review-generate-review-revise-2026-07` | SWE-Review-Bench | `system-benchmark-result` | `first-party-reported` | `benchmark-scaffolded` | [swe-review.json](swe-review.json) |
