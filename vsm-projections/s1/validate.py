@@ -11,18 +11,11 @@ ROOT = HERE.parents[1]
 OBS = HERE / "observations.jsonl"
 RAW_DIR = ROOT / "system-observations"
 RAW_PREFIX = "../../system-observations/"
+FAMILY_MAP = ROOT / "vsm-projections" / "benchmark-family-map" / "map.json"
 
 ALLOWED_COMPAT = {"native-system", "adapter-preserved"}
 ALLOWED_REVISION = {"exact-historical", "version-known", "unknown"}
 ALLOWED_COMPARE = {"matched-model", "partially-matched", "descriptive-only"}
-ALLOWED_FAMILIES = {
-    "swe-bench",
-    "terminal-bench",
-    "pawbench",
-    "wildclawbench",
-    "claw-swe-bench",
-    "frontierharness-v1.0",
-}
 PROJECTION_KEYS = {"record_id", "function", "raw_observation_ref"}
 
 
@@ -35,6 +28,35 @@ def https(value: object) -> bool:
         return False
     parsed = urlparse(value)
     return parsed.scheme == "https" and bool(parsed.netloc)
+
+
+def load_direct_s1_families() -> set[str]:
+    if not FAMILY_MAP.is_file():
+        fail("benchmark-family map is missing")
+    try:
+        data = json.loads(FAMILY_MAP.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        fail(f"benchmark-family map is invalid JSON: {exc}")
+    if not isinstance(data, dict):
+        fail("benchmark-family map must be a JSON object")
+    entries = data.get("entries")
+    if not isinstance(entries, list):
+        fail("benchmark-family map entries must be a list")
+
+    families: set[str] = set()
+    for index, entry in enumerate(entries, start=1):
+        if not isinstance(entry, dict):
+            fail(f"benchmark-family map entry {index} must be an object")
+        if entry.get("function") != "S1" or entry.get("fit") != "direct":
+            continue
+        benchmark_id = entry.get("benchmark_id")
+        if not isinstance(benchmark_id, str) or not benchmark_id.strip():
+            fail(f"benchmark-family map direct S1 entry {index} has invalid benchmark_id")
+        families.add(benchmark_id)
+
+    if not families:
+        fail("benchmark-family map contains no direct S1 families")
+    return families
 
 
 def load_jsonl(path: Path, id_key: str) -> list[dict]:
@@ -101,6 +123,7 @@ def validate_canonical_linkage(raw: dict, rid: str) -> str:
 
 
 def main() -> None:
+    allowed_families = load_direct_s1_families()
     records = load_jsonl(OBS, "record_id")
     if not records:
         fail("no S1 projection observations")
@@ -124,8 +147,8 @@ def main() -> None:
         systems.add(harness_id)
 
         benchmark = raw.get("benchmark") or {}
-        if benchmark.get("family_id") not in ALLOWED_FAMILIES:
-            fail(f"{rid}: benchmark family is not an accepted direct S1 family")
+        if benchmark.get("family_id") not in allowed_families:
+            fail(f"{rid}: benchmark family is not a reviewed direct S1 family")
         for key in ("primary_source", "artifact_source"):
             if not https(benchmark.get(key)):
                 fail(f"{rid}: benchmark.{key} must be https")
@@ -167,7 +190,9 @@ def main() -> None:
             partially += 1
 
     print(f"ok: {len(records)} derived S1 observations across {len(systems)} canonical-linked systems")
+    print(f"reviewed direct S1 families: {len(allowed_families)}")
     print("neutral raw source: system-observations/*.json")
+    print("benchmark-family semantics: vsm-projections/benchmark-family-map/map.json")
     print("canonical assessment state: externally owned by opensiro/vsm-harness-index")
     print(f"comparison groups: {len(groups)}")
     print(f"cross-system partially-matched groups: {partially}")
