@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "experimental-non-normative",
+  "reviewed_at": "2026-09-28",
+  "base_map_ref": "vsm-projections/benchmark-family-map/map.json",
+  "purpose": "Machine-readable additions discovered after frozen function-level closure snapshots without rewriting those historical closure counts.",
+  "additions": [
+    {
+      "function": "S4",
+      "benchmark_id": "agent-harness-optimizer-prism",
+      "benchmark_name": "Airbnb Agent Harness Optimizer PRISM",
+      "fit": "direct",
+      "primary_source": "https://github.com/airbnb/agent-harness-optimizer/tree/0d7652b42296c8df07532fa3787fc956250741e7",
+      "evaluated_object": "First-party AHO optimizer plus persistent evolving harness state, with the inner task-solving model fixed while system-prompt and tool-boundary middleware changes are selected using repair/holdout evidence and evaluated on later held-out cases.",
+      "evaluation_mode": "published-heldout-harness-optimization",
+      "system_linkage": "external-native-noncanonical",
+      "tracking_issue": 26,
+      "review_ref": "vsm-projections/benchmark-family-map/S4-AIRBNB-AHO-REVIEW.md",
+      "delta_ref": "vsm-projections/s4/post-closure-deltas/airbnb-agent-harness-optimizer-2026-09-28.json",
+      "non_claim": "Direct S4 fit belongs to the external AHO optimizer plus evolving-harness boundary. The fixed inner model, outer proposer, BFCL or tau2 benchmark do not inherit S4 ownership, and this single non-canonical study does not select an S4 primary baseline."
+    }
+  ]
+}
