@@ -19,6 +19,7 @@ ALLOWED_FAMILIES = {
     "swe-bench",
     "terminal-bench",
     "pawbench",
+    "wildclawbench",
     "claw-swe-bench",
     "frontierharness-v1.0",
 }
