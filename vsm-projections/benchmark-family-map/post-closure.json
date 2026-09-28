@@ -32,6 +32,20 @@
       "review_ref": "vsm-projections/benchmark-family-map/S4-SKILLREVISE-ALFWORLD-REVIEW.md",
       "delta_ref": "vsm-projections/s4/post-closure-deltas/skillrevise-alfworld-principle-absorption-2026-09-28.json",
       "non_claim": "Direct S4 fit belongs only to the external SkillRevise calibration-to-frozen-Principle-Memory-to-later-operation boundary. It does not transfer S4 ownership to Qwen3-8B, ALFWorld, the ordinary same-task maxrev3 loop, or any canonical harness, and it does not select an S4 primary baseline."
+    },
+    {
+      "function": "S3*",
+      "benchmark_id": "teambench-verifier-remediation",
+      "benchmark_name": "TeamBench verifier-remediation ablation",
+      "fit": "direct",
+      "primary_source": "https://github.com/ybkim95/TeamBench/tree/d185aef1916fd86a9ba554d581fd256319a973af",
+      "evaluated_object": "First-party TeamBench benchmark-defined composed organization in which an independently configured Verifier has full-spec and direct workspace/test access, returns audit failures to the Executor for remediation, and re-verifies the changed workspace.",
+      "evaluation_mode": "published-matched-verifier-remediation-ablation",
+      "system_linkage": "benchmark-scaffolded-noncanonical",
+      "tracking_issue": 40,
+      "review_ref": "vsm-projections/benchmark-family-map/S3STAR-TEAMBENCH-REVIEW.md",
+      "delta_ref": "vsm-projections/s3star/post-closure-deltas/teambench-verifier-remediation-2026-09-28.json",
+      "non_claim": "Direct S3* fit belongs only to the TeamBench benchmark-defined composed Verifier/remediation organization. It does not transfer S3* ownership to GPT-5.4 Mini, the external deterministic grader, any canonical harness, or every mandatory verifier stage, and it does not select an S3* primary baseline."
     }
   ]
 }
