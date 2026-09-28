@@ -5,7 +5,7 @@ Status: **generated, experimental, non-normative**
 Generated from the raw JSON records in this directory by `render_registry.py`.
 Raw evidence payloads remain only in the raw record; this table is an identity/provenance projection, not a second result database.
 
-Raw observations: **59**
+Raw observations: **60**
 
 | System | Canonical harness | Observation | Evidence surface(s) | Kind | Provenance | Compatibility | Raw record |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -57,6 +57,7 @@ Raw observations: **59**
 | Pi | [pi](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/pi.md) | `pi__frontierharness-v1.0__kimi-k3-fireworks__20260822` | FrontierHarness Eval v1 | `system-benchmark-result` | `external-reproduced` | `adapter-preserved` | [pi-benchmark-results-external-reproduced-adapter-preserved.json](pi-benchmark-results-external-reproduced-adapter-preserved.json) |
 | QwenPaw | [qwenpaw](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/qwenpaw.md) | `qwenpaw__pawbench-v1.0__qwen3.6-35b-a3b__20260529` | PawBench v1.0 | `system-benchmark-result` | `first-party-reported` | `adapter-preserved` | [qwenpaw-benchmark-results-first-party-reported-adapter-preserved.json](qwenpaw-benchmark-results-first-party-reported-adapter-preserved.json) |
 | SkillEvolBench benchmark organization | — | `skillevolbench-frozen-deployment-protocol-2026` | SkillEvolBench frozen-deployment protocol | `persistent-adaptation-study` | `first-party-reported` | `benchmark-scaffolded` | [skillevolbench.json](skillevolbench.json) |
+| SkillRevise | — | `skillrevise-alfworld-principle-absorption-heldout-2026` | ALFWorld; SkillRevise ALFWorld principle-absorption calibration-to-heldout evaluation | `persistent-principle-memory-calibration-heldout-study` | `first-party-reported` | `native-system` | [skillrevise.json](skillrevise.json) |
 | SkillRevise | — | `skillrevise-trace-conditioned-skill-revision-2026` | SkillsBench; SkillLearnBench-Random; SWE-Skills-Bench-Hard; SkillRevise main benchmark study across SkillsBench, SkillLearnBench-Random, and SWE-Skills-Bench-Hard | `persistent-skill-revision-study` | `first-party-reported` | `native-system` | [skillrevise.json](skillrevise.json) |
 | Squad | [squad](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/squad.md) | `squad-marble-aligned-coordination-ablation` | MARBLE aligned four-domain re-run | `native-mechanism-ablation` | `first-party-reported` | `native-system` | [squad.json](squad.json) |
 | Squad | [squad](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/squad.md) | `squad-marble-completion-ablation` | MARBLE factorial ablation | `native-mechanism-ablation` | `first-party-reported` | `native-system` | [squad.json](squad.json) |
