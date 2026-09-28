@@ -20,6 +20,8 @@ REQUIRED = [
     "system-observations/registry.psv",
     "vsm-projections/README.md",
     "comparison-cells/README.md",
+    "comparison-cells/validate.py",
+    "comparison-cells/s1-pawbench-v1-qwen3.6-35b-a3b.json",
     "baselines/README.md",
     "frontier/README.md",
     "historical/README.md",
@@ -148,6 +150,7 @@ else:
 for cmd in (
     [sys.executable, str(ROOT / "system-observations" / "validate.py")],
     [sys.executable, str(ROOT / "system-observations" / "render_registry.py"), "--check"],
+    [sys.executable, str(ROOT / "comparison-cells" / "validate.py")],
 ):
     if Path(cmd[1]).is_file():
         result = subprocess.run(cmd, cwd=ROOT, text=True, capture_output=True)
