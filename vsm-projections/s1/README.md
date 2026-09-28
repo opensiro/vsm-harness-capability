@@ -4,7 +4,9 @@ Status: experimental, non-normative.
 
 Issue: #382
 
-Parent benchmark-family review: `../vsm-benchmark-family-map/`
+Parent benchmark-family review: [`../benchmark-family-map/`](../benchmark-family-map/)
+
+PawBench family review: [`../benchmark-family-map/S1-PAWBENCH-REVIEW.md`](../benchmark-family-map/S1-PAWBENCH-REVIEW.md)
 
 Primary-baseline selection: `../../baselines/PRIMARY-BASELINES.md`
 
