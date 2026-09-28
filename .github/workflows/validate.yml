@@ -20,4 +20,4 @@ jobs:
       - name: Exercise live evidence admission path
         run: >-
           python scripts/admission_check.py
-          system-observations/qwenpaw-benchmark-results-first-party-reported-adapter-preserved.json
+          system-observations/codex-wildclawbench-external-reproduced-adapter-preserved.json
