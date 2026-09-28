@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-28",
+  "evidence_source_class": "first-party-reported",
+  "system_name": "TeamBench benchmark organization",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "benchmark-scaffolded",
+    "historical_relation": "Public TeamBench benchmark-defined Planner, Executor, and Verifier organization with committed ablation code and aggregate results at the pinned first-party revision.",
+    "source_revision": "d185aef1916fd86a9ba554d581fd256319a973af"
+  },
+  "primary_sources": [
+    "https://github.com/ybkim95/TeamBench/blob/d185aef1916fd86a9ba554d581fd256319a973af/shared/paper/lb90_full_aggregate.json",
+    "https://github.com/ybkim95/TeamBench/blob/d185aef1916fd86a9ba554d581fd256319a973af/harness/ablation.py",
+    "https://github.com/ybkim95/TeamBench/blob/d185aef1916fd86a9ba554d581fd256319a973af/shared/hf_dataset_card.md",
+    "https://github.com/ybkim95/TeamBench/blob/d185aef1916fd86a9ba554d581fd256319a973af/harness/run_all.py"
+  ],
+  "observations": [
+    {
+      "observation_id": "teambench-gpt54mini-verifier-remediation-lb90-2026",
+      "kind": "benchmark-defined-verifier-remediation-ablation",
+      "benchmark": "TeamBench-90",
+      "evidence_surface": "TeamBench-90 GPT-5.4 Mini full-versus-team_no_verify aggregate ablation",
+      "reviewed_revision": "d185aef1916fd86a9ba554d581fd256319a973af",
+      "model_slug": "gpt-5-4-mini",
+      "task_set": "leaderboard_90_tasks.json",
+      "task_count": 90,
+      "arms": {
+        "team_no_verify": {
+          "organization": "Planner -> Executor; Verifier phase and verifier-triggered remediation are absent",
+          "passed": 22,
+          "valid_n": 90,
+          "pass_rate": 0.24444444444444444,
+          "aggregate_source": "lb100_gpt5mini_5cond_seed0.json"
+        },
+        "full": {
+          "organization": "Planner -> Executor -> Verifier with verifier-triggered remediation enabled",
+          "passed": 27,
+          "valid_n": 90,
+          "pass_rate": 0.3,
+          "aggregate_source": "lb100_gpt-5.4-mini_oraclefull_seed0.json.checkpoint.jsonl+lb100_gpt5mini_5cond_seed0.json"
+        }
+      },
+      "external_validation_surface": "After each benchmark run, TeamBench invokes its task-specific grading path to score the produced run artifacts; the deterministic task grader is separate from the Planner, Executor, and Verifier role configuration used in the compared arms.",
+      "comparison_limitation": "This is a committed aggregate comparison for one fixed model slug and the same 90-task benchmark set, not a committed per-task paired result ledger. The full arm bundles both the Verifier role and verifier-triggered remediation, so the observed difference does not isolate verifier judgment from remediation. Other published model rows are heterogeneous and can show smaller, null, or negative full-versus-team_no_verify differences.",
+      "result_summary": "For GPT-5.4 Mini on the committed TeamBench-90 aggregate, team_no_verify passes 22 of 90 valid tasks (0.24444444444444444) and full passes 27 of 90 valid tasks (0.3)."
+    }
+  ]
+}

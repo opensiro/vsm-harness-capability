@@ -5,7 +5,7 @@ Status: **generated, experimental, non-normative**
 Generated from the raw JSON records in this directory by `render_registry.py`.
 Raw evidence payloads remain only in the raw record; this table is an identity/provenance projection, not a second result database.
 
-Raw observations: **60**
+Raw observations: **61**
 
 | System | Canonical harness | Observation | Evidence surface(s) | Kind | Provenance | Compatibility | Raw record |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -65,6 +65,7 @@ Raw observations: **60**
 | SupervisorAgent + SMAS | — | `supervisoragent-smas-gaia-pass1-2026` | SupervisorAgent SMAS GAIA validation pass@1 | `system-benchmark-result` | `first-party-reported` | `benchmark-scaffolded` | [supervisoragent-smas.json](supervisoragent-smas.json) |
 | SWE-agent | [swe-agent](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/swe-agent.md) | `swe-agent__swe-bench-verified__claude-4-sonnet-20250514__20250522` | SWE-bench Verified | `system-benchmark-result` | `external-reproduced` | `native-system` | [swe-agent-benchmark-results-external-reproduced-native-system.json](swe-agent-benchmark-results-external-reproduced-native-system.json) |
 | SWE-Review-Bench | — | `swe-review-generate-review-revise-2026-07` | SWE-Review-Bench | `system-benchmark-result` | `first-party-reported` | `benchmark-scaffolded` | [swe-review.json](swe-review.json) |
+| TeamBench benchmark organization | — | `teambench-gpt54mini-verifier-remediation-lb90-2026` | TeamBench-90; TeamBench-90 GPT-5.4 Mini full-versus-team_no_verify aggregate ablation | `benchmark-defined-verifier-remediation-ablation` | `first-party-reported` | `benchmark-scaffolded` | [teambench.json](teambench.json) |
 | thClaws | [thclaws](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/thclaws.md) | `thclaws-team-workspace-interference-attenuation-2026` | immutable first-party release, issue, commit and assessed-runtime history plus later first-party Agent Teams operational reports | `operational-history-witness` | `first-party-reported` | `native-system` | [thclaws-operational-history.json](thclaws-operational-history.json) |
 | The Specification Gap benchmark organization | — | `specification-gap-recovery-2026-03` | The Specification Gap / AmbigClass 2×2 conflict-recovery experiment | `benchmark-defined-coordination-ablation` | `first-party-reported` | `benchmark-scaffolded` | [specification-gap.json](specification-gap.json) |
 | TheAppliedScientist | [appliedscientist](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/appliedscientist.md) | `appliedscientist-iterative-review-2026-09` | AppliedScientist iterative reviewer-guided revision study (30 papers) | `iterative-review-revision-study` | `first-party-reported` | `native-system` | [appliedscientist.json](appliedscientist.json) |
