@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-29",
+  "evidence_source_class": "first-party-reported",
+  "system_name": "HRAO-E Constitutional Framework",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "native-system",
+    "historical_relation": "First-party production-history witness for the HRAO-E constitutional organization. The open-source constitutional-agent library is described by its maintainers as a portable extract from HRAO-E, but the production HRAO-E configuration/code revision governing these observations is not publicly pinned to one recoverable Git revision.",
+    "source_revision": "CognitiveThoughtEngine/constitutional-agent-governance@368717cb50b70826412f85022d23b3fd8a0dec77",
+    "code_revision_status": "production-revision-unresolved",
+    "paper_version": "10.5281/zenodo.19162104"
+  },
+  "primary_sources": [
+    "https://doi.org/10.5281/zenodo.19162104",
+    "https://cognitivethoughtengine.com/research.html",
+    "https://cognitivethoughtengine.com/blog/90-days-building-constitutional-ai-company.html",
+    "https://cognitivethoughtengine.com/blog/constitutional-self-governance.html",
+    "https://cognitivethoughtengine.com/blog/ralph-loop-resilience.html",
+    "https://github.com/CognitiveThoughtEngine/constitutional-agent-governance/tree/368717cb50b70826412f85022d23b3fd8a0dec77"
+  ],
+  "observations": [
+    {
+      "observation_id": "hrao-e-production-constitutional-amendment-loop-2026",
+      "kind": "production-constitutional-amendment-history",
+      "evidence_surface": "HRAO-E first-party production constitutional-amendment history",
+      "publication_id": "10.5281/zenodo.19162104",
+      "reporting_surfaces": [
+        {
+          "surface": "versioned Constitutional Self-Governance production study",
+          "reported_window_days": 77,
+          "reported_agent_count": 56,
+          "source": "10.5281/zenodo.19162104"
+        },
+        {
+          "surface": "90-day field report",
+          "reported_window_days": 90,
+          "reported_autonomous_agents_produced": 91,
+          "reported_decisions_per_day_at_day_90": 1312,
+          "reported_constitutional_amendments": 64,
+          "reported_constitution_sections_start": 15,
+          "reported_constitution_sections_end_minimum": 60,
+          "named_amendments_or_policy_changes": [
+            "RALPH Loop resilience protocol",
+            "PRE_REVENUE EPG stage"
+          ],
+          "source": "https://cognitivethoughtengine.com/blog/90-days-building-constitutional-ai-company.html"
+        },
+        {
+          "surface": "KLA constitutional amendment-loop field note",
+          "reported_constitutional_amendments": 67,
+          "ratification_authority": "human CEO as sole constitutional authority",
+          "agent_role": "agents may synthesize lessons, identify governance gaps and draft amendment proposals but cannot ratify their own amendments",
+          "enactment_semantics": "ratified amendments are committed to the constitutional document, versioned and described as immediately binding on all agent instances",
+          "return_to_operation_check": "Constitutional Growth Gate enforcement coverage checks whether ratified amendments are cited in execution logs as a proxy for enforcement",
+          "source": "https://cognitivethoughtengine.com/blog/constitutional-self-governance.html"
+        },
+        {
+          "surface": "RALPH Amendment 8.6.7 production case",
+          "amendment_id": "8.6.7",
+          "amendment_name": "RALPH resilience protocol",
+          "reported_trigger": "Feb 9–23, 2026 silent cron outage / CRON-DIAG-4/5/6 production incident",
+          "reported_status": "ratified",
+          "reported_effect": "replaces ad hoc exception handling with a binding fault-tolerance protocol that every agent must implement",
+          "source": "https://cognitivethoughtengine.com/blog/ralph-loop-resilience.html"
+        }
+      ],
+      "authority_and_return_summary": "Across the first-party production reports, operational failures and repeated governance gaps can lead agents to draft constitutional changes, but final ratification remains with the human constitutional authority. Ratified changes become versioned binding law for subsequent agent operation; the RALPH 8.6.7 report provides a named ratified amendment tied to a concrete production failure history.",
+      "provenance_limitation": "The reporting surfaces are first-party observational/field-report evidence and use changing point-in-time windows, so their counts are intentionally preserved separately rather than normalized into one study. OpenSiro has not independently audited the HRAO-E amendment ledger, reproduced the production deployment, or recovered an exact production Git revision containing the complete HRAO-E constitution and execution logs. The public constitutional-agent repository establishes a related portable implementation but is not treated as the production ledger itself."
+    }
+  ]
+}
