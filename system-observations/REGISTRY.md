@@ -5,7 +5,7 @@ Status: **generated, experimental, non-normative**
 Generated from the raw JSON records in this directory by `render_registry.py`.
 Raw evidence payloads remain only in the raw record; this table is an identity/provenance projection, not a second result database.
 
-Raw observations: **61**
+Raw observations: **62**
 
 | System | Canonical harness | Observation | Evidence surface(s) | Kind | Provenance | Compatibility | Raw record |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -30,6 +30,7 @@ Raw observations: **61**
 | GovSim-SelfGovern benchmark society | — | `govsim-selfgovern-membership-authority-2026-09` | GovSim-SelfGovern | `membership-authority-study` | `first-party-reported` | `benchmark-scaffolded` | [govsim-selfgovern.json](govsim-selfgovern.json) |
 | Grit | — | `grit-synthetic-merge-contention-2026-04` | Grit synthetic merge-contention sweep | `native-mechanism-ablation` | `first-party-reported` | `native-system` | [grit.json](grit.json) |
 | harness-bench Pilot 4 | — | `harness-bench-pilot4-review-revise-reverify-2026-07` | harness-bench Pilot 4 planning-tier ablation | `system-benchmark-result` | `first-party-reported` | `benchmark-scaffolded` | [harness-bench-pilot4.json](harness-bench-pilot4.json) |
+| HearthNet Scene 2 demo organization | — | `hearthnet-scene2-conflict-resolution-5run-2026` | HearthNet Scene 2 repeated conflict-resolution evaluation | `benchmark-defined-conflict-resolution-study` | `first-party-reported` | `benchmark-scaffolded` | [hearthnet.json](hearthnet.json) |
 | Hermes Agent | [hermes-agent](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/hermes-agent.md) | `hermes-agent__claw-swe-bench-full-350__glm-5.1__20260717` | Claw-SWE-Bench | `system-benchmark-result` | `external-reproduced` | `adapter-preserved` | [hermes-agent-benchmark-results-external-reproduced-adapter-preserved.json](hermes-agent-benchmark-results-external-reproduced-adapter-preserved.json) |
 | Hermes Agent | [hermes-agent](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/hermes-agent.md) | `hermes-agent__claw-swe-bench-full-350__qwen-3.6-flash__20260717` | Claw-SWE-Bench | `system-benchmark-result` | `external-reproduced` | `adapter-preserved` | [hermes-agent-benchmark-results-external-reproduced-adapter-preserved.json](hermes-agent-benchmark-results-external-reproduced-adapter-preserved.json) |
 | Hermes Agent | [hermes-agent](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/hermes-agent.md) | `hermes-agent__frontierharness-v1.0__kimi-k3-fireworks__20260822` | FrontierHarness Eval v1 | `system-benchmark-result` | `external-reproduced` | `adapter-preserved` | [hermes-agent-benchmark-results-external-reproduced-adapter-preserved.json](hermes-agent-benchmark-results-external-reproduced-adapter-preserved.json) |
