@@ -46,6 +46,7 @@
   },
   "raw_metric_owner": "system-observations",
   "projection_ref": "vsm-projections/s1/observations.jsonl",
+  "selected_baseline_ref": "baselines/S1-BASELINE.md",
   "notes": [
     "This cell materializes the already selected S1 primary; it introduces no new benchmark evidence.",
     "Historical harness identities are preserved by the referenced raw observations and must not be relabelled as current canonical revisions.",
