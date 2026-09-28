@@ -1,0 +1,74 @@
+name: externalize canonical Index linkage
+
+on:
+  push:
+    branches:
+      - bootstrap/experimental-capability
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: bootstrap/experimental-capability
+          fetch-depth: 0
+
+      - name: Adapt neutral registry to external canonical Index
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+
+          p = Path('system-observations/render_registry_core.py')
+          text = p.read_text()
+          text = text.replace('ROOT = HERE.parents[2]\n', 'ROOT = HERE.parent\nCANONICAL_INDEX_REPOSITORY = "opensiro/vsm-harness-index"\nCANONICAL_INDEX_BASE_URL = "https://github.com/opensiro/vsm-harness-index/blob/main/"\n')
+          text = text.replace('''            if not (ROOT / canonical_assessment_ref).is_file():\n                raise RegistryError(\n                    f"{record_ref}: canonical_assessment_ref does not exist: {canonical_assessment_ref}"\n                )\n''', '''            # canonical_assessment_ref is owned by opensiro/vsm-harness-index.\n            # Capability preserves the linkage path but does not copy or own canonical assessments.\n''')
+          text = text.replace('''                f"[{_escape_md(row.canonical_harness_id)}]"\n                f"(../../../{row.canonical_assessment_ref})"\n''', '''                f"[{_escape_md(row.canonical_harness_id)}]"\n                f"({CANONICAL_INDEX_BASE_URL}{row.canonical_assessment_ref})"\n''')
+          p.write_text(text)
+
+          p = Path('system-observations/README.md')
+          text = p.read_text()
+          text = text.replace('        ├── domain interpretation\n', '        ├── downstream domain-specific consumption\n')
+          text = text.replace('Function-specific, domain-specific, or comparison views should reference `observation_id` / `ablation_id` instead of copying the benchmark metric.', 'Function-specific/general-capability views and downstream domain-specific repositories should reference `observation_id` / `ablation_id` instead of copying the benchmark metric.')
+          text = text.replace('python experiments/functional-capability-depth/system-observations/render_registry.py', 'python system-observations/render_registry.py')
+          text = text.replace('python experiments/functional-capability-depth/system-observations/validate.py', 'python system-observations/validate.py')
+          text = text.replace('python experiments/functional-capability-depth/system-observations/render_registry.py --check', 'python system-observations/render_registry.py --check')
+          marker = 'A benchmark display label alone is not enough to establish canonical system identity.'
+          addition = '''Canonical assessment paths such as `assessments/<harness>.md` are external references into `opensiro/vsm-harness-index`; this repository does not copy or own those assessment files.\n\n'''
+          if addition.strip() not in text and marker in text:
+              text = text.replace(marker, addition + marker)
+          p.write_text(text)
+
+          p = Path('EVIDENCE-REGISTRY.md')
+          text = p.read_text()
+          marker = '## Canonical linkage\n'
+          if marker in text and 'Canonical assessment artifacts remain owned by `opensiro/vsm-harness-index`.' not in text:
+              text = text.replace(marker, marker + '\nCanonical assessment artifacts remain owned by `opensiro/vsm-harness-index`. Relative `canonical_assessment_ref` values in migrated raw records are external Index paths, not local Capability files.\n')
+          p.write_text(text)
+          PY
+
+      - name: Check registry after extraction
+        shell: bash
+        run: |
+          set -euo pipefail
+          python system-observations/validate.py
+          python system-observations/render_registry.py --check || python system-observations/render_registry.py
+          python system-observations/render_registry.py --check
+          git diff --check
+
+      - name: Commit extraction fix and remove one-shot workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f .github/workflows/fix-external-index-linkage.yml
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -A
+          git commit -m 'fix: externalize canonical Index linkage'
+          git push origin HEAD:bootstrap/experimental-capability
