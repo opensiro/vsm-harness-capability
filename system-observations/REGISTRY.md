@@ -5,12 +5,13 @@ Status: **generated, experimental, non-normative**
 Generated from the raw JSON records in this directory by `render_registry.py`.
 Raw evidence payloads remain only in the raw record; this table is an identity/provenance projection, not a second result database.
 
-Raw observations: **57**
+Raw observations: **58**
 
 | System | Canonical harness | Observation | Evidence surface(s) | Kind | Provenance | Compatibility | Raw record |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | A-Evolve | [a-evolve](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/a-evolve.md) | `a-evolve-harness-updating-2026` | A-Evolve harness-evolution study: SWE-bench Verified / MCP-Atlas / SkillsBench | `persistent-harness-update-study` | `first-party-reported` | `native-system` | [a-evolve.json](a-evolve.json) |
 | A-Evolve benchmark-defined evolving system | — | `a-evolve-harness-evolution-protocol-2026` | A-Evolve harness-evolution protocol | `persistent-adaptation-study` | `first-party-reported` | `benchmark-scaffolded` | [a-evolve-composed.json](a-evolve-composed.json) |
+| Airbnb Agent Harness Optimizer | — | `airbnb-agent-harness-optimizer-prism-heldout-lift-2026` | BFCL multi-round; tau2-Retail; tau2-Telecom; PRISM fixed-model held-out harness-optimization study across BFCL multi-round, tau2-Retail, and tau2-Telecom | `persistent-harness-optimization-study` | `first-party-reported` | `native-system` | [airbnb-agent-harness-optimizer.json](airbnb-agent-harness-optimizer.json) |
 | Claude Code | [claude-code](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/claude-code.md) | `claude-code__frontierharness-v1.0__kimi-k3-fireworks__20260822` | FrontierHarness Eval v1 | `system-benchmark-result` | `external-reproduced` | `adapter-preserved` | [claude-code-benchmark-results-external-reproduced-adapter-preserved.json](claude-code-benchmark-results-external-reproduced-adapter-preserved.json) |
 | Claude Code | [claude-code](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/claude-code.md) | `claude-code__wildclawbench-harness-comparison__gpt-5.4` | WildClawBench harness comparison | `system-benchmark-result` | `external-reproduced` | `adapter-preserved` | [claude-code-wildclawbench-external-reproduced-adapter-preserved.json](claude-code-wildclawbench-external-reproduced-adapter-preserved.json) |
 | Claude Code | [claude-code](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/claude-code.md) | `futuresim-v1-claude-code-21132-deepseek-v4-pro` | FutureSim v1 | `forecasting-benchmark-result` | `external-reproduced` | `adapter-preserved` | [futuresim-claude-code.json](futuresim-claude-code.json) |

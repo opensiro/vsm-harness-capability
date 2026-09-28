@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-28",
+  "evidence_source_class": "first-party-reported",
+  "system_name": "Airbnb Agent Harness Optimizer",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "native-system",
+    "historical_relation": "The public Airbnb release implements the optimizer and evolving harness machinery used by the publication. Local experiment run directories are intentionally not committed, so the record binds the published aggregate results to the pinned public code, paper configurations, and reproduction protocol rather than claiming an independently reproduced run ledger.",
+    "source_revision": "0d7652b42296c8df07532fa3787fc956250741e7"
+  },
+  "primary_sources": [
+    "https://github.com/airbnb/agent-harness-optimizer/tree/0d7652b42296c8df07532fa3787fc956250741e7",
+    "https://github.com/airbnb/agent-harness-optimizer/blob/0d7652b42296c8df07532fa3787fc956250741e7/REPRODUCIBILITY.md",
+    "https://arxiv.org/abs/2609.05736"
+  ],
+  "observations": [
+    {
+      "observation_id": "airbnb-agent-harness-optimizer-prism-heldout-lift-2026",
+      "kind": "persistent-harness-optimization-study",
+      "evidence_surface": "PRISM fixed-model held-out harness-optimization study across BFCL multi-round, tau2-Retail, and tau2-Telecom",
+      "reviewed_revision": "0d7652b42296c8df07532fa3787fc956250741e7",
+      "publication_id": "arXiv:2609.05736",
+      "optimizer": "PRISM",
+      "inner_model": "openai/gpt-5.4-mini",
+      "outer_model": "anthropic/claude-opus-4-7",
+      "adaptation_surface": [
+        "system prompt",
+        "tool-boundary middleware"
+      ],
+      "selection_protocol": "Resource-bounded harness selection uses execution failures to propose persistent prompt and tool-boundary middleware edits, evaluates candidates on repair and holdout splits, and selects a harness for later held-out scoring.",
+      "benchmark_results": [
+        {
+          "benchmark": "BFCL multi-round",
+          "mean_heldout_lift_pp": 14.2,
+          "train_cases": 100,
+          "holdout_cases": 100
+        },
+        {
+          "benchmark": "tau2-Retail",
+          "mean_heldout_lift_pp": 14.9,
+          "train_cases": 20,
+          "holdout_cases": 20,
+          "heldout_scorecard_cases": 74
+        },
+        {
+          "benchmark": "tau2-Telecom",
+          "mean_heldout_lift_pp": 10.1,
+          "train_cases": 20,
+          "holdout_cases": 20,
+          "heldout_scorecard_cases": 74
+        }
+      ],
+      "resource_protocol": {
+        "bfcl_wall_time_seconds_per_case": 300,
+        "bfcl_max_steps": 100,
+        "bfcl_max_tokens": 500000,
+        "tau_wall_time_seconds_per_case": 600,
+        "tau_max_steps": 200,
+        "tau_max_tokens": 100000,
+        "prism_generations": 10,
+        "mutations_per_generation": 3
+      },
+      "result_summary": "The publication reports positive mean held-out lift for PRISM on all three evaluated benchmark surfaces while keeping the task-solving model fixed and changing the surrounding harness.",
+      "provenance_limitation": "The public repository preserves code, exact paper configurations, pinned benchmark dependency information, and reproduction commands, but gitignores local runs and experiment output directories. The aggregate lift values are therefore first-party published results rather than independently reproduced raw-run artifacts in this corpus."
+    }
+  ]
+}
