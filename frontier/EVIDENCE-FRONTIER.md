@@ -1,10 +1,12 @@
 # Current Functional Capability Evidence Frontier
 
-Generated current-state projection from `primary-baselines.json` and the function-level public-evidence closure records.
+Status: **generated, experimental, non-normative**
 
-This file is **not** the historical experiment synthesis. `historical/predecessor/SYNTHESIS.md` and `historical/predecessor/experiment-state.json` preserve the closed research-cycle snapshot; this projection moves only when the current function-level source records move.
+Generated deterministically by `frontier/render_frontier.py` from `baselines/primary-baselines.json` and the S2–S5 primary-search closure records.
 
-It is also not a second evidence database: every state, count, blocker and reopen rule below is read from an existing source-of-truth artifact.
+This file is **not** the historical experiment synthesis. Frozen predecessor artifacts remain under `historical/`; this projection moves only when its owning current-state source artifacts move.
+
+It is also not a second evidence database: primary state, counts, blockers, closure claims and reopen rules below are rendered from existing source-of-truth artifacts.
 
 ## Current frontier
 
@@ -42,8 +44,8 @@ A `gap` is an empirical evidence state, not a zero capability score and not a st
   - `representative_canonical_s2_systems_inspected`: `16`
 - **Reopen when:**
   1. a canonical S2 harness publishes a direct native or adapter-preserved inter-S1 disturbance-to-attenuation result that forms a materially comparable cell with an existing canonical direct observation
-  1. a materially matched benchmark evaluates two or more canonical systems exercising their own native or adapter-preserved S2 paths under one disturbance definition
-  1. MAO-Bench or a comparable benchmark publishes recoverable multi-orchestrator results with immutable system/model/configuration provenance and direct S2 semantics
+  2. a materially matched benchmark evaluates two or more canonical systems exercising their own native or adapter-preserved S2 paths under one disturbance definition
+  3. MAO-Bench or a comparable benchmark publishes recoverable multi-orchestrator results with immutable system/model/configuration provenance and direct S2 semantics
 - **Do not reopen for:**
   - another benchmark-scaffolded direct S2 observation without canonical native or adapter-preserved linkage
   - another external-native non-canonical S2 observation without canonical linkage or a matched canonical comparison cell
@@ -67,8 +69,8 @@ A `gap` is an empirical evidence state, not a zero capability score and not a st
   - `representative_canonical_s3_systems_inspected`: `15`
 - **Reopen when:**
   1. a materially matched benchmark/model/configuration cell evaluates two or more canonical systems through their own native or adapter-preserved S3 paths
-  1. an existing matched framework campaign proves that canonical S3 paths are actually active for two or more systems under one recoverable comparison protocol
-  1. a new direct orchestration benchmark binds immutable, comparable results to multiple canonical native S3 implementations
+  2. an existing matched framework campaign proves that canonical S3 paths are actually active for two or more systems under one recoverable comparison protocol
+  3. a new direct orchestration benchmark binds immutable, comparable results to multiple canonical native S3 implementations
 - **Do not reopen for:**
   - another descriptive canonical S3 observation without a materially comparable cross-harness cell
   - another direct composed or benchmark-scaffolded S3 observation without canonical native or adapter-preserved linkage
@@ -90,8 +92,8 @@ A `gap` is an empirical evidence state, not a zero capability score and not a st
   - `canonical_direct_observations`: `2`
 - **Reopen when:**
   1. a public study evaluates two or more independently canonical-linkable systems with their native or adapter-preserved S3* paths active under one matched task/model/evaluator cell
-  1. an existing matched study publishes configuration or trajectory evidence proving native S3* activation for multiple canonical systems
-  1. an immutable result directly compares discrepancy detection, corrective return and re-verification across multiple canonical systems
+  2. an existing matched study publishes configuration or trajectory evidence proving native S3* activation for multiple canonical systems
+  3. an immutable result directly compares discrepancy detection, corrective return and re-verification across multiple canonical systems
 - **Do not reopen for:**
   - another benchmark-supplied external reviewer loop
   - another whole-system paper-quality leaderboard without native S3* path activation
@@ -105,12 +107,12 @@ A `gap` is an empirical evidence state, not a zero capability score and not a st
 - **Primary blocking reason:** Direct S4 evidence now includes two canonical native systems: A-Evolve publishes harness-updating measurements across SWE-bench Verified, MCP-Atlas and SkillsBench, while KADATH publishes a ten-epoch locked-benchmark population-improvement run. Their tasks, benchmark definitions, models/configurations and result surfaces are not matched, so public evidence still does not provide a common cross-harness S4 comparison cell.
 - **Closure claim:** The current public evidence contains canonical native S4 observations and materially matched paper-level comparisons, but no route satisfies the full matched canonical-harness primary gate. Post-closure ARES review adds a canonical S4=C(P) mechanism with no admitted capability result; its GA/runtime reports measure computational cost rather than future capability improvement after adaptation.
 - **Evidence depth:**
-  - `canonical_native_observations`: `a-evolve`, `kadath`
+  - `canonical_native_observations`: `a-evolve, kadath`
   - `reviewed_routes`: `6`
 - **Reopen when:**
   1. a blocked provenance or common-membrane gate is resolved by new public primary evidence
-  1. a new public study exposes two or more independently canonical-linkable S4 systems under one benchmark/model/configuration cell
-  1. an adapter-preserved common execution membrane becomes publicly established for existing canonical systems
+  2. a new public study exposes two or more independently canonical-linkable S4 systems under one benchmark/model/configuration cell
+  3. an adapter-preserved common execution membrane becomes publicly established for existing canonical systems
 - **Do not reopen for:**
   - another heterogeneous single-system S4 result
   - another benchmark-defined evolver without canonical-native linkage
@@ -132,8 +134,8 @@ A `gap` is an empirical evidence state, not a zero capability score and not a st
   - `representative_canonical_s5_systems`: `5`
 - **Reopen when:**
   1. a second canonical native or adapter-preserved direct S5 observation appears under a materially comparable authority/change/subsequent-operation surface
-  1. a materially matched benchmark compares two or more canonical-linkable S5 systems under the same authority/change/subsequent-operation protocol
-  1. GovSim-SelfGovern or another direct family publishes adapter-preserved canonical harness rows with recoverable model/configuration provenance suitable for a matched primary cell
+  2. a materially matched benchmark compares two or more canonical-linkable S5 systems under the same authority/change/subsequent-operation protocol
+  3. GovSim-SelfGovern or another direct family publishes adapter-preserved canonical harness rows with recoverable model/configuration provenance suitable for a matched primary cell
 - **Do not reopen for:**
   - another benchmark-scaffolded direct S5 family without canonical native or adapter-preserved linkage
   - another heterogeneous single-system descriptive policy-change witness that cannot be materially compared with an existing canonical observation
@@ -145,14 +147,31 @@ A `gap` is an empirical evidence state, not a zero capability score and not a st
 ## Reading rule
 
 ```text
-historical/predecessor/SYNTHESIS.md / historical/predecessor/experiment-state.json
-        = immutable closed-cycle snapshot
+historical/
+        = immutable predecessor / closed-cycle artifacts
 
-current baselines/primary-baselines.json
+baselines/primary-baselines.json
         +
-current S2–S5 function closure records
+current S2–S5 primary-search closure records
         ↓
-this generated evidence-frontier projection
+frontier/EVIDENCE-FRONTIER.md
+        = generated live derived view
 ```
 
-Function-specific closure schemas remain authoritative. This projection deliberately does not normalize `A`, `C`, `P`, benchmark counts, observation counts, route counts or provenance gates into a scalar maturity/capability score.
+Raw observation admission alone does not force a frontier change. The frontier moves when the owning baseline selection or function closure record moves.
+
+## Generation contract
+
+Write the current frontier:
+
+```bash
+python frontier/render_frontier.py
+```
+
+Check that the committed frontier is current:
+
+```bash
+python frontier/render_frontier.py --check
+```
+
+Do not hand-edit `EVIDENCE-FRONTIER.md`; edit the owning baseline/closure source first and regenerate.
