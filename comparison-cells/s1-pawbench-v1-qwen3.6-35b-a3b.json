@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "status": "experimental-non-normative",
+  "cell_id": "s1-pawbench-v1-qwen3.6-35b-a3b",
+  "function": "S1",
+  "scope": "general",
+  "evidence_family": {
+    "id": "pawbench",
+    "name": "PawBench v1.0",
+    "primary_source": "https://github.com/agentscope-ai/PawBench"
+  },
+  "comparison_design": "matched-model-cross-harness",
+  "varying_factor": "harness",
+  "reference_model": "qwen3.6-35b-a3b",
+  "observation_ids": [
+    "hermes-agent__pawbench-v1.0__qwen3.6-35b-a3b__20260529",
+    "openclaw__pawbench-v1.0__qwen3.6-35b-a3b__20260529",
+    "qwenpaw__pawbench-v1.0__qwen3.6-35b-a3b__20260529"
+  ],
+  "comparability": {
+    "model": {
+      "status": "matched",
+      "value": "qwen3.6-35b-a3b"
+    },
+    "evidence_family": {
+      "status": "matched",
+      "value": "PawBench v1.0"
+    },
+    "task_set": {
+      "status": "matched",
+      "value": "PawBench v1.0 150-task set"
+    },
+    "evaluator": {
+      "status": "matched-within-family",
+      "value": "PawBench v1.0 grading protocol"
+    },
+    "execution_environment": {
+      "status": "not-established"
+    },
+    "budget_repetition_policy": {
+      "status": "not-established"
+    },
+    "adaptation_reset_policy": {
+      "status": "not-established"
+    }
+  },
+  "raw_metric_owner": "system-observations",
+  "projection_ref": "vsm-projections/s1/observations.jsonl",
+  "notes": [
+    "This cell materializes the already selected S1 primary; it introduces no new benchmark evidence.",
+    "Historical harness identities are preserved by the referenced raw observations and must not be relabelled as current canonical revisions.",
+    "Unknown comparability dimensions remain explicit rather than being normalized by assumption."
+  ],
+  "non_claims": [
+    "This cell does not assign or mutate canonical VSM ownership state.",
+    "This cell does not establish a domain-specific capability grade.",
+    "This cell does not define a global harness ranking."
+  ]
+}
