@@ -22,20 +22,107 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Repair final extracted baseline path
+      - name: Repair final extracted S5 dependencies
         shell: bash
         run: |
           set -euo pipefail
           python - <<'PY'
           from pathlib import Path
+
           path = Path('vsm-projections/s5/validate.py')
           text = path.read_text(encoding='utf-8')
-          old = 'BASELINES_PATH = HERE.parent / "primary-baselines.json"'
-          new = 'BASELINES_PATH = ROOT / "baselines" / "primary-baselines.json"'
-          if old not in text and new not in text:
+
+          old_baseline = 'BASELINES_PATH = HERE.parent / "primary-baselines.json"'
+          new_baseline = 'BASELINES_PATH = ROOT / "baselines" / "primary-baselines.json"'
+          if old_baseline in text:
+              text = text.replace(old_baseline, new_baseline)
+          elif new_baseline not in text:
               raise SystemExit('unexpected S5 baseline path contract')
-          path.write_text(text.replace(old, new), encoding='utf-8')
+
+          old_block = '''    for harness_id, expected_state in EXPECTED_CANONICAL.items():
+              path = ROOT / "assessments" / f"{harness_id}.md"
+              if not path.exists():
+                  fail(f"missing canonical assessment: {path}")
+              fm = frontmatter(path)
+              if fm.get("status") != "included":
+                  fail(f"{harness_id}: expected status included, got {fm.get('status')!r}")
+              actual_state = fm.get("autonomy_s5")
+              if actual_state != expected_state:
+                  fail(f"{harness_id}: expected autonomy_s5={expected_state}, got {actual_state!r}")
+          '''
+          new_block = '''    from urllib.error import HTTPError, URLError
+              from urllib.request import urlopen
+
+              for harness_id, expected_state in EXPECTED_CANONICAL.items():
+                  url = (
+                      "https://raw.githubusercontent.com/opensiro/vsm-harness-index/"
+                      f"main/assessments/{harness_id}.md"
+                  )
+                  try:
+                      with urlopen(url, timeout=20) as response:
+                          assessment = response.read().decode("utf-8")
+                  except (HTTPError, URLError, TimeoutError) as exc:
+                      fail(f"cannot resolve canonical Index assessment for {harness_id}: {exc}")
+                  marker = "---" + chr(10)
+                  if not assessment.startswith(marker):
+                      fail(f"canonical Index assessment for {harness_id} has no frontmatter")
+                  front = assessment.split(marker, 2)[1]
+                  fm = {}
+                  for line in front.splitlines():
+                      if ":" not in line:
+                          continue
+                      key, value = line.split(":", 1)
+                      fm[key.strip()] = value.strip()
+                  if fm.get("status") != "included":
+                      fail(f"{harness_id}: expected status included, got {fm.get('status')!r}")
+                  actual_state = fm.get("autonomy_s5")
+                  if actual_state != expected_state:
+                      fail(f"{harness_id}: expected autonomy_s5={expected_state}, got {actual_state!r}")
+          '''
+          import textwrap
+          new_block = textwrap.dedent(new_block).replace('\nfor harness_id', '\n    for harness_id').replace('\n    from urllib', '\n    from urllib')
+          # Build exact indentation explicitly to avoid workflow heredoc indentation drift.
+          new_block = '''    from urllib.error import HTTPError, URLError
+              from urllib.request import urlopen
+
+              for harness_id, expected_state in EXPECTED_CANONICAL.items():
+                  url = (
+                      "https://raw.githubusercontent.com/opensiro/vsm-harness-index/"
+                      f"main/assessments/{harness_id}.md"
+                  )
+                  try:
+                      with urlopen(url, timeout=20) as response:
+                          assessment = response.read().decode("utf-8")
+                  except (HTTPError, URLError, TimeoutError) as exc:
+                      fail(f"cannot resolve canonical Index assessment for {harness_id}: {exc}")
+                  marker = "---" + chr(10)
+                  if not assessment.startswith(marker):
+                      fail(f"canonical Index assessment for {harness_id} has no frontmatter")
+                  front = assessment.split(marker, 2)[1]
+                  fm = {}
+                  for line in front.splitlines():
+                      if ":" not in line:
+                          continue
+                      key, value = line.split(":", 1)
+                      fm[key.strip()] = value.strip()
+                  if fm.get("status") != "included":
+                      fail(f"{harness_id}: expected status included, got {fm.get('status')!r}")
+                  actual_state = fm.get("autonomy_s5")
+                  if actual_state != expected_state:
+                      fail(f"{harness_id}: expected autonomy_s5={expected_state}, got {actual_state!r}")
+          '''
+          # The workflow YAML adds twelve leading spaces to heredoc lines; remove them.
+          lines = new_block.splitlines()
+          min_indent = min((len(line) - len(line.lstrip()) for line in lines if line.strip()), default=0)
+          new_block = '\n'.join(line[min_indent:] if line.strip() else '' for line in lines) + '\n'
+          if old_block in text:
+              text = text.replace(old_block, new_block)
+          elif 'ROOT / "assessments"' in text:
+              raise SystemExit('unexpected S5 canonical assessment block')
+
+          path.write_text(text, encoding='utf-8')
           PY
+          python -m py_compile vsm-projections/s5/validate.py
 
       - name: Regenerate neutral registry
         run: python system-observations/render_registry.py
