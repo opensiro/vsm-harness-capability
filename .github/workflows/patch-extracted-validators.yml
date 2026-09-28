@@ -51,10 +51,11 @@ jobs:
                       text = response.read().decode("utf-8")
               except (HTTPError, URLError, TimeoutError) as exc:
                   fail(f"cannot resolve canonical Index assessment for {harness_id}: {exc}")
-              if not text.startswith("---\\n"):
+              marker = "---" + chr(10)
+              if not text.startswith(marker):
                   fail(f"canonical Index assessment for {harness_id} has no front matter")
               try:
-                  frontmatter = text.split("---\\n", 2)[1]
+                  frontmatter = text.split(marker, 2)[1]
               except IndexError:
                   fail(f"canonical Index assessment for {harness_id} has malformed front matter")
               fields: dict[str, str] = {}
