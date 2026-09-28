@@ -7,7 +7,8 @@ Before changing data or interpretation, read:
 1. [`CONTRACT.md`](CONTRACT.md);
 2. [`PUBLIC-EVIDENCE.md`](PUBLIC-EVIDENCE.md);
 3. [`EVIDENCE-REGISTRY.md`](EVIDENCE-REGISTRY.md);
-4. [`BASELINE.md`](BASELINE.md).
+4. [`ADMISSION.md`](ADMISSION.md) when adding new public observations;
+5. [`BASELINE.md`](BASELINE.md).
 
 ## Route changes by ownership
 
@@ -21,6 +22,16 @@ Before changing data or interpretation, read:
 ## Evidence rules
 
 Prefer primary public evidence and immutable artifacts. Preserve unknowns. Do not infer function meaning from benchmark vocabulary. Do not operate assessed harness benchmarks merely to fill an evidence gap.
+
+For a new live raw observation:
+
+```bash
+python system-observations/render_registry.py
+python scripts/admission_check.py system-observations/<record>.json
+python scripts/validate_repository.py
+```
+
+Raw admission does not require a VSM projection, comparison cell, baseline change or frontier change. Review those derived layers separately when the evidence supports them.
 
 ## Pull requests
 

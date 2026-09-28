@@ -17,3 +17,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: python scripts/validate_repository.py
+      - name: Exercise live evidence admission path
+        run: >-
+          python scripts/admission_check.py
+          system-observations/qwenpaw-benchmark-results-first-party-reported-adapter-preserved.json
