@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-29",
+  "evidence_source_class": "first-party-reported",
+  "system_name": "MAS-Orchestra",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "native-system",
+    "historical_relation": "The pinned Salesforce AI Research repository implements the MAS-Orchestra training and inference system, publishes the study result table, and links task-specific trained orchestrator checkpoints. The public aggregate table is treated as a first-party publication surface rather than as an independently reproduced raw-run ledger.",
+    "source_revision": "0527c70a508eb49ed42d5dd49a91ea857551e242"
+  },
+  "primary_sources": [
+    "https://github.com/SalesforceAIResearch/MAS-Orchestra/tree/0527c70a508eb49ed42d5dd49a91ea857551e242",
+    "https://github.com/SalesforceAIResearch/MAS-Orchestra/blob/0527c70a508eb49ed42d5dd49a91ea857551e242/README.md",
+    "https://arxiv.org/abs/2601.14652",
+    "https://www.salesforceairesearch.com/mas-orchestra",
+    "https://huggingface.co/ZixuanKe/harmony-grpo-7b-global-step-180",
+    "https://huggingface.co/ZixuanKe/harmony-medium-grpo-7b-hotpot-global-step-250",
+    "https://huggingface.co/ZixuanKe/harmony-medium-grpo-7b-browse-comp-plus-global-step-140"
+  ],
+  "observations": [
+    {
+      "observation_id": "mas-orchestra-public-benchmark-suite-2026",
+      "kind": "multi-agent-orchestration-benchmark-study",
+      "evidence_surface": "MAS-Orchestra published IID/OOD benchmark result table across AIME24, AIME25, HotpotQA, BrowseComp+, and GPQA",
+      "reviewed_revision": "0527c70a508eb49ed42d5dd49a91ea857551e242",
+      "publication_id": "arXiv:2601.14652 / ICML 2026",
+      "benchmark_results": [
+        {
+          "benchmark": "AIME24",
+          "reported_score": 66.25
+        },
+        {
+          "benchmark": "AIME25",
+          "reported_score": 61.25
+        },
+        {
+          "benchmark": "HotpotQA",
+          "reported_score": 49.0
+        },
+        {
+          "benchmark": "BrowseComp+",
+          "reported_score": 11.0
+        },
+        {
+          "benchmark": "GPQA",
+          "reported_score": 65.21
+        }
+      ],
+      "public_checkpoint_surfaces": [
+        {
+          "task_family": "Math / AIME",
+          "checkpoint": "ZixuanKe/harmony-grpo-7b-global-step-180",
+          "source": "https://huggingface.co/ZixuanKe/harmony-grpo-7b-global-step-180"
+        },
+        {
+          "task_family": "HotpotQA",
+          "checkpoint": "ZixuanKe/harmony-medium-grpo-7b-hotpot-global-step-250",
+          "source": "https://huggingface.co/ZixuanKe/harmony-medium-grpo-7b-hotpot-global-step-250"
+        },
+        {
+          "task_family": "BrowseComp+",
+          "checkpoint": "ZixuanKe/harmony-medium-grpo-7b-browse-comp-plus-global-step-140",
+          "source": "https://huggingface.co/ZixuanKe/harmony-medium-grpo-7b-browse-comp-plus-global-step-140"
+        }
+      ],
+      "public_training_configuration_note": "The pinned README publishes an example MAS-Orchestra training command with actor_rollout_ref.model.path=Qwen/Qwen2.5-7B-Instruct and gpt-oss-120b agent calls for BrowseComp+, while the public checkpoint table exposes task-specific 7B orchestrator checkpoints for Math/AIME, HotpotQA, and BrowseComp+.",
+      "result_summary": "The first-party publication reports MAS-Orchestra scores of 66.25 on AIME24, 61.25 on AIME25, 49.00 on HotpotQA, 11.00 on BrowseComp+, and 65.21 on GPQA in its published IID/OOD comparison table.",
+      "provenance_limitation": "The public repository and project page publish aggregate study results and selected task-specific checkpoints, but this corpus has not independently reproduced the experiments and the repository does not expose one committed per-example run ledger binding a single checkpoint identity to all five aggregate rows. GPQA is presented as an OOD result and does not have a separate checkpoint link in the pinned README checkpoint table."
+    }
+  ]
+}
