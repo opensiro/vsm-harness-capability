@@ -5,7 +5,7 @@ Status: **generated, experimental, non-normative**
 Generated from the raw JSON records in this directory by `render_registry.py`.
 Raw evidence payloads remain only in the raw record; this table is an identity/provenance projection, not a second result database.
 
-Raw observations: **63**
+Raw observations: **64**
 
 | System | Canonical harness | Observation | Evidence surface(s) | Kind | Provenance | Compatibility | Raw record |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -55,6 +55,7 @@ Raw observations: **63**
 | OpenCode | [opencode](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/opencode.md) | `opencode__frontierharness-v1.0__kimi-k3-fireworks__20260822` | FrontierHarness Eval v1 | `system-benchmark-result` | `external-reproduced` | `adapter-preserved` | [opencode-benchmark-results-external-reproduced-adapter-preserved.json](opencode-benchmark-results-external-reproduced-adapter-preserved.json) |
 | OpenHands | [openhands](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/openhands.md) | `openhands__harbor-swe-bench-verified-parity__claude-4-sonnet__20250808` | SWE-bench Verified via Terminal-Bench/Harbor parity | `system-benchmark-result` | `external-reproduced` | `adapter-preserved` | [openhands-benchmark-results-external-reproduced-adapter-preserved.json](openhands-benchmark-results-external-reproduced-adapter-preserved.json) |
 | OpenHands | [openhands](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/openhands.md) | `openhands__swe-bench-verified__claude-4-sonnet-20250514__20250524` | SWE-bench Verified | `system-benchmark-result` | `external-reproduced` | `native-system` | [openhands-benchmark-results-external-reproduced-native-system.json](openhands-benchmark-results-external-reproduced-native-system.json) |
+| OrchestrateBench policy-conditioned benchmark organization | — | `orchestratebench-policy-conditioned-containment-2026` | OrchestraBench / OrchestrateBench policy-conditioned failure-containment study and trusted-state ablation | `policy-conditioned-failure-containment-study` | `first-party-reported` | `benchmark-scaffolded` | [orchestratebench.json](orchestratebench.json) |
 | Ouroboros | [ouroboros](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/ouroboros.md) | `ouroboros-parent-governed-cyber-pro-policy-enactment-2026-09` | immutable-repository-history | `repository-history-policy-enactment-witness` | `first-party-reported` | `native-system` | [ouroboros-policy-enactment.json](ouroboros-policy-enactment.json) |
 | Pi | [pi](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/pi.md) | `pi__frontierharness-v1.0__kimi-k3-fireworks__20260822` | FrontierHarness Eval v1 | `system-benchmark-result` | `external-reproduced` | `adapter-preserved` | [pi-benchmark-results-external-reproduced-adapter-preserved.json](pi-benchmark-results-external-reproduced-adapter-preserved.json) |
 | QwenPaw | [qwenpaw](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/qwenpaw.md) | `qwenpaw__pawbench-v1.0__qwen3.6-35b-a3b__20260529` | PawBench v1.0 | `system-benchmark-result` | `first-party-reported` | `adapter-preserved` | [qwenpaw-benchmark-results-first-party-reported-adapter-preserved.json](qwenpaw-benchmark-results-first-party-reported-adapter-preserved.json) |

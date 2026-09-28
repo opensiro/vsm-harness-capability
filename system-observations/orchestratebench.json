@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-29",
+  "evidence_source_class": "first-party-reported",
+  "system_name": "OrchestrateBench policy-conditioned benchmark organization",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "benchmark-scaffolded",
+    "historical_relation": "The pinned first-party OrchestrateBench repository contains the benchmark implementation, the real-Claude measurement path, committed policy-conditioned measured CSVs, the paper draft and reproducibility documentation. The measured organization is benchmark-defined and uses a real Claude agent over a controlled staged arithmetic dependency chain rather than a deployed native canonical harness.",
+    "source_revision": "5c3738c19d99cbe9aa152b0ea9b7d903ea4f93db"
+  },
+  "primary_sources": [
+    "https://github.com/anote-ai/Research-OrchestrateBench/tree/5c3738c19d99cbe9aa152b0ea9b7d903ea4f93db",
+    "https://github.com/anote-ai/Research-OrchestrateBench/blob/5c3738c19d99cbe9aa152b0ea9b7d903ea4f93db/PAPER.md",
+    "https://github.com/anote-ai/Research-OrchestrateBench/blob/5c3738c19d99cbe9aa152b0ea9b7d903ea4f93db/REPRODUCIBILITY.md",
+    "https://github.com/anote-ai/Research-OrchestrateBench/blob/5c3738c19d99cbe9aa152b0ea9b7d903ea4f93db/src/orchestratebench/real_run.py",
+    "https://github.com/anote-ai/Research-OrchestrateBench/blob/5c3738c19d99cbe9aa152b0ea9b7d903ea4f93db/data/measured/exp2_policy_real.csv",
+    "https://github.com/anote-ai/Research-OrchestrateBench/blob/5c3738c19d99cbe9aa152b0ea9b7d903ea4f93db/data/measured/exp3_policy_real.csv",
+    "https://github.com/anote-ai/Research-OrchestrateBench/blob/5c3738c19d99cbe9aa152b0ea9b7d903ea4f93db/data/measured/exp2_ablation_real.csv",
+    "https://arxiv.org/abs/2608.05263"
+  ],
+  "observations": [
+    {
+      "observation_id": "orchestratebench-policy-conditioned-containment-2026",
+      "kind": "policy-conditioned-failure-containment-study",
+      "evidence_surface": "OrchestraBench / OrchestrateBench policy-conditioned failure-containment study and trusted-state ablation",
+      "reviewed_revision": "5c3738c19d99cbe9aa152b0ea9b7d903ea4f93db",
+      "publication_id": "arXiv:2608.05263",
+      "model": "claude-sonnet-4-6",
+      "measured_workload": "controlled staged arithmetic dependency chain with seeded prompt-level failure injection and exact-match grading",
+      "study_surfaces": [
+        {
+          "surface": "Exp 2 policy-conditioned latent-failure recovery",
+          "sample_size": 75,
+          "baseline_policies": "fixed / heuristic / retry(heuristic)",
+          "baseline_latent_recovery": 0.08,
+          "baseline_cascade_radius": 1.83,
+          "trusted_state_llm_policy_latent_recovery": 0.83,
+          "trusted_state_llm_policy_cascade_radius": 0.33,
+          "oracle_latent_recovery": 1.0,
+          "oracle_cascade_radius": 0.0,
+          "source_file": "data/measured/exp2_policy_real.csv"
+        },
+        {
+          "surface": "Exp 3 policy-conditioned cascade-by-depth",
+          "sample_size": 225,
+          "depth_7_baseline_cascade_radius": 4.58,
+          "depth_7_trusted_state_llm_policy_cascade_radius": 0.83,
+          "depth_7_oracle_cascade_radius": 0.0,
+          "source_file": "data/measured/exp3_policy_real.csv"
+        },
+        {
+          "surface": "trusted-state ablation",
+          "sample_size": 180,
+          "trusted_state_llm_latent_recovery": 0.67,
+          "llm_without_trusted_upstream_latent_recovery": 0.08,
+          "paired_recovery_drop": 0.58,
+          "paired_pairs": 24,
+          "exact_sign_flip_p": 0.000519,
+          "source_file": "data/measured/exp2_ablation_real.csv"
+        }
+      ],
+      "policy_semantics": "For the trusted-state LLM policy, the benchmark re-attempt supplies the trusted upstream result and licenses the model to detect or correct ambiguity, contradiction or inconsistency. The llm_noupstream ablation uses the same correction-style re-attempt without supplying that trusted upstream value.",
+      "result_summary": "The first-party measured study reports much lower latent-failure recovery and larger cascade radius for the baseline policies than for the trusted-state LLM repair policy, while the separate no-upstream ablation collapses the LLM recovery rate back near baseline. The paper therefore attributes most of the apparent LLM containment gain to the trusted-state signal rather than autonomous fault detection.",
+      "provenance_limitation": "The repository labels the committed policy CSVs as real Claude measured controlled probes and the paper reports the aggregates from them. This corpus has not independently rerun the API experiments. The benchmark uses a single real Claude agent over a staged arithmetic dependency chain with benchmark-supplied failure injection and, for the strongest LLM policy, an externally supplied trusted upstream value; the authors explicitly frame this as a mechanism/trusted-state probe rather than a deployable autonomous multi-agent routing result."
+    }
+  ]
+}
