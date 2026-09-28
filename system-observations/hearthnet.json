@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-28",
+  "evidence_source_class": "first-party-reported",
+  "system_name": "HearthNet Scene 2 demo organization",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "benchmark-scaffolded",
+    "source_revision": "938fdd813e16c0d356c8e56685a8e1ce311d086a",
+    "historical_relation": "The full first-party framework implements the agent communication, lease, policy and arbitration paths, while the published Scene 2 evaluation supplies a benchmark-authored conflict stimulus and scripted conflict/timeline messages around those implementation paths."
+  },
+  "primary_sources": [
+    "https://github.com/zhonghaozhan/hearthnet_framework/tree/938fdd813e16c0d356c8e56685a8e1ce311d086a",
+    "https://github.com/zhonghaozhan/hearthnet_framework/blob/938fdd813e16c0d356c8e56685a8e1ce311d086a/README.md",
+    "https://github.com/zhonghaozhan/hearthnet_framework/blob/938fdd813e16c0d356c8e56685a8e1ce311d086a/demo/scene2-conflict-resolution.js",
+    "https://github.com/zhonghaozhan/hearthnet_framework/blob/938fdd813e16c0d356c8e56685a8e1ce311d086a/demo/run-metrics.js",
+    "https://github.com/zhonghaozhan/hearthnet/tree/a0d1bfbad0a6576b32702d012e8e34875067971b",
+    "https://github.com/zhonghaozhan/hearthnet/blob/a0d1bfbad0a6576b32702d012e8e34875067971b/visualizer/public/hearthnet-trace.json"
+  ],
+  "observations": [
+    {
+      "observation_id": "hearthnet-scene2-conflict-resolution-5run-2026",
+      "kind": "benchmark-defined-conflict-resolution-study",
+      "evidence_surface": "HearthNet Scene 2 repeated conflict-resolution evaluation",
+      "framework_revision": "938fdd813e16c0d356c8e56685a8e1ce311d086a",
+      "demo_revision": "a0d1bfbad0a6576b32702d012e8e34875067971b",
+      "scenario": "A scheduled evening wind-down routine requests device-state changes while a user-explicit work-from-home mode remains active. The scene supplies conflicting lease requests and a conflict/timeline stimulus, then invokes the public framework arbitration and lease-evaluation paths before recording denials, acknowledgements and a resolution broadcast.",
+      "participants": [
+        "Rupert root orchestrator",
+        "Jeeves Home Assistant manager",
+        "Darcy mobile controller",
+        "Dewey librarian"
+      ],
+      "repeated_run_protocol": {
+        "script": "demo/run-metrics.js",
+        "scene": 2,
+        "runs": 5
+      },
+      "reported_results": {
+        "conflicts_detected_runs": 5,
+        "conflicts_resolved_runs": 5,
+        "total_runs": 5
+      },
+      "implementation_paths_exercised": [
+        "protocol/llm.js arbitrateConflict",
+        "protocol/llm.js evaluateLeaseRequest",
+        "MQTT agent messaging",
+        "Git-backed event persistence and timeline context",
+        "lease denial, agent acknowledgement and resolution broadcast"
+      ],
+      "scaffolded_surface": [
+        "the conflicting lease requests are authored by the Scene 2 script",
+        "the Dewey conflict alert is authored by the Scene 2 script",
+        "the timeline response used by arbitration is authored by the Scene 2 script"
+      ],
+      "result_summary": "The first-party framework README reports that all five repeated Scene 2 runs detected and resolved the published conflict scenario.",
+      "notes": "The repository publishes aggregate repeated-run results and a deterministic metrics script but not a committed per-run result ledger for the five evaluation runs. A separate first-party demo repository includes a pre-recorded physical-deployment trace, but this observation does not equate that trace with the five aggregate evaluation runs."
+    }
+  ]
+}
