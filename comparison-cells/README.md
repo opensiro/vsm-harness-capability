@@ -18,6 +18,12 @@ A comparison cell does not assign canonical ownership state, create a domain-spe
 
 - [`s1-pawbench-v1-qwen3.6-35b-a3b.json`](s1-pawbench-v1-qwen3.6-35b-a3b.json) — the existing PawBench v1.0 / `qwen3.6-35b-a3b` matched-model S1 primary, materialized without introducing new evidence.
 
+## Secondary general cells
+
+- [`s1-wildclawbench-gpt-5.4.json`](s1-wildclawbench-gpt-5.4.json) — a secondary WildClawBench / `GPT-5.4` four-harness S1 cell. It preserves dedicated harness-image differences as a non-fully-matched execution-environment dimension and does not replace the PawBench primary.
+
+Secondary cells are retained as independent evidence families. They are not averaged into the selected primary or into a global harness score.
+
 ## Validation
 
 ```bash
