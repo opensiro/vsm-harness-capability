@@ -12,7 +12,6 @@ from urllib.parse import urlparse
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 REGISTRY = ROOT / "system-observations" / "registry.psv"
-BASELINES = ROOT / "baselines" / "primary-baselines.json"
 
 FUNCTION_SLUGS = {
     "S1": "s1",
@@ -58,8 +57,12 @@ def _registry_ids() -> set[str]:
     return ids
 
 
+def _projection_path(function: str) -> Path:
+    return ROOT / "vsm-projections" / FUNCTION_SLUGS[function] / "observations.jsonl"
+
+
 def _projection_ids(function: str) -> set[str]:
-    path = ROOT / "vsm-projections" / FUNCTION_SLUGS[function] / "observations.jsonl"
+    path = _projection_path(function)
     if not path.is_file():
         raise CellError(f"{path.relative_to(ROOT)} is missing")
 
@@ -88,12 +91,25 @@ def _reject_metric_payloads(value: object, path: str = "$") -> None:
             child_path = f"{path}.{key}"
             if key.lower() in FORBIDDEN_METRIC_KEYS:
                 raise CellError(
-                    f"{child_path}: comparison cells reference raw observations; numeric/result payloads stay in system-observations/"
+                    f"{child_path}: comparison cells reference raw observations; metric/result payloads stay in system-observations/"
                 )
             _reject_metric_payloads(child, child_path)
     elif isinstance(value, list):
         for index, child in enumerate(value):
             _reject_metric_payloads(child, f"{path}[{index}]")
+
+
+def _validate_baseline_link(path: Path, cell: dict) -> None:
+    ref = cell.get("selected_baseline_ref")
+    if not isinstance(ref, str) or not ref.startswith("baselines/") or not ref.endswith(".md"):
+        raise CellError(f"{path.name}: selected_baseline_ref must point to a baselines/*.md view")
+    baseline = ROOT / ref
+    if not baseline.is_file():
+        raise CellError(f"{path.name}: selected baseline view is missing: {ref}")
+    if path.name not in baseline.read_text(encoding="utf-8"):
+        raise CellError(
+            f"{path.name}: {ref} must link back to the machine-readable comparison cell"
+        )
 
 
 def _load_cells() -> dict[str, dict]:
@@ -131,6 +147,12 @@ def _load_cells() -> dict[str, dict]:
         if cell.get("raw_metric_owner") != "system-observations":
             raise CellError(f"{path.name}: raw_metric_owner must be system-observations")
 
+        expected_projection_ref = str(_projection_path(function).relative_to(ROOT)).replace("\\", "/")
+        if cell.get("projection_ref") != expected_projection_ref:
+            raise CellError(
+                f"{path.name}: projection_ref must be {expected_projection_ref!r}"
+            )
+
         evidence_family = cell.get("evidence_family")
         if not isinstance(evidence_family, dict):
             raise CellError(f"{path.name}: evidence_family must be an object")
@@ -165,6 +187,7 @@ def _load_cells() -> dict[str, dict]:
                     f"{path.name}: comparability.{dimension} must explicitly declare status"
                 )
 
+        _validate_baseline_link(path, cell)
         cells[cell_id] = cell
 
     if not cells:
@@ -172,43 +195,10 @@ def _load_cells() -> dict[str, dict]:
     return cells
 
 
-def _validate_selected_baselines(cells: dict[str, dict]) -> None:
-    if not BASELINES.is_file():
-        raise CellError("baselines/primary-baselines.json is missing")
-    data = json.loads(BASELINES.read_text(encoding="utf-8"))
-    functions = data.get("functions")
-    if not isinstance(functions, dict):
-        raise CellError("baselines/primary-baselines.json: functions must be an object")
-
-    for function, selection in functions.items():
-        if not isinstance(selection, dict) or selection.get("status") != "selected":
-            continue
-        primary = selection.get("primary")
-        if not isinstance(primary, dict):
-            raise CellError(f"baselines/primary-baselines.json:{function}: selected primary must be an object")
-        ref = primary.get("comparison_cell_ref")
-        if not isinstance(ref, str) or not ref.startswith("comparison-cells/") or not ref.endswith(".json"):
-            raise CellError(
-                f"baselines/primary-baselines.json:{function}: selected primary requires comparison_cell_ref"
-            )
-        ref_path = ROOT / ref
-        if not ref_path.is_file():
-            raise CellError(f"baselines/primary-baselines.json:{function}: missing {ref}")
-        cell_id = ref_path.stem
-        cell = cells.get(cell_id)
-        if cell is None:
-            raise CellError(f"baselines/primary-baselines.json:{function}: {ref} was not validated")
-        if cell.get("function") != function:
-            raise CellError(
-                f"baselines/primary-baselines.json:{function}: comparison cell declares {cell.get('function')!r}"
-            )
-
-
 def main() -> None:
     try:
         cells = _load_cells()
-        _validate_selected_baselines(cells)
-    except (CellError, json.JSONDecodeError) as exc:
+    except CellError as exc:
         raise SystemExit(f"error: {exc}") from exc
 
     print(f"ok: validated {len(cells)} machine-readable comparison cell(s)")
