@@ -66,6 +66,8 @@ One published result must have one raw observation ID even when it is relevant t
 
 ## Canonical linkage
 
+Canonical assessment artifacts remain owned by `opensiro/vsm-harness-index`. Relative `canonical_assessment_ref` values in migrated raw records are external Index paths, not local Capability files.
+
 Canonical harness linkage is optional and evidence-backed. A valid raw observation may remain non-canonical when its system identity is public and useful but cannot be linked to an Index harness.
 
 `assessment boundary ≠ observation boundary`.

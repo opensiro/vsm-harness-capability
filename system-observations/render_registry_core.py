@@ -13,7 +13,9 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 HERE = Path(__file__).resolve().parent
-ROOT = HERE.parents[2]
+ROOT = HERE.parent
+CANONICAL_INDEX_REPOSITORY = "opensiro/vsm-harness-index"
+CANONICAL_INDEX_BASE_URL = "https://github.com/opensiro/vsm-harness-index/blob/main/"
 PSV_PATH = HERE / "registry.psv"
 MARKDOWN_PATH = HERE / "REGISTRY.md"
 
@@ -246,10 +248,8 @@ def collect_rows() -> list[RegistryRow]:
                 raise RegistryError(
                     f"{record_ref}: canonical linkage requires canonical_assessment_ref under assessments/"
                 )
-            if not (ROOT / canonical_assessment_ref).is_file():
-                raise RegistryError(
-                    f"{record_ref}: canonical_assessment_ref does not exist: {canonical_assessment_ref}"
-                )
+            # canonical_assessment_ref is owned by opensiro/vsm-harness-index.
+            # Capability preserves the linkage path but does not copy or own canonical assessments.
             if not isinstance(canonical_review_ref, str) or not HEX40_RE.fullmatch(canonical_review_ref):
                 raise RegistryError(
                     f"{record_ref}: canonical linkage requires a 40-hex canonical_review_ref snapshot"
@@ -394,7 +394,7 @@ def render_markdown(rows: list[RegistryRow]) -> str:
         if row.canonical_harness_id:
             harness = (
                 f"[{_escape_md(row.canonical_harness_id)}]"
-                f"(../../../{row.canonical_assessment_ref})"
+                f"({CANONICAL_INDEX_BASE_URL}{row.canonical_assessment_ref})"
             )
         else:
             harness = "—"
