@@ -4,6 +4,8 @@ Status: **experimental, non-normative**
 
 This is the current selected **general** S1 comparison cell. It is not a global harness ranking and does not change canonical VSM ownership. Rows are ordered by harness ID, never by score.
 
+Machine-readable comparison cell: [`comparison-cells/s1-pawbench-v1-qwen3.6-35b-a3b.json`](../comparison-cells/s1-pawbench-v1-qwen3.6-35b-a3b.json).
+
 ## Function baseline availability
 
 | Function | Status | Primary family | Reference model |
@@ -27,7 +29,7 @@ A `gap` means no materially matched canonical-harness general-capability primary
 | OpenClaw (`openclaw`) | `A` | `2026.4.24` · version-known | `0.6779` | `adapter-preserved` |
 | QwenPaw (`qwenpaw`) | `A` | `1.1.3` · version-known | `0.6828` | `adapter-preserved` |
 
-The raw numeric results remain owned by `system-observations/`; this file is a derived comparison view. Historical benchmark identity must not be relabelled as the current canonical Index revision.
+The raw numeric results remain owned by `system-observations/`; this file is a derived comparison view. The machine-readable cell references observation IDs only and does not duplicate these metric values. Historical benchmark identity must not be relabelled as the current canonical Index revision.
 
 ## Specialized-domain evidence
 
