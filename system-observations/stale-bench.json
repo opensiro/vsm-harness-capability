@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-29",
+  "evidence_source_class": "first-party-reported",
+  "system_name": "STALE benchmark organization",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "benchmark-scaffolded",
+    "historical_relation": "The pinned first-party STALE-bench repository contains the validated benchmark instances, benchmark implementation, corrected grading harness, committed agent-study outputs and raw result artifacts. The measured parallel-work and communication organization is benchmark-defined rather than a native canonical harness boundary.",
+    "source_revision": "f7bc831e4eff08b9652acd893553824636ae3985"
+  },
+  "primary_sources": [
+    "https://github.com/illinoisdata/STALE-bench/tree/f7bc831e4eff08b9652acd893553824636ae3985",
+    "https://github.com/illinoisdata/STALE-bench/blob/f7bc831e4eff08b9652acd893553824636ae3985/README.md",
+    "https://github.com/illinoisdata/STALE-bench/blob/f7bc831e4eff08b9652acd893553824636ae3985/artifacts/results/synth_comm.jsonl",
+    "https://github.com/illinoisdata/STALE-bench/blob/f7bc831e4eff08b9652acd893553824636ae3985/artifacts/results/synth_gpt55.json",
+    "https://github.com/illinoisdata/STALE-bench/blob/f7bc831e4eff08b9652acd893553824636ae3985/artifacts/results/real_corrected.jsonl",
+    "https://github.com/illinoisdata/STALE-bench/blob/f7bc831e4eff08b9652acd893553824636ae3985/artifacts/results/real_gpt55.jsonl",
+    "https://github.com/illinoisdata/STALE-bench/blob/f7bc831e4eff08b9652acd893553824636ae3985/artifacts/results/realstale_batch.jsonl",
+    "https://github.com/illinoisdata/STALE-bench/blob/f7bc831e4eff08b9652acd893553824636ae3985/artifacts/results/realstale_batch_runs.jsonl",
+    "https://arxiv.org/abs/2609.25396"
+  ],
+  "observations": [
+    {
+      "observation_id": "stale-semantic-interference-communication-2026",
+      "kind": "semantic-interference-communication-study",
+      "evidence_surface": "STALE semantic-interference and communication-recovery study",
+      "reviewed_revision": "f7bc831e4eff08b9652acd893553824636ae3985",
+      "publication_id": "arXiv:2609.25396",
+      "study_surfaces": [
+        {
+          "surface": "synthetic semantic-interference tier",
+          "reported_finding": "The first-party README reports interference approximately tracking planted staleness and a precise message recovering 98% of the synthetic interference cases.",
+          "source_file": "artifacts/results/synth_comm.jsonl",
+          "cross_model_control": "artifacts/results/synth_gpt55.json"
+        },
+        {
+          "surface": "corrected mined-real Django tier",
+          "validated_pairs": 417,
+          "corrected_runs": 834,
+          "runs_with_positive_delta": 1,
+          "both_solved_and_break_count": 0,
+          "gpt55_valid_runs": 72,
+          "gpt55_interference_count": 0,
+          "gold_composition_failures": 0,
+          "gold_composition_pairs": 417,
+          "source_file": "artifacts/results/real_corrected.jsonl",
+          "gpt55_source_file": "artifacts/results/real_gpt55.jsonl"
+        },
+        {
+          "surface": "real-derived anchored tier",
+          "instance_count": 36,
+          "blind_interference_count": 105,
+          "blind_trial_count": 108,
+          "one_message_recovery_count": 89,
+          "one_message_trial_count": 108,
+          "source_file": "artifacts/results/realstale_batch.jsonl",
+          "raw_run_file": "artifacts/results/realstale_batch_runs.jsonl"
+        }
+      ],
+      "grading_correction_note": "The repository explicitly retains an earlier naive real-tier result only to document a measurement artifact. The corrected harness discards agent test edits and grades every condition on the union test set; capability claims in this observation use the corrected and explicitly labeled synthetic/real-derived surfaces, not the uncorrected real_delta_blind, OpenHands, naive communication, or read/write outputs.",
+      "result_summary": "STALE publishes strong semantic-interference attenuation in controlled synthetic and real-derived parallel-coding tiers while its corrected mined-real Django control shows essentially no observable interference. The contrast is preserved rather than collapsed into one headline interference rate.",
+      "provenance_limitation": "The repository ships the raw stochastic agent outputs and deterministic benchmark core, but this corpus has not independently rerun the model-backed experiments. The strong communication-recovery findings belong to benchmark-defined synthetic and real-derived conditions; the corrected mined-real corpus is a negative control and must not be represented as supporting the same high interference rate."
+    }
+  ]
+}
