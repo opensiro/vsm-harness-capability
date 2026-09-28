@@ -4,22 +4,22 @@ Status: **experimental, non-normative**
 
 Tracking issue: #409
 
-This file records the durable rationale and selection policy used by the `functional-capability-depth` experiment. It is **not** the current-state registry for benchmark-family coverage.
+This file records the durable rationale and selection policy used by the extracted `vsm-harness-capability` experiment. It is **not** the current-state registry for benchmark-family coverage.
 
 The current state has explicit sources of truth:
 
 ```text
-vsm-benchmark-family-map/map.json
+../vsm-projections/benchmark-family-map/map.json
         -> reviewed function-valid benchmark families
 
 primary-baselines.json
         -> selected / gap decision metadata
 
-s2-system-benchmarks/coverage.json
-s3-system-benchmarks/coverage.json
-s3star-system-benchmarks/coverage.json
-s4-system-benchmarks/coverage.json
-s5-system-benchmarks/coverage.json
+../vsm-projections/s2/coverage.json
+../vsm-projections/s3/coverage.json
+../vsm-projections/s3star/coverage.json
+../vsm-projections/s4/coverage.json
+../vsm-projections/s5/coverage.json
         -> function-specific evidence coverage
 
 FUNCTION-BASELINES.md
@@ -58,7 +58,7 @@ A primary family should be:
 3. **canonical-linkable** — benchmarked systems can be linked to canonical Index harnesses without importing the target function from the benchmark scaffold;
 4. **frozen-repertoire compatible** — ordinary baseline observations do not silently mix persistent self-improvement across benchmark tasks into the same score;
 5. **public and reproducible** — protocol and provenance are sufficient to preserve observation identity;
-6. **scope-honest** — narrow applied-domain results remain domain projections rather than universal capability claims.
+6. **scope-honest** — specialized-domain results remain explicitly scoped evidence and do not become general capability claims without independent support for transfer/generality.
 
 The distinction is:
 
@@ -102,26 +102,19 @@ Raw observations must preserve:
 
 Numeric results belong in the observation layer, never in this rationale file.
 
-## Applied-domain projections
+## Specialized-domain evidence boundary
 
-A VSM function can have domain-specific projections without replacing its general primary.
+Raw observations may record factual task or operating-domain context, including Coding/SWE, science, cybersecurity, browser use, infrastructure, or other specialized environments.
 
-For S1, Coding/SWE evidence currently uses a dedicated domain primary plus additional technical evidence. The exact selected family, model cell, canonical harness rows and current observations are source-derived from `primary-baselines.json` and `s1-system-benchmarks/observations.jsonl` into `S1-BASELINE.md`.
-
-The durable rule is:
+That context is provenance, not a domain-specific assessment owned by this repository.
 
 ```text
-general S1 capability
-        ↓
-        ├── Coding / SWE projection
-        ├── Research / Science projection
-        ├── Government / Public Administration projection
-        ├── Cybersecurity / Incident Response projection
-        ├── Infrastructure / SRE projection
-        └── other applied-domain projections
+specialized-domain observation
+        ≠ automatically
+general functional-capability claim
 ```
 
-A domain result can support a comparison inside that domain. It must not be promoted automatically to universal S1 capability.
+A specialized result may support a general claim only when transfer/generality is independently supported. Future domain-specific repositories perform fresh assessments under their own system boundary, autonomy requirements, evidence contract and capability requirements.
 
 ## Ownership and boundary rule
 
@@ -162,9 +155,9 @@ The self-organizing `S` experiment remains a separate evidence class rather than
 
 ## Public-evidence-first rule
 
-Opensiro does not need to operate every benchmark itself.
+OpenSiro does not run or reproduce benchmark experiments on assessed harnesses to create capability evidence for this repository.
 
-The default capability path is:
+The active capability path is:
 
 ```text
 public benchmark / paper / leaderboard result
@@ -178,7 +171,7 @@ ownership/boundary classification
 matched comparison where justified
 ```
 
-Opensiro-operated runs are optional reproduction or validation evidence, not a prerequisite for capability ingestion.
+A public-evidence gap remains a gap until suitable upstream or third-party evidence exists. Controlled execution from the predecessor experiment is historical research only.
 
 ## Replacement and expansion rule
 
@@ -193,7 +186,7 @@ A new benchmark may replace a primary when it offers materially stronger:
 - frozen-repertoire control;
 - domain breadth for a general baseline.
 
-Replacing a primary changes the derived baseline view. It does not delete historical observations or secondary/domain evidence.
+Replacing a primary changes the derived baseline view. It does not delete historical observations or secondary evidence.
 
 Adding a new direct benchmark family should update the benchmark-family map, the relevant function coverage, and `primary-baselines.json` as required. `render_function_baselines.py --check` mechanically rejects direct-family drift between the map and gap-selection metadata.
 
@@ -205,6 +198,6 @@ Use these artifacts instead of this file for changing state:
 - [`primary-baselines.json`](primary-baselines.json) — machine-readable primary/gap decisions;
 - [`S1-BASELINE.md`](S1-BASELINE.md) — current selected S1 observations;
 - function-specific `coverage.json` files — reviewed evidence and boundary decisions;
-- [`vsm-benchmark-family-map/map.json`](vsm-benchmark-family-map/map.json) — current function-valid direct/proxy/unsuitable benchmark-family mapping.
+- [`../vsm-projections/benchmark-family-map/map.json`](../vsm-projections/benchmark-family-map/map.json) — current function-valid direct/proxy/unsuitable benchmark-family mapping.
 
 This separation keeps durable methodology/rationale stable while allowing public evidence to grow without creating another manually synchronized assessment database.

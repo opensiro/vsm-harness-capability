@@ -31,33 +31,6 @@
         "score_storage": "shared-raw-observation-layer",
         "provenance_note": "Published PawBench rows predate the current September 2026 canonical review refs; later observations must preserve the published harness versions and historical-lineage relation explicitly.",
         "grading_note": "PawBench v1.0 mixes automated, LLM-judge and hybrid grading; grading mode remains part of benchmark identity."
-      },
-      "domains": {
-        "coding_swe": {
-          "status": "domain_projection",
-          "primary": {
-            "benchmark_id": "claw-swe-bench",
-            "benchmark_name": "Claw-SWE-Bench",
-            "primary_source": "https://claw-swe-bench.github.io/",
-            "comparison_design": "matched-model-cross-harness",
-            "reference_model": "Qwen 3.6-flash",
-            "task_count": 350,
-            "verified_canonical_harness_ids": [
-              "openclaw",
-              "hermes-agent"
-            ],
-            "scope_note": "Software-engineering specific; do not promote this result to universal S1 capability."
-          },
-          "additional_evidence": [
-            {
-              "benchmark_id": "frontierharness-v1.0",
-              "benchmark_name": "FrontierHarness Eval v1.0",
-              "primary_source": "https://github.com/frontier-harness-eval/eval",
-              "reference_model": "Kimi K3",
-              "scope_note": "Software-engineering and terminal-task scope; useful for broad canonical harness overlap and cost/cache/time robustness checks."
-            }
-          ]
-        }
       }
     },
     "S2": {
@@ -198,6 +171,6 @@
       "blocking_reason": "Reviewed direct S5 evidence now includes GovSim-SelfGovern's benchmark-scaffolded membership/identity authority path and one canonical native descriptive observation: Ouroboros PR #855 supplies a parent-governed constitutional/runtime policy-change witness with executable return and persistence into later canonical lineage. Public evidence still lacks a materially matched comparison of multiple canonical native or adapter-preserved S5 implementations under one comparable authority/change/subsequent-operation surface."
     }
   },
-  "raw_metric_rule": "Do not duplicate numeric benchmark results in this selection record. Store each result once in the shared raw observation layer and reference it from function/domain projections.",
-  "replacement_rule": "A stronger benchmark may replace a primary baseline without deleting historical observations or secondary/domain evidence."
+  "raw_metric_rule": "Do not duplicate numeric benchmark results in this selection record. Store each result once in system-observations/ and reference it from VSM-function/general-capability views.",
+  "replacement_rule": "A stronger general-capability primary may replace a selected primary without deleting historical observations. Specialized-domain evidence remains raw provenance unless a separate domain-specific repository consumes it."
 }

@@ -2,7 +2,7 @@
 
 Generated current-state projection from `primary-baselines.json` and the function-level public-evidence closure records.
 
-This file is **not** the historical experiment synthesis. `SYNTHESIS.md` and `experiment-state.json` preserve the closed research-cycle snapshot; this projection moves only when the current function-level source records move.
+This file is **not** the historical experiment synthesis. `historical/predecessor/SYNTHESIS.md` and `historical/predecessor/experiment-state.json` preserve the closed research-cycle snapshot; this projection moves only when the current function-level source records move.
 
 It is also not a second evidence database: every state, count, blocker and reopen rule below is read from an existing source-of-truth artifact.
 
@@ -10,12 +10,12 @@ It is also not a second evidence database: every state, count, blocker and reope
 
 | Function | Primary state | Current evidence depth | Reviewed through | Source |
 | --- | --- | --- | --- | --- |
-| S1 | `selected` — PawBench v1.0 / `qwen3.6-35b-a3b` | `task_count`: `150` · `canonical_harnesses`: `3` | `2026-09-23` | [`primary-baselines.json`](primary-baselines.json) |
-| S2 | `gap` | `direct_benchmark_families`: `8` · `direct_observations`: `6` · `canonical_direct_observations`: `2` · `native_proxy_projections`: `2` · `representative_canonical_s2_systems_inspected`: `16` | `2026-09-26` | [`s2-primary-search-closure.json`](s2-system-benchmarks/matched-cell/s2-primary-search-closure.json) |
-| S3 | `gap` | `direct_benchmark_families`: `4` · `direct_observations`: `3` · `canonical_direct_observations`: `2` · `native_proxy_projections`: `2` · `representative_canonical_s3_systems_inspected`: `15` | `2026-09-26` | [`s3-primary-search-closure.json`](s3-system-benchmarks/matched-cell/s3-primary-search-closure.json) |
-| S3* | `gap` | `direct_benchmark_families`: `5` · `composed_direct_observations`: `3` · `canonical_direct_observations`: `2` | `2026-09-24` | [`s3star-primary-search-closure.json`](s3star-system-benchmarks/matched-cell/s3star-primary-search-closure.json) |
-| S4 | `gap` | `canonical_native_observations`: `2` · `reviewed_routes`: `6` | `2026-09-25` | [`s4-primary-search-closure.json`](s4-system-benchmarks/matched-cell/s4-primary-search-closure.json) |
-| S5 | `gap` | `reviewed_cases`: `14` · `direct_benchmark_families`: `1` · `composed_direct_observations`: `1` · `canonical_direct_observations`: `1` · `representative_canonical_s5_systems`: `5` | `2026-09-27` | [`s5-primary-search-closure.json`](s5-system-benchmarks/matched-cell/s5-primary-search-closure.json) |
+| S1 | `selected` — PawBench v1.0 / `qwen3.6-35b-a3b` | `task_count`: `150` · `canonical_harnesses`: `3` | `2026-09-23` | [`primary-baselines.json`](../baselines/primary-baselines.json) |
+| S2 | `gap` | `direct_benchmark_families`: `8` · `direct_observations`: `6` · `canonical_direct_observations`: `2` · `native_proxy_projections`: `2` · `representative_canonical_s2_systems_inspected`: `16` | `2026-09-26` | [`s2-primary-search-closure.json`](../vsm-projections/s2/matched-cell/s2-primary-search-closure.json) |
+| S3 | `gap` | `direct_benchmark_families`: `4` · `direct_observations`: `3` · `canonical_direct_observations`: `2` · `native_proxy_projections`: `2` · `representative_canonical_s3_systems_inspected`: `15` | `2026-09-26` | [`s3-primary-search-closure.json`](../vsm-projections/s3/matched-cell/s3-primary-search-closure.json) |
+| S3* | `gap` | `direct_benchmark_families`: `5` · `composed_direct_observations`: `3` · `canonical_direct_observations`: `2` | `2026-09-24` | [`s3star-primary-search-closure.json`](../vsm-projections/s3star/matched-cell/s3star-primary-search-closure.json) |
+| S4 | `gap` | `canonical_native_observations`: `2` · `reviewed_routes`: `6` | `2026-09-25` | [`s4-primary-search-closure.json`](../vsm-projections/s4/matched-cell/s4-primary-search-closure.json) |
+| S5 | `gap` | `reviewed_cases`: `14` · `direct_benchmark_families`: `1` · `composed_direct_observations`: `1` · `canonical_direct_observations`: `1` · `representative_canonical_s5_systems`: `5` | `2026-09-27` | [`s5-primary-search-closure.json`](../vsm-projections/s5/matched-cell/s5-primary-search-closure.json) |
 
 A `gap` is an empirical evidence state, not a zero capability score and not a statement about canonical VSM ownership.
 
@@ -27,7 +27,7 @@ A `gap` is an empirical evidence state, not a zero capability score and not a st
 - **Canonical harnesses in the first cell:** `qwenpaw`, `openclaw`, `hermes-agent`.
 - **Primary source:** https://github.com/agentscope-ai/PawBench.
 - **Provenance note:** Published PawBench rows predate the current September 2026 canonical review refs; later observations must preserve the published harness versions and historical-lineage relation explicitly.
-- **Source:** [`primary-baselines.json`](primary-baselines.json).
+- **Source:** [`primary-baselines.json`](../baselines/primary-baselines.json).
 
 ## S2 — current `gap` frontier
 
@@ -52,7 +52,7 @@ A `gap` is an empirical evidence state, not a zero capability score and not a st
   - another topology or framework benchmark whose coordination organization is benchmark-authored
   - another communication or token-efficiency metric without disturbance-to-attenuation closure
 - **Non-claim:** This closure is not a zero S2 capability score and does not downgrade canonical S2 ownership. Squad and thClaws now supply two canonical native descriptive direct observations; Nool, The Specification Gap, CodeCRDT and Grit remain direct non-canonical observations at their reviewed boundaries. Two heterogeneous descriptive canonical rows are still not a matched cross-harness primary; S2 primary remains a gap until materially matched canonical evidence appears.
-- **Source:** [`s2-primary-search-closure.json`](s2-system-benchmarks/matched-cell/s2-primary-search-closure.json).
+- **Source:** [`s2-primary-search-closure.json`](../vsm-projections/s2/matched-cell/s2-primary-search-closure.json).
 
 ## S3 — current `gap` frontier
 
@@ -77,7 +77,7 @@ A `gap` is an empirical evidence state, not a zero capability score and not a st
   - another framework comparison that does not activate canonical S3 paths
   - microperformance or mechanism tests that do not measure a current-control intervention and subsequent organizational outcome
 - **Non-claim:** This closure is not a zero S3 capability score and does not normalize the heterogeneous Multi-Agent Orchestration, Omnigent, SMAS, Magentic-One or LLaMAR evidence into one metric or ranking. Omnigent's observation is explicitly post-assessment temporal evidence and does not rewrite the earlier canonical review revision. SupervisorAgent / SMAS is direct evidence only at the composed supervised-MAS boundary and does not transfer S3 ownership to wrapped systems. LLaMAR's module ablation remains proxy evidence and does not establish a direct S3 observation. The S3 primary remains gap until materially matched canonical-native evidence appears.
-- **Source:** [`s3-primary-search-closure.json`](s3-system-benchmarks/matched-cell/s3-primary-search-closure.json).
+- **Source:** [`s3-primary-search-closure.json`](../vsm-projections/s3/matched-cell/s3-primary-search-closure.json).
 
 ## S3* — current `gap` frontier
 
@@ -97,7 +97,7 @@ A `gap` is an empirical evidence state, not a zero capability score and not a st
   - another whole-system paper-quality leaderboard without native S3* path activation
   - another heterogeneous single-system reviewer-revision result
 - **Non-claim:** This closure is not a zero S3* capability score, not a claim that matched evidence can never appear, and not a ranking. It freezes the reviewed public-evidence state until materially new primary evidence changes the matched-native condition.
-- **Source:** [`s3star-primary-search-closure.json`](s3star-system-benchmarks/matched-cell/s3star-primary-search-closure.json).
+- **Source:** [`s3star-primary-search-closure.json`](../vsm-projections/s3star/matched-cell/s3star-primary-search-closure.json).
 
 ## S4 — current `gap` frontier
 
@@ -117,7 +117,7 @@ A `gap` is an empirical evidence state, not a zero capability score and not a st
   - method-name similarity without immutable implementation provenance
   - GA or runtime microperformance measurements without future capability improvement after adaptation
 - **Non-claim:** This closure is not a claim that a matched S4 primary can never exist, not a zero capability result, and not a ranking. It freezes the reviewed current canonical/public-evidence state until materially new primary evidence changes a blocked gate.
-- **Source:** [`s4-primary-search-closure.json`](s4-system-benchmarks/matched-cell/s4-primary-search-closure.json).
+- **Source:** [`s4-primary-search-closure.json`](../vsm-projections/s4/matched-cell/s4-primary-search-closure.json).
 
 ## S5 — current `gap` frontier
 
@@ -140,15 +140,15 @@ A `gap` is an empirical evidence state, not a zero capability score and not a st
   - fixed-policy adherence, filtering or enforcement benchmarks
   - external public-policy analysis, value-expression tasks, governance mechanism unit tests or protocols without direct organizational authority/change closure
 - **Non-claim:** This closure is not a zero S5 capability score, does not attribute GovSim-SelfGovern's benchmark-scaffolded S5 organization to an underlying model, and does not treat Ouroboros PR #855 as evidence that autonomous Cyber Pro independently chose the policy change. It preserves the primary gap until materially matched multi-canonical evidence appears.
-- **Source:** [`s5-primary-search-closure.json`](s5-system-benchmarks/matched-cell/s5-primary-search-closure.json).
+- **Source:** [`s5-primary-search-closure.json`](../vsm-projections/s5/matched-cell/s5-primary-search-closure.json).
 
 ## Reading rule
 
 ```text
-historical SYNTHESIS.md / experiment-state.json
+historical/predecessor/SYNTHESIS.md / historical/predecessor/experiment-state.json
         = immutable closed-cycle snapshot
 
-current primary-baselines.json
+current baselines/primary-baselines.json
         +
 current S2–S5 function closure records
         ↓
