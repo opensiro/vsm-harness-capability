@@ -8,8 +8,8 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 HERE = Path(__file__).resolve().parent
-ROOT = HERE.parents[2]
-MAP_PATH = HERE.parent / "vsm-benchmark-family-map" / "map.json"
+ROOT = HERE.parents[1]
+MAP_PATH = HERE.parent / "benchmark-family-map" / "map.json"
 BASELINES_PATH = HERE.parent / "primary-baselines.json"
 COVERAGE_PATH = HERE / "coverage.json"
 BENCHMARK_OBSERVATIONS_PATH = HERE / "benchmark_observations.json"
@@ -111,7 +111,7 @@ def hydrate_s5_projection(link: dict) -> dict:
     rel, ref_oid = ref[len(prefix):].rsplit("#", 1)
     if ref_oid != oid or not rel.endswith(".json") or "/" in rel:
         fail(f"{oid}: raw_observation_ref drift")
-    raw_path = HERE.parent / "system-observations" / rel
+    raw_path = ROOT / "system-observations" / rel
     if not raw_path.is_file():
         fail(f"{oid}: neutral raw record missing: {rel}")
     record = json.loads(raw_path.read_text(encoding="utf-8"))
