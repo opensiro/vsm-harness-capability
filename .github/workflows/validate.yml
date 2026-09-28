@@ -17,6 +17,8 @@ jobs:
         with:
           python-version: '3.12'
       - run: python scripts/validate_repository.py
+      - name: Validate post-closure S4 evidence
+        run: python vsm-projections/s4/post-closure-deltas/validate.py
       - name: Exercise live evidence admission path
         run: |
           for record in \
