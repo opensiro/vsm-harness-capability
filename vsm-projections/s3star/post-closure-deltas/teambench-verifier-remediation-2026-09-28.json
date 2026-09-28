@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "experimental-non-normative",
+  "tracking_issue": 40,
+  "reviewed_at": "2026-09-28",
+  "source_revision": "ybkim95/TeamBench@d185aef1916fd86a9ba554d581fd256319a973af",
+  "delta_class": "new-direct-public-evidence-no-primary-reopen",
+  "function": "S3*",
+  "benchmark_id": "teambench-verifier-remediation",
+  "benchmark_fit": "direct",
+  "system_linkage": "benchmark-scaffolded-noncanonical",
+  "boundary_class": "benchmark-defined-composed-verifier-remediation-organization",
+  "canonical_harness_id": null,
+  "canonical_system_eligible": false,
+  "observation_id": "teambench-gpt54mini-verifier-remediation-lb90-2026",
+  "raw_observation_ref": "../../../system-observations/teambench.json#teambench-gpt54mini-verifier-remediation-lb90-2026",
+  "evidence_change": "A new first-party public benchmark-defined organization gives a separately constrained Verifier direct full-spec/workspace/test access, returns failed audit judgments to the Executor for remediation, and re-verifies the changed workspace, adding direct complementary-audit evidence at the TeamBench composed boundary.",
+  "audit_boundary": "Treat the Executor completion/workspace as the ordinary operational claim; treat the separately configured Verifier's full-spec direct inspection and test access as the complementary audit path; treat orchestrator sequencing and the external benchmark grader as supporting/evaluation machinery rather than audit ownership.",
+  "primary_reopen": false,
+  "reopen_gate_status": {
+    "matched_multi_canonical_surface": false,
+    "native_or_adapter_preserved_canonical_s3star_paths_active": false,
+    "cross_canonical_corrective_return_and_reverification": false
+  },
+  "disposition": "retain-evidence-backed-gap",
+  "reason": "The TeamBench ablation adds direct S3* evidence only at one benchmark-scaffolded non-canonical composed organization. The frozen closure explicitly does not reopen for another benchmark-supplied reviewer loop and still lacks a materially matched comparison across multiple canonical native or adapter-preserved S3* paths.",
+  "non_claim": "This delta does not attribute S3* ownership to GPT-5.4 Mini or the external task grader, does not claim that every verifier is complementary audit, does not independently reproduce the public aggregate, and does not claim that a matched S3* primary can never exist."
+}
