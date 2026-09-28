@@ -59,6 +59,20 @@ The extraction imported and validated:
 
 The neutral corpus preserved **53 unique raw observation IDs** at extraction. Raw observation files were checked against the pinned predecessor source, and predecessor checksums/source provenance are preserved under `historical/`.
 
+The exact migrated observation-ID set is frozen in [`historical/MIGRATED-OBSERVATION-IDS.txt`](historical/MIGRATED-OBSERVATION-IDS.txt). Repository validation treats that set as a migration floor: every migrated ID must remain present, while valid new public observations may be added to the live corpus after extraction.
+
+This separates two invariants that should not be conflated:
+
+```text
+migration completeness
+    = all 53 extracted observation IDs remain recoverable
+
+live capability corpus
+    = migration floor + later admitted public observations
+```
+
+The migration record therefore does not freeze the active corpus at 53 observations.
+
 ## Historical artifacts
 
 Historical research was preserved rather than rewritten into the new active workflow, including:
@@ -87,7 +101,7 @@ The migration completed the intended conditions:
 2. active function projections were migrated into the Capability-owned `vsm-projections/` layer;
 3. current baseline/frontier outputs were migrated, with intentional removal of active domain-specific grading/projection ownership;
 4. historical experiment artifacts remain recoverable with source/checksum provenance;
-5. repository-local validation passes, including the 53-observation integrity gate and neutral-registry regeneration check;
+5. repository-local validation preserves the frozen 53-observation migration floor and checks neutral-registry regeneration while permitting later live-corpus growth;
 6. the Index predecessor path is now a migration pointer rather than an active competing implementation.
 
 This completion does not change the repository's status: `opensiro/vsm-harness-capability` remains **experimental and non-normative** and is not automatically admitted into the bounded `opensiro/vsm-oss-organization` viable system.

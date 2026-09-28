@@ -6,6 +6,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 EXPECTED_SOURCE_REF = "opensiro/vsm-harness-index@3446fe77e031878dc8ad4edfb857b608a7a6b26f"
+EXPECTED_MIGRATED_OBSERVATION_COUNT = 53
 
 REQUIRED = [
     "README.md",
@@ -23,6 +24,7 @@ REQUIRED = [
     "frontier/README.md",
     "historical/README.md",
     "historical/SOURCE-REF",
+    "historical/MIGRATED-OBSERVATION-IDS.txt",
 ]
 
 errors: list[str] = []
@@ -95,11 +97,33 @@ registry = ROOT / "system-observations" / "registry.psv"
 if registry.is_file():
     rows = [line for line in registry.read_text(encoding="utf-8").splitlines()[1:] if line.strip()]
     ids = [line.split("|", 1)[0] for line in rows]
-    if len(ids) != 53 or len(set(ids)) != 53:
+    if len(set(ids)) != len(ids):
         errors.append(
-            "system-observations/registry.psv: expected 53 unique migrated observation IDs, "
-            f"got {len(set(ids))}/{len(ids)}"
+            "system-observations/registry.psv: observation IDs must remain unique, "
+            f"got {len(set(ids))}/{len(ids)} unique IDs"
         )
+
+    migrated_manifest = ROOT / "historical" / "MIGRATED-OBSERVATION-IDS.txt"
+    if migrated_manifest.is_file():
+        migrated_ids = [
+            line.strip()
+            for line in migrated_manifest.read_text(encoding="utf-8").splitlines()
+            if line.strip() and not line.lstrip().startswith("#")
+        ]
+        if len(migrated_ids) != EXPECTED_MIGRATED_OBSERVATION_COUNT:
+            errors.append(
+                "historical/MIGRATED-OBSERVATION-IDS.txt: expected "
+                f"{EXPECTED_MIGRATED_OBSERVATION_COUNT} migrated IDs, got {len(migrated_ids)}"
+            )
+        if len(set(migrated_ids)) != len(migrated_ids):
+            errors.append("historical/MIGRATED-OBSERVATION-IDS.txt: migrated IDs must be unique")
+
+        missing_migrated = sorted(set(migrated_ids) - set(ids))
+        if missing_migrated:
+            errors.append(
+                "system-observations/registry.psv: migrated observation IDs disappeared from live corpus: "
+                + ", ".join(missing_migrated)
+            )
 
 source_ref_path = ROOT / "historical" / "SOURCE-REF"
 if source_ref_path.is_file():
