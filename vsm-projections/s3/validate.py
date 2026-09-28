@@ -9,13 +9,13 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 HERE = Path(__file__).resolve().parent
-ROOT = HERE.parents[2]
+ROOT = HERE.parents[1]
 COVERAGE = HERE / "coverage.json"
 OBSERVATIONS = HERE / "observations.json"
 PROXY_LINKS = HERE / "proxy_links.json"
-BENCHMARK_MAP = HERE.parent / "vsm-benchmark-family-map" / "map.json"
+BENCHMARK_MAP = HERE.parent / "benchmark-family-map" / "map.json"
 OMNIGENT_DELTA = HERE / "post-closure-deltas" / "omnigent-post-assessment-recovery.json"
-RAW_OBSERVATIONS = HERE.parent / "system-observations"
+RAW_OBSERVATIONS = ROOT / "system-observations"
 
 COVERAGE_CLASSES = {
     "direct-scaffolded",
@@ -86,20 +86,36 @@ def fail(message: str) -> None:
 
 
 def assessment_fields(harness_id: str) -> dict[str, str]:
-    path = ROOT / "assessments" / f"{harness_id}.md"
-    if not path.exists():
-        fail(f"missing canonical assessment for {harness_id}")
-    match = FRONTMATTER.match(path.read_text(encoding="utf-8"))
-    if not match:
-        fail(f"assessment {path} has no front matter")
+    cache = getattr(assessment_fields, "_cache", {})
+    if harness_id in cache:
+        return cache[harness_id]
+    from urllib.error import HTTPError, URLError
+    from urllib.request import urlopen
+    url = (
+        "https://raw.githubusercontent.com/opensiro/vsm-harness-index/"
+        f"main/assessments/{harness_id}.md"
+    )
+    try:
+        with urlopen(url, timeout=20) as response:
+            text = response.read().decode("utf-8")
+    except (HTTPError, URLError, TimeoutError) as exc:
+        fail(f"cannot resolve canonical Index assessment for {harness_id}: {exc}")
+    marker = "---" + chr(10)
+    if not text.startswith(marker):
+        fail(f"canonical Index assessment for {harness_id} has no front matter")
+    try:
+        frontmatter = text.split(marker, 2)[1]
+    except IndexError:
+        fail(f"canonical Index assessment for {harness_id} has malformed front matter")
     fields: dict[str, str] = {}
-    for line in match.group(1).splitlines():
+    for line in frontmatter.splitlines():
         if ":" not in line:
             continue
         key, value = line.split(":", 1)
         fields[key.strip()] = value.strip()
+    cache[harness_id] = fields
+    assessment_fields._cache = cache
     return fields
-
 
 def valid_https(value: object) -> bool:
     if not isinstance(value, str):

@@ -9,12 +9,12 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 HERE = Path(__file__).resolve().parent
-ROOT = HERE.parents[2]
-MAP = HERE.parent / "vsm-benchmark-family-map" / "map.json"
+ROOT = HERE.parents[1]
+MAP = HERE.parent / "benchmark-family-map" / "map.json"
 COVERAGE = HERE / "coverage.json"
 BENCHMARK_OBSERVATIONS = HERE / "benchmark_observations.json"
 CANONICAL_OBSERVATIONS = HERE / "canonical_observations.json"
-RAW_DIR = HERE.parent / "system-observations"
+RAW_DIR = ROOT / "system-observations"
 RAW_PREFIX = "../../system-observations/"
 
 COMPOSED_DIRECT_S3STAR = {"truecall-runtime-verification", "swe-review", "harness-bench-adversarial-review"}
@@ -79,21 +79,36 @@ def valid_https(value: object) -> bool:
 
 
 def assessment_fields(harness_id: str) -> dict[str, str]:
-    path = ROOT / "assessments" / f"{harness_id}.md"
-    if not path.exists():
-        fail(f"missing canonical assessment: {harness_id}")
-    match = FRONTMATTER.match(path.read_text(encoding="utf-8"))
-    if not match:
-        fail(f"assessment {harness_id} has no front matter")
+    cache = getattr(assessment_fields, "_cache", {})
+    if harness_id in cache:
+        return cache[harness_id]
+    from urllib.error import HTTPError, URLError
+    from urllib.request import urlopen
+    url = (
+        "https://raw.githubusercontent.com/opensiro/vsm-harness-index/"
+        f"main/assessments/{harness_id}.md"
+    )
+    try:
+        with urlopen(url, timeout=20) as response:
+            text = response.read().decode("utf-8")
+    except (HTTPError, URLError, TimeoutError) as exc:
+        fail(f"cannot resolve canonical Index assessment for {harness_id}: {exc}")
+    marker = "---" + chr(10)
+    if not text.startswith(marker):
+        fail(f"canonical Index assessment for {harness_id} has no front matter")
+    try:
+        frontmatter = text.split(marker, 2)[1]
+    except IndexError:
+        fail(f"canonical Index assessment for {harness_id} has malformed front matter")
     fields: dict[str, str] = {}
-    for line in match.group(1).splitlines():
+    for line in frontmatter.splitlines():
         if ":" not in line:
             continue
         key, value = line.split(":", 1)
         fields[key.strip()] = value.strip()
+    cache[harness_id] = fields
+    assessment_fields._cache = cache
     return fields
-
-
 
 def hydrate_observation(link: dict) -> dict:
     oid = link.get("observation_id")

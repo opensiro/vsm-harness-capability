@@ -18,7 +18,15 @@ DECLARED_SYSTEM_COMPATIBILITY = {
     "benchmark-scaffolded",
     "unclear",
 }
-MAP_LINKAGE = DECLARED_SYSTEM_COMPATIBILITY | {"observation-specific"}
+# `system_linkage` is a derived evidence-linkage field rather than the neutral
+# raw registry's system-compatibility vocabulary. Preserve historical linkage
+# classes that distinguish canonical native observations from public native
+# systems that are not canonical Index harnesses.
+MAP_LINKAGE = DECLARED_SYSTEM_COMPATIBILITY | {
+    "observation-specific",
+    "external-native-noncanonical",
+    "native-canonical-observation",
+}
 
 
 def fail(message: str) -> None:

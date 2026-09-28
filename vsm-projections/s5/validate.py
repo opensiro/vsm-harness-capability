@@ -8,9 +8,9 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 HERE = Path(__file__).resolve().parent
-ROOT = HERE.parents[2]
-MAP_PATH = HERE.parent / "vsm-benchmark-family-map" / "map.json"
-BASELINES_PATH = HERE.parent / "primary-baselines.json"
+ROOT = HERE.parents[1]
+MAP_PATH = HERE.parent / "benchmark-family-map" / "map.json"
+BASELINES_PATH = ROOT / "baselines" / "primary-baselines.json"
 COVERAGE_PATH = HERE / "coverage.json"
 BENCHMARK_OBSERVATIONS_PATH = HERE / "benchmark_observations.json"
 CANONICAL_OBSERVATIONS_PATH = HERE / "canonical_observations.json"
@@ -111,7 +111,7 @@ def hydrate_s5_projection(link: dict) -> dict:
     rel, ref_oid = ref[len(prefix):].rsplit("#", 1)
     if ref_oid != oid or not rel.endswith(".json") or "/" in rel:
         fail(f"{oid}: raw_observation_ref drift")
-    raw_path = HERE.parent / "system-observations" / rel
+    raw_path = ROOT / "system-observations" / rel
     if not raw_path.is_file():
         fail(f"{oid}: neutral raw record missing: {rel}")
     record = json.loads(raw_path.read_text(encoding="utf-8"))
@@ -308,11 +308,29 @@ def main() -> None:
     if statuses != EXPECTED_BENCHMARK_STATUS:
         fail(f"canonical S5 evidence-status mismatch: {statuses!r}")
 
+    from urllib.error import HTTPError, URLError
+    from urllib.request import urlopen
+
     for harness_id, expected_state in EXPECTED_CANONICAL.items():
-        path = ROOT / "assessments" / f"{harness_id}.md"
-        if not path.exists():
-            fail(f"missing canonical assessment: {path}")
-        fm = frontmatter(path)
+        url = (
+            "https://raw.githubusercontent.com/opensiro/vsm-harness-index/"
+            f"main/assessments/{harness_id}.md"
+        )
+        try:
+            with urlopen(url, timeout=20) as response:
+                assessment = response.read().decode("utf-8")
+        except (HTTPError, URLError, TimeoutError) as exc:
+            fail(f"cannot resolve canonical Index assessment for {harness_id}: {exc}")
+        marker = "---" + chr(10)
+        if not assessment.startswith(marker):
+            fail(f"canonical Index assessment for {harness_id} has no frontmatter")
+        front = assessment.split(marker, 2)[1]
+        fm = {}
+        for line in front.splitlines():
+            if ":" not in line:
+                continue
+            key, value = line.split(":", 1)
+            fm[key.strip()] = value.strip()
         if fm.get("status") != "included":
             fail(f"{harness_id}: expected status included, got {fm.get('status')!r}")
         actual_state = fm.get("autonomy_s5")
