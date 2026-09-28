@@ -35,7 +35,7 @@ domain-specific assessment
 - [`PUBLIC-EVIDENCE.md`](PUBLIC-EVIDENCE.md) — public-evidence admission and provenance contract.
 - [`EVIDENCE-REGISTRY.md`](EVIDENCE-REGISTRY.md) — neutral observation-layer responsibilities.
 - [`BASELINE.md`](BASELINE.md) — per-function general-capability comparison rules.
-- [`MIGRATION.md`](MIGRATION.md) — migration boundary from the original Index experiment.
+- [`MIGRATION.md`](MIGRATION.md) — completed migration record from the original Index experiment.
 
 Cross-repository responsibility and the relationship to future domain-specific repositories are documented in [`opensiro/vsm-oss-organization/ECOSYSTEM.md`](https://github.com/opensiro/vsm-oss-organization/blob/main/ECOSYSTEM.md).
 
@@ -118,7 +118,7 @@ historical/           frozen pre-repository experiment artifacts
 scripts/              repository-local validation / rendering tooling
 ```
 
-The migration is intentionally staged. The original experiment remains provenance history until each active artifact is imported and validated here; see [`MIGRATION.md`](MIGRATION.md).
+The extraction from `vsm-harness-index/experiments/functional-capability-depth` is complete for pinned source revision `3446fe77e031878dc8ad4edfb857b608a7a6b26f`. Active capability maintenance now occurs here; the Index retains a migration pointer and remains authoritative for canonical assessments. See [`MIGRATION.md`](MIGRATION.md).
 
 ## Source-of-truth boundaries
 
