@@ -153,6 +153,34 @@ python frontier/render_frontier.py
 
 Repository validation runs `python frontier/render_frontier.py --check`, so source/frontier drift fails closed.
 
+### Post-closure no-reopen review
+
+S2, S3, S3*, S4 and S5 already have frozen primary-search closures at `gap`. When new evidence is reviewed **after** that closure and does not satisfy any reopen gate, use the Capability-native post-closure path defined in [`vsm-projections/benchmark-family-map/POST-CLOSURE.md`](vsm-projections/benchmark-family-map/POST-CLOSURE.md).
+
+The derived change should contain:
+
+```text
+addition-specific human review
+        ↓
+vsm-projections/benchmark-family-map/post-closure.json
+        ↓
+vsm-projections/<function>/post-closure-deltas/<delta>.json
+```
+
+Do not insert the new family into historical closure counts merely to make the old snapshot look current. The post-closure registry records the live addition while preserving the frozen closure artifact.
+
+Run:
+
+```bash
+python vsm-projections/benchmark-family-map/validate_post_closure.py
+```
+
+This path is **no-reopen only**. It requires `primary_reopen: false`, all declared reopen-gate statuses to remain false, and the live baseline to remain `gap`.
+
+If new evidence actually satisfies a primary reopen condition, stop using the no-reopen path. Open a separate closure/baseline review task, update the owning primary-search state deliberately, and regenerate the frontier if its owning sources change.
+
+Historical predecessor-era files already present under function-local `post-closure-deltas/` are not retroactively normalized by this workflow. The live contract applies only to additions explicitly registered in `benchmark-family-map/post-closure.json`.
+
 ## Review split
 
 When practical, keep factual admission and semantic interpretation separable in the diff:
