@@ -56,6 +56,7 @@ skillrevise-trace-conditioned-skill-revision-2026|SkillRevise||SkillsBench; Skil
 squad-marble-aligned-coordination-ablation|Squad|squad|MARBLE aligned four-domain re-run|native-mechanism-ablation|first-party-reported|native-system|squad.json
 squad-marble-completion-ablation|Squad|squad|MARBLE factorial ablation|native-mechanism-ablation|first-party-reported|native-system|squad.json
 squad-shared-state-conflict-attenuation-2026-03|Squad|squad|immutable first-party repository history plus first-party public operational case study|operational-history-witness|first-party-reported|native-system|squad-operational-history.json
+stale-semantic-interference-communication-2026|STALE benchmark organization||STALE synthetic, corrected mined-real, and real-derived semantic-interference study|semantic-interference-communication-study|first-party-reported|benchmark-scaffolded|stale-bench.json
 supervisoragent-smas-gaia-pass1-2026|SupervisorAgent + SMAS||SupervisorAgent SMAS GAIA validation pass@1|system-benchmark-result|first-party-reported|benchmark-scaffolded|supervisoragent-smas.json
 swe-agent__swe-bench-verified__claude-4-sonnet-20250514__20250522|SWE-agent|swe-agent|SWE-bench Verified|system-benchmark-result|external-reproduced|native-system|swe-agent-benchmark-results-external-reproduced-native-system.json
 swe-review-generate-review-revise-2026-07|SWE-Review-Bench||SWE-Review-Bench|system-benchmark-result|first-party-reported|benchmark-scaffolded|swe-review.json
