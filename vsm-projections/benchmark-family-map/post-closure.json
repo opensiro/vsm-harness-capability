@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "status": "experimental-non-normative",
-  "reviewed_at": "2026-09-28",
+  "reviewed_at": "2026-09-29",
   "base_map_ref": "vsm-projections/benchmark-family-map/map.json",
   "purpose": "Machine-readable additions discovered after frozen function-level closure snapshots without rewriting those historical closure counts.",
   "additions": [
@@ -60,6 +60,20 @@
       "review_ref": "vsm-projections/benchmark-family-map/S2-HEARTHNET-REVIEW.md",
       "delta_ref": "vsm-projections/s2/post-closure-deltas/hearthnet-conflict-resolution-2026-09-28.json",
       "non_claim": "Direct S2 fit belongs only to the HearthNet benchmark/demo composed disturbance-to-arbitration-to-deferral boundary. It does not claim native autonomous Dewey detection, does not transfer canonical S2 ownership to HearthNet or an underlying model, and does not select an S2 primary baseline."
+    },
+    {
+      "function": "S3",
+      "benchmark_id": "orchestratebench-policy-conditioned-containment",
+      "benchmark_name": "OrchestrateBench policy-conditioned containment",
+      "fit": "direct",
+      "primary_source": "https://github.com/anote-ai/Research-OrchestrateBench/tree/5c3738c19d99cbe9aa152b0ea9b7d903ea4f93db",
+      "evaluated_object": "First-party OrchestrateBench benchmark-defined control organization in which seeded current-stage failures propagate through a staged dependency chain while a trusted-state repair policy can use supplied upstream ground truth to correct the current stage before downstream execution, with recovery and cascade measured from committed real-Claude runs.",
+      "evaluation_mode": "published-policy-conditioned-failure-containment-and-trusted-state-ablation",
+      "system_linkage": "benchmark-scaffolded-noncanonical",
+      "tracking_issue": 49,
+      "review_ref": "vsm-projections/benchmark-family-map/S3-ORCHESTRATEBENCH-REVIEW.md",
+      "delta_ref": "vsm-projections/s3/post-closure-deltas/orchestratebench-policy-containment-2026-09-29.json",
+      "non_claim": "Direct S3 fit belongs only to the OrchestrateBench benchmark-defined composed current-control boundary with benchmark-supplied trusted-state support. It does not establish autonomous S3 detection or ownership for Claude, does not transfer S3 ownership to any named framework, and does not select an S3 primary baseline."
     }
   ]
 }
