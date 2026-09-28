@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "experimental-non-normative",
+  "tracking_issue": 41,
+  "reviewed_at": "2026-09-28",
+  "source_revision": "zhonghaozhan/hearthnet_framework@938fdd813e16c0d356c8e56685a8e1ce311d086a",
+  "delta_class": "new-direct-public-evidence-no-primary-reopen",
+  "function": "S2",
+  "benchmark_id": "hearthnet-scene2-conflict-resolution",
+  "benchmark_fit": "direct",
+  "system_linkage": "benchmark-scaffolded-noncanonical",
+  "boundary_class": "benchmark-defined-multi-agent-conflict-arbitration-organization",
+  "canonical_harness_id": null,
+  "canonical_system_eligible": false,
+  "observation_id": "hearthnet-scene2-conflict-resolution-5run-2026",
+  "raw_observation_ref": "../../../system-observations/hearthnet.json#hearthnet-scene2-conflict-resolution-5run-2026",
+  "evidence_change": "A new first-party public Scene 2 organization supplies an explicit multi-agent operating-mode disturbance, exercises framework arbitration and lease-evaluation paths, returns denials to the affected operational managers, and closes through acknowledgements and deferral while retaining the shared operating commitment.",
+  "s2_boundary": "Treat Jeeves and Darcy as distinct operational managers, the benchmark-authored WFH-versus-scheduled-wind-down incompatibility as the measured disturbance, Rupert arbitration plus lease decisions as the coordinating response, and denial-to-acknowledgement/deferral as the return path. Do not treat the five-run result as native autonomous Dewey detection because Scene 2 scripts the conflict alert and timeline response.",
+  "primary_reopen": false,
+  "reopen_gate_status": {
+    "matched_multi_canonical_surface": false,
+    "canonical_native_or_adapter_preserved_linkage": false,
+    "materially_comparable_existing_canonical_cell": false
+  },
+  "disposition": "retain-evidence-backed-gap",
+  "reason": "The HearthNet observation adds direct disturbance-to-attenuation evidence only at one benchmark-scaffolded non-canonical organization. The frozen S2 closure explicitly does not reopen for another benchmark-scaffolded direct observation or benchmark-authored coordination organization without canonical native or adapter-preserved linkage and a materially matched canonical comparison cell.",
+  "non_claim": "This delta does not claim native autonomous Dewey conflict-detection performance, does not attribute canonical S2 ownership to HearthNet or any underlying model, does not independently reproduce the first-party result, and does not claim that a matched S2 primary can never exist."
+}
