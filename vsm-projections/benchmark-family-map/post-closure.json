@@ -46,6 +46,20 @@
       "review_ref": "vsm-projections/benchmark-family-map/S3STAR-TEAMBENCH-REVIEW.md",
       "delta_ref": "vsm-projections/s3star/post-closure-deltas/teambench-verifier-remediation-2026-09-28.json",
       "non_claim": "Direct S3* fit belongs only to the TeamBench benchmark-defined composed Verifier/remediation organization. It does not transfer S3* ownership to GPT-5.4 Mini, the external deterministic grader, any canonical harness, or every mandatory verifier stage, and it does not select an S3* primary baseline."
+    },
+    {
+      "function": "S2",
+      "benchmark_id": "hearthnet-scene2-conflict-resolution",
+      "benchmark_name": "HearthNet Scene 2 conflict-resolution evaluation",
+      "fit": "direct",
+      "primary_source": "https://github.com/zhonghaozhan/hearthnet_framework/tree/938fdd813e16c0d356c8e56685a8e1ce311d086a",
+      "evaluated_object": "First-party HearthNet benchmark/demo organization in which benchmark-supplied conflicting operational requests and context are passed through real framework arbitration and lease-evaluation paths, returned as denials to distinct device-manager units, and closed through acknowledgement/deferral while preserving the shared operating mode.",
+      "evaluation_mode": "published-repeated-scripted-conflict-resolution-evaluation",
+      "system_linkage": "benchmark-scaffolded-noncanonical",
+      "tracking_issue": 41,
+      "review_ref": "vsm-projections/benchmark-family-map/S2-HEARTHNET-REVIEW.md",
+      "delta_ref": "vsm-projections/s2/post-closure-deltas/hearthnet-conflict-resolution-2026-09-28.json",
+      "non_claim": "Direct S2 fit belongs only to the HearthNet benchmark/demo composed disturbance-to-arbitration-to-deferral boundary. It does not claim native autonomous Dewey detection, does not transfer canonical S2 ownership to HearthNet or an underlying model, and does not select an S2 primary baseline."
     }
   ]
 }
