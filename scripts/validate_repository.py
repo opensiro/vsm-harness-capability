@@ -20,6 +20,9 @@ REQUIRED = [
     "system-observations/README.md",
     "system-observations/registry.psv",
     "vsm-projections/README.md",
+    "vsm-projections/benchmark-family-map/map.json",
+    "vsm-projections/benchmark-family-map/validate.py",
+    "vsm-projections/benchmark-family-map/S1-PAWBENCH-REVIEW.md",
     "comparison-cells/README.md",
     "comparison-cells/validate.py",
     "comparison-cells/s1-pawbench-v1-qwen3.6-35b-a3b.json",
@@ -88,16 +91,48 @@ for path in active_files:
         if needle in text:
             errors.append(f"{path.relative_to(ROOT)}: {why}: {needle}")
 
+family_map_path = ROOT / "vsm-projections" / "benchmark-family-map" / "map.json"
+direct_family_pairs: set[tuple[str, str]] = set()
+if family_map_path.is_file():
+    family_map = json.loads(family_map_path.read_text(encoding="utf-8"))
+    direct_family_pairs = {
+        (entry.get("function"), entry.get("benchmark_id"))
+        for entry in family_map.get("entries", [])
+        if isinstance(entry, dict) and entry.get("fit") == "direct"
+    }
+
 selection_path = ROOT / "baselines" / "primary-baselines.json"
 if selection_path.is_file():
     data = json.loads(selection_path.read_text(encoding="utf-8"))
-    s1 = data.get("functions", {}).get("S1", {})
+    functions = data.get("functions", {})
+    s1 = functions.get("S1", {})
     if "domains" in s1:
         errors.append(
             "baselines/primary-baselines.json: domain-specific derived state remains in active general layer"
         )
     if s1.get("scope") != "general":
         errors.append("baselines/primary-baselines.json: selected S1 baseline must declare scope=general")
+
+    for function, function_view in functions.items():
+        if not isinstance(function_view, dict) or function_view.get("status") != "selected":
+            continue
+        primary = function_view.get("primary")
+        if not isinstance(primary, dict):
+            errors.append(
+                f"baselines/primary-baselines.json: selected {function} baseline must declare primary"
+            )
+            continue
+        benchmark_id = primary.get("benchmark_id")
+        if not isinstance(benchmark_id, str) or not benchmark_id.strip():
+            errors.append(
+                f"baselines/primary-baselines.json: selected {function} primary must declare benchmark_id"
+            )
+            continue
+        if (function, benchmark_id) not in direct_family_pairs:
+            errors.append(
+                "baselines/primary-baselines.json: selected primary must have a direct "
+                f"benchmark-family mapping: ({function}, {benchmark_id})"
+            )
 
 registry = ROOT / "system-observations" / "registry.psv"
 if registry.is_file():
@@ -154,6 +189,7 @@ else:
 for cmd in (
     [sys.executable, str(ROOT / "system-observations" / "validate.py")],
     [sys.executable, str(ROOT / "system-observations" / "render_registry.py"), "--check"],
+    [sys.executable, str(ROOT / "vsm-projections" / "benchmark-family-map" / "validate.py")],
     [sys.executable, str(ROOT / "comparison-cells" / "validate.py")],
     [sys.executable, str(ROOT / "frontier" / "render_frontier.py"), "--check"],
 ):
