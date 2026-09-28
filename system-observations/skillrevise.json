@@ -13,7 +13,7 @@
     "https://github.com/xuansenpa1/skillrevise/tree/fb8042ac2415cb6d7f3a49db0c9a95ecb79edc6d",
     "https://github.com/xuansenpa1/skillrevise/blob/fb8042ac2415cb6d7f3a49db0c9a95ecb79edc6d/README.md",
     "https://github.com/xuansenpa1/skillrevise/blob/fb8042ac2415cb6d7f3a49db0c9a95ecb79edc6d/docs/reproducibility.md",
-    "https://arxiv.org/abs/2606.01139v4"
+    "https://arxiv.org/abs/2606.01139"
   ],
   "observations": [
     {
@@ -21,7 +21,7 @@
       "kind": "persistent-skill-revision-study",
       "evidence_surface": "SkillRevise main benchmark study across SkillsBench, SkillLearnBench-Random, and SWE-Skills-Bench-Hard",
       "reviewed_revision": "fb8042ac2415cb6d7f3a49db0c9a95ecb79edc6d",
-      "publication_id": "arXiv:2606.01139v4",
+      "publication_id": "arXiv:2606.01139",
       "method": "SkillRevise",
       "adaptation_surface": [
         "persistent LLM-authored agent skill artifact"
