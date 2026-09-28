@@ -18,6 +18,20 @@
       "review_ref": "vsm-projections/benchmark-family-map/S4-AIRBNB-AHO-REVIEW.md",
       "delta_ref": "vsm-projections/s4/post-closure-deltas/airbnb-agent-harness-optimizer-2026-09-28.json",
       "non_claim": "Direct S4 fit belongs to the external AHO optimizer plus evolving-harness boundary. The fixed inner model, outer proposer, BFCL or tau2 benchmark do not inherit S4 ownership, and this single non-canonical study does not select an S4 primary baseline."
+    },
+    {
+      "function": "S4",
+      "benchmark_id": "skillrevise-alfworld-principle-absorption",
+      "benchmark_name": "SkillRevise ALFWorld Principle Absorption",
+      "fit": "direct",
+      "primary_source": "https://github.com/xuansenpa1/skillrevise/tree/fb8042ac2415cb6d7f3a49db0c9a95ecb79edc6d",
+      "evaluated_object": "First-party SkillRevise adaptation boundary in which environment-grounded calibration evidence is abstracted into persistent applicability-bounded Principle Memory, frozen before evaluation, and retrieved into later held-out skill-revision operations.",
+      "evaluation_mode": "published-calibration-frozen-bank-heldout-evaluation",
+      "system_linkage": "external-native-noncanonical",
+      "tracking_issue": 32,
+      "review_ref": "vsm-projections/benchmark-family-map/S4-SKILLREVISE-ALFWORLD-REVIEW.md",
+      "delta_ref": "vsm-projections/s4/post-closure-deltas/skillrevise-alfworld-principle-absorption-2026-09-28.json",
+      "non_claim": "Direct S4 fit belongs only to the external SkillRevise calibration-to-frozen-Principle-Memory-to-later-operation boundary. It does not transfer S4 ownership to Qwen3-8B, ALFWorld, the ordinary same-task maxrev3 loop, or any canonical harness, and it does not select an S4 primary baseline."
     }
   ]
 }
