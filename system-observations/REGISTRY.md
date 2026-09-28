@@ -5,7 +5,7 @@ Status: **generated, experimental, non-normative**
 Generated from the raw JSON records in this directory by `render_registry.py`.
 Raw evidence payloads remain only in the raw record; this table is an identity/provenance projection, not a second result database.
 
-Raw observations: **53**
+Raw observations: **54**
 
 | System | Canonical harness | Observation | Evidence surface(s) | Kind | Provenance | Compatibility | Raw record |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -20,6 +20,7 @@ Raw observations: **53**
 | Codex | [codex](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/codex.md) | `codex__harbor-swe-bench-verified-parity__o4-mini__20250701` | SWE-bench Verified via Terminal-Bench/Harbor parity | `system-benchmark-result` | `external-reproduced` | `adapter-preserved` | [codex-benchmark-results-external-reproduced-adapter-preserved.json](codex-benchmark-results-external-reproduced-adapter-preserved.json) |
 | Codex | [codex](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/codex.md) | `codex__terminal-bench-4.0.0__gpt-5.6-sol__20260826` | Terminal-Bench 4.0.0 | `system-benchmark-result` | `external-reproduced` | `adapter-preserved` | [codex-benchmark-results-external-reproduced-adapter-preserved.json](codex-benchmark-results-external-reproduced-adapter-preserved.json) |
 | Codex | [codex](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/codex.md) | `codex__terminal-bench-4.0.0__gpt-5.6-terra__20260826` | Terminal-Bench 4.0.0 | `system-benchmark-result` | `external-reproduced` | `adapter-preserved` | [codex-benchmark-results-external-reproduced-adapter-preserved.json](codex-benchmark-results-external-reproduced-adapter-preserved.json) |
+| Codex | [codex](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/codex.md) | `codex__wildclawbench-harness-comparison__gpt-5.4` | WildClawBench harness comparison | `system-benchmark-result` | `external-reproduced` | `adapter-preserved` | [codex-wildclawbench-external-reproduced-adapter-preserved.json](codex-wildclawbench-external-reproduced-adapter-preserved.json) |
 | Codex | [codex](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/codex.md) | `futuresim-v1-codex-0125-gpt55` | FutureSim v1 | `forecasting-benchmark-result` | `external-reproduced` | `adapter-preserved` | [futuresim-codex.json](futuresim-codex.json) |
 | data-to-paper | [data-to-paper](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/data-to-paper.md) | `data-to-paper-review-revision-2024` | Data-to-Paper reviewer-feedback-to-revision publication example | `operational-publication-witness` | `first-party-reported` | `native-system` | [data-to-paper-review-revision.json](data-to-paper-review-revision.json) |
 | Evo-Bench benchmark organization | — | `evo-bench-heldout-harness-evolution-2026` | Evo-Bench held-out harness-evolution study | `persistent-adaptation-study` | `external-reproduced` | `benchmark-scaffolded` | [evo-bench.json](evo-bench.json) |
