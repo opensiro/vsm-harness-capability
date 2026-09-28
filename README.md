@@ -34,6 +34,7 @@ domain-specific assessment
 - [`CONTRACT.md`](CONTRACT.md) — authoritative repository-local scope and architecture.
 - [`PUBLIC-EVIDENCE.md`](PUBLIC-EVIDENCE.md) — public-evidence admission and provenance contract.
 - [`EVIDENCE-REGISTRY.md`](EVIDENCE-REGISTRY.md) — neutral observation-layer responsibilities.
+- [`ADMISSION.md`](ADMISSION.md) — repeatable workflow for adding new live public observations.
 - [`BASELINE.md`](BASELINE.md) — per-function general-capability comparison rules.
 - [`MIGRATION.md`](MIGRATION.md) — completed migration record from the original Index experiment.
 
@@ -113,9 +114,9 @@ system-observations/   neutral public empirical observations
 vsm-projections/      derived S1–S5 relevance mappings
 comparison-cells/     materially comparable cross-system cells
 baselines/            per-function baseline selections / rules
-frontier/             current generated evidence frontier
+frontier/             current derived evidence frontier
 historical/           frozen pre-repository experiment artifacts
-scripts/              repository-local validation / rendering tooling
+scripts/              repository-local validation / admission tooling
 ```
 
 The extraction from `vsm-harness-index/experiments/functional-capability-depth` is complete for pinned source revision `3446fe77e031878dc8ad4edfb857b608a7a6b26f`. Active capability maintenance now occurs here; the Index retains a migration pointer and remains authoritative for canonical assessments. See [`MIGRATION.md`](MIGRATION.md).
@@ -130,8 +131,16 @@ The extraction from `vsm-harness-index/experiments/functional-capability-depth` 
 
 ## Validation
 
+Full repository validation:
+
 ```bash
 python scripts/validate_repository.py
+```
+
+Record-specific live admission check:
+
+```bash
+python scripts/admission_check.py system-observations/<record>.json
 ```
 
 ## License
