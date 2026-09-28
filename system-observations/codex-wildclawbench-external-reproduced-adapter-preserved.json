@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-28",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Codex",
+  "canonical_harness_id": "codex",
+  "canonical_assessment_ref": "assessments/codex.md",
+  "canonical_review_ref": "b974893c90048d147207ae9004489c02f3116426",
+  "canonical_repository": "https://github.com/openai/codex",
+  "published_implementation": {
+    "system_compatibility": "adapter-preserved",
+    "historical_relation": "WildClawBench publicly identifies a dedicated Codex backend and invokes the Codex CLI through codex exec, but the exact upstream Codex package version or repository revision used for the published GPT-5.4 row is not exposed. The canonical review ref above is an identity linkage snapshot, not the benchmark run revision."
+  },
+  "primary_sources": [
+    "https://github.com/InternLM/WildClawBench/blob/8e1fde746584ae1a9c49b70526d49a7a572625cd/README.md",
+    "https://github.com/InternLM/WildClawBench/blob/8e1fde746584ae1a9c49b70526d49a7a572625cd/eval/run_batch.py",
+    "https://github.com/InternLM/WildClawBench/blob/8e1fde746584ae1a9c49b70526d49a7a572625cd/src/agents/codex/runner.py",
+    "https://github.com/InternLM/WildClawBench/blob/8e1fde746584ae1a9c49b70526d49a7a572625cd/src/agents/codex/backend.py"
+  ],
+  "observations": [
+    {
+      "observation_id": "codex__wildclawbench-harness-comparison__gpt-5.4",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "wildclawbench",
+        "name": "WildClawBench harness comparison",
+        "variant": "60-task-four-harness",
+        "task_count": 60,
+        "primary_source": "https://github.com/InternLM/WildClawBench/blob/8e1fde746584ae1a9c49b70526d49a7a572625cd/README.md",
+        "artifact_source": "https://github.com/InternLM/WildClawBench/blob/8e1fde746584ae1a9c49b70526d49a7a572625cd/README.md"
+      },
+      "result": {
+        "date": null,
+        "agent_label": "Codex",
+        "harness_version": null,
+        "harness_revision": null,
+        "adapter_backend": "codex",
+        "adapter_image": "wildclawbench-codex-ubuntu:v0.0",
+        "benchmark_revision": "8e1fde746584ae1a9c49b70526d49a7a572625cd",
+        "model": "GPT-5.4",
+        "model_config": "WildClawBench published harness-comparison row; same 60-task suite and grading protocol across OpenClaw, Claude Code, Codex CLI and Hermes Agent. Exact upstream Codex version and row execution date are not exposed in the pinned public result table.",
+        "metric": "overall_score_percent",
+        "value": 56.8,
+        "time_minutes_per_task": 7.16,
+        "cost_usd_per_task": 0.57,
+        "tasks": 60
+      },
+      "published_implementation": {
+        "system_compatibility": "adapter-preserved",
+        "revision_match": "unknown"
+      },
+      "provenance": {
+        "publisher": "WildClawBench / InternLM",
+        "checked": true,
+        "os_system": true,
+        "public_logs": null,
+        "public_trajectories": null
+      },
+      "comparison": {
+        "group": "wildclawbench-harness-comparison__gpt-5.4",
+        "mode": "matched-model",
+        "scope": "multi-domain-agent-task-suite"
+      },
+      "notes": "The pinned WildClawBench source states that four harnesses execute the same 60 tasks under the same grading. Its runner dispatches a dedicated Codex backend, and the pinned Codex backend invokes codex exec inside the dedicated WildClawBench Codex image. This supports adapter-preserved Codex identity while leaving the exact evaluated upstream Codex revision unknown. No broader interpretation follows from raw admission alone."
+    }
+  ]
+}
