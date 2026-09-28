@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "status": "experimental-non-normative",
+  "cell_id": "s1-wildclawbench-gpt-5.4",
+  "function": "S1",
+  "scope": "general",
+  "evidence_family": {
+    "id": "wildclawbench",
+    "name": "WildClawBench",
+    "primary_source": "https://github.com/InternLM/WildClawBench/tree/8e1fde746584ae1a9c49b70526d49a7a572625cd"
+  },
+  "comparison_design": "matched-model-cross-harness",
+  "varying_factor": "harness",
+  "reference_model": "GPT-5.4",
+  "observation_ids": [
+    "claude-code__wildclawbench-harness-comparison__gpt-5.4",
+    "codex__wildclawbench-harness-comparison__gpt-5.4",
+    "hermes-agent__wildclawbench-harness-comparison__gpt-5.4",
+    "openclaw__wildclawbench-harness-comparison__gpt-5.4"
+  ],
+  "comparability": {
+    "model": {
+      "status": "matched",
+      "value": "GPT-5.4"
+    },
+    "evidence_family": {
+      "status": "matched",
+      "value": "WildClawBench pinned harness-comparison surface"
+    },
+    "task_set": {
+      "status": "matched",
+      "value": "WildClawBench 60-task suite"
+    },
+    "evaluator": {
+      "status": "matched-within-family",
+      "value": "WildClawBench grading protocol"
+    },
+    "execution_environment": {
+      "status": "not-fully-matched",
+      "value": "common benchmark task/grading membrane with dedicated harness-specific Docker images"
+    },
+    "budget_repetition_policy": {
+      "status": "not-established"
+    },
+    "adaptation_reset_policy": {
+      "status": "matched-within-family",
+      "value": "task-isolated Docker execution; persistent cross-task repertoire change is not credited"
+    }
+  },
+  "raw_metric_owner": "system-observations",
+  "projection_ref": "vsm-projections/s1/observations.jsonl",
+  "selected_baseline_ref": "baselines/S1-BASELINE.md",
+  "notes": [
+    "This is secondary general S1 evidence; PawBench remains the selected primary family.",
+    "The four raw observations preserve adapter-level provenance and leave exact historical upstream harness revisions unknown where the benchmark does not publish them.",
+    "Dedicated harness images remain part of the harness treatment, so execution-environment identity is not overstated as fully matched.",
+    "Numeric score, time and cost payloads remain owned by system-observations."
+  ],
+  "non_claims": [
+    "This cell does not assign or mutate canonical VSM ownership state.",
+    "This cell does not replace the selected PawBench S1 primary.",
+    "This cell does not define a domain-specific capability grade.",
+    "This cell does not define a global harness ranking or universal scalar capability."
+  ]
+}
