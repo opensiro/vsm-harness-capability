@@ -17,6 +17,41 @@
   ],
   "observations": [
     {
+      "observation_id": "skillrevise-alfworld-principle-absorption-heldout-2026",
+      "kind": "persistent-principle-memory-calibration-heldout-study",
+      "evidence_surface": "SkillRevise ALFWorld principle-absorption calibration-to-heldout evaluation",
+      "reviewed_revision": "fb8042ac2415cb6d7f3a49db0c9a95ecb79edc6d",
+      "publication_id": "arXiv:2606.01139",
+      "method": "SkillRevise principle absorption",
+      "executor": "Qwen3-8B",
+      "adaptation_surface": [
+        "persistent Principle Memory bank"
+      ],
+      "calibration_protocol": {
+        "calibration_tasks": 25,
+        "absorbed_principles": 10,
+        "bank_frozen_before_evaluation": true,
+        "evaluation_tasks": 100,
+        "evaluation_valid_seen_tasks": 44,
+        "evaluation_valid_unseen_tasks": 56
+      },
+      "benchmark_results": [
+        {
+          "benchmark": "ALFWorld",
+          "evaluation_tasks": 100,
+          "successes": 71,
+          "valid_seen_successes": 33,
+          "valid_seen_tasks": 44,
+          "valid_unseen_successes": 38,
+          "valid_unseen_tasks": 56
+        }
+      ],
+      "selection_protocol": "The publication reports that a compact principle bank is absorbed from a separate 25-task calibration set, then held fixed while SkillRevise performs bounded revision on 100 ALFWorld evaluation tasks. Evaluation tasks remain outside online absorption.",
+      "verification_boundary": "ALFWorld evaluation uses task success in the interactive environment; the public release documents principle absorption as a separate calibration or post-evaluation operation and requires the bank to remain read-only during held-out evaluation.",
+      "result_summary": "The publication reports 71 successes across 100 ALFWorld evaluation tasks after building a 10-principle bank from 25 calibration tasks, including 33/44 valid-seen and 38/56 valid-unseen successes.",
+      "provenance_limitation": "The aggregate ALFWorld result and calibration/evaluation protocol are first-party published evidence. The public repository documents and implements the absorption/freeze/evaluate workflow but does not provide an independently reproduced OpenSiro run of the paper experiment."
+    },
+    {
       "observation_id": "skillrevise-trace-conditioned-skill-revision-2026",
       "kind": "persistent-skill-revision-study",
       "evidence_surface": "SkillRevise main benchmark study across SkillsBench, SkillLearnBench-Random, and SWE-Skills-Bench-Hard",
