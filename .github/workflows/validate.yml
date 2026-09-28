@@ -17,7 +17,9 @@ jobs:
         with:
           python-version: '3.12'
       - run: python scripts/validate_repository.py
-      - name: Validate post-closure S4 evidence
+      - name: Validate Capability-native post-closure contract
+        run: python vsm-projections/benchmark-family-map/validate_post_closure.py
+      - name: Validate specialized AHO post-closure evidence
         run: python vsm-projections/s4/post-closure-deltas/validate.py
       - name: Exercise live evidence admission path
         run: |
