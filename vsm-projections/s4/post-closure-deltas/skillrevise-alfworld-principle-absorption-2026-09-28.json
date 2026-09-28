@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "status": "experimental-non-normative",
+  "tracking_issue": 32,
+  "reviewed_at": "2026-09-28",
+  "source_revision": "xuansenpa1/skillrevise@fb8042ac2415cb6d7f3a49db0c9a95ecb79edc6d",
+  "publication": "arXiv:2606.01139",
+  "delta_class": "new-direct-public-evidence-no-primary-reopen",
+  "function": "S4",
+  "benchmark_id": "skillrevise-alfworld-principle-absorption",
+  "benchmark_fit": "direct",
+  "system_linkage": "external-native-noncanonical",
+  "boundary_class": "external-native-persistent-principle-adaptation-system",
+  "canonical_harness_id": null,
+  "canonical_system_eligible": false,
+  "observation_id": "skillrevise-alfworld-principle-absorption-heldout-2026",
+  "raw_observation_ref": "../../../system-observations/skillrevise.json#skillrevise-alfworld-principle-absorption-heldout-2026",
+  "evidence_change": "A new first-party public SkillRevise study separates environment-grounded calibration from later held-out operation: reusable repair principles are absorbed into persistent Principle Memory, frozen before evaluation, and retrieved into later skill-revision capability without evaluation-time memory absorption.",
+  "ordinary_s4_boundary": "Freeze the SkillRevise implementation, executor family, calibration/evaluation protocol and persistent Principle Memory before held-out operation; permit adaptation of the principle bank only during the separate calibration phase, then observe its return into later held-out operational capability.",
+  "primary_reopen": false,
+  "reopen_gate_status": {
+    "resolved_existing_provenance_or_common_membrane_gate": false,
+    "matched_multi_canonical_surface": false,
+    "adapter_preserved_common_membrane_across_canonical_s4_systems": false
+  },
+  "disposition": "retain-evidence-backed-gap",
+  "reason": "The ALFWorld calibration-to-frozen-bank study adds direct prospective S4 evidence at one external non-canonical SkillRevise adaptation boundary, but it does not resolve an existing canonical provenance/common-membrane gate or create a materially matched comparison across multiple independently canonical-linkable S4 systems.",
+  "non_claim": "This delta does not attribute S4 ownership to Qwen3-8B or ALFWorld, does not independently reproduce the first-party result, does not reclassify the ordinary same-task maxrev3 loop, and does not claim that a matched S4 primary can never exist."
+}
