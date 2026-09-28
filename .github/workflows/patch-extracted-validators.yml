@@ -29,6 +29,7 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           import re
+          import textwrap
 
           root = Path('.')
           validators = [
@@ -36,39 +37,39 @@ jobs:
               for name in ('s2', 's3', 's3star', 's4', 's5')
           ]
 
-          external_assessment = '''def assessment_fields(harness_id: str) -> dict[str, str]:
-              cache = getattr(assessment_fields, "_cache", {})
-              if harness_id in cache:
-                  return cache[harness_id]
-              from urllib.error import HTTPError, URLError
-              from urllib.request import urlopen
-              url = (
-                  "https://raw.githubusercontent.com/opensiro/vsm-harness-index/"
-                  f"main/assessments/{harness_id}.md"
-              )
-              try:
-                  with urlopen(url, timeout=20) as response:
-                      text = response.read().decode("utf-8")
-              except (HTTPError, URLError, TimeoutError) as exc:
-                  fail(f"cannot resolve canonical Index assessment for {harness_id}: {exc}")
-              marker = "---" + chr(10)
-              if not text.startswith(marker):
-                  fail(f"canonical Index assessment for {harness_id} has no front matter")
-              try:
-                  frontmatter = text.split(marker, 2)[1]
-              except IndexError:
-                  fail(f"canonical Index assessment for {harness_id} has malformed front matter")
-              fields: dict[str, str] = {}
-              for line in frontmatter.splitlines():
-                  if ":" not in line:
-                      continue
-                  key, value = line.split(":", 1)
-                  fields[key.strip()] = value.strip()
-              cache[harness_id] = fields
-              assessment_fields._cache = cache
-              return fields
-          '''
-          external_assessment = re.sub(r'^ {12}', '', external_assessment, flags=re.M)
+          external_assessment = textwrap.dedent('''
+              def assessment_fields(harness_id: str) -> dict[str, str]:
+                  cache = getattr(assessment_fields, "_cache", {})
+                  if harness_id in cache:
+                      return cache[harness_id]
+                  from urllib.error import HTTPError, URLError
+                  from urllib.request import urlopen
+                  url = (
+                      "https://raw.githubusercontent.com/opensiro/vsm-harness-index/"
+                      f"main/assessments/{harness_id}.md"
+                  )
+                  try:
+                      with urlopen(url, timeout=20) as response:
+                          text = response.read().decode("utf-8")
+                  except (HTTPError, URLError, TimeoutError) as exc:
+                      fail(f"cannot resolve canonical Index assessment for {harness_id}: {exc}")
+                  marker = "---" + chr(10)
+                  if not text.startswith(marker):
+                      fail(f"canonical Index assessment for {harness_id} has no front matter")
+                  try:
+                      frontmatter = text.split(marker, 2)[1]
+                  except IndexError:
+                      fail(f"canonical Index assessment for {harness_id} has malformed front matter")
+                  fields: dict[str, str] = {}
+                  for line in frontmatter.splitlines():
+                      if ":" not in line:
+                          continue
+                      key, value = line.split(":", 1)
+                      fields[key.strip()] = value.strip()
+                  cache[harness_id] = fields
+                  assessment_fields._cache = cache
+                  return fields
+          ''').lstrip()
 
           for path in validators:
               text = path.read_text(encoding='utf-8')
