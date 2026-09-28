@@ -10,6 +10,7 @@ codex__frontierharness-v1.0__kimi-k3-fireworks__20260822|Codex|codex|FrontierHar
 codex__harbor-swe-bench-verified-parity__o4-mini__20250701|Codex|codex|SWE-bench Verified via Terminal-Bench/Harbor parity|system-benchmark-result|external-reproduced|adapter-preserved|codex-benchmark-results-external-reproduced-adapter-preserved.json
 codex__terminal-bench-4.0.0__gpt-5.6-sol__20260826|Codex|codex|Terminal-Bench 4.0.0|system-benchmark-result|external-reproduced|adapter-preserved|codex-benchmark-results-external-reproduced-adapter-preserved.json
 codex__terminal-bench-4.0.0__gpt-5.6-terra__20260826|Codex|codex|Terminal-Bench 4.0.0|system-benchmark-result|external-reproduced|adapter-preserved|codex-benchmark-results-external-reproduced-adapter-preserved.json
+codex__wildclawbench-harness-comparison__gpt-5.4|Codex|codex|WildClawBench harness comparison|system-benchmark-result|external-reproduced|adapter-preserved|codex-wildclawbench-external-reproduced-adapter-preserved.json
 futuresim-v1-codex-0125-gpt55|Codex|codex|FutureSim v1|forecasting-benchmark-result|external-reproduced|adapter-preserved|futuresim-codex.json
 data-to-paper-review-revision-2024|data-to-paper|data-to-paper|Data-to-Paper reviewer-feedback-to-revision publication example|operational-publication-witness|first-party-reported|native-system|data-to-paper-review-revision.json
 evo-bench-heldout-harness-evolution-2026|Evo-Bench benchmark organization||Evo-Bench held-out harness-evolution study|persistent-adaptation-study|external-reproduced|benchmark-scaffolded|evo-bench.json
