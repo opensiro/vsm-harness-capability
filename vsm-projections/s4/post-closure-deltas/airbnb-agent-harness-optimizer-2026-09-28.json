@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "experimental-non-normative",
+  "tracking_issue": 26,
+  "reviewed_at": "2026-09-28",
+  "source_revision": "airbnb/agent-harness-optimizer@0d7652b42296c8df07532fa3787fc956250741e7",
+  "publication": "arXiv:2609.05736",
+  "delta_class": "new-direct-public-evidence-no-primary-reopen",
+  "function": "S4",
+  "observation_id": "airbnb-agent-harness-optimizer-prism-heldout-lift-2026",
+  "evidence_change": "A new first-party public optimizer study closes execution evidence into persistent prompt/tool-boundary harness changes and later held-out evaluation under a fixed inner model, adding a direct S4 evidence family at the external non-canonical AHO boundary.",
+  "primary_reopen": false,
+  "reopen_gate_status": {
+    "matched_multi_canonical_surface": false,
+    "resolved_existing_canonical_provenance_gate": false,
+    "common_adapter_preserved_membrane_across_canonical_s4_systems": false
+  },
+  "disposition": "retain-evidence-backed-gap",
+  "reason": "The new study strengthens direct S4 evidence but remains a single external evolving-harness organization. It does not create the materially matched comparison across multiple independently canonical-linkable native or adapter-preserved S4 implementations required by the frozen primary-search closure.",
+  "non_claim": "This delta does not deny the reported held-out gains, does not assign canonical ownership to AHO or the fixed inner model, and does not claim that a matched S4 primary can never exist."
+}
