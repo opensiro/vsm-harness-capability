@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from pathlib import Path
+import csv
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -11,12 +12,15 @@ REQUIRED = [
     "EVIDENCE-REGISTRY.md",
     "BASELINE.md",
     "MIGRATION.md",
+    "LICENSE",
     "system-observations/README.md",
+    "system-observations/registry.psv",
     "vsm-projections/README.md",
     "comparison-cells/README.md",
     "baselines/README.md",
     "frontier/README.md",
     "historical/README.md",
+    "historical/SOURCE-REF",
 ]
 
 errors = []
@@ -42,6 +46,25 @@ for required_phrase in (
 
 if (ROOT / "domain-projections").exists():
     errors.append("domain-projections/: domain-specific assessment is outside this repository boundary")
+
+for active_loopx in (ROOT / "vsm-projections").glob("**/loopx*"):
+    errors.append(f"{active_loopx.relative_to(ROOT)}: controlled-execution LoopX artifacts must live under historical/")
+
+registry_path = ROOT / "system-observations/registry.psv"
+if registry_path.is_file():
+    with registry_path.open(encoding="utf-8", newline="") as handle:
+        rows = list(csv.DictReader(handle, delimiter="|"))
+    observation_ids = [row.get("observation_id", "") for row in rows]
+    if len(observation_ids) != 53:
+        errors.append(f"system-observations/registry.psv: expected migrated 53 observations, found {len(observation_ids)}")
+    if len(set(observation_ids)) != len(observation_ids):
+        errors.append("system-observations/registry.psv: duplicate observation_id values")
+
+source_ref = ROOT / "historical/SOURCE-REF"
+if source_ref.is_file():
+    expected = "opensiro/vsm-harness-index@3446fe77e031878dc8ad4edfb857b608a7a6b26f"
+    if source_ref.read_text(encoding="utf-8").strip() != expected:
+        errors.append("historical/SOURCE-REF: predecessor revision drift")
 
 if errors:
     print("repository validation failed:")
