@@ -41,7 +41,7 @@ optional derived review
     ├── VSM projection
     ├── comparison-cell eligibility
     ├── baseline selection/replacement
-    └── evidence-frontier update
+    └── evidence-frontier regeneration when its owning sources change
 ```
 
 A raw observation may be admitted with no VSM projection. Absence of a downstream interpretation is a valid state, not a validation failure.
@@ -123,7 +123,7 @@ Before opening the PR, run:
 python scripts/validate_repository.py
 ```
 
-The root validator preserves repository-wide boundaries such as migration-floor integrity, general-vs-domain scope, generated registry consistency and comparison-cell integrity.
+The root validator preserves repository-wide boundaries such as migration-floor integrity, general-vs-domain scope, generated registry consistency, comparison-cell integrity and generated frontier consistency.
 
 ## 6. Review downstream interpretation separately
 
@@ -143,9 +143,15 @@ A new observation does not automatically replace or create a selected primary. B
 
 ### Frontier
 
-`frontier/` is a live derived view, but this repository currently has no repository-local frontier generator. Therefore frontier review is an explicit derived-maintenance step rather than part of mechanical raw admission.
+`frontier/EVIDENCE-FRONTIER.md` is generated from `baselines/primary-baselines.json` and the S2–S5 primary-search closure records.
 
-Do not describe frontier refresh as automatic until a generator/check contract actually exists.
+Raw admission by itself does not force a frontier change. If downstream review changes one of those owning source artifacts, regenerate the frontier:
+
+```bash
+python frontier/render_frontier.py
+```
+
+Repository validation runs `python frontier/render_frontier.py --check`, so source/frontier drift fails closed.
 
 ## Review split
 

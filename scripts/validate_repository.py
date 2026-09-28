@@ -25,6 +25,8 @@ REQUIRED = [
     "comparison-cells/s1-pawbench-v1-qwen3.6-35b-a3b.json",
     "baselines/README.md",
     "frontier/README.md",
+    "frontier/EVIDENCE-FRONTIER.md",
+    "frontier/render_frontier.py",
     "historical/README.md",
     "historical/SOURCE-REF",
     "historical/MIGRATED-OBSERVATION-IDS.txt",
@@ -153,6 +155,7 @@ for cmd in (
     [sys.executable, str(ROOT / "system-observations" / "validate.py")],
     [sys.executable, str(ROOT / "system-observations" / "render_registry.py"), "--check"],
     [sys.executable, str(ROOT / "comparison-cells" / "validate.py")],
+    [sys.executable, str(ROOT / "frontier" / "render_frontier.py"), "--check"],
 ):
     if Path(cmd[1]).is_file():
         result = subprocess.run(cmd, cwd=ROOT, text=True, capture_output=True)
