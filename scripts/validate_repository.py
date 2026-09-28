@@ -69,6 +69,19 @@ if registry.is_file():
     if len(ids) != 53 or len(set(ids)) != 53:
         errors.append(f'system-observations/registry.psv: expected 53 unique migrated observation IDs, got {len(set(ids))}/{len(ids)}')
 
+tracked = subprocess.run(
+    ['git', 'ls-files'], cwd=ROOT, text=True, capture_output=True
+)
+if tracked.returncode:
+    errors.append(f'git ls-files failed: {tracked.stderr}')
+else:
+    generated_python = [
+        path for path in tracked.stdout.splitlines()
+        if '/__pycache__/' in f'/{path}' or path.endswith(('.pyc', '.pyo'))
+    ]
+    if generated_python:
+        errors.append('generated Python cache must not be tracked: ' + ', '.join(generated_python))
+
 for cmd in (
     [sys.executable, str(ROOT / 'system-observations' / 'validate.py')],
     [sys.executable, str(ROOT / 'system-observations' / 'render_registry.py'), '--check'],
