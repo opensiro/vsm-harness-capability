@@ -2,6 +2,7 @@ observation_id|system_name|canonical_harness_id|evidence_surfaces|kind|evidence_
 a-evolve-harness-updating-2026|A-Evolve|a-evolve|A-Evolve harness-evolution study: SWE-bench Verified / MCP-Atlas / SkillsBench|persistent-harness-update-study|first-party-reported|native-system|a-evolve.json
 a-evolve-harness-evolution-protocol-2026|A-Evolve benchmark-defined evolving system||A-Evolve harness-evolution protocol|persistent-adaptation-study|first-party-reported|benchmark-scaffolded|a-evolve-composed.json
 claude-code__frontierharness-v1.0__kimi-k3-fireworks__20260822|Claude Code|claude-code|FrontierHarness Eval v1|system-benchmark-result|external-reproduced|adapter-preserved|claude-code-benchmark-results-external-reproduced-adapter-preserved.json
+claude-code__wildclawbench-harness-comparison__gpt-5.4|Claude Code|claude-code|WildClawBench harness comparison|system-benchmark-result|external-reproduced|adapter-preserved|claude-code-wildclawbench-external-reproduced-adapter-preserved.json
 futuresim-v1-claude-code-21132-deepseek-v4-pro|Claude Code|claude-code|FutureSim v1|forecasting-benchmark-result|external-reproduced|adapter-preserved|futuresim-claude-code.json
 futuresim-v1-claude-code-21132-glm51|Claude Code|claude-code|FutureSim v1|forecasting-benchmark-result|external-reproduced|adapter-preserved|futuresim-claude-code.json
 futuresim-v1-claude-code-21132-opus46|Claude Code|claude-code|FutureSim v1|forecasting-benchmark-result|external-reproduced|adapter-preserved|futuresim-claude-code.json
@@ -22,6 +23,7 @@ hermes-agent__claw-swe-bench-full-350__glm-5.1__20260717|Hermes Agent|hermes-age
 hermes-agent__claw-swe-bench-full-350__qwen-3.6-flash__20260717|Hermes Agent|hermes-agent|Claw-SWE-Bench|system-benchmark-result|external-reproduced|adapter-preserved|hermes-agent-benchmark-results-external-reproduced-adapter-preserved.json
 hermes-agent__frontierharness-v1.0__kimi-k3-fireworks__20260822|Hermes Agent|hermes-agent|FrontierHarness Eval v1|system-benchmark-result|external-reproduced|adapter-preserved|hermes-agent-benchmark-results-external-reproduced-adapter-preserved.json
 hermes-agent__pawbench-v1.0__qwen3.6-35b-a3b__20260529|Hermes Agent|hermes-agent|PawBench v1.0|system-benchmark-result|external-reproduced|adapter-preserved|hermes-agent-benchmark-results-external-reproduced-adapter-preserved.json
+hermes-agent__wildclawbench-harness-comparison__gpt-5.4|Hermes Agent|hermes-agent|WildClawBench harness comparison|system-benchmark-result|external-reproduced|adapter-preserved|hermes-agent-wildclawbench-external-reproduced-adapter-preserved.json
 kadath-ten-epoch-native-evolution-2026|KADATH|kadath|KADATH operator-approved run-specific locked fitness benchmark|longitudinal-population-evolution|first-party-reported|native-system|kadath.json
 llamar-agent-count-interference-mapthor-sar|LLaMAR|llamar|MAP-THOR / SAR|native-disturbance-characterization|first-party-reported|native-system|llamar.json
 llamar-mapthor-module-ablation-gpt4v|LLaMAR|llamar|MAP-THOR|native-mechanism-ablation|first-party-reported|native-system|llamar.json
@@ -35,6 +37,7 @@ omnigent-child-session-recovery-2026-09|Omnigent|omnigent|Omnigent child-session
 openclaw__claw-swe-bench-full-350__glm-5.1__20260717|OpenClaw|openclaw|Claw-SWE-Bench|system-benchmark-result|external-reproduced|adapter-preserved|openclaw-benchmark-results-external-reproduced-adapter-preserved.json
 openclaw__claw-swe-bench-full-350__qwen-3.6-flash__20260717|OpenClaw|openclaw|Claw-SWE-Bench|system-benchmark-result|external-reproduced|adapter-preserved|openclaw-benchmark-results-external-reproduced-adapter-preserved.json
 openclaw__pawbench-v1.0__qwen3.6-35b-a3b__20260529|OpenClaw|openclaw|PawBench v1.0|system-benchmark-result|external-reproduced|adapter-preserved|openclaw-benchmark-results-external-reproduced-adapter-preserved.json
+openclaw__wildclawbench-harness-comparison__gpt-5.4|OpenClaw|openclaw|WildClawBench harness comparison|system-benchmark-result|external-reproduced|adapter-preserved|openclaw-wildclawbench-external-reproduced-adapter-preserved.json
 futuresim-v1-opencode-1411-qwen36plus|OpenCode|opencode|FutureSim v1|forecasting-benchmark-result|external-reproduced|adapter-preserved|futuresim-opencode.json
 opencode__frontierharness-v1.0__kimi-k3-fireworks__20260822|OpenCode|opencode|FrontierHarness Eval v1|system-benchmark-result|external-reproduced|adapter-preserved|opencode-benchmark-results-external-reproduced-adapter-preserved.json
 openhands__harbor-swe-bench-verified-parity__claude-4-sonnet__20250808|OpenHands|openhands|SWE-bench Verified via Terminal-Bench/Harbor parity|system-benchmark-result|external-reproduced|adapter-preserved|openhands-benchmark-results-external-reproduced-adapter-preserved.json
