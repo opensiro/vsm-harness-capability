@@ -50,7 +50,7 @@ Older predecessor wording that treated domain-specific views as an owned project
 
 ## Migrated active state
 
-The branch `bootstrap/experimental-capability` now contains:
+The bootstrap branch contains:
 
 - the neutral `system-observations/` corpus;
 - **53 raw observation IDs** copied losslessly from the pinned predecessor;
@@ -64,6 +64,19 @@ The branch `bootstrap/experimental-capability` now contains:
 Canonical VSM assessments were deliberately **not** copied. Canonical identity/state remains owned by `opensiro/vsm-harness-index`; extracted derived validators resolve the current Index assessment when a live canonical-state check is required.
 
 Active path references have been rebased from the predecessor directory layout to this repository layout.
+
+## Validation state
+
+The extracted layout has passed the full bootstrap gate:
+
+- neutral registry validation: **53 observations / 34 systems / 40 canonical-linked observations**;
+- benchmark-family map validation: **43 reviewed mappings**;
+- direct-family coverage: **S1 6 / S2 8 / S3 4 / S3* 5 / S4 4 / S5 1**;
+- S1–S5 derived projection validators;
+- repository-local contract validation;
+- generated registry consistency and `git diff --check`.
+
+The final bootstrap run completed successfully at commit `ebc6ec5b2ac59795e6ea56a63b2b4883fdbc2318` and produced finalized branch commit `ce43b13cdbdadf83c0ba6aea61dc30c0bd9777f7`.
 
 ## Intentional architecture-only normalization
 
@@ -94,18 +107,16 @@ Historical controlled-execution material is research history. It is not an activ
 
 During bootstrap, the predecessor Index experiment remains provenance history.
 
-After this repository's bootstrap is merged and validated, active capability maintenance belongs here. The Index should retain a migration pointer / frozen historical record rather than a second independently edited capability implementation.
+After this repository's bootstrap is merged, active capability maintenance belongs here. The Index should retain a migration pointer / frozen historical record rather than a second independently edited capability implementation.
 
 Canonical VSM assessments remain in the Index throughout. They are not migrated.
 
 ## Remaining completion gates
 
-Migration is complete only when:
+The repository-local extraction and validation gates are complete. Migration closes when:
 
-1. the full derived S1–S5 validator suite passes from the extracted layout;
-2. repository-local contract / raw-registry / generated-file validation passes;
-3. the bootstrap branch is merged to `main`;
-4. the predecessor Index experiment is changed to a historical pointer rather than an active competing implementation;
-5. the cross-repository `vsm-oss-organization` documentation reflects the live experimental repository while preserving the current bounded organization boundary.
+1. the bootstrap branch is merged to `main`;
+2. the predecessor Index experiment is changed to a historical pointer rather than an active competing implementation;
+3. the cross-repository `vsm-oss-organization` documentation reflects the live experimental repository while preserving the current bounded organization boundary.
 
-Until those gates close, this file remains an active migration record rather than a completion declaration.
+Until those cross-repository gates close, this file remains an active migration record rather than a completion declaration.
