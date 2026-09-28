@@ -13,6 +13,7 @@ REQUIRED = [
     "CONTRACT.md",
     "PUBLIC-EVIDENCE.md",
     "EVIDENCE-REGISTRY.md",
+    "ADMISSION.md",
     "BASELINE.md",
     "MIGRATION.md",
     "LICENSE",
@@ -27,6 +28,7 @@ REQUIRED = [
     "historical/README.md",
     "historical/SOURCE-REF",
     "historical/MIGRATED-OBSERVATION-IDS.txt",
+    "scripts/admission_check.py",
 ]
 
 errors: list[str] = []
