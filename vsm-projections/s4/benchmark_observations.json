@@ -42,5 +42,16 @@
     "benchmark_id": "evo-bench",
     "boundary_class": "benchmark-defined-harness-evolving-system",
     "raw_observation_ref": "../../system-observations/evo-bench.json#evo-bench-heldout-harness-evolution-2026"
+  },
+  {
+    "canonical_harness_id": null,
+    "canonical_system_eligible": false,
+    "observation_id": "airbnb-agent-harness-optimizer-prism-heldout-lift-2026",
+    "benchmark_fit": "direct",
+    "function": "S4",
+    "vsm_interpretation": "The first-party AHO study closes execution evidence into persistent prompt and tool-boundary middleware changes and evaluates the selected changed harness on later held-out cases while the inner task-solving model and adaptation regulator remain fixed. The S4 boundary is the external AHO optimizer plus evolving harness, not the fixed model or benchmark.",
+    "benchmark_id": "agent-harness-optimizer-prism",
+    "boundary_class": "external-native-evolving-harness-system",
+    "raw_observation_ref": "../../system-observations/airbnb-agent-harness-optimizer.json#airbnb-agent-harness-optimizer-prism-heldout-lift-2026"
   }
 ]
