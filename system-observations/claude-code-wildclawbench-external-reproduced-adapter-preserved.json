@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-28",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Claude Code",
+  "canonical_harness_id": "claude-code",
+  "canonical_assessment_ref": "assessments/claude-code.md",
+  "canonical_review_ref": "7dd06361110d4417f3edefaf075f41923f0e04c5",
+  "canonical_repository": "https://github.com/anthropics/claude-code",
+  "published_implementation": {
+    "system_compatibility": "adapter-preserved",
+    "historical_relation": "WildClawBench publicly dispatches a dedicated Claude Code backend and executes its Claude Code runtime inside the benchmark's dedicated Claude Code image, but the exact upstream Claude Code package version or repository revision used for the published GPT-5.4 row is not exposed. The canonical review ref above is an identity linkage snapshot, not the benchmark run revision."
+  },
+  "primary_sources": [
+    "https://github.com/InternLM/WildClawBench/blob/8e1fde746584ae1a9c49b70526d49a7a572625cd/README.md",
+    "https://github.com/InternLM/WildClawBench/blob/8e1fde746584ae1a9c49b70526d49a7a572625cd/eval/run_batch.py",
+    "https://github.com/InternLM/WildClawBench/blob/8e1fde746584ae1a9c49b70526d49a7a572625cd/src/agents/claudecode/runner.py"
+  ],
+  "observations": [
+    {
+      "observation_id": "claude-code__wildclawbench-harness-comparison__gpt-5.4",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "wildclawbench",
+        "name": "WildClawBench harness comparison",
+        "variant": "60-task-four-harness",
+        "task_count": 60,
+        "primary_source": "https://github.com/InternLM/WildClawBench/blob/8e1fde746584ae1a9c49b70526d49a7a572625cd/README.md",
+        "artifact_source": "https://github.com/InternLM/WildClawBench/blob/8e1fde746584ae1a9c49b70526d49a7a572625cd/README.md"
+      },
+      "result": {
+        "date": null,
+        "agent_label": "Claude Code",
+        "harness_version": null,
+        "harness_revision": null,
+        "adapter_backend": "claudecode",
+        "adapter_image": "wildclawbench-claudecode-ubuntu:v0.2",
+        "benchmark_revision": "8e1fde746584ae1a9c49b70526d49a7a572625cd",
+        "model": "GPT-5.4",
+        "model_config": "WildClawBench published harness-comparison row; same 60-task suite and grading protocol across OpenClaw, Claude Code, Codex CLI and Hermes Agent. Exact upstream Claude Code version and row execution date are not exposed in the pinned public result table.",
+        "metric": "overall_score_percent",
+        "value": 48.4,
+        "time_minutes_per_task": 9.07,
+        "cost_usd_per_task": 0.61,
+        "tasks": 60
+      },
+      "published_implementation": {
+        "system_compatibility": "adapter-preserved",
+        "revision_match": "unknown"
+      },
+      "provenance": {
+        "publisher": "WildClawBench / InternLM",
+        "checked": true,
+        "os_system": true,
+        "public_logs": null,
+        "public_trajectories": null
+      },
+      "comparison": {
+        "group": "wildclawbench-harness-comparison__gpt-5.4",
+        "mode": "matched-model",
+        "scope": "multi-domain-agent-task-suite"
+      },
+      "notes": "The pinned benchmark code dispatches ClaudeCodeAgent and executes the dedicated Claude Code start path inside wildclawbench-claudecode-ubuntu:v0.2, then normalizes the transcript only for grading compatibility. This supports adapter-preserved Claude Code identity while leaving the exact evaluated upstream revision unknown. No broader interpretation follows from raw admission alone."
+    }
+  ]
+}
