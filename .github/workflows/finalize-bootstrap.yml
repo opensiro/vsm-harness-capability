@@ -22,6 +22,21 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Repair final extracted baseline path
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('vsm-projections/s5/validate.py')
+          text = path.read_text(encoding='utf-8')
+          old = 'BASELINES_PATH = HERE.parent / "primary-baselines.json"'
+          new = 'BASELINES_PATH = ROOT / "baselines" / "primary-baselines.json"'
+          if old not in text and new not in text:
+              raise SystemExit('unexpected S5 baseline path contract')
+          path.write_text(text.replace(old, new), encoding='utf-8')
+          PY
+
       - name: Regenerate neutral registry
         run: python system-observations/render_registry.py
 
