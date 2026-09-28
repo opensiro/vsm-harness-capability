@@ -13,12 +13,14 @@ The migration is intentionally **lossless and staged**.
 
 ## Source boundary
 
-Initial migration review boundary:
+Migration source:
 
 - source repository: `opensiro/vsm-harness-index`;
 - source branch: `main`;
 - reviewed source revision: `3446fe77e031878dc8ad4edfb857b608a7a6b26f` (2026-09-28);
 - source path: `experiments/functional-capability-depth/`.
+
+The exact predecessor ref is also stored in [`historical/SOURCE-REF`](historical/SOURCE-REF), and the imported predecessor surface has a checksum inventory in [`historical/PREDECESSOR-SHA256SUMS.txt`](historical/PREDECESSOR-SHA256SUMS.txt).
 
 Later source changes must be reconciled explicitly rather than silently assumed to be present here.
 
@@ -46,45 +48,64 @@ domain-specific assessment
 
 Older predecessor wording that treated domain-specific views as an owned projection of the same capability repository is superseded by [`CONTRACT.md`](CONTRACT.md) and the cross-repository architecture note in `vsm-oss-organization`.
 
-## Active artifacts to migrate
+## Migrated active state
 
-The active predecessor surfaces include:
+The branch `bootstrap/experimental-capability` now contains:
 
-- neutral `system-observations/`;
-- public-evidence and registry contracts;
-- S1–S5 function-specific derived evidence;
-- primary-baseline selections and gaps;
-- generated current evidence frontier;
-- rendering / validation tooling.
+- the neutral `system-observations/` corpus;
+- **53 raw observation IDs** copied losslessly from the pinned predecessor;
+- raw registry rendering and validation tooling;
+- S1–S5 derived projection surfaces under `vsm-projections/`;
+- the benchmark-family mapping under `vsm-projections/benchmark-family-map/`;
+- per-function baseline selections and explicit gaps under `baselines/`;
+- the current evidence frontier under `frontier/`;
+- repository-local validation and CI.
 
-These should become live repository-owned artifacts here only after content and generated-file consistency are checked.
+Canonical VSM assessments were deliberately **not** copied. Canonical identity/state remains owned by `opensiro/vsm-harness-index`; extracted derived validators resolve the current Index assessment when a live canonical-state check is required.
+
+Active path references have been rebased from the predecessor directory layout to this repository layout.
+
+## Intentional architecture-only normalization
+
+The migration is not a blind rename of every predecessor concept.
+
+The active repository contract intentionally changes two boundaries without changing raw evidence:
+
+1. **Domain-specific assessment is external.** Factual domain context stays in raw evidence, but domain-specific admission/autonomy/evidence requirements belong to separate downstream repositories.
+2. **OpenSiro-operated execution is historical only.** Controlled-execution artifacts do not form an active path for manufacturing capability evidence.
+
+These changes are recorded as architecture changes, not empirical-result changes.
 
 ## Historical artifacts
 
-Historical research must be preserved rather than rewritten into the new active workflow, including:
+Historical research is preserved rather than rewritten into the new active workflow, including:
 
 - Batch 01;
 - Batch 02 controlled-replication design / failed execution attempt;
 - LoopX preregistration / execution-harness artifacts;
-- frozen synthesis / experiment-state snapshots tied to the predecessor cycle.
+- frozen synthesis / experiment-state snapshots tied to the predecessor cycle;
+- predecessor rendering / validation tooling where useful for provenance.
+
+LoopX has been moved out of active S2 projections into `historical/`.
 
 Historical controlled-execution material is research history. It is not an active evidence-generation path.
 
 ## No double source of truth
 
-During migration, the predecessor Index experiment remains provenance history and may temporarily remain the current copy of some artifacts.
+During bootstrap, the predecessor Index experiment remains provenance history.
 
-After an artifact is explicitly migrated and validated here, future active maintenance should occur here, while the Index retains a migration pointer / frozen historical record rather than a second independently edited copy.
+After this repository's bootstrap is merged and validated, active capability maintenance belongs here. The Index should retain a migration pointer / frozen historical record rather than a second independently edited capability implementation.
 
 Canonical VSM assessments remain in the Index throughout. They are not migrated.
 
-## Completion conditions
+## Remaining completion gates
 
 Migration is complete only when:
 
-1. every active raw observation has a lossless counterpart here;
-2. active function projections reference the migrated raw records;
-3. current baseline/frontier outputs reproduce the predecessor state or document an intentional architecture-only change;
-4. historical experiment artifacts remain recoverable with provenance;
-5. repository-local validation passes;
-6. the Index experiment is changed to a historical pointer rather than an active competing implementation.
+1. the full derived S1–S5 validator suite passes from the extracted layout;
+2. repository-local contract / raw-registry / generated-file validation passes;
+3. the bootstrap branch is merged to `main`;
+4. the predecessor Index experiment is changed to a historical pointer rather than an active competing implementation;
+5. the cross-repository `vsm-oss-organization` documentation reflects the live experimental repository while preserving the current bounded organization boundary.
+
+Until those gates close, this file remains an active migration record rather than a completion declaration.
