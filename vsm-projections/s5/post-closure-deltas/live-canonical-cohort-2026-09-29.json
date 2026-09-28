@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "status": "experimental-non-normative",
+  "tracking_issue": 54,
+  "reviewed_at": "2026-09-29",
+  "function": "S5",
+  "disposition": "canonical-mechanism-growth-no-new-direct-result",
+  "frozen_index_ref": "opensiro/vsm-harness-index@ba863eaf455fd9a272f15cfff80e840aa8a6de07",
+  "reviewed_index_ref": "opensiro/vsm-harness-index@676376ebdecfc420d31546c52eceb4165c7a5448",
+  "index_delta_commits": 171,
+  "new_s5_positive_canonical_count": 9,
+  "systems": [
+    {
+      "canonical_harness_id": "aesop",
+      "canonical_state_at_review": "A(P)",
+      "canonical_review_ref": "2a661c12007c5484f964176da3d5532c6bdf070d",
+      "repository": "https://github.com/matt82198/aesop",
+      "result_surface_review": "no-direct-s5-observation-recovered",
+      "finding": "Aesop closes project-level S5 structurally through authoritative project-root AGENTS.md policy that can be synthesized through supported /init and edited by the legitimate parent, then loaded into later project operation. A public upstream LANE-CONTRACT.md development-history chain was inspected but belongs to development of the Aesop repository itself rather than a target-project operating cell, so using it as a canonical Aesop capability result would cross the declared recursion/boundary. No target-project policy-change-to-subsequent-operation result is admitted.",
+      "primary_sources": [
+        "https://github.com/opensiro/vsm-harness-index/blob/676376ebdecfc420d31546c52eceb4165c7a5448/assessments/aesop.md",
+        "https://github.com/matt82198/aesop/tree/2a661c12007c5484f964176da3d5532c6bdf070d"
+      ],
+      "reassess_if": [
+        "a public target-project Aesop run records an identity/ultimate-policy issue, the /init or legitimate parent decision, the resulting authoritative AGENTS.md change and later project-agent operation under that exact changed policy",
+        "a benchmark or case study publishes immutable before/after evidence for the same supported project-policy path"
+      ]
+    },
+    {
+      "canonical_harness_id": "bernstein",
+      "canonical_state_at_review": "P",
+      "canonical_review_ref": "c3d317385a058ae2b5f478399373d09d84d80962",
+      "repository": "https://github.com/sipyourdrink-ltd/bernstein",
+      "result_surface_review": "no-direct-s5-observation-recovered",
+      "finding": "Bernstein closes parent-owned S5 structurally through a content-addressed governance playbook protocol in which a model may draft but a human signs the exact policy before govern apply can enact it. Public source and tests establish the authority/enforcement mechanism, but the reviewed repository did not expose a committed real signed govern-plan/lineage artifact together with a later Bernstein run consuming that enacted policy. Test-only temporary signed instances are not promoted to a capability observation.",
+      "primary_sources": [
+        "https://github.com/opensiro/vsm-harness-index/blob/676376ebdecfc420d31546c52eceb4165c7a5448/assessments/bernstein.md",
+        "https://github.com/sipyourdrink-ltd/bernstein/tree/c3d317385a058ae2b5f478399373d09d84d80962"
+      ],
+      "reassess_if": [
+        "Bernstein publishes an immutable signed governance playbook plus provenance showing govern apply and a subsequent run governed by that exact signed state",
+        "a first-party case study or benchmark measures policy enactment and later operation through the shipped governance path"
+      ]
+    },
+    {
+      "canonical_harness_id": "dotcraft",
+      "canonical_state_at_review": "P",
+      "canonical_review_ref": "a08c8b35497f6ba9148f6ede80839835dcc8812a",
+      "repository": "https://github.com/DotHarness/dotcraft",
+      "result_surface_review": "no-direct-s5-observation-recovered",
+      "finding": "DotCraft closes parent-owned S5 structurally through durable Agent Profiles: a legitimate author selects role and capability policy, the runtime compiles the selected profile into a persisted thread configuration with profile provenance/fingerprint, and conversations or unattended work can execute under that snapshot. Public implementation, documentation, SDK samples and tests establish the mechanism, but no immutable real profile-policy change linked to a subsequent production-like thread/Goal/Automation result was recovered, so no direct S5 observation is admitted.",
+      "primary_sources": [
+        "https://github.com/opensiro/vsm-harness-index/blob/676376ebdecfc420d31546c52eceb4165c7a5448/assessments/dotcraft.md",
+        "https://github.com/DotHarness/dotcraft/tree/a08c8b35497f6ba9148f6ede80839835dcc8812a"
+      ],
+      "reassess_if": [
+        "DotCraft publishes a committed concrete Agent Profile plus an immutable subsequent thread/Goal/Automation artifact carrying that exact profile id/fingerprint",
+        "a benchmark compares governed operation before and after an authoritative Agent Profile policy change"
+      ]
+    },
+    {
+      "canonical_harness_id": "hugagentos",
+      "canonical_state_at_review": "A(P)",
+      "canonical_review_ref": "9436fcb77261bc995e6e7a45cdc5e192eae9bc74",
+      "repository": "https://github.com/ZJU-REAL/HugAgentOS",
+      "result_surface_review": "no-direct-s5-observation-recovered",
+      "finding": "HugAgentOS closes S5 structurally at project recursion through authoritative project-root AGENTS.md policy: supported /init can synthesize and persist rules, legitimate project editors/admins can edit them, and later project conversations receive the changed policy. Targeted public-result search did not recover a reusable benchmark or immutable enacted-policy run binding a concrete rule change to subsequent measured operation, so this remains canonical mechanism evidence rather than a direct S5 capability observation.",
+      "primary_sources": [
+        "https://github.com/opensiro/vsm-harness-index/blob/676376ebdecfc420d31546c52eceb4165c7a5448/assessments/hugagentos.md",
+        "https://github.com/ZJU-REAL/HugAgentOS/tree/9436fcb77261bc995e6e7a45cdc5e192eae9bc74"
+      ],
+      "reassess_if": [
+        "HugAgentOS publishes an immutable /init or editor-authored AGENTS.md change and a later project run demonstrably governed by that exact changed policy",
+        "a first-party experiment measures project-policy construction or amendment quality and subsequent operation"
+      ]
+    },
+    {
+      "canonical_harness_id": "octos",
+      "canonical_state_at_review": "P",
+      "canonical_review_ref": "9f6311afd4e00324cdb89d957461cf861f4f2630",
+      "repository": "https://github.com/octos-org/octos",
+      "result_surface_review": "no-direct-s5-observation-recovered",
+      "finding": "Octos closes parent-owned S5 structurally through workspace/operator-controlled .octos/IDENTITY.md and .octos/SOUL.md bootstrap policy that is loaded into system context and hot-reloaded after edits. Targeted public-result search did not recover an immutable identity/value amendment linked to a subsequent measured Octos operation, so no direct S5 observation is admitted.",
+      "primary_sources": [
+        "https://github.com/opensiro/vsm-harness-index/blob/676376ebdecfc420d31546c52eceb4165c7a5448/assessments/octos.md",
+        "https://github.com/octos-org/octos/tree/9f6311afd4e00324cdb89d957461cf861f4f2630"
+      ],
+      "reassess_if": [
+        "Octos publishes a concrete IDENTITY.md/SOUL.md change with immutable provenance and a later run showing the changed bootstrap state governing operation",
+        "a first-party benchmark or case study measures identity/policy amendment through the shipped hot-reload path"
+      ]
+    },
+    {
+      "canonical_harness_id": "platypus",
+      "canonical_state_at_review": "P",
+      "canonical_review_ref": "5dda4dcdb92c209c8c8df953f0e9261cd018c2d7",
+      "repository": "https://github.com/willdady/platypus",
+      "result_surface_review": "no-direct-s5-observation-recovered",
+      "finding": "Platypus closes parent-owned S5 structurally through owner/admin control of durable Workspace Context that is injected into later Agent operation. Targeted public-result search did not recover a reusable result surface for a concrete Workspace Context amendment and subsequent governed Agent execution, so no direct canonical S5 observation is admitted.",
+      "primary_sources": [
+        "https://github.com/opensiro/vsm-harness-index/blob/676376ebdecfc420d31546c52eceb4165c7a5448/assessments/platypus.md",
+        "https://github.com/willdady/platypus/tree/5dda4dcdb92c209c8c8df953f0e9261cd018c2d7"
+      ],
+      "reassess_if": [
+        "Platypus publishes an immutable Workspace Context policy change and a subsequent Agent run bound to the changed context",
+        "a benchmark or case study measures parent policy amendment and later operation at Workspace recursion"
+      ]
+    },
+    {
+      "canonical_harness_id": "polyphemus",
+      "canonical_state_at_review": "P",
+      "canonical_review_ref": "02020f3bc2829c350fd726273a7721254068925f",
+      "repository": "https://github.com/polyphemus-ai/release-rehearsal",
+      "result_surface_review": "no-direct-s5-observation-recovered",
+      "finding": "Polyphemus closes parent-owned S5 structurally through operator acceptance/rejection of proposed authoritative project AGENTS.md rules, which are then loaded into future project sessions. Targeted public-result search did not recover an immutable accepted rule change linked to a subsequent measured project operation, so no direct S5 capability observation is admitted.",
+      "primary_sources": [
+        "https://github.com/opensiro/vsm-harness-index/blob/676376ebdecfc420d31546c52eceb4165c7a5448/assessments/polyphemus.md",
+        "https://github.com/polyphemus-ai/release-rehearsal/tree/02020f3bc2829c350fd726273a7721254068925f"
+      ],
+      "reassess_if": [
+        "Polyphemus publishes a concrete proposed project rule, operator keep/discard decision, resulting AGENTS.md revision and later project session under that exact rule state",
+        "a first-party benchmark evaluates project-rule governance and return into subsequent operation"
+      ]
+    },
+    {
+      "canonical_harness_id": "superharness",
+      "canonical_state_at_review": "P",
+      "canonical_review_ref": "8bd54bc1ea7db2391190de25087bc638d503e549",
+      "repository": "https://github.com/artificemachine/superharness",
+      "result_surface_review": "no-direct-s5-observation-recovered",
+      "finding": "superharness closes parent-owned S5 structurally through owner-maintained project instruction and .superharness/rules surfaces that are injected into later delegated agent prompts. Targeted public-result search did not recover an immutable owner policy amendment linked to a subsequent measured delegated run, so no direct canonical S5 observation is admitted.",
+      "primary_sources": [
+        "https://github.com/opensiro/vsm-harness-index/blob/676376ebdecfc420d31546c52eceb4165c7a5448/assessments/superharness.md",
+        "https://github.com/artificemachine/superharness/tree/8bd54bc1ea7db2391190de25087bc638d503e549"
+      ],
+      "reassess_if": [
+        "superharness publishes a concrete project-rule amendment with immutable provenance and a later delegated run whose injected project_rules bind to that exact changed state",
+        "a first-party benchmark or case study measures project policy amendment and downstream execution"
+      ]
+    },
+    {
+      "canonical_harness_id": "waku-agent",
+      "canonical_state_at_review": "P",
+      "canonical_review_ref": "b8310c08029732475b68076df02a6cc44e3e41e7",
+      "repository": "https://github.com/ShenSeanChen/waku-agent",
+      "result_surface_review": "no-direct-s5-observation-recovered",
+      "finding": "Waku Agent closes parent-owned S5 structurally through owner-controlled SOUL.md persona/standing policy that is loaded into every later turn; the model-facing update_soul tool persists rules only on the user's authority. Targeted public-result search did not recover an immutable SOUL.md policy amendment linked to a subsequent measured assistant run, so no direct S5 observation is admitted.",
+      "primary_sources": [
+        "https://github.com/opensiro/vsm-harness-index/blob/676376ebdecfc420d31546c52eceb4165c7a5448/assessments/waku-agent.md",
+        "https://github.com/ShenSeanChen/waku-agent/tree/b8310c08029732475b68076df02a6cc44e3e41e7"
+      ],
+      "reassess_if": [
+        "Waku publishes a concrete owner-authorized SOUL.md change with immutable provenance and a later run bound to that exact changed persona/policy state",
+        "a first-party benchmark or case study measures durable standing-policy amendment and subsequent operation"
+      ]
+    }
+  ],
+  "reassessed_existing_s5_positive_transition_count": 0,
+  "capability_counts_changed": false,
+  "observation_registry_mutated": false,
+  "primary_baseline_changed": false,
+  "reopen_condition_satisfied": false,
+  "primary_baseline": "gap",
+  "non_claim": "This delta does not claim absence of all possible S5 evidence in the public ecosystem. It records that the newly S5-positive canonical systems admitted after the frozen cohort materially expand mechanism/ownership coverage, while this review did not recover a new reusable direct canonical S5 capability observation satisfying the existing primary-reopen criteria."
+}
