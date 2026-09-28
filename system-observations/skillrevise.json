@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-28",
+  "evidence_source_class": "first-party-reported",
+  "system_name": "SkillRevise",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "native-system",
+    "historical_relation": "The origin public release at xuansenpa1/skillrevise implements the SkillRevise revision loop described by the publication. The paper-linked HKUST-KnowComp/skillrevise repository is a fork of this origin and is not treated as a second implementation identity. Provider-specific paper launchers and archived paper-run artifacts are not bundled, so the record binds the published aggregate results to the pinned public method implementation, benchmark bundles and reproducibility contract rather than claiming an independently reproduced run ledger.",
+    "source_revision": "fb8042ac2415cb6d7f3a49db0c9a95ecb79edc6d"
+  },
+  "primary_sources": [
+    "https://github.com/xuansenpa1/skillrevise/tree/fb8042ac2415cb6d7f3a49db0c9a95ecb79edc6d",
+    "https://github.com/xuansenpa1/skillrevise/blob/fb8042ac2415cb6d7f3a49db0c9a95ecb79edc6d/README.md",
+    "https://github.com/xuansenpa1/skillrevise/blob/fb8042ac2415cb6d7f3a49db0c9a95ecb79edc6d/docs/reproducibility.md",
+    "https://arxiv.org/abs/2606.01139v4"
+  ],
+  "observations": [
+    {
+      "observation_id": "skillrevise-trace-conditioned-skill-revision-2026",
+      "kind": "persistent-skill-revision-study",
+      "evidence_surface": "SkillRevise main benchmark study across SkillsBench, SkillLearnBench-Random, and SWE-Skills-Bench-Hard",
+      "reviewed_revision": "fb8042ac2415cb6d7f3a49db0c9a95ecb79edc6d",
+      "publication_id": "arXiv:2606.01139v4",
+      "method": "SkillRevise",
+      "adaptation_surface": [
+        "persistent LLM-authored agent skill artifact"
+      ],
+      "selection_protocol": "Starting from an initial skill, the public method executes the task, diagnoses verifier-facing failures, retrieves repair principles, revises the persistent skill, re-executes each candidate, and returns the best observed skill under a measured-utility gate within the revision budget. The reported maxrev3 protocol permits at most three revisions and stops candidate generation after the first verifier success.",
+      "evaluation_protocol": {
+        "max_revisions": 3,
+        "candidate_reexecution_required": true,
+        "stop_after_first_verifier_success": true,
+        "main_run_max_heldout": 0,
+        "principle_memory_fixed_during_evaluation": true
+      },
+      "benchmark_results": [
+        {
+          "benchmark": "SkillsBench",
+          "executor": "GPT-5.5",
+          "task_count": 86,
+          "no_skill_successes": 31,
+          "skill_creator_successes": 34,
+          "skillrevise_maxrev3_successes": 53
+        },
+        {
+          "benchmark": "SkillLearnBench-Random",
+          "executor": "Opus-4.7",
+          "task_count": 50,
+          "no_skill_successes": 7,
+          "skill_creator_successes": 7,
+          "skillrevise_maxrev3_successes": 25
+        },
+        {
+          "benchmark": "SWE-Skills-Bench-Hard",
+          "executor": "Qwen-3.6-Plus",
+          "task_count": 70,
+          "no_skill_successes": 22,
+          "skill_creator_successes": 24,
+          "skillrevise_maxrev3_successes": 35
+        }
+      ],
+      "cross_model_transfer_summary": "The pinned first-party release states that fixed GPT-5.5-produced revised skills improve all four target executors on the 57-task GPT-5.5 source-success subset, while executor-specific revision remains strongest in every reported case.",
+      "verification_boundary": "The public release requires a real external harness command plus independent verifier or validated self-verification receipt; its deterministic mock adapter is explicitly excluded from benchmark evidence.",
+      "result_summary": "The first-party publication and pinned release report higher task success for SkillRevise maxrev3 than both no-skill and one-shot Skill-Creator baselines on the three representative fixed-executor result rows.",
+      "provenance_limitation": "The complete public repository preserves the SkillRevise method implementation, benchmark bundles, verification contract and representative aggregate result rows, but does not bundle the paper's provider-specific executor launchers or archived paper-run artifacts. The result values are therefore first-party published evidence rather than independently reproduced raw-run artifacts in this corpus."
+    }
+  ]
+}

@@ -27,7 +27,8 @@ jobs:
             system-observations/claude-code-wildclawbench-external-reproduced-adapter-preserved.json \
             system-observations/codex-wildclawbench-external-reproduced-adapter-preserved.json \
             system-observations/hermes-agent-wildclawbench-external-reproduced-adapter-preserved.json \
-            system-observations/openclaw-wildclawbench-external-reproduced-adapter-preserved.json
+            system-observations/openclaw-wildclawbench-external-reproduced-adapter-preserved.json \
+            system-observations/skillrevise.json
           do
             python scripts/admission_check.py "$record"
           done
