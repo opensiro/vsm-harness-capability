@@ -74,6 +74,20 @@
       "review_ref": "vsm-projections/benchmark-family-map/S3-ORCHESTRATEBENCH-REVIEW.md",
       "delta_ref": "vsm-projections/s3/post-closure-deltas/orchestratebench-policy-conditioned-containment-2026-09-29.json",
       "non_claim": "Direct S3 fit belongs only to the OrchestrateBench benchmark-defined policy plus supplied-current-state plus staged-operation boundary. It does not attribute autonomous S3 ownership or autonomous fault detection to Claude, does not bind the result to a canonical native harness S3 path, and does not select an S3 primary baseline."
+    },
+    {
+      "function": "S5",
+      "benchmark_id": "hrao-e-production-constitutional-amendment-loop",
+      "benchmark_name": "HRAO-E production constitutional-amendment loop",
+      "fit": "direct",
+      "primary_source": "https://cognitivethoughtengine.com/blog/constitutional-self-governance.html",
+      "evaluated_object": "First-party HRAO-E production constitutional organization in which operational failures or recurring governance gaps can produce agent-drafted amendments, the human CEO retains sole constitutional ratification authority, ratified changes become versioned binding law, and later execution-log citation coverage is used as an enforcement proxy.",
+      "evaluation_mode": "first-party-production-constitutional-amendment-history",
+      "system_linkage": "external-native-noncanonical",
+      "tracking_issue": 56,
+      "review_ref": "vsm-projections/benchmark-family-map/S5-HRAO-E-REVIEW.md",
+      "delta_ref": "vsm-projections/s5/post-closure-deltas/hrao-e-production-constitutional-amendment-loop-2026-09-29.json",
+      "non_claim": "Direct S5 fit belongs only to the first-party-reported HRAO-E production constitutional organization. It does not transfer production S5 ownership to the portable constitutional-agent-governance library, does not establish canonical harness linkage or independent reproduction, and does not select an S5 primary baseline."
     }
   ]
 }

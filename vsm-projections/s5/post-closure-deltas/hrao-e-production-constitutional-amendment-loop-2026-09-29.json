@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "status": "experimental-non-normative",
+  "tracking_issue": 56,
+  "reviewed_at": "2026-09-29",
+  "source_revision": "CognitiveThoughtEngine/constitutional-agent-governance@368717cb50b70826412f85022d23b3fd8a0dec77",
+  "source_revision_note": "Pinned revision identifies the related portable open-source implementation; the exact production HRAO-E revision/ledger remains unresolved and is not claimed by this delta.",
+  "delta_class": "new-direct-public-evidence-no-primary-reopen",
+  "function": "S5",
+  "benchmark_id": "hrao-e-production-constitutional-amendment-loop",
+  "benchmark_fit": "direct",
+  "system_linkage": "external-native-noncanonical",
+  "boundary_class": "first-party-production-parent-governed-constitutional-organization",
+  "canonical_harness_id": null,
+  "canonical_system_eligible": false,
+  "observation_id": "hrao-e-production-constitutional-amendment-loop-2026",
+  "raw_observation_ref": "../../../system-observations/hrao-e-constitutional-amendments.json#hrao-e-production-constitutional-amendment-loop-2026",
+  "evidence_change": "A neutral first-party production-history observation now reports an exercised HRAO-E constitutional amendment loop: production failures or repeated governance gaps can yield agent-drafted amendments, the human CEO is the sole ratification authority, ratified changes become versioned binding law, and later execution-log citation coverage is used as a proxy for enforcement. A named ratified RALPH amendment is tied to a concrete production outage history.",
+  "control_boundary": "Credit S5 only to the reported HRAO-E production organization at the parent-governed constitutional boundary. Agent synthesis/proposal supports the path; the human CEO owns ratification; constitutional/versioning and runtime machinery enforce and record the result. Do not transfer production S5 credit to the portable constitutional-agent-governance library or any underlying model.",
+  "primary_reopen": false,
+  "reopen_gate_status": {
+    "second_canonical_native_or_adapter_preserved_comparable_direct_s5_observation": false,
+    "matched_multi_canonical_authority_change_operation_protocol": false,
+    "adapter_preserved_canonical_rows_from_direct_family": false
+  },
+  "disposition": "retain-evidence-backed-gap",
+  "reason": "HRAO-E adds one direct first-party-reported native S5 production-history observation at a non-canonical external boundary, but the frozen S5 closure requires materially comparable multi-canonical native or adapter-preserved evidence to reopen the primary. This observation is heterogeneous, non-canonical, not independently reproduced, and does not form a matched authority/change/subsequent-operation cell with Ouroboros or another canonical S5 system.",
+  "non_claim": "This delta does not claim independent audit or reproduction of HRAO-E production history, a recovered exact production Git ledger, autonomous agent ownership of ultimate constitutional authority, canonical harness linkage, transferable S5 ownership for the portable constitutional-agent library, an S5 primary ranking, or closure of the existing S5 primary evidence gap."
+}
