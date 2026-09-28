@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "experimental-non-normative",
+  "tracking_issue": 49,
+  "reviewed_at": "2026-09-29",
+  "source_revision": "anote-ai/Research-OrchestrateBench@5c3738c19d99cbe9aa152b0ea9b7d903ea4f93db",
+  "delta_class": "new-direct-public-evidence-no-primary-reopen",
+  "function": "S3",
+  "benchmark_id": "orchestratebench-policy-conditioned-containment",
+  "benchmark_fit": "direct",
+  "system_linkage": "benchmark-scaffolded-noncanonical",
+  "boundary_class": "benchmark-defined-trusted-state-current-control-organization",
+  "canonical_harness_id": null,
+  "canonical_system_eligible": false,
+  "observation_id": "orchestratebench-policy-conditioned-containment-2026",
+  "raw_observation_ref": "../../../system-observations/orchestratebench.json#orchestratebench-policy-conditioned-containment-2026",
+  "evidence_change": "A previously unresolved OrchestrateBench candidate now has a pinned first-party implementation and committed real-Claude measured artifacts. The policy-conditioned probe directly exercises a benchmark-defined current-control relation in which a supplied trusted upstream-state distinction enables corrective intervention on the current stage and changes downstream recovery/cascade outcomes.",
+  "control_boundary": "Treat the staged dependency chain as current operation, the seeded latent/semantic fault as the disturbance, the benchmark-supplied trusted upstream value as current-state support, the repair policy's stage replacement right as the S3 intervention authority, and later-stage recovery/cascade as operational closure. Do not attribute autonomous S3 ownership to Claude or to any framework mentioned by the paper.",
+  "primary_reopen": false,
+  "reopen_gate_status": {
+    "matched_multi_canonical_surface": false,
+    "canonical_native_or_adapter_preserved_s3_paths_active": false,
+    "direct_benchmark_binds_multiple_canonical_native_s3_implementations": false
+  },
+  "disposition": "retain-evidence-backed-gap",
+  "reason": "OrchestrateBench adds direct S3 evidence only at one benchmark-scaffolded non-canonical composed control boundary. The frozen S3 closure explicitly does not reopen for another direct benchmark-scaffolded S3 observation without canonical native or adapter-preserved linkage, and no materially matched multi-canonical S3 cell is created.",
+  "non_claim": "This delta does not claim autonomous S3 detection by Claude, does not treat the trusted-state feed as a native production control plane, does not transfer S3 ownership to any framework named in the paper, does not independently reproduce the API experiment, and does not select an S3 primary baseline."
+}
