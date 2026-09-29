@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "experimental-non-normative",
+  "tracking_issue": 64,
+  "reviewed_at": "2026-09-29",
+  "source_revision": "ZJU-REAL/HugAgentOS@9436fcb77261bc995e6e7a45cdc5e192eae9bc74",
+  "delta_class": "new-direct-public-evidence-no-primary-reopen",
+  "function": "S5",
+  "benchmark_id": "hugagentos-project-instructions-context-return",
+  "benchmark_fit": "direct",
+  "system_linkage": "canonical-native-descriptive",
+  "boundary_class": "canonical-native-authoritative-project-policy-to-context-return",
+  "canonical_harness_id": "hugagentos",
+  "canonical_system_eligible": true,
+  "observation_id": "hugagentos-project-instructions-context-return-9436fcb",
+  "raw_observation_ref": "../../../system-observations/hugagentos.json#hugagentos-project-instructions-context-return-9436fcb",
+  "evidence_change": "A neutral first-party acceptance-test observation now exercises the canonical HugAgentOS project-instruction enactment path at the exact assessed revision: authorized project rules are changed and persisted with revision protection, ORM state is expired, and later native project-context assembly returns the newly saved authoritative instructions.",
+  "control_boundary": "Credit direct descriptive S5 only to canonical HugAgentOS at the durable project-policy change to native context-return boundary. The observation demonstrates policy enactment and return machinery but does not itself establish which supported A(P) owner semantically selected the rule content; canonical ownership remains an Index fact. Do not infer an autonomous /init model turn or downstream task behavior not exercised by the test.",
+  "primary_reopen": false,
+  "reopen_gate_status": {
+    "second_canonical_native_or_adapter_preserved_materially_comparable_direct_s5_observation": false,
+    "matched_multi_canonical_authority_change_operation_protocol": false,
+    "adapter_preserved_canonical_rows_from_direct_family": false
+  },
+  "disposition": "retain-evidence-backed-gap",
+  "reason": "HugAgentOS adds another canonical native descriptive direct S5 observation and is structurally analogous to DotCraft's controlled policy-to-runtime enactment witness, but the two do not hold constant a common evidence family/version, intervention protocol, task/evaluator, execution environment or policy object. DotCraft resolves an Agent Profile into a persisted thread runtime contract, while HugAgentOS persists root project instructions and returns them through native project-context assembly. Under BASELINE.md this is descriptive cross-system evidence rather than a materially matched primary comparison cell, so the frozen S5 primary gap remains.",
+  "non_claim": "This delta does not claim empirical proof of autonomous HugAgentOS /init S5 ownership, a production deployment history, an observed downstream model turn after the policy change, a materially matched HugAgentOS-versus-DotCraft primary cell, an S5 primary ranking, or closure of the existing S5 primary evidence gap."
+}
