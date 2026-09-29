@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Codex",
+  "canonical_harness_id": "codex",
+  "canonical_assessment_ref": "assessments/codex.md",
+  "canonical_review_ref": "b974893c90048d147207ae9004489c02f3116426",
+  "canonical_repository": "https://github.com/openai/codex",
+  "published_implementation": {
+    "system_compatibility": "adapter-preserved",
+    "historical_relation": "The pinned OpenBench M4.5 raw log identifies Codex CLI 0.142.5 and records the native `codex exec` command for every clean trial. The package version is known; exact upstream source revision is not asserted by W1."
+  },
+  "primary_sources": [
+    "https://github.com/minghinmatthewlam/openbench/blob/8215e65a2c45ca6d3bdc88eb1ee086767c66ad5e/data/m4.5-2026-07-03/README.md",
+    "https://github.com/minghinmatthewlam/openbench/blob/8215e65a2c45ca6d3bdc88eb1ee086767c66ad5e/data/m4.5-2026-07-03/results.jsonl"
+  ],
+  "observations": [
+    {
+      "observation_id": "codex__openbench-m45-hard3__gpt-5.5-medium__8215e65a",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "openbench-m45",
+        "name": "OpenBench M4.5",
+        "variant": "hard3-partial-credit",
+        "task_count": 3,
+        "primary_source": "https://github.com/minghinmatthewlam/openbench/blob/8215e65a2c45ca6d3bdc88eb1ee086767c66ad5e/data/m4.5-2026-07-03/README.md",
+        "artifact_source": "https://github.com/minghinmatthewlam/openbench/blob/8215e65a2c45ca6d3bdc88eb1ee086767c66ad5e/data/m4.5-2026-07-03/results.jsonl"
+      },
+      "result": {
+        "date": "2026-07-03",
+        "agent_label": "codex",
+        "harness_version": "0.142.5",
+        "harness_revision": null,
+        "benchmark_revision": "8215e65a2c45ca6d3bdc88eb1ee086767c66ad5e",
+        "task_revision": "74c964e",
+        "model": "gpt-5.5-medium",
+        "model_config": "OpenBench canonical gpt-5.5-medium; Codex invoked as gpt-5.5 with model_reasoning_effort=medium; local execution; subscription OAuth with OPENAI_API_KEY unset; 900-second task timeout",
+        "metric": "clean_rollout_success_rate",
+        "value": 1.0,
+        "passed": 9,
+        "valid": 9,
+        "expected": 9,
+        "unique_tasks": 3,
+        "rollouts_per_task": 3,
+        "mean_partial_credit_score": 1.0
+      },
+      "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "version-known"},
+      "provenance": {
+        "publisher": "OpenBench / Matthew Lam",
+        "checked": true,
+        "os_system": true,
+        "public_logs": true,
+        "public_trajectories": false,
+        "raw_run_artifacts_public": true,
+        "execution_environment": "single macOS host; local sequential matrix; fresh temporary task workspace per cell; checker.sh grading"
+      },
+      "comparison": {"group": "openbench-m45-hard3__gpt-5.5-medium__20260703", "mode": "candidate-same-model", "scope": "coding-swe"},
+      "unknown_dimensions": [
+        "exact service-side model checkpoint behind the published gpt-5.5 label",
+        "cross-harness service/provider snapshot equivalence beyond the source-declared canonical model label",
+        "exact upstream Codex source revision corresponding to CLI 0.142.5",
+        "ambient service-load effects on wall-clock telemetry"
+      ],
+      "notes": "W1 preserves the source-reported clean 9/9 block and mean score 1.0. No correctness ranking is inferred from a saturated result; Devin is handled separately as a non-admission disposition because the source marks that block unreliable."
+    }
+  ]
+}
