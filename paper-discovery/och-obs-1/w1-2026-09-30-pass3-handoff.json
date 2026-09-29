@@ -152,15 +152,33 @@
     }
   ],
   "validation": {
-    "status": "pending",
-    "commands_required": [
+    "status": "success",
+    "registry_observation_count_after_generation": 95,
+    "trigger_revision": "cd0020518b3618497a801634a90466ff4e25ece8",
+    "generated_registry_revision": "c1ae3414ae18701e163398b0e6c8bf2357b4e0f2",
+    "test_only_workflow_reverted_revision": "ce2da3631b149ad95f4a5f6fb29132ecc17d31d7",
+    "workflow": {
+      "name": "validate",
+      "run_id": 36636801223,
+      "run_number": 146,
+      "job_id": 109639327202,
+      "conclusion": "success"
+    },
+    "commands": [
       "python system-observations/render_registry.py",
+      "python scripts/validate_repository.py",
       "python scripts/admission_check.py system-observations/opencode-v4-flash-factorial-external-reproduced-adapter-preserved.json",
       "python scripts/admission_check.py system-observations/claude-code-v4-flash-factorial-external-reproduced-adapter-preserved.json",
-      "python scripts/admission_check.py system-observations/v4-flash-factorial-bare-loop-control.json",
-      "python scripts/validate_repository.py"
+      "python scripts/admission_check.py system-observations/v4-flash-factorial-bare-loop-control.json"
     ],
-    "results": []
+    "results": [
+      {"command": "python system-observations/render_registry.py", "result": "success", "workflow_step": "Regenerate neutral registry views"},
+      {"command": "python scripts/validate_repository.py", "result": "success", "workflow_step": "Run python scripts/validate_repository.py"},
+      {"command": "python scripts/admission_check.py system-observations/opencode-v4-flash-factorial-external-reproduced-adapter-preserved.json", "result": "success", "workflow_step": "Exercise live evidence admission path"},
+      {"command": "python scripts/admission_check.py system-observations/claude-code-v4-flash-factorial-external-reproduced-adapter-preserved.json", "result": "success", "workflow_step": "Exercise live evidence admission path"},
+      {"command": "python scripts/admission_check.py system-observations/v4-flash-factorial-bare-loop-control.json", "result": "success", "workflow_step": "Exercise live evidence admission path"}
+    ],
+    "test_only_infrastructure_note": "The PR workflow was temporarily made write-capable so the repository's own renderer could commit generated registry views and so the three new records could be included in the existing live admission loop. The workflow was restored byte-for-byte to the main-branch version before final review; the intended merged diff contains no validation-infrastructure change."
   },
   "handoff_boundary": {
     "structural_classification_performed": false,
