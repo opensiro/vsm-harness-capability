@@ -5,12 +5,14 @@ Status: **generated, experimental, non-normative**
 Generated from the raw JSON records in this directory by `render_registry.py`.
 Raw evidence payloads remain only in the raw record; this table is an identity/provenance projection, not a second result database.
 
-Raw observations: **78**
+Raw observations: **80**
 
 | System | Canonical harness | Observation | Evidence surface(s) | Kind | Provenance | Compatibility | Raw record |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | A-Evolve | [a-evolve](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/a-evolve.md) | `a-evolve-harness-updating-2026` | A-Evolve harness-evolution study: SWE-bench Verified / MCP-Atlas / SkillsBench | `persistent-harness-update-study` | `first-party-reported` | `native-system` | [a-evolve.json](a-evolve.json) |
 | A-Evolve benchmark-defined evolving system | — | `a-evolve-harness-evolution-protocol-2026` | A-Evolve harness-evolution protocol | `persistent-adaptation-study` | `first-party-reported` | `benchmark-scaffolded` | [a-evolve-composed.json](a-evolve-composed.json) |
+| Aesop target-project rule runtime | [aesop](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/aesop.md) | `aesop-power-target-claude-write-read-procedure-2a661c1` | Aesop canonical /power init-prime and already-primed target-project CLAUDE.md procedure | `first-party-native-project-rule-procedure` | `first-party-reported` | `native-system` | [aesop.json](aesop.json) |
+| Aesop target-project rule runtime | [aesop](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/aesop.md) | `aesop-target-claude-scaffold-force-overwrite-2a661c1` | Aesop canonical target-project CLAUDE.md scaffolder and native unit regressions | `first-party-native-project-scaffold-test` | `first-party-reported` | `native-system` | [aesop.json](aesop.json) |
 | Airbnb Agent Harness Optimizer | — | `airbnb-agent-harness-optimizer-prism-heldout-lift-2026` | BFCL multi-round; tau2-Retail; tau2-Telecom; PRISM fixed-model held-out harness-optimization study across BFCL multi-round, tau2-Retail, and tau2-Telecom | `persistent-harness-optimization-study` | `first-party-reported` | `native-system` | [airbnb-agent-harness-optimizer.json](airbnb-agent-harness-optimizer.json) |
 | Bernstein governance runtime | [bernstein](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/bernstein.md) | `bernstein-draftproposal-human-signature-c3d3173` | Bernstein canonical DraftProposal human-signature regression | `first-party-native-governance-signature-test` | `first-party-reported` | `native-system` | [bernstein.json](bernstein.json) |
 | Bernstein governance runtime | [bernstein](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/bernstein.md) | `bernstein-reviewed-plan-apply-receipt-c3d3173` | Bernstein canonical govern-plan apply and receipt regression suite | `first-party-native-reviewed-plan-apply-test` | `first-party-reported` | `native-system` | [bernstein.json](bernstein.json) |
