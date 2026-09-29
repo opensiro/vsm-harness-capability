@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-29",
+  "evidence_source_class": "first-party-reported",
+  "system_name": "Marveen installation identity runtime",
+  "canonical_harness_id": "marveen",
+  "canonical_assessment_ref": "assessments/marveen.md",
+  "canonical_review_ref": "b3f6574a76488b3367b26684f9065acca695a00f",
+  "published_implementation": {
+    "system_compatibility": "native-system",
+    "source_revision": "b3f6574a76488b3367b26684f9065acca695a00f",
+    "historical_relation": "The decisive first-party live-install verification was published in PR #615 / commit 6b6b8c960da18f25dc8a70a887b8ca0953a3dd5f, which is an ancestor of the canonical assessed Marveen revision. The later #758 identity-readback repair is also an ancestor and is retained only as implementation/provenance support rather than as a second empirical result in this observation."
+  },
+  "primary_sources": [
+    "https://github.com/Szotasz/marveen/pull/615",
+    "https://github.com/Szotasz/marveen/commit/6b6b8c960da18f25dc8a70a887b8ca0953a3dd5f",
+    "https://github.com/Szotasz/marveen/blob/b3f6574a76488b3367b26684f9065acca695a00f/seed-skills/self-rename/SKILL.md",
+    "https://github.com/Szotasz/marveen/commit/12890105aed9f76d8d19a742f90c988e8799767f",
+    "https://github.com/opensiro/vsm-harness-index/blob/main/assessments/marveen.md"
+  ],
+  "observations": [
+    {
+      "observation_id": "marveen-live-install-identity-mutation-pr615-2026-07-15",
+      "kind": "first-party-live-install-identity-mutation-witness",
+      "evidence_surface": "Marveen PR #615 live test installation identity-save verification",
+      "reviewed_revision": "b3f6574a76488b3367b26684f9065acca695a00f",
+      "historical_evidence_revision": "6b6b8c960da18f25dc8a70a887b8ca0953a3dd5f",
+      "live_test_environment": {
+        "reported_environment": "live test install, AVX-less VPS, develop build",
+        "services_up_case_exercised": true,
+        "services_down_case_exercised": true,
+        "real_browser_wizard_check": true,
+        "test_install_restored_after_verification": true
+      },
+      "services_up_identity_change": {
+        "brand_name_changed": true,
+        "owner_name_changed": true,
+        "identity_confirmed_persisted": true,
+        "claude_md_persona_changed": true,
+        "old_persona_token_occurrences_after_change": 0,
+        "bot_name_unchanged_in_this_historical_path": true,
+        "main_agent_id_unchanged": true,
+        "service_id_unchanged": true,
+        "tmux_session_names_unchanged": true
+      },
+      "services_down_identity_change": {
+        "bot_name_updated": true
+      },
+      "validation_checks": {
+        "empty_name_rejected": true,
+        "equals_character_in_name_rejected": true
+      },
+      "result_summary": "The first-party PR #615 verification reports a live Marveen test installation where the services-up identity-save path changed durable brand, owner and CLAUDE.md persona state while leaving internal routing/service identifiers and tmux session names unchanged; the old persona token had zero remaining CLAUDE.md occurrences, and the test installation was restored afterwards.",
+      "followup_support": "Commit 12890105aed9f76d8d19a742f90c988e8799767f later repaired runtime identity readback and reports E2E verification that a newly saved display identity is immediately visible on runtime label routes. That follow-up is provenance/mechanism support only here and is not counted as a second observation/result.",
+      "notes": "This record is function-neutral. It does not claim that the shipped self-rename skill itself executed the PR #615 live test, does not treat Claude Code /rename or internal MAIN_AGENT_ID/SERVICE_ID changes as part of this observation, and does not claim a later model turn loaded or behaviorally followed the changed persona."
+    }
+  ]
+}
