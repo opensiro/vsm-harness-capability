@@ -53,7 +53,7 @@
         "persisted_role_instructions": "Profile body for reviewer-lite."
       },
       "result_summary": "The committed first-party integration test creates a workspace Agent Profile, starts a native DotCraft thread bound to it, observes the resolved role/tool/approval configuration in the thread snapshot, removes the source profile, and verifies that the thread retains the resolved profile identity, fingerprint, and role instructions on reread.",
-      "notes": "This record captures the executable test surface present at the pinned public revision. It does not claim that a particular public CI run executed this exact test, and it does not infer any VSM function or autonomy state from the test."
+      "notes": "This record captures the executable test surface present at the pinned public revision. It does not claim that a particular public CI run executed this exact test, and it does not encode downstream function relevance or autonomy state."
     }
   ]
 }
