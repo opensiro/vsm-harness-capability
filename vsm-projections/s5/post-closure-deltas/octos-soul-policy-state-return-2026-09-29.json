@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "experimental-non-normative",
+  "tracking_issue": 70,
+  "reviewed_at": "2026-09-29",
+  "source_revision": "octos-org/octos@9f6311afd4e00324cdb89d957461cf861f4f2630",
+  "delta_class": "new-direct-public-evidence-no-primary-reopen",
+  "function": "S5",
+  "benchmark_id": "octos-soul-policy-state-return",
+  "benchmark_fit": "direct",
+  "system_linkage": "canonical-native-descriptive",
+  "boundary_class": "canonical-native-parent-governed-soul-policy-to-new-session-runtime-context",
+  "canonical_harness_id": "octos",
+  "canonical_system_eligible": true,
+  "observation_id": "octos-soul-effective-state-readback-9f6311a",
+  "raw_observation_ref": "../../../system-observations/octos.json#octos-soul-effective-state-readback-9f6311a",
+  "evidence_change": "A neutral first-party observation now records the canonical Octos gateway soul-policy path: concrete profile-wide and per-chat personality-policy state is durably written, effective-state precedence and reset are exercised through native regression tests, and the exact assessed revision contains the native system-prompt construction path that reads profile soul state for later session operation.",
+  "control_boundary": "Credit direct descriptive S5 only to canonical Octos at the parent/user-owned soul-personality mutation to effective-state/new-session-runtime-context boundary. Canonical ownership remains P. The raw regression does not edit the separate .octos/SOUL.md or .octos/IDENTITY.md bootstrap files, does not execute a later model turn under the changed fixture, and does not demonstrate autonomous ultimate-policy ownership.",
+  "primary_reopen": false,
+  "reopen_gate_status": {
+    "second_canonical_native_or_adapter_preserved_materially_comparable_direct_s5_observation": false,
+    "matched_multi_canonical_authority_change_operation_protocol": false,
+    "adapter_preserved_canonical_rows_from_direct_family": false
+  },
+  "disposition": "retain-evidence-backed-gap",
+  "reason": "Octos adds a canonical native direct descriptive S5 witness, but its gateway soul mutation/effective-state readback plus canonical prompt-consumption mechanism is not materially matched to Marveen installation identity mutation, DotCraft profile-to-thread enactment, HugAgentOS project-rule-to-context return, or the frozen Ouroboros constitutional/runtime history witness. The systems do not share one evidence family/version, authority/change treatment, task/evaluator, execution environment or reset/adaptation policy. Under BASELINE.md this is additional descriptive evidence rather than a matched primary comparison cell, so the frozen S5 primary gap remains.",
+  "non_claim": "This delta does not claim autonomous Octos S5 ownership, equivalence between the gateway soul store and the separate .octos/SOUL.md/.octos/IDENTITY.md bootstrap files, a subsequent model turn or task outcome under the changed soul, production deployment history, a materially matched Octos-versus-Marveen/DotCraft/HugAgentOS/Ouroboros primary cell, an S5 ranking, or closure of the existing S5 primary evidence gap."
+}
