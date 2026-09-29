@@ -5,7 +5,7 @@ Status: **generated, experimental, non-normative**
 Generated from the raw JSON records in this directory by `render_registry.py`.
 Raw evidence payloads remain only in the raw record; this table is an identity/provenance projection, not a second result database.
 
-Raw observations: **73**
+Raw observations: **76**
 
 | System | Canonical harness | Observation | Evidence surface(s) | Kind | Provenance | Compatibility | Raw record |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -65,6 +65,9 @@ Raw observations: **73**
 | OrchestrateBench policy-conditioned benchmark organization | — | `orchestratebench-policy-conditioned-containment-2026` | OrchestraBench / OrchestrateBench policy-conditioned failure-containment study and trusted-state ablation | `policy-conditioned-failure-containment-study` | `first-party-reported` | `benchmark-scaffolded` | [orchestratebench.json](orchestratebench.json) |
 | Ouroboros | [ouroboros](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/ouroboros.md) | `ouroboros-parent-governed-cyber-pro-policy-enactment-2026-09` | immutable-repository-history | `repository-history-policy-enactment-witness` | `first-party-reported` | `native-system` | [ouroboros-policy-enactment.json](ouroboros-policy-enactment.json) |
 | Pi | [pi](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/pi.md) | `pi__frontierharness-v1.0__kimi-k3-fireworks__20260822` | FrontierHarness Eval v1 | `system-benchmark-result` | `external-reproduced` | `adapter-preserved` | [pi-benchmark-results-external-reproduced-adapter-preserved.json](pi-benchmark-results-external-reproduced-adapter-preserved.json) |
+| Platypus Workspace runtime | [platypus](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/platypus.md) | `platypus-workspace-context-authorized-update-5dda4dc` | Platypus canonical Workspace Context configuration and owner/admin update path | `first-party-native-workspace-configuration-test` | `first-party-reported` | `native-system` | [platypus.json](platypus.json) |
+| Platypus Workspace runtime | [platypus](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/platypus.md) | `platypus-workspace-context-prompt-render-5dda4dc` | Platypus canonical Workspace Context system-prompt regression | `first-party-native-system-prompt-context-test` | `first-party-reported` | `native-system` | [platypus.json](platypus.json) |
+| Platypus Workspace runtime | [platypus](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/platypus.md) | `platypus-workspace-context-turn-consumption-path-5dda4dc` | Platypus canonical persisted Workspace row to Chat-turn system-prompt path | `first-party-native-turn-context-wiring` | `first-party-reported` | `native-system` | [platypus.json](platypus.json) |
 | QwenPaw | [qwenpaw](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/qwenpaw.md) | `qwenpaw__pawbench-v1.0__qwen3.6-35b-a3b__20260529` | PawBench v1.0 | `system-benchmark-result` | `first-party-reported` | `adapter-preserved` | [qwenpaw-benchmark-results-first-party-reported-adapter-preserved.json](qwenpaw-benchmark-results-first-party-reported-adapter-preserved.json) |
 | SkillEvolBench benchmark organization | — | `skillevolbench-frozen-deployment-protocol-2026` | SkillEvolBench frozen-deployment protocol | `persistent-adaptation-study` | `first-party-reported` | `benchmark-scaffolded` | [skillevolbench.json](skillevolbench.json) |
 | SkillRevise | — | `skillrevise-alfworld-principle-absorption-heldout-2026` | ALFWorld; SkillRevise ALFWorld principle-absorption calibration-to-heldout evaluation | `persistent-principle-memory-calibration-heldout-study` | `first-party-reported` | `native-system` | [skillrevise.json](skillrevise.json) |
