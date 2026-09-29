@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-29",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Pi",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "unclear",
+    "historical_relation": "The pinned benchmark snapshot names pi as the pi harness. The exact upstream pi release or repository revision used for these rows is not exposed by the pinned result artifact, so no canonical historical linkage is asserted here."
+  },
+  "primary_sources": [
+    "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/6a4a430bc6b78521131d245c5d26e42d7b9c123e/docs/metrics/harness-delta-swe2.json",
+    "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/6a4a430bc6b78521131d245c5d26e42d7b9c123e/README.md"
+  ],
+  "observations": [
+    {
+      "observation_id": "pi__agentic-coding-swe2__glm-4.7__6a4a430b",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "agentic-coding-harness-benchmarks-swe2",
+        "name": "Agentic Coding Harness Benchmarks /swe2 cross-harness snapshot",
+        "variant": "30-task-cross-harness",
+        "task_count": 30,
+        "primary_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/6a4a430bc6b78521131d245c5d26e42d7b9c123e/README.md",
+        "artifact_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/6a4a430bc6b78521131d245c5d26e42d7b9c123e/docs/metrics/harness-delta-swe2.json"
+      },
+      "result": {
+        "date": null,
+        "artifact_snapshot_at": "2026-03-21T00:56:45Z",
+        "agent_label": "pi",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "6a4a430bc6b78521131d245c5d26e42d7b9c123e",
+        "model": "glm-4.7",
+        "model_config": null,
+        "metric": "resolved_pct",
+        "value": 63.33,
+        "resolved": 19,
+        "tasks": 30,
+        "cost_per_resolved": 0.5031,
+        "total_cost": 9.56
+      },
+      "evaluator": {
+        "identity": "repository-described independent judge",
+        "exact_revision": null
+      },
+      "execution_environment": {
+        "provider": null,
+        "endpoint": null,
+        "hardware": null
+      },
+      "budget_timeout_repetition": null,
+      "adaptation_reset_policy": null,
+      "provenance": {
+        "publisher": "aarora79/agentic-coding-harness-benchmarks",
+        "checked": true,
+        "immutable_source_revision": "6a4a430bc6b78521131d245c5d26e42d7b9c123e",
+        "public_logs": null,
+        "public_trajectories": null
+      },
+      "comparison": {
+        "group": "agentic-coding-swe2__glm-4.7__6a4a430b",
+        "mode": "candidate-same-model",
+        "scope": "coding-swe"
+      },
+      "unknown_dimensions": [
+        "exact_model_checkpoint_or_endpoint",
+        "material_model_configuration",
+        "exact_harness_revision",
+        "exact_evaluator_revision",
+        "execution_environment",
+        "budget_timeout_repetition_policy",
+        "adaptation_reset_policy",
+        "result_execution_date"
+      ],
+      "notes": "The pinned artifact reports this row directly. Material conditions not exposed by the artifact are preserved as unknown; no downstream comparison eligibility or structural interpretation is asserted by raw admission."
+    },
+    {
+      "observation_id": "pi__agentic-coding-swe2__minimax-m2.1__6a4a430b",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "agentic-coding-harness-benchmarks-swe2",
+        "name": "Agentic Coding Harness Benchmarks /swe2 cross-harness snapshot",
+        "variant": "30-task-cross-harness",
+        "task_count": 30,
+        "primary_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/6a4a430bc6b78521131d245c5d26e42d7b9c123e/README.md",
+        "artifact_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/6a4a430bc6b78521131d245c5d26e42d7b9c123e/docs/metrics/harness-delta-swe2.json"
+      },
+      "result": {
+        "date": null,
+        "artifact_snapshot_at": "2026-03-21T00:56:45Z",
+        "agent_label": "pi",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "6a4a430bc6b78521131d245c5d26e42d7b9c123e",
+        "model": "minimax-m2.1",
+        "model_config": null,
+        "metric": "resolved_pct",
+        "value": 63.33,
+        "resolved": 19,
+        "tasks": 30,
+        "cost_per_resolved": 0.3418,
+        "total_cost": 6.494
+      },
+      "evaluator": {
+        "identity": "repository-described independent judge",
+        "exact_revision": null
+      },
+      "execution_environment": {
+        "provider": null,
+        "endpoint": null,
+        "hardware": null
+      },
+      "budget_timeout_repetition": null,
+      "adaptation_reset_policy": null,
+      "provenance": {
+        "publisher": "aarora79/agentic-coding-harness-benchmarks",
+        "checked": true,
+        "immutable_source_revision": "6a4a430bc6b78521131d245c5d26e42d7b9c123e",
+        "public_logs": null,
+        "public_trajectories": null
+      },
+      "comparison": {
+        "group": "agentic-coding-swe2__minimax-m2.1__6a4a430b",
+        "mode": "candidate-same-model",
+        "scope": "coding-swe"
+      },
+      "unknown_dimensions": [
+        "exact_model_checkpoint_or_endpoint",
+        "material_model_configuration",
+        "exact_harness_revision",
+        "exact_evaluator_revision",
+        "execution_environment",
+        "budget_timeout_repetition_policy",
+        "adaptation_reset_policy",
+        "result_execution_date"
+      ],
+      "notes": "The pinned artifact reports this row directly. Material conditions not exposed by the artifact are preserved as unknown; no downstream comparison eligibility or structural interpretation is asserted by raw admission."
+    },
+    {
+      "observation_id": "pi__agentic-coding-swe2__minimax-m2.5__6a4a430b",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "agentic-coding-harness-benchmarks-swe2",
+        "name": "Agentic Coding Harness Benchmarks /swe2 cross-harness snapshot",
+        "variant": "30-task-cross-harness",
+        "task_count": 30,
+        "primary_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/6a4a430bc6b78521131d245c5d26e42d7b9c123e/README.md",
+        "artifact_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/6a4a430bc6b78521131d245c5d26e42d7b9c123e/docs/metrics/harness-delta-swe2.json"
+      },
+      "result": {
+        "date": null,
+        "artifact_snapshot_at": "2026-03-21T00:56:45Z",
+        "agent_label": "pi",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "6a4a430bc6b78521131d245c5d26e42d7b9c123e",
+        "model": "minimax-m2.5",
+        "model_config": null,
+        "metric": "resolved_pct",
+        "value": 76.67,
+        "resolved": 23,
+        "tasks": 30,
+        "cost_per_resolved": 0.5177,
+        "total_cost": 11.907
+      },
+      "evaluator": {
+        "identity": "repository-described independent judge",
+        "exact_revision": null
+      },
+      "execution_environment": {
+        "provider": null,
+        "endpoint": null,
+        "hardware": null
+      },
+      "budget_timeout_repetition": null,
+      "adaptation_reset_policy": null,
+      "provenance": {
+        "publisher": "aarora79/agentic-coding-harness-benchmarks",
+        "checked": true,
+        "immutable_source_revision": "6a4a430bc6b78521131d245c5d26e42d7b9c123e",
+        "public_logs": null,
+        "public_trajectories": null
+      },
+      "comparison": {
+        "group": "agentic-coding-swe2__minimax-m2.5__6a4a430b",
+        "mode": "candidate-same-model",
+        "scope": "coding-swe"
+      },
+      "unknown_dimensions": [
+        "exact_model_checkpoint_or_endpoint",
+        "material_model_configuration",
+        "exact_harness_revision",
+        "exact_evaluator_revision",
+        "execution_environment",
+        "budget_timeout_repetition_policy",
+        "adaptation_reset_policy",
+        "result_execution_date"
+      ],
+      "notes": "The pinned artifact reports this row directly. Material conditions not exposed by the artifact are preserved as unknown; no downstream comparison eligibility or structural interpretation is asserted by raw admission."
+    }
+  ]
+}
