@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Codex",
+  "canonical_harness_id": "codex",
+  "canonical_assessment_ref": "assessments/codex.md",
+  "canonical_review_ref": "b974893c90048d147207ae9004489c02f3116426",
+  "canonical_repository": "https://github.com/openai/codex",
+  "published_implementation": {
+    "system_compatibility": "adapter-preserved",
+    "historical_relation": "The pinned Octobench snapshot invokes Codex through `codex exec` under the benchmark's shared prompt, sealed network, clean-workspace and Docker execution membrane. The exact Codex binary version or repository revision used for the published GOLD one-shot column is not exposed by the committed public result surface; the canonical review ref above is an identity-linkage snapshot, not the evaluated runtime revision."
+  },
+  "primary_sources": [
+    "https://github.com/Muvon/octobench/blob/9aaf2fef9a28e4a31c373be2e4125a26647f056f/BENCHMARK.md",
+    "https://github.com/Muvon/octobench/blob/9aaf2fef9a28e4a31c373be2e4125a26647f056f/scripts/update_benchmark.py",
+    "https://github.com/Muvon/octobench/blob/9aaf2fef9a28e4a31c373be2e4125a26647f056f/scripts/bench.sh",
+    "https://github.com/Muvon/octobench/blob/9aaf2fef9a28e4a31c373be2e4125a26647f056f/configs/models.yaml",
+    "https://github.com/Muvon/octobench/blob/9aaf2fef9a28e4a31c373be2e4125a26647f056f/configs/suites/gold.txt"
+  ],
+  "observations": [
+    {
+      "observation_id": "codex__octobench-gold-oneshot20__gpt-5.6-luna__9aaf2fef",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "octobench-gold",
+        "name": "Octobench GOLD one-shot 20",
+        "variant": "gold-oneshot-20",
+        "task_count": 20,
+        "primary_source": "https://github.com/Muvon/octobench/blob/9aaf2fef9a28e4a31c373be2e4125a26647f056f/BENCHMARK.md",
+        "artifact_source": "https://github.com/Muvon/octobench/blob/9aaf2fef9a28e4a31c373be2e4125a26647f056f/BENCHMARK.md"
+      },
+      "result": {
+        "date": null,
+        "published_snapshot_updated_at": "2026-09-11T08:21:00Z",
+        "agent_label": "codex",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "9aaf2fef9a28e4a31c373be2e4125a26647f056f",
+        "model": "gpt-5.6-luna",
+        "model_config": "Octobench model key gpt-5.6-luna maps Codex to provider model gpt-5.6-luna; exact provider endpoint/checkpoint revision and run-time binary pin are not exposed in the committed result table",
+        "metric": "gold_hidden_test_pass_rate",
+        "value": 0.8,
+        "passed": 16,
+        "tasks": 20,
+        "judge_average": 82.08,
+        "total_cost_usd": 0.88,
+        "median_cost_usd_per_case": 0.042,
+        "agent_runtime_hours": 1.1,
+        "median_agent_minutes_per_case": 3.4,
+        "max_agent_minutes": 4.0,
+        "non_cache_tokens": 1600000,
+        "cache_read_tokens": 20400000,
+        "execution_environment": "Octobench Docker executor using image tag octobench-agent:latest; shared committed system prompt; network sealed after setup; clean workspace enabled; GitHub unreachable from the agent container; exact image digest is not published",
+        "evaluator": "project-specific held-out GOLD validation determines pass/fail; BENCHMARK.md also publishes a judge average produced by Octobench's audited judge-panel path; exact run-time judge override is not exposed in the committed aggregate result",
+        "budget_timeout_repetition_policy": "exact per-case timeout and one-shot rerun history for this published aggregate are not established by the committed result table; the benchmark launcher exposes controlled reruns for infrastructure failures",
+        "adaptation_reset_policy": "persistent cross-case memory is disabled by benchmark design; clean workspace is required per run; native client scaffolding, planning primitives and step/turn ceilings remain client-specific residuals"
+      },
+      "published_implementation": {
+        "system_compatibility": "adapter-preserved",
+        "revision_match": "unknown"
+      },
+      "provenance": {
+        "publisher": "Muvon / Octobench",
+        "checked": true,
+        "os_system": true,
+        "public_logs": null,
+        "public_trajectories": null,
+        "raw_run_artifacts_public": false,
+        "public_result_surface": "committed generated BENCHMARK.md table",
+        "generation_code_public": true
+      },
+      "comparison": {
+        "group": "octobench-gold-oneshot20__gpt-5.6-luna__9aaf2fef",
+        "mode": "matched-model-candidate",
+        "scope": "coding-swe"
+      },
+      "notes": "Octobench explicitly frames the experiment as a client comparison with shared model, prompt, tool categories and sealed environment, while preserving native client tooling/scaffolding differences. Raw results directories are gitignored, so this observation is admitted from the pinned generated public table plus its committed generator and controls. No later comparison-quality judgment follows from W1 admission."
+    }
+  ]
+}
