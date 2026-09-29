@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-29",
+  "evidence_source_class": "first-party-reported",
+  "system_name": "Aesop target-project rule runtime",
+  "canonical_harness_id": "aesop",
+  "canonical_assessment_ref": "assessments/aesop.md",
+  "canonical_review_ref": "2a661c12007c5484f964176da3d5532c6bdf070d",
+  "published_implementation": {
+    "system_compatibility": "native-system",
+    "source_revision": "2a661c12007c5484f964176da3d5532c6bdf070d"
+  },
+  "primary_sources": [
+    "https://github.com/matt82198/aesop/blob/2a661c12007c5484f964176da3d5532c6bdf070d/tools/init_project.py",
+    "https://github.com/matt82198/aesop/blob/2a661c12007c5484f964176da3d5532c6bdf070d/tests/test_init_project.py",
+    "https://github.com/matt82198/aesop/blob/2a661c12007c5484f964176da3d5532c6bdf070d/skills/power/SKILL.md",
+    "https://github.com/matt82198/aesop/blob/2a661c12007c5484f964176da3d5532c6bdf070d/tests/demo-e2e.test.mjs",
+    "https://github.com/opensiro/vsm-harness-index/blob/main/assessments/aesop.md"
+  ],
+  "observations": [
+    {
+      "observation_id": "aesop-target-claude-scaffold-force-overwrite-2a661c1",
+      "kind": "first-party-native-project-scaffold-test",
+      "evidence_surface": "Aesop canonical target-project CLAUDE.md scaffolder and native unit regressions",
+      "reviewed_revision": "2a661c12007c5484f964176da3d5532c6bdf070d",
+      "mutation_witness": {
+        "path": "tests/test_init_project.py::TestInitProject",
+        "mutation_entrypoint": "init_project(target_dir, project_name=..., force=...)",
+        "authoritative_target": "<target-project-root>/CLAUDE.md",
+        "initial_fixture": "test-project",
+        "forced_replacement_fixture": "proj-v2",
+        "initial_file_creation_asserted": true,
+        "dispatch_rule_content_asserted": true,
+        "idempotent_skip_without_force_asserted": true,
+        "explicit_force_overwrite_asserted": true,
+        "replacement_content_asserted": "proj-v2"
+      },
+      "result_summary": "At the canonical assessed Aesop revision, first-party native regressions exercise target-project root CLAUDE.md creation, non-overwrite on a repeated ordinary init, and explicit force overwrite; the force-overwrite regression verifies the replacement root file contains the concrete project-name fixture 'proj-v2'.",
+      "notes": "This record is function-neutral. The regression exercises the project scaffolder and a template/project-name replacement; it does not by itself establish that the concrete changed value is an identity or ultimate-policy amendment, execute /power, demonstrate later model behavior, or establish production deployment history."
+    },
+    {
+      "observation_id": "aesop-power-target-claude-write-read-procedure-2a661c1",
+      "kind": "first-party-native-project-rule-procedure",
+      "evidence_surface": "Aesop canonical /power init-prime and already-primed target-project CLAUDE.md procedure",
+      "reviewed_revision": "2a661c12007c5484f964176da3d5532c6bdf070d",
+      "procedure_support": {
+        "unprimed_path_writes_target_root_CLAUDE_md": true,
+        "unprimed_path_writes_domain_CLAUDE_md": true,
+        "already_primed_path_reads_target_root_CLAUDE_md": true,
+        "already_primed_path_treats_project_root_CLAUDE_md_as_authoritative": true,
+        "procedure_states_commit_and_push_new_md_layer": true,
+        "recovered_native_test_executes_power_skill": false,
+        "demo_e2e_executes_power_skill": false
+      },
+      "result_summary": "At the same canonical revision, the first-party /power skill defines a target-project init-prime path that writes project-root/domain CLAUDE.md state and an already-primed path that later reads the project-root CLAUDE.md as authoritative rules. The recovered demo E2E test verifies scaffold artifacts but does not execute /power.",
+      "notes": "This record is function-neutral and intentionally keeps procedure/source connectivity separate from empirical execution. It does not combine the scaffolder regressions and /power documentation into a synthetic end-to-end run. Aesop's own LANE-CONTRACT.md development history is outside this target-project observation boundary and is not used as evidence here."
+    }
+  ]
+}
