@@ -5,7 +5,7 @@ Status: **generated, experimental, non-normative**
 Generated from the raw JSON records in this directory by `render_registry.py`.
 Raw evidence payloads remain only in the raw record; this table is an identity/provenance projection, not a second result database.
 
-Raw observations: **69**
+Raw observations: **70**
 
 | System | Canonical harness | Observation | Evidence surface(s) | Kind | Provenance | Compatibility | Raw record |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -49,6 +49,7 @@ Raw observations: **69**
 | MAS-Orchestra | — | `mas-orchestra-public-benchmark-suite-2026` | AIME24; AIME25; HotpotQA; BrowseComp+; GPQA; MAS-Orchestra published IID/OOD benchmark result table across AIME24, AIME25, HotpotQA, BrowseComp+, and GPQA | `multi-agent-orchestration-benchmark-study` | `first-party-reported` | `native-system` | [mas-orchestra.json](mas-orchestra.json) |
 | Multi-Agent Orchestration Engine | [multi-agent-orchestration](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/multi-agent-orchestration.md) | `multi-agent-orchestration-supervisor-ablation-2026-08` | Multi-Agent Orchestration supervisor ablation (54 scripted scenarios) | `native-mechanism-ablation` | `first-party-reported` | `native-system` | [multi-agent-orchestration.json](multi-agent-orchestration.json) |
 | Nool fleet coordination benchmark organization | — | `nool-trackd-scaleup1-contention-2026-08-21` | Nool coding-agent fleet coordination benchmark — Track D scale-up 1 | `benchmark-defined-coordination-ablation` | `first-party-reported` | `benchmark-scaffolded` | [nool-fleet-coordination.json](nool-fleet-coordination.json) |
+| Octos soul-policy runtime | [octos](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/octos.md) | `octos-soul-effective-state-readback-9f6311a` | Octos canonical gateway soul effective-state regression test | `first-party-native-soul-policy-readback-test` | `first-party-reported` | `native-system` | [octos.json](octos.json) |
 | oh-my-pi | [oh-my-pi](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/oh-my-pi.md) | `oh-my-pi__frontierharness-v1.0__kimi-k3-fireworks__20260822` | FrontierHarness Eval v1 | `system-benchmark-result` | `external-reproduced` | `adapter-preserved` | [oh-my-pi-benchmark-results-external-reproduced-adapter-preserved.json](oh-my-pi-benchmark-results-external-reproduced-adapter-preserved.json) |
 | Omnigent | [omnigent](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/omnigent.md) | `omnigent-child-session-recovery-2026-09` | Omnigent child-session recovery operational witness | `operational-recovery-witness` | `first-party-reported` | `native-system` | [omnigent-child-session-recovery.json](omnigent-child-session-recovery.json) |
 | OpenClaw | [openclaw](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/openclaw.md) | `openclaw__claw-swe-bench-full-350__glm-5.1__20260717` | Claw-SWE-Bench | `system-benchmark-result` | `external-reproduced` | `adapter-preserved` | [openclaw-benchmark-results-external-reproduced-adapter-preserved.json](openclaw-benchmark-results-external-reproduced-adapter-preserved.json) |
