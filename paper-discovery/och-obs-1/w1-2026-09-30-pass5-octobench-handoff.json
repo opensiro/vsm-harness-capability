@@ -150,15 +150,33 @@
     }
   ],
   "validation": {
-    "status": "pending",
-    "commands_required": [
+    "status": "success",
+    "registry_observation_count_after_generation": 101,
+    "trigger_revision": "da9731ff1311fa90f4fa7b894c98527e550e8f2d",
+    "generated_registry_revision": "955077b0c35f08e681e90dc6f0b102f727ea77f2",
+    "test_only_workflow_reverted_revision": "98043635fb09ac621f5820d656c6464a5aff6c49",
+    "workflow": {
+      "name": "validate",
+      "run_id": 36638370818,
+      "run_number": 155,
+      "job_id": 109644481947,
+      "conclusion": "success"
+    },
+    "commands": [
       "python system-observations/render_registry.py",
+      "python scripts/validate_repository.py",
       "python scripts/admission_check.py system-observations/codex-octobench-gold-external-reproduced-adapter-preserved.json",
       "python scripts/admission_check.py system-observations/opencode-octobench-gold-external-reproduced-adapter-preserved.json",
-      "python scripts/admission_check.py system-observations/octomind-octobench-gold-first-party-reported-native-system.json",
-      "python scripts/validate_repository.py"
+      "python scripts/admission_check.py system-observations/octomind-octobench-gold-first-party-reported-native-system.json"
     ],
-    "results": []
+    "results": [
+      {"command": "python system-observations/render_registry.py", "result": "success", "workflow_step": "Regenerate neutral registry views"},
+      {"command": "python scripts/validate_repository.py", "result": "success", "workflow_step": "Run python scripts/validate_repository.py"},
+      {"command": "python scripts/admission_check.py system-observations/codex-octobench-gold-external-reproduced-adapter-preserved.json", "result": "success", "workflow_step": "Exercise live evidence admission path"},
+      {"command": "python scripts/admission_check.py system-observations/opencode-octobench-gold-external-reproduced-adapter-preserved.json", "result": "success", "workflow_step": "Exercise live evidence admission path"},
+      {"command": "python scripts/admission_check.py system-observations/octomind-octobench-gold-first-party-reported-native-system.json", "result": "success", "workflow_step": "Exercise live evidence admission path"}
+    ],
+    "test_only_infrastructure_note": "The PR workflow was temporarily made write-capable so the repository's own renderer could commit generated registry views and so the three new records could be included in the existing live admission loop. The workflow was restored byte-for-byte to the main-branch version before final review; the intended merged diff contains no validation-infrastructure change."
   },
   "handoff_boundary": {
     "structural_classification_performed": false,
