@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "OpenCode",
+  "canonical_harness_id": "opencode",
+  "canonical_assessment_ref": "assessments/opencode.md",
+  "canonical_review_ref": "95daf90670b7c039c436c85537da5fbfe2205b41",
+  "canonical_repository": "https://github.com/anomalyco/opencode",
+  "published_implementation": {
+    "system_compatibility": "adapter-preserved",
+    "historical_relation": "The pinned Scaffold-Effects repository identifies the exercised system as OpenCode and publishes its native OpenRouter configuration, system prompt, raw Harbor trial tree, normalized trial telemetry, and frozen aggregate snapshots. No immutable OpenCode package/source revision is preserved by the study, so canonical OpenCode identity is reused without asserting an exact historical revision match."
+  },
+  "primary_sources": [
+    "https://github.com/namanvats/scaffold-effects/blob/ed8014f42a13483379d76ad2732a40132c1becf9/README.md",
+    "https://github.com/namanvats/scaffold-effects/blob/ed8014f42a13483379d76ad2732a40132c1becf9/harness/opencode/config.yaml",
+    "https://github.com/namanvats/scaffold-effects/blob/ed8014f42a13483379d76ad2732a40132c1becf9/analysis/snapshots/20260422-013149__full-qwen3.6-plus-scoped-v2/aggregate.json",
+    "https://github.com/namanvats/scaffold-effects/blob/ed8014f42a13483379d76ad2732a40132c1becf9/analysis/snapshots/20260422-031530__full-minimax-m2.5-scoped/aggregate.json"
+  ],
+  "observations": [
+    {
+      "observation_id": "opencode__scaffold-effects-tbpro50__qwen3.6-plus__ed8014f4",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "scaffold-effects-tbpro50",
+        "name": "Scaffold-Effects Terminal-Bench Pro 50-task slice",
+        "variant": "qwen3.6-plus-scoped-v2",
+        "task_count": 50,
+        "primary_source": "https://github.com/namanvats/scaffold-effects/blob/ed8014f42a13483379d76ad2732a40132c1becf9/README.md",
+        "artifact_source": "https://github.com/namanvats/scaffold-effects/blob/ed8014f42a13483379d76ad2732a40132c1becf9/analysis/snapshots/20260422-013149__full-qwen3.6-plus-scoped-v2/aggregate.json"
+      },
+      "result": {
+        "date": "2026-04-21",
+        "published_snapshot_collected_at": "2026-04-22T01:31:49",
+        "agent_label": "opencode",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "ed8014f42a13483379d76ad2732a40132c1becf9",
+        "model": "qwen/qwen3.6-plus",
+        "model_config": "source model label qwen/qwen3.6-plus via OpenCode native OpenRouter provider; exact service-side checkpoint/revision not published",
+        "metric": "reward_positive_pass_rate",
+        "value": 0.5,
+        "attempted": 50,
+        "solved": 25,
+        "unsolved": 23,
+        "unknown": 2,
+        "turn_budget": 40,
+        "timeout_seconds": 900,
+        "tokens_total_source_reported": 28693519,
+        "tokens_per_solved_task_source_reported": 1147740.76,
+        "cost_usd_total_source_reported": 10.380978,
+        "failure_categories_posthoc": {"SOLVED": 25, "REASON": 15, "TIME": 5, "HANG": 4, "ERROR": 1},
+        "hit_turn_budget_count": 0
+      },
+      "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "unknown"},
+      "provenance": {
+        "publisher": "Naman Vats / Scaffold-Effects",
+        "checked": true,
+        "os_system": true,
+        "public_logs": true,
+        "public_trajectories": true,
+        "raw_run_artifacts_public": true,
+        "public_result_surface": "frozen aggregate.json plus 150-row trials.jsonl and raw Harbor result tree",
+        "execution_environment": "Harbor orchestration in Daytona sandboxes; same 50-task selected Terminal-Bench Pro slice; identical task Docker image per task; source-declared 40-turn budget"
+      },
+      "comparison": {"group": "scaffold-effects-tbpro50__qwen3.6-plus__ed8014f4", "mode": "candidate-same-model", "scope": "terminal-agent"},
+      "unknown_dimensions": [
+        "historical OpenCode package/source revision",
+        "exact OpenRouter/backend model checkpoint serving qwen/qwen3.6-plus",
+        "native OpenRouter route differs from Goose/OpenHands OpenAI-compatible provider adapter path",
+        "harness-native prompt, tool surface and retry/control policy differ by study design",
+        "cross-harness token accounting is not normalized by W1"
+      ],
+      "notes": "Primary collector defines `solved` from positive reward and failure category separately. W1 preserves source correctness and auxiliary telemetry without interpreting efficiency."
+    },
+    {
+      "observation_id": "opencode__scaffold-effects-tbpro50__minimax-m2.5__ed8014f4",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "scaffold-effects-tbpro50",
+        "name": "Scaffold-Effects Terminal-Bench Pro 50-task slice",
+        "variant": "minimax-m2.5-scoped",
+        "task_count": 50,
+        "primary_source": "https://github.com/namanvats/scaffold-effects/blob/ed8014f42a13483379d76ad2732a40132c1becf9/README.md",
+        "artifact_source": "https://github.com/namanvats/scaffold-effects/blob/ed8014f42a13483379d76ad2732a40132c1becf9/analysis/snapshots/20260422-031530__full-minimax-m2.5-scoped/aggregate.json"
+      },
+      "result": {
+        "date": "2026-04-21",
+        "published_snapshot_collected_at": "2026-04-22T03:15:30",
+        "agent_label": "opencode",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "ed8014f42a13483379d76ad2732a40132c1becf9",
+        "model": "minimax/minimax-m2.5",
+        "model_config": "source model label minimax/minimax-m2.5 via OpenCode native OpenRouter provider; exact service-side checkpoint/revision not published",
+        "metric": "reward_positive_pass_rate",
+        "value": 0.46,
+        "attempted": 50,
+        "solved": 23,
+        "unsolved": 25,
+        "unknown": 2,
+        "turn_budget": 40,
+        "timeout_seconds": 900,
+        "tokens_total_source_reported": 35580472,
+        "tokens_input_total_source_reported": 35372483,
+        "tokens_output_total_source_reported": 207989,
+        "tokens_breakdown_coverage": 0.96,
+        "tokens_per_solved_task_source_reported": 1546977.043478261,
+        "cost_usd_total_source_reported": 2.17182,
+        "failure_categories_posthoc": {"SOLVED": 22, "REASON": 16, "TIME": 10, "HANG": 1, "ERROR": 1},
+        "hit_turn_budget_count": 0
+      },
+      "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "unknown"},
+      "provenance": {
+        "publisher": "Naman Vats / Scaffold-Effects",
+        "checked": true,
+        "os_system": true,
+        "public_logs": true,
+        "public_trajectories": true,
+        "raw_run_artifacts_public": true,
+        "public_result_surface": "frozen aggregate.json plus 150-row trials.jsonl and raw Harbor result tree",
+        "execution_environment": "Harbor orchestration in Daytona sandboxes; same 50-task selected Terminal-Bench Pro slice; identical task Docker image per task; source-declared 40-turn budget"
+      },
+      "comparison": {"group": "scaffold-effects-tbpro50__minimax-m2.5__ed8014f4", "mode": "candidate-same-model", "scope": "terminal-agent"},
+      "unknown_dimensions": [
+        "historical OpenCode package/source revision",
+        "exact OpenRouter/backend model checkpoint serving minimax/minimax-m2.5",
+        "native OpenRouter route differs from Goose/OpenHands OpenAI-compatible provider adapter path",
+        "harness-native prompt, tool surface and retry/control policy differ by study design",
+        "cross-harness token accounting is not normalized by W1"
+      ],
+      "notes": "Primary collector defines `solved` from positive reward and failure category separately. W1 preserves source correctness and auxiliary telemetry without interpreting efficiency."
+    }
+  ]
+}
