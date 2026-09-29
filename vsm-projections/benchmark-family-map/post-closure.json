@@ -102,6 +102,20 @@
       "review_ref": "vsm-projections/benchmark-family-map/S5-DOTCRAFT-REVIEW.md",
       "delta_ref": "vsm-projections/s5/post-closure-deltas/dotcraft-agent-profile-enactment-2026-09-29.json",
       "non_claim": "Direct S5 fit belongs only to canonical DotCraft at the parent-owned profile-to-persisted-runtime-contract boundary. The integration test does not demonstrate autonomous S5 ownership, a production task run, a downstream tool denial after enactment, or a materially matched comparison with Ouroboros, and it does not select an S5 primary baseline."
+    },
+    {
+      "function": "S5",
+      "benchmark_id": "hugagentos-project-instructions-context-return",
+      "benchmark_name": "HugAgentOS project-instructions context-return witness",
+      "fit": "direct",
+      "primary_source": "https://github.com/ZJU-REAL/HugAgentOS/blob/9436fcb77261bc995e6e7a45cdc5e192eae9bc74/src/backend/tests/services/test_project_instructions.py",
+      "evaluated_object": "Canonical HugAgentOS native project-policy boundary in which authorized durable project instructions are changed and persisted with revision protection, then later native project-context assembly rereads and returns the changed authoritative policy state.",
+      "evaluation_mode": "first-party-native-acceptance-test-project-policy-to-context-return",
+      "system_linkage": "canonical-native-descriptive",
+      "tracking_issue": 64,
+      "review_ref": "vsm-projections/benchmark-family-map/S5-HUGAGENTOS-REVIEW.md",
+      "delta_ref": "vsm-projections/s5/post-closure-deltas/hugagentos-project-instructions-context-return-2026-09-29.json",
+      "non_claim": "Direct S5 fit belongs only to canonical HugAgentOS at the durable project-policy enactment and native context-return boundary. The acceptance test does not empirically demonstrate autonomous /init ownership, a production task run, downstream model behavior under the changed rule, or a materially matched primary comparison with DotCraft or Ouroboros, and it does not select an S5 primary baseline."
     }
   ]
 }
