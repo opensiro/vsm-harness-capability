@@ -72,8 +72,9 @@
     }
   ],
   "validation": {
-    "status": "pending",
-    "commands_required": [
+    "status": "success",
+    "registry_observation_count_after": 146,
+    "commands": [
       "python system-observations/render_registry.py",
       "python scripts/admission_check.py system-observations/codex-openbench-m3-external-reproduced-adapter-preserved.json",
       "python scripts/admission_check.py system-observations/pi-openbench-m3-external-reproduced-adapter-preserved.json",
@@ -81,7 +82,10 @@
       "python scripts/admission_check.py system-observations/cursor-openbench-m3-external-reproduced-unclear.json",
       "python scripts/validate_repository.py"
     ],
-    "results": []
+    "results": [
+      {"workflow_run_id": 36646677536, "workflow_run_number": 197, "trigger_head": "1627dca1619d2f2d7ee63a6202f1dbd0975a5f2f", "generated_registry_head": "917f4ae0463b58fe9c74b93585d701f5759fe00e", "status": "success", "note": "Temporary write-enabled hook regenerated registry views, committed them on the PR branch, and passed repository validation plus all four new record-specific admission checks."},
+      {"workflow_run_id": 36646752956, "workflow_run_number": 199, "head": "5a01a3d33f396e84e93753eb03ad0760e8e2e136", "status": "success", "note": "Standard read-only validation workflow restored to the exact pre-pass blob and passed on the restored-workflow head."}
+    ]
   },
   "handoff_boundary": {"structural_classification_performed": false, "historical_linkage_adjudicated": false, "comparison_tier_assigned": false, "statistical_interpretation_performed": false, "winner_declared": false}
 }
