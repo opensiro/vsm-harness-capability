@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "OpenCode",
+  "canonical_harness_id": "opencode",
+  "canonical_assessment_ref": "assessments/opencode.md",
+  "canonical_review_ref": "95daf90670b7c039c436c85537da5fbfe2205b41",
+  "canonical_repository": "https://github.com/anomalyco/opencode",
+  "published_implementation": {
+    "system_compatibility": "adapter-preserved",
+    "historical_relation": "The pinned v4-flash-factorial repository invokes the public OpenCode CLI with its native agent loop against a benchmark-controlled local model endpoint. The exact upstream OpenCode package version or repository revision used for the published cells is not exposed; the canonical review ref above is an identity-linkage snapshot, not the evaluated runtime revision."
+  },
+  "primary_sources": [
+    "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/README.md",
+    "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/RESULTS.md",
+    "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/harness/opencode.py",
+    "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/serve/quants.yaml"
+  ],
+  "observations": [
+    {
+      "observation_id": "opencode__v4-flash-factorial__deepseek-v4-flash-0731__ud-q8-k-xl__402167b0",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "v4-flash-factorial-swebench-verified",
+        "name": "v4-flash-factorial SWE-bench Verified 30-task factorial",
+        "variant": "stratified-30",
+        "task_count": 30,
+        "primary_source": "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/README.md",
+        "artifact_source": "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/results/scored/opencode__UD-Q8_K_XL.json"
+      },
+      "result": {
+        "date": null,
+        "agent_label": "opencode",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "402167b0999b63f3292d64afb4aa6035415235f9",
+        "model": "DeepSeek-V4-Flash-0731",
+        "model_quant": "UD-Q8_K_XL",
+        "model_config": "unsloth/DeepSeek-V4-Flash-0731-GGUF UD-Q8_K_XL; llama-server; ctx_size=262144; temperature=0.6; top_p=0.95; seed=0; max_tokens=32000; same 30-task order; default reasoning behavior; single Mac Studio and cooldown policy shared by complete cells",
+        "metric": "swebench_verified_resolve_rate",
+        "value": 0.6333333333333333,
+        "resolved": 19,
+        "tasks": 30,
+        "timeout_seconds": 1800
+      },
+      "published_implementation": {
+        "system_compatibility": "adapter-preserved",
+        "revision_match": "unknown"
+      },
+      "provenance": {
+        "publisher": "DLOVRIC2 / v4-flash-factorial",
+        "checked": true,
+        "os_system": true,
+        "public_logs": "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/results/cells/opencode__UD-Q8_K_XL.json",
+        "public_trajectories": "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/results/cells/opencode__UD-Q8_K_XL.json"
+      },
+      "comparison": {
+        "group": "v4-flash-factorial__deepseek-v4-flash-0731__ud-q8-k-xl__402167b0",
+        "mode": "matched-model",
+        "scope": "coding-swe"
+      },
+      "notes": "The publisher reports the same checkpoint/quant, benchmark subset, sampling pins, local server, machine and task order across complete harness cells. Exact upstream OpenCode version remains unknown and no paper-level comparability decision follows from raw admission."
+    },
+    {
+      "observation_id": "opencode__v4-flash-factorial__deepseek-v4-flash-0731__ud-q2-k-xl__402167b0",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "v4-flash-factorial-swebench-verified",
+        "name": "v4-flash-factorial SWE-bench Verified 30-task factorial",
+        "variant": "stratified-30",
+        "task_count": 30,
+        "primary_source": "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/README.md",
+        "artifact_source": "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/results/scored/opencode__UD-Q2_K_XL.json"
+      },
+      "result": {
+        "date": null,
+        "agent_label": "opencode",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "402167b0999b63f3292d64afb4aa6035415235f9",
+        "model": "DeepSeek-V4-Flash-0731",
+        "model_quant": "UD-Q2_K_XL",
+        "model_config": "unsloth/DeepSeek-V4-Flash-0731-GGUF UD-Q2_K_XL; llama-server; ctx_size=262144; temperature=0.6; top_p=0.95; seed=0; max_tokens=32000; same 30-task order; default reasoning behavior; single Mac Studio and cooldown policy shared by complete cells",
+        "metric": "swebench_verified_resolve_rate",
+        "value": 0.6333333333333333,
+        "resolved": 19,
+        "tasks": 30,
+        "timeout_seconds": 1800
+      },
+      "published_implementation": {
+        "system_compatibility": "adapter-preserved",
+        "revision_match": "unknown"
+      },
+      "provenance": {
+        "publisher": "DLOVRIC2 / v4-flash-factorial",
+        "checked": true,
+        "os_system": true,
+        "public_logs": "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/results/cells/opencode__UD-Q2_K_XL.json",
+        "public_trajectories": "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/results/cells/opencode__UD-Q2_K_XL.json"
+      },
+      "comparison": {
+        "group": "v4-flash-factorial__deepseek-v4-flash-0731__ud-q2-k-xl__402167b0",
+        "mode": "matched-model",
+        "scope": "coding-swe"
+      },
+      "notes": "The publisher reports the same checkpoint/quant, benchmark subset, sampling pins, local server, machine and task order across complete harness cells. Exact upstream OpenCode version remains unknown and no paper-level comparability decision follows from raw admission."
+    },
+    {
+      "observation_id": "opencode__v4-flash-factorial__deepseek-v4-flash-0731__ud-iq1-s__402167b0",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "v4-flash-factorial-swebench-verified",
+        "name": "v4-flash-factorial SWE-bench Verified 30-task factorial",
+        "variant": "stratified-30",
+        "task_count": 30,
+        "primary_source": "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/README.md",
+        "artifact_source": "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/results/scored/opencode__UD-IQ1_S.json"
+      },
+      "result": {
+        "date": null,
+        "agent_label": "opencode",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "402167b0999b63f3292d64afb4aa6035415235f9",
+        "model": "DeepSeek-V4-Flash-0731",
+        "model_quant": "UD-IQ1_S",
+        "model_config": "unsloth/DeepSeek-V4-Flash-0731-GGUF UD-IQ1_S; llama-server; ctx_size=262144; temperature=0.6; top_p=0.95; seed=0; max_tokens=32000; same 30-task order; default reasoning behavior; single Mac Studio and cooldown policy shared by complete cells",
+        "metric": "swebench_verified_resolve_rate",
+        "value": 0.6333333333333333,
+        "resolved": 19,
+        "tasks": 30,
+        "timeout_seconds": 1800
+      },
+      "published_implementation": {
+        "system_compatibility": "adapter-preserved",
+        "revision_match": "unknown"
+      },
+      "provenance": {
+        "publisher": "DLOVRIC2 / v4-flash-factorial",
+        "checked": true,
+        "os_system": true,
+        "public_logs": "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/results/cells/opencode__UD-IQ1_S.json",
+        "public_trajectories": "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/results/cells/opencode__UD-IQ1_S.json"
+      },
+      "comparison": {
+        "group": "v4-flash-factorial__deepseek-v4-flash-0731__ud-iq1-s__402167b0",
+        "mode": "matched-model",
+        "scope": "coding-swe"
+      },
+      "notes": "The publisher reports the same checkpoint/quant, benchmark subset, sampling pins, local server, machine and task order across complete harness cells. Exact upstream OpenCode version remains unknown and no paper-level comparability decision follows from raw admission."
+    }
+  ]
+}

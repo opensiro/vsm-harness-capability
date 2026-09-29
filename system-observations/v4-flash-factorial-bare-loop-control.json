@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "first-party-reported",
+  "system_name": "v4-flash-factorial bare-loop control",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "benchmark-scaffolded",
+    "historical_relation": "This system is the benchmark repository's own minimal control loop at pinned revision 402167b0999b63f3292d64afb4aa6035415235f9. It is not linked to a separate canonical harness identity."
+  },
+  "primary_sources": [
+    "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/README.md",
+    "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/RESULTS.md",
+    "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/harness/bareloop.py",
+    "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/serve/quants.yaml"
+  ],
+  "observations": [
+    {
+      "observation_id": "v4-flash-factorial-bare-loop__deepseek-v4-flash-0731__ud-q8-k-xl__402167b0",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "v4-flash-factorial-swebench-verified",
+        "name": "v4-flash-factorial SWE-bench Verified 30-task factorial",
+        "variant": "stratified-30",
+        "task_count": 30,
+        "primary_source": "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/README.md",
+        "artifact_source": "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/results/scored/bare-loop__UD-Q8_K_XL.json"
+      },
+      "result": {
+        "date": null,
+        "agent_label": "bare-loop",
+        "harness_version": "benchmark-local@402167b0999b63f3292d64afb4aa6035415235f9",
+        "harness_revision": "402167b0999b63f3292d64afb4aa6035415235f9",
+        "benchmark_revision": "402167b0999b63f3292d64afb4aa6035415235f9",
+        "model": "DeepSeek-V4-Flash-0731",
+        "model_quant": "UD-Q8_K_XL",
+        "model_config": "unsloth/DeepSeek-V4-Flash-0731-GGUF UD-Q8_K_XL; llama-server; ctx_size=262144; temperature=0.6; top_p=0.95; seed=0; max_tokens=32000; same 30-task order; default reasoning behavior; single Mac Studio and cooldown policy shared by complete cells",
+        "metric": "swebench_verified_resolve_rate",
+        "value": 0.4666666666666667,
+        "resolved": 14,
+        "tasks": 30,
+        "timeout_seconds": 1800,
+        "turn_cap": 40,
+        "repetition_policy": "one observed run per task in the cell",
+        "evaluator": "SWE-bench patch evaluation invoked by the pinned repository's eval/score_sweep.py path; exact external evaluator package revision is not stated in the pinned result artifact",
+        "execution_environment": "benchmark-controlled local llama-server/proxy on one Mac Studio; quant-specific server load shared across harness cells; 120-second between-cell cooldown",
+        "adaptation_reset_policy": "benchmark task worktree is materialized and released per task; the benchmark-local bare loop has no persistent memory or cross-task update mechanism in its pinned implementation"
+      },
+      "published_implementation": {"system_compatibility": "benchmark-scaffolded", "revision_match": "exact-benchmark-revision"},
+      "provenance": {
+        "publisher": "DLOVRIC2 / v4-flash-factorial",
+        "checked": true,
+        "os_system": true,
+        "public_logs": "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/results/cells/bare-loop__UD-Q8_K_XL.json",
+        "public_trajectories": "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/results/cells/bare-loop__UD-Q8_K_XL.json"
+      },
+      "comparison": {"group": "v4-flash-factorial__deepseek-v4-flash-0731__ud-q8-k-xl__402167b0", "mode": "matched-model", "scope": "coding-swe"},
+      "notes": "The bare-loop control is benchmark-local and therefore remains non-canonical. W1 preserves it as a factual public result without assigning structural or paper eligibility status."
+    },
+    {
+      "observation_id": "v4-flash-factorial-bare-loop__deepseek-v4-flash-0731__ud-q2-k-xl__402167b0",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "v4-flash-factorial-swebench-verified",
+        "name": "v4-flash-factorial SWE-bench Verified 30-task factorial",
+        "variant": "stratified-30",
+        "task_count": 30,
+        "primary_source": "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/README.md",
+        "artifact_source": "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/results/scored/bare-loop__UD-Q2_K_XL.json"
+      },
+      "result": {
+        "date": null,
+        "agent_label": "bare-loop",
+        "harness_version": "benchmark-local@402167b0999b63f3292d64afb4aa6035415235f9",
+        "harness_revision": "402167b0999b63f3292d64afb4aa6035415235f9",
+        "benchmark_revision": "402167b0999b63f3292d64afb4aa6035415235f9",
+        "model": "DeepSeek-V4-Flash-0731",
+        "model_quant": "UD-Q2_K_XL",
+        "model_config": "unsloth/DeepSeek-V4-Flash-0731-GGUF UD-Q2_K_XL; llama-server; ctx_size=262144; temperature=0.6; top_p=0.95; seed=0; max_tokens=32000; same 30-task order; default reasoning behavior; single Mac Studio and cooldown policy shared by complete cells",
+        "metric": "swebench_verified_resolve_rate",
+        "value": 0.5333333333333333,
+        "resolved": 16,
+        "tasks": 30,
+        "timeout_seconds": 1800,
+        "turn_cap": 40,
+        "repetition_policy": "one observed run per task in the cell",
+        "evaluator": "SWE-bench patch evaluation invoked by the pinned repository's eval/score_sweep.py path; exact external evaluator package revision is not stated in the pinned result artifact",
+        "execution_environment": "benchmark-controlled local llama-server/proxy on one Mac Studio; quant-specific server load shared across harness cells; 120-second between-cell cooldown",
+        "adaptation_reset_policy": "benchmark task worktree is materialized and released per task; the benchmark-local bare loop has no persistent memory or cross-task update mechanism in its pinned implementation"
+      },
+      "published_implementation": {"system_compatibility": "benchmark-scaffolded", "revision_match": "exact-benchmark-revision"},
+      "provenance": {
+        "publisher": "DLOVRIC2 / v4-flash-factorial",
+        "checked": true,
+        "os_system": true,
+        "public_logs": "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/results/cells/bare-loop__UD-Q2_K_XL.json",
+        "public_trajectories": "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/results/cells/bare-loop__UD-Q2_K_XL.json"
+      },
+      "comparison": {"group": "v4-flash-factorial__deepseek-v4-flash-0731__ud-q2-k-xl__402167b0", "mode": "matched-model", "scope": "coding-swe"},
+      "notes": "The bare-loop control is benchmark-local and therefore remains non-canonical. W1 preserves it as a factual public result without assigning structural or paper eligibility status."
+    },
+    {
+      "observation_id": "v4-flash-factorial-bare-loop__deepseek-v4-flash-0731__ud-iq1-s__402167b0",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "v4-flash-factorial-swebench-verified",
+        "name": "v4-flash-factorial SWE-bench Verified 30-task factorial",
+        "variant": "stratified-30",
+        "task_count": 30,
+        "primary_source": "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/README.md",
+        "artifact_source": "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/results/scored/bare-loop__UD-IQ1_S.json"
+      },
+      "result": {
+        "date": null,
+        "agent_label": "bare-loop",
+        "harness_version": "benchmark-local@402167b0999b63f3292d64afb4aa6035415235f9",
+        "harness_revision": "402167b0999b63f3292d64afb4aa6035415235f9",
+        "benchmark_revision": "402167b0999b63f3292d64afb4aa6035415235f9",
+        "model": "DeepSeek-V4-Flash-0731",
+        "model_quant": "UD-IQ1_S",
+        "model_config": "unsloth/DeepSeek-V4-Flash-0731-GGUF UD-IQ1_S; llama-server; ctx_size=262144; temperature=0.6; top_p=0.95; seed=0; max_tokens=32000; same 30-task order; default reasoning behavior; single Mac Studio and cooldown policy shared by complete cells",
+        "metric": "swebench_verified_resolve_rate",
+        "value": 0.5,
+        "resolved": 15,
+        "tasks": 30,
+        "timeout_seconds": 1800,
+        "turn_cap": 40,
+        "repetition_policy": "one observed run per task in the cell",
+        "evaluator": "SWE-bench patch evaluation invoked by the pinned repository's eval/score_sweep.py path; exact external evaluator package revision is not stated in the pinned result artifact",
+        "execution_environment": "benchmark-controlled local llama-server/proxy on one Mac Studio; quant-specific server load shared across harness cells; 120-second between-cell cooldown",
+        "adaptation_reset_policy": "benchmark task worktree is materialized and released per task; the benchmark-local bare loop has no persistent memory or cross-task update mechanism in its pinned implementation"
+      },
+      "published_implementation": {"system_compatibility": "benchmark-scaffolded", "revision_match": "exact-benchmark-revision"},
+      "provenance": {
+        "publisher": "DLOVRIC2 / v4-flash-factorial",
+        "checked": true,
+        "os_system": true,
+        "public_logs": "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/results/cells/bare-loop__UD-IQ1_S.json",
+        "public_trajectories": "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/results/cells/bare-loop__UD-IQ1_S.json"
+      },
+      "comparison": {"group": "v4-flash-factorial__deepseek-v4-flash-0731__ud-iq1-s__402167b0", "mode": "matched-model", "scope": "coding-swe"},
+      "notes": "The bare-loop control is benchmark-local and therefore remains non-canonical. W1 preserves it as a factual public result without assigning structural or paper eligibility status."
+    }
+  ]
+}
