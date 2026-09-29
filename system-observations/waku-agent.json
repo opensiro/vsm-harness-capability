@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-29",
+  "evidence_source_class": "first-party-reported",
+  "system_name": "Waku SOUL runtime",
+  "canonical_harness_id": "waku-agent",
+  "canonical_assessment_ref": "assessments/waku-agent.md",
+  "canonical_review_ref": "b8310c08029732475b68076df02a6cc44e3e41e7",
+  "published_implementation": {
+    "system_compatibility": "native-system",
+    "source_revision": "b8310c08029732475b68076df02a6cc44e3e41e7"
+  },
+  "primary_sources": [
+    "https://github.com/ShenSeanChen/waku-agent/blob/b8310c08029732475b68076df02a6cc44e3e41e7/evals/deterministic/test_skill_encoding.py",
+    "https://github.com/ShenSeanChen/waku-agent/blob/b8310c08029732475b68076df02a6cc44e3e41e7/waku/ops/dashboard.py",
+    "https://github.com/ShenSeanChen/waku-agent/blob/b8310c08029732475b68076df02a6cc44e3e41e7/waku/runtime/session.py",
+    "https://github.com/ShenSeanChen/waku-agent/blob/b8310c08029732475b68076df02a6cc44e3e41e7/waku/tools/memory_admin.py",
+    "https://github.com/opensiro/vsm-harness-index/blob/main/assessments/waku-agent.md"
+  ],
+  "observations": [
+    {
+      "observation_id": "waku-dashboard-soul-persist-runtime-return-b8310c0",
+      "kind": "first-party-native-soul-persistence-runtime-return-test",
+      "evidence_surface": "Waku canonical dashboard SOUL persistence regression plus per-turn runtime assembly path",
+      "reviewed_revision": "b8310c08029732475b68076df02a6cc44e3e41e7",
+      "persistence_witness": {
+        "path": "evals/deterministic/test_skill_encoding.py::test_dashboard_soul_is_written_as_utf8",
+        "mutation_entrypoint": "dashboard memory_action save_soul",
+        "fixture": "用户偏好中文回复 🚀",
+        "durable_bytes_asserted": true,
+        "utf8_roundtrip_asserted": true
+      },
+      "runtime_return_support": {
+        "load_soul_reads_owner_visible_SOUL_md": true,
+        "Session_build_system_reads_load_soul_each_turn": true,
+        "SOUL_is_first_system_context_component": true,
+        "dashboard_copy_states_changes_live_next_turn": true,
+        "agent_update_soul_contract_states_take_effect_next_turn": true
+      },
+      "result_summary": "At the canonical assessed Waku revision, a first-party deterministic regression writes a concrete SOUL.md value through the shipped dashboard mutation path and verifies the exact persisted UTF-8 content. The same revision rebuilds each session system context from the current SOUL.md through load_soul(settings), providing the native later-turn return path for that durable state.",
+      "notes": "This record is function-neutral. The deterministic regression verifies durable mutation but does not execute a subsequent model turn, measure behavioral compliance with the changed SOUL content, or establish production deployment history."
+    }
+  ]
+}
