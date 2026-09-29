@@ -116,6 +116,20 @@
       "review_ref": "vsm-projections/benchmark-family-map/S5-HUGAGENTOS-REVIEW.md",
       "delta_ref": "vsm-projections/s5/post-closure-deltas/hugagentos-project-instructions-context-return-2026-09-29.json",
       "non_claim": "Direct S5 fit belongs only to canonical HugAgentOS at the durable project-policy enactment and native context-return boundary. The acceptance test does not empirically demonstrate autonomous /init ownership, a production task run, downstream model behavior under the changed rule, or a materially matched primary comparison with DotCraft or Ouroboros, and it does not select an S5 primary baseline."
+    },
+    {
+      "function": "S5",
+      "benchmark_id": "marveen-installation-identity-mutation",
+      "benchmark_name": "Marveen installation identity-mutation witness",
+      "fit": "direct",
+      "primary_source": "https://github.com/Szotasz/marveen/pull/615",
+      "evaluated_object": "Canonical Marveen installation boundary in which a parent owner changes durable assistant display and persona identity on a live test installation while internal plumbing identifiers remain stable, with later canonical runtime support making the changed display identity visible through native runtime label routes.",
+      "evaluation_mode": "first-party-live-install-identity-mutation-with-native-runtime-readback-support",
+      "system_linkage": "canonical-native-descriptive",
+      "tracking_issue": 67,
+      "review_ref": "vsm-projections/benchmark-family-map/S5-MARVEEN-REVIEW.md",
+      "delta_ref": "vsm-projections/s5/post-closure-deltas/marveen-installation-identity-mutation-2026-09-29.json",
+      "non_claim": "Direct S5 fit belongs only to canonical Marveen at the parent-owned installation identity mutation to runtime identity-readback boundary. The public witness does not demonstrate autonomous S5 ownership, execution of the shipped self-rename skill in the live test, a later model turn following the changed persona, or a materially matched primary comparison, and it does not select an S5 primary baseline."
     }
   ]
 }
