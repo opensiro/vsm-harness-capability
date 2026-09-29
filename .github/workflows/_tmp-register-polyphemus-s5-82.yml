@@ -1,0 +1,56 @@
+name: Temporary Polyphemus S5 registration for #82
+
+on:
+  push:
+    branches:
+      - polyphemus-s5-review-82
+
+permissions:
+  contents: write
+
+jobs:
+  register:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Register direct post-closure addition
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path('vsm-projections/benchmark-family-map/post-closure.json')
+          data = json.loads(path.read_text())
+          benchmark_id = 'polyphemus-project-rule-state-return'
+          if not any(row.get('benchmark_id') == benchmark_id for row in data['additions']):
+              data['additions'].append({
+                  'function': 'S5',
+                  'benchmark_id': benchmark_id,
+                  'benchmark_name': 'Polyphemus project-rule state-return witness',
+                  'fit': 'direct',
+                  'primary_source': 'https://github.com/polyphemus-ai/release-rehearsal/blob/02020f3bc2829c350fd726273a7721254068925f/packages/core/test/projects.test.ts',
+                  'evaluated_object': 'Canonical Polyphemus native parent-governed project-rule boundary in which a concrete proposed AGENTS.md rule is accepted through the keep/discard path into the authoritative project-root AGENTS.md, while canonical later project sessions read that same rule surface into model/agent execution context.',
+                  'evaluation_mode': 'first-party-native-regression-project-rule-acceptance-with-same-file-session-context-return-support',
+                  'system_linkage': 'canonical-native-descriptive',
+                  'tracking_issue': 82,
+                  'review_ref': 'vsm-projections/benchmark-family-map/S5-POLYPHEMUS-REVIEW.md',
+                  'delta_ref': 'vsm-projections/s5/post-closure-deltas/polyphemus-project-rule-state-return-2026-09-29.json',
+                  'non_claim': 'Direct S5 fit belongs only to canonical Polyphemus at the parent-owned project-rule acceptance to authoritative AGENTS.md/subsequent-session-context boundary. The acceptance regression does not itself execute a later model turn, the separate runtime regressions use independently prepared rule fixtures, and this does not establish autonomous S5 ownership, downstream behavioral compliance, a materially matched primary comparison, or selection of an S5 primary baseline.'
+              })
+              path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + '\n')
+          PY
+      - name: Commit registration
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add vsm-projections/benchmark-family-map/post-closure.json
+          if git diff --cached --quiet; then
+            echo 'Registration already present.'
+          else
+            git commit -m 'Register Polyphemus direct S5 post-closure addition'
+            git push
+          fi
