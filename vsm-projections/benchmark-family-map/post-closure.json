@@ -59,7 +59,7 @@
       "tracking_issue": 41,
       "review_ref": "vsm-projections/benchmark-family-map/S2-HEARTHNET-REVIEW.md",
       "delta_ref": "vsm-projections/s2/post-closure-deltas/hearthnet-conflict-resolution-2026-09-28.json",
-      "non_claim": "Direct S2 fit belongs only to the HearthNet benchmark/demo composed disturbance-to-arbitration-to-deferral boundary. It does not claim native autonomous Dewey detection, does not transfer canonical S2 ownership to HearthNet or an underlying model, and it does not select an S2 primary baseline."
+      "non_claim": "Direct S2 fit belongs only to the HearthNet benchmark/demo composed disturbance-to-arbitration-to-deferral boundary. It does not claim native autonomous Dewey detection, does not transfer canonical S2 ownership to HearthNet or an underlying model, and does not select an S2 primary baseline."
     },
     {
       "function": "S3",
