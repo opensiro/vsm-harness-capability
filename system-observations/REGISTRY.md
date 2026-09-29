@@ -5,7 +5,7 @@ Status: **generated, experimental, non-normative**
 Generated from the raw JSON records in this directory by `render_registry.py`.
 Raw evidence payloads remain only in the raw record; this table is an identity/provenance projection, not a second result database.
 
-Raw observations: **67**
+Raw observations: **68**
 
 | System | Canonical harness | Observation | Evidence surface(s) | Kind | Provenance | Compatibility | Raw record |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -38,6 +38,7 @@ Raw observations: **67**
 | Hermes Agent | [hermes-agent](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/hermes-agent.md) | `hermes-agent__pawbench-v1.0__qwen3.6-35b-a3b__20260529` | PawBench v1.0 | `system-benchmark-result` | `external-reproduced` | `adapter-preserved` | [hermes-agent-benchmark-results-external-reproduced-adapter-preserved.json](hermes-agent-benchmark-results-external-reproduced-adapter-preserved.json) |
 | Hermes Agent | [hermes-agent](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/hermes-agent.md) | `hermes-agent__wildclawbench-harness-comparison__gpt-5.4` | WildClawBench harness comparison | `system-benchmark-result` | `external-reproduced` | `adapter-preserved` | [hermes-agent-wildclawbench-external-reproduced-adapter-preserved.json](hermes-agent-wildclawbench-external-reproduced-adapter-preserved.json) |
 | HRAO-E Constitutional Framework | — | `hrao-e-production-constitutional-amendment-loop-2026` | HRAO-E first-party production constitutional-amendment history | `production-constitutional-amendment-history` | `first-party-reported` | `native-system` | [hrao-e-constitutional-amendments.json](hrao-e-constitutional-amendments.json) |
+| HugAgentOS project-instructions runtime | [hugagentos](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/hugagentos.md) | `hugagentos-project-instructions-context-return-9436fcb` | HugAgentOS test_registered_tools_save_real_cloud_content_with_revision_and_permissions acceptance test | `first-party-native-project-instructions-context-return-test` | `first-party-reported` | `native-system` | [hugagentos.json](hugagentos.json) |
 | KADATH | [kadath](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/kadath.md) | `kadath-ten-epoch-native-evolution-2026` | KADATH operator-approved run-specific locked fitness benchmark | `longitudinal-population-evolution` | `first-party-reported` | `native-system` | [kadath.json](kadath.json) |
 | LLaMAR | [llamar](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/llamar.md) | `llamar-agent-count-interference-mapthor-sar` | MAP-THOR / SAR | `native-disturbance-characterization` | `first-party-reported` | `native-system` | [llamar.json](llamar.json) |
 | LLaMAR | [llamar](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/llamar.md) | `llamar-mapthor-module-ablation-gpt4v` | MAP-THOR | `native-mechanism-ablation` | `first-party-reported` | `native-system` | [llamar.json](llamar.json) |
