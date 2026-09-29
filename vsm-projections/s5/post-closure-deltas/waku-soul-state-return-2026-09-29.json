@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "experimental-non-normative",
+  "tracking_issue": 73,
+  "reviewed_at": "2026-09-29",
+  "source_revision": "ShenSeanChen/waku-agent@b8310c08029732475b68076df02a6cc44e3e41e7",
+  "delta_class": "new-direct-public-evidence-no-primary-reopen",
+  "function": "S5",
+  "benchmark_id": "waku-soul-state-return",
+  "benchmark_fit": "direct",
+  "system_linkage": "canonical-native-descriptive",
+  "boundary_class": "canonical-native-parent-owned-soul-persona-standing-rule-to-per-turn-runtime-context",
+  "canonical_harness_id": "waku-agent",
+  "canonical_system_eligible": true,
+  "observation_id": "waku-dashboard-soul-persist-runtime-return-b8310c0",
+  "raw_observation_ref": "../../../system-observations/waku-agent.json#waku-dashboard-soul-persist-runtime-return-b8310c0",
+  "evidence_change": "A neutral first-party observation now records the canonical Waku SOUL path: a shipped dashboard mutation writes a concrete persona/standing-rule value to SOUL.md and a deterministic regression verifies the exact persisted UTF-8 content; the exact assessed revision rereads that same SOUL.md through Session.build_system on each later turn.",
+  "control_boundary": "Credit direct descriptive S5 only to canonical Waku at the parent-owned SOUL persona/standing-rule mutation to durable-state/per-turn-system-context boundary. Canonical ownership remains P. The persistence regression does not execute a later model turn or demonstrate downstream behavioral compliance with the changed SOUL value.",
+  "primary_reopen": false,
+  "reopen_gate_status": {
+    "second_canonical_native_or_adapter_preserved_materially_comparable_direct_s5_observation": false,
+    "matched_multi_canonical_authority_change_operation_protocol": false,
+    "adapter_preserved_canonical_rows_from_direct_family": false
+  },
+  "disposition": "retain-evidence-backed-gap",
+  "reason": "Waku adds a canonical native direct descriptive S5 witness and is structurally close to Octos, but the two observations are produced by different first-party regression families with different mutation fixtures, effective-state semantics, evaluators, execution environments and reset/adaptation treatment. They publish no common outcome metric under one authority/change/subsequent-operation protocol. Under BASELINE.md Rule 2 this remains descriptive evidence rather than a materially matched primary comparison cell, so the frozen S5 primary gap remains.",
+  "non_claim": "This delta does not claim autonomous Waku S5 ownership, downstream model behavior under the changed SOUL fixture, production deployment history, material comparability merely because Waku and Octos both use soul/persona surfaces, a primary ranking among Waku/Octos/Marveen/DotCraft/HugAgentOS/Ouroboros, or closure of the existing S5 primary evidence gap."
+}
