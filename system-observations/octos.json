@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-29",
+  "evidence_source_class": "first-party-reported",
+  "system_name": "Octos soul-policy runtime",
+  "canonical_harness_id": "octos",
+  "canonical_assessment_ref": "assessments/octos.md",
+  "canonical_review_ref": "9f6311afd4e00324cdb89d957461cf861f4f2630",
+  "published_implementation": {
+    "system_compatibility": "native-system",
+    "source_revision": "9f6311afd4e00324cdb89d957461cf861f4f2630",
+    "historical_relation": "The initial per-user soul mutation and storage path was introduced by commit 379193861165e1ca3784c1c65927297fb42429c6. The effective-soul isolation/readback regression was added by commit fb9247456d8f8b0a469aaeecfdb46e3f2b4866b8. Both commits are ancestors of the canonical assessed Octos revision."
+  },
+  "primary_sources": [
+    "https://github.com/octos-org/octos/commit/379193861165e1ca3784c1c65927297fb42429c6",
+    "https://github.com/octos-org/octos/commit/fb9247456d8f8b0a469aaeecfdb46e3f2b4866b8",
+    "https://github.com/octos-org/octos/blob/9f6311afd4e00324cdb89d957461cf861f4f2630/crates/octos-cli/src/gateway_dispatcher.rs",
+    "https://github.com/octos-org/octos/blob/9f6311afd4e00324cdb89d957461cf861f4f2630/crates/octos-cli/src/commands/gateway/prompt.rs",
+    "https://github.com/octos-org/octos/blob/9f6311afd4e00324cdb89d957461cf861f4f2630/book/src/memory-skills.md",
+    "https://github.com/opensiro/vsm-harness-index/blob/main/assessments/octos.md"
+  ],
+  "observations": [
+    {
+      "observation_id": "octos-soul-effective-state-readback-9f6311a",
+      "kind": "first-party-native-soul-policy-readback-test",
+      "evidence_surface": "Octos canonical gateway soul effective-state regression test",
+      "reviewed_revision": "9f6311afd4e00324cdb89d957461cf861f4f2630",
+      "historical_evidence_revisions": [
+        "379193861165e1ca3784c1c65927297fb42429c6",
+        "fb9247456d8f8b0a469aaeecfdb46e3f2b4866b8"
+      ],
+      "storage_witness": {
+        "profile_wide_soul_is_durable_file_state": true,
+        "write_read_roundtrip_tested": true,
+        "remove_reset_tested": true
+      },
+      "effective_state_regression": {
+        "profile_wide_fixture": "dashboard persona",
+        "profile_wide_state_observed_by_show": true,
+        "per_chat_override_fixture": "chat persona",
+        "per_chat_override_observed_as_effective": true,
+        "reset_restores_profile_wide_state": true
+      },
+      "runtime_consumption_support": {
+        "profile_soul_read_during_system_prompt_construction": true,
+        "bootstrap_identity_value_files_documented_as_runtime_prompt_inputs": true,
+        "bootstrap_files_documented_as_hot_reloadable": true
+      },
+      "result_summary": "At the canonical assessed Octos revision, first-party tests exercise durable soul-state storage and the user-facing gateway effective-state transition from profile-wide soul to a per-chat override and back to profile-wide state after reset. The same revision contains the system-prompt construction path that reads profile soul state for runtime prompt composition.",
+      "notes": "This record is function-neutral. The regression observes mutation and effective-state readback but does not execute a later model turn, measure task behavior under the changed state, or establish production deployment history."
+    }
+  ]
+}
