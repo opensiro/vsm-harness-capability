@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Kimi Code",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "unclear",
+    "historical_relation": "The pinned FrontierHarness Eval v1 snapshot identifies the Kimi Code configuration and pins version 0.37.2. The pinned public metadata used by W1 does not establish an upstream repository identity or exact source revision, so no canonical harness linkage or exact historical source relation is asserted."
+  },
+  "primary_sources": [
+    "https://github.com/frontier-harness-eval/eval/blob/e837a70bd6beb4e72eeeda62dd06e3bd34f6cb63/benchmark.json",
+    "https://github.com/frontier-harness-eval/eval/blob/e837a70bd6beb4e72eeeda62dd06e3bd34f6cb63/metadata/harness-versions.json",
+    "https://github.com/frontier-harness-eval/eval/blob/e837a70bd6beb4e72eeeda62dd06e3bd34f6cb63/results/eval-data.json",
+    "https://github.com/frontier-harness-eval/eval/blob/e837a70bd6beb4e72eeeda62dd06e3bd34f6cb63/README.md"
+  ],
+  "observations": [
+    {
+      "observation_id": "kimi-code__frontierharness-v1.0__kimi-k3-fireworks__20260822",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "frontierharness-v1.0",
+        "name": "FrontierHarness Eval v1",
+        "variant": "frozen-30",
+        "task_count": 30,
+        "primary_source": "https://github.com/frontier-harness-eval/eval/blob/e837a70bd6beb4e72eeeda62dd06e3bd34f6cb63/benchmark.json",
+        "artifact_source": "https://github.com/frontier-harness-eval/eval/blob/e837a70bd6beb4e72eeeda62dd06e3bd34f6cb63/results/eval-data.json"
+      },
+      "result": {
+        "date": "2026-08-22",
+        "agent_label": "Kimi Code",
+        "harness_version": "0.37.2",
+        "harness_revision": null,
+        "benchmark_revision": "e837a70bd6beb4e72eeeda62dd06e3bd34f6cb63",
+        "model": "Kimi K3",
+        "model_config": "Fireworks provider; canonical first valid attempt 1; same frozen 30-task set (21 Terminal-Bench 2.1 + 9 DeepSWE v1.1); fresh golden-checkpoint restore per trial",
+        "metric": "pass_rate",
+        "value": 0.5666666666666667,
+        "passed": 17,
+        "valid": 30,
+        "expected": 30
+      },
+      "published_implementation": {"system_compatibility": "unclear", "revision_match": "version-known"},
+      "provenance": {"publisher": "FrontierHarness Eval / Runta", "checked": true, "os_system": null, "public_logs": null, "public_trajectories": null},
+      "comparison": {"group": "frontierharness-v1.0__kimi-k3-fireworks__20260822", "mode": "candidate-same-model", "scope": "coding-swe"},
+      "unknown_dimensions": ["upstream repository identity", "exact harness source revision", "immutable Kimi K3 endpoint/checkpoint identity beyond the published Fireworks/model label", "historical applied egress allowlist"],
+      "notes": "W1 preserves the published configuration/version/result without inferring canonical identity or downstream comparison eligibility."
+    }
+  ]
+}
