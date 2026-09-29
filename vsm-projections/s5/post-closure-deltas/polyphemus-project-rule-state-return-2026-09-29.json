@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "experimental-non-normative",
+  "tracking_issue": 82,
+  "reviewed_at": "2026-09-29",
+  "source_revision": "polyphemus-ai/release-rehearsal@02020f3bc2829c350fd726273a7721254068925f",
+  "delta_class": "new-direct-public-evidence-no-primary-reopen",
+  "function": "S5",
+  "benchmark_id": "polyphemus-project-rule-state-return",
+  "benchmark_fit": "direct",
+  "system_linkage": "canonical-native-descriptive",
+  "boundary_class": "canonical-native-parent-owned-project-rule-acceptance-to-authoritative-agents-md-and-subsequent-session-context",
+  "canonical_harness_id": "polyphemus",
+  "canonical_system_eligible": true,
+  "observation_id": "polyphemus-project-agents-accept-runtime-return-02020f3",
+  "raw_observation_ref": "../../../system-observations/polyphemus.json#polyphemus-project-agents-accept-runtime-return-02020f3",
+  "evidence_change": "A neutral first-party observation now records the canonical Polyphemus project-rule path: a native regression accepts a concrete proposed AGENTS.md value through the parent keep/discard surface and verifies the project-root authoritative file contains the accepted rule; at the same exact revision session construction reads that same project-root AGENTS.md and native runtime regressions verify concrete project rules enter later model/agent execution contexts.",
+  "control_boundary": "Credit direct descriptive S5 only to canonical Polyphemus at the parent-owned project-rule acceptance to authoritative project AGENTS.md/subsequent-session-context boundary. Canonical ownership remains P. The acceptance regression does not itself execute a later model turn and the separate runtime regressions use independently prepared concrete AGENTS.md fixtures, so no single synthetic end-to-end run or downstream behavioral compliance is claimed.",
+  "primary_reopen": false,
+  "reopen_gate_status": {
+    "second_canonical_native_or_adapter_preserved_materially_comparable_direct_s5_observation": false,
+    "matched_multi_canonical_authority_change_operation_protocol": false,
+    "adapter_preserved_canonical_rows_from_direct_family": false
+  },
+  "disposition": "retain-evidence-backed-gap",
+  "reason": "Polyphemus adds a canonical-native direct descriptive S5 witness with a concrete authoritative rule mutation and an exact same-file native return path, but its project-inbox/Vitest/session-context protocol is not materially matched to the distinct first-party S5 evidence families already admitted for Waku, Octos, HugAgentOS, DotCraft, Marveen or other systems. They publish no common outcome metric under one matched authority/change/subsequent-operation protocol. Under BASELINE.md Rule 2 this remains descriptive evidence rather than a primary comparison cell, so the frozen S5 primary gap remains.",
+  "non_claim": "This delta does not claim autonomous Polyphemus S5 ownership, one end-to-end acceptance-to-model-turn regression, downstream behavioral compliance with the accepted Real rules fixture, production deployment history, material comparability merely because other systems also use durable rule/persona surfaces, a primary ranking among canonical S5 witnesses, or closure of the existing S5 primary evidence gap."
+}
