@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "OpenCode",
+  "canonical_harness_id": "opencode",
+  "canonical_assessment_ref": "assessments/opencode.md",
+  "canonical_review_ref": "95daf90670b7c039c436c85537da5fbfe2205b41",
+  "canonical_repository": "https://github.com/anomalyco/opencode",
+  "published_implementation": {
+    "system_compatibility": "adapter-preserved",
+    "historical_relation": "The pinned OpenBench M4.5 raw log identifies OpenCode 1.17.13 and records the native `opencode run` command for every clean trial. The package version is known; exact upstream source revision is not asserted by W1."
+  },
+  "primary_sources": [
+    "https://github.com/minghinmatthewlam/openbench/blob/8215e65a2c45ca6d3bdc88eb1ee086767c66ad5e/data/m4.5-2026-07-03/README.md",
+    "https://github.com/minghinmatthewlam/openbench/blob/8215e65a2c45ca6d3bdc88eb1ee086767c66ad5e/data/m4.5-2026-07-03/results.jsonl"
+  ],
+  "observations": [
+    {
+      "observation_id": "opencode__openbench-m45-hard3__gpt-5.5-medium__8215e65a",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "openbench-m45",
+        "name": "OpenBench M4.5",
+        "variant": "hard3-partial-credit",
+        "task_count": 3,
+        "primary_source": "https://github.com/minghinmatthewlam/openbench/blob/8215e65a2c45ca6d3bdc88eb1ee086767c66ad5e/data/m4.5-2026-07-03/README.md",
+        "artifact_source": "https://github.com/minghinmatthewlam/openbench/blob/8215e65a2c45ca6d3bdc88eb1ee086767c66ad5e/data/m4.5-2026-07-03/results.jsonl"
+      },
+      "result": {
+        "date": "2026-07-03",
+        "agent_label": "opencode",
+        "harness_version": "1.17.13",
+        "harness_revision": null,
+        "benchmark_revision": "8215e65a2c45ca6d3bdc88eb1ee086767c66ad5e",
+        "task_revision": "74c964e",
+        "model": "gpt-5.5-medium",
+        "model_config": "OpenBench canonical gpt-5.5-medium; OpenCode invoked as openai/gpt-5.5 with variant=medium; local execution; subscription OAuth with OPENAI_API_KEY unset; 900-second task timeout",
+        "metric": "clean_rollout_success_rate",
+        "value": 1.0,
+        "passed": 9,
+        "valid": 9,
+        "expected": 9,
+        "unique_tasks": 3,
+        "rollouts_per_task": 3,
+        "mean_partial_credit_score": 1.0
+      },
+      "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "version-known"},
+      "provenance": {
+        "publisher": "OpenBench / Matthew Lam",
+        "checked": true,
+        "os_system": true,
+        "public_logs": true,
+        "public_trajectories": false,
+        "raw_run_artifacts_public": true,
+        "execution_environment": "single macOS host; local sequential matrix; fresh temporary task workspace per cell; checker.sh grading"
+      },
+      "comparison": {"group": "openbench-m45-hard3__gpt-5.5-medium__20260703", "mode": "candidate-same-model", "scope": "coding-swe"},
+      "unknown_dimensions": [
+        "exact service-side model checkpoint behind the published gpt-5.5 label",
+        "cross-harness service/provider snapshot equivalence beyond the source-declared canonical model label",
+        "exact upstream OpenCode source revision corresponding to version 1.17.13",
+        "ambient service-load effects on wall-clock telemetry"
+      ],
+      "notes": "W1 preserves the source-reported clean 9/9 block and mean score 1.0. No correctness ranking is inferred from a saturated result; Devin is handled separately as a non-admission disposition because the source marks that block unreliable."
+    }
+  ]
+}
