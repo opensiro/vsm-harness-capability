@@ -40,7 +40,7 @@
       "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "unknown"},
       "provenance": {"publisher": "Claw-SWE-Bench", "checked": true, "os_system": true, "public_logs": null, "public_trajectories": null},
       "comparison": {"group": "claw-swe-bench-full-350__glm-5.1__20260717", "mode": "matched-model", "scope": "coding-swe"},
-      "notes": "The benchmark executes the native ZeroClaw loop inside a fresh per-instance container. Its benchmark config/tool-filter membrane is part of the published evaluation setup. Historical ZeroClaw version/revision and canonical OpenSiro linkage remain unknown. No VSM or paper-eligibility inference is made."
+      "notes": "The benchmark executes the native ZeroClaw loop inside a fresh per-instance container. Its benchmark config/tool-filter membrane is part of the published evaluation setup. Historical ZeroClaw version/revision and canonical OpenSiro linkage remain unknown."
     },
     {
       "observation_id": "zeroclaw__claw-swe-bench-full-350__qwen-3.6-flash__20260717",
@@ -68,7 +68,7 @@
       "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "unknown"},
       "provenance": {"publisher": "Claw-SWE-Bench", "checked": true, "os_system": true, "public_logs": null, "public_trajectories": null},
       "comparison": {"group": "claw-swe-bench-full-350__qwen-3.6-flash__20260717", "mode": "matched-model", "scope": "coding-swe"},
-      "notes": "Same adapter/evaluation membrane as the GLM 5.1 row. Historical version/revision remains unknown; no canonical linkage or broader inference is added by W1."
+      "notes": "Same adapter/evaluation membrane as the GLM 5.1 row. Historical version/revision remains unknown; no canonical linkage is added."
     }
   ]
 }
