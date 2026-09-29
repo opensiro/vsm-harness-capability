@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "manifest_id": "och-obs-1-w1-2026-09-30-pass7-frontierharness-coverage",
+  "recorded_at": "2026-09-30",
+  "work_item": {
+    "repository": "opensiro/vsm-harness-capability",
+    "issue": 93,
+    "role": "W1 public-evidence discovery and neutral admission"
+  },
+  "protocol": {
+    "id": "OCH-OBS-1",
+    "version": "1.0.0",
+    "repository": "opensiro/vsm-harness-research",
+    "revision": "5462ffadffd7189ae10e44e22d357bc6162a6038",
+    "collection_cutoff_utc": "2026-10-20T23:59:59Z"
+  },
+  "checkpoint_parent": {
+    "capability_main_revision": "2365e1ec10e441bcfa06f76cf928bd6326bc5b88",
+    "registry_observation_count_before": 113,
+    "registry_observation_count_after": 119,
+    "prior_frontierharness_handoff": "paper-discovery/och-obs-1/w1-2026-09-30-pass4-reuse-handoff.json",
+    "prior_handoffs_mutated": false
+  },
+  "collection_state": {
+    "status": "active",
+    "documented_discovery_passes_completed_after_this_checkpoint": 7,
+    "cutoff_reached": false
+  },
+  "discovery_pass": {
+    "pass_id": "w1-pass-007-frontierharness-coverage-completion",
+    "method": "Direction-blind coverage audit of the already-used pinned FrontierHarness Eval v1 source against the neutral registry. The frozen source declares 12 configurations but only six were already stored. This pass admits the six missing public configurations while reusing the six existing observation IDs; selection is based on source coverage, not outcome direction.",
+    "source_repository": "https://github.com/frontier-harness-eval/eval",
+    "source_revision": "e837a70bd6beb4e72eeeda62dd06e3bd34f6cb63",
+    "source_declared_configuration_count": 12,
+    "source_declared_harness_count": 9,
+    "source_declared_evaluation_count": 360,
+    "source_artifacts": [
+      "https://github.com/frontier-harness-eval/eval/blob/e837a70bd6beb4e72eeeda62dd06e3bd34f6cb63/benchmark.json",
+      "https://github.com/frontier-harness-eval/eval/blob/e837a70bd6beb4e72eeeda62dd06e3bd34f6cb63/metadata/harness-versions.json",
+      "https://github.com/frontier-harness-eval/eval/blob/e837a70bd6beb4e72eeeda62dd06e3bd34f6cb63/results/eval-data.json",
+      "https://github.com/frontier-harness-eval/eval/blob/e837a70bd6beb4e72eeeda62dd06e3bd34f6cb63/README.md"
+    ]
+  },
+  "reused_existing_observation_ids": [
+    "claude-code__frontierharness-v1.0__kimi-k3-fireworks__20260822",
+    "codex__frontierharness-v1.0__kimi-k3-fireworks__20260822",
+    "hermes-agent__frontierharness-v1.0__kimi-k3-fireworks__20260822",
+    "oh-my-pi__frontierharness-v1.0__kimi-k3-fireworks__20260822",
+    "opencode__frontierharness-v1.0__kimi-k3-fireworks__20260822",
+    "pi__frontierharness-v1.0__kimi-k3-fireworks__20260822"
+  ],
+  "newly_admitted_observation_ids": [
+    "dsh-creator__frontierharness-v1.0__kimi-k3-fireworks__20260822",
+    "dsh-minimal__frontierharness-v1.0__kimi-k3-fireworks__20260822",
+    "dsh-ptc__frontierharness-v1.0__kimi-k3-fireworks__20260822",
+    "dsh-standard__frontierharness-v1.0__kimi-k3-fireworks__20260822",
+    "exo-harness__frontierharness-v1.0__kimi-k3-fireworks__20260822",
+    "kimi-code__frontierharness-v1.0__kimi-k3-fireworks__20260822"
+  ],
+  "candidate_same_model_comparison_groups": [
+    {
+      "group_id": "frontierharness-v1.0__kimi-k3-fireworks__20260822",
+      "observation_ids": [
+        "claude-code__frontierharness-v1.0__kimi-k3-fireworks__20260822",
+        "codex__frontierharness-v1.0__kimi-k3-fireworks__20260822",
+        "dsh-creator__frontierharness-v1.0__kimi-k3-fireworks__20260822",
+        "dsh-minimal__frontierharness-v1.0__kimi-k3-fireworks__20260822",
+        "dsh-ptc__frontierharness-v1.0__kimi-k3-fireworks__20260822",
+        "dsh-standard__frontierharness-v1.0__kimi-k3-fireworks__20260822",
+        "exo-harness__frontierharness-v1.0__kimi-k3-fireworks__20260822",
+        "hermes-agent__frontierharness-v1.0__kimi-k3-fireworks__20260822",
+        "kimi-code__frontierharness-v1.0__kimi-k3-fireworks__20260822",
+        "oh-my-pi__frontierharness-v1.0__kimi-k3-fireworks__20260822",
+        "opencode__frontierharness-v1.0__kimi-k3-fireworks__20260822",
+        "pi__frontierharness-v1.0__kimi-k3-fireworks__20260822"
+      ],
+      "source_known_dimensions": [
+        "same source-declared Kimi K3 model and Fireworks provider",
+        "same frozen 30-task set: 21 Terminal-Bench 2.1 plus 9 DeepSWE v1.1 tasks",
+        "same benchmark revision and canonical first-valid-attempt-1 selection rule",
+        "same Runta evaluation runtime family",
+        "one golden checkpoint and fresh restore per task with identical vCPU, memory, disk size, disk contents and memory state as documented by the source",
+        "published harness/configuration versions captured on 2026-08-22",
+        "source retains aggregate and task-level result data"
+      ],
+      "explicit_unknown_or_nonidentical_dimensions": [
+        "published baseline runs did not record the applied historical egress allowlist",
+        "immutable model endpoint/checkpoint identity beyond the Kimi K3/Fireworks label is not established in the admitted row records",
+        "upstream repository identity and exact source revision remain unresolved for DSH configurations and Kimi Code",
+        "Exo source revision and executable fingerprint are published, but upstream repository URL/canonical OpenSiro identity remains unresolved",
+        "harness-native prompts, tool surfaces, context-management and stopping behavior differ by the independent variable and require downstream review rather than W1 normalization"
+      ],
+      "paper_eligibility": "not-assessed-by-W1"
+    }
+  ],
+  "non_admission_dispositions": [],
+  "validation": {
+    "status": "success",
+    "trigger_revision": "8b9ec143baa8b6031b8cb23020900311d7861451",
+    "generated_registry_revision": "9fbbd78cf9602859100889129ea52c829924042a",
+    "workflow_reverted_revision": "49faa50af1a0ea960ca03feea1949597850ca812",
+    "workflow": {
+      "name": "validate",
+      "run_id": 36642630953,
+      "run_number": 168,
+      "job_id": 109658205791,
+      "conclusion": "success"
+    },
+    "commands": [
+      "python system-observations/render_registry.py",
+      "python scripts/admission_check.py system-observations/dsh-frontierharness-kimi-k3-external-reproduced-unclear.json",
+      "python scripts/admission_check.py system-observations/kimi-code-frontierharness-kimi-k3-external-reproduced-unclear.json",
+      "python scripts/admission_check.py system-observations/exo-harness-frontierharness-kimi-k3-external-reproduced-unclear.json",
+      "python scripts/validate_repository.py"
+    ],
+    "results": [
+      {"command": "python system-observations/render_registry.py", "result": "success", "workflow_step": "Regenerate neutral registry views"},
+      {"command": "python scripts/validate_repository.py", "result": "success", "workflow_step": "Run python scripts/validate_repository.py"},
+      {"command": "record-specific admission checks for all three new raw records", "result": "success", "workflow_step": "Exercise live evidence admission path"}
+    ]
+  },
+  "handoff_boundary": {
+    "structural_classification_performed": false,
+    "historical_linkage_adjudicated": false,
+    "comparison_tier_assigned": false,
+    "statistical_interpretation_performed": false,
+    "winner_declared": false
+  }
+}
