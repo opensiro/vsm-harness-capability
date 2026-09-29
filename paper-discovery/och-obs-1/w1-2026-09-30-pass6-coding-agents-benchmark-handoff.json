@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "manifest_id": "och-obs-1-w1-2026-09-30-pass6-coding-agents-benchmark",
+  "recorded_at": "2026-09-30",
+  "work_item": {
+    "repository": "opensiro/vsm-harness-capability",
+    "issue": 93,
+    "role": "W1 public-evidence discovery and neutral admission"
+  },
+  "protocol": {
+    "id": "OCH-OBS-1",
+    "version": "1.0.0",
+    "repository": "opensiro/vsm-harness-research",
+    "revision": "5462ffadffd7189ae10e44e22d357bc6162a6038",
+    "collection_cutoff_utc": "2026-10-20T23:59:59Z"
+  },
+  "checkpoint_parent": {
+    "capability_main_revision": "8db15ee4c78fff59b934303db437d48958d71bd8",
+    "registry_observation_count_before": 101,
+    "registry_observation_count_after": 113,
+    "prior_handoffs_mutated": false
+  },
+  "collection_state": {
+    "status": "active",
+    "documented_discovery_passes_completed_after_this_checkpoint": 6,
+    "cutoff_reached": false
+  },
+  "discovery_pass": {
+    "pass_id": "w1-pass-006-coding-agents-benchmark",
+    "method": "Direction-blind inspection of a newly discovered immutable public benchmark corpus with committed per-task run directories, aggregate CSVs, runner, verification procedure, isolation configuration and blind quality-tournament artifacts. Admission is restricted to the six source-declared same-model default-mode pairs over the common 15-task test surface; outcome direction was not used to select pairs.",
+    "source_repository": "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark",
+    "source_revision": "dadcf782e45a0d14e5561af58fae305316a14e19",
+    "run_window_utc": "2026-08-23T18:20:00Z/2026-08-24T17:19:00Z",
+    "task_source_revision": "exercism/python@1f6aab8667bf653b10cc3799f94352fcdb749db6",
+    "task_selection": "15 Python exercises, deterministic seed 42, five each from easy/medium/hard bands after baseline filtering",
+    "public_raw_run_artifacts": true,
+    "source_artifacts": [
+      "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/README.md",
+      "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/analisis-final.md",
+      "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/tanda.py",
+      "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/COMANDOS.md",
+      "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/esfuerzos.md",
+      "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/kiro-aislado.sh",
+      "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/configs/kiro-agent-benchmark.json",
+      "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/torneo/fase1.json"
+    ]
+  },
+  "newly_admitted_observation_ids": [
+    "kiro__coding-agents-benchmark-exercism15__gpt-5.6-luna__dadcf782",
+    "codex__coding-agents-benchmark-exercism15__gpt-5.6-luna__dadcf782",
+    "kiro__coding-agents-benchmark-exercism15__gpt-5.6-terra__dadcf782",
+    "codex__coding-agents-benchmark-exercism15__gpt-5.6-terra__dadcf782",
+    "kiro__coding-agents-benchmark-exercism15__gpt-5.6-sol__dadcf782",
+    "codex__coding-agents-benchmark-exercism15__gpt-5.6-sol__dadcf782",
+    "kiro__coding-agents-benchmark-exercism15__claude-haiku-4.5__dadcf782",
+    "claude-code__coding-agents-benchmark-exercism15__claude-haiku-4.5__dadcf782",
+    "kiro__coding-agents-benchmark-exercism15__claude-sonnet-5__dadcf782",
+    "claude-code__coding-agents-benchmark-exercism15__claude-sonnet-5__dadcf782",
+    "kiro__coding-agents-benchmark-exercism15__claude-opus-5__dadcf782",
+    "claude-code__coding-agents-benchmark-exercism15__claude-opus-5__dadcf782"
+  ],
+  "reused_existing_observation_ids": [],
+  "candidate_same_model_comparison_groups": [
+    {
+      "group_id": "coding-agents-benchmark-exercism15__gpt-5.6-luna__dadcf782",
+      "observation_ids": [
+        "kiro__coding-agents-benchmark-exercism15__gpt-5.6-luna__dadcf782",
+        "codex__coding-agents-benchmark-exercism15__gpt-5.6-luna__dadcf782"
+      ],
+      "source_known_dimensions": [
+        "same source-declared model label gpt-5.6-luna",
+        "same 15 prepared Exercism Python exercises and prompt construction",
+        "same task-source revision and deterministic task selection",
+        "same runner timeout default of 900 seconds",
+        "fresh exercise workspace per task",
+        "same third-party exercise tests and test-integrity verification",
+        "one accepted outcome per task with infrastructure-only ERROR_API eligible for retry"
+      ],
+      "explicit_unknown_or_nonidentical_dimensions": [
+        "exact Kiro CLI binary version/revision",
+        "exact Codex CLI binary version/revision",
+        "immutable model endpoint/checkpoint identity across Kiro managed serving and Codex serving",
+        "Kiro reasoning effort is not exposed; CSV medium/low labels for Kiro are heuristic and not accepted as confirmed configuration",
+        "provider/subscription execution path differs between Kiro and Codex",
+        "client-native tool/scaffolding/control policies differ by design",
+        "persistent client state outside recreated exercise workspaces is not fully matched",
+        "the public Exercism tasks may be present in model training data"
+      ],
+      "paper_eligibility": "not-assessed-by-W1"
+    },
+    {
+      "group_id": "coding-agents-benchmark-exercism15__gpt-5.6-terra__dadcf782",
+      "observation_ids": [
+        "kiro__coding-agents-benchmark-exercism15__gpt-5.6-terra__dadcf782",
+        "codex__coding-agents-benchmark-exercism15__gpt-5.6-terra__dadcf782"
+      ],
+      "source_known_dimensions": ["same source-declared model label gpt-5.6-terra", "same 15-task set/prompt/task-source revision", "same 900-second runner timeout", "fresh exercise workspace per task", "same test-integrity arbiter", "one accepted result per task with infrastructure retries separated"],
+      "explicit_unknown_or_nonidentical_dimensions": ["exact Kiro CLI binary version/revision", "exact Codex CLI binary version/revision", "immutable model endpoint/checkpoint identity across serving paths", "Kiro reasoning effort is not exposed despite a heuristic CSV label", "provider/subscription execution path differs", "client-native scaffolding differs", "persistent client state outside workspace is not fully matched", "public-task training contamination is possible"],
+      "paper_eligibility": "not-assessed-by-W1"
+    },
+    {
+      "group_id": "coding-agents-benchmark-exercism15__gpt-5.6-sol__dadcf782",
+      "observation_ids": [
+        "kiro__coding-agents-benchmark-exercism15__gpt-5.6-sol__dadcf782",
+        "codex__coding-agents-benchmark-exercism15__gpt-5.6-sol__dadcf782"
+      ],
+      "source_known_dimensions": ["same source-declared model label gpt-5.6-sol", "same 15-task set/prompt/task-source revision", "same 900-second runner timeout", "fresh exercise workspace per task", "same test-integrity arbiter", "one accepted result per task with infrastructure retries separated"],
+      "explicit_unknown_or_nonidentical_dimensions": ["exact Kiro CLI binary version/revision", "exact Codex CLI binary version/revision", "immutable model endpoint/checkpoint identity across serving paths", "Kiro reasoning effort is not exposed; Codex Sol default is documented as low", "provider/subscription execution path differs", "client-native scaffolding differs", "persistent client state outside workspace is not fully matched", "public-task training contamination is possible"],
+      "paper_eligibility": "not-assessed-by-W1"
+    },
+    {
+      "group_id": "coding-agents-benchmark-exercism15__claude-haiku-4.5__dadcf782",
+      "observation_ids": [
+        "kiro__coding-agents-benchmark-exercism15__claude-haiku-4.5__dadcf782",
+        "claude-code__coding-agents-benchmark-exercism15__claude-haiku-4.5__dadcf782"
+      ],
+      "source_known_dimensions": ["source declares Kiro `claude-haiku-4.5` and Claude Code `haiku` as the same model pair", "same 15-task set/prompt/task-source revision", "same 900-second runner timeout", "fresh exercise workspace per task", "same test-integrity arbiter", "one accepted result per task with infrastructure retries separated"],
+      "explicit_unknown_or_nonidentical_dimensions": ["exact Kiro CLI binary version/revision", "exact Claude Code binary version/revision", "independent immutable checkpoint equivalence for Kiro explicit model and Claude Code alias", "Kiro reasoning effort unknown while Claude Code default is documented as high", "provider/subscription execution path differs", "Kiro and Claude Code client-native scaffolding/tool policies differ", "persistent client state outside workspace is not fully matched", "public-task training contamination is possible"],
+      "paper_eligibility": "not-assessed-by-W1"
+    },
+    {
+      "group_id": "coding-agents-benchmark-exercism15__claude-sonnet-5__dadcf782",
+      "observation_ids": [
+        "kiro__coding-agents-benchmark-exercism15__claude-sonnet-5__dadcf782",
+        "claude-code__coding-agents-benchmark-exercism15__claude-sonnet-5__dadcf782"
+      ],
+      "source_known_dimensions": ["source declares Kiro `claude-sonnet-5` and Claude Code `sonnet` as the same model pair", "same 15-task set/prompt/task-source revision", "same 900-second runner timeout", "fresh exercise workspace per task", "same test-integrity arbiter", "one accepted result per task with infrastructure retries separated"],
+      "explicit_unknown_or_nonidentical_dimensions": ["exact Kiro CLI binary version/revision", "exact Claude Code binary version/revision", "independent immutable checkpoint equivalence for Kiro explicit model and Claude Code alias", "Kiro reasoning effort unknown while Claude Code default is documented as high", "provider/subscription execution path differs", "Kiro and Claude Code client-native scaffolding/tool policies differ", "persistent client state outside workspace is not fully matched", "public-task training contamination is possible"],
+      "paper_eligibility": "not-assessed-by-W1"
+    },
+    {
+      "group_id": "coding-agents-benchmark-exercism15__claude-opus-5__dadcf782",
+      "observation_ids": [
+        "kiro__coding-agents-benchmark-exercism15__claude-opus-5__dadcf782",
+        "claude-code__coding-agents-benchmark-exercism15__claude-opus-5__dadcf782"
+      ],
+      "source_known_dimensions": ["source declares Kiro `claude-opus-5` and Claude Code `opus` as the same model pair", "same 15-task set/prompt/task-source revision", "same 900-second runner timeout", "fresh exercise workspace per task", "same test-integrity arbiter", "one accepted result per task with infrastructure failures separated from accepted outcomes"],
+      "explicit_unknown_or_nonidentical_dimensions": ["exact Kiro CLI binary version/revision", "exact Claude Code binary version/revision", "independent immutable checkpoint equivalence for Kiro explicit model and Claude Code alias", "Kiro reasoning effort unknown while Claude Code default is documented as high", "provider/subscription execution path differs", "source documents Claude-side provider congestion and infrastructure retries during the run window", "Kiro and Claude Code client-native scaffolding/tool policies differ", "persistent client state outside workspace is not fully matched", "public-task training contamination is possible"],
+      "paper_eligibility": "not-assessed-by-W1"
+    }
+  ],
+  "non_admission_dispositions": [
+    {
+      "surface": "Codex forced-high control batches",
+      "status": "deferred-not-admitted-in-pass-006",
+      "reason": "The forced-high Codex batches are explicit reasoning-effort interventions rather than the default-mode pair surface admitted here. They remain public candidate evidence for a separate control/ablation treatment and are not silently merged with the default-mode observations."
+    },
+    {
+      "surface": "coding-agents-benchmark blind quality tournament",
+      "status": "deferred-not-admitted-in-pass-006",
+      "reason": "The pairwise tournament is fully inspectable but its unit is a blind pairwise quality duel with repeated judge passes rather than the per-system aggregate test-outcome unit admitted in this checkpoint. It should be represented under an explicit pairwise-quality evidence design rather than collapsed into the test-pass record."
+    },
+    {
+      "surface": "Ondemand-OSS/harness-arena live arena",
+      "status": "not-admitted",
+      "reason": "The repository exposes comparison infrastructure and runtime leaderboard/voting logic, but W1 did not identify a committed immutable result snapshot at the inspected revision. README/runtime claims alone were not promoted to a neutral empirical observation."
+    }
+  ],
+  "validation": {
+    "status": "success",
+    "trigger_revision": "237ffdcfa6d9966c06e8fafa5ff3894ac1b92980",
+    "generated_registry_revision": "6ece8f8de76176fd9fe21d452bf7b2ee9666a783",
+    "workflow_reverted_revision": "3176bb4c9b3ddb3a7eac4d0c50b12ff83eb64bd9",
+    "workflow": {
+      "name": "validate",
+      "run_id": 36641935021,
+      "run_number": 161,
+      "job_id": 109655973243,
+      "conclusion": "success"
+    },
+    "commands": [
+      "python system-observations/render_registry.py",
+      "python scripts/admission_check.py system-observations/kiro-coding-agents-benchmark-exercism15-external-reproduced-adapter-preserved.json",
+      "python scripts/admission_check.py system-observations/codex-coding-agents-benchmark-exercism15-external-reproduced-adapter-preserved.json",
+      "python scripts/admission_check.py system-observations/claude-code-coding-agents-benchmark-exercism15-external-reproduced-adapter-preserved.json",
+      "python scripts/validate_repository.py"
+    ],
+    "results": [
+      {"command": "python system-observations/render_registry.py", "result": "success", "workflow_step": "Regenerate neutral registry views"},
+      {"command": "python scripts/validate_repository.py", "result": "success", "workflow_step": "Run python scripts/validate_repository.py"},
+      {"command": "record-specific admission checks for all three new raw records", "result": "success", "workflow_step": "Exercise live evidence admission path"}
+    ]
+  },
+  "handoff_boundary": {
+    "structural_classification_performed": false,
+    "historical_linkage_adjudicated": false,
+    "comparison_tier_assigned": false,
+    "statistical_interpretation_performed": false,
+    "winner_declared": false
+  }
+}
