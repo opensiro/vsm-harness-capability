@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Cursor Agent",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "unclear",
+    "historical_relation": "The pinned OpenBench M4.5 raw log identifies the exercised Cursor Agent build as 2026.07.01-41b2de7 and records the native `cursor-agent` command for every clean trial. W1 found no current canonical Cursor harness linkage in the capability corpus and does not infer one from the display label."
+  },
+  "primary_sources": [
+    "https://github.com/minghinmatthewlam/openbench/blob/8215e65a2c45ca6d3bdc88eb1ee086767c66ad5e/data/m4.5-2026-07-03/README.md",
+    "https://github.com/minghinmatthewlam/openbench/blob/8215e65a2c45ca6d3bdc88eb1ee086767c66ad5e/data/m4.5-2026-07-03/results.jsonl"
+  ],
+  "observations": [
+    {
+      "observation_id": "cursor-agent__openbench-m45-hard3__gpt-5.5-medium__8215e65a",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "openbench-m45",
+        "name": "OpenBench M4.5",
+        "variant": "hard3-partial-credit",
+        "task_count": 3,
+        "primary_source": "https://github.com/minghinmatthewlam/openbench/blob/8215e65a2c45ca6d3bdc88eb1ee086767c66ad5e/data/m4.5-2026-07-03/README.md",
+        "artifact_source": "https://github.com/minghinmatthewlam/openbench/blob/8215e65a2c45ca6d3bdc88eb1ee086767c66ad5e/data/m4.5-2026-07-03/results.jsonl"
+      },
+      "result": {
+        "date": "2026-07-03",
+        "agent_label": "cursor",
+        "harness_version": "2026.07.01-41b2de7",
+        "harness_revision": null,
+        "benchmark_revision": "8215e65a2c45ca6d3bdc88eb1ee086767c66ad5e",
+        "task_revision": "74c964e",
+        "model": "gpt-5.5-medium",
+        "model_config": "OpenBench canonical gpt-5.5-medium; Cursor Agent invoked with --model gpt-5.5-medium; local execution; subscription OAuth with OPENAI_API_KEY unset; 900-second task timeout",
+        "metric": "clean_rollout_success_rate",
+        "value": 1.0,
+        "passed": 9,
+        "valid": 9,
+        "expected": 9,
+        "unique_tasks": 3,
+        "rollouts_per_task": 3,
+        "mean_partial_credit_score": 1.0
+      },
+      "published_implementation": {"system_compatibility": "unclear", "revision_match": "version-known"},
+      "provenance": {
+        "publisher": "OpenBench / Matthew Lam",
+        "checked": true,
+        "os_system": null,
+        "public_logs": true,
+        "public_trajectories": false,
+        "raw_run_artifacts_public": true,
+        "execution_environment": "single macOS host; local sequential matrix; fresh temporary task workspace per cell; checker.sh grading"
+      },
+      "comparison": {"group": "openbench-m45-hard3__gpt-5.5-medium__20260703", "mode": "candidate-same-model", "scope": "coding-swe"},
+      "unknown_dimensions": [
+        "canonical OpenSiro harness identity/linkage",
+        "upstream source repository identity/revision for the exercised Cursor Agent build",
+        "exact service-side model checkpoint behind the published gpt-5.5-medium label",
+        "cross-harness service/provider snapshot equivalence beyond the source-declared canonical model label",
+        "ambient service-load effects on wall-clock telemetry"
+      ],
+      "notes": "W1 preserves the source-reported clean 9/9 block and mean score 1.0 without inferring canonical linkage or a correctness ranking from a saturated result."
+    }
+  ]
+}
