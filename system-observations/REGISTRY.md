@@ -5,7 +5,7 @@ Status: **generated, experimental, non-normative**
 Generated from the raw JSON records in this directory by `render_registry.py`.
 Raw evidence payloads remain only in the raw record; this table is an identity/provenance projection, not a second result database.
 
-Raw observations: **77**
+Raw observations: **78**
 
 | System | Canonical harness | Observation | Evidence surface(s) | Kind | Provenance | Compatibility | Raw record |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -77,6 +77,7 @@ Raw observations: **77**
 | Squad | [squad](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/squad.md) | `squad-marble-completion-ablation` | MARBLE factorial ablation | `native-mechanism-ablation` | `first-party-reported` | `native-system` | [squad.json](squad.json) |
 | Squad | [squad](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/squad.md) | `squad-shared-state-conflict-attenuation-2026-03` | immutable first-party repository history plus first-party public operational case study | `operational-history-witness` | `first-party-reported` | `native-system` | [squad-operational-history.json](squad-operational-history.json) |
 | STALE benchmark organization | — | `stale-semantic-interference-communication-2026` | STALE synthetic, corrected mined-real, and real-derived semantic-interference study | `semantic-interference-communication-study` | `first-party-reported` | `benchmark-scaffolded` | [stale-bench.json](stale-bench.json) |
+| superharness project-rule runtime | [superharness](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/superharness.md) | `superharness-project-rules-injection-8bd54bc` | superharness canonical project-rule parser, adapter/handoff consumption tests, and initialization/runtime implementation | `first-party-native-project-rule-fixture-and-injection-tests` | `first-party-reported` | `native-system` | [superharness.json](superharness.json) |
 | SupervisorAgent + SMAS | — | `supervisoragent-smas-gaia-pass1-2026` | SupervisorAgent SMAS GAIA validation pass@1 | `system-benchmark-result` | `first-party-reported` | `benchmark-scaffolded` | [supervisoragent-smas.json](supervisoragent-smas.json) |
 | SWE-agent | [swe-agent](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/swe-agent.md) | `swe-agent__swe-bench-verified__claude-4-sonnet-20250514__20250522` | SWE-bench Verified | `system-benchmark-result` | `external-reproduced` | `native-system` | [swe-agent-benchmark-results-external-reproduced-native-system.json](swe-agent-benchmark-results-external-reproduced-native-system.json) |
 | SWE-Review-Bench | — | `swe-review-generate-review-revise-2026-07` | SWE-Review-Bench | `system-benchmark-result` | `first-party-reported` | `benchmark-scaffolded` | [swe-review.json](swe-review.json) |
