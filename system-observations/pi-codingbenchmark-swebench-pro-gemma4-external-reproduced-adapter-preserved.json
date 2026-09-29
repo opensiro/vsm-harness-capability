@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Pi",
+  "canonical_harness_id": "pi",
+  "canonical_assessment_ref": "assessments/pi.md",
+  "canonical_review_ref": "71dca871bc80b6bc97be37f0ca3189399d651fff",
+  "canonical_repository": "https://github.com/earendil-works/pi",
+  "published_implementation": {"system_compatibility": "adapter-preserved", "historical_relation": "Pinned study code installs Pi 0.80.3 and runs the native CLI inside the benchmark container. Package version is known; exact upstream source revision is not asserted by W1."},
+  "primary_sources": ["https://github.com/JoelNiklaus/harness-optimization/blob/c98a168014412c2333fca635cdcc0c6c901c0ade/coding/README.md", "https://github.com/JoelNiklaus/harness-optimization/blob/c98a168014412c2333fca635cdcc0c6c901c0ade/coding/runners/install_node_harnesses.sh", "https://github.com/JoelNiklaus/harness-optimization/blob/c98a168014412c2333fca635cdcc0c6c901c0ade/coding/scripts/serve_gemma.sh", "https://huggingface.co/buckets/joelniklaus/CodingBenchmarkResults/tree/README.md"],
+  "observations": [{
+    "observation_id": "pi__codingbenchmark-swebench-pro-250__gemma-4-26b-a4b-it__c98a1680",
+    "kind": "system-benchmark-result",
+    "benchmark": {"family_id": "codingbenchmark-swebench-pro", "name": "Coding Agent Bench / SWE-bench Pro", "variant": "heldout-test-250", "task_count": 250, "primary_source": "https://github.com/JoelNiklaus/harness-optimization/blob/c98a168014412c2333fca635cdcc0c6c901c0ade/coding/README.md", "artifact_source": "https://huggingface.co/buckets/joelniklaus/CodingBenchmarkResults/tree/README.md"},
+    "result": {"date": null, "published_snapshot_date": "2026-08-12", "agent_label": "pi", "harness_version": "0.80.3", "harness_revision": null, "benchmark_revision": "c98a168014412c2333fca635cdcc0c6c901c0ade", "model": "Gemma 4 26B-A4B", "model_config": "google/gemma-4-26B-A4B-it; BF16; local vLLM; thinking enabled by default-chat-template kwargs; context length 262144; max output 32768", "metric": "pass_at_1_percent", "value": 28.0, "tasks": 250, "rollouts_per_task": 1},
+    "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "version-known"},
+    "provenance": {"publisher": "Joel Niklaus / Coding Agent Bench", "checked": true, "os_system": true, "public_logs": true, "public_trajectories": true, "raw_run_artifacts_public": true, "result_readme_xet_hash": "94d46f47c574ef34580cbfd78a5257965bc61cec4ab7ad99a9953d1ab9c7f2fe"},
+    "comparison": {"group": "codingbenchmark-swebench-pro-250__gemma-4-26b-a4b-it__thinking-on__20260812", "mode": "matched-model-candidate", "scope": "coding-swe"},
+    "unknown_dimensions": ["exact Gemma model repository revision/checkpoint hash", "exact vLLM image digest used by the published sweep", "exact SWE-bench Pro upstream dataset/runner revision used to materialize the frozen held-out set", "persistent harness-side state outside released rollout artifacts"],
+    "notes": "Main-grid thinking-on value at n=250 only; incomplete thinking-off arm excluded. No downstream eligibility or score-direction interpretation by W1."
+  }]
+}
