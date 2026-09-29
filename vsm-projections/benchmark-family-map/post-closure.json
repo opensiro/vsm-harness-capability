@@ -144,6 +144,20 @@
       "review_ref": "vsm-projections/benchmark-family-map/S5-OCTOS-REVIEW.md",
       "delta_ref": "vsm-projections/s5/post-closure-deltas/octos-soul-policy-state-return-2026-09-29.json",
       "non_claim": "Direct S5 fit belongs only to canonical Octos at the parent/user-owned soul-personality mutation to effective-state/new-session-runtime-context boundary. The regression does not demonstrate autonomous S5 ownership, equivalence with the separate .octos/SOUL.md or .octos/IDENTITY.md bootstrap stores, a later model turn under the changed soul, or a materially matched primary comparison, and it does not select an S5 primary baseline."
+    },
+    {
+      "function": "S5",
+      "benchmark_id": "waku-soul-state-return",
+      "benchmark_name": "Waku SOUL state-return witness",
+      "fit": "direct",
+      "primary_source": "https://github.com/ShenSeanChen/waku-agent/blob/b8310c08029732475b68076df02a6cc44e3e41e7/evals/deterministic/test_skill_encoding.py",
+      "evaluated_object": "Canonical Waku native parent-owned SOUL boundary in which a concrete persona/standing-rule value is changed through the shipped dashboard path, exact durable SOUL.md persistence is exercised, and the canonical runtime rereads SOUL.md during every per-turn system-context build.",
+      "evaluation_mode": "first-party-native-regression-soul-persistence-with-per-turn-runtime-load-support",
+      "system_linkage": "canonical-native-descriptive",
+      "tracking_issue": 73,
+      "review_ref": "vsm-projections/benchmark-family-map/S5-WAKU-REVIEW.md",
+      "delta_ref": "vsm-projections/s5/post-closure-deltas/waku-soul-state-return-2026-09-29.json",
+      "non_claim": "Direct S5 fit belongs only to canonical Waku at the parent-owned persona/standing-rule mutation to durable-state/per-turn-runtime-context boundary. The regression does not execute a later model turn, does not demonstrate downstream behavioral compliance, is not a production-history witness, and does not make Waku and Octos a materially matched primary comparison merely because both expose soul/persona state."
     }
   ]
 }
