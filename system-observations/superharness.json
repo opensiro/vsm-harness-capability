@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-29",
+  "evidence_source_class": "first-party-reported",
+  "system_name": "superharness project-rule runtime",
+  "canonical_harness_id": "superharness",
+  "canonical_assessment_ref": "assessments/superharness.md",
+  "canonical_review_ref": "8bd54bc1ea7db2391190de25087bc638d503e549",
+  "published_implementation": {
+    "system_compatibility": "native-system",
+    "source_revision": "8bd54bc1ea7db2391190de25087bc638d503e549"
+  },
+  "primary_sources": [
+    "https://github.com/artificemachine/superharness/blob/8bd54bc1ea7db2391190de25087bc638d503e549/src/superharness/commands/rules.py",
+    "https://github.com/artificemachine/superharness/blob/8bd54bc1ea7db2391190de25087bc638d503e549/tests/unit/test_rules.py",
+    "https://github.com/artificemachine/superharness/blob/8bd54bc1ea7db2391190de25087bc638d503e549/tests/unit/test_rules_injection.py",
+    "https://github.com/artificemachine/superharness/blob/8bd54bc1ea7db2391190de25087bc638d503e549/src/superharness/engine/handoff_generator.py",
+    "https://github.com/artificemachine/superharness/blob/8bd54bc1ea7db2391190de25087bc638d503e549/src/superharness/commands/init_project.py",
+    "https://github.com/opensiro/vsm-harness-index/blob/main/assessments/superharness.md"
+  ],
+  "observations": [
+    {
+      "observation_id": "superharness-project-rules-injection-8bd54bc",
+      "kind": "first-party-native-project-rule-fixture-and-injection-tests",
+      "evidence_surface": "superharness canonical project-rule parser, adapter/handoff consumption tests, and initialization/runtime implementation",
+      "reviewed_revision": "8bd54bc1ea7db2391190de25087bc638d503e549",
+      "rule_fixture_witness": {
+        "path": "tests/unit/test_rules.py::rules_project",
+        "storage_surface": "<project>/.superharness/rules/*.md",
+        "concrete_active_rule_id": "alpha",
+        "concrete_active_rule_body": "Alpha body content. This rule covers state backend policy.",
+        "concrete_deprecated_rule_id": "beta",
+        "all_rules_text_recovers_fixture_rules": true,
+        "adapter_payload_exposes_rule_ids": [
+          "alpha",
+          "beta"
+        ],
+        "handoff_loader_recovers_fixture_rules": [
+          "alpha",
+          "beta"
+        ]
+      },
+      "implementation_support": {
+        "rules_cli_operations": [
+          "list",
+          "show",
+          "search"
+        ],
+        "rules_cli_mutation_operation_present": false,
+        "init_project_creates_rules_directory": true,
+        "rule_parser_reads_markdown_with_yaml_frontmatter": true,
+        "all_rules_text_reads_project_rule_files": true
+      },
+      "result_summary": "At the canonical assessed superharness revision, first-party native tests construct concrete project-rule files and verify those rules are parsed and exposed through adapter payload and handoff-loading surfaces. The shipped rule CLI reads, lists, shows, and searches the project rule directory, and project initialization creates the rules surface.",
+      "notes": "This record is function-neutral. The concrete rule files are created directly by test fixture setup rather than through an exercised owner/operator keep, approve, edit, or amendment path. The shipped rules CLI at this revision is read-only with respect to rule mutation. The record therefore establishes project-rule representation and downstream transport/consumption mechanics, not a tested legitimate authoritative policy decision, autonomous ultimate-policy ownership, production deployment history, or a materially matched cross-system result."
+    }
+  ]
+}
