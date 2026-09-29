@@ -17,6 +17,7 @@
   "checkpoint_parent": {
     "capability_main_revision": "2365e1ec10e441bcfa06f76cf928bd6326bc5b88",
     "registry_observation_count_before": 113,
+    "registry_observation_count_after": 119,
     "prior_frontierharness_handoff": "paper-discovery/och-obs-1/w1-2026-09-30-pass4-reuse-handoff.json",
     "prior_handoffs_mutated": false
   },
@@ -94,15 +95,29 @@
   ],
   "non_admission_dispositions": [],
   "validation": {
-    "status": "pending",
-    "commands_required": [
+    "status": "success",
+    "trigger_revision": "8b9ec143baa8b6031b8cb23020900311d7861451",
+    "generated_registry_revision": "9fbbd78cf9602859100889129ea52c829924042a",
+    "workflow_reverted_revision": "49faa50af1a0ea960ca03feea1949597850ca812",
+    "workflow": {
+      "name": "validate",
+      "run_id": 36642630953,
+      "run_number": 168,
+      "job_id": 109658205791,
+      "conclusion": "success"
+    },
+    "commands": [
       "python system-observations/render_registry.py",
       "python scripts/admission_check.py system-observations/dsh-frontierharness-kimi-k3-external-reproduced-unclear.json",
       "python scripts/admission_check.py system-observations/kimi-code-frontierharness-kimi-k3-external-reproduced-unclear.json",
       "python scripts/admission_check.py system-observations/exo-harness-frontierharness-kimi-k3-external-reproduced-unclear.json",
       "python scripts/validate_repository.py"
     ],
-    "results": []
+    "results": [
+      {"command": "python system-observations/render_registry.py", "result": "success", "workflow_step": "Regenerate neutral registry views"},
+      {"command": "python scripts/validate_repository.py", "result": "success", "workflow_step": "Run python scripts/validate_repository.py"},
+      {"command": "record-specific admission checks for all three new raw records", "result": "success", "workflow_step": "Exercise live evidence admission path"}
+    ]
   },
   "handoff_boundary": {
     "structural_classification_performed": false,
