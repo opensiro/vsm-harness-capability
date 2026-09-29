@@ -59,7 +59,7 @@
       "tracking_issue": 41,
       "review_ref": "vsm-projections/benchmark-family-map/S2-HEARTHNET-REVIEW.md",
       "delta_ref": "vsm-projections/s2/post-closure-deltas/hearthnet-conflict-resolution-2026-09-28.json",
-      "non_claim": "Direct S2 fit belongs only to the HearthNet benchmark/demo composed disturbance-to-arbitration-to-deferral boundary. It does not claim native autonomous Dewey detection, does not transfer canonical S2 ownership to HearthNet or an underlying model, and does not select an S2 primary baseline."
+      "non_claim": "Direct S2 fit belongs only to the HearthNet benchmark/demo composed disturbance-to-arbitration-to-deferral boundary. It does not claim native autonomous Dewey detection, does not transfer canonical S2 ownership to HearthNet or an underlying model, and it does not select an S2 primary baseline."
     },
     {
       "function": "S3",
@@ -88,6 +88,20 @@
       "review_ref": "vsm-projections/benchmark-family-map/S5-HRAO-E-REVIEW.md",
       "delta_ref": "vsm-projections/s5/post-closure-deltas/hrao-e-production-constitutional-amendment-loop-2026-09-29.json",
       "non_claim": "Direct S5 fit belongs only to the first-party-reported HRAO-E production constitutional organization. It does not transfer production S5 ownership to the portable constitutional-agent-governance library, does not establish canonical harness linkage or independent reproduction, and does not select an S5 primary baseline."
+    },
+    {
+      "function": "S5",
+      "benchmark_id": "dotcraft-agent-profile-thread-enactment",
+      "benchmark_name": "DotCraft Agent Profile thread enactment witness",
+      "fit": "direct",
+      "primary_source": "https://github.com/DotHarness/dotcraft/blob/a08c8b35497f6ba9148f6ede80839835dcc8812a/tests/DotCraft.AppServer.Tests/Protocol/AppServer/AgentProfileManagementTests.cs",
+      "evaluated_object": "Canonical DotCraft native parent-governed Agent Profile boundary in which a durable profile carrying role/tool/approval policy is selected for a new thread, resolved into the persisted native thread runtime contract, and retained after the source profile is removed.",
+      "evaluation_mode": "first-party-native-integration-test-profile-to-persisted-thread-contract",
+      "system_linkage": "canonical-native-descriptive",
+      "tracking_issue": 61,
+      "review_ref": "vsm-projections/benchmark-family-map/S5-DOTCRAFT-REVIEW.md",
+      "delta_ref": "vsm-projections/s5/post-closure-deltas/dotcraft-agent-profile-enactment-2026-09-29.json",
+      "non_claim": "Direct S5 fit belongs only to canonical DotCraft at the parent-owned profile-to-persisted-runtime-contract boundary. The integration test does not demonstrate autonomous S5 ownership, a production task run, a downstream tool denial after enactment, or a materially matched comparison with Ouroboros, and it does not select an S5 primary baseline."
     }
   ]
 }
