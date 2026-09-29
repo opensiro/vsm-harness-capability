@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "experimental-non-normative",
+  "tracking_issue": 61,
+  "reviewed_at": "2026-09-29",
+  "source_revision": "DotHarness/dotcraft@a08c8b35497f6ba9148f6ede80839835dcc8812a",
+  "delta_class": "new-direct-public-evidence-no-primary-reopen",
+  "function": "S5",
+  "benchmark_id": "dotcraft-agent-profile-thread-enactment",
+  "benchmark_fit": "direct",
+  "system_linkage": "canonical-native-descriptive",
+  "boundary_class": "canonical-native-parent-governed-profile-to-thread-runtime-contract",
+  "canonical_harness_id": "dotcraft",
+  "canonical_system_eligible": true,
+  "observation_id": "dotcraft-agent-profile-thread-snapshot-a08c8b3",
+  "raw_observation_ref": "../../../system-observations/dotcraft.json#dotcraft-agent-profile-thread-snapshot-a08c8b3",
+  "evidence_change": "A neutral first-party integration-test observation now exercises the canonical DotCraft Agent Profile path at the exact assessed revision: a parent-authored durable profile is created and selected for a native thread, its role/tool/approval policy is resolved into the thread runtime contract, and that enacted snapshot persists after the source profile is removed.",
+  "control_boundary": "Credit direct descriptive S5 only to canonical DotCraft at the parent-owned Agent Profile to persisted native thread-contract boundary. The parent operator owns authoritative profile save/edit/select according to the canonical assessment; DotCraft runtime compilation and enforcement mechanisms support the returned policy. Do not infer autonomous S5 ownership or downstream task behavior not exercised by the test.",
+  "primary_reopen": false,
+  "reopen_gate_status": {
+    "second_canonical_native_or_adapter_preserved_materially_comparable_direct_s5_observation": false,
+    "matched_multi_canonical_authority_change_operation_protocol": false,
+    "adapter_preserved_canonical_rows_from_direct_family": false
+  },
+  "disposition": "retain-evidence-backed-gap",
+  "reason": "DotCraft adds a second canonical native descriptive direct S5 observation, but its controlled integration-test surface ends at the persisted thread runtime configuration and is not materially matched to the existing Ouroboros repository-history witness, which includes owner enactment plus executable return and later canonical lineage. The evidence therefore strengthens canonical S5 depth without satisfying the frozen closure's materially comparable multi-canonical reopen requirement.",
+  "non_claim": "This delta does not claim autonomous DotCraft S5 ownership, a production deployment history, an observed downstream model turn or tool denial after profile enactment, a materially matched DotCraft-versus-Ouroboros comparison, an S5 primary ranking, or closure of the existing S5 primary evidence gap."
+}
