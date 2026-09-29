@@ -136,12 +136,31 @@
   ],
   "non_admission_dispositions": [],
   "validation": {
-    "status": "pending",
-    "commands_required": [
-      "python system-observations/render_registry.py --check",
-      "python scripts/validate_repository.py"
+    "status": "success",
+    "validated_revision": "0a4010c6993cdf48804c009014322fafdd2b436b",
+    "workflow": {
+      "name": "validate",
+      "run_id": 36637379809,
+      "run_number": 151,
+      "job_id": 109641227917,
+      "conclusion": "success"
+    },
+    "commands": [
+      "python scripts/validate_repository.py",
+      "python system-observations/render_registry.py --check"
     ],
-    "results": []
+    "results": [
+      {
+        "command": "python scripts/validate_repository.py",
+        "result": "success",
+        "workflow_step": "Run python scripts/validate_repository.py"
+      },
+      {
+        "command": "python system-observations/render_registry.py --check",
+        "result": "success-via-validate_repository-subprocess",
+        "workflow_step": "Run python scripts/validate_repository.py"
+      }
+    ]
   },
   "handoff_boundary": {
     "structural_classification_performed": false,
