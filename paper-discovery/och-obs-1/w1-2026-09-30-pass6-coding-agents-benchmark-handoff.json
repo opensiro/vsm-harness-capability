@@ -17,6 +17,7 @@
   "checkpoint_parent": {
     "capability_main_revision": "8db15ee4c78fff59b934303db437d48958d71bd8",
     "registry_observation_count_before": 101,
+    "registry_observation_count_after": 113,
     "prior_handoffs_mutated": false
   },
   "collection_state": {
@@ -156,15 +157,29 @@
     }
   ],
   "validation": {
-    "status": "pending",
-    "commands_required": [
+    "status": "success",
+    "trigger_revision": "237ffdcfa6d9966c06e8fafa5ff3894ac1b92980",
+    "generated_registry_revision": "6ece8f8de76176fd9fe21d452bf7b2ee9666a783",
+    "workflow_reverted_revision": "3176bb4c9b3ddb3a7eac4d0c50b12ff83eb64bd9",
+    "workflow": {
+      "name": "validate",
+      "run_id": 36641935021,
+      "run_number": 161,
+      "job_id": 109655973243,
+      "conclusion": "success"
+    },
+    "commands": [
       "python system-observations/render_registry.py",
       "python scripts/admission_check.py system-observations/kiro-coding-agents-benchmark-exercism15-external-reproduced-adapter-preserved.json",
       "python scripts/admission_check.py system-observations/codex-coding-agents-benchmark-exercism15-external-reproduced-adapter-preserved.json",
       "python scripts/admission_check.py system-observations/claude-code-coding-agents-benchmark-exercism15-external-reproduced-adapter-preserved.json",
       "python scripts/validate_repository.py"
     ],
-    "results": []
+    "results": [
+      {"command": "python system-observations/render_registry.py", "result": "success", "workflow_step": "Regenerate neutral registry views"},
+      {"command": "python scripts/validate_repository.py", "result": "success", "workflow_step": "Run python scripts/validate_repository.py"},
+      {"command": "record-specific admission checks for all three new raw records", "result": "success", "workflow_step": "Exercise live evidence admission path"}
+    ]
   },
   "handoff_boundary": {
     "structural_classification_performed": false,
