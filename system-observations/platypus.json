@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-29",
+  "evidence_source_class": "first-party-reported",
+  "system_name": "Platypus Workspace runtime",
+  "canonical_harness_id": "platypus",
+  "canonical_assessment_ref": "assessments/platypus.md",
+  "canonical_review_ref": "5dda4dcdb92c209c8c8df953f0e9261cd018c2d7",
+  "published_implementation": {
+    "system_compatibility": "native-system",
+    "source_revision": "5dda4dcdb92c209c8c8df953f0e9261cd018c2d7"
+  },
+  "primary_sources": [
+    "https://github.com/willdady/platypus/blob/5dda4dcdb92c209c8c8df953f0e9261cd018c2d7/apps/backend/src/routes/workspace.ts",
+    "https://github.com/willdady/platypus/blob/5dda4dcdb92c209c8c8df953f0e9261cd018c2d7/apps/backend/src/routes/workspace.test.ts",
+    "https://github.com/willdady/platypus/blob/5dda4dcdb92c209c8c8df953f0e9261cd018c2d7/packages/schemas/index.ts",
+    "https://github.com/willdady/platypus/blob/5dda4dcdb92c209c8c8df953f0e9261cd018c2d7/apps/frontend/components/workspace-form.test.tsx",
+    "https://github.com/willdady/platypus/blob/5dda4dcdb92c209c8c8df953f0e9261cd018c2d7/apps/backend/src/system-prompt.ts",
+    "https://github.com/willdady/platypus/blob/5dda4dcdb92c209c8c8df953f0e9261cd018c2d7/apps/backend/src/system-prompt.test.ts",
+    "https://github.com/willdady/platypus/blob/5dda4dcdb92c209c8c8df953f0e9261cd018c2d7/apps/backend/src/services/chat-execution.ts",
+    "https://github.com/willdady/platypus/blob/5dda4dcdb92c209c8c8df953f0e9261cd018c2d7/apps/backend/src/services/chat-execution.queries.test.ts",
+    "https://github.com/willdady/platypus/blob/5dda4dcdb92c209c8c8df953f0e9261cd018c2d7/apps/docs/content/concepts/system-prompt.mdx",
+    "https://github.com/opensiro/vsm-harness-index/blob/main/assessments/platypus.md"
+  ],
+  "observations": [
+    {
+      "observation_id": "platypus-workspace-context-authorized-update-5dda4dc",
+      "kind": "first-party-native-workspace-configuration-test",
+      "evidence_surface": "Platypus canonical Workspace Context configuration and owner/admin update path",
+      "reviewed_revision": "5dda4dcdb92c209c8c8df953f0e9261cd018c2d7",
+      "configuration_witness": {
+        "workspace_context_is_updateable_field": true,
+        "update_route_requires_workspace_access": true,
+        "documented_update_authority": "workspace-owner-or-org-admin",
+        "validated_update_fields_are_persisted": true,
+        "concrete_loaded_context_fixture": "Be brief",
+        "form_save_payload_contains_context_field": true
+      },
+      "result_summary": "At the canonical assessed Platypus revision, Workspace Context is a validated Workspace update field on the owner/org-admin update surface; first-party frontend tests load a concrete `Be brief` Context value and exercise the Workspace save payload, while backend route tests exercise the authorized Workspace update path.",
+      "notes": "This record is function-neutral. The backend route test changes the Workspace name rather than a non-empty Context value, and the frontend save regression sends an empty Context as null; this observation therefore does not claim one test persists a concrete changed Context value and later consumes that same value."
+    },
+    {
+      "observation_id": "platypus-workspace-context-prompt-render-5dda4dc",
+      "kind": "first-party-native-system-prompt-context-test",
+      "evidence_surface": "Platypus canonical Workspace Context system-prompt regression",
+      "reviewed_revision": "5dda4dcdb92c209c8c8df953f0e9261cd018c2d7",
+      "prompt_witness": {
+        "workspace_context_fixture": "We sell rare books.",
+        "workspace_context_rendered": true,
+        "rendered_boundary": "<workspace> fragment",
+        "whitespace_only_context_omitted": true
+      },
+      "result_summary": "At the canonical assessed Platypus revision, a first-party system-prompt regression sets a concrete Workspace Context value (`We sell rare books.`) and verifies that the renderer places that exact value inside the native `<workspace>` system-prompt fragment.",
+      "notes": "This record is function-neutral. The prompt-rendering regression receives Context through its test fixture; it does not itself perform the Workspace owner/admin update that persisted the value."
+    },
+    {
+      "observation_id": "platypus-workspace-context-turn-consumption-path-5dda4dc",
+      "kind": "first-party-native-turn-context-wiring",
+      "evidence_surface": "Platypus canonical persisted Workspace row to Chat-turn system-prompt path",
+      "reviewed_revision": "5dda4dcdb92c209c8c8df953f0e9261cd018c2d7",
+      "turn_witness": {
+        "prepare_turn_reads_current_workspace_row": true,
+        "workspace_context_passed_to_prompt_renderer": true,
+        "rendered_prompt_returned_as_stream_system": true,
+        "drizzle_backed_prepare_turn_regression_exists": true,
+        "drizzle_regression_workspace_context_fixture": null,
+        "documentation_says_workspace_context_is_composed_on_chat_turns": true
+      },
+      "result_summary": "At the canonical assessed Platypus revision, the shipped `prepareChatTurn()` path reads the current Workspace row, passes `workspace.context` into `renderSystemPrompt(...)`, and returns the composed prompt as the Chat turn's `stream.system`; a first-party Drizzle-backed integration suite exercises this turn-preparation path.",
+      "notes": "This record is function-neutral. The Drizzle-backed integration fixture has Workspace Context set to null, so this wiring evidence must not be combined with the separate concrete prompt fixture into a claim that one empirical run persisted and then consumed the same changed Context value."
+    }
+  ]
+}
