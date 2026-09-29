@@ -130,6 +130,20 @@
       "review_ref": "vsm-projections/benchmark-family-map/S5-MARVEEN-REVIEW.md",
       "delta_ref": "vsm-projections/s5/post-closure-deltas/marveen-installation-identity-mutation-2026-09-29.json",
       "non_claim": "Direct S5 fit belongs only to canonical Marveen at the parent-owned installation identity mutation to runtime identity-readback boundary. The public witness does not demonstrate autonomous S5 ownership, execution of the shipped self-rename skill in the live test, a later model turn following the changed persona, or a materially matched primary comparison, and it does not select an S5 primary baseline."
+    },
+    {
+      "function": "S5",
+      "benchmark_id": "octos-soul-policy-state-return",
+      "benchmark_name": "Octos soul-policy state-return witness",
+      "fit": "direct",
+      "primary_source": "https://github.com/octos-org/octos/blob/9f6311afd4e00324cdb89d957461cf861f4f2630/crates/octos-cli/src/gateway_dispatcher.rs",
+      "evaluated_object": "Canonical Octos native parent/user-governed soul-personality boundary in which profile-wide and per-chat soul policy is changed through the shipped gateway path, effective-state precedence/reset is exercised, and the canonical runtime consumes profile soul state during new-session system-prompt construction.",
+      "evaluation_mode": "first-party-native-regression-soul-mutation-effective-state-readback-with-runtime-prompt-consumption-support",
+      "system_linkage": "canonical-native-descriptive",
+      "tracking_issue": 70,
+      "review_ref": "vsm-projections/benchmark-family-map/S5-OCTOS-REVIEW.md",
+      "delta_ref": "vsm-projections/s5/post-closure-deltas/octos-soul-policy-state-return-2026-09-29.json",
+      "non_claim": "Direct S5 fit belongs only to canonical Octos at the parent/user-owned soul-personality mutation to effective-state/new-session-runtime-context boundary. The regression does not demonstrate autonomous S5 ownership, equivalence with the separate .octos/SOUL.md or .octos/IDENTITY.md bootstrap stores, a later model turn under the changed soul, or a materially matched primary comparison, and it does not select an S5 primary baseline."
     }
   ]
 }
