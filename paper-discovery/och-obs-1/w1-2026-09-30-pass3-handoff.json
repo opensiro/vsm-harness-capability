@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "manifest_id": "och-obs-1-w1-2026-09-30-pass3",
+  "recorded_at": "2026-09-30",
+  "work_item": {
+    "repository": "opensiro/vsm-harness-capability",
+    "issue": 93,
+    "role": "W1 public-evidence discovery and neutral admission"
+  },
+  "protocol": {
+    "id": "OCH-OBS-1",
+    "version": "1.0.0",
+    "repository": "opensiro/vsm-harness-research",
+    "revision": "5462ffadffd7189ae10e44e22d357bc6162a6038",
+    "path": "paper/studies/observational-cross-harness/v1/PROTOCOL.md",
+    "collection_cutoff_utc": "2026-10-20T23:59:59Z"
+  },
+  "checkpoint_parent": {
+    "capability_main_revision": "2035a038aca1b76cb17889b34e1294889de28572",
+    "prior_handoff": "paper-discovery/och-obs-1/w1-2026-09-29-handoff.json",
+    "prior_handoff_mutated": false
+  },
+  "collection_state": {
+    "status": "active",
+    "documented_discovery_passes_completed_after_this_checkpoint": 3,
+    "cutoff_reached": false
+  },
+  "discovery_pass": {
+    "pass_id": "w1-pass-003-v4-flash-factorial",
+    "method": "Revisit a source deferred in the previous W1 checkpoint and inspect one immutable repository revision for concrete harness identities, result artifacts, benchmark conditions, task isolation, evaluator path, model configuration and material unknowns. Admission is independent of outcome direction.",
+    "source_repository": "https://github.com/DLOVRIC2/v4-flash-factorial",
+    "source_revision": "402167b0999b63f3292d64afb4aa6035415235f9",
+    "source_artifacts": [
+      "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/README.md",
+      "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/RESULTS.md",
+      "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/eval/run_factorial.py",
+      "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/eval/run_cell.py",
+      "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/eval/score_sweep.py",
+      "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/serve/quants.yaml",
+      "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/harness/opencode.py",
+      "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/harness/claudecode.py",
+      "https://github.com/DLOVRIC2/v4-flash-factorial/blob/402167b0999b63f3292d64afb4aa6035415235f9/harness/bareloop.py"
+    ],
+    "prior_deferred_disposition": "admitted-in-pass-003"
+  },
+  "newly_admitted_observation_ids": [
+    "opencode__v4-flash-factorial__deepseek-v4-flash-0731__ud-q8-k-xl__402167b0",
+    "claude-code__v4-flash-factorial__deepseek-v4-flash-0731__ud-q8-k-xl__402167b0",
+    "v4-flash-factorial-bare-loop__deepseek-v4-flash-0731__ud-q8-k-xl__402167b0",
+    "opencode__v4-flash-factorial__deepseek-v4-flash-0731__ud-q2-k-xl__402167b0",
+    "claude-code__v4-flash-factorial__deepseek-v4-flash-0731__ud-q2-k-xl__402167b0",
+    "v4-flash-factorial-bare-loop__deepseek-v4-flash-0731__ud-q2-k-xl__402167b0",
+    "opencode__v4-flash-factorial__deepseek-v4-flash-0731__ud-iq1-s__402167b0",
+    "claude-code__v4-flash-factorial__deepseek-v4-flash-0731__ud-iq1-s__402167b0",
+    "v4-flash-factorial-bare-loop__deepseek-v4-flash-0731__ud-iq1-s__402167b0"
+  ],
+  "reused_existing_observation_ids": [],
+  "candidate_same_model_comparison_groups": [
+    {
+      "group_id": "v4-flash-factorial__deepseek-v4-flash-0731__ud-q8-k-xl__402167b0",
+      "observation_ids": [
+        "opencode__v4-flash-factorial__deepseek-v4-flash-0731__ud-q8-k-xl__402167b0",
+        "claude-code__v4-flash-factorial__deepseek-v4-flash-0731__ud-q8-k-xl__402167b0",
+        "v4-flash-factorial-bare-loop__deepseek-v4-flash-0731__ud-q8-k-xl__402167b0"
+      ],
+      "source_known_dimensions": [
+        "DeepSeek-V4-Flash-0731 checkpoint family and UD-Q8_K_XL quantization",
+        "same stratified 30-task SWE-bench Verified task set and task order",
+        "same benchmark repository revision",
+        "same local llama-server/proxy measurement membrane",
+        "same context size 262144, temperature 0.6, top_p 0.95, seed 0 and max_tokens 32000",
+        "same 1800-second per-task wall-clock timeout",
+        "same single-machine execution and between-cell cooldown policy",
+        "same repository scoring path over stored patches",
+        "benchmark task worktree materialization/release per task"
+      ],
+      "explicit_unknown_or_nonidentical_dimensions": [
+        "exact upstream OpenCode package version/revision",
+        "exact upstream Claude Code package version/revision",
+        "exact external SWE-bench evaluator package/revision",
+        "exact llama.cpp build revision despite build/flags being held fixed by the source",
+        "calendar execution date for each cell",
+        "OpenCode wrapper has no enforceable turn cap while Claude Code and bare-loop use max_turns=40",
+        "persistent harness-side state outside benchmark task worktrees is not established for OpenCode or Claude Code"
+      ],
+      "paper_eligibility": "not-assessed-by-W1"
+    },
+    {
+      "group_id": "v4-flash-factorial__deepseek-v4-flash-0731__ud-q2-k-xl__402167b0",
+      "observation_ids": [
+        "opencode__v4-flash-factorial__deepseek-v4-flash-0731__ud-q2-k-xl__402167b0",
+        "claude-code__v4-flash-factorial__deepseek-v4-flash-0731__ud-q2-k-xl__402167b0",
+        "v4-flash-factorial-bare-loop__deepseek-v4-flash-0731__ud-q2-k-xl__402167b0"
+      ],
+      "source_known_dimensions": [
+        "DeepSeek-V4-Flash-0731 checkpoint family and UD-Q2_K_XL quantization",
+        "same stratified 30-task SWE-bench Verified task set and task order",
+        "same benchmark repository revision",
+        "same local llama-server/proxy measurement membrane",
+        "same context size 262144, temperature 0.6, top_p 0.95, seed 0 and max_tokens 32000",
+        "same 1800-second per-task wall-clock timeout",
+        "same single-machine execution and between-cell cooldown policy",
+        "same repository scoring path over stored patches",
+        "benchmark task worktree materialization/release per task"
+      ],
+      "explicit_unknown_or_nonidentical_dimensions": [
+        "exact upstream OpenCode package version/revision",
+        "exact upstream Claude Code package version/revision",
+        "exact external SWE-bench evaluator package/revision",
+        "exact llama.cpp build revision despite build/flags being held fixed by the source",
+        "calendar execution date for each cell",
+        "OpenCode wrapper has no enforceable turn cap while Claude Code and bare-loop use max_turns=40",
+        "persistent harness-side state outside benchmark task worktrees is not established for OpenCode or Claude Code"
+      ],
+      "paper_eligibility": "not-assessed-by-W1"
+    },
+    {
+      "group_id": "v4-flash-factorial__deepseek-v4-flash-0731__ud-iq1-s__402167b0",
+      "observation_ids": [
+        "opencode__v4-flash-factorial__deepseek-v4-flash-0731__ud-iq1-s__402167b0",
+        "claude-code__v4-flash-factorial__deepseek-v4-flash-0731__ud-iq1-s__402167b0",
+        "v4-flash-factorial-bare-loop__deepseek-v4-flash-0731__ud-iq1-s__402167b0"
+      ],
+      "source_known_dimensions": [
+        "DeepSeek-V4-Flash-0731 checkpoint family and UD-IQ1_S quantization",
+        "same stratified 30-task SWE-bench Verified task set and task order",
+        "same benchmark repository revision",
+        "same local llama-server/proxy measurement membrane",
+        "same context size 262144, temperature 0.6, top_p 0.95, seed 0 and max_tokens 32000",
+        "same 1800-second per-task wall-clock timeout",
+        "same single-machine execution and between-cell cooldown policy",
+        "same repository scoring path over stored patches",
+        "benchmark task worktree materialization/release per task"
+      ],
+      "explicit_unknown_or_nonidentical_dimensions": [
+        "exact upstream OpenCode package version/revision",
+        "exact upstream Claude Code package version/revision",
+        "exact external SWE-bench evaluator package/revision",
+        "exact llama.cpp build revision despite build/flags being held fixed by the source",
+        "calendar execution date for each cell",
+        "OpenCode wrapper has no enforceable turn cap while Claude Code and bare-loop use max_turns=40",
+        "persistent harness-side state outside benchmark task worktrees is not established for OpenCode or Claude Code"
+      ],
+      "paper_eligibility": "not-assessed-by-W1"
+    }
+  ],
+  "non_admission_dispositions": [
+    {
+      "surface": "v4-flash-factorial Aider Q8 probe",
+      "status": "not-admitted-in-this-batch",
+      "reason": "Only a 5-task Q8 probe is published while the complete candidate groups use the common 30-task set. W1 preserves the source asymmetry and does not manufacture a matched 30-task Aider result."
+    }
+  ],
+  "validation": {
+    "status": "pending",
+    "commands_required": [
+      "python system-observations/render_registry.py",
+      "python scripts/admission_check.py system-observations/opencode-v4-flash-factorial-external-reproduced-adapter-preserved.json",
+      "python scripts/admission_check.py system-observations/claude-code-v4-flash-factorial-external-reproduced-adapter-preserved.json",
+      "python scripts/admission_check.py system-observations/v4-flash-factorial-bare-loop-control.json",
+      "python scripts/validate_repository.py"
+    ],
+    "results": []
+  },
+  "handoff_boundary": {
+    "structural_classification_performed": false,
+    "historical_linkage_adjudicated": false,
+    "comparison_tier_assigned": false,
+    "statistical_interpretation_performed": false,
+    "winner_declared": false
+  }
+}
