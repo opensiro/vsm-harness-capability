@@ -28,6 +28,8 @@ jobs:
             system-observations/codex-wildclawbench-external-reproduced-adapter-preserved.json \
             system-observations/hermes-agent-wildclawbench-external-reproduced-adapter-preserved.json \
             system-observations/openclaw-wildclawbench-external-reproduced-adapter-preserved.json \
+            system-observations/claude-code-agentic-coding-harness-benchmarks-swe2-external-reproduced-unclear.json \
+            system-observations/pi-agentic-coding-harness-benchmarks-swe2-external-reproduced-unclear.json \
             system-observations/skillrevise.json
           do
             python scripts/admission_check.py "$record"
