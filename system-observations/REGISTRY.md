@@ -5,7 +5,7 @@ Status: **generated, experimental, non-normative**
 Generated from the raw JSON records in this directory by `render_registry.py`.
 Raw evidence payloads remain only in the raw record; this table is an identity/provenance projection, not a second result database.
 
-Raw observations: **66**
+Raw observations: **67**
 
 | System | Canonical harness | Observation | Evidence surface(s) | Kind | Provenance | Compatibility | Raw record |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -25,6 +25,7 @@ Raw observations: **66**
 | Codex | [codex](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/codex.md) | `codex__wildclawbench-harness-comparison__gpt-5.4` | WildClawBench harness comparison | `system-benchmark-result` | `external-reproduced` | `adapter-preserved` | [codex-wildclawbench-external-reproduced-adapter-preserved.json](codex-wildclawbench-external-reproduced-adapter-preserved.json) |
 | Codex | [codex](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/codex.md) | `futuresim-v1-codex-0125-gpt55` | FutureSim v1 | `forecasting-benchmark-result` | `external-reproduced` | `adapter-preserved` | [futuresim-codex.json](futuresim-codex.json) |
 | data-to-paper | [data-to-paper](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/data-to-paper.md) | `data-to-paper-review-revision-2024` | Data-to-Paper reviewer-feedback-to-revision publication example | `operational-publication-witness` | `first-party-reported` | `native-system` | [data-to-paper-review-revision.json](data-to-paper-review-revision.json) |
+| DotCraft Agent Profile thread runtime | [dotcraft](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/dotcraft.md) | `dotcraft-agent-profile-thread-snapshot-a08c8b3` | DotCraft ThreadStart_WithAgentProfile_PersistsResolvedConfigurationSnapshot integration test | `first-party-native-profile-to-thread-integration-test` | `first-party-reported` | `native-system` | [dotcraft.json](dotcraft.json) |
 | Evo-Bench benchmark organization | — | `evo-bench-heldout-harness-evolution-2026` | Evo-Bench held-out harness-evolution study | `persistent-adaptation-study` | `external-reproduced` | `benchmark-scaffolded` | [evo-bench.json](evo-bench.json) |
 | EvoHarnessBench self-evolving benchmark organization | — | `evoharnessbench-self-evolving-adaptation-v2` | EvoHarnessBench self-evolving adaptation protocol | `persistent-adaptation-study` | `first-party-reported` | `benchmark-scaffolded` | [evoharnessbench.json](evoharnessbench.json) |
 | GovSim-SelfGovern benchmark society | — | `govsim-selfgovern-membership-authority-2026-09` | GovSim-SelfGovern | `membership-authority-study` | `first-party-reported` | `benchmark-scaffolded` | [govsim-selfgovern.json](govsim-selfgovern.json) |
