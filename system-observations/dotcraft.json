@@ -4,6 +4,8 @@
   "evidence_source_class": "first-party-reported",
   "system_name": "DotCraft Agent Profile thread runtime",
   "canonical_harness_id": "dotcraft",
+  "canonical_assessment_ref": "assessments/dotcraft.md",
+  "canonical_review_ref": "a08c8b35497f6ba9148f6ede80839835dcc8812a",
   "published_implementation": {
     "system_compatibility": "native-system",
     "source_revision": "a08c8b35497f6ba9148f6ede80839835dcc8812a",
