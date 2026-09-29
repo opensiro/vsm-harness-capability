@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-29",
+  "evidence_source_class": "first-party-reported",
+  "system_name": "Bernstein governance runtime",
+  "canonical_harness_id": "bernstein",
+  "canonical_assessment_ref": "assessments/bernstein.md",
+  "canonical_review_ref": "c3d317385a058ae2b5f478399373d09d84d80962",
+  "published_implementation": {
+    "system_compatibility": "native-system",
+    "source_revision": "c3d317385a058ae2b5f478399373d09d84d80962",
+    "historical_relation": "The reviewed-plan apply/receipt substrate was introduced by commit fd08e0aba89284e1476a5847abcab1dd2701ec38, which is an ancestor of the canonical assessed Bernstein revision."
+  },
+  "primary_sources": [
+    "https://github.com/sipyourdrink-ltd/bernstein/blob/c3d317385a058ae2b5f478399373d09d84d80962/src/bernstein/core/govern/proposal.py",
+    "https://github.com/sipyourdrink-ltd/bernstein/blob/c3d317385a058ae2b5f478399373d09d84d80962/tests/unit/test_govern_proposal.py",
+    "https://github.com/sipyourdrink-ltd/bernstein/blob/c3d317385a058ae2b5f478399373d09d84d80962/tests/unit/core/govern/test_apply.py",
+    "https://github.com/sipyourdrink-ltd/bernstein/commit/fd08e0aba89284e1476a5847abcab1dd2701ec38",
+    "https://github.com/opensiro/vsm-harness-index/blob/main/assessments/bernstein.md"
+  ],
+  "observations": [
+    {
+      "observation_id": "bernstein-draftproposal-human-signature-c3d3173",
+      "kind": "first-party-native-governance-signature-test",
+      "evidence_surface": "Bernstein canonical DraftProposal human-signature regression",
+      "reviewed_revision": "c3d317385a058ae2b5f478399373d09d84d80962",
+      "signature_witness": {
+        "initial_status": "draft",
+        "signed_status": "signed",
+        "signature_fixture": "human-hmac-signature",
+        "playbook_fixture_contains_concrete_rule": true,
+        "source_findings_binding_preserved": true,
+        "draft_object_left_unchanged": true
+      },
+      "result_summary": "At the canonical assessed Bernstein revision, first-party tests exercise a concrete governance DraftProposal and the shipped sign(...) transition to a new SIGNED proposal carrying a human-signature value while preserving its findings binding and playbook content.",
+      "notes": "This record is function-neutral. The signature regression does not itself execute the signed proposal or demonstrate a later governed Bernstein run."
+    },
+    {
+      "observation_id": "bernstein-reviewed-plan-apply-receipt-c3d3173",
+      "kind": "first-party-native-reviewed-plan-apply-test",
+      "evidence_surface": "Bernstein canonical govern-plan apply and receipt regression suite",
+      "reviewed_revision": "c3d317385a058ae2b5f478399373d09d84d80962",
+      "historical_evidence_revisions": [
+        "fd08e0aba89284e1476a5847abcab1dd2701ec38"
+      ],
+      "apply_witness": {
+        "reviewed_plan_is_lineage_anchored": true,
+        "declared_state_is_written_to_real_files": true,
+        "environment_drift_refuses_before_mutation": true,
+        "approval_gated_removal_is_tested": true,
+        "idempotent_reapply_is_tested": true,
+        "signed_receipt_projection_is_emitted_and_verified": true
+      },
+      "result_summary": "At the canonical assessed Bernstein revision, first-party govern-apply tests drive a real lineage spine and file-writing applier, exercise reviewed-plan mutation and refusal gates, and verify the resulting receipt/projection.",
+      "notes": "This record is function-neutral. The apply regression uses reviewed GovernPlan fixtures and is recorded separately from the DraftProposal human-signature regression; this admission does not claim the two test surfaces form one end-to-end signed-proposal-to-later-operation chain."
+    }
+  ]
+}
