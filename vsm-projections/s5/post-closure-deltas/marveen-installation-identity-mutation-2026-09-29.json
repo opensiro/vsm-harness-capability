@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "experimental-non-normative",
+  "tracking_issue": 67,
+  "reviewed_at": "2026-09-29",
+  "source_revision": "Szotasz/marveen@b3f6574a76488b3367b26684f9065acca695a00f",
+  "delta_class": "new-direct-public-evidence-no-primary-reopen",
+  "function": "S5",
+  "benchmark_id": "marveen-installation-identity-mutation",
+  "benchmark_fit": "direct",
+  "system_linkage": "canonical-native-descriptive",
+  "boundary_class": "canonical-native-parent-governed-installation-identity-to-runtime-readback",
+  "canonical_harness_id": "marveen",
+  "canonical_system_eligible": true,
+  "observation_id": "marveen-live-install-identity-mutation-pr615-2026-07-15",
+  "raw_observation_ref": "../../../system-observations/marveen.json#marveen-live-install-identity-mutation-pr615-2026-07-15",
+  "evidence_change": "A neutral first-party observation now records a live Marveen test-installation identity mutation on the canonical assessed lineage: the owner-facing identity path changes durable display, owner and persona state while keeping installation plumbing stable, and a later canonical ancestor adds native fresh-read runtime label paths with isolated E2E verification of immediate changed-display-name readback.",
+  "control_boundary": "Credit direct descriptive S5 only to canonical Marveen at the parent-owned installation identity mutation to native runtime identity-readback boundary. Canonical ownership remains P. The evidence does not show that the shipped self-rename skill executed the live witness, does not include upstream maintainer/repository naming decisions, and does not demonstrate a later model turn behaviorally following the changed persona.",
+  "primary_reopen": false,
+  "reopen_gate_status": {
+    "second_canonical_native_or_adapter_preserved_materially_comparable_direct_s5_observation": false,
+    "matched_multi_canonical_authority_change_operation_protocol": false,
+    "adapter_preserved_canonical_rows_from_direct_family": false
+  },
+  "disposition": "retain-evidence-backed-gap",
+  "reason": "Marveen adds a canonical native direct descriptive S5 witness, but its live-install display/persona identity mutation plus runtime label readback is not materially matched to DotCraft profile-to-thread enactment, HugAgentOS project-rule-to-context return, or the frozen Ouroboros constitutional/runtime history witness. The systems do not share one evidence family/version, authority/change treatment, execution protocol, task/evaluator, environment or reset policy. Under BASELINE.md this is additional descriptive evidence rather than a matched primary comparison cell, so the frozen S5 primary gap remains.",
+  "non_claim": "This delta does not claim autonomous Marveen S5 ownership, empirical execution of the shipped self-rename skill in the PR #615 live test, a subsequent model turn or task outcome under the changed persona, production deployment history, a materially matched Marveen-versus-DotCraft/HugAgentOS/Ouroboros primary cell, an S5 ranking, or closure of the existing S5 primary evidence gap."
+}
