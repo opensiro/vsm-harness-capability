@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "manifest_id": "och-obs-1-w1-2026-09-29",
+  "recorded_at": "2026-09-29",
+  "work_item": {
+    "repository": "opensiro/vsm-harness-capability",
+    "issue": 93,
+    "role": "W1 public-evidence discovery and neutral admission"
+  },
+  "protocol": {
+    "id": "OCH-OBS-1",
+    "version": "1.0.0",
+    "repository": "opensiro/vsm-harness-research",
+    "revision": "5462ffadffd7189ae10e44e22d357bc6162a6038",
+    "path": "paper/studies/observational-cross-harness/v1/PROTOCOL.md",
+    "collection_cutoff_utc": "2026-10-20T23:59:59Z"
+  },
+  "capability_revisions": {
+    "starting_main": "d964e12f41639d2e3651069cf82ac7c135af72f4",
+    "evidence_admission_revision": "68999d4f247daf1fb61dcc12a68425df7b8fe976"
+  },
+  "collection_state": {
+    "status": "active",
+    "documented_discovery_passes_completed": 2,
+    "minimum_documented_passes_requested_by_protocol": 2,
+    "cutoff_reached": false,
+    "reason": "The protocol requires a fixed collection window through 2026-10-20T23:59:59Z. Completing two passes does not authorize early closure."
+  },
+  "discovery_passes": [
+    {
+      "pass_id": "w1-pass-001-existing-substrate-reuse",
+      "executed_at": "2026-09-29",
+      "method": "Direction-blind scan of the pinned capability neutral registry and existing comparison-group references for identity reuse and duplicate avoidance. Downstream structural or eligibility fields were not adopted.",
+      "sources": [
+        "https://github.com/opensiro/vsm-harness-capability/blob/d964e12f41639d2e3651069cf82ac7c135af72f4/system-observations/registry.psv",
+        "https://github.com/opensiro/vsm-harness-capability/blob/d964e12f41639d2e3651069cf82ac7c135af72f4/comparison-cells/s1-pawbench-v1-qwen3.6-35b-a3b.json",
+        "https://github.com/opensiro/vsm-harness-capability/blob/d964e12f41639d2e3651069cf82ac7c135af72f4/comparison-cells/s1-wildclawbench-gpt-5.4.json"
+      ],
+      "reused_existing_observation_ids": [
+        "hermes-agent__pawbench-v1.0__qwen3.6-35b-a3b__20260529",
+        "openclaw__pawbench-v1.0__qwen3.6-35b-a3b__20260529",
+        "qwenpaw__pawbench-v1.0__qwen3.6-35b-a3b__20260529",
+        "claude-code__wildclawbench-harness-comparison__gpt-5.4",
+        "codex__wildclawbench-harness-comparison__gpt-5.4",
+        "hermes-agent__wildclawbench-harness-comparison__gpt-5.4",
+        "openclaw__wildclawbench-harness-comparison__gpt-5.4"
+      ],
+      "new_observations_admitted": []
+    },
+    {
+      "pass_id": "w1-pass-002-public-cross-harness-github",
+      "executed_at": "2026-09-29",
+      "method": "Direction-blind public GitHub search for inspectable cross-harness benchmark artifacts with repeated model labels across concrete harness identities; admission was based on source/provenance properties rather than outcome direction.",
+      "sources": [
+        "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/6a4a430bc6b78521131d245c5d26e42d7b9c123e/docs/metrics/harness-delta-swe2.json",
+        "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/6a4a430bc6b78521131d245c5d26e42d7b9c123e/README.md"
+      ],
+      "reused_existing_observation_ids": [],
+      "new_observations_admitted": [
+        "claude-code__agentic-coding-swe2__glm-4.7__6a4a430b",
+        "claude-code__agentic-coding-swe2__minimax-m2.1__6a4a430b",
+        "claude-code__agentic-coding-swe2__minimax-m2.5__6a4a430b",
+        "pi__agentic-coding-swe2__glm-4.7__6a4a430b",
+        "pi__agentic-coding-swe2__minimax-m2.1__6a4a430b",
+        "pi__agentic-coding-swe2__minimax-m2.5__6a4a430b"
+      ]
+    }
+  ],
+  "reused_existing_observation_ids": [
+    "hermes-agent__pawbench-v1.0__qwen3.6-35b-a3b__20260529",
+    "openclaw__pawbench-v1.0__qwen3.6-35b-a3b__20260529",
+    "qwenpaw__pawbench-v1.0__qwen3.6-35b-a3b__20260529",
+    "claude-code__wildclawbench-harness-comparison__gpt-5.4",
+    "codex__wildclawbench-harness-comparison__gpt-5.4",
+    "hermes-agent__wildclawbench-harness-comparison__gpt-5.4",
+    "openclaw__wildclawbench-harness-comparison__gpt-5.4"
+  ],
+  "newly_admitted_observation_ids": [
+    "claude-code__agentic-coding-swe2__glm-4.7__6a4a430b",
+    "claude-code__agentic-coding-swe2__minimax-m2.1__6a4a430b",
+    "claude-code__agentic-coding-swe2__minimax-m2.5__6a4a430b",
+    "pi__agentic-coding-swe2__glm-4.7__6a4a430b",
+    "pi__agentic-coding-swe2__minimax-m2.1__6a4a430b",
+    "pi__agentic-coding-swe2__minimax-m2.5__6a4a430b"
+  ],
+  "candidate_same_model_comparison_groups": [
+    {
+      "group_id": "existing-pawbench-v1.0__qwen3.6-35b-a3b",
+      "source_status": "reused-existing-neutral-observations",
+      "observation_ids": [
+        "hermes-agent__pawbench-v1.0__qwen3.6-35b-a3b__20260529",
+        "openclaw__pawbench-v1.0__qwen3.6-35b-a3b__20260529",
+        "qwenpaw__pawbench-v1.0__qwen3.6-35b-a3b__20260529"
+      ],
+      "paper_eligibility": "not-assessed-by-W1"
+    },
+    {
+      "group_id": "existing-wildclawbench__gpt-5.4",
+      "source_status": "reused-existing-neutral-observations",
+      "observation_ids": [
+        "claude-code__wildclawbench-harness-comparison__gpt-5.4",
+        "codex__wildclawbench-harness-comparison__gpt-5.4",
+        "hermes-agent__wildclawbench-harness-comparison__gpt-5.4",
+        "openclaw__wildclawbench-harness-comparison__gpt-5.4"
+      ],
+      "paper_eligibility": "not-assessed-by-W1"
+    },
+    {
+      "group_id": "agentic-coding-swe2__glm-4.7__6a4a430b",
+      "source_status": "newly-admitted",
+      "observation_ids": [
+        "claude-code__agentic-coding-swe2__glm-4.7__6a4a430b",
+        "pi__agentic-coding-swe2__glm-4.7__6a4a430b"
+      ],
+      "unknown_dimensions": [
+        "exact_model_checkpoint_or_endpoint",
+        "material_model_configuration",
+        "exact_harness_revision",
+        "exact_evaluator_revision",
+        "execution_environment",
+        "budget_timeout_repetition_policy",
+        "adaptation_reset_policy",
+        "result_execution_date"
+      ],
+      "paper_eligibility": "not-assessed-by-W1"
+    },
+    {
+      "group_id": "agentic-coding-swe2__minimax-m2.1__6a4a430b",
+      "source_status": "newly-admitted",
+      "observation_ids": [
+        "claude-code__agentic-coding-swe2__minimax-m2.1__6a4a430b",
+        "pi__agentic-coding-swe2__minimax-m2.1__6a4a430b"
+      ],
+      "unknown_dimensions": [
+        "exact_model_checkpoint_or_endpoint",
+        "material_model_configuration",
+        "exact_harness_revision",
+        "exact_evaluator_revision",
+        "execution_environment",
+        "budget_timeout_repetition_policy",
+        "adaptation_reset_policy",
+        "result_execution_date"
+      ],
+      "paper_eligibility": "not-assessed-by-W1"
+    },
+    {
+      "group_id": "agentic-coding-swe2__minimax-m2.5__6a4a430b",
+      "source_status": "newly-admitted",
+      "observation_ids": [
+        "claude-code__agentic-coding-swe2__minimax-m2.5__6a4a430b",
+        "pi__agentic-coding-swe2__minimax-m2.5__6a4a430b"
+      ],
+      "unknown_dimensions": [
+        "exact_model_checkpoint_or_endpoint",
+        "material_model_configuration",
+        "exact_harness_revision",
+        "exact_evaluator_revision",
+        "execution_environment",
+        "budget_timeout_repetition_policy",
+        "adaptation_reset_policy",
+        "result_execution_date"
+      ],
+      "paper_eligibility": "not-assessed-by-W1"
+    }
+  ],
+  "not_admitted": [
+    {
+      "source": "https://github.com/DLOVRIC2/v4-flash-factorial",
+      "status": "deferred-not-admitted",
+      "reason": "A potentially relevant public cross-harness repository was identified, but row-level evidence was not independently verified against one immutable revision during this checkpoint. No observation was admitted from it and no negative inference is made."
+    }
+  ],
+  "validation": {
+    "status": "pending-pr-ci",
+    "commands": [
+      "python system-observations/validate.py",
+      "python system-observations/render_registry.py --check",
+      "python scripts/admission_check.py system-observations/claude-code-agentic-coding-harness-benchmarks-swe2-external-reproduced-unclear.json",
+      "python scripts/admission_check.py system-observations/pi-agentic-coding-harness-benchmarks-swe2-external-reproduced-unclear.json",
+      "python scripts/validate_repository.py"
+    ],
+    "results": []
+  },
+  "handoff_boundary": {
+    "structural_classification_performed": false,
+    "historical_linkage_adjudicated": false,
+    "comparison_tier_assigned": false,
+    "statistical_interpretation_performed": false,
+    "winner_declared": false
+  }
+}
