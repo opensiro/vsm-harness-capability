@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Claude Code",
+  "canonical_harness_id": "claude-code",
+  "canonical_assessment_ref": "assessments/claude-code.md",
+  "canonical_review_ref": "7dd06361110d4417f3edefaf075f41923f0e04c5",
+  "canonical_repository": "https://github.com/anthropics/claude-code",
+  "published_implementation": {
+    "system_compatibility": "adapter-preserved",
+    "historical_relation": "Pinned study code installs Claude Code 2.1.204 and runs the native CLI inside the benchmark container. The package version is known but the exact upstream Claude Code source revision used by that package is not asserted by W1."
+  },
+  "primary_sources": [
+    "https://github.com/JoelNiklaus/harness-optimization/blob/c98a168014412c2333fca635cdcc0c6c901c0ade/coding/README.md",
+    "https://github.com/JoelNiklaus/harness-optimization/blob/c98a168014412c2333fca635cdcc0c6c901c0ade/coding/runners/install_node_harnesses.sh",
+    "https://github.com/JoelNiklaus/harness-optimization/blob/c98a168014412c2333fca635cdcc0c6c901c0ade/coding/scripts/serve_gemma.sh",
+    "https://huggingface.co/buckets/joelniklaus/CodingBenchmarkResults/tree/README.md"
+  ],
+  "observations": [
+    {
+      "observation_id": "claude-code__codingbenchmark-swebench-pro-250__gemma-4-26b-a4b-it__c98a1680",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "codingbenchmark-swebench-pro",
+        "name": "Coding Agent Bench / SWE-bench Pro",
+        "variant": "heldout-test-250",
+        "task_count": 250,
+        "primary_source": "https://github.com/JoelNiklaus/harness-optimization/blob/c98a168014412c2333fca635cdcc0c6c901c0ade/coding/README.md",
+        "artifact_source": "https://huggingface.co/buckets/joelniklaus/CodingBenchmarkResults/tree/README.md"
+      },
+      "result": {
+        "date": null,
+        "published_snapshot_date": "2026-08-12",
+        "agent_label": "claude_code",
+        "harness_version": "2.1.204",
+        "harness_revision": null,
+        "benchmark_revision": "c98a168014412c2333fca635cdcc0c6c901c0ade",
+        "model": "Gemma 4 26B-A4B",
+        "model_config": "google/gemma-4-26B-A4B-it; BF16; local vLLM; thinking enabled by default-chat-template kwargs; context length 262144; max output 32768",
+        "metric": "pass_at_1_percent",
+        "value": 24.4,
+        "tasks": 250,
+        "rollouts_per_task": 1
+      },
+      "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "version-known"},
+      "provenance": {
+        "publisher": "Joel Niklaus / Coding Agent Bench",
+        "checked": true,
+        "os_system": true,
+        "public_logs": true,
+        "public_trajectories": true,
+        "raw_run_artifacts_public": true,
+        "result_readme_xet_hash": "94d46f47c574ef34580cbfd78a5257965bc61cec4ab7ad99a9953d1ab9c7f2fe"
+      },
+      "comparison": {"group": "codingbenchmark-swebench-pro-250__gemma-4-26b-a4b-it__thinking-on__20260812", "mode": "matched-model-candidate", "scope": "coding-swe"},
+      "unknown_dimensions": ["exact Gemma model repository revision/checkpoint hash", "exact vLLM image digest used by the published sweep", "exact SWE-bench Pro upstream dataset/runner revision used to materialize the frozen held-out set", "persistent harness-side state outside released rollout artifacts"],
+      "notes": "The source publishes the main-grid thinking-on value at n=250. The incomplete thinking-off arm is a separate experiment and is not represented by this observation. W1 does not adjudicate downstream comparison eligibility or interpret score direction."
+    }
+  ]
+}

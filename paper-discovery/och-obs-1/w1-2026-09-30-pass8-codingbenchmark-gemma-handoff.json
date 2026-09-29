@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "manifest_id": "och-obs-1-w1-2026-09-30-pass8-codingbenchmark-gemma",
+  "recorded_at": "2026-09-30",
+  "work_item": {"repository": "opensiro/vsm-harness-capability", "issue": 93, "role": "W1 public-evidence discovery and neutral admission"},
+  "protocol": {"id": "OCH-OBS-1", "version": "1.0.0", "repository": "opensiro/vsm-harness-research", "revision": "5462ffadffd7189ae10e44e22d357bc6162a6038", "collection_cutoff_utc": "2026-10-20T23:59:59Z"},
+  "checkpoint_parent": {"capability_main_revision": "a40b438502d04514ebcee82f477b32c2728d2060", "registry_observation_count_before": 119, "registry_observation_count_after": 127, "prior_handoffs_mutated": false},
+  "collection_state": {"status": "active", "documented_discovery_passes_completed_after_this_checkpoint": 8, "cutoff_reached": false},
+  "discovery_pass": {
+    "pass_id": "w1-pass-008-codingbenchmark-gemma-main-grid",
+    "method": "Direction-blind inspection of the pinned Coding Agent Bench study code and its public CodingBenchmarkResults bucket. Admission is limited to Gemma main-grid harness rows whose exact thinking-on n=250 pass@1 values are explicitly published by the primary bucket README and whose historical harness versions are pinned in the study repository. Secondary-review values are not used for admission.",
+    "source_repository": "https://github.com/JoelNiklaus/harness-optimization",
+    "source_revision": "c98a168014412c2333fca635cdcc0c6c901c0ade",
+    "result_bucket": "https://huggingface.co/buckets/joelniklaus/CodingBenchmarkResults",
+    "result_readme_xet_hash": "94d46f47c574ef34580cbfd78a5257965bc61cec4ab7ad99a9953d1ab9c7f2fe",
+    "source_main_grid": "10 harnesses x 2 models x 250 held-out SWE-bench Pro tasks x one rollout = 5000 published rollouts",
+    "admitted_surface": "8 Gemma 4 26B-A4B thinking-on rows with exact primary-published n=250 values",
+    "source_artifacts": [
+      "https://github.com/JoelNiklaus/harness-optimization/blob/c98a168014412c2333fca635cdcc0c6c901c0ade/coding/README.md",
+      "https://github.com/JoelNiklaus/harness-optimization/blob/c98a168014412c2333fca635cdcc0c6c901c0ade/coding/scripts/setup.sh",
+      "https://github.com/JoelNiklaus/harness-optimization/blob/c98a168014412c2333fca635cdcc0c6c901c0ade/coding/runners/install_node_harnesses.sh",
+      "https://github.com/JoelNiklaus/harness-optimization/blob/c98a168014412c2333fca635cdcc0c6c901c0ade/coding/scripts/serve_gemma.sh",
+      "https://huggingface.co/buckets/joelniklaus/CodingBenchmarkResults/tree/README.md"
+    ]
+  },
+  "reused_existing_observation_ids": [],
+  "newly_admitted_observation_ids": [
+    "claude-code__codingbenchmark-swebench-pro-250__gemma-4-26b-a4b-it__c98a1680",
+    "mini-swe-agent__codingbenchmark-swebench-pro-250__gemma-4-26b-a4b-it__c98a1680",
+    "crush__codingbenchmark-swebench-pro-250__gemma-4-26b-a4b-it__c98a1680",
+    "qwen-code__codingbenchmark-swebench-pro-250__gemma-4-26b-a4b-it__c98a1680",
+    "opencode__codingbenchmark-swebench-pro-250__gemma-4-26b-a4b-it__c98a1680",
+    "codex__codingbenchmark-swebench-pro-250__gemma-4-26b-a4b-it__c98a1680",
+    "pi__codingbenchmark-swebench-pro-250__gemma-4-26b-a4b-it__c98a1680",
+    "goose__codingbenchmark-swebench-pro-250__gemma-4-26b-a4b-it__c98a1680"
+  ],
+  "candidate_same_model_comparison_groups": [{
+    "group_id": "codingbenchmark-swebench-pro-250__gemma-4-26b-a4b-it__thinking-on__20260812",
+    "observation_ids": [
+      "claude-code__codingbenchmark-swebench-pro-250__gemma-4-26b-a4b-it__c98a1680",
+      "mini-swe-agent__codingbenchmark-swebench-pro-250__gemma-4-26b-a4b-it__c98a1680",
+      "crush__codingbenchmark-swebench-pro-250__gemma-4-26b-a4b-it__c98a1680",
+      "qwen-code__codingbenchmark-swebench-pro-250__gemma-4-26b-a4b-it__c98a1680",
+      "opencode__codingbenchmark-swebench-pro-250__gemma-4-26b-a4b-it__c98a1680",
+      "codex__codingbenchmark-swebench-pro-250__gemma-4-26b-a4b-it__c98a1680",
+      "pi__codingbenchmark-swebench-pro-250__gemma-4-26b-a4b-it__c98a1680",
+      "goose__codingbenchmark-swebench-pro-250__gemma-4-26b-a4b-it__c98a1680"
+    ],
+    "source_known_dimensions": ["same Gemma 4 26B-A4B model label and BF16 main-grid precision", "same google/gemma-4-26B-A4B-it serve identity in pinned study code", "thinking enabled for the admitted main-grid regime", "same 262144 context length and 32768 max output", "same 250 held-out SWE-bench Pro tasks with one rollout per task", "same study/evaluation implementation revision", "agent and grading execute inside the benchmark image", "raw rollout artifacts are public", "historical harness package/binary versions are pinned by study code"],
+    "explicit_unknown_or_nonidentical_dimensions": ["exact Gemma model repository revision/checkpoint hash", "exact vLLM image digest used by the published sweep because the pinned script defaults to a latest tag", "exact upstream SWE-bench Pro dataset/runner revision used to materialize the frozen held-out set", "persistent harness-side state outside released rollout artifacts", "harness-native prompts/tools/context management/stopping behavior differ by the independent variable", "canonical OpenSiro linkage is absent for mini-swe-agent, Crush, Qwen Code and Goose"],
+    "paper_eligibility": "not-assessed-by-W1"
+  }],
+  "non_admission_dispositions": [
+    {"surface": "CodingBenchmarkResults Gemma main-grid Hermes row", "status": "deferred-not-admitted-in-pass-008", "reason": "Primary README confirms the row exists but does not publish its exact Gemma pass@1 in the inspected exact-value table; no secondary-derived value substituted."},
+    {"surface": "CodingBenchmarkResults Gemma main-grid OpenClaw row", "status": "deferred-not-admitted-in-pass-008", "reason": "Primary README confirms the row exists but does not publish its exact Gemma pass@1 in the inspected exact-value table; no secondary-derived value substituted."},
+    {"surface": "CodingBenchmarkResults GLM-5.2 main grid", "status": "deferred-not-admitted-in-pass-008", "reason": "Primary README publishes the grid and range but not the complete exact per-harness table; secondary review values were not imported."},
+    {"surface": "CodingBenchmarkResults gemma-4-26B-A4B-it-thinkoff", "status": "not-admitted-in-pass-008", "reason": "Source labels this an unfinished partial arm with only 8 harnesses and uneven 86-191 task denominators rather than the complete 250-task grid."}
+  ],
+  "validation": {
+    "status": "success",
+    "trigger_revision": "a1580b8e3fb13d5938422bfe24929e5ef7edd4de",
+    "generated_registry_revision": "f14b9644f542cc7997c5cb9d802ad0a0b2de7d71",
+    "workflow_reverted_revision": "59cddd9e241ce1e9cca62fbb7e7987a6d5fd7343",
+    "workflow": {"name": "validate", "run_id": 36643862428, "run_number": 174, "job_id": 109662177835, "conclusion": "success"},
+    "commands": [
+      "python system-observations/render_registry.py",
+      "python scripts/admission_check.py system-observations/claude-code-codingbenchmark-swebench-pro-gemma4-external-reproduced-adapter-preserved.json",
+      "python scripts/admission_check.py system-observations/mini-swe-agent-codingbenchmark-swebench-pro-gemma4-external-reproduced-adapter-preserved.json",
+      "python scripts/admission_check.py system-observations/crush-codingbenchmark-swebench-pro-gemma4-external-reproduced-adapter-preserved.json",
+      "python scripts/admission_check.py system-observations/qwen-code-codingbenchmark-swebench-pro-gemma4-external-reproduced-adapter-preserved.json",
+      "python scripts/admission_check.py system-observations/opencode-codingbenchmark-swebench-pro-gemma4-external-reproduced-adapter-preserved.json",
+      "python scripts/admission_check.py system-observations/codex-codingbenchmark-swebench-pro-gemma4-external-reproduced-adapter-preserved.json",
+      "python scripts/admission_check.py system-observations/pi-codingbenchmark-swebench-pro-gemma4-external-reproduced-adapter-preserved.json",
+      "python scripts/admission_check.py system-observations/goose-codingbenchmark-swebench-pro-gemma4-external-reproduced-adapter-preserved.json",
+      "python scripts/validate_repository.py"
+    ],
+    "results": [
+      {"command": "python system-observations/render_registry.py", "result": "success", "workflow_step": "Regenerate neutral registry views"},
+      {"command": "python scripts/validate_repository.py", "result": "success", "workflow_step": "Run python scripts/validate_repository.py"},
+      {"command": "record-specific admission checks for all eight new raw records", "result": "success", "workflow_step": "Exercise live evidence admission path"}
+    ]
+  },
+  "handoff_boundary": {"structural_classification_performed": false, "historical_linkage_adjudicated": false, "comparison_tier_assigned": false, "statistical_interpretation_performed": false, "winner_declared": false}
+}
