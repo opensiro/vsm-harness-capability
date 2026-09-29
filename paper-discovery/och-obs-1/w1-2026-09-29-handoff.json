@@ -17,20 +17,23 @@
   },
   "capability_revisions": {
     "starting_main": "d964e12f41639d2e3651069cf82ac7c135af72f4",
-    "evidence_admission_revision": "68999d4f247daf1fb61dcc12a68425df7b8fe976"
+    "evidence_admission_revision": "68999d4f247daf1fb61dcc12a68425df7b8fe976",
+    "initial_handoff_revision": "6f3a1a4dcbf553adb7514721050ca7c3bdc78d73",
+    "record_specific_validation_revision": "adb8d15fb2390d10fc2ef6873de3a8b236204b4a",
+    "test_only_workflow_reverted_revision": "62a6c464aa854123000f364d189c6c35c2b2e6b3"
   },
   "collection_state": {
     "status": "active",
     "documented_discovery_passes_completed": 2,
     "minimum_documented_passes_requested_by_protocol": 2,
     "cutoff_reached": false,
-    "reason": "The protocol requires a fixed collection window through 2026-10-20T23:59:59Z. Completing two passes does not authorize early closure."
+    "reason": "The protocol fixes collection through 2026-10-20T23:59:59Z; two completed passes satisfy the minimum pass count but do not authorize early closure."
   },
   "discovery_passes": [
     {
       "pass_id": "w1-pass-001-existing-substrate-reuse",
       "executed_at": "2026-09-29",
-      "method": "Direction-blind scan of the pinned capability neutral registry and existing comparison-group references for identity reuse and duplicate avoidance. Downstream structural or eligibility fields were not adopted.",
+      "method": "Direction-blind scan of the pinned neutral registry and existing comparison-group references for identity reuse and duplicate avoidance; no downstream structural or eligibility judgment was adopted.",
       "sources": [
         "https://github.com/opensiro/vsm-harness-capability/blob/d964e12f41639d2e3651069cf82ac7c135af72f4/system-observations/registry.psv",
         "https://github.com/opensiro/vsm-harness-capability/blob/d964e12f41639d2e3651069cf82ac7c135af72f4/comparison-cells/s1-pawbench-v1-qwen3.6-35b-a3b.json",
@@ -50,7 +53,7 @@
     {
       "pass_id": "w1-pass-002-public-cross-harness-github",
       "executed_at": "2026-09-29",
-      "method": "Direction-blind public GitHub search for inspectable cross-harness benchmark artifacts with repeated model labels across concrete harness identities; admission was based on source/provenance properties rather than outcome direction.",
+      "method": "Direction-blind public GitHub search for inspectable cross-harness result artifacts with repeated model labels across concrete harness identities; admission used source/provenance properties rather than outcome direction.",
       "sources": [
         "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/6a4a430bc6b78521131d245c5d26e42d7b9c123e/docs/metrics/harness-delta-swe2.json",
         "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/6a4a430bc6b78521131d245c5d26e42d7b9c123e/README.md"
@@ -167,19 +170,42 @@
     {
       "source": "https://github.com/DLOVRIC2/v4-flash-factorial",
       "status": "deferred-not-admitted",
-      "reason": "A potentially relevant public cross-harness repository was identified, but row-level evidence was not independently verified against one immutable revision during this checkpoint. No observation was admitted from it and no negative inference is made."
+      "reason": "Potentially relevant public cross-harness material was identified, but row-level evidence was not independently verified against one immutable revision during this checkpoint. No observation was admitted and no negative inference is made."
     }
   ],
   "validation": {
-    "status": "pending-pr-ci",
+    "status": "success",
+    "validated_revision": "adb8d15fb2390d10fc2ef6873de3a8b236204b4a",
+    "workflow": {
+      "name": "validate",
+      "run_id": 36635676759,
+      "run_number": 141,
+      "conclusion": "success",
+      "job_id": 109635589220
+    },
     "commands": [
-      "python system-observations/validate.py",
-      "python system-observations/render_registry.py --check",
+      "python scripts/validate_repository.py",
       "python scripts/admission_check.py system-observations/claude-code-agentic-coding-harness-benchmarks-swe2-external-reproduced-unclear.json",
-      "python scripts/admission_check.py system-observations/pi-agentic-coding-harness-benchmarks-swe2-external-reproduced-unclear.json",
-      "python scripts/validate_repository.py"
+      "python scripts/admission_check.py system-observations/pi-agentic-coding-harness-benchmarks-swe2-external-reproduced-unclear.json"
     ],
-    "results": []
+    "results": [
+      {
+        "command": "python scripts/validate_repository.py",
+        "result": "success",
+        "workflow_step": "Run python scripts/validate_repository.py"
+      },
+      {
+        "command": "python scripts/admission_check.py system-observations/claude-code-agentic-coding-harness-benchmarks-swe2-external-reproduced-unclear.json",
+        "result": "success",
+        "workflow_step": "Exercise live evidence admission path"
+      },
+      {
+        "command": "python scripts/admission_check.py system-observations/pi-agentic-coding-harness-benchmarks-swe2-external-reproduced-unclear.json",
+        "result": "success",
+        "workflow_step": "Exercise live evidence admission path"
+      }
+    ],
+    "test_only_infrastructure_note": "The two new record paths were temporarily added to the existing PR validation loop at validated_revision so the repository's record-specific live admission wrapper executed in CI. That workflow-only change was reverted at 62a6c464aa854123000f364d189c6c35c2b2e6b3 before final review; validation infrastructure is not part of the intended merged diff."
   },
   "handoff_boundary": {
     "structural_classification_performed": false,
