@@ -158,6 +158,20 @@
       "review_ref": "vsm-projections/benchmark-family-map/S5-WAKU-REVIEW.md",
       "delta_ref": "vsm-projections/s5/post-closure-deltas/waku-soul-state-return-2026-09-29.json",
       "non_claim": "Direct S5 fit belongs only to canonical Waku at the parent-owned persona/standing-rule mutation to durable-state/per-turn-runtime-context boundary. The regression does not execute a later model turn, does not demonstrate downstream behavioral compliance, is not a production-history witness, and does not make Waku and Octos a materially matched primary comparison merely because both expose soul/persona state."
+    },
+    {
+      "function": "S5",
+      "benchmark_id": "polyphemus-project-rule-state-return",
+      "benchmark_name": "Polyphemus project-rule state-return witness",
+      "fit": "direct",
+      "primary_source": "https://github.com/polyphemus-ai/release-rehearsal/blob/02020f3bc2829c350fd726273a7721254068925f/packages/core/test/projects.test.ts",
+      "evaluated_object": "Canonical Polyphemus native parent-governed project-rule boundary in which a concrete proposed AGENTS.md rule is accepted through the keep/discard path into the authoritative project-root AGENTS.md, while canonical later project sessions read that same rule surface into model/agent execution context.",
+      "evaluation_mode": "first-party-native-regression-project-rule-acceptance-with-same-file-session-context-return-support",
+      "system_linkage": "canonical-native-descriptive",
+      "tracking_issue": 82,
+      "review_ref": "vsm-projections/benchmark-family-map/S5-POLYPHEMUS-REVIEW.md",
+      "delta_ref": "vsm-projections/s5/post-closure-deltas/polyphemus-project-rule-state-return-2026-09-29.json",
+      "non_claim": "Direct S5 fit belongs only to canonical Polyphemus at the parent-owned project-rule acceptance to authoritative AGENTS.md/subsequent-session-context boundary. The acceptance regression does not itself execute a later model turn, the separate runtime regressions use independently prepared rule fixtures, and this does not establish autonomous S5 ownership, downstream behavioral compliance, a materially matched primary comparison, or selection of an S5 primary baseline."
     }
   ]
 }
