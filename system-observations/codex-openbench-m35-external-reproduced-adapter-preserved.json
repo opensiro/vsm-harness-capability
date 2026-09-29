@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Codex",
+  "canonical_harness_id": "codex",
+  "canonical_assessment_ref": "assessments/codex.md",
+  "canonical_review_ref": "b974893c90048d147207ae9004489c02f3116426",
+  "canonical_repository": "https://github.com/openai/codex",
+  "published_implementation": {
+    "system_compatibility": "adapter-preserved",
+    "historical_relation": "The pinned OpenBench M3.5 raw log records the native `codex exec` invocation and the concrete Codex system label, but does not preserve a harness version or upstream source revision. W1 reuses canonical Codex identity without asserting an exact historical revision match."
+  },
+  "primary_sources": [
+    "https://github.com/minghinmatthewlam/openbench/blob/8215e65a2c45ca6d3bdc88eb1ee086767c66ad5e/data/m3.5-2026-07-02/README.md",
+    "https://github.com/minghinmatthewlam/openbench/blob/8215e65a2c45ca6d3bdc88eb1ee086767c66ad5e/data/m3.5-2026-07-02/results.jsonl"
+  ],
+  "observations": [{
+    "observation_id": "codex__openbench-m35-easy3__gpt-5.5-medium__8215e65a",
+    "kind": "system-benchmark-result",
+    "benchmark": {"family_id": "openbench-m35", "name": "OpenBench M3.5", "variant": "easy3-efficiency-matrix", "task_count": 3, "primary_source": "https://github.com/minghinmatthewlam/openbench/blob/8215e65a2c45ca6d3bdc88eb1ee086767c66ad5e/data/m3.5-2026-07-02/README.md", "artifact_source": "https://github.com/minghinmatthewlam/openbench/blob/8215e65a2c45ca6d3bdc88eb1ee086767c66ad5e/data/m3.5-2026-07-02/results.jsonl"},
+    "result": {"date": "2026-07-02", "agent_label": "codex", "harness_version": null, "harness_revision": null, "benchmark_revision": "8215e65a2c45ca6d3bdc88eb1ee086767c66ad5e", "model": "gpt-5.5-medium", "model_config": "source canonical gpt-5.5-medium; Codex invoked as gpt-5.5 with model_reasoning_effort=medium; local execution; subscription OAuth with OPENAI_API_KEY unset", "metric": "clean_rollout_success_rate", "value": 1.0, "passed": 9, "valid": 9, "expected": 9, "unique_tasks": 3, "rollouts_per_task": 3},
+    "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "unknown"},
+    "provenance": {"publisher": "OpenBench / Matthew Lam", "checked": true, "os_system": true, "public_logs": true, "public_trajectories": false, "raw_run_artifacts_public": true, "execution_environment": "single macOS host; sequential local matrix; fresh task workspace per cell; checker-based grading"},
+    "comparison": {"group": "openbench-m35-easy3__gpt-5.5-medium__20260702", "mode": "candidate-same-model", "scope": "coding-swe"},
+    "unknown_dimensions": ["historical Codex package version", "exact upstream Codex source revision", "exact service-side model checkpoint", "independent proof of identical model snapshot routing across clients", "ambient service-load effects"],
+    "notes": "All nine M3.5 correctness cells succeeded. The source states Codex token counts in this dataset include cache-read tokens and are not apples-to-apples with the other harnesses; W1 therefore does not use token telemetry as a normalized comparison metric."
+  }]
+}
