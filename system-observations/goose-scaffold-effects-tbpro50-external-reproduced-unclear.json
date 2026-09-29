@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Goose",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "unclear",
+    "historical_relation": "The pinned Scaffold-Effects repository identifies the exercised system as Goose and publishes its config, system prompt, raw Harbor trial tree, normalized trial telemetry, and frozen aggregate snapshots. The committed config uses `version: stable` rather than an immutable Goose package/source revision, and W1 found no current canonical Goose linkage in the capability corpus; no canonical historical linkage is inferred."
+  },
+  "primary_sources": [
+    "https://github.com/namanvats/scaffold-effects/blob/ed8014f42a13483379d76ad2732a40132c1becf9/README.md",
+    "https://github.com/namanvats/scaffold-effects/blob/ed8014f42a13483379d76ad2732a40132c1becf9/harness/goose/config.yaml",
+    "https://github.com/namanvats/scaffold-effects/blob/ed8014f42a13483379d76ad2732a40132c1becf9/analysis/snapshots/20260422-013149__full-qwen3.6-plus-scoped-v2/aggregate.json",
+    "https://github.com/namanvats/scaffold-effects/blob/ed8014f42a13483379d76ad2732a40132c1becf9/analysis/snapshots/20260422-031530__full-minimax-m2.5-scoped/aggregate.json"
+  ],
+  "observations": [
+    {
+      "observation_id": "goose__scaffold-effects-tbpro50__qwen3.6-plus__ed8014f4",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "scaffold-effects-tbpro50",
+        "name": "Scaffold-Effects Terminal-Bench Pro 50-task slice",
+        "variant": "qwen3.6-plus-scoped-v2",
+        "task_count": 50,
+        "primary_source": "https://github.com/namanvats/scaffold-effects/blob/ed8014f42a13483379d76ad2732a40132c1becf9/README.md",
+        "artifact_source": "https://github.com/namanvats/scaffold-effects/blob/ed8014f42a13483379d76ad2732a40132c1becf9/analysis/snapshots/20260422-013149__full-qwen3.6-plus-scoped-v2/aggregate.json"
+      },
+      "result": {
+        "date": "2026-04-21",
+        "published_snapshot_collected_at": "2026-04-22T01:31:49",
+        "agent_label": "goose",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "ed8014f42a13483379d76ad2732a40132c1becf9",
+        "model": "qwen/qwen3.6-plus",
+        "model_config": "source model label qwen/qwen3.6-plus; Harbor provider class `openai` over an OpenRouter OpenAI-compatible endpoint; exact service-side checkpoint/revision not published",
+        "metric": "reward_positive_pass_rate",
+        "value": 0.48,
+        "attempted": 50,
+        "solved": 24,
+        "unsolved": 24,
+        "unknown": 2,
+        "turn_budget": 40,
+        "timeout_seconds": 900,
+        "tokens_total_source_reported": 675420,
+        "tokens_per_solved_task_source_reported": 28142.5,
+        "tokens_breakdown_coverage": 0.0,
+        "failure_categories_posthoc": {"SOLVED": 23, "REASON": 20, "TIME": 3, "HANG": 2, "MAX_TURNS": 1, "ERROR": 1},
+        "hit_turn_budget_count": 2
+      },
+      "published_implementation": {"system_compatibility": "unclear", "revision_match": "unknown"},
+      "provenance": {
+        "publisher": "Naman Vats / Scaffold-Effects",
+        "checked": true,
+        "os_system": true,
+        "public_logs": true,
+        "public_trajectories": true,
+        "raw_run_artifacts_public": true,
+        "public_result_surface": "frozen aggregate.json plus 150-row trials.jsonl and raw Harbor result tree",
+        "execution_environment": "Harbor orchestration in Daytona sandboxes; same 50-task selected Terminal-Bench Pro slice; identical task Docker image per task; source-declared 40-turn budget"
+      },
+      "comparison": {"group": "scaffold-effects-tbpro50__qwen3.6-plus__ed8014f4", "mode": "candidate-same-model", "scope": "terminal-agent"},
+      "unknown_dimensions": [
+        "immutable Goose package/source revision; committed config says version stable",
+        "exact OpenRouter/backend model checkpoint serving qwen/qwen3.6-plus",
+        "provider-adapter route differs from OpenCode's native OpenRouter provider path",
+        "harness-native prompt, tool surface and retry/control policy differ by study design",
+        "token accounting is Goose-specific reconstructed lump-sum telemetry and is not normalized by W1"
+      ],
+      "notes": "Primary collector defines `solved` from positive reward. Failure category is exception-first, so post-hoc `failure_categories.SOLVED` can differ from the solved count; W1 preserves both source fields without reconciling them."
+    },
+    {
+      "observation_id": "goose__scaffold-effects-tbpro50__minimax-m2.5__ed8014f4",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "scaffold-effects-tbpro50",
+        "name": "Scaffold-Effects Terminal-Bench Pro 50-task slice",
+        "variant": "minimax-m2.5-scoped",
+        "task_count": 50,
+        "primary_source": "https://github.com/namanvats/scaffold-effects/blob/ed8014f42a13483379d76ad2732a40132c1becf9/README.md",
+        "artifact_source": "https://github.com/namanvats/scaffold-effects/blob/ed8014f42a13483379d76ad2732a40132c1becf9/analysis/snapshots/20260422-031530__full-minimax-m2.5-scoped/aggregate.json"
+      },
+      "result": {
+        "date": "2026-04-21",
+        "published_snapshot_collected_at": "2026-04-22T03:15:30",
+        "agent_label": "goose",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "ed8014f42a13483379d76ad2732a40132c1becf9",
+        "model": "minimax/minimax-m2.5",
+        "model_config": "source model label minimax/minimax-m2.5; Harbor provider class `openai` over an OpenRouter OpenAI-compatible endpoint; exact service-side checkpoint/revision not published",
+        "metric": "reward_positive_pass_rate",
+        "value": 0.38,
+        "attempted": 50,
+        "solved": 19,
+        "unsolved": 29,
+        "unknown": 2,
+        "turn_budget": 40,
+        "timeout_seconds": 900,
+        "tokens_total_source_reported": 702063,
+        "tokens_per_solved_task_source_reported": 36950.68421052631,
+        "tokens_breakdown_coverage": 0.0,
+        "failure_categories_posthoc": {"SOLVED": 17, "REASON": 15, "TIME": 7, "MAX_TURNS": 8, "HANG": 2, "ERROR": 1},
+        "hit_turn_budget_count": 10
+      },
+      "published_implementation": {"system_compatibility": "unclear", "revision_match": "unknown"},
+      "provenance": {
+        "publisher": "Naman Vats / Scaffold-Effects",
+        "checked": true,
+        "os_system": true,
+        "public_logs": true,
+        "public_trajectories": true,
+        "raw_run_artifacts_public": true,
+        "public_result_surface": "frozen aggregate.json plus 150-row trials.jsonl and raw Harbor result tree",
+        "execution_environment": "Harbor orchestration in Daytona sandboxes; same 50-task selected Terminal-Bench Pro slice; identical task Docker image per task; source-declared 40-turn budget"
+      },
+      "comparison": {"group": "scaffold-effects-tbpro50__minimax-m2.5__ed8014f4", "mode": "candidate-same-model", "scope": "terminal-agent"},
+      "unknown_dimensions": [
+        "immutable Goose package/source revision; committed config says version stable",
+        "exact OpenRouter/backend model checkpoint serving minimax/minimax-m2.5",
+        "provider-adapter route differs from OpenCode's native OpenRouter provider path",
+        "harness-native prompt, tool surface and retry/control policy differ by study design",
+        "token accounting is Goose-specific reconstructed lump-sum telemetry and is not normalized by W1"
+      ],
+      "notes": "Primary collector defines `solved` from positive reward. Failure category is exception-first, so post-hoc `failure_categories.SOLVED` can differ from the solved count; W1 preserves both source fields without reconciling them."
+    }
+  ]
+}
