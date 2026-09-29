@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-29",
+  "evidence_source_class": "first-party-reported",
+  "system_name": "DotCraft Agent Profile thread runtime",
+  "canonical_harness_id": "dotcraft",
+  "published_implementation": {
+    "system_compatibility": "native-system",
+    "source_revision": "a08c8b35497f6ba9148f6ede80839835dcc8812a",
+    "historical_relation": "The public first-party integration test exercises DotCraft's shipped Agent Profile and AppServer thread-start paths at the same upstream revision used by the canonical Index assessment. It creates a workspace profile, starts a native thread bound to that profile, observes the resolved thread configuration, removes the source profile, and rereads the thread to verify the resolved snapshot persists."
+  },
+  "primary_sources": [
+    "https://github.com/DotHarness/dotcraft/blob/a08c8b35497f6ba9148f6ede80839835dcc8812a/tests/DotCraft.AppServer.Tests/Protocol/AppServer/AgentProfileManagementTests.cs",
+    "https://github.com/DotHarness/dotcraft/blob/a08c8b35497f6ba9148f6ede80839835dcc8812a/specs/features/agent-profiles.md",
+    "https://github.com/opensiro/vsm-harness-index/blob/main/assessments/dotcraft.md"
+  ],
+  "observations": [
+    {
+      "observation_id": "dotcraft-agent-profile-thread-snapshot-a08c8b3",
+      "kind": "first-party-native-profile-to-thread-integration-test",
+      "evidence_surface": "DotCraft ThreadStart_WithAgentProfile_PersistsResolvedConfigurationSnapshot integration test",
+      "reviewed_revision": "a08c8b35497f6ba9148f6ede80839835dcc8812a",
+      "test_path": "tests/DotCraft.AppServer.Tests/Protocol/AppServer/AgentProfileManagementTests.cs",
+      "test_name": "ThreadStart_WithAgentProfile_PersistsResolvedConfigurationSnapshot",
+      "profile_id": "reviewer-lite",
+      "profile_setup": {
+        "source": "workspace",
+        "description": "Review with read-focused defaults",
+        "profile_body": "Profile body for reviewer-lite.",
+        "denied_tool": "WriteFile",
+        "approval_policy": "deny"
+      },
+      "native_thread_start": {
+        "requested_agent_profile_id": "reviewer-lite",
+        "requested_mode": "agent",
+        "requested_model": "gpt-4o-mini",
+        "observed_agent_profile_id": "reviewer-lite",
+        "observed_agent_profile_source": "workspace",
+        "observed_fingerprint_prefix": "sha256:",
+        "observed_model": "gpt-4o-mini",
+        "observed_mode": "plan",
+        "observed_role_instructions": "Profile body for reviewer-lite.",
+        "observed_denied_tool": "WriteFile",
+        "observed_approval_policy": "deny"
+      },
+      "persistence_check": {
+        "source_profile_removed_after_thread_start": true,
+        "thread_reread_after_profile_removal": true,
+        "persisted_agent_profile_id": "reviewer-lite",
+        "persisted_fingerprint_matches_initial_snapshot": true,
+        "persisted_role_instructions": "Profile body for reviewer-lite."
+      },
+      "result_summary": "The committed first-party integration test creates a workspace Agent Profile, starts a native DotCraft thread bound to it, observes the resolved role/tool/approval configuration in the thread snapshot, removes the source profile, and verifies that the thread retains the resolved profile identity, fingerprint, and role instructions on reread.",
+      "notes": "This record captures the executable test surface present at the pinned public revision. It does not claim that a particular public CI run executed this exact test, and it does not infer any VSM function or autonomy state from the test."
+    }
+  ]
+}
