@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-29",
+  "evidence_source_class": "first-party-reported",
+  "system_name": "Polyphemus project rules runtime",
+  "canonical_harness_id": "polyphemus",
+  "canonical_assessment_ref": "assessments/polyphemus.md",
+  "canonical_review_ref": "02020f3bc2829c350fd726273a7721254068925f",
+  "published_implementation": {
+    "system_compatibility": "native-system",
+    "source_revision": "02020f3bc2829c350fd726273a7721254068925f"
+  },
+  "primary_sources": [
+    "https://github.com/polyphemus-ai/release-rehearsal/blob/02020f3bc2829c350fd726273a7721254068925f/packages/core/src/projects.ts",
+    "https://github.com/polyphemus-ai/release-rehearsal/blob/02020f3bc2829c350fd726273a7721254068925f/packages/core/test/projects.test.ts",
+    "https://github.com/polyphemus-ai/release-rehearsal/blob/02020f3bc2829c350fd726273a7721254068925f/packages/core/src/polyphemus.ts",
+    "https://github.com/polyphemus-ai/release-rehearsal/blob/02020f3bc2829c350fd726273a7721254068925f/packages/core/test/polyphemus.test.ts",
+    "https://github.com/opensiro/vsm-harness-index/blob/main/assessments/polyphemus.md"
+  ],
+  "observations": [
+    {
+      "observation_id": "polyphemus-project-agents-accept-runtime-return-02020f3",
+      "kind": "first-party-native-project-rule-acceptance-runtime-return-test",
+      "evidence_surface": "Polyphemus canonical project inbox acceptance regression plus project-session rule loading regressions",
+      "reviewed_revision": "02020f3bc2829c350fd726273a7721254068925f",
+      "mutation_witness": {
+        "path": "packages/core/test/projects.test.ts::keeps or discards what agents propose, and never takes a path for a name",
+        "mutation_entrypoint": "resolveInboxItem(home, project, 'AGENTS.md', 'accept')",
+        "proposal_fixture": "# Side Quest\\n\\nReal rules.\\n",
+        "authoritative_target": "<project-root>/AGENTS.md",
+        "accepted_target_asserted": true,
+        "concrete_result_content_asserted": "Real rules.",
+        "discard_path_exercised": true,
+        "path_traversal_rejected": true,
+        "already_handled_rejected": true
+      },
+      "runtime_return_support": {
+        "session_constructor_resolves_project_from_cwd": true,
+        "session_constructor_reads_project_root_AGENTS_md": true,
+        "direct_model_provider_regression_includes_concrete_project_rule_in_system_context": "Always run npm test.",
+        "claude_code_regression_includes_concrete_project_rule_in_system_append": "Always run npm test.",
+        "codex_worktree_regression_includes_concrete_project_rule_when_worktree_lacks_AGENTS_md": "Keep it static."
+      },
+      "result_summary": "At the canonical assessed Polyphemus revision, a first-party native regression accepts a concrete proposed project AGENTS.md value through resolveInboxItem and verifies that the project-root AGENTS.md contains the accepted rule. At the same revision, session construction reads that project-root AGENTS.md and first-party runtime regressions verify concrete project rules are supplied to later model/agent execution contexts.",
+      "notes": "This record is function-neutral. The acceptance regression does not itself execute a subsequent model turn, and the runtime regressions use independently prepared concrete AGENTS.md fixtures rather than the accepted 'Real rules.' fixture. The record therefore establishes a tested concrete authoritative mutation plus an exact same-file native return path, not one synthetic end-to-end test, downstream behavioral compliance, or production deployment history."
+    }
+  ]
+}
