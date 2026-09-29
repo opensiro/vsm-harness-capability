@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Claude Code",
+  "canonical_harness_id": "claude-code",
+  "canonical_assessment_ref": "assessments/claude-code.md",
+  "canonical_review_ref": "7dd06361110d4417f3edefaf075f41923f0e04c5",
+  "canonical_repository": "https://github.com/anthropics/claude-code",
+  "published_implementation": {
+    "system_compatibility": "adapter-preserved",
+    "historical_relation": "The pinned benchmark invokes Claude Code through its native non-interactive `claude -p` loop with acceptEdits, safe-mode and no-session-persistence on the shared prepared exercise copies. The exact Claude Code binary version or repository revision used during the 24 August 2026 run is not published in the pinned corpus; the canonical review ref above is an identity-linkage snapshot rather than the evaluated runtime revision."
+  },
+  "primary_sources": [
+    "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/README.md",
+    "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/analisis-final.md",
+    "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/COMANDOS.md",
+    "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/tanda.py",
+    "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/esfuerzos.md",
+    "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/errores-api.md"
+  ],
+  "observations": [
+    {
+      "observation_id": "claude-code__coding-agents-benchmark-exercism15__claude-haiku-4.5__dadcf782",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "coding-agents-benchmark-exercism15",
+        "name": "coding-agents-benchmark Exercism Python 15-task run",
+        "variant": "deterministic-15-seed42",
+        "task_count": 15,
+        "primary_source": "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/README.md",
+        "artifact_source": "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/runs/tanda_python_cc-haiku_run1.csv"
+      },
+      "result": {
+        "date": "2026-08-24",
+        "agent_label": "cc-haiku",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "dadcf782e45a0d14e5561af58fae305316a14e19",
+        "task_source_revision": "exercism/python@1f6aab8667bf653b10cc3799f94352fcdb749db6",
+        "model": "claude-haiku-4.5",
+        "model_config": "Claude Code `--model haiku`; the source declares this alias as the paired Claude Haiku 4.5 model, while exact endpoint/checkpoint identity is not exposed",
+        "reasoning_effort": "high default according to the benchmark's cited Claude Code behavior",
+        "metric": "exercise_test_pass_rate",
+        "value": 0.8,
+        "passed": 12,
+        "failed": 3,
+        "tasks": 15,
+        "timeout_seconds": 900,
+        "repetition_policy": "one accepted result per task; infrastructure-only ERROR_API outcomes are discarded and retried by the runner",
+        "execution_environment": "fresh exercise directory per run; common benchmark prompt/task preparation; Claude Code non-interactive acceptEdits safe-mode with no session persistence",
+        "adaptation_reset_policy": "exercise workspace is recreated per task and Claude Code session persistence is disabled; other client-local caches/configuration state is not fully reconstructed from the pinned corpus"
+      },
+      "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "unknown"},
+      "provenance": {"publisher": "CloudHastaEnLaSopa / coding-agents-benchmark", "checked": true, "os_system": true, "public_logs": true, "public_trajectories": true, "raw_run_artifacts_public": true},
+      "comparison": {"group": "coding-agents-benchmark-exercism15__claude-haiku-4.5__dadcf782", "mode": "same-model-candidate", "scope": "python-coding"},
+      "notes": "The aggregate CSV contains three accepted FALLA outcomes and twelve PASA outcomes. Model-alias equivalence to Kiro's explicit Claude Haiku 4.5 selection is source-declared rather than independently resolved by W1."
+    },
+    {
+      "observation_id": "claude-code__coding-agents-benchmark-exercism15__claude-sonnet-5__dadcf782",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "coding-agents-benchmark-exercism15",
+        "name": "coding-agents-benchmark Exercism Python 15-task run",
+        "variant": "deterministic-15-seed42",
+        "task_count": 15,
+        "primary_source": "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/README.md",
+        "artifact_source": "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/runs/tanda_python_cc-sonnet_run1.csv"
+      },
+      "result": {
+        "date": "2026-08-24",
+        "agent_label": "cc-sonnet",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "dadcf782e45a0d14e5561af58fae305316a14e19",
+        "task_source_revision": "exercism/python@1f6aab8667bf653b10cc3799f94352fcdb749db6",
+        "model": "claude-sonnet-5",
+        "model_config": "Claude Code `--model sonnet`; the source declares this alias as the paired Claude Sonnet 5 model, while exact endpoint/checkpoint identity is not exposed",
+        "reasoning_effort": "high default according to the benchmark's cited Claude Code behavior",
+        "metric": "exercise_test_pass_rate",
+        "value": 1.0,
+        "passed": 15,
+        "tasks": 15,
+        "timeout_seconds": 900,
+        "repetition_policy": "one accepted result per task; infrastructure-only ERROR_API outcomes are discarded and retried by the runner",
+        "execution_environment": "fresh exercise directory per run; common benchmark prompt/task preparation; Claude Code non-interactive acceptEdits safe-mode with no session persistence",
+        "adaptation_reset_policy": "exercise workspace is recreated per task and Claude Code session persistence is disabled; other client-local caches/configuration state is not fully reconstructed from the pinned corpus"
+      },
+      "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "unknown"},
+      "provenance": {"publisher": "CloudHastaEnLaSopa / coding-agents-benchmark", "checked": true, "os_system": true, "public_logs": true, "public_trajectories": true, "raw_run_artifacts_public": true},
+      "comparison": {"group": "coding-agents-benchmark-exercism15__claude-sonnet-5__dadcf782", "mode": "same-model-candidate", "scope": "python-coding"},
+      "notes": "The pinned corpus reports no accepted failure for the cc-sonnet batch. Model-alias equivalence to Kiro's explicit Claude Sonnet 5 selection is source-declared rather than independently resolved by W1."
+    },
+    {
+      "observation_id": "claude-code__coding-agents-benchmark-exercism15__claude-opus-5__dadcf782",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "coding-agents-benchmark-exercism15",
+        "name": "coding-agents-benchmark Exercism Python 15-task run",
+        "variant": "deterministic-15-seed42",
+        "task_count": 15,
+        "primary_source": "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/README.md",
+        "artifact_source": "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/runs/tanda_python_cc-opus_run1.csv"
+      },
+      "result": {
+        "date": "2026-08-24",
+        "agent_label": "cc-opus",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "dadcf782e45a0d14e5561af58fae305316a14e19",
+        "task_source_revision": "exercism/python@1f6aab8667bf653b10cc3799f94352fcdb749db6",
+        "model": "claude-opus-5",
+        "model_config": "Claude Code `--model opus`; the source declares this alias as the paired Claude Opus 5 model, while exact endpoint/checkpoint identity is not exposed",
+        "reasoning_effort": "high default according to the benchmark's cited Claude Code behavior",
+        "metric": "exercise_test_pass_rate",
+        "value": 1.0,
+        "passed": 15,
+        "tasks": 15,
+        "timeout_seconds": 900,
+        "repetition_policy": "one accepted result per task; infrastructure-only ERROR_API outcomes are discarded and retried by the runner; the source documents provider 529s as infrastructure events rather than accepted model outcomes",
+        "execution_environment": "fresh exercise directory per run; common benchmark prompt/task preparation; Claude Code non-interactive acceptEdits safe-mode with no session persistence",
+        "adaptation_reset_policy": "exercise workspace is recreated per task and Claude Code session persistence is disabled; other client-local caches/configuration state is not fully reconstructed from the pinned corpus"
+      },
+      "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "unknown"},
+      "provenance": {"publisher": "CloudHastaEnLaSopa / coding-agents-benchmark", "checked": true, "os_system": true, "public_logs": true, "public_trajectories": true, "raw_run_artifacts_public": true},
+      "comparison": {"group": "coding-agents-benchmark-exercism15__claude-opus-5__dadcf782", "mode": "same-model-candidate", "scope": "python-coding"},
+      "notes": "The pinned corpus reports no accepted failure for the cc-opus batch. Model-alias equivalence to Kiro's explicit Claude Opus 5 selection is source-declared rather than independently resolved by W1."
+    }
+  ]
+}
