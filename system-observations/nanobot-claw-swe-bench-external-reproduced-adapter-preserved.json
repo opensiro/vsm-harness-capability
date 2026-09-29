@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "NanoBot",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "adapter-preserved",
+    "historical_relation": "Pinned Claw-SWE-Bench code invokes the NanoBot CLI inside each SWE-bench Docker container using a bind-mounted standalone Python runtime and NanoBot venv. Model/provider configuration is benchmark-mounted, while the NanoBot agent loop remains native. Historical NanoBot package/source revision is not pinned by the inspected benchmark snapshot, so no canonical linkage is asserted."
+  },
+  "primary_sources": [
+    "https://github.com/TokenRhythm/claw-swe-bench/tree/fcece5f4c0817430ce953b52c80c931a40cd9b83",
+    "https://github.com/TokenRhythm/claw-swe-bench/blob/fcece5f4c0817430ce953b52c80c931a40cd9b83/claw_swebench/claws/nanobot.py",
+    "https://github.com/claw-swe-bench/claw-swe-bench.github.io/blob/191d0c62a0f72fb0bc1f0eb47b6f1e15950e725f/data/leaderboard.json"
+  ],
+  "observations": [
+    {
+      "observation_id": "nanobot__claw-swe-bench-full-350__glm-5.1__20260717",
+      "kind": "system-benchmark-result",
+      "benchmark": {"family_id": "claw-swe-bench", "name": "Claw-SWE-Bench", "variant": "full-350", "task_count": 350, "primary_source": "https://github.com/TokenRhythm/claw-swe-bench/tree/fcece5f4c0817430ce953b52c80c931a40cd9b83", "artifact_source": "https://github.com/claw-swe-bench/claw-swe-bench.github.io/blob/191d0c62a0f72fb0bc1f0eb47b6f1e15950e725f/data/leaderboard.json"},
+      "result": {"date": "2026-07-17", "agent_label": "NanoBot", "harness_version": null, "harness_revision": null, "model": "GLM 5.1", "model_config": "Same Model × Different Claws; Full-350; model, task set, Docker runtime and official SWE-bench evaluator held fixed across the harness cell", "metric": "pass_at_1_percent", "value": 60.9, "resolved": 213, "instances": 350},
+      "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "unknown"},
+      "provenance": {"publisher": "Claw-SWE-Bench", "checked": true, "os_system": true, "public_logs": null, "public_trajectories": null},
+      "comparison": {"group": "claw-swe-bench-full-350__glm-5.1__20260717", "mode": "matched-model", "scope": "coding-swe"},
+      "notes": "NanoBot runs in a fresh per-instance container; benchmark code also removes NanoBot-created workspace metadata before patch collection so benchmark metadata cannot pollute the candidate patch. Historical NanoBot version/revision and canonical linkage remain unknown."
+    },
+    {
+      "observation_id": "nanobot__claw-swe-bench-full-350__qwen-3.6-flash__20260717",
+      "kind": "system-benchmark-result",
+      "benchmark": {"family_id": "claw-swe-bench", "name": "Claw-SWE-Bench", "variant": "full-350", "task_count": 350, "primary_source": "https://github.com/TokenRhythm/claw-swe-bench/tree/fcece5f4c0817430ce953b52c80c931a40cd9b83", "artifact_source": "https://github.com/claw-swe-bench/claw-swe-bench.github.io/blob/191d0c62a0f72fb0bc1f0eb47b6f1e15950e725f/data/leaderboard.json"},
+      "result": {"date": "2026-07-17", "agent_label": "NanoBot", "harness_version": null, "harness_revision": null, "model": "Qwen 3.6-flash", "model_config": "Same Model × Different Claws; Full-350; model, task set, Docker runtime and official SWE-bench evaluator held fixed across the harness cell", "metric": "pass_at_1_percent", "value": 47.4, "resolved": 166, "instances": 350},
+      "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "unknown"},
+      "provenance": {"publisher": "Claw-SWE-Bench", "checked": true, "os_system": true, "public_logs": null, "public_trajectories": null},
+      "comparison": {"group": "claw-swe-bench-full-350__qwen-3.6-flash__20260717", "mode": "matched-model", "scope": "coding-swe"},
+      "notes": "Same pinned NanoBot adapter/evaluation membrane as the GLM 5.1 row; no version, canonical linkage, VSM interpretation, or paper eligibility is inferred."
+    }
+  ]
+}
