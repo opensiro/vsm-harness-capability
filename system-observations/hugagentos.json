@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-29",
+  "evidence_source_class": "first-party-reported",
+  "system_name": "HugAgentOS project-instructions runtime",
+  "canonical_harness_id": "hugagentos",
+  "canonical_assessment_ref": "assessments/hugagentos.md",
+  "canonical_review_ref": "9436fcb77261bc995e6e7a45cdc5e192eae9bc74",
+  "published_implementation": {
+    "system_compatibility": "native-system",
+    "source_revision": "9436fcb77261bc995e6e7a45cdc5e192eae9bc74",
+    "historical_relation": "The public first-party acceptance test exercises HugAgentOS project-instruction tools and native project-context assembly at the same upstream revision used by the canonical Index assessment. It saves authoritative project rules, verifies persisted content and revision behavior, then rebuilds project context and observes the saved rules returned there."
+  },
+  "primary_sources": [
+    "https://github.com/ZJU-REAL/HugAgentOS/blob/9436fcb77261bc995e6e7a45cdc5e192eae9bc74/src/backend/tests/services/test_project_instructions.py",
+    "https://github.com/ZJU-REAL/HugAgentOS/blob/9436fcb77261bc995e6e7a45cdc5e192eae9bc74/src/backend/core/services/project_instructions.py",
+    "https://github.com/ZJU-REAL/HugAgentOS/blob/9436fcb77261bc995e6e7a45cdc5e192eae9bc74/src/backend/core/services/project_scope.py",
+    "https://github.com/opensiro/vsm-harness-index/blob/main/assessments/hugagentos.md"
+  ],
+  "observations": [
+    {
+      "observation_id": "hugagentos-project-instructions-context-return-9436fcb",
+      "kind": "first-party-native-project-instructions-context-return-test",
+      "evidence_surface": "HugAgentOS test_registered_tools_save_real_cloud_content_with_revision_and_permissions acceptance test",
+      "reviewed_revision": "9436fcb77261bc995e6e7a45cdc5e192eae9bc74",
+      "test_path": "src/backend/tests/services/test_project_instructions.py",
+      "test_name": "test_registered_tools_save_real_cloud_content_with_revision_and_permissions",
+      "project_setup": {
+        "project_type": "personal",
+        "owner_user_id": "alice",
+        "instruction_tools_registered": true
+      },
+      "instruction_change": {
+        "read_before_save": true,
+        "saved_content": "# Rules\nTest first.",
+        "save_result_ok": true,
+        "persisted_content_matches": true,
+        "stale_revision_overwrite_rejected": true
+      },
+      "context_return": {
+        "orm_state_expired_before_readback": true,
+        "project_context_field": "project_instructions",
+        "project_context_matches_saved_content": true
+      },
+      "authorization_check": {
+        "project_deleted_before_later_save_attempt": true,
+        "later_save_rejected_status": 403
+      },
+      "result_summary": "The committed first-party acceptance test saves authoritative project instructions through the shipped instruction tool, verifies persistence and stale-write protection, expires database state, and then verifies that native project-context assembly returns the newly saved instructions; a later unauthorized write attempt is rejected.",
+      "notes": "This record captures the executable acceptance-test surface at the pinned public revision. It does not claim a downstream model turn, task outcome, or production deployment history beyond the save, persistence, authorization and context-return behavior exercised by the test."
+    }
+  ]
+}
