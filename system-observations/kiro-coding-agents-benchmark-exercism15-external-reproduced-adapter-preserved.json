@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Kiro CLI",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "adapter-preserved",
+    "historical_relation": "The pinned benchmark invokes the Kiro CLI native chat loop through an isolated HOME that removes steering, skills, MCP configuration and user rules while retaining credentials/caches. The exact Kiro CLI binary version or repository revision used during the 23–24 August 2026 run is not published in the pinned corpus, and no canonical harness linkage is asserted here."
+  },
+  "primary_sources": [
+    "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/README.md",
+    "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/analisis-final.md",
+    "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/tanda.py",
+    "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/kiro-aislado.sh",
+    "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/configs/kiro-agent-benchmark.json",
+    "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/esfuerzos.md"
+  ],
+  "observations": [
+    {
+      "observation_id": "kiro__coding-agents-benchmark-exercism15__gpt-5.6-luna__dadcf782",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "coding-agents-benchmark-exercism15",
+        "name": "coding-agents-benchmark Exercism Python 15-task run",
+        "variant": "deterministic-15-seed42",
+        "task_count": 15,
+        "primary_source": "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/README.md",
+        "artifact_source": "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/runs/tanda_python_kiro-luna_run1.csv"
+      },
+      "result": {
+        "date": "2026-08-23",
+        "agent_label": "kiro-luna",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "dadcf782e45a0d14e5561af58fae305316a14e19",
+        "task_source_revision": "exercism/python@1f6aab8667bf653b10cc3799f94352fcdb749db6",
+        "model": "gpt-5.6-luna",
+        "model_config": "Kiro --model gpt-5.6-luna; exact provider endpoint/checkpoint revision is not exposed",
+        "reasoning_effort": "unknown for Kiro; the benchmark notes Kiro effort is not exposed. The CSV's inferred medium label comes from a generic model-name heuristic and is not treated as confirmed Kiro configuration.",
+        "metric": "exercise_test_pass_rate",
+        "value": 1.0,
+        "passed": 15,
+        "tasks": 15,
+        "timeout_seconds": 900,
+        "repetition_policy": "one accepted result per task; infrastructure-only ERROR_API outcomes are discarded and retried by the runner",
+        "execution_environment": "fresh exercise directory per run; common benchmark prompt/task preparation; Kiro isolated HOME with no steering, skills or MCP; full native Kiro tool loop retained",
+        "adaptation_reset_policy": "exercise workspace is recreated per task; Kiro user steering/skills are absent, while credential/cache state may persist through the isolated-HOME symlink"
+      },
+      "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "unknown"},
+      "provenance": {"publisher": "CloudHastaEnLaSopa / coding-agents-benchmark", "checked": true, "os_system": true, "public_logs": true, "public_trajectories": true, "raw_run_artifacts_public": true},
+      "comparison": {"group": "coding-agents-benchmark-exercism15__gpt-5.6-luna__dadcf782", "mode": "same-model-candidate", "scope": "python-coding"},
+      "notes": "Raw per-task run directories and aggregate CSV are committed. W1 preserves the source-declared model identity but leaves exact historical binary and provider endpoint identity unresolved."
+    },
+    {
+      "observation_id": "kiro__coding-agents-benchmark-exercism15__gpt-5.6-terra__dadcf782",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "coding-agents-benchmark-exercism15",
+        "name": "coding-agents-benchmark Exercism Python 15-task run",
+        "variant": "deterministic-15-seed42",
+        "task_count": 15,
+        "primary_source": "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/README.md",
+        "artifact_source": "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/runs/tanda_python_kiro-terra_run1.csv"
+      },
+      "result": {
+        "date": "2026-08-23",
+        "agent_label": "kiro-terra",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "dadcf782e45a0d14e5561af58fae305316a14e19",
+        "task_source_revision": "exercism/python@1f6aab8667bf653b10cc3799f94352fcdb749db6",
+        "model": "gpt-5.6-terra",
+        "model_config": "Kiro --model gpt-5.6-terra; exact provider endpoint/checkpoint revision is not exposed",
+        "reasoning_effort": "unknown for Kiro; the benchmark notes Kiro effort is not exposed. The CSV's inferred medium label comes from a generic model-name heuristic and is not treated as confirmed Kiro configuration.",
+        "metric": "exercise_test_pass_rate",
+        "value": 1.0,
+        "passed": 15,
+        "tasks": 15,
+        "timeout_seconds": 900,
+        "repetition_policy": "one accepted result per task; infrastructure-only ERROR_API outcomes are discarded and retried by the runner",
+        "execution_environment": "fresh exercise directory per run; common benchmark prompt/task preparation; Kiro isolated HOME with no steering, skills or MCP; full native Kiro tool loop retained",
+        "adaptation_reset_policy": "exercise workspace is recreated per task; Kiro user steering/skills are absent, while credential/cache state may persist through the isolated-HOME symlink"
+      },
+      "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "unknown"},
+      "provenance": {"publisher": "CloudHastaEnLaSopa / coding-agents-benchmark", "checked": true, "os_system": true, "public_logs": true, "public_trajectories": true, "raw_run_artifacts_public": true},
+      "comparison": {"group": "coding-agents-benchmark-exercism15__gpt-5.6-terra__dadcf782", "mode": "same-model-candidate", "scope": "python-coding"},
+      "notes": "Raw per-task run directories and aggregate CSV are committed. W1 preserves the source-declared model identity but leaves exact historical binary and provider endpoint identity unresolved."
+    },
+    {
+      "observation_id": "kiro__coding-agents-benchmark-exercism15__gpt-5.6-sol__dadcf782",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "coding-agents-benchmark-exercism15",
+        "name": "coding-agents-benchmark Exercism Python 15-task run",
+        "variant": "deterministic-15-seed42",
+        "task_count": 15,
+        "primary_source": "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/README.md",
+        "artifact_source": "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/runs/tanda_python_kiro-sol_run1.csv"
+      },
+      "result": {
+        "date": "2026-08-23",
+        "agent_label": "kiro-sol",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "dadcf782e45a0d14e5561af58fae305316a14e19",
+        "task_source_revision": "exercism/python@1f6aab8667bf653b10cc3799f94352fcdb749db6",
+        "model": "gpt-5.6-sol",
+        "model_config": "Kiro --model gpt-5.6-sol; exact provider endpoint/checkpoint revision is not exposed",
+        "reasoning_effort": "unknown for Kiro; the benchmark notes Kiro effort is not exposed. The CSV's inferred low label comes from a generic model-name heuristic and is not treated as confirmed Kiro configuration.",
+        "metric": "exercise_test_pass_rate",
+        "value": 1.0,
+        "passed": 15,
+        "tasks": 15,
+        "timeout_seconds": 900,
+        "repetition_policy": "one accepted result per task; infrastructure-only ERROR_API outcomes are discarded and retried by the runner",
+        "execution_environment": "fresh exercise directory per run; common benchmark prompt/task preparation; Kiro isolated HOME with no steering, skills or MCP; full native Kiro tool loop retained",
+        "adaptation_reset_policy": "exercise workspace is recreated per task; Kiro user steering/skills are absent, while credential/cache state may persist through the isolated-HOME symlink"
+      },
+      "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "unknown"},
+      "provenance": {"publisher": "CloudHastaEnLaSopa / coding-agents-benchmark", "checked": true, "os_system": true, "public_logs": true, "public_trajectories": true, "raw_run_artifacts_public": true},
+      "comparison": {"group": "coding-agents-benchmark-exercism15__gpt-5.6-sol__dadcf782", "mode": "same-model-candidate", "scope": "python-coding"},
+      "notes": "Raw per-task run directories and aggregate CSV are committed. W1 preserves the source-declared model identity but leaves exact historical binary and provider endpoint identity unresolved."
+    },
+    {
+      "observation_id": "kiro__coding-agents-benchmark-exercism15__claude-haiku-4.5__dadcf782",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "coding-agents-benchmark-exercism15",
+        "name": "coding-agents-benchmark Exercism Python 15-task run",
+        "variant": "deterministic-15-seed42",
+        "task_count": 15,
+        "primary_source": "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/README.md",
+        "artifact_source": "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/runs/tanda_python_kiro-haiku45_run1.csv"
+      },
+      "result": {
+        "date": "2026-08-24",
+        "agent_label": "kiro-haiku45",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "dadcf782e45a0d14e5561af58fae305316a14e19",
+        "task_source_revision": "exercism/python@1f6aab8667bf653b10cc3799f94352fcdb749db6",
+        "model": "claude-haiku-4.5",
+        "model_config": "Kiro --model claude-haiku-4.5; exact provider endpoint/checkpoint revision is not exposed",
+        "reasoning_effort": "unknown for Kiro",
+        "metric": "exercise_test_pass_rate",
+        "value": 1.0,
+        "passed": 15,
+        "tasks": 15,
+        "timeout_seconds": 900,
+        "repetition_policy": "one accepted result per task; infrastructure-only ERROR_API outcomes are discarded and retried by the runner",
+        "execution_environment": "fresh exercise directory per run; common benchmark prompt/task preparation; Kiro isolated HOME with no steering, skills or MCP; full native Kiro tool loop retained",
+        "adaptation_reset_policy": "exercise workspace is recreated per task; Kiro user steering/skills are absent, while credential/cache state may persist through the isolated-HOME symlink"
+      },
+      "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "unknown"},
+      "provenance": {"publisher": "CloudHastaEnLaSopa / coding-agents-benchmark", "checked": true, "os_system": true, "public_logs": true, "public_trajectories": true, "raw_run_artifacts_public": true},
+      "comparison": {"group": "coding-agents-benchmark-exercism15__claude-haiku-4.5__dadcf782", "mode": "same-model-candidate", "scope": "python-coding"},
+      "notes": "The source declares this pair to use the same Haiku 4.5 model as Claude Code's haiku alias; exact endpoint/checkpoint equivalence remains for later review."
+    },
+    {
+      "observation_id": "kiro__coding-agents-benchmark-exercism15__claude-sonnet-5__dadcf782",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "coding-agents-benchmark-exercism15",
+        "name": "coding-agents-benchmark Exercism Python 15-task run",
+        "variant": "deterministic-15-seed42",
+        "task_count": 15,
+        "primary_source": "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/README.md",
+        "artifact_source": "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/runs/tanda_python_kiro-sonnet5_run1.csv"
+      },
+      "result": {
+        "date": "2026-08-24",
+        "agent_label": "kiro-sonnet5",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "dadcf782e45a0d14e5561af58fae305316a14e19",
+        "task_source_revision": "exercism/python@1f6aab8667bf653b10cc3799f94352fcdb749db6",
+        "model": "claude-sonnet-5",
+        "model_config": "Kiro --model claude-sonnet-5; exact provider endpoint/checkpoint revision is not exposed",
+        "reasoning_effort": "unknown for Kiro",
+        "metric": "exercise_test_pass_rate",
+        "value": 1.0,
+        "passed": 15,
+        "tasks": 15,
+        "timeout_seconds": 900,
+        "repetition_policy": "one accepted result per task; infrastructure-only ERROR_API outcomes are discarded and retried by the runner",
+        "execution_environment": "fresh exercise directory per run; common benchmark prompt/task preparation; Kiro isolated HOME with no steering, skills or MCP; full native Kiro tool loop retained",
+        "adaptation_reset_policy": "exercise workspace is recreated per task; Kiro user steering/skills are absent, while credential/cache state may persist through the isolated-HOME symlink"
+      },
+      "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "unknown"},
+      "provenance": {"publisher": "CloudHastaEnLaSopa / coding-agents-benchmark", "checked": true, "os_system": true, "public_logs": true, "public_trajectories": true, "raw_run_artifacts_public": true},
+      "comparison": {"group": "coding-agents-benchmark-exercism15__claude-sonnet-5__dadcf782", "mode": "same-model-candidate", "scope": "python-coding"},
+      "notes": "The source declares this pair to use the same Sonnet 5 model as Claude Code's sonnet alias; exact endpoint/checkpoint equivalence remains for later review."
+    },
+    {
+      "observation_id": "kiro__coding-agents-benchmark-exercism15__claude-opus-5__dadcf782",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "coding-agents-benchmark-exercism15",
+        "name": "coding-agents-benchmark Exercism Python 15-task run",
+        "variant": "deterministic-15-seed42",
+        "task_count": 15,
+        "primary_source": "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/README.md",
+        "artifact_source": "https://github.com/CloudHastaEnLaSopa/coding-agents-benchmark/blob/dadcf782e45a0d14e5561af58fae305316a14e19/runs/tanda_python_kiro-opus5_run1.csv"
+      },
+      "result": {
+        "date": "2026-08-24",
+        "agent_label": "kiro-opus5",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "dadcf782e45a0d14e5561af58fae305316a14e19",
+        "task_source_revision": "exercism/python@1f6aab8667bf653b10cc3799f94352fcdb749db6",
+        "model": "claude-opus-5",
+        "model_config": "Kiro --model claude-opus-5; exact provider endpoint/checkpoint revision is not exposed",
+        "reasoning_effort": "unknown for Kiro",
+        "metric": "exercise_test_pass_rate",
+        "value": 1.0,
+        "passed": 15,
+        "tasks": 15,
+        "timeout_seconds": 900,
+        "repetition_policy": "one accepted result per task; infrastructure-only ERROR_API outcomes are discarded and retried by the runner",
+        "execution_environment": "fresh exercise directory per run; common benchmark prompt/task preparation; Kiro isolated HOME with no steering, skills or MCP; full native Kiro tool loop retained",
+        "adaptation_reset_policy": "exercise workspace is recreated per task; Kiro user steering/skills are absent, while credential/cache state may persist through the isolated-HOME symlink"
+      },
+      "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "unknown"},
+      "provenance": {"publisher": "CloudHastaEnLaSopa / coding-agents-benchmark", "checked": true, "os_system": true, "public_logs": true, "public_trajectories": true, "raw_run_artifacts_public": true},
+      "comparison": {"group": "coding-agents-benchmark-exercism15__claude-opus-5__dadcf782", "mode": "same-model-candidate", "scope": "python-coding"},
+      "notes": "The source declares this pair to use the same Opus 5 model as Claude Code's opus alias; exact endpoint/checkpoint equivalence remains for later review."
+    }
+  ]
+}
