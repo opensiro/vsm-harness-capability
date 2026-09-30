@@ -1,0 +1,293 @@
+{
+  "schema_version": 1,
+  "artifact_id": "obs-harness-assoc-w2-2026-09-30-pass4-reuse",
+  "artifact_version": "1.0.0",
+  "recorded_at_utc": "2026-09-30T14:21:36Z",
+  "work_item": {
+    "repository": "opensiro/vsm-harness-capability",
+    "issue": 94,
+    "role": "fresh independent W2 historical system/revision linkage"
+  },
+  "execution": {
+    "capability_start_revision": "d5d8c09f2a8eb433d6fb49b49cbdbef87acc819c",
+    "w2_execution_revision": "d5d8c09f2a8eb433d6fb49b49cbdbef87acc819c",
+    "branch": "issue-94-w2-pass4-linkage",
+    "fresh_independent_context": true,
+    "bounded_batch": "W1 pass 4 only",
+    "processed_group_ids": [
+      "frontierharness-v1.0__kimi-k3-fireworks__20260822",
+      "claw-swe-bench-full-350__qwen-3.6-flash__20260717",
+      "claw-swe-bench-full-350__glm-5.1__20260717"
+    ],
+    "explicitly_not_processed": [
+      "W1 pass 32 OpenBench GPT-5.6 release15",
+      "all other W1 batches"
+    ],
+    "forbidden_work": {
+      "w3": false,
+      "w4": false,
+      "statistics": false,
+      "paper_claims": false
+    },
+    "raw_score_payload_copied": false
+  },
+  "protocol": {
+    "study_id": "OBS-HARNESS-ASSOC",
+    "version": "0.1.0",
+    "research_freeze_revision": "ac6b63deb1c9163ec25e1be74e61314629ade112",
+    "protocol_sha256": "17f51d4f35f0eb5a665122238c505ad6c8e3db7c8b937dac7ecbae35a3ac49a4",
+    "grade_mapping": {
+      "exact-historical-match": "L1",
+      "bounded-compatible": "L2",
+      "unresolved": "L3"
+    },
+    "current_state_substitution_forbidden": true,
+    "w1_routing_metadata_discrepancy": {
+      "w1_identity": "OCH-OBS-1 v1.0.0 @ 5462ffadffd7189ae10e44e22d357bc6162a6038",
+      "treatment": "preserved as routing provenance; linkage adjudication uses frozen OBS-HARNESS-ASSOC v0.1.0"
+    }
+  },
+  "upstream": {
+    "w1_issue": 93,
+    "w1_handoff_path": "paper-discovery/och-obs-1/w1-2026-09-30-pass4-reuse-handoff.json",
+    "w1_handoff_blob_sha": "ed0569fa8651e43b2458adf082174c1758c80d7f",
+    "w1_manifest_id": "och-obs-1-w1-2026-09-30-pass4-reuse",
+    "w1_pass_id": "w1-pass-004-existing-cross-harness-reuse",
+    "w1_checkpoint_parent_revision": "afd4b8403dd811403fb53e0e5e298921c4fddf74"
+  },
+  "preconditions": {
+    "expected_observation_count": 10,
+    "neutral_registry_revision": "d5d8c09f2a8eb433d6fb49b49cbdbef87acc819c",
+    "registry_occurrence_counts": {
+      "claude-code__frontierharness-v1.0__kimi-k3-fireworks__20260822": 1,
+      "codex__frontierharness-v1.0__kimi-k3-fireworks__20260822": 1,
+      "hermes-agent__frontierharness-v1.0__kimi-k3-fireworks__20260822": 1,
+      "oh-my-pi__frontierharness-v1.0__kimi-k3-fireworks__20260822": 1,
+      "opencode__frontierharness-v1.0__kimi-k3-fireworks__20260822": 1,
+      "pi__frontierharness-v1.0__kimi-k3-fireworks__20260822": 1,
+      "hermes-agent__claw-swe-bench-full-350__qwen-3.6-flash__20260717": 1,
+      "openclaw__claw-swe-bench-full-350__qwen-3.6-flash__20260717": 1,
+      "hermes-agent__claw-swe-bench-full-350__glm-5.1__20260717": 1,
+      "openclaw__claw-swe-bench-full-350__glm-5.1__20260717": 1
+    },
+    "w1_source_identity_present": true,
+    "prior_pass4_w2_decision_found": false,
+    "prior_decision_check": "Only the distinct pass-32 artifact existed under paper-linkage/obs-harness-assoc/v0.1.0 at start revision.",
+    "pass32_not_reprocessed": true
+  },
+  "evidence_catalog": {
+    "frontier_result": "frontier-harness-eval/eval@e837a70bd6beb4e72eeeda62dd06e3bd34f6cb63:results/eval-data.json",
+    "upstream_claude-code": "anthropics/claude-code@770933ea1ad2fa7b858191e397a65e6644771c64 (tag v2.1.237)",
+    "upstream_codex": "openai/codex@3ba0f711642a888aec92a611a3f3b2211157ff89 (tag rust-v0.148.0)",
+    "upstream_hermes-agent": "NousResearch/hermes-agent@044acf2bf700b8452e903f035406091146eb0245",
+    "upstream_oh-my-pi": "can1357/oh-my-pi@72000acfeb902e21816252699482887f34d1a5a4 (tag v17.4.0)",
+    "upstream_opencode": "anomalyco/opencode@2b72179c663cadcb54f54d9f19221b3fb3d11fb6 (tag v1.18.19)",
+    "upstream_pi": "earendil-works/pi@914cf1472e715297caa30db4b9535d534a9eb718 (tag v0.84.2)",
+    "claw_repo": "TokenRhythm/claw-swe-bench@fcece5f4c0817430ce953b52c80c931a40cd9b83",
+    "claw_leaderboard": "claw-swe-bench/claw-swe-bench.github.io@191d0c62a0f72fb0bc1f0eb47b6f1e15950e725f:data/leaderboard.json",
+    "claw_hermes_adapter": "TokenRhythm/claw-swe-bench@fcece5f4c0817430ce953b52c80c931a40cd9b83:claw_swebench/claws/hermes.py",
+    "claw_openclaw_adapter": "TokenRhythm/claw-swe-bench@fcece5f4c0817430ce953b52c80c931a40cd9b83:claw_swebench/claws/openclaw.py"
+  },
+  "decisions": [
+    {
+      "observation_id": "claude-code__frontierharness-v1.0__kimi-k3-fireworks__20260822",
+      "group_id": "frontierharness-v1.0__kimi-k3-fireworks__20260822",
+      "canonical_harness_id": "claude-code",
+      "canonical_assessment_ref": "7dd06361110d4417f3edefaf075f41923f0e04c5",
+      "linkage_state": "exact-historical-match",
+      "w0_grade": "L1",
+      "historical_identity": {
+        "harness_version": "2.1.237",
+        "upstream_repository": "anthropics/claude-code",
+        "immutable_tag": "v2.1.237",
+        "upstream_commit": "770933ea1ad2fa7b858191e397a65e6644771c64",
+        "binding_type": "benchmark-reported exact version independently resolved to immutable upstream tag/commit"
+      },
+      "unresolved_dimensions": [],
+      "decision_basis": "The admitted observation reports Claude Code 2.1.237. Upstream tag v2.1.237 resolves to immutable commit 770933ea1ad2fa7b858191e397a65e6644771c64, establishing an exact historical implementation identity.",
+      "evidence_keys": ["frontier_result", "upstream_claude-code"],
+      "current_state_substitution": "forbidden; canonical reference is identity/temporal context only"
+    },
+    {
+      "observation_id": "codex__frontierharness-v1.0__kimi-k3-fireworks__20260822",
+      "group_id": "frontierharness-v1.0__kimi-k3-fireworks__20260822",
+      "canonical_harness_id": "codex",
+      "canonical_assessment_ref": "b974893c90048d147207ae9004489c02f3116426",
+      "linkage_state": "exact-historical-match",
+      "w0_grade": "L1",
+      "historical_identity": {
+        "harness_version": "0.148.0",
+        "upstream_repository": "openai/codex",
+        "immutable_tag": "rust-v0.148.0",
+        "upstream_commit": "3ba0f711642a888aec92a611a3f3b2211157ff89",
+        "binding_type": "benchmark-reported exact version independently resolved to immutable upstream tag/commit"
+      },
+      "unresolved_dimensions": [],
+      "decision_basis": "The admitted observation reports Codex 0.148.0. Upstream tag rust-v0.148.0 resolves to immutable commit 3ba0f711642a888aec92a611a3f3b2211157ff89.",
+      "evidence_keys": ["frontier_result", "upstream_codex"],
+      "current_state_substitution": "forbidden; canonical reference is identity/temporal context only"
+    },
+    {
+      "observation_id": "hermes-agent__frontierharness-v1.0__kimi-k3-fireworks__20260822",
+      "group_id": "frontierharness-v1.0__kimi-k3-fireworks__20260822",
+      "canonical_harness_id": "hermes-agent",
+      "canonical_assessment_ref": "16bddc88dd325c5eef27c2cc71bbb14c16b870aa",
+      "linkage_state": "exact-historical-match",
+      "w0_grade": "L1",
+      "historical_identity": {
+        "harness_version": "0.20.4",
+        "upstream_repository": "NousResearch/hermes-agent",
+        "upstream_commit": "044acf2bf700b8452e903f035406091146eb0245",
+        "binding_type": "benchmark-published exact source revision, independently verified as upstream commit"
+      },
+      "unresolved_dimensions": [],
+      "decision_basis": "The admitted observation publishes Hermes Agent 0.20.4 together with exact source revision 044acf2bf700b8452e903f035406091146eb0245; the revision exists in the upstream repository.",
+      "evidence_keys": ["frontier_result", "upstream_hermes-agent"],
+      "current_state_substitution": "forbidden; canonical reference is identity/temporal context only"
+    },
+    {
+      "observation_id": "oh-my-pi__frontierharness-v1.0__kimi-k3-fireworks__20260822",
+      "group_id": "frontierharness-v1.0__kimi-k3-fireworks__20260822",
+      "canonical_harness_id": "oh-my-pi",
+      "canonical_assessment_ref": "dbf3afad4894bde827d90f965e77b3fe1c5a95e5",
+      "linkage_state": "exact-historical-match",
+      "w0_grade": "L1",
+      "historical_identity": {
+        "harness_version": "17.4.0",
+        "upstream_repository": "can1357/oh-my-pi",
+        "immutable_tag": "v17.4.0",
+        "upstream_commit": "72000acfeb902e21816252699482887f34d1a5a4",
+        "binding_type": "benchmark-reported exact version independently resolved to immutable upstream tag/commit"
+      },
+      "unresolved_dimensions": [],
+      "decision_basis": "The admitted observation reports Oh My Pi 17.4.0. Upstream tag v17.4.0 resolves to immutable commit 72000acfeb902e21816252699482887f34d1a5a4.",
+      "evidence_keys": ["frontier_result", "upstream_oh-my-pi"],
+      "current_state_substitution": "forbidden; canonical reference is identity/temporal context only"
+    },
+    {
+      "observation_id": "opencode__frontierharness-v1.0__kimi-k3-fireworks__20260822",
+      "group_id": "frontierharness-v1.0__kimi-k3-fireworks__20260822",
+      "canonical_harness_id": "opencode",
+      "canonical_assessment_ref": "95daf90670b7c039c436c85537da5fbfe2205b41",
+      "linkage_state": "exact-historical-match",
+      "w0_grade": "L1",
+      "historical_identity": {
+        "harness_version": "1.18.19",
+        "upstream_repository": "anomalyco/opencode",
+        "immutable_tag": "v1.18.19",
+        "upstream_commit": "2b72179c663cadcb54f54d9f19221b3fb3d11fb6",
+        "binding_type": "benchmark-reported exact version independently resolved to immutable upstream tag/commit"
+      },
+      "unresolved_dimensions": [],
+      "decision_basis": "The admitted observation reports OpenCode 1.18.19. Upstream tag v1.18.19 resolves to immutable commit 2b72179c663cadcb54f54d9f19221b3fb3d11fb6.",
+      "evidence_keys": ["frontier_result", "upstream_opencode"],
+      "current_state_substitution": "forbidden; canonical reference is identity/temporal context only"
+    },
+    {
+      "observation_id": "pi__frontierharness-v1.0__kimi-k3-fireworks__20260822",
+      "group_id": "frontierharness-v1.0__kimi-k3-fireworks__20260822",
+      "canonical_harness_id": "pi",
+      "canonical_assessment_ref": "71dca871bc80b6bc97be37f0ca3189399d651fff",
+      "linkage_state": "exact-historical-match",
+      "w0_grade": "L1",
+      "historical_identity": {
+        "harness_version": "0.84.2",
+        "upstream_repository": "earendil-works/pi",
+        "immutable_tag": "v0.84.2",
+        "upstream_commit": "914cf1472e715297caa30db4b9535d534a9eb718",
+        "binding_type": "benchmark-reported exact version independently resolved to immutable upstream tag/commit"
+      },
+      "unresolved_dimensions": [],
+      "decision_basis": "The admitted observation reports Pi 0.84.2. Upstream tag v0.84.2 resolves to immutable commit 914cf1472e715297caa30db4b9535d534a9eb718.",
+      "evidence_keys": ["frontier_result", "upstream_pi"],
+      "current_state_substitution": "forbidden; canonical reference is identity/temporal context only"
+    },
+    {
+      "observation_id": "hermes-agent__claw-swe-bench-full-350__qwen-3.6-flash__20260717",
+      "group_id": "claw-swe-bench-full-350__qwen-3.6-flash__20260717",
+      "canonical_harness_id": "hermes-agent",
+      "canonical_assessment_ref": "16bddc88dd325c5eef27c2cc71bbb14c16b870aa",
+      "linkage_state": "unresolved",
+      "w0_grade": "L3",
+      "historical_identity": {"harness_version": null, "harness_revision": null, "immutable_binding": null},
+      "unresolved_dimensions": ["exact historical harness version", "exact historical upstream revision/tag or equivalent immutable runtime binding"],
+      "decision_basis": "The pinned adapter establishes that the Qwen 3.6-flash row exercises the first-party Hermes Agent CLI, but neither the admitted row nor the pinned benchmark/leaderboard records the installed Hermes version or immutable upstream revision. A present-day or neighboring benchmark version would be an unsupported substitution.",
+      "exercised_system_identity": "Hermes Agent CLI invoked by the pinned Claw-SWE-Bench Hermes adapter",
+      "evidence_keys": ["claw_repo", "claw_leaderboard", "claw_hermes_adapter"],
+      "current_state_substitution": "forbidden; canonical reference is identity/temporal context only"
+    },
+    {
+      "observation_id": "openclaw__claw-swe-bench-full-350__qwen-3.6-flash__20260717",
+      "group_id": "claw-swe-bench-full-350__qwen-3.6-flash__20260717",
+      "canonical_harness_id": "openclaw",
+      "canonical_assessment_ref": "387da5edaa9d6c6cfcfc15e167fe2e46d8647d86",
+      "linkage_state": "unresolved",
+      "w0_grade": "L3",
+      "historical_identity": {"harness_version": null, "harness_revision": null, "immutable_binding": null},
+      "unresolved_dimensions": ["exact historical harness version", "exact historical upstream revision/tag or equivalent immutable runtime binding"],
+      "decision_basis": "The pinned adapter establishes that the Qwen 3.6-flash row exercises the first-party OpenClaw CLI, but neither the admitted row nor the pinned benchmark/leaderboard records the installed OpenClaw version or immutable upstream revision. A present-day or neighboring benchmark version would be an unsupported substitution.",
+      "exercised_system_identity": "OpenClaw CLI invoked by the pinned Claw-SWE-Bench OpenClaw adapter",
+      "evidence_keys": ["claw_repo", "claw_leaderboard", "claw_openclaw_adapter"],
+      "current_state_substitution": "forbidden; canonical reference is identity/temporal context only"
+    },
+    {
+      "observation_id": "hermes-agent__claw-swe-bench-full-350__glm-5.1__20260717",
+      "group_id": "claw-swe-bench-full-350__glm-5.1__20260717",
+      "canonical_harness_id": "hermes-agent",
+      "canonical_assessment_ref": "16bddc88dd325c5eef27c2cc71bbb14c16b870aa",
+      "linkage_state": "unresolved",
+      "w0_grade": "L3",
+      "historical_identity": {"harness_version": null, "harness_revision": null, "immutable_binding": null},
+      "unresolved_dimensions": ["exact historical harness version", "exact historical upstream revision/tag or equivalent immutable runtime binding"],
+      "decision_basis": "The pinned adapter establishes that the GLM 5.1 row exercises the first-party Hermes Agent CLI, but neither the admitted row nor the pinned benchmark/leaderboard records the installed Hermes version or immutable upstream revision. A present-day or neighboring benchmark version would be an unsupported substitution.",
+      "exercised_system_identity": "Hermes Agent CLI invoked by the pinned Claw-SWE-Bench Hermes adapter",
+      "evidence_keys": ["claw_repo", "claw_leaderboard", "claw_hermes_adapter"],
+      "current_state_substitution": "forbidden; canonical reference is identity/temporal context only"
+    },
+    {
+      "observation_id": "openclaw__claw-swe-bench-full-350__glm-5.1__20260717",
+      "group_id": "claw-swe-bench-full-350__glm-5.1__20260717",
+      "canonical_harness_id": "openclaw",
+      "canonical_assessment_ref": "387da5edaa9d6c6cfcfc15e167fe2e46d8647d86",
+      "linkage_state": "unresolved",
+      "w0_grade": "L3",
+      "historical_identity": {"harness_version": null, "harness_revision": null, "immutable_binding": null},
+      "unresolved_dimensions": ["exact historical harness version", "exact historical upstream revision/tag or equivalent immutable runtime binding"],
+      "decision_basis": "The pinned adapter establishes that the GLM 5.1 row exercises the first-party OpenClaw CLI, but neither the admitted row nor the pinned benchmark/leaderboard records the installed OpenClaw version or immutable upstream revision. A present-day or neighboring benchmark version would be an unsupported substitution.",
+      "exercised_system_identity": "OpenClaw CLI invoked by the pinned Claw-SWE-Bench OpenClaw adapter",
+      "evidence_keys": ["claw_repo", "claw_leaderboard", "claw_openclaw_adapter"],
+      "current_state_substitution": "forbidden; canonical reference is identity/temporal context only"
+    }
+  ],
+  "batch_summary": {
+    "input_observations": 10,
+    "grades": {"L1": 6, "L2": 0, "L3": 4},
+    "group_results": {
+      "frontierharness-v1.0__kimi-k3-fireworks__20260822": {"L1": 6, "L2": 0, "L3": 0},
+      "claw-swe-bench-full-350__qwen-3.6-flash__20260717": {"L1": 0, "L2": 0, "L3": 2},
+      "claw-swe-bench-full-350__glm-5.1__20260717": {"L1": 0, "L2": 0, "L3": 2}
+    },
+    "note": "Linkage inventory only; grades do not imply structural state, comparison tier, outcome direction, or paper eligibility."
+  },
+  "preserved_gaps": [
+    {"scope": "Claw-SWE-Bench Hermes rows", "detail": "Pinned native adapter is established; historical host Hermes version/revision is not recorded.", "effect": "both pass-4 Hermes observations remain L3."},
+    {"scope": "Claw-SWE-Bench OpenClaw rows", "detail": "Pinned native adapter is established; historical host OpenClaw version/revision is not recorded.", "effect": "both pass-4 OpenClaw observations remain L3."}
+  ],
+  "validation": {
+    "status": "passed-precommit-mechanical",
+    "commands": [
+      {"command": "python -m json.tool /mnt/data/w2-2026-09-30-pass4-reuse.json >/dev/null", "result": "passed"},
+      {"command": "python assertions: exact 10 pass-4 IDs; unique decisions; grades 6/0/4; no pass-32 IDs; W3/W4/statistics/paper flags false", "result": "passed"}
+    ],
+    "repository_ci": "to-be-checked-on-PR"
+  },
+  "handoff_boundary": {
+    "historical_linkage_complete_for_bounded_pass4": true,
+    "unresolved_linkage_preserved": true,
+    "w3": false,
+    "w4": false,
+    "statistics": false,
+    "paper_claims": false,
+    "next_step": "return bounded W2 artifact to control plane; later stages require fresh independent context"
+  }
+}
