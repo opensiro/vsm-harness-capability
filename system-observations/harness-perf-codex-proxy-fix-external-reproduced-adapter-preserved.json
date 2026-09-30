@@ -1,0 +1,288 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Harness Perf Benchmark / codex-proxy-fix batch",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "adapter-preserved",
+    "historical_relation": "The source executes published harness binaries through harness-specific native protocol/configuration adapters against one local scripted mock workload. Exact source versions are published for the six admitted arms, but W1 does not adjudicate canonical historical linkage."
+  },
+  "primary_sources": [
+    "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/README.md",
+    "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/docs/perf-compare.md",
+    "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/scripts/perf/score.ts"
+  ],
+  "observations": [
+    {
+      "observation_id": "pi__harness-perf-codex-proxy-fix__scripted-mock-100round__e89a895a",
+      "kind": "system-resource-overhead-benchmark-result",
+      "benchmark": {
+        "name": "Harness Perf Benchmark / codex-proxy-fix deterministic mock workload",
+        "version": "e89a895a27a6634bded08f93c886b1a70bb15d63",
+        "task_set": ["source-defined 100-round scripted tool-use workload with protocol-specific adapter script"],
+        "primary_source": "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/README.md",
+        "artifact_source": "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/docs/perf-compare.md"
+      },
+      "result": {
+        "publication_date": "2026-09-19",
+        "batch_label": "codex-proxy-fix",
+        "harness_label": "pi",
+        "harness_version": "0.85.1",
+        "metric": "publisher_cu",
+        "value": 1.271,
+        "cpu_mean_percent_single_core_scale": 65.5,
+        "cpu_peak_percent_single_core_scale": 128.8,
+        "memory_mean_mb_rss": 186.2,
+        "memory_peak_mb_rss": 234.4,
+        "representative_sample": "median end-to-end duration among three serial runs"
+      },
+      "execution": {
+        "environment": "macOS on Apple Silicon, 18 logical cores; source batch load average approximately 2.9-3.8",
+        "model": "local scripted mock only; no real model inference",
+        "workload": "100 tool-use rounds; the source uses a pi-specific 133-entry script to exercise the source-defined 100-round workload",
+        "sampling": "100 ms proc_pid_rusage process-tree accounting",
+        "evaluator": "resource sampler and publisher CU calculation; no task-correctness evaluator",
+        "repetitions": 3,
+        "timeout_seconds": 1800,
+        "reset_policy": "new harness process per serial sample in the source playground sandbox; cache warmth, JIT state, and background-service reset are not published as controlled dimensions"
+      },
+      "comparison": {
+        "group": "harness-perf__codex-proxy-fix__scripted-mock-100round__e89a895a",
+        "mode": "same-batch-resource-candidate",
+        "scope": "harness-runtime-resource-overhead"
+      },
+      "unknown_dimensions": [
+        "exact macOS version and Apple Silicon model beyond the published 18-core description",
+        "cache warmth and JIT state for each serial sample",
+        "background process state beyond the published batch load range"
+      ],
+      "notes": "CU is the publisher's Beta metric: integrated process-tree CPU plus memory with project-defined 1:1 weighting. This observation records resource overhead only and does not encode capability or task quality."
+    },
+    {
+      "observation_id": "codex__harness-perf-codex-proxy-fix__scripted-mock-100round__e89a895a",
+      "kind": "system-resource-overhead-benchmark-result",
+      "benchmark": {
+        "name": "Harness Perf Benchmark / codex-proxy-fix deterministic mock workload",
+        "version": "e89a895a27a6634bded08f93c886b1a70bb15d63",
+        "task_set": ["source-defined 100-round scripted tool-use workload with protocol-specific adapter script"],
+        "primary_source": "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/README.md",
+        "artifact_source": "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/docs/perf-compare.md"
+      },
+      "result": {
+        "publication_date": "2026-09-19",
+        "batch_label": "codex-proxy-fix",
+        "harness_label": "Codex CLI",
+        "harness_version": "0.155.1",
+        "metric": "publisher_cu",
+        "value": 1.383,
+        "cpu_mean_percent_single_core_scale": 10.5,
+        "cpu_peak_percent_single_core_scale": 26.0,
+        "memory_mean_mb_rss": 123.4,
+        "memory_peak_mb_rss": 163.7,
+        "representative_sample": "median end-to-end duration among three serial runs"
+      },
+      "execution": {
+        "environment": "macOS on Apple Silicon, 18 logical cores; source batch load average approximately 2.9-3.8",
+        "model": "local scripted mock only; no real model inference",
+        "workload": "100 tool-use rounds via the source OpenAI Responses mock adapter",
+        "sampling": "100 ms proc_pid_rusage process-tree accounting",
+        "evaluator": "resource sampler and publisher CU calculation; no task-correctness evaluator",
+        "repetitions": 3,
+        "timeout_seconds": 1800,
+        "reset_policy": "new harness process per serial sample in the source playground sandbox; cache warmth, JIT state, and background-service reset are not published as controlled dimensions"
+      },
+      "comparison": {
+        "group": "harness-perf__codex-proxy-fix__scripted-mock-100round__e89a895a",
+        "mode": "same-batch-resource-candidate",
+        "scope": "harness-runtime-resource-overhead"
+      },
+      "unknown_dimensions": [
+        "exact macOS version and Apple Silicon model beyond the published 18-core description",
+        "cache warmth and JIT state for each serial sample",
+        "background process state beyond the published batch load range"
+      ],
+      "notes": "The source states this batch includes the Codex proxy fix that removes a prior exit-time wait. CU is a publisher-defined Beta resource metric, not a capability score."
+    },
+    {
+      "observation_id": "peri__harness-perf-codex-proxy-fix__scripted-mock-100round__e89a895a",
+      "kind": "system-resource-overhead-benchmark-result",
+      "benchmark": {
+        "name": "Harness Perf Benchmark / codex-proxy-fix deterministic mock workload",
+        "version": "e89a895a27a6634bded08f93c886b1a70bb15d63",
+        "task_set": ["source-defined 100-round scripted tool-use workload with protocol-specific adapter script"],
+        "primary_source": "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/README.md",
+        "artifact_source": "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/docs/perf-compare.md"
+      },
+      "result": {
+        "publication_date": "2026-09-19",
+        "batch_label": "codex-proxy-fix",
+        "harness_label": "peri",
+        "harness_version": "3.17.0",
+        "metric": "publisher_cu",
+        "value": 2.102,
+        "cpu_mean_percent_single_core_scale": 32.6,
+        "cpu_peak_percent_single_core_scale": 43.7,
+        "memory_mean_mb_rss": 54.7,
+        "memory_peak_mb_rss": 71.7,
+        "representative_sample": "median end-to-end duration among three serial runs"
+      },
+      "execution": {
+        "environment": "macOS on Apple Silicon, 18 logical cores; source batch load average approximately 2.9-3.8",
+        "model": "local scripted mock only; no real model inference",
+        "workload": "100 tool-use rounds via the source OpenAI Chat Completions mock adapter",
+        "sampling": "100 ms proc_pid_rusage process-tree accounting",
+        "evaluator": "resource sampler and publisher CU calculation; no task-correctness evaluator",
+        "repetitions": 3,
+        "timeout_seconds": 1800,
+        "reset_policy": "new harness process per serial sample in the source playground sandbox; cache warmth, JIT state, and background-service reset are not published as controlled dimensions"
+      },
+      "comparison": {
+        "group": "harness-perf__codex-proxy-fix__scripted-mock-100round__e89a895a",
+        "mode": "same-batch-resource-candidate",
+        "scope": "harness-runtime-resource-overhead"
+      },
+      "unknown_dimensions": [
+        "exact macOS version and Apple Silicon model beyond the published 18-core description",
+        "cache warmth and JIT state for each serial sample",
+        "background process state beyond the published batch load range"
+      ],
+      "notes": "The source workload includes a closing blank response to avoid a known peri exit wait. W1 preserves that workload design rather than interpreting it as generic runtime behavior."
+    },
+    {
+      "observation_id": "claude-code__harness-perf-codex-proxy-fix__scripted-mock-100round__e89a895a",
+      "kind": "system-resource-overhead-benchmark-result",
+      "benchmark": {
+        "name": "Harness Perf Benchmark / codex-proxy-fix deterministic mock workload",
+        "version": "e89a895a27a6634bded08f93c886b1a70bb15d63",
+        "task_set": ["source-defined 100-round scripted tool-use workload with protocol-specific adapter script"],
+        "primary_source": "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/README.md",
+        "artifact_source": "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/docs/perf-compare.md"
+      },
+      "result": {
+        "publication_date": "2026-09-19",
+        "batch_label": "codex-proxy-fix",
+        "harness_label": "Claude Code",
+        "harness_version": "2.1.277",
+        "metric": "publisher_cu",
+        "value": 2.828,
+        "cpu_mean_percent_single_core_scale": 71.8,
+        "cpu_peak_percent_single_core_scale": 122.4,
+        "memory_mean_mb_rss": 310.9,
+        "memory_peak_mb_rss": 351.0,
+        "representative_sample": "median end-to-end duration among three serial runs"
+      },
+      "execution": {
+        "environment": "macOS on Apple Silicon, 18 logical cores; source batch load average approximately 2.9-3.8",
+        "model": "local scripted mock only; no real model inference",
+        "workload": "100 tool-use rounds via the source Anthropic Messages mock adapter",
+        "sampling": "100 ms proc_pid_rusage process-tree accounting",
+        "evaluator": "resource sampler and publisher CU calculation; no task-correctness evaluator",
+        "repetitions": 3,
+        "timeout_seconds": 1800,
+        "reset_policy": "new harness process per serial sample in the source playground sandbox; cache warmth, JIT state, and background-service reset are not published as controlled dimensions"
+      },
+      "comparison": {
+        "group": "harness-perf__codex-proxy-fix__scripted-mock-100round__e89a895a",
+        "mode": "same-batch-resource-candidate",
+        "scope": "harness-runtime-resource-overhead"
+      },
+      "unknown_dimensions": [
+        "exact macOS version and Apple Silicon model beyond the published 18-core description",
+        "cache warmth and JIT state for each serial sample",
+        "background process state beyond the published batch load range"
+      ],
+      "notes": "The benchmark redirects Claude Code to the local scripted mock through the source-defined Anthropic Messages adapter. No real model inference is measured."
+    },
+    {
+      "observation_id": "deepseek-harness__harness-perf-codex-proxy-fix__scripted-mock-100round__e89a895a",
+      "kind": "system-resource-overhead-benchmark-result",
+      "benchmark": {
+        "name": "Harness Perf Benchmark / codex-proxy-fix deterministic mock workload",
+        "version": "e89a895a27a6634bded08f93c886b1a70bb15d63",
+        "task_set": ["source-defined 100-round scripted tool-use workload with protocol-specific adapter script"],
+        "primary_source": "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/README.md",
+        "artifact_source": "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/docs/perf-compare.md"
+      },
+      "result": {
+        "publication_date": "2026-09-19",
+        "batch_label": "codex-proxy-fix",
+        "harness_label": "DeepSeek Harness",
+        "harness_version": "0.1.5-rc.2",
+        "metric": "publisher_cu",
+        "value": 3.101,
+        "cpu_mean_percent_single_core_scale": 46.3,
+        "cpu_peak_percent_single_core_scale": 128.0,
+        "memory_mean_mb_rss": 185.6,
+        "memory_peak_mb_rss": 231.2,
+        "representative_sample": "median end-to-end duration among three serial runs"
+      },
+      "execution": {
+        "environment": "macOS on Apple Silicon, 18 logical cores; source batch load average approximately 2.9-3.8",
+        "model": "local scripted mock only; no real model inference",
+        "workload": "100 tool-use rounds via the source OpenAI Chat Completions mock adapter",
+        "sampling": "100 ms proc_pid_rusage process-tree accounting",
+        "evaluator": "resource sampler and publisher CU calculation; no task-correctness evaluator",
+        "repetitions": 3,
+        "timeout_seconds": 1800,
+        "reset_policy": "new harness process per serial sample in the source playground sandbox; cache warmth, JIT state, and background-service reset are not published as controlled dimensions"
+      },
+      "comparison": {
+        "group": "harness-perf__codex-proxy-fix__scripted-mock-100round__e89a895a",
+        "mode": "same-batch-resource-candidate",
+        "scope": "harness-runtime-resource-overhead"
+      },
+      "unknown_dimensions": [
+        "exact macOS version and Apple Silicon model beyond the published 18-core description",
+        "cache warmth and JIT state for each serial sample",
+        "background process state beyond the published batch load range"
+      ],
+      "notes": "The source label dsh refers to DeepSeek Harness. This observation records runtime resource overhead against the scripted mock only."
+    },
+    {
+      "observation_id": "minimax-code__harness-perf-codex-proxy-fix__scripted-mock-100round__e89a895a",
+      "kind": "system-resource-overhead-benchmark-result",
+      "benchmark": {
+        "name": "Harness Perf Benchmark / codex-proxy-fix deterministic mock workload",
+        "version": "e89a895a27a6634bded08f93c886b1a70bb15d63",
+        "task_set": ["source-defined 100-round scripted tool-use workload with protocol-specific adapter script"],
+        "primary_source": "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/README.md",
+        "artifact_source": "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/docs/perf-compare.md"
+      },
+      "result": {
+        "publication_date": "2026-09-19",
+        "batch_label": "codex-proxy-fix",
+        "harness_label": "MiniMax Code",
+        "harness_version": "0.4.12",
+        "metric": "publisher_cu",
+        "value": 31.995,
+        "cpu_mean_percent_single_core_scale": 98.1,
+        "cpu_peak_percent_single_core_scale": 177.8,
+        "memory_mean_mb_rss": 617.6,
+        "memory_peak_mb_rss": 892.0,
+        "representative_sample": "median end-to-end duration among three serial runs"
+      },
+      "execution": {
+        "environment": "macOS on Apple Silicon, 18 logical cores; source batch load average approximately 2.9-3.8",
+        "model": "local scripted mock only; no real model inference",
+        "workload": "100 tool-use rounds via the source OpenAI Chat Completions mock adapter",
+        "sampling": "100 ms proc_pid_rusage process-tree accounting",
+        "evaluator": "resource sampler and publisher CU calculation; no task-correctness evaluator",
+        "repetitions": 3,
+        "timeout_seconds": 1800,
+        "reset_policy": "new harness process per serial sample in the source playground sandbox; cache warmth, JIT state, and background-service reset are not published as controlled dimensions"
+      },
+      "comparison": {
+        "group": "harness-perf__codex-proxy-fix__scripted-mock-100round__e89a895a",
+        "mode": "same-batch-resource-candidate",
+        "scope": "harness-runtime-resource-overhead"
+      },
+      "unknown_dimensions": [
+        "exact macOS version and Apple Silicon model beyond the published 18-core description",
+        "cache warmth and JIT state for each serial sample",
+        "background process state beyond the published batch load range"
+      ],
+      "notes": "CU is the publisher's Beta metric. W1 records the source value and component resource measurements without ranking or interpreting harness capability."
+    }
+  ]
+}
