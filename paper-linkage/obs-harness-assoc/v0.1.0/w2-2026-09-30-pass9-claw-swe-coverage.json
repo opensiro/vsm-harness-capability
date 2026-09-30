@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "artifact_id": "obs-harness-assoc-w2-2026-09-30-pass9-claw-swe-coverage",
+  "artifact_version": "1.0.0",
+  "recorded_at_utc": "2026-09-30T20:01:05Z",
+  "work_item": {
+    "repository": "opensiro/vsm-harness-capability",
+    "issue": 94,
+    "role": "fresh independent W2 historical system/revision linkage"
+  },
+  "execution": {
+    "capability_start_revision": "23985172b4886b7ce0ff5b71834b71fd47da6030",
+    "w2_execution_revision": "23985172b4886b7ce0ff5b71834b71fd47da6030",
+    "branch": "issue-94-w2-batch-pass9-pass10-pass11-pass12-pass13",
+    "queue_claim": "opensiro/vsm-harness-research:queue-claims/track-a-batch/W2_LINK/pass9+pass10+pass11+pass12+pass13",
+    "fresh_independent_context": true,
+    "raw_score_payload_copied": false
+  },
+  "protocol": {
+    "study_id": "OBS-HARNESS-ASSOC",
+    "version": "0.1.0",
+    "protocol_sha256": "17f51d4f35f0eb5a665122238c505ad6c8e3db7c8b937dac7ecbae35a3ac49a4",
+    "grade_mapping": {"exact-historical-match": "L1", "bounded-compatible": "L2", "unresolved": "L3"},
+    "current_state_substitution_forbidden": true
+  },
+  "upstream": {
+    "w1_issue": 93,
+    "w1_handoff_path": "paper-discovery/och-obs-1/w1-2026-09-30-pass9-claw-swe-coverage-handoff.json",
+    "w1_handoff_blob_sha": "dd8b4c7386990f4e260430372a7086fac29aa3a1",
+    "w1_manifest_id": "och-obs-1-w1-2026-09-30-pass9-claw-swe-coverage"
+  },
+  "preconditions": {
+    "neutral_registry_revision": "23985172b4886b7ce0ff5b71834b71fd47da6030",
+    "neutral_registry_blob_sha": "712378c75b29dce206951d78a7c8a0f29a124cb1",
+    "handoff_source_identity_present": true,
+    "prior_paper_specific_w2_decision_found_for_new_observations": false,
+    "reused_observations_already_covered_by_prior_w2": [
+      "openclaw__claw-swe-bench-full-350__glm-5.1__20260717",
+      "hermes-agent__claw-swe-bench-full-350__glm-5.1__20260717",
+      "openclaw__claw-swe-bench-full-350__qwen-3.6-flash__20260717",
+      "hermes-agent__claw-swe-bench-full-350__qwen-3.6-flash__20260717"
+    ],
+    "prior_w2_artifact_for_reused_observations": "paper-linkage/obs-harness-assoc/v0.1.0/w2-2026-09-30-pass4-reuse.json",
+    "registry_occurrence_counts": {
+      "zeroclaw__claw-swe-bench-full-350__glm-5.1__20260717": 1,
+      "genericagent__claw-swe-bench-full-350__glm-5.1__20260717": 1,
+      "nanobot__claw-swe-bench-full-350__glm-5.1__20260717": 1,
+      "zeroclaw__claw-swe-bench-full-350__qwen-3.6-flash__20260717": 1,
+      "genericagent__claw-swe-bench-full-350__qwen-3.6-flash__20260717": 1,
+      "nanobot__claw-swe-bench-full-350__qwen-3.6-flash__20260717": 1
+    }
+  },
+  "evidence_catalog": {
+    "benchmark": "TokenRhythm/claw-swe-bench@fcece5f4c0817430ce953b52c80c931a40cd9b83",
+    "leaderboard": "claw-swe-bench/claw-swe-bench.github.io@191d0c62a0f72fb0bc1f0eb47b6f1e15950e725f:data/leaderboard.json",
+    "zeroclaw_adapter": "TokenRhythm/claw-swe-bench@fcece5f4c0817430ce953b52c80c931a40cd9b83:claw_swebench/claws/zeroclaw.py",
+    "genericagent_adapter": "TokenRhythm/claw-swe-bench@fcece5f4c0817430ce953b52c80c931a40cd9b83:claw_swebench/claws/generic.py",
+    "nanobot_adapter": "TokenRhythm/claw-swe-bench@fcece5f4c0817430ce953b52c80c931a40cd9b83:claw_swebench/claws/nanobot.py"
+  },
+  "decisions": [
+    {"observation_id":"zeroclaw__claw-swe-bench-full-350__glm-5.1__20260717","exercised_system_identity":"ZeroClaw CLI","linkage_state":"unresolved","w0_grade":"L3","historical_identity":{"harness_version":null,"harness_revision":null,"immutable_binding":null},"unresolved_dimensions":["historical ZeroClaw binary/package version","historical upstream source revision"],"contradictions_or_discrepancies":[],"decision_basis":"The pinned benchmark adapter establishes the ZeroClaw execution family and invocation, but neither the adapter nor leaderboard pins the historical ZeroClaw binary/package/source revision. Current upstream state is not substituted."},
+    {"observation_id":"genericagent__claw-swe-bench-full-350__glm-5.1__20260717","exercised_system_identity":"GenericAgent native task-mode loop","linkage_state":"unresolved","w0_grade":"L3","historical_identity":{"harness_version":null,"harness_revision":null,"immutable_binding":null},"unresolved_dimensions":["historical GenericAgent package/source revision"],"contradictions_or_discrepancies":[],"decision_basis":"The pinned benchmark adapter establishes the GenericAgent family and benchmark-specific invocation membrane, but not the historical upstream implementation revision."},
+    {"observation_id":"nanobot__claw-swe-bench-full-350__glm-5.1__20260717","exercised_system_identity":"NanoBot CLI","linkage_state":"unresolved","w0_grade":"L3","historical_identity":{"harness_version":null,"harness_revision":null,"immutable_binding":null},"unresolved_dimensions":["historical NanoBot package version","historical upstream source revision"],"contradictions_or_discrepancies":[],"decision_basis":"The pinned benchmark adapter establishes the NanoBot execution family and invocation, but no historical NanoBot package/source pin is preserved."},
+    {"observation_id":"zeroclaw__claw-swe-bench-full-350__qwen-3.6-flash__20260717","exercised_system_identity":"ZeroClaw CLI","linkage_state":"unresolved","w0_grade":"L3","historical_identity":{"harness_version":null,"harness_revision":null,"immutable_binding":null},"unresolved_dimensions":["historical ZeroClaw binary/package version","historical upstream source revision"],"contradictions_or_discrepancies":[],"decision_basis":"Same pinned adapter identity as the GLM 5.1 row; historical ZeroClaw implementation identity remains unsupported."},
+    {"observation_id":"genericagent__claw-swe-bench-full-350__qwen-3.6-flash__20260717","exercised_system_identity":"GenericAgent native task-mode loop","linkage_state":"unresolved","w0_grade":"L3","historical_identity":{"harness_version":null,"harness_revision":null,"immutable_binding":null},"unresolved_dimensions":["historical GenericAgent package/source revision"],"contradictions_or_discrepancies":[],"decision_basis":"Same pinned adapter identity as the GLM 5.1 row; historical GenericAgent implementation revision remains unsupported."},
+    {"observation_id":"nanobot__claw-swe-bench-full-350__qwen-3.6-flash__20260717","exercised_system_identity":"NanoBot CLI","linkage_state":"unresolved","w0_grade":"L3","historical_identity":{"harness_version":null,"harness_revision":null,"immutable_binding":null},"unresolved_dimensions":["historical NanoBot package version","historical upstream source revision"],"contradictions_or_discrepancies":[],"decision_basis":"Same pinned adapter identity as the GLM 5.1 row; historical NanoBot implementation identity remains unsupported."}
+  ],
+  "summary": {"decision_count": 6, "L1": 0, "L2": 0, "L3": 6, "handoff_terminal_at_w2": true},
+  "boundary": {"w3_performed": false, "w4_performed": false, "outcome_interpretation_performed": false, "paper_claims": false}
+}
