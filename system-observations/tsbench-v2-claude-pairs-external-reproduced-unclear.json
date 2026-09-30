@@ -148,8 +148,8 @@
         "human_intervention": null
       },
       "comparison": {
-        "group": "tsbench-v2-swelancer5__claude-opus-4-6__dcf7d44f",
-        "mode": "same-model-candidate",
+        "group": "tsbench-v2-swelancer5__claude-opus-label-pair__dcf7d44f",
+        "mode": "source-model-label-near-match-candidate",
         "scope": "real-world-typescript-monorepo"
       },
       "unknown_dimensions": [
@@ -157,9 +157,10 @@
         "exact execution commit for the historical Claude Code run",
         "exact service-side Claude Opus 4.6 snapshot/serving path",
         "exact per-exercise timeout used by the historical run",
+        "whether source model identifiers claude-opus-4-6 and claude-opus-4.6 denote the same service-side model",
         "whether the Anthropic provider label denotes materially identical serving/authentication across the two harnesses"
       ],
-      "notes": "The source result metadata labels provider as anthropic. W1 does not infer identical service routing from the shared label because the harness authentication and invocation paths differ."
+      "notes": "The source result metadata labels model as claude-opus-4-6 and provider as anthropic. W1 does not infer identical service routing or model-label equivalence from those fields."
     },
     {
       "observation_id": "github-copilot-cli__tsbench-v2-swelancer5__claude-opus-4-6__dcf7d44f",
