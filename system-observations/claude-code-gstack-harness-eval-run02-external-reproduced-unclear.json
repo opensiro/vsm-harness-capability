@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Claude Code + gstack 1.60.1.0",
+  "canonical_harness_id": null,
+  "published_implementation": {"system_compatibility": "unclear", "historical_relation": "The pinned study records Claude Code 2.1.209 under the claude-gstack profile with gstack 1.60.1.0. Because the exercised system is a composite overlay and the study does not publish an immutable gstack source revision, W1 does not map it to bare Claude Code or another canonical harness."},
+  "primary_sources": [
+    "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_02/README.md",
+    "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_02/runs/06-runlog.md",
+    "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_02/runs/06-acceptance.txt",
+    "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_02/grades/final.md"
+  ],
+  "observations": [{
+    "observation_id": "claude-code-gstack__harness-eval-feedhub-run02__claude-opus-4-8__7d3f74fe",
+    "kind": "system-benchmark-result",
+    "benchmark": {"family_id": "harness-eval-feedhub-run02", "name": "harness-eval run_02 feedhub build round", "variant": "frozen-build-round", "task_count": 1, "primary_source": "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_02/README.md", "artifact_source": "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_02/runs/06-acceptance.txt"},
+    "result": {"date": "2026-07-16", "agent_label": "06-gstack", "harness_version": "gstack 1.60.1.0; Claude Code 2.1.209", "harness_revision": null, "benchmark_revision": "7d3f74fe47f48db67c9ab0489ad4ba9170922f12", "model": "claude-opus-4-8", "model_config": "source-requested Claude Opus 4.8 via Claude Code; run log records claude-opus-4-8 usage; exact service checkpoint not published", "metric": "acceptance_test_pass_rate", "value": 0.9230769230769231, "acceptance_passed": 24, "acceptance_total": 26, "core_passed": 13, "core_total": 14, "hard_passed": 11, "hard_total": 12, "trials": 1, "consensus_weighted_score_source_reported": 82.5, "wall_time_seconds": 2891, "runner_exit_code": 0},
+    "published_implementation": {"system_compatibility": "unclear", "revision_match": "version-known"},
+    "provenance": {"publisher": "Ken Hiatt / harness-eval", "checked": true, "os_system": null, "public_logs": true, "public_trajectories": null, "raw_run_artifacts_public": true, "execution_environment": "single host kai; headless Claude Code 2.1.209; fake HOME claude-gstack profile; frozen feedhub prompt/spec; sealed executable acceptance suite; zero recorded interventions"},
+    "comparison": {"group": "harness-eval-feedhub-run02__claude-opus-4.8__claude-code-family", "mode": "candidate-same-model", "scope": "coding-swe"},
+    "unknown_dimensions": ["exact service-side Claude Opus 4.8 checkpoint", "immutable gstack source revision corresponding to version 1.60.1.0", "Claude Code runner differs from control by patch version 2.1.209 versus 2.1.211", "trajectory variance at N=1", "material effect of real-HOME leak-canary touches recorded for this cell"],
+    "notes": "Source explicitly reports Claude Code auto-update drift between this cell and the bare control. W1 preserves the pair as a candidate runner-family group with the version difference explicit, not normalized away."
+  }]
+}
