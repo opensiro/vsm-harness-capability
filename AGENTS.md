@@ -33,18 +33,26 @@ Core rules:
 For the active observational paper study, repetitive W2→W3→W4 routing is owned by the non-normative cross-repository queue in `opensiro/vsm-harness-research`:
 
 ```text
-paper/studies/obs-harness-assoc/v0.1.0/TRACK_A_QUEUE.md
-paper/studies/obs-harness-assoc/v0.1.0/track-a-queue.v0.3.json
+paper/studies/obs-harness-assoc/v0.2.0/TRACK_A_QUEUE.md
+paper/studies/obs-harness-assoc/v0.2.0/track-a-queue.v0.5.json
 ```
 
-Active queue semantics are **bounded same-stage batches of up to 5 handoffs with handoff-local busy-skip parallelism**. Every handoff keeps its own exact input binding and append-only scientific artifact; W2/W3/W4 roles must not be mixed in one chat. A claimed/executing handoff is busy and may be skipped for routing to another free handoff; scientific/control blockers remain global STOP conditions.
+The prospective successor rule is:
+
+> **Assessment owns structure; W3 only projects historical run mode.**
+
+Canonical Assessment artifacts/history in the frozen Assessment universe are the structural source of truth for successor W3. W3 must not perform a mini-reassessment from harness source code. If the benchmarked historical revision cannot be bound to an applicable canonical Assessment, preserve it as `structurally-unprojectable` / `?` according to the successor authority rather than creating a new historical Assessment.
+
+Existing `OBS-HARNESS-ASSOC v0.1.0` W3/W4 artifacts remain immutable old-method provenance. W1 neutral evidence and valid W2 historical linkage may be reused; successor W3/W4 migration is owned by the research repository and must be uniform before W5/Gate B/W6.
+
+Active queue semantics remain **bounded same-stage batches of up to 5 handoffs with handoff-local busy-skip parallelism**. Every handoff keeps its own exact input binding; W2/W3/W4 roles must not be mixed in one chat. A claimed/executing handoff is busy and may be skipped for routing to another free handoff; scientific/control blockers remain global STOP conditions.
 
 Stable fresh-chat prompt:
 
 ```text
 Execute the next admitted Track A queue batch in opensiro/vsm-harness-research.
-Follow paper/studies/obs-harness-assoc/v0.1.0/TRACK_A_QUEUE.md exactly.
+Follow paper/studies/obs-harness-assoc/v0.2.0/TRACK_A_QUEUE.md exactly.
 Use a fresh independent context, claim and execute exactly one role-homogeneous batch, then stop at its defined boundary.
 ```
 
-The queue does not change this repository's ownership boundary. W1 remains capability-owned, W2 remains bounded historical-linkage work under issue #94, and raw observations remain stored only here. W3/W4 are research-repository work. The queue is routing/control only and must not be treated as scientific evidence or as authority to perform W5/Gate B/W6.
+The queue does not change this repository's ownership boundary. W1 remains capability-owned, W2 remains bounded historical-linkage work under issue #94, and raw observations remain stored only here. W2 does not classify VSM structure. W3/W4 and successor migration are research-repository work. The queue is routing/control only and must not be treated as scientific evidence or as authority to perform W5/Gate B/W6.
