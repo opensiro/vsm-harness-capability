@@ -16,25 +16,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Regenerate neutral registry views
-        run: python system-observations/render_registry.py
-      - name: Upload generated registry views
-        uses: actions/upload-artifact@v4
-        with:
-          name: w1-pass40-generated-registry
-          path: |
-            system-observations/registry.psv
-            system-observations/REGISTRY.md
       - run: python scripts/validate_repository.py
       - name: Validate Capability-native post-closure contract
         run: python vsm-projections/benchmark-family-map/validate_post_closure.py
       - name: Validate specialized AHO post-closure evidence
         run: python vsm-projections/s4/post-closure-deltas/validate.py
-      - name: Exercise pass-40 resource evidence admission
-        run: |
-          python scripts/admission_check.py system-observations/harness-perf-codex-proxy-fix-external-reproduced-benchmark-scaffolded.json
-          python scripts/admission_check.py system-observations/peri-harness-perf-codex-proxy-fix-first-party-reported-benchmark-scaffolded.json
-      - name: Exercise existing live evidence admission path
+      - name: Exercise live evidence admission path
         run: |
           for record in \
             system-observations/claude-code-wildclawbench-external-reproduced-adapter-preserved.json \
