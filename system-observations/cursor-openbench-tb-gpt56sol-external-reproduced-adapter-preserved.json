@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Cursor CLI under OpenBench GPT-5.6 Sol Terminal-Bench n=3",
+  "canonical_harness_id": null,
+  "published_implementation": {"system_compatibility": "adapter-preserved", "historical_relation": "OpenBench invokes native cursor-agent with the account-bound gpt-5.6-sol-medium model id. The binding report quarantines cancel-async-tasks, reclassifies one Cursor schemelike solve after source transcript audit, and classifies three cursor x feal provider safety refusals as infra rather than wrong answers."},
+  "primary_sources": [
+    "https://github.com/minghinmatthewlam/openbench/blob/db4ba29f5a8364ecad61e62e96a8e703aa05437f/data/tb-gpt56sol-2026-07-10/tb-gpt56sol-n3.jsonl",
+    "https://github.com/minghinmatthewlam/openbench/blob/db4ba29f5a8364ecad61e62e96a8e703aa05437f/data/tb-gpt56sol-2026-07-10/tb-gpt56sol-stats.md",
+    "https://github.com/minghinmatthewlam/openbench/blob/db4ba29f5a8364ecad61e62e96a8e703aa05437f/bench/adapters/cursor.py"
+  ],
+  "observations": [{
+    "observation_id": "cursor__openbench-tb-gpt56sol-noncancel-hack-adjusted__gpt-5.6-sol__4d3faf96",
+    "kind": "system-benchmark-result-derived-from-published-counts",
+    "benchmark": {"family_id": "openbench-tb-gpt56sol-noncancel-hack-adjusted", "name": "OpenBench GPT-5.6 Sol Terminal-Bench n=3 after source quarantine and source hack adjustment", "variant": "cursor", "task_count": 3, "primary_source": "https://github.com/minghinmatthewlam/openbench/blob/db4ba29f5a8364ecad61e62e96a8e703aa05437f/data/tb-gpt56sol-2026-07-10/tb-gpt56sol-stats.md", "artifact_source": "https://github.com/minghinmatthewlam/openbench/blob/db4ba29f5a8364ecad61e62e96a8e703aa05437f/data/tb-gpt56sol-2026-07-10/tb-gpt56sol-n3.jsonl"},
+    "result": {"date": "2026-07-10", "published_snapshot_date": "2026-07-10", "agent_label": "cursor", "harness_version": "2026.07.01", "harness_revision": null, "benchmark_revision": "4d3faf96a6bdc99dcd2718015ddd764c4af40eb4", "methodology_revision": "db4ba29f5a8364ecad61e62e96a8e703aa05437f", "model": "gpt-5.6-sol", "model_config": "cursor-agent account-bound model gpt-5.6-sol-medium", "metric": "mechanically_recomputed_source_hack_adjusted_valid_solve_rate_excluding_quarantined_task", "value": 0.8333333333, "solves": 5, "valid_trials": 6, "source_all_tasks_valid": 9, "source_all_tasks_as_scored_solves": 6, "source_all_tasks_hack_adjusted_solves": 5, "quarantined_task": "cancel-async-tasks", "source_quarantined_task_valid": 3, "source_quarantined_task_hack_adjusted_solves": 0, "source_hack_reclassified_run_ids": ["cursor:terminal-bench/schemelike-metacircular-eval:gpt-5.6-sol:trial2"], "source_infra_exclusions": ["cursor x feal-differential-cryptanalysis trials 1-3: provider safety refusals"], "derivation": "5-0 hack-adjusted solves over 9-3 valid trials"},
+    "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "executed-version-source-reported"},
+    "provenance": {"publisher": "OpenBench / minghinmatthewlam", "checked": true, "os_system": null, "public_logs": false, "public_trajectories": false, "raw_run_artifacts_public": true, "public_result_surface": "committed 48-row scrubbed JSONL plus binding statistics report", "execution_environment": "container benchmark lane; cap 1200s; n=3 per harness/task; valid denominator excludes infra and rate_limited rows"},
+    "comparison": {"group": "openbench-tb-gpt56sol-noncancel-hack-adjusted__gpt-5.6-sol__4d3faf96", "mode": "candidate-same-model", "scope": "terminal-swe"},
+    "unknown_dimensions": ["exact service-side GPT-5.6 Sol checkpoint beyond published canonical identity", "exact Cursor source commit corresponding to executed CLI 2026.07.01", "account/provider-side load and routing state"],
+    "notes": "W1 preserves the publisher's infra classification and hacked-solve reclassification; it does not convert safety refusals into task failures or independently adjudicate transcript intent."
+  }]
+}
