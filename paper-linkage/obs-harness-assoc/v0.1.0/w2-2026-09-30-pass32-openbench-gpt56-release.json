@@ -1,0 +1,290 @@
+{
+  "schema_version": 1,
+  "artifact_id": "obs-harness-assoc-w2-2026-09-30-pass32-openbench-gpt56-release",
+  "artifact_version": "1.0.0",
+  "recorded_at_utc": "2026-09-30T12:38:00Z",
+  "work_item": {
+    "repository": "opensiro/vsm-harness-capability",
+    "issue": 94,
+    "role": "independent W2 historical system/revision linkage"
+  },
+  "execution": {
+    "capability_start_revision": "ec42370967cf6af93a48815d1a1084b219249f23",
+    "w2_execution_revision": "ec42370967cf6af93a48815d1a1084b219249f23",
+    "fresh_independent_context": true,
+    "incremental_batch": true,
+    "w1_issue": 93,
+    "w1_issue_open_at_execution": true,
+    "w1_handoff_path": "paper-discovery/och-obs-1/w1-2026-09-30-pass32-openbench-gpt56-release-handoff.json",
+    "w1_handoff_blob_sha": "ad68adb5064d6d3879302143def2f9514e67509d",
+    "w1_manifest_id": "och-obs-1-w1-2026-09-30-pass32-openbench-gpt56-release"
+  },
+  "protocol": {
+    "control_issue": "opensiro/vsm-harness-research#219",
+    "study_id": "OBS-HARNESS-ASSOC",
+    "version": "0.1.0",
+    "research_freeze_revision": "ac6b63deb1c9163ec25e1be74e61314629ade112",
+    "path": "paper/studies/obs-harness-assoc/v0.1.0/PROTOCOL.md",
+    "protocol_sha256": "17f51d4f35f0eb5a665122238c505ad6c8e3db7c8b937dac7ecbae35a3ac49a4",
+    "grade_mapping": {
+      "exact-historical-match": "L1",
+      "supported-approximate-match": "L2",
+      "unresolved": "L3"
+    },
+    "w1_routing_metadata_discrepancy": {
+      "w1_manifest_study_id": "OCH-OBS-1",
+      "w1_manifest_version": "1.0.0",
+      "w1_manifest_protocol_revision": "5462ffadffd7189ae10e44e22d357bc6162a6038",
+      "treatment": "Preserved as upstream routing metadata without mutation. W2 applies the historical-linkage grades frozen by parent control issue #219 / OBS-HARNESS-ASSOC v0.1.0."
+    }
+  },
+  "preconditions": {
+    "neutral_registry_revision": "ec42370967cf6af93a48815d1a1084b219249f23",
+    "handoff_source_identity_present": true,
+    "prior_paper_specific_w2_decision_found": false,
+    "prior_decision_check": "At the W2 starting revision, no paper-specific historical-linkage artifact was found by repository search and issue #94 had no comments.",
+    "registry_occurrence_counts": {
+      "cursor__openbench-gpt56-release15__gpt-5.6-sol__c85834bc": 1,
+      "grokbuild__openbench-gpt56-release15__gpt-5.6-sol__c85834bc": 1,
+      "devin__openbench-gpt56-release15__gpt-5.6-sol__c85834bc": 1,
+      "claude__openbench-gpt56-release15__gpt-5.6-sol__c85834bc": 1,
+      "opencode__openbench-gpt56-release15__gpt-5.6-sol__c85834bc": 1,
+      "pi__openbench-gpt56-release15__gpt-5.6-sol__c85834bc": 1,
+      "codex__openbench-gpt56-release15__gpt-5.6-sol__c85834bc": 1
+    }
+  },
+  "batch_source": {
+    "source_repository": "https://github.com/minghinmatthewlam/openbench",
+    "execution_surface": "OpenBench GPT-5.6 15-task release matrix",
+    "source_archive_revision": "f0400e4698a16742b2cb290bd4f4ca07b9d01142",
+    "source_scrub_revision": "b17a54351fd6e4a5a909b70aef5bdabc3ecbe27b",
+    "provenance_completion_revision": "c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a",
+    "provenance_path": "docs/releases/2026-07-21-gpt56/provenance.json",
+    "methodology_path": "data/gpt56-2026-07-21/methodology.md",
+    "raw_score_payload_reproduced_here": false
+  },
+  "decisions": [
+    {
+      "observation_id": "cursor__openbench-gpt56-release15__gpt-5.6-sol__c85834bc",
+      "public_source_identity": {
+        "repository": "minghinmatthewlam/openbench",
+        "revision": "c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a",
+        "provenance_path": "docs/releases/2026-07-21-gpt56/provenance.json",
+        "methodology_path": "data/gpt56-2026-07-21/methodology.md"
+      },
+      "exercised_system_identity": "Cursor CLI in the OpenBench GPT-5.6 15-task release matrix",
+      "linkage_state": "unresolved",
+      "w0_grade": "L3",
+      "historical_identity": {
+        "harness_version": null,
+        "harness_revision": null,
+        "upstream_repository": null,
+        "immutable_binding": null
+      },
+      "relation_to_current_canonical_assessment": "No current canonical assessment revision is substituted for the missing historical Cursor CLI identity; the neutral registry has no canonical_harness_id for this observation at the W2 starting revision.",
+      "evidence_references": [
+        "https://github.com/minghinmatthewlam/openbench/blob/c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a/docs/releases/2026-07-21-gpt56/provenance.json",
+        "https://github.com/minghinmatthewlam/openbench/blob/c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a/data/gpt56-2026-07-21/methodology.md"
+      ],
+      "unresolved_dimensions": [
+        "historical Cursor CLI version/revision/build",
+        "immutable upstream implementation/configuration binding"
+      ],
+      "contradictions_or_discrepancies": [],
+      "decision_basis": "The SHA-bound provenance reports no Cursor harness version, and the methodology explicitly states that Cursor reports no CLI version. The #94 fail-closed stop condition therefore requires unresolved rather than a current-state substitution."
+    },
+    {
+      "observation_id": "grokbuild__openbench-gpt56-release15__gpt-5.6-sol__c85834bc",
+      "public_source_identity": {
+        "repository": "minghinmatthewlam/openbench",
+        "revision": "c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a",
+        "provenance_path": "docs/releases/2026-07-21-gpt56/provenance.json"
+      },
+      "exercised_system_identity": "Grok Build CLI",
+      "linkage_state": "exact-historical-match",
+      "w0_grade": "L1",
+      "historical_identity": {
+        "harness_version": "grok 0.2.103",
+        "build_identity": "89c3d36fb6f1",
+        "source_reported_executable": "/opt/homebrew/bin/grok",
+        "upstream_repository": null,
+        "binding_type": "source-reported exact package/version plus build identity in immutable public provenance"
+      },
+      "relation_to_current_canonical_assessment": "Historical execution identity is retained as source-reported version/build provenance; no current canonical assessment revision is asserted as equivalent, and the neutral registry has no canonical_harness_id for this observation at the W2 starting revision.",
+      "evidence_references": [
+        "https://github.com/minghinmatthewlam/openbench/blob/c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a/docs/releases/2026-07-21-gpt56/provenance.json"
+      ],
+      "unresolved_dimensions": [
+        "public upstream source-repository commit corresponding to the source-reported closed/distributed build identity is not asserted"
+      ],
+      "contradictions_or_discrepancies": [],
+      "decision_basis": "The immutable public release provenance identifies the executed binary by exact version and build identity. W0 permits an equivalent reconstructable implementation/configuration identity for L1; no present-day repository state is used."
+    },
+    {
+      "observation_id": "devin__openbench-gpt56-release15__gpt-5.6-sol__c85834bc",
+      "public_source_identity": {
+        "repository": "minghinmatthewlam/openbench",
+        "revision": "c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a",
+        "provenance_path": "docs/releases/2026-07-21-gpt56/provenance.json",
+        "methodology_path": "data/gpt56-2026-07-21/methodology.md"
+      },
+      "exercised_system_identity": "Devin CLI",
+      "linkage_state": "exact-historical-match",
+      "w0_grade": "L1",
+      "historical_identity": {
+        "harness_version": "devin 3000.2.17",
+        "build_identity": "2c489dfc",
+        "source_reported_executable": "<HOME>/.local/bin/devin",
+        "upstream_repository": null,
+        "binding_type": "source-reported exact package/version plus build identity in immutable public provenance"
+      },
+      "relation_to_current_canonical_assessment": "Historical execution identity is retained as source-reported version/build provenance; no current canonical assessment revision is asserted as equivalent, and the neutral registry has no canonical_harness_id for this observation at the W2 starting revision.",
+      "evidence_references": [
+        "https://github.com/minghinmatthewlam/openbench/blob/c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a/docs/releases/2026-07-21-gpt56/provenance.json",
+        "https://github.com/minghinmatthewlam/openbench/blob/c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a/data/gpt56-2026-07-21/methodology.md"
+      ],
+      "unresolved_dimensions": [
+        "public upstream source-repository commit corresponding to the source-reported distributed build identity is not asserted"
+      ],
+      "contradictions_or_discrepancies": [
+        "The release provenance includes Devin, while the methodology prose enumerates six CLI harnesses and omits Devin. This discrepancy is preserved and is not converted into a comparability judgment."
+      ],
+      "decision_basis": "The immutable release provenance identifies the executed Devin binary by exact version and build identity. The methodology-scope mismatch does not erase that historical binary identity; no W4 inference is made from it."
+    },
+    {
+      "observation_id": "claude__openbench-gpt56-release15__gpt-5.6-sol__c85834bc",
+      "public_source_identity": {
+        "repository": "minghinmatthewlam/openbench",
+        "revision": "c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a",
+        "provenance_path": "docs/releases/2026-07-21-gpt56/provenance.json"
+      },
+      "exercised_system_identity": "Claude Code CLI",
+      "linkage_state": "exact-historical-match",
+      "w0_grade": "L1",
+      "historical_identity": {
+        "harness_version": "2.1.214",
+        "upstream_repository": "anthropics/claude-code",
+        "immutable_tag": "v2.1.214",
+        "upstream_commit": "07dcb0e13580b21174ff1bf6a7e1d5ead3b61d60",
+        "binding_type": "source-reported executed version independently resolved to immutable public Git tag"
+      },
+      "relation_to_current_canonical_assessment": "The historical tag/commit is preserved as the benchmark-run identity; no current canonical assessment revision is substituted, and the neutral registry has no canonical_harness_id for this observation at the W2 starting revision.",
+      "evidence_references": [
+        "https://github.com/minghinmatthewlam/openbench/blob/c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a/docs/releases/2026-07-21-gpt56/provenance.json",
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.214",
+        "https://github.com/anthropics/claude-code/commit/07dcb0e13580b21174ff1bf6a7e1d5ead3b61d60"
+      ],
+      "unresolved_dimensions": [],
+      "contradictions_or_discrepancies": [],
+      "decision_basis": "OpenBench reports the executed Claude Code version, and the same version is independently bound to a public immutable tag and commit."
+    },
+    {
+      "observation_id": "opencode__openbench-gpt56-release15__gpt-5.6-sol__c85834bc",
+      "public_source_identity": {
+        "repository": "minghinmatthewlam/openbench",
+        "revision": "c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a",
+        "provenance_path": "docs/releases/2026-07-21-gpt56/provenance.json"
+      },
+      "exercised_system_identity": "OpenCode CLI",
+      "linkage_state": "exact-historical-match",
+      "w0_grade": "L1",
+      "historical_identity": {
+        "harness_version": "1.18.3",
+        "upstream_repository": "anomalyco/opencode",
+        "immutable_tag": "v1.18.3",
+        "upstream_commit": "127bdb30784d508cc556c71a0f32b508a3061517",
+        "binding_type": "source-reported executed version independently resolved to immutable public Git tag"
+      },
+      "relation_to_current_canonical_assessment": "The historical tag/commit is preserved as the benchmark-run identity; no current canonical assessment revision is substituted, and the neutral registry has no canonical_harness_id for this observation at the W2 starting revision.",
+      "evidence_references": [
+        "https://github.com/minghinmatthewlam/openbench/blob/c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a/docs/releases/2026-07-21-gpt56/provenance.json",
+        "https://github.com/anomalyco/opencode/releases/tag/v1.18.3",
+        "https://github.com/anomalyco/opencode/commit/127bdb30784d508cc556c71a0f32b508a3061517"
+      ],
+      "unresolved_dimensions": [],
+      "contradictions_or_discrepancies": [],
+      "decision_basis": "OpenBench reports the executed OpenCode version, and the same version is independently bound to a public immutable tag and commit."
+    },
+    {
+      "observation_id": "pi__openbench-gpt56-release15__gpt-5.6-sol__c85834bc",
+      "public_source_identity": {
+        "repository": "minghinmatthewlam/openbench",
+        "revision": "c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a",
+        "provenance_path": "docs/releases/2026-07-21-gpt56/provenance.json"
+      },
+      "exercised_system_identity": "Pi CLI",
+      "linkage_state": "exact-historical-match",
+      "w0_grade": "L1",
+      "historical_identity": {
+        "harness_version": "0.80.10",
+        "upstream_repository_at_w2_review": "earendil-works/pi",
+        "repository_redirect_observed_from": "badlogic/pi-mono",
+        "immutable_tag": "v0.80.10",
+        "upstream_commit": "8dc78834cde4e329284cf505f9e3f99763df5529",
+        "binding_type": "source-reported executed version independently resolved to immutable public Git tag after repository redirect"
+      },
+      "relation_to_current_canonical_assessment": "The historical tag/commit is preserved as the benchmark-run identity; repository relocation observed at W2 review is not treated as evidence about the run date. No current canonical assessment revision is substituted, and the neutral registry has no canonical_harness_id for this observation at the W2 starting revision.",
+      "evidence_references": [
+        "https://github.com/minghinmatthewlam/openbench/blob/c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a/docs/releases/2026-07-21-gpt56/provenance.json",
+        "https://github.com/earendil-works/pi/releases/tag/v0.80.10",
+        "https://github.com/earendil-works/pi/commit/8dc78834cde4e329284cf505f9e3f99763df5529"
+      ],
+      "unresolved_dimensions": [],
+      "contradictions_or_discrepancies": [
+        "The public repository path currently redirects from badlogic/pi-mono to earendil-works/pi; W2 records the redirect without inferring when that repository move occurred."
+      ],
+      "decision_basis": "OpenBench reports the executed Pi version, and the same version is independently bound to an immutable public tag and commit."
+    },
+    {
+      "observation_id": "codex__openbench-gpt56-release15__gpt-5.6-sol__c85834bc",
+      "public_source_identity": {
+        "repository": "minghinmatthewlam/openbench",
+        "revision": "c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a",
+        "provenance_path": "docs/releases/2026-07-21-gpt56/provenance.json"
+      },
+      "exercised_system_identity": "Codex CLI",
+      "linkage_state": "exact-historical-match",
+      "w0_grade": "L1",
+      "historical_identity": {
+        "harness_version": "0.144.5",
+        "upstream_repository": "openai/codex",
+        "immutable_tag": "rust-v0.144.5",
+        "tag_object": "efea0e66996d4e7f4f805f3df32a169d327f2f73",
+        "upstream_commit": "87db9bc18ba5bc82c1cb4e4381b44f693ee35623",
+        "binding_type": "source-reported executed version independently resolved to immutable annotated Git tag and commit"
+      },
+      "relation_to_current_canonical_assessment": "The historical tag/commit is preserved as the benchmark-run identity; no current canonical assessment revision is substituted, and the neutral registry has no canonical_harness_id for this observation at the W2 starting revision.",
+      "evidence_references": [
+        "https://github.com/minghinmatthewlam/openbench/blob/c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a/docs/releases/2026-07-21-gpt56/provenance.json",
+        "https://github.com/openai/codex/releases/tag/rust-v0.144.5",
+        "https://github.com/openai/codex/commit/87db9bc18ba5bc82c1cb4e4381b44f693ee35623"
+      ],
+      "unresolved_dimensions": [],
+      "contradictions_or_discrepancies": [],
+      "decision_basis": "OpenBench reports codex-cli 0.144.5, and the upstream annotated rust-v0.144.5 tag resolves to the recorded immutable commit."
+    }
+  ],
+  "batch_summary": {
+    "observation_count": 7,
+    "exact_historical_match": 6,
+    "supported_approximate_match": 0,
+    "unresolved": 1,
+    "L1": 6,
+    "L2": 0,
+    "L3": 1
+  },
+  "batch_discrepancies": [
+    "W1 handoff routing metadata names OCH-OBS-1 v1.0.0, while issue #94 is parented by #219 whose frozen linkage authority is OBS-HARNESS-ASSOC v0.1.0. W2 preserves the W1 metadata and uses #219 only for linkage-grade definitions.",
+    "OpenBench release provenance includes Devin, while the release methodology prose enumerates six CLI harnesses and omits Devin. The discrepancy is preserved without W4 comparability adjudication."
+  ],
+  "boundary": {
+    "structural_classification_performed": false,
+    "matched_cell_adjudication_performed": false,
+    "statistical_interpretation_performed": false,
+    "paper_claims_made": false,
+    "raw_scores_reproduced": false,
+    "current_state_substituted_for_historical_identity": false,
+    "issue_94_should_remain_open": true,
+    "reason": "This is one bounded incremental W2 batch; W1 issue #93 remains active and other admitted or future W1 handoffs remain for independent W2 processing."
+  }
+}
