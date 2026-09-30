@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "manifest_id": "och-obs-1-w1-2026-09-30-pass44-redhat-sweverified-qwen36",
+  "recorded_at": "2026-09-30",
+  "work_item": {"repository":"opensiro/vsm-harness-capability","issue":93,"role":"W1 public-evidence discovery and neutral admission"},
+  "protocol": {"id":"OCH-OBS-1","version":"1.0.0","repository":"opensiro/vsm-harness-research","revision":"5462ffadffd7189ae10e44e22d357bc6162a6038","collection_cutoff_utc":"2026-10-20T23:59:59Z"},
+  "checkpoint_parent": {"capability_main_revision":"faec8af4534796b52fda46802f3632dcb54dac3d","registry_observation_count_before":290,"prior_handoffs_mutated":false},
+  "collection_state": {"status":"active","pass_number":44,"cutoff_reached":false,"note":"Pass 44 was prepared raw-only while independent pass 40 PR #137 owned the generated registry surface. No registry views were modified and no PR was opened for this pass yet."},
+  "discovery_pass": {
+    "pass_id":"w1-pass-044-redhat-sweverified-qwen36-nvfp4",
+    "method":"Direction-blind admission preparation for five published SWE-bench Verified Qwen3.6 harness run sheets. W1 preserves source scores/configuration and source inconsistencies without reproducing leaderboard ordering.",
+    "source_repository":"https://github.com/redhat-et/coding_agent_bench",
+    "source_publication_revision":"1389cc6e9c272a207c2e48b90ac6693955e6f7da",
+    "benchmark_family":"redhat-sweverified500-qwen36-nvfp4",
+    "benchmark_identity":"swe-bench/swe-bench-verified",
+    "task_count":500,
+    "upstream_dataset_revision":"unknown; source run sheets identify the Harbor latest dataset surface rather than a commit or immutable dataset ref",
+    "model":"RedHatAI/Qwen3.6-35B-A3B-NVFP4",
+    "harness_labels":["Pi","Qwen Code","Claude Code","OpenClaw","OpenCode"],
+    "environment":"Docker via Harbor",
+    "hardware":"2x A100 40GB",
+    "model_max_len":262144,
+    "generation_defaults":{"temperature":1.0,"top_p":0.95,"top_k":20},
+    "attempts":1,
+    "result_artifacts":[
+      "https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Qwen3.6_35b_NVFP4_Pi.md",
+      "https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Qwen3.6_35b_NVFP4_Qwen_Code.md",
+      "https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Qwen3.6_35b_NVFP4_Claude_Code.md",
+      "https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Qwen3.6_35b_NVFP4_OpenClaw.md",
+      "https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Qwen3.6_35b_NVFP4_OpenCode.md"
+    ]
+  },
+  "reused_existing_observation_ids":[],
+  "newly_admitted_observation_ids":[
+    "pi__redhat-sweverified500__qwen3.6-35b-a3b-nvfp4__1389cc6e",
+    "qwen-code__redhat-sweverified500__qwen3.6-35b-a3b-nvfp4__1389cc6e",
+    "claude-code__redhat-sweverified500__qwen3.6-35b-a3b-nvfp4__1389cc6e",
+    "openclaw__redhat-sweverified500__qwen3.6-35b-a3b-nvfp4__1389cc6e",
+    "opencode__redhat-sweverified500__qwen3.6-35b-a3b-nvfp4__1389cc6e"
+  ],
+  "candidate_comparison_groups":[{
+    "group_id":"redhat-sweverified500__qwen3.6-35b-a3b-nvfp4__1389cc6e",
+    "observation_ids":[
+      "pi__redhat-sweverified500__qwen3.6-35b-a3b-nvfp4__1389cc6e",
+      "qwen-code__redhat-sweverified500__qwen3.6-35b-a3b-nvfp4__1389cc6e",
+      "claude-code__redhat-sweverified500__qwen3.6-35b-a3b-nvfp4__1389cc6e",
+      "openclaw__redhat-sweverified500__qwen3.6-35b-a3b-nvfp4__1389cc6e",
+      "opencode__redhat-sweverified500__qwen3.6-35b-a3b-nvfp4__1389cc6e"
+    ],
+    "source_known_dimensions":["same named model weights","same 500-task SWE-bench Verified benchmark identity","same 2x A100 40GB model server class","same model max length and published generation defaults","Docker/Harbor execution and official verifier"],
+    "explicit_unknown_or_nonidentical_dimensions":["historical harness versions are not recorded in the run sheets","exact upstream benchmark dataset commit is not pinned","job dates and concurrency differ","some runs document manual Harbor resume of selected initial errors","published error breakdowns contain local inconsistencies"],
+    "paper_eligibility":"not-assessed-by-W1"
+  }],
+  "provenance_strength": {
+    "class":"external-reproduced-with-embedded-harbor-run-sheets",
+    "immutable_publication_revision":true,
+    "public_per_harness_run_config":true,
+    "public_embedded_result_json":true,
+    "fixed_named_model_weights":true,
+    "historical_harness_versions_recovered":false,
+    "upstream_dataset_commit_recovered":false,
+    "w1_treatment":"admit source pass@1 values and machine/environment metadata; preserve error-count and heading discrepancies without repair"
+  },
+  "protocol_deviations_and_failures":[
+    {"event":"pi-error-breakdown-conflict","scope":"Pi","detail":"The Pi summary line states 325 successes / 169 failures / 4 errors while its embedded result.json reports six errors. W1 retains the 65.0% score and does not fabricate a corrected breakdown."},
+    {"event":"opencode-count-sum-conflict","scope":"OpenCode","detail":"The OpenCode summary states 274 successes / 225 failures / 4 errors, which does not sum to the stated 500-task population. W1 retains the 54.8% score."},
+    {"event":"openclaw-heading-mismatch","scope":"OpenClaw","detail":"The OpenClaw benchmark file has an H1 ending in OpenCode while the filename and explicit Harness field identify OpenClaw. W1 uses the explicit Harness field and records the heading mismatch."},
+    {"event":"unversioned-upstream-dataset-ref","scope":"all five runs","detail":"The run sheets identify the 500-task SWE-bench Verified surface but do not bind an immutable upstream dataset commit/ref."}
+  ],
+  "non_admission_dispositions":[
+    {"surface":"leaderboard ordering and cost ranking","status":"not-promoted-by-W1","reason":"W1 records individual measurements only; no winner or efficiency ranking is assigned."},
+    {"surface":"corrected error/failure decompositions inferred from percentages","status":"not-admitted","reason":"Where source fields conflict, W1 preserves the conflict rather than reconstructing missing categories."}
+  ],
+  "validation": {"status":"pending","registry_observation_count_after":null,"results":[],"pending_reason":"Independent pass 40 PR #137 currently owns the generated registry surface. Pass 44 has not yet run admission or regenerated registry views."},
+  "handoff_boundary": {"structural_classification_performed":false,"historical_linkage_adjudicated":false,"matched_cell_eligibility_assigned":false,"comparison_tier_assigned":false,"statistical_interpretation_performed":false,"winner_declared":false,"paper_claim_made":false}
+}
