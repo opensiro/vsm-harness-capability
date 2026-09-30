@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "manifest_id": "och-obs-1-w1-2026-09-30-pass48-explicit-edit",
+  "recorded_at": "2026-09-30",
+  "work_item": {
+    "repository": "opensiro/vsm-harness-capability",
+    "issue": 93,
+    "role": "W1 public-evidence discovery and neutral admission"
+  },
+  "protocol": {
+    "id": "OCH-OBS-1",
+    "version": "1.0.0",
+    "repository": "opensiro/vsm-harness-research",
+    "revision": "5462ffadffd7189ae10e44e22d357bc6162a6038",
+    "collection_cutoff_utc": "2026-10-20T23:59:59Z"
+  },
+  "checkpoint_parent": {
+    "capability_main_revision": "c170318aaabf4572d5bf149c3595fd89b2fb6596",
+    "registry_observation_count_before": 299,
+    "prior_handoffs_mutated": false
+  },
+  "collection_state": {
+    "status": "active",
+    "pass_number": 48,
+    "cutoff_reached": false,
+    "note": "Issue #93 remains active through the frozen collection cutoff."
+  },
+  "discovery_pass": {
+    "pass_id": "w1-pass-048-explicit-edit",
+    "method": "Direction-blind discovery of public Explicit Edit accepted bundles. W1 admitted one immutable community-run bundle only after recovering its exact harness/model configuration, 226-task contract binding, verifier binding, policy, and first/final exact outcome. Multi-harness leaderboard aggregates were not substituted for harness-specific raw evidence.",
+    "source_dataset": "https://huggingface.co/datasets/alexshpunt/explicit-edit-benchmark",
+    "source_acceptance_revision": "7dc2b3bfaf7eb0688a0188e769e78109ec2e7290",
+    "source_bundle_id": "831b5ee1f189f15d563684b616e3d505649ea9be1976ceb3cd77f27c868b71b7",
+    "source_runner_repository": "https://github.com/alexshpunt/explicit-edit-benchmark",
+    "source_runner_documentation_revision": "5827e3fb65845f4b76adb06e5919d94ec4ffd5cf",
+    "public_snapshot_date": "2026-09-28",
+    "benchmark_surface": "Explicit Edit contract explicit-edit-v1; 226 deterministic byte-exact editing tasks",
+    "task_set_sha256": "80f793e69c53a8e768165d8460daec9d714b86da9989c6d4e1cf3c8f79d8ef69",
+    "verifier_sha256": "8bd4be15c886bba84e8a6fa46576c43f2ca0f02d2536d98403f97361914a166d",
+    "run_policy": {
+      "oracle_recoveries": 5,
+      "retry_failures": 0,
+      "concurrency": 20,
+      "timeout_ms": 300000
+    },
+    "counts": {
+      "trials": 226,
+      "rounds": 227,
+      "tool_calls": 1585
+    }
+  },
+  "reused_existing_observation_ids": [],
+  "newly_admitted_observation_ids": [
+    "pi-hashline-edit-pro__explicit-edit-v1-226__deepseek-v4.1-flash__7dc2b3bf"
+  ],
+  "candidate_comparison_groups": [
+    {
+      "group_id": "explicit-edit-v1__deepseek-v4.1-flash-deepseek__7dc2b3bf",
+      "observation_ids": [
+        "pi-hashline-edit-pro__explicit-edit-v1-226__deepseek-v4.1-flash__7dc2b3bf"
+      ],
+      "source_known_dimensions": [
+        "226-task Explicit Edit v1 task set bound by SHA-256",
+        "byte-exact verifier bound by SHA-256",
+        "harness family pi-hashline-edit-pro version 4.4.3",
+        "Pi agent version 0.87.1",
+        "model family/version deepseek-v4.1-flash via provider deepseek",
+        "thinking=low",
+        "harness-native transport",
+        "five allowed Oracle recoveries, no fresh-trial retry failures",
+        "300-second per-round timeout",
+        "concurrency 20"
+      ],
+      "explicit_unknown_or_nonidentical_dimensions": [
+        "host machine and operating-system details",
+        "exact harness source commit because sourceCommit is null",
+        "service-side model revision beyond the published model label",
+        "independent execution verification because the accepted submission is marked unverified"
+      ],
+      "paper_eligibility": "not-assessed-by-W1"
+    }
+  ],
+  "provenance_strength": {
+    "immutable_acceptance_revision": true,
+    "content_addressed_accepted_bundle": true,
+    "task_set_hash_bound": true,
+    "verifier_hash_bound": true,
+    "harness_and_agent_versions_bound": true,
+    "run_policy_bound": true,
+    "per_task_trials_public": true,
+    "execution_source_commit_bound": false,
+    "publisher_verification_status": "unverified"
+  },
+  "non_admission_dispositions": [
+    {
+      "surface": "current Explicit Edit leaderboard model-route aggregates",
+      "status": "not-promoted-by-W1",
+      "reason": "Model-route rows aggregate multiple harnesses/configurations and are not a substitute for one harness-specific raw observation."
+    },
+    {
+      "surface": "deepseek-v4.1-flash/deepseek multi-harness route as a comparison result",
+      "status": "deferred",
+      "reason": "The public route contains multiple runs and harnesses. W1 admitted only the individually pinned bundle whose configuration and outcome were recovered without inventing the remaining decomposition."
+    },
+    {
+      "surface": "gpt-6.1-sol/openai-codex model-route aggregate",
+      "status": "deferred",
+      "reason": "The route exposes two harnesses and 452 observations, but W1 did not recover both harness-specific immutable accepted bundles during this pass."
+    },
+    {
+      "surface": "publisher leaderboard ordering or tier language",
+      "status": "not-promoted-by-W1",
+      "reason": "W1 preserves source outcomes and provenance without ranking harnesses or selecting a winner."
+    },
+    {
+      "surface": "dataset acceptance as independent verification",
+      "status": "not-promoted-by-W1",
+      "reason": "The accepted submission explicitly records verification as unverified; W1 preserves that status."
+    }
+  ],
+  "protocol_deviations_and_failures": [
+    {
+      "event": "exact-head-registry-materialization-and-admission",
+      "run_number": 393,
+      "run_id": 36750437102,
+      "head_sha": "434ab97a58de30d9ea174565c781b9b0a955a634",
+      "generated_registry_head_sha": "abd41b58415c1d5497ac5834ca685d1477c35e26",
+      "conclusion": "success",
+      "detail": "The bounded write-enabled workflow rendered 300 observations, materialized the generated registry commit, passed repository validators, the pass-48 Explicit Edit admission check, and the existing live admission path."
+    },
+    {
+      "event": "bot-generated-workflow-run",
+      "run_number": 394,
+      "run_id": 36750463608,
+      "head_sha": "abd41b58415c1d5497ac5834ca685d1477c35e26",
+      "conclusion": "action_required",
+      "evidence_rejected": false,
+      "detail": "GitHub did not automatically execute the workflow for the bot-authored generated-registry commit; this was superseded by explicit restoration of the standard read-only workflow and a fresh validation."
+    },
+    {
+      "event": "standard-read-only-validation-restored",
+      "run_number": 395,
+      "run_id": 36750749944,
+      "head_sha": "eb339cb9dbabd28a14c25c8c4a956681fe99d425",
+      "conclusion": "success"
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "registry_observation_count_after": 300,
+    "evidence_admission_run": 36750437102,
+    "generated_registry_head_sha": "abd41b58415c1d5497ac5834ca685d1477c35e26",
+    "standard_read_only_validation_run": 36750749944,
+    "standard_workflow_blob_sha": "244ad9701f41e6122f37c0676a00e705cddd622f"
+  },
+  "handoff_boundary": {
+    "structural_classification_performed": false,
+    "historical_linkage_adjudicated": false,
+    "matched_cell_eligibility_assigned": false,
+    "comparison_tier_assigned": false,
+    "statistical_interpretation_performed": false,
+    "winner_declared": false,
+    "paper_claim_made": false
+  }
+}
