@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "manifest_id": "och-obs-1-w1-2026-09-30-pass28-openbench-gpt56sol",
+  "recorded_at": "2026-09-30",
+  "work_item": {"repository": "opensiro/vsm-harness-capability", "issue": 93, "role": "W1 public-evidence discovery and neutral admission"},
+  "protocol": {"id": "OCH-OBS-1", "version": "1.0.0", "repository": "opensiro/vsm-harness-research", "revision": "5462ffadffd7189ae10e44e22d357bc6162a6038", "collection_cutoff_utc": "2026-10-20T23:59:59Z"},
+  "checkpoint_parent": {"capability_main_revision": "ff8836ae2396661af7d531a251bcaf883c0d3c47", "registry_observation_count_before": 235, "prior_handoffs_mutated": false},
+  "collection_state": {"status": "active", "documented_discovery_passes_completed_after_this_checkpoint": 28, "cutoff_reached": false},
+  "discovery_pass": {
+    "pass_id": "w1-pass-028-openbench-gpt56sol-noncancel-hack-adjusted",
+    "method": "Direction-blind admission of four GPT-5.6 Sol harness observations from the committed OpenBench 48-row Terminal-Bench dataset. W1 adopts the publisher's explicit hack-adjusted solved counts, preserves the publisher's infra exclusions, then mechanically subtracts the separately quarantined cancel-async-tasks valid cell. W1 performs no independent transcript-intent adjudication, evaluator rerun, confidence-interval recomputation, ranking, or winner selection.",
+    "source_repository": "https://github.com/minghinmatthewlam/openbench",
+    "dataset_revision": "4d3faf96a6bdc99dcd2718015ddd764c4af40eb4",
+    "binding_report_revision": "db4ba29f5a8364ecad61e62e96a8e703aa05437f",
+    "published_snapshot_date": "2026-07-10",
+    "retained_tasks": ["feal-differential-cryptanalysis", "llm-inference-batching-scheduler", "schemelike-metacircular-eval"],
+    "quarantined_task": "cancel-async-tasks",
+    "source_hack_reclassified_run_ids": ["pi:terminal-bench/schemelike-metacircular-eval:gpt-5.6-sol:trial3", "cursor:terminal-bench/schemelike-metacircular-eval:gpt-5.6-sol:trial2"],
+    "source_artifacts": [
+      "https://github.com/minghinmatthewlam/openbench/blob/db4ba29f5a8364ecad61e62e96a8e703aa05437f/data/tb-gpt56sol-2026-07-10/tb-gpt56sol-n3.jsonl",
+      "https://github.com/minghinmatthewlam/openbench/blob/db4ba29f5a8364ecad61e62e96a8e703aa05437f/data/tb-gpt56sol-2026-07-10/tb-gpt56sol-stats.md",
+      "https://github.com/minghinmatthewlam/openbench/blob/db4ba29f5a8364ecad61e62e96a8e703aa05437f/data/tb-open-n3-2026-07-09/tb-open-n3-methodology-notes.md",
+      "https://github.com/minghinmatthewlam/openbench/blob/db4ba29f5a8364ecad61e62e96a8e703aa05437f/bench/adapters/pi.py",
+      "https://github.com/minghinmatthewlam/openbench/blob/db4ba29f5a8364ecad61e62e96a8e703aa05437f/bench/adapters/cursor.py",
+      "https://github.com/minghinmatthewlam/openbench/blob/db4ba29f5a8364ecad61e62e96a8e703aa05437f/bench/adapters/codex.py",
+      "https://github.com/minghinmatthewlam/openbench/blob/db4ba29f5a8364ecad61e62e96a8e703aa05437f/bench/adapters/opencode.py"
+    ]
+  },
+  "newly_admitted_observation_ids": [
+    "pi__openbench-tb-gpt56sol-noncancel-hack-adjusted__gpt-5.6-sol__4d3faf96",
+    "cursor__openbench-tb-gpt56sol-noncancel-hack-adjusted__gpt-5.6-sol__4d3faf96",
+    "codex__openbench-tb-gpt56sol-noncancel-hack-adjusted__gpt-5.6-sol__4d3faf96",
+    "opencode__openbench-tb-gpt56sol-noncancel-hack-adjusted__gpt-5.6-sol__4d3faf96"
+  ],
+  "candidate_same_model_comparison_groups": [{
+    "group_id": "openbench-tb-gpt56sol-noncancel-hack-adjusted__gpt-5.6-sol__4d3faf96",
+    "observation_ids": ["pi__openbench-tb-gpt56sol-noncancel-hack-adjusted__gpt-5.6-sol__4d3faf96", "cursor__openbench-tb-gpt56sol-noncancel-hack-adjusted__gpt-5.6-sol__4d3faf96", "codex__openbench-tb-gpt56sol-noncancel-hack-adjusted__gpt-5.6-sol__4d3faf96", "opencode__openbench-tb-gpt56sol-noncancel-hack-adjusted__gpt-5.6-sol__4d3faf96"],
+    "source_known_dimensions": ["same canonical GPT-5.6 Sol identity", "medium-equivalent reasoning configuration", "same three retained Terminal-Bench tasks", "three scheduled trials per harness/task", "same 1200 second cap", "same checker-after-kill semantics", "same source valid-row rule excluding infra and rate_limited"],
+    "explicit_unknown_or_nonidentical_dimensions": ["exact service-side checkpoint beyond canonical model identity", "exact source commits corresponding to executed CLI versions", "native harness prompting/context/tool-loop behavior differs by design", "provider/account-side load and routing state", "Cursor feal cell has three publisher-classified provider safety refusals", "Codex/OpenCode rows come from fresh-image rerun lanes after source-reported stale-image invalidation"],
+    "paper_eligibility": "not-assessed-by-W1"
+  }],
+  "provenance_strength": {"class": "external-reproduced", "public_per_run_rows": true, "public_source_hack_adjustment": true, "public_binding_task_quarantine": true, "public_adapter_implementation": true, "public_executed_version_caveats": true, "public_full_agent_trajectories": false, "w1_treatment": "source hack-adjustment is treated as attributed publisher evidence; W1 only performs transparent solved/valid arithmetic to remove the independently quarantined task"},
+  "protocol_deviations_and_failures": [
+    {"event": "binding-task-quarantine", "scope": "cancel-async-tasks", "source_reported": true, "detail": "The checker was proven non-deterministic under load; source states Sol's 0/12 is grader noise. W1 excludes this task from the derived factual surface."},
+    {"event": "source-hack-reclassification", "scope": "two schemelike solves", "source_reported": true, "detail": "The source transcript audit reclassifies one Pi and one Cursor solved row as wrong_answer under hack-adjusted scoring. W1 adopts the source classification without independently adjudicating intent."},
+    {"event": "cursor-feal-infra", "scope": "three Cursor rows", "source_reported": true, "detail": "Provider safety refusals occurred before useful workspace action and are source-classified as infra; valid denominator remains six after the quarantined task is removed."},
+    {"event": "stale-image-rerun", "scope": "Codex and OpenCode columns", "source_reported": true, "detail": "The report states Codex/OpenCode were rerun in fresh images after a stale-image bug invalidated their first columns; executed versions are Codex 0.144.1 and OpenCode 1.17.18."}
+  ],
+  "non_admission_dispositions": [
+    {"surface": "original 48-row as-scored aggregate", "status": "not-promoted", "reason": "It includes a quarantined task and two rows the publisher explicitly reclassified after transcript audit."},
+    {"surface": "source efficiency/ranking/frontier interpretations", "status": "not-promoted-by-W1", "reason": "W1 preserves factual solved/valid surfaces and provenance only."}
+  ],
+  "validation": {"status": "pending", "registry_observation_count_after": 239, "commands_required": ["python system-observations/render_registry.py", "python scripts/admission_check.py system-observations/pi-openbench-tb-gpt56sol-external-reproduced-adapter-preserved.json", "python scripts/admission_check.py system-observations/cursor-openbench-tb-gpt56sol-external-reproduced-adapter-preserved.json", "python scripts/admission_check.py system-observations/codex-openbench-tb-gpt56sol-external-reproduced-adapter-preserved.json", "python scripts/admission_check.py system-observations/opencode-openbench-tb-gpt56sol-external-reproduced-adapter-preserved.json", "python scripts/validate_repository.py"], "results": []},
+  "handoff_boundary": {"structural_classification_performed": false, "historical_linkage_adjudicated": false, "comparison_tier_assigned": false, "statistical_interpretation_performed": false, "winner_declared": false}
+}
