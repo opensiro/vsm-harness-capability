@@ -58,18 +58,15 @@
     {"surface": "historical harness-version normalization", "status": "unresolved", "reason": "Resolving mixed historical harness versions is W2 historical-linkage work, not W1 discovery."}
   ],
   "validation": {
-    "status": "pending",
-    "registry_observation_count_after": null,
-    "commands_required": [
-      "python system-observations/render_registry.py",
-      "python scripts/admission_check.py system-observations/pi-openbench-deepseek-release15-external-reproduced-adapter-preserved.json",
-      "python scripts/admission_check.py system-observations/claude-openbench-deepseek-release15-external-reproduced-adapter-preserved.json",
-      "python scripts/admission_check.py system-observations/opencode-openbench-deepseek-release15-external-reproduced-adapter-preserved.json",
-      "python scripts/admission_check.py system-observations/grokbuild-openbench-deepseek-release15-external-reproduced-adapter-preserved.json",
-      "python scripts/admission_check.py system-observations/codex-openbench-deepseek-release15-external-reproduced-adapter-preserved.json",
-      "python scripts/validate_repository.py"
-    ],
-    "results": []
+    "status": "passed",
+    "registry_observation_count_after": 265,
+    "standard_workflow_blob_sha": "244ad9701f41e6122f37c0676a00e705cddd622f",
+    "results": [
+      {"workflow_run_id": 36717139382, "head_sha": "7bf8d18c1e7dffa372206a7d9fe476a184868ec6", "status": "success", "scope": "write-enabled registry regeneration, repository validators, five pass-33 admission checks, existing live admission path"},
+      {"generated_registry_commit": "7014e688f4435e2cc6d2b2e9f9275b02b516e4b7", "registry_observation_count": 265, "status": "generated"},
+      {"workflow_run_id": 36717168469, "head_sha": "7014e688f4435e2cc6d2b2e9f9275b02b516e4b7", "status": "action_required", "scope": "bot-authored follow-up trigger under temporary write-enabled workflow; no evidence rejection and superseded by restored standard-workflow run"},
+      {"workflow_run_id": 36717251804, "head_sha": "cdfb096b30ad565f832cb264caf1c1b43e381f28", "status": "success", "scope": "restored standard read-only workflow: repository validator, post-closure validators, existing live admission path"}
+    ]
   },
   "handoff_boundary": {"structural_classification_performed": false, "historical_linkage_adjudicated": false, "comparison_tier_assigned": false, "statistical_interpretation_performed": false, "winner_declared": false}
 }
