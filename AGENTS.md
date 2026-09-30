@@ -34,15 +34,17 @@ For the active observational paper study, repetitive W2→W3→W4 routing is own
 
 ```text
 paper/studies/obs-harness-assoc/v0.1.0/TRACK_A_QUEUE.md
-paper/studies/obs-harness-assoc/v0.1.0/track-a-queue.v0.1.json
+paper/studies/obs-harness-assoc/v0.1.0/track-a-queue.v0.2.json
 ```
+
+Active queue semantics are **bounded same-stage batches of up to 5 handoffs per fresh role context**. Every handoff keeps its own exact input binding and append-only scientific artifact; W2/W3/W4 roles must not be mixed in one chat.
 
 Stable fresh-chat prompt:
 
 ```text
-Execute the next admitted Track A queue item in opensiro/vsm-harness-research.
+Execute the next admitted Track A queue batch in opensiro/vsm-harness-research.
 Follow paper/studies/obs-harness-assoc/v0.1.0/TRACK_A_QUEUE.md exactly.
-Use a fresh independent context, claim and execute exactly one item, then stop at its defined boundary.
+Use a fresh independent context, claim and execute exactly one role-homogeneous batch, then stop at its defined boundary.
 ```
 
 The queue does not change this repository's ownership boundary. W1 remains capability-owned, W2 remains bounded historical-linkage work under issue #94, and raw observations remain stored only here. W3/W4 are research-repository work. The queue is routing/control only and must not be treated as scientific evidence or as authority to perform W5/Gate B/W6.
