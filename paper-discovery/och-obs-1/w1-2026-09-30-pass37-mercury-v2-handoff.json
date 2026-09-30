@@ -42,58 +42,33 @@
   ],
   "candidate_same_model_comparison_groups": [{
     "group_id": "mercury-v2-featbench20__glm-5.3-flash__868e1e2f",
-    "observation_ids": [
-      "pi__mercury-v2-featbench20__glm-5.3-flash__868e1e2f",
-      "oh-my-pi__mercury-v2-featbench20__glm-5.3-flash__868e1e2f",
-      "claude-code__mercury-v2-featbench20__glm-5.3-flash__868e1e2f",
-      "codex__mercury-v2-featbench20__glm-5.3-flash__868e1e2f",
-      "deepseek-harness__mercury-v2-featbench20__glm-5.3-flash__868e1e2f",
-      "critique-code__mercury-v2-featbench20__glm-5.3-flash__868e1e2f",
-      "opencode__mercury-v2-featbench20__glm-5.3-flash__868e1e2f"
-    ],
-    "source_known_dimensions": [
-      "same source-reported z-ai/glm-5.3-flash model ID through OpenRouter",
-      "same frozen FeatBench v1.0 20-task list",
-      "same external F2P + P2P verifier",
-      "same 60-minute agent timeout",
-      "one rollout per task-harness pair",
-      "fresh E2B single-container sandbox per trial",
-      "human intervention disabled",
-      "concurrency two with harness order rotated by task",
-      "same task-specific CPU declarations across harnesses"
-    ],
-    "explicit_unknown_or_nonidentical_dimensions": [
-      "exact service-side GLM-5.3-Flash checkpoint behind OpenRouter",
-      "exact upstream package/source revisions for the named harness installations are not established by the aggregate study table",
-      "harness-default reasoning, prompts, context management, temperatures, tools and termination behavior intentionally differ",
-      "seven trials used verifier-only replay after Harbor artifact-collection stalls, but the aggregate study does not report a per-harness recovery count",
-      "the intended fixed 10-CPU override was not applied; 17 tasks used 2 CPUs and 3 tasks used 8 CPUs"
-    ],
+    "observation_ids": ["pi__mercury-v2-featbench20__glm-5.3-flash__868e1e2f", "oh-my-pi__mercury-v2-featbench20__glm-5.3-flash__868e1e2f", "claude-code__mercury-v2-featbench20__glm-5.3-flash__868e1e2f", "codex__mercury-v2-featbench20__glm-5.3-flash__868e1e2f", "deepseek-harness__mercury-v2-featbench20__glm-5.3-flash__868e1e2f", "critique-code__mercury-v2-featbench20__glm-5.3-flash__868e1e2f", "opencode__mercury-v2-featbench20__glm-5.3-flash__868e1e2f"],
+    "source_known_dimensions": ["same source-reported z-ai/glm-5.3-flash model ID through OpenRouter", "same frozen FeatBench v1.0 20-task list", "same external F2P + P2P verifier", "same 60-minute agent timeout", "one rollout per task-harness pair", "fresh E2B single-container sandbox per trial", "human intervention disabled", "concurrency two with harness order rotated by task", "same task-specific CPU declarations across harnesses"],
+    "explicit_unknown_or_nonidentical_dimensions": ["exact service-side GLM-5.3-Flash checkpoint behind OpenRouter", "exact upstream package/source revisions for the named harness installations are not established by the aggregate study table", "harness-default reasoning, prompts, context management, temperatures, tools and termination behavior intentionally differ", "seven trials used verifier-only replay after Harbor artifact-collection stalls, but the aggregate study does not report a per-harness recovery count", "the intended fixed 10-CPU override was not applied; 17 tasks used 2 CPUs and 3 tasks used 8 CPUs"],
     "paper_eligibility": "not-assessed-by-W1"
   }],
-  "provenance_strength": {
-    "class": "mixed-by-arm",
-    "external_harness_arms": "external-reproduced",
-    "critique_code_arm": "first-party-reported",
-    "immutable_repository_revision": true,
-    "public_complete_study": true,
-    "public_canonical_result_bundle": true,
-    "public_oracle_gate": true,
-    "public_task_list": true,
-    "public_patches_logs_and_telemetry": true,
-    "w1_treatment": "admit factual externally verified resolution counts while preserving source-class differences and all published protocol deviations"
-  },
+  "provenance_strength": {"class": "mixed-by-arm", "external_harness_arms": "external-reproduced", "critique_code_arm": "first-party-reported", "immutable_repository_revision": true, "public_complete_study": true, "public_canonical_result_bundle": true, "public_oracle_gate": true, "public_task_list": true, "public_patches_logs_and_telemetry": true, "w1_treatment": "admit factual externally verified resolution counts while preserving source-class differences and all published protocol deviations"},
   "protocol_deviations_and_failures": [
     {"event": "cpu-override-not-applied", "scope": "all 140 trials", "source_reported": true, "detail": "The intended fixed 10-CPU environment was not applied. Generated task declarations used 2 CPUs for 17 tasks and 8 CPUs for 3 tasks. Because the same task declaration applies across harnesses, W1 preserves rather than normalizes this discrepancy."},
     {"event": "verifier-only-recovery", "scope": "7 of 140 trials", "source_reported": true, "detail": "After Harbor artifact collection stalled post-agent completion, seven outcomes were recovered by applying the saved patch in a fresh verifier-only sandbox. Model inference was not rerun. The aggregate source does not provide the per-harness recovery count, so W1 leaves it unknown per observation."},
     {"event": "single-rollout-design", "scope": "all 140 trials", "source_reported": true, "detail": "Each task-harness pair has one canonical rollout. W1 does not infer uncertainty or replicate results."},
-    {"event": "codex-cost-accounting-anomaly", "scope": "Codex cost telemetry", "source_reported": true, "detail": "OpenRouter generation records reported zero total_cost despite nonzero native token telemetry. W1 therefore admits resolution only and does not promote the zero cost figure."}
+    {"event": "codex-cost-accounting-anomaly", "scope": "Codex cost telemetry", "source_reported": true, "detail": "OpenRouter generation records reported zero total_cost despite nonzero native token telemetry. W1 therefore admits resolution only and does not promote the zero cost figure."},
+    {"event": "concurrent-main-docs-advance", "scope": "capability repository control surface", "source_reported": false, "detail": "After the pass-37 branch was created from aad1a22d, main advanced to 3074a6d8 via documentation-only PR #131. The concurrent change did not touch system observations, generated registry views, or the validation workflow; pass-37 registry generation remained based on the 275-observation checkpoint."}
   ],
   "non_admission_dispositions": [
     {"surface": "Mercury V2 cost ranking and cost-per-resolved comparisons", "status": "not-promoted-by-W1", "reason": "Provider reconciliation is incomplete for some trials, a shared credential was used, and Codex has a documented zero-cost accounting anomaly. These telemetry fields are preserved by the primary source but are outside this factual resolution admission."},
     {"surface": "Mercury V2 easy/hard/very-hard labels", "status": "not-promoted-as-benchmark-difficulty", "reason": "The source explicitly states these are study-defined static selection strata rather than official FeatBench difficulty labels."},
     {"surface": "Mercury V1-to-V2 delta", "status": "not-promoted-by-W1", "reason": "V1 uses a different model and task block; the primary source itself warns that cross-study percentage changes are descriptive, not a controlled longitudinal effect."}
   ],
-  "validation": {"status": "pending", "registry_observation_count_after": 282, "commands_required": ["python system-observations/render_registry.py", "python scripts/admission_check.py system-observations/mercury-v2-external-harnesses-glm53flash-external-reproduced-adapter-preserved.json", "python scripts/admission_check.py system-observations/critique-code-mercury-v2-glm53flash-first-party-reported-adapter-preserved.json", "python scripts/validate_repository.py"], "results": []},
+  "validation": {
+    "status": "passed",
+    "registry_observation_count_after": 282,
+    "commands_required": ["python system-observations/render_registry.py", "python scripts/admission_check.py system-observations/mercury-v2-external-harnesses-glm53flash-external-reproduced-adapter-preserved.json", "python scripts/admission_check.py system-observations/critique-code-mercury-v2-glm53flash-first-party-reported-adapter-preserved.json", "python scripts/validate_repository.py"],
+    "results": [
+      {"stage": "write-enabled-admission", "head_revision": "abd6e6cf962c4cb226605261b88fcb287b46cf29", "workflow_run_id": 36724514113, "run_number": 349, "conclusion": "success", "detail": "Neutral registry regeneration, repository validation, post-closure validators, both pass-37 record-specific admission checks, and the existing live admission loop succeeded."},
+      {"stage": "generated-registry-state", "head_revision": "cba3e851ccab2ef3e5eccf88b431811c5b3940be", "registry_observation_count": 282, "conclusion": "generated"},
+      {"stage": "restored-standard-workflow", "head_revision": "5b6abc67c3c9b7ca6a06b1ef3c5615ba1ad2d982", "workflow_blob": "244ad9701f41e6122f37c0676a00e705cddd622f", "workflow_run_id": 36724701341, "run_number": 352, "conclusion": "success"}
+    ]
+  },
   "handoff_boundary": {"structural_classification_performed": false, "historical_linkage_adjudicated": false, "comparison_tier_assigned": false, "statistical_interpretation_performed": false, "winner_declared": false}
 }
