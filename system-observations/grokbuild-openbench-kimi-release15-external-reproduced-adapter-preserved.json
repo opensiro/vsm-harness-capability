@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "GrokBuild in OpenBench Kimi K3 15-task release matrix",
+  "canonical_harness_id": null,
+  "published_implementation": {"system_compatibility": "adapter-preserved", "historical_relation": "OpenBench exercised the native GrokBuild CLI over its archived Kimi K3 matrix. The raw 135-row source archive is pinned at f0400e46; the coherent published dashboard is pinned at ddb26583. The publisher explicitly reports mixed host/container CLI version provenance for the Kimi arms, so W1 leaves the exact historical harness revision unresolved."},
+  "primary_sources": ["https://github.com/minghinmatthewlam/openbench/blob/ddb2658342e67120f29eff3997c7c25ff0bf2441/docs/releases/2026-07-20-kimi-k3/index.html", "https://github.com/minghinmatthewlam/openbench/blob/f0400e4698a16742b2cb290bd4f4ca07b9d01142/data/kimi-k3-2026-07-20/kimi.jsonl", "https://github.com/minghinmatthewlam/openbench/blob/db193457a3d9128cd4d01fd839c2a890c186c9ac/docs/analysis-2026-07.md"],
+  "observations": [{
+    "observation_id": "grokbuild__openbench-kimi-release15__kimi-k3__ddb26583",
+    "kind": "system-benchmark-result-from-release-counts",
+    "benchmark": {"family_id": "openbench-kimi-release15", "name": "OpenBench Kimi K3 15-task release matrix", "variant": "grokbuild-kimi-k3", "task_count": 15, "primary_source": "https://github.com/minghinmatthewlam/openbench/blob/ddb2658342e67120f29eff3997c7c25ff0bf2441/docs/releases/2026-07-20-kimi-k3/index.html", "artifact_source": "https://github.com/minghinmatthewlam/openbench/blob/f0400e4698a16742b2cb290bd4f4ca07b9d01142/data/kimi-k3-2026-07-20/kimi.jsonl"},
+    "result": {"date": "2026-07-20", "published_snapshot_date": "2026-07-22", "agent_label": "grokbuild", "harness_version": null, "harness_revision": null, "benchmark_revision": "ddb2658342e67120f29eff3997c7c25ff0bf2441", "source_archive_revision": "f0400e4698a16742b2cb290bd4f4ca07b9d01142", "model": "kimi-k3", "model_config": "Source-reported kimi-k3; harness defaults deliberately not clamped. Exact service-side checkpoint/routing is not independently pinned.", "metric": "source_countable_success_rate_at_1200s_cap", "value": 0.7111111111, "successes": 32, "countable_rows": 45, "scheduled_rows": 45, "excluded_infra_or_rate_limited_rows": 0, "task_count": 15, "trials_per_task": 3, "timeout_seconds": 1200},
+    "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "historical-version-mixed-unresolved"},
+    "provenance": {"publisher": "OpenBench / minghinmatthewlam", "checked": true, "raw_run_artifacts_public": true, "public_trajectories": false, "public_result_surface": "published static dashboard plus immutable archived raw JSONL", "execution_environment": "15 tasks (8 core + 7 imported Terminal-Bench), n=3, 1200-second cap, deterministic checkers; infrastructure/rate-limit failures excluded from countable denominators; harness defaults retained"},
+    "comparison": {"group": "openbench-kimi-release15__kimi-k3__ddb26583", "mode": "candidate-same-model", "scope": "coding-agent-swe"},
+    "unknown_dimensions": ["exact historical harness version because the publisher flags mixed host/container versions", "exact service-side model checkpoint/routing beyond the kimi-k3 label", "provider/account load state", "adaptation/reset policy beyond per-task isolated workspaces"],
+    "notes": "The release page reports 32/45 per-arm countable correctness. A separate publisher analysis also reports a matched-cell 29/39 value for GrokBuild; W1 preserves the release observation and leaves matched-cell adjudication to later work. No ranking or efficiency conclusion is promoted."
+  }]
+}
