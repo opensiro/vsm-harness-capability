@@ -16,12 +16,18 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Regenerate neutral registry views read-only
+        run: |
+          python system-observations/render_registry.py
+          git diff --exit-code -- system-observations/registry.psv system-observations/REGISTRY.md
       - run: python scripts/validate_repository.py
       - name: Validate Capability-native post-closure contract
         run: python vsm-projections/benchmark-family-map/validate_post_closure.py
       - name: Validate specialized AHO post-closure evidence
         run: python vsm-projections/s4/post-closure-deltas/validate.py
-      - name: Exercise live evidence admission path
+      - name: Admission — corrected ts-bench v2 Claude label pairs
+        run: python scripts/admission_check.py system-observations/tsbench-v2-claude-pairs-external-reproduced-unclear.json
+      - name: Exercise existing live evidence admission path
         run: |
           for record in \
             system-observations/claude-code-wildclawbench-external-reproduced-adapter-preserved.json \
