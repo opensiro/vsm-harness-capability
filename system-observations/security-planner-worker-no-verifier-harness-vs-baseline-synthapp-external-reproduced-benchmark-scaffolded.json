@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "harness-vs-baseline Planner/Worker security arm without verifier",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "benchmark-scaffolded",
+    "historical_relation": "The public study defines this benchmark-local ablation with planner=true and verifier=false. W1 records the implementation condition without mapping the role names to VSM functions."
+  },
+  "primary_sources": [
+    "https://github.com/theteatoast/harness-vs-baseline/blob/7b3c842a02ef8a006662e6f0db39a1cd223f082c/README.md",
+    "https://github.com/theteatoast/harness-vs-baseline/blob/7b3c842a02ef8a006662e6f0db39a1cd223f082c/BENCHMARKING.md",
+    "https://github.com/theteatoast/harness-vs-baseline/blob/7b3c842a02ef8a006662e6f0db39a1cd223f082c/configs/noverif.yaml",
+    "https://github.com/theteatoast/harness-vs-baseline/blob/7b3c842a02ef8a006662e6f0db39a1cd223f082c/secagent/corpus/scorer.py"
+  ],
+  "observations": [{
+    "observation_id": "security-planner-worker-no-verifier__harness-vs-baseline-synthapp__glm-5.3-flash__7b3c842a",
+    "kind": "system-benchmark-result",
+    "benchmark": {
+      "family_id": "harness-vs-baseline-synthapp",
+      "name": "harness-vs-baseline synthetic security-audit benchmark",
+      "variant": "planner-worker-verifier-off-ablation",
+      "task_count": 1,
+      "primary_source": "https://github.com/theteatoast/harness-vs-baseline/blob/7b3c842a02ef8a006662e6f0db39a1cd223f082c/README.md",
+      "artifact_source": "https://github.com/theteatoast/harness-vs-baseline/blob/7b3c842a02ef8a006662e6f0db39a1cd223f082c/README.md"
+    },
+    "result": {
+      "date": null,
+      "published_snapshot_date": "2026-09-22",
+      "agent_label": "planner-worker-verifier-off",
+      "harness_version": null,
+      "harness_revision": "7b3c842a02ef8a006662e6f0db39a1cd223f082c",
+      "benchmark_revision": "7b3c842a02ef8a006662e6f0db39a1cd223f082c",
+      "model": "z-ai/glm-5.3-flash",
+      "model_config": "OpenRouter model z-ai/glm-5.3-flash; temperature 0.2; reasoning max_tokens 3000; max_steps 40; max_tokens 300000; wall_clock_s 900; planner=true; verifier=false",
+      "metric": "vulnerability_recall",
+      "value": 0.98,
+      "precision_source_reported": 0.90,
+      "known_vulnerabilities": 99,
+      "non_exploitable_decoys": 75,
+      "decoys_wrongly_flagged_source_reported": 11
+    },
+    "published_implementation": {"system_compatibility": "benchmark-scaffolded", "revision_match": "source-revision-known"},
+    "provenance": {
+      "publisher": "theteatoast / harness-vs-baseline",
+      "checked": true,
+      "os_system": true,
+      "public_logs": false,
+      "public_trajectories": false,
+      "raw_run_artifacts_public": false,
+      "public_result_surface": "committed README ablation table; raw results/ trajectories are excluded from the pinned Git tree",
+      "execution_environment": "source-declared OpenRouter execution over generated synthapp; deterministic ground truth and objective scorer are public"
+    },
+    "comparison": {"group": "harness-vs-baseline-synthapp__glm-5.3-flash__7b3c842a", "mode": "candidate-same-model", "scope": "security-static-analysis"},
+    "unknown_dimensions": ["exact OpenRouter backend/provider route and service-side GLM checkpoint", "exact execution date", "raw trajectory, F1 and cost for this ablation row", "trial count beyond the published result row", "run-specific cache state"],
+    "notes": "This is the source-defined verifier-off ablation. W1 records the condition and published metrics only; it does not infer a causal VSM mechanism from the stage name."
+  }]
+}
