@@ -44,17 +44,15 @@
     {"surface": "Pi finished-basis 81.0%", "status": "not-admitted-as-separate-observation", "reason": "Alternate aggregation of the same run rows; W1 avoids duplicate raw observations."}
   ],
   "validation": {
-    "status": "pending",
-    "registry_observation_count_after": null,
-    "commands_required": [
-      "python system-observations/render_registry.py",
-      "python scripts/admission_check.py system-observations/cursor-openbench-grok45-release15-external-reproduced-adapter-preserved.json",
-      "python scripts/admission_check.py system-observations/grokbuild-openbench-grok45-release15-external-reproduced-adapter-preserved.json",
-      "python scripts/admission_check.py system-observations/pi-openbench-grok45-release15-external-reproduced-adapter-preserved.json",
-      "python scripts/admission_check.py system-observations/opencode-openbench-grok45-release15-external-reproduced-adapter-preserved.json",
-      "python scripts/validate_repository.py"
-    ],
-    "results": []
+    "status": "passed",
+    "registry_observation_count_after": 272,
+    "standard_workflow_blob_sha": "244ad9701f41e6122f37c0676a00e705cddd622f",
+    "results": [
+      {"workflow_run_id": 36719425628, "head_sha": "5c5ef832796b0cb724b66ab7ae5c1eb46430f26e", "status": "success", "scope": "write-enabled registry regeneration, repository validators, four pass-35 admission checks, existing live admission path"},
+      {"generated_registry_commit": "9e71d86cfad1a8a7c75f4cb2095c97d32a7e43b7", "registry_observation_count": 272, "status": "generated"},
+      {"workflow_run_id": 36719451960, "head_sha": "9e71d86cfad1a8a7c75f4cb2095c97d32a7e43b7", "status": "action_required", "scope": "bot-authored follow-up under temporary write-enabled workflow; infrastructure state, not evidence rejection"},
+      {"workflow_run_id": 36719539437, "head_sha": "ad349ac2365994ee6440903cd0bddf494b9f0398", "status": "success", "scope": "restored standard read-only validation"}
+    ]
   },
   "handoff_boundary": {"structural_classification_performed": false, "historical_linkage_adjudicated": false, "comparison_tier_assigned": false, "statistical_interpretation_performed": false, "winner_declared": false}
 }
