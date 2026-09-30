@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "first-party-reported",
+  "system_name": "CritiqueCode",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "adapter-preserved",
+    "historical_relation": "The benchmark publisher executes CritiqueCode's author-agent implementation through a benchmark adapter while retaining its implementation-to-review/verified-repair behavior. W1 does not infer a canonical OpenSiro identity or historical product revision beyond the pinned benchmark source."
+  },
+  "primary_sources": [
+    "https://github.com/repath500/mercury-harness-benchmark/blob/868e1e2f2ba8660e583d42de706bfc08267a9e87/reports/mercury-v2/STUDY.md",
+    "https://github.com/repath500/mercury-harness-benchmark/blob/868e1e2f2ba8660e583d42de706bfc08267a9e87/reports/mercury-v2/mercury-v2.json",
+    "https://github.com/repath500/mercury-harness-benchmark/blob/868e1e2f2ba8660e583d42de706bfc08267a9e87/benchmarks/mercury_v2/benchmark.yaml",
+    "https://github.com/repath500/mercury-harness-benchmark/blob/868e1e2f2ba8660e583d42de706bfc08267a9e87/benchmarks/mercury_v2/oracle-gate.json",
+    "https://github.com/repath500/mercury-harness-benchmark/tree/868e1e2f2ba8660e583d42de706bfc08267a9e87/benchmarks/mercury_v2/results/mercury-v2"
+  ],
+  "observations": [
+    {
+      "observation_id": "critique-code__mercury-v2-featbench20__glm-5.3-flash__868e1e2f",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "name": "Mercury Harness Benchmark V2 / FeatBench v1.0 frozen 20-task block",
+        "primary_source": "https://github.com/repath500/mercury-harness-benchmark/blob/868e1e2f2ba8660e583d42de706bfc08267a9e87/reports/mercury-v2/STUDY.md",
+        "artifact_source": "https://github.com/repath500/mercury-harness-benchmark/tree/868e1e2f2ba8660e583d42de706bfc08267a9e87/benchmarks/mercury_v2/results/mercury-v2"
+      },
+      "result": {
+        "date": "2026-09-04",
+        "agent_label": "CritiqueCode",
+        "harness_version": null,
+        "harness_revision": "868e1e2f2ba8660e583d42de706bfc08267a9e87",
+        "benchmark_revision": "FeatBench v1.0 / frozen task list at source revision 868e1e2f2ba8660e583d42de706bfc08267a9e87",
+        "model": "z-ai/glm-5.3-flash",
+        "model_config": "OpenRouter route; Critique author-agent implementation with review/verified-repair behavior; harness-default reasoning and native behavior retained",
+        "metric": "externally_verified_resolution_rate",
+        "value": 0.65,
+        "resolved": 13,
+        "tasks": 20,
+        "rollouts_per_task": 1,
+        "agent_timeout_minutes": 60
+      },
+      "execution": {
+        "environment": "Harbor + E2B fresh single-container sandbox per trial",
+        "human_intervention": false,
+        "concurrency": 2,
+        "reset_policy": "fresh sandbox for every task-harness trial",
+        "evaluator": "FeatBench external F2P + P2P verifier",
+        "cpu_policy_observed": "17 tasks used 2 CPUs and 3 tasks used 8 CPUs; planned fixed 10-CPU override was not applied"
+      },
+      "comparison": {
+        "group": "mercury-v2-featbench20__glm-5.3-flash__868e1e2f",
+        "mode": "same-model-candidate",
+        "scope": "repository-feature-engineering"
+      },
+      "unknown_dimensions": [
+        "exact product/package version corresponding to the pinned CritiqueCode benchmark implementation",
+        "exact service-side GLM-5.3-Flash checkpoint behind OpenRouter",
+        "whether any of this harness's trials were among the seven verifier-only recovery trials"
+      ],
+      "notes": "The publisher is associated with CritiqueCode, so this arm is classified first-party-reported while the other six arms are external-reproduced. One rollout per task. Seven trials in the full matrix used verifier-only replay after Harbor artifact-collection stalls; model inference was not rerun."
+    }
+  ]
+}
