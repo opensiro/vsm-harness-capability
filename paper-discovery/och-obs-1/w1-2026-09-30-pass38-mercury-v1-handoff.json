@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "manifest_id": "och-obs-1-w1-2026-09-30-pass38-mercury-v1",
+  "recorded_at": "2026-09-30",
+  "work_item": {
+    "repository": "opensiro/vsm-harness-capability",
+    "issue": 93,
+    "role": "W1 public-evidence discovery and neutral admission"
+  },
+  "protocol": {
+    "id": "OCH-OBS-1",
+    "version": "1.0.0",
+    "repository": "opensiro/vsm-harness-research",
+    "revision": "5462ffadffd7189ae10e44e22d357bc6162a6038",
+    "collection_cutoff_utc": "2026-10-20T23:59:59Z"
+  },
+  "checkpoint_parent": {
+    "capability_main_revision": "d5d8c09f2a8eb433d6fb49b49cbdbef87acc819c",
+    "registry_observation_count_before": 282,
+    "prior_handoffs_mutated": false
+  },
+  "collection_state": {
+    "status": "active",
+    "pass_number": 38,
+    "cutoff_reached": false,
+    "note": "No equivalent active pass-38 branch or PR was present when this batch was started."
+  },
+  "discovery_pass": {
+    "pass_id": "w1-pass-038-mercury-v1-featbench10",
+    "method": "Direction-blind admission of four same-model harness observations from the pinned Mercury Harness Benchmark V1 40-trial matrix. W1 preserves concrete CLI/package versions, fresh-sandbox execution, one-rollout design, task-specific CPU declarations, the CritiqueCode benchmark helper fix, and provider-ledger limitations without ranking or causal interpretation.",
+    "source_repository": "https://github.com/repath500/mercury-harness-benchmark",
+    "source_revision": "868e1e2f2ba8660e583d42de706bfc08267a9e87",
+    "benchmark_family": "mercury-v1-featbench10",
+    "benchmark_dataset": "PGCodeLLM/FeatBench v1.0",
+    "model": "inception/mercury-2.5-preview",
+    "provider_route": "OpenRouter",
+    "task_count": 10,
+    "harness_count": 4,
+    "canonical_trials": 40,
+    "trials_per_task_harness": 1,
+    "agent_timeout_minutes": 60,
+    "human_intervention": false,
+    "environment": "Harbor 0.22.0 + E2B Python SDK 2.46.4; fresh single-container sandbox per trial",
+    "source_artifacts": [
+      "https://github.com/repath500/mercury-harness-benchmark/blob/868e1e2f2ba8660e583d42de706bfc08267a9e87/reports/mercury-v1/STUDY.md",
+      "https://github.com/repath500/mercury-harness-benchmark/blob/868e1e2f2ba8660e583d42de706bfc08267a9e87/reports/mercury-v1/mercury-v1.json",
+      "https://github.com/repath500/mercury-harness-benchmark/blob/868e1e2f2ba8660e583d42de706bfc08267a9e87/benchmarks/mercury_v1/benchmark.yaml",
+      "https://github.com/repath500/mercury-harness-benchmark/blob/868e1e2f2ba8660e583d42de706bfc08267a9e87/benchmarks/mercury_v1/selection.json",
+      "https://github.com/repath500/mercury-harness-benchmark/tree/868e1e2f2ba8660e583d42de706bfc08267a9e87/benchmarks/mercury_v1/results/mercury-v1/canonical",
+      "https://github.com/repath500/mercury-harness-benchmark/blob/868e1e2f2ba8660e583d42de706bfc08267a9e87/benchmarks/mercury_v1/results/mercury-v1/launcher/run-plan.json"
+    ]
+  },
+  "reused_existing_observation_ids": [],
+  "newly_admitted_observation_ids": [
+    "critique-code__mercury-v1-featbench10__mercury-2.5-preview__868e1e2f",
+    "claude-code__mercury-v1-featbench10__mercury-2.5-preview__868e1e2f",
+    "oh-my-pi__mercury-v1-featbench10__mercury-2.5-preview__868e1e2f",
+    "opencode__mercury-v1-featbench10__mercury-2.5-preview__868e1e2f"
+  ],
+  "candidate_same_model_comparison_groups": [
+    {
+      "group_id": "mercury-v1-featbench10__mercury-2.5-preview__868e1e2f",
+      "observation_ids": [
+        "critique-code__mercury-v1-featbench10__mercury-2.5-preview__868e1e2f",
+        "claude-code__mercury-v1-featbench10__mercury-2.5-preview__868e1e2f",
+        "oh-my-pi__mercury-v1-featbench10__mercury-2.5-preview__868e1e2f",
+        "opencode__mercury-v1-featbench10__mercury-2.5-preview__868e1e2f"
+      ],
+      "source_known_dimensions": [
+        "same source-reported inception/mercury-2.5-preview model ID through OpenRouter",
+        "same frozen FeatBench v1.0 10-task list",
+        "same external F2P + P2P verifier",
+        "same 60-minute agent timeout",
+        "one rollout per task-harness pair",
+        "fresh E2B single-container sandbox per trial",
+        "human intervention disabled",
+        "concurrency two with harness order rotated by task",
+        "same task-specific CPU declarations across harnesses",
+        "concrete source-reported harness versions: CritiqueCode 0.1.13+bench, Claude Code 2.1.259, Oh My Pi 18.1.5 with Bun 1.3.14, OpenCode 1.18.27"
+      ],
+      "explicit_unknown_or_nonidentical_dimensions": [
+        "exact service-side Mercury 2.5 Preview checkpoint behind OpenRouter",
+        "provider-side routing/load state across trials",
+        "harness-native prompting, context handling, tool strategy and termination behavior intentionally differ",
+        "CritiqueCode uses a source-documented benchmark helper fix and local adapter whereas Claude Code and OpenCode use Harbor integrations and Oh My Pi uses a local adapter"
+      ],
+      "paper_eligibility": "not-assessed-by-W1"
+    }
+  ],
+  "provenance_strength": {
+    "class": "mixed-by-arm",
+    "external_harness_arms": "external-reproduced",
+    "critique_code_arm": "first-party-reported",
+    "immutable_repository_revision": true,
+    "public_complete_study": true,
+    "public_normalized_result_bundle": true,
+    "public_canonical_trial_bundle": true,
+    "public_frozen_task_selection": true,
+    "public_run_plan": true,
+    "w1_treatment": "admit factual externally verified resolution counts while preserving source-class differences, concrete versions, benchmark-specific adapter changes, and provider-accounting limitations"
+  },
+  "protocol_deviations_and_failures": [
+    {
+      "event": "single-rollout-design",
+      "scope": "all 40 trials",
+      "source_reported": true,
+      "detail": "Each task-harness pair has one canonical rollout. W1 does not infer uncertainty or replicate results."
+    },
+    {
+      "event": "task-specific-cpu-declarations",
+      "scope": "all 40 trials",
+      "source_reported": true,
+      "detail": "Eight selected tasks declared 2 CPUs / 4 GB RAM and the two SmolAgents tasks declared 8 CPUs / 8 GB RAM. The experiment is CPU-only but not a fixed-vCPU comparison."
+    },
+    {
+      "event": "critique-code-benchmark-helper-fix",
+      "scope": "CritiqueCode benchmark implementation",
+      "source_reported": true,
+      "detail": "Adapter smoke validation required a five-line positive-budget helper fix in the CritiqueCode E2B extension. The source preserves this tracked change; W1 records it rather than treating it as hidden equivalence."
+    },
+    {
+      "event": "mixed-provider-cost-accounting",
+      "scope": "cost telemetry",
+      "source_reported": true,
+      "detail": "Only 19 trials have a complete OpenRouter generation ledger; 21 use catalog estimates from recorded tokens, and the provider credential was shared across harnesses. W1 therefore admits resolution only rather than promoting cost comparisons."
+    }
+  ],
+  "non_admission_dispositions": [
+    {
+      "surface": "Mercury V1 cost and cost-per-resolved comparisons",
+      "status": "not-promoted-by-W1",
+      "reason": "Only 19 of 40 trials have a complete provider generation ledger; the remaining 21 use catalog estimates and the credential was shared across harnesses."
+    },
+    {
+      "surface": "Mercury V1 easy/hard labels",
+      "status": "not-promoted-as-benchmark-difficulty",
+      "reason": "The source explicitly states these are study-defined static selection labels rather than official FeatBench difficulty labels."
+    },
+    {
+      "surface": "Mercury V1-to-V2 comparison",
+      "status": "kept-separate",
+      "reason": "V2 uses a different model and a disjoint 20-task block. W1 does not combine or interpret the two studies."
+    }
+  ],
+  "validation": {
+    "status": "pending",
+    "registry_observation_count_after": 286,
+    "commands_required": [
+      "python system-observations/render_registry.py",
+      "python scripts/admission_check.py system-observations/mercury-v1-external-harnesses-mercury25-external-reproduced-adapter-preserved.json",
+      "python scripts/admission_check.py system-observations/critique-code-mercury-v1-mercury25-first-party-reported-adapter-preserved.json",
+      "python scripts/validate_repository.py"
+    ],
+    "results": []
+  },
+  "handoff_boundary": {
+    "structural_classification_performed": false,
+    "historical_linkage_adjudicated": false,
+    "comparison_tier_assigned": false,
+    "statistical_interpretation_performed": false,
+    "winner_declared": false
+  }
+}
