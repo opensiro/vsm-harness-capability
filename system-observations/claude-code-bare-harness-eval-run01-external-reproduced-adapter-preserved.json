@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Claude Code",
+  "canonical_harness_id": "claude-code",
+  "canonical_assessment_ref": "assessments/claude-code.md",
+  "canonical_review_ref": "7dd06361110d4417f3edefaf075f41923f0e04c5",
+  "canonical_repository": "https://github.com/anthropics/claude-code",
+  "published_implementation": {"system_compatibility": "adapter-preserved", "historical_relation": "Run 1.5 executes the native Claude Code CLI with no harness overlay in an isolated claude-clean HOME profile. The exact Claude Code build is formally unrecorded in the run log, so canonical identity is reused without an exact historical revision match."},
+  "primary_sources": ["https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_01/report/whitepaper.md", "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_01/runs/07-runlog.md", "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_01/grades/final.md"],
+  "observations": [{
+    "observation_id": "claude-code__harness-eval-loglens-run01__claude-opus-4-8__7d3f74fe",
+    "kind": "system-benchmark-result",
+    "benchmark": {"family_id": "harness-eval-loglens-run01", "name": "harness-eval loglens greenfield run 01/1.5", "variant": "frozen-loglens-spec", "task_count": 1, "primary_source": "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_01/report/whitepaper.md", "artifact_source": "https://github.com/kenhia/harness-eval/tree/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/run-output/run_01/07-baseline-claude"},
+    "result": {"date": "2026-07-15", "agent_label": "07-baseline-claude", "harness_version": "Claude Code version formally unrecorded; no added harness", "harness_revision": null, "benchmark_revision": "7d3f74fe47f48db67c9ab0489ad4ba9170922f12", "model": "claude-opus-4-8", "model_config": "Claude Code launch and usage report claude-opus-4-8; exact Claude Code build and service-side checkpoint not independently pinned", "metric": "adjudicated_acceptance_pass_rate", "value": 1.0, "acceptance_passed": 12, "acceptance_total": 12, "trials": 1, "wall_time_seconds": 518, "source_consensus_weighted_total": 95.0},
+    "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "unknown"},
+    "provenance": {"publisher": "Ken Hiatt / harness-eval", "checked": true, "os_system": true, "public_logs": true, "public_trajectories": true, "raw_run_artifacts_public": true, "execution_environment": "single host kai; native Claude Code CLI; isolated claude-clean HOME profile; raw prompt; zero interventions"},
+    "comparison": {"group": "harness-eval-loglens-run01__claude-opus-4-8__claude-code-family", "mode": "candidate-same-model", "scope": "coding-swe"},
+    "unknown_dimensions": ["exact Claude Code version during cell 07", "exact service-side Claude Opus 4.8 checkpoint", "whether cell 06 and cell 07 used precisely the same auto-updated Claude Code build", "N=1 trajectory variance", "profile sanity-check field was not completed in the run log"],
+    "notes": "After source adjudication this bare control passed all 12 objective acceptance checks. The run log also contains a negligible Haiku bookkeeping line; W1 preserves the source's requested/primary Opus model identity and does not interpret weighted-score direction."
+  }]
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Claude Code + gstack",
+  "canonical_harness_id": null,
+  "published_implementation": {"system_compatibility": "unclear", "historical_relation": "Run 1.5 executes gstack on its native Claude Code runner using an isolated claude-gstack HOME profile. The run log leaves the exact Claude Code version unfilled and the source describes the gstack overlay without an immutable run_01 source revision."},
+  "primary_sources": ["https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_01/report/whitepaper.md", "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_01/runs/06-runlog.md", "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_01/grades/final.md"],
+  "observations": [{
+    "observation_id": "claude-code-gstack__harness-eval-loglens-run01__claude-opus-4-8__7d3f74fe",
+    "kind": "system-benchmark-result",
+    "benchmark": {"family_id": "harness-eval-loglens-run01", "name": "harness-eval loglens greenfield run 01/1.5", "variant": "frozen-loglens-spec", "task_count": 1, "primary_source": "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_01/report/whitepaper.md", "artifact_source": "https://github.com/kenhia/harness-eval/tree/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/run-output/run_01/06-gstack"},
+    "result": {"date": "2026-07-15", "agent_label": "06-gstack", "harness_version": "gstack version/revision unknown in run_01; Claude Code version formally unrecorded", "harness_revision": null, "benchmark_revision": "7d3f74fe47f48db67c9ab0489ad4ba9170922f12", "model": "claude-opus-4-8", "model_config": "Claude Code launch and usage report claude-opus-4-8; exact Claude Code build and service-side checkpoint not independently pinned", "metric": "adjudicated_acceptance_pass_rate", "value": 1.0, "acceptance_passed": 12, "acceptance_total": 12, "trials": 1, "wall_time_seconds": 1145, "source_consensus_weighted_total": 87.0},
+    "published_implementation": {"system_compatibility": "unclear", "revision_match": "unknown"},
+    "provenance": {"publisher": "Ken Hiatt / harness-eval", "checked": true, "os_system": null, "public_logs": true, "public_trajectories": true, "raw_run_artifacts_public": true, "execution_environment": "single host kai; Claude Code CLI; isolated claude-gstack HOME profile; identical frozen prompt body with /autoplan go command; zero interventions"},
+    "comparison": {"group": "harness-eval-loglens-run01__claude-opus-4-8__claude-code-family", "mode": "candidate-same-model", "scope": "coding-swe"},
+    "unknown_dimensions": ["exact Claude Code version during cell 06", "exact service-side Claude Opus 4.8 checkpoint", "immutable run_01 gstack source/version", "N=1 trajectory variance", "profile sanity-check field was not completed in the run log"],
+    "notes": "After source adjudication this cell passed all 12 objective acceptance checks. W1 preserves the ceiling/null correctness result without interpreting auxiliary cost or weighted-score direction."
+  }]
+}

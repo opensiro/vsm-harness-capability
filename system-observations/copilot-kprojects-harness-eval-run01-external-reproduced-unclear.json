@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "GitHub Copilot CLI + kprojects",
+  "canonical_harness_id": null,
+  "published_implementation": {"system_compatibility": "unclear", "historical_relation": "The study identifies a repo-local kprojects instruction/sprints overlay executed under GitHub Copilot CLI. W1 did not locate an immutable run_01 kprojects source revision, so historical revision remains unknown."},
+  "primary_sources": ["https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_01/report/whitepaper.md", "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_01/runs/04-runlog.md", "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_01/grades/final.md"],
+  "observations": [{
+    "observation_id": "copilot-kprojects__harness-eval-loglens-run01__claude-opus-4.8__7d3f74fe",
+    "kind": "system-benchmark-result",
+    "benchmark": {"family_id": "harness-eval-loglens-run01", "name": "harness-eval loglens greenfield run 01/1.5", "variant": "frozen-loglens-spec", "task_count": 1, "primary_source": "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_01/report/whitepaper.md", "artifact_source": "https://github.com/kenhia/harness-eval/tree/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/run-output/run_01/04-kprojects"},
+    "result": {"date": "2026-07-15", "agent_label": "04-kprojects", "harness_version": null, "harness_revision": null, "benchmark_revision": "7d3f74fe47f48db67c9ab0489ad4ba9170922f12", "model": "claude-opus-4.8", "model_config": "GitHub Copilot CLI runlog reports claude-opus-4.8; exact CLI build and service-side checkpoint/provider route not published", "metric": "adjudicated_acceptance_pass_rate", "value": 1.0, "acceptance_passed": 12, "acceptance_total": 12, "trials": 1, "wall_time_seconds": 412, "source_consensus_weighted_total": 92.5},
+    "published_implementation": {"system_compatibility": "unclear", "revision_match": "unknown"},
+    "provenance": {"publisher": "Ken Hiatt / harness-eval", "checked": true, "os_system": null, "public_logs": true, "public_trajectories": true, "raw_run_artifacts_public": true, "execution_environment": "single host kai; GitHub Copilot CLI; clean profile plus repo-local kprojects instructions; identical frozen prompt body; zero interventions"},
+    "comparison": {"group": "harness-eval-loglens-run01__claude-opus-4.8__copilot-cli-family", "mode": "candidate-same-model", "scope": "coding-swe"},
+    "unknown_dimensions": ["exact GitHub Copilot CLI version", "exact service-side Claude Opus 4.8 checkpoint/provider route", "immutable run_01 kprojects source revision", "N=1 trajectory variance", "runlog notes korg MCP was available in this cell"],
+    "notes": "After source adjudication this cell passed all 12 objective acceptance checks. W1 preserves MCP availability as a covariate and does not interpret score direction."
+  }]
+}
