@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Pi CLI in OpenBench Grok 4.5 15-task release matrix",
+  "canonical_harness_id": null,
+  "published_implementation": {"system_compatibility": "adapter-preserved", "historical_relation": "OpenBench release matrix exercises the native Pi CLI in isolated benchmark workspaces; source archive f0400e46 and sealed publish bundle c6872f39 are pinned. The release page flags cross-group image-digest/timeout differences and mixed version-source provenance, which W1 leaves unresolved."},
+  "primary_sources": ["https://github.com/minghinmatthewlam/openbench/blob/c6872f393263ae9217e1c2c44111bec72ecfe3bc/docs/releases/2026-07-20-grok45/index.html", "https://github.com/minghinmatthewlam/openbench/blob/c6872f393263ae9217e1c2c44111bec72ecfe3bc/docs/releases/2026-07-20-grok45/results.jsonl", "https://github.com/minghinmatthewlam/openbench/blob/c6872f393263ae9217e1c2c44111bec72ecfe3bc/docs/releases/2026-07-20-grok45/provenance.json", "https://github.com/minghinmatthewlam/openbench/blob/c6872f393263ae9217e1c2c44111bec72ecfe3bc/docs/releases/2026-07-20-grok45/README.md", "https://github.com/minghinmatthewlam/openbench/blob/f0400e4698a16742b2cb290bd4f4ca07b9d01142/data/grok45-2026-07-20/grok45-final.jsonl"],
+  "observations": [{
+    "observation_id": "pi__openbench-grok45-release15__grok-4.5__c6872f39",
+    "kind": "system-benchmark-result-from-release-counts",
+    "benchmark": {"family_id": "openbench-grok45-release15", "name": "OpenBench Grok 4.5 15-task release matrix", "variant": "pi-grok-4.5", "task_count": 15, "primary_source": "https://github.com/minghinmatthewlam/openbench/blob/c6872f393263ae9217e1c2c44111bec72ecfe3bc/docs/releases/2026-07-20-grok45/index.html", "artifact_source": "https://github.com/minghinmatthewlam/openbench/blob/c6872f393263ae9217e1c2c44111bec72ecfe3bc/docs/releases/2026-07-20-grok45/results.jsonl"},
+    "result": {"date": "2026-07-20", "published_snapshot_date": "2026-07-26", "agent_label": "pi", "harness_version": "0.80.10", "harness_revision": null, "benchmark_revision": "c6872f393263ae9217e1c2c44111bec72ecfe3bc", "source_archive_revision": "f0400e4698a16742b2cb290bd4f4ca07b9d01142", "model": "grok-4.5", "model_config": "Source-reported grok-4.5; native harness defaults retained. Exact service-side checkpoint/routing is not independently pinned.", "metric": "source_countable_success_rate", "value": 0.7906976744, "successes": 34, "countable_rows": 43, "scheduled_rows": 45, "excluded_infra_or_rate_limited_rows": 2, "task_count": 15, "trials_per_task": 3},
+    "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "executed-version-source-reported"},
+    "provenance": {"publisher": "OpenBench / minghinmatthewlam", "checked": true, "raw_run_artifacts_public": true, "public_trajectories": false, "public_result_surface": "result-sealed scrubbed JSONL plus SHA-bound provenance/task digests", "results_sha256": "3905ac339eea53b2e66fd2eb6b3a670174d364a40111777d4428619aba3f0081", "execution_environment": "15 archived tasks; n=3 trials per task; deterministic OpenBench checkers; infrastructure/rate-limit failures excluded from countable denominator; source release notes one Pi timeout remains in the correctness denominator"},
+    "comparison": {"group": "openbench-grok45-release15__grok-4.5__c6872f39", "mode": "candidate-same-model", "scope": "coding-agent-swe"},
+    "unknown_dimensions": ["publisher release page flags image_digest differences across groups", "publisher release page flags timeout_s differences across groups", "publisher release page flags harness_version_source mixed within some groups", "exact service-side checkpoint/routing beyond the grok-4.5 label", "provider/account load state"],
+    "notes": "W1 preserves 34/43 countable correctness; two source infra/rate-limit rows remain excluded and the reported Pi timeout remains in the denominator. The alternate finished-basis percentage is not admitted as a duplicate observation. No ranking or efficiency interpretation is performed."
+  }]
+}
