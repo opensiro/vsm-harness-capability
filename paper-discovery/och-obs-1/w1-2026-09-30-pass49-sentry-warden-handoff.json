@@ -129,15 +129,49 @@
     {
       "event": "concurrent-pass-48-merge-before-admission",
       "conclusion": "resolved-without-evidence-reinterpretation",
-      "detail": "Pass 48 merged after pass 49 branch creation. An early generated-registry commit on the stale branch was discarded from the effective tree. Pass 49 was merged with current main a51768fd3ee721539569927987b48270d00a4f64 as tree base before final admission, preserving the pass-48 observation and changing the parent registry count from 299 to 300."
+      "detail": "Pass 48 merged after pass 49 branch creation. An early stale-base registry materialization was not used as the effective final tree. Pass 49 was integrated with current main a51768fd3ee721539569927987b48270d00a4f64 before accepted admission, preserving the pass-48 observation and changing the parent registry count from 299 to 300."
+    },
+    {
+      "event": "exact-head-registry-materialization-and-admission",
+      "run_number": 401,
+      "run_id": 36751952742,
+      "head_sha": "11805283353fbfa7bc991db76d4e26f644a0c6aa",
+      "generated_registry_head_sha": "4a452cb33ea9addf27721e638a463afbab6d5fdb",
+      "conclusion": "success",
+      "detail": "Rendered 304 observations, materialized generated registry views, and passed repository validators plus the pass-49 admission path."
+    },
+    {
+      "event": "bot-generated-workflow-run",
+      "run_number": 402,
+      "run_id": 36751980660,
+      "head_sha": "4a452cb33ea9addf27721e638a463afbab6d5fdb",
+      "conclusion": "action_required",
+      "evidence_rejected": false,
+      "detail": "GitHub did not automatically execute the bot-authored generated-registry commit; the same 304-observation tree was revalidated by the subsequent exact-head run."
+    },
+    {
+      "event": "post-checkpoint-exact-head-revalidation",
+      "run_number": 403,
+      "run_id": 36752049889,
+      "head_sha": "c9cc47b2284142021a765025b509ec99093a46bc",
+      "conclusion": "success",
+      "detail": "Renderer reported 304 observations already current; repository validators and all four pass-49 live admission checks passed."
+    },
+    {
+      "event": "standard-read-only-validation-restored",
+      "run_number": 404,
+      "run_id": 36752352093,
+      "head_sha": "24fe616dd2d286e9af7e07392775c52035f38c29",
+      "conclusion": "success"
     }
   ],
   "validation": {
-    "status": "pending",
-    "registry_observation_count_after": null,
-    "evidence_admission_run": null,
-    "generated_registry_head_sha": null,
-    "standard_read_only_validation_run": null,
+    "status": "passed",
+    "registry_observation_count_after": 304,
+    "evidence_admission_run": 36751952742,
+    "exact_head_revalidation_run": 36752049889,
+    "generated_registry_head_sha": "4a452cb33ea9addf27721e638a463afbab6d5fdb",
+    "standard_read_only_validation_run": 36752352093,
     "standard_workflow_blob_sha": "244ad9701f41e6122f37c0676a00e705cddd622f"
   },
   "handoff_boundary": {
