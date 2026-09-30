@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "PawBench DeepSeek V4 Pro harness panel",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "benchmark-scaffolded",
+    "historical_relation": "The source publishes PawBench submissions under the harness labels Hermes, OpenClaw, and QwenPaw for DeepSeek V4 Pro. The May 29, 2026 submission artifacts do not bind historical harness package versions, so W1 preserves the labels without canonical historical linkage or back-projecting later Docker pins."
+  },
+  "primary_sources": [
+    "https://github.com/agentscope-ai/PawBench/blob/0f794a8bb6c27aa9ee4091b2691fa30e4ed9cc8f/README.md",
+    "https://github.com/agentscope-ai/PawBench/blob/0f794a8bb6c27aa9ee4091b2691fa30e4ed9cc8f/submissions/pawbench-4models-opusjudge-20260529__deepseek-v4-pro__hermes.json",
+    "https://github.com/agentscope-ai/PawBench/blob/0f794a8bb6c27aa9ee4091b2691fa30e4ed9cc8f/submissions/pawbench-4models-opusjudge-20260529__deepseek-v4-pro__openclaw.json",
+    "https://github.com/agentscope-ai/PawBench/blob/0f794a8bb6c27aa9ee4091b2691fa30e4ed9cc8f/submissions/pawbench-4models-opusjudge-20260529__deepseek-v4-pro__qwenpaw.json",
+    "https://github.com/agentscope-ai/PawBench/blob/0f794a8bb6c27aa9ee4091b2691fa30e4ed9cc8f/site/scripts/aggregate_results.py"
+  ],
+  "observations": [
+    {
+      "observation_id": "hermes__pawbench-v1-150__deepseek-v4-pro__0f794a8b",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "name": "PawBench v1.0 150-task model-harness panel",
+        "version": "v1.0",
+        "task_count": 150,
+        "primary_source": "https://github.com/agentscope-ai/PawBench/blob/0f794a8bb6c27aa9ee4091b2691fa30e4ed9cc8f/README.md",
+        "artifact_source": "https://github.com/agentscope-ai/PawBench/blob/0f794a8bb6c27aa9ee4091b2691fa30e4ed9cc8f/submissions/pawbench-4models-opusjudge-20260529__deepseek-v4-pro__hermes.json"
+      },
+      "result": {
+        "date": "2026-05-29",
+        "harness_label": "hermes",
+        "historical_harness_version": "unknown",
+        "publication_revision": "0f794a8bb6c27aa9ee4091b2691fa30e4ed9cc8f",
+        "model": "deepseek-v4-pro",
+        "metric": "source_overall_score",
+        "value": 0.7206,
+        "automated_score": 0.8118,
+        "judge_score": 0.7902,
+        "tasks": 150,
+        "tasks_total": 150,
+        "tasks_errored": 0,
+        "tasks_missing": 0,
+        "missing_metadata": 0
+      },
+      "execution": {
+        "environment": "PawBench source-defined benchmark execution environment",
+        "evaluator": "PawBench automated, LLM-judge, and hybrid grading surfaces; the initial public benchmark uses Claude Opus 4.6 as judge",
+        "repetitions": null,
+        "timeout_seconds": null,
+        "budget": null,
+        "reset_policy": "unknown",
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "pawbench-v1-150__deepseek-v4-pro__0f794a8b",
+        "mode": "same-model-candidate",
+        "scope": "source-defined PawBench task suite"
+      },
+      "unknown_dimensions": [
+        "historical Hermes package version for the May 29 run",
+        "exact DeepSeek V4 Pro serving snapshot and endpoint",
+        "trial repetition and random-seed policy",
+        "per-task timeout and compute budget",
+        "exact environment package and container versions for this historical submission"
+      ]
+    },
+    {
+      "observation_id": "openclaw__pawbench-v1-150__deepseek-v4-pro__0f794a8b",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "name": "PawBench v1.0 150-task model-harness panel",
+        "version": "v1.0",
+        "task_count": 150,
+        "primary_source": "https://github.com/agentscope-ai/PawBench/blob/0f794a8bb6c27aa9ee4091b2691fa30e4ed9cc8f/README.md",
+        "artifact_source": "https://github.com/agentscope-ai/PawBench/blob/0f794a8bb6c27aa9ee4091b2691fa30e4ed9cc8f/submissions/pawbench-4models-opusjudge-20260529__deepseek-v4-pro__openclaw.json"
+      },
+      "result": {
+        "date": "2026-05-29",
+        "harness_label": "openclaw",
+        "historical_harness_version": "unknown",
+        "publication_revision": "0f794a8bb6c27aa9ee4091b2691fa30e4ed9cc8f",
+        "model": "deepseek-v4-pro",
+        "metric": "source_overall_score",
+        "value": 0.7539,
+        "automated_score": 0.8345,
+        "judge_score": 0.8072,
+        "tasks": 150,
+        "tasks_total": 150,
+        "tasks_errored": 0,
+        "tasks_missing": 3,
+        "missing_metadata": 0
+      },
+      "execution": {
+        "environment": "PawBench source-defined benchmark execution environment",
+        "evaluator": "PawBench automated, LLM-judge, and hybrid grading surfaces; the initial public benchmark uses Claude Opus 4.6 as judge",
+        "repetitions": null,
+        "timeout_seconds": null,
+        "budget": null,
+        "reset_policy": "unknown",
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "pawbench-v1-150__deepseek-v4-pro__0f794a8b",
+        "mode": "same-model-candidate",
+        "scope": "source-defined PawBench task suite"
+      },
+      "unknown_dimensions": [
+        "historical OpenClaw package version for the May 29 run",
+        "exact DeepSeek V4 Pro serving snapshot and endpoint",
+        "trial repetition and random-seed policy",
+        "per-task timeout and compute budget",
+        "exact environment package and container versions for this historical submission",
+        "semantics of the source combination tasks=150, tasks_total=150, tasks_missing=3"
+      ],
+      "notes": "The submission artifact reports tasks=150 and tasks_total=150 while also reporting tasks_missing=3. W1 preserves these source counters verbatim and does not repair or reinterpret the inconsistency."
+    },
+    {
+      "observation_id": "qwenpaw__pawbench-v1-150__deepseek-v4-pro__0f794a8b",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "name": "PawBench v1.0 150-task model-harness panel",
+        "version": "v1.0",
+        "task_count": 150,
+        "primary_source": "https://github.com/agentscope-ai/PawBench/blob/0f794a8bb6c27aa9ee4091b2691fa30e4ed9cc8f/README.md",
+        "artifact_source": "https://github.com/agentscope-ai/PawBench/blob/0f794a8bb6c27aa9ee4091b2691fa30e4ed9cc8f/submissions/pawbench-4models-opusjudge-20260529__deepseek-v4-pro__qwenpaw.json"
+      },
+      "result": {
+        "date": "2026-05-29",
+        "harness_label": "qwenpaw",
+        "historical_harness_version": "unknown",
+        "publication_revision": "0f794a8bb6c27aa9ee4091b2691fa30e4ed9cc8f",
+        "model": "deepseek-v4-pro",
+        "metric": "source_overall_score",
+        "value": 0.7564,
+        "automated_score": 0.8368,
+        "judge_score": 0.8058,
+        "tasks": 150,
+        "tasks_total": 150,
+        "tasks_errored": 0,
+        "tasks_missing": 0,
+        "missing_metadata": 0
+      },
+      "execution": {
+        "environment": "PawBench source-defined benchmark execution environment",
+        "evaluator": "PawBench automated, LLM-judge, and hybrid grading surfaces; the initial public benchmark uses Claude Opus 4.6 as judge",
+        "repetitions": null,
+        "timeout_seconds": null,
+        "budget": null,
+        "reset_policy": "unknown",
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "pawbench-v1-150__deepseek-v4-pro__0f794a8b",
+        "mode": "same-model-candidate",
+        "scope": "source-defined PawBench task suite"
+      },
+      "unknown_dimensions": [
+        "historical QwenPaw package version for the May 29 run",
+        "exact DeepSeek V4 Pro serving snapshot and endpoint",
+        "trial repetition and random-seed policy",
+        "per-task timeout and compute budget",
+        "exact environment package and container versions for this historical submission"
+      ]
+    }
+  ]
+}

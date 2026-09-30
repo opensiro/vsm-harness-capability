@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "manifest_id": "och-obs-1-w1-2026-09-30-pass56-pawbench-deepseek-v4-pro",
+  "recorded_at": "2026-09-30",
+  "work_item": {
+    "repository": "opensiro/vsm-harness-capability",
+    "issue": 93,
+    "role": "W1 public-evidence discovery and neutral admission"
+  },
+  "protocol": {
+    "id": "OCH-OBS-1",
+    "version": "1.0.0",
+    "repository": "opensiro/vsm-harness-research",
+    "revision": "5462ffadffd7189ae10e44e22d357bc6162a6038",
+    "collection_cutoff_utc": "2026-10-20T23:59:59Z"
+  },
+  "checkpoint_parent": {
+    "capability_main_revision": "f4d8e15e0f6b3e072b42a437ef60b334a4c03832",
+    "registry_observation_count_before": 326,
+    "prior_handoffs_mutated": false
+  },
+  "collection_state": {
+    "status": "active",
+    "pass_number": 56,
+    "cutoff_reached": false,
+    "note": "No active pass-56 W1 branch was present when this batch was claimed. Issue #93 remains active through the frozen cutoff."
+  },
+  "discovery_pass": {
+    "pass_id": "w1-pass-056-pawbench-deepseek-v4-pro",
+    "method": "Direction-blind admission of three committed PawBench DeepSeek V4 Pro submission summaries under the source harness labels Hermes, OpenClaw, and QwenPaw. W1 preserves the source score fields and task counters, including the OpenClaw missing-task counter inconsistency, without ranking the harnesses or back-projecting later package pins into the May 29 runs.",
+    "source_repository": "https://github.com/agentscope-ai/PawBench",
+    "source_publication_revision": "0f794a8bb6c27aa9ee4091b2691fa30e4ed9cc8f",
+    "benchmark_family": "pawbench-v1-150",
+    "benchmark_version": "v1.0",
+    "task_count": 150,
+    "model_label": "deepseek-v4-pro",
+    "harness_labels": ["Hermes", "OpenClaw", "QwenPaw"],
+    "historical_harness_versions": "unknown in the May 29 submission artifacts",
+    "repetitions_per_harness_model_task": null,
+    "historical_timeout_seconds": null,
+    "environment": "PawBench source-defined benchmark execution environment",
+    "evaluator": "PawBench automated, LLM-judge, and hybrid grading surfaces; the initial public benchmark uses Claude Opus 4.6 as judge",
+    "result_artifacts": [
+      "https://github.com/agentscope-ai/PawBench/blob/0f794a8bb6c27aa9ee4091b2691fa30e4ed9cc8f/submissions/pawbench-4models-opusjudge-20260529__deepseek-v4-pro__hermes.json",
+      "https://github.com/agentscope-ai/PawBench/blob/0f794a8bb6c27aa9ee4091b2691fa30e4ed9cc8f/submissions/pawbench-4models-opusjudge-20260529__deepseek-v4-pro__openclaw.json",
+      "https://github.com/agentscope-ai/PawBench/blob/0f794a8bb6c27aa9ee4091b2691fa30e4ed9cc8f/submissions/pawbench-4models-opusjudge-20260529__deepseek-v4-pro__qwenpaw.json"
+    ]
+  },
+  "reused_existing_observation_ids": [],
+  "newly_admitted_observation_ids": [
+    "hermes__pawbench-v1-150__deepseek-v4-pro__0f794a8b",
+    "openclaw__pawbench-v1-150__deepseek-v4-pro__0f794a8b",
+    "qwenpaw__pawbench-v1-150__deepseek-v4-pro__0f794a8b"
+  ],
+  "candidate_comparison_groups": [
+    {
+      "group_id": "pawbench-v1-150__deepseek-v4-pro__0f794a8b",
+      "observation_ids": [
+        "hermes__pawbench-v1-150__deepseek-v4-pro__0f794a8b",
+        "openclaw__pawbench-v1-150__deepseek-v4-pro__0f794a8b",
+        "qwenpaw__pawbench-v1-150__deepseek-v4-pro__0f794a8b"
+      ],
+      "source_known_dimensions": [
+        "same published model label deepseek-v4-pro",
+        "same PawBench v1.0 benchmark family and 150-task publication surface",
+        "same source score field names overall_score, automated_score, and judge_score",
+        "same publication date 2026-05-29"
+      ],
+      "explicit_unknown_or_nonidentical_dimensions": [
+        "historical harness package versions are not bound by the May 29 artifacts",
+        "exact DeepSeek V4 Pro serving snapshot and endpoint are unresolved",
+        "trial repetitions, random seeds, historical timeouts, and compute budgets are unresolved",
+        "OpenClaw artifact reports tasks=150 and tasks_total=150 together with tasks_missing=3"
+      ],
+      "model_identity_equivalence": "source-label-only-by-W1",
+      "paper_eligibility": "not-assessed-by-W1"
+    }
+  ],
+  "provenance_strength": {
+    "class": "external-reproduced-with-committed-submission-summaries",
+    "immutable_publication_revision": true,
+    "public_submission_json": true,
+    "public_benchmark_methodology": true,
+    "historical_harness_versions_recovered": false,
+    "historical_execution_revisions_recovered": false,
+    "w1_treatment": "admit factual committed source summaries while preserving unknown execution identity and source counter anomalies"
+  },
+  "protocol_deviations_and_failures": [
+    {
+      "event": "post-run-package-pins-not-back-projected",
+      "scope": "all three observations",
+      "detail": "Repository Docker recipes with explicit harness package pins were introduced after the May 29 submissions. W1 does not assign those later versions to the historical runs."
+    },
+    {
+      "event": "openclaw-source-counter-inconsistency",
+      "scope": "OpenClaw observation",
+      "detail": "The committed source reports tasks=150 and tasks_total=150 while also reporting tasks_missing=3. W1 preserves all counters verbatim and does not repair the source."
+    },
+    {
+      "event": "generated-view-git-push-failure",
+      "run_number": 433,
+      "run_id": 36766353264,
+      "head_sha": "4e3b14e203e8d418c3335b72bfe5942cc91a215b",
+      "conclusion": "failure",
+      "detail": "Registry rendering succeeded, but the temporary workflow failed while attempting to push generated views. Repository and live-admission steps were therefore not reached in this run; no evidence rejection occurred."
+    },
+    {
+      "event": "split-generated-view-persistence",
+      "run_numbers": [435, 437, 438],
+      "detail": "The contents-API persistence path first committed registry.psv and then encountered a large-shell-argument failure for REGISTRY.md. Payload construction was changed to file-based Python encoding; run 438 then persisted the remaining generated view and completed all validation and live-admission steps successfully."
+    }
+  ],
+  "non_admission_dispositions": [
+    {
+      "surface": "publisher leaderboard ordering and comparative claims",
+      "status": "not-promoted-by-W1",
+      "reason": "W1 preserves source result fields but performs no evaluative ordering or winner selection."
+    },
+    {
+      "surface": "historical harness versions inferred from later Dockerfiles",
+      "status": "not-admitted",
+      "reason": "The explicit Docker pins postdate the May 29 result artifacts and cannot establish the versions used in those runs."
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "registry_observation_count_after": 329,
+    "results": [
+      {
+        "kind": "initial-generated-view-push-control-failure",
+        "run_number": 433,
+        "run_id": 36766353264,
+        "head_sha": "4e3b14e203e8d418c3335b72bfe5942cc91a215b",
+        "conclusion": "failure",
+        "evidence_rejected": false
+      },
+      {
+        "kind": "worktree-render-and-live-admission-run",
+        "run_number": 434,
+        "run_id": 36766494431,
+        "head_sha": "a23f36d5efd6a9416defc67ba8b478e58a97353b",
+        "conclusion": "success"
+      },
+      {
+        "kind": "partial-generated-registry-persistence",
+        "run_number": 435,
+        "run_id": 36766711493,
+        "head_sha": "6552a82347118b4b07117bd5bd358e8bdcaf2ce4",
+        "conclusion": "failure",
+        "generated_registry_psv_commit": "5c51d7b87c54e42a4d627e80fb4b2672a4dc870e",
+        "evidence_rejected": false
+      },
+      {
+        "kind": "large-generated-view-persistence-control-failure",
+        "run_number": 437,
+        "run_id": 36766874726,
+        "head_sha": "1d495645cf57d3f9db9e378f230514485232330a",
+        "conclusion": "failure",
+        "evidence_rejected": false
+      },
+      {
+        "kind": "write-enabled-admission-and-generated-view-run",
+        "run_number": 438,
+        "run_id": 36766996253,
+        "head_sha": "8227df6d7f9a462481d9d7beb771b9d5798a6ba7",
+        "conclusion": "success",
+        "generated_registry_markdown_commit": "5319315220ac082318b66aa0d63bc085b673333d",
+        "observation_count": 329
+      },
+      {
+        "kind": "standard-workflow-restored",
+        "head_sha": "22642ac60956a809e7c68b293f6566f1b9b3debe",
+        "workflow_blob_sha": "244ad9701f41e6122f37c0676a00e705cddd622f"
+      },
+      {
+        "kind": "standard-read-only-validation-run",
+        "run_number": 440,
+        "run_id": 36767112032,
+        "head_sha": "22642ac60956a809e7c68b293f6566f1b9b3debe",
+        "conclusion": "success"
+      }
+    ]
+  },
+  "handoff_boundary": {
+    "structural_classification_performed": false,
+    "historical_linkage_adjudicated": false,
+    "model_identity_equivalence_adjudicated": false,
+    "matched_cell_eligibility_assigned": false,
+    "comparison_tier_assigned": false,
+    "statistical_interpretation_performed": false,
+    "winner_declared": false,
+    "paper_claim_made": false
+  }
+}
