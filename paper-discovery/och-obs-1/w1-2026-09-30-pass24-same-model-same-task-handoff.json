@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "manifest_id": "och-obs-1-w1-2026-09-30-pass24-same-model-same-task",
+  "recorded_at": "2026-09-30",
+  "work_item": {"repository": "opensiro/vsm-harness-capability", "issue": 93, "role": "W1 public-evidence discovery and neutral admission"},
+  "protocol": {"id": "OCH-OBS-1", "version": "1.0.0", "repository": "opensiro/vsm-harness-research", "revision": "5462ffadffd7189ae10e44e22d357bc6162a6038", "collection_cutoff_utc": "2026-10-20T23:59:59Z"},
+  "checkpoint_parent": {"capability_main_revision": "57758bc5e48a74e9896047662c185cbdabdc6b9d", "registry_observation_count_before": 199, "prior_handoffs_mutated": false},
+  "collection_state": {"status": "active", "documented_discovery_passes_completed_after_this_checkpoint": 24, "cutoff_reached": false},
+  "discovery_pass": {
+    "pass_id": "w1-pass-024-same-model-same-task-gemini25flash",
+    "method": "Direction-blind admission of the completed same-model-same-task headline run: eight framework adapters, ten fixed jobs and three trials per job, all routed to Gemini 2.5 Flash through Google's OpenAI-compatible endpoint with the same four deterministic tools and shared benchmark contract. W1 preserves deterministic NDCG@3 and Hit@1 aggregates, valid/total run denominators and auxiliary telemetry without reproducing the source ordering.",
+    "source_repository": "https://github.com/tienedev/same-model-same-task",
+    "source_revision": "3a075b974e99443854a14017178fde1ab40be6b5",
+    "headline_run_period": "2026-05-09 onward; exact start timestamp preserved per raw framework result file where published",
+    "source_artifacts": [
+      "https://github.com/tienedev/same-model-same-task/blob/3a075b974e99443854a14017178fde1ab40be6b5/README.md",
+      "https://github.com/tienedev/same-model-same-task/blob/3a075b974e99443854a14017178fde1ab40be6b5/results/summary.md",
+      "https://github.com/tienedev/same-model-same-task/tree/3a075b974e99443854a14017178fde1ab40be6b5/results/headline",
+      "https://github.com/tienedev/same-model-same-task/blob/3a075b974e99443854a14017178fde1ab40be6b5/frameworks/_shared/python/config.py",
+      "https://github.com/tienedev/same-model-same-task/blob/3a075b974e99443854a14017178fde1ab40be6b5/harness/run_bench.py",
+      "https://github.com/tienedev/same-model-same-task/blob/3a075b974e99443854a14017178fde1ab40be6b5/scripts/summarize.py",
+      "https://github.com/tienedev/same-model-same-task/blob/3a075b974e99443854a14017178fde1ab40be6b5/pyproject.toml",
+      "https://github.com/tienedev/same-model-same-task/blob/3a075b974e99443854a14017178fde1ab40be6b5/package.json"
+    ]
+  },
+  "reused_existing_observation_ids": [],
+  "newly_admitted_observation_ids": [
+    "baseline-python__same-model-same-task-10job-3trial__gemini-2.5-flash__3a075b97",
+    "baseline-typescript__same-model-same-task-10job-3trial__gemini-2.5-flash__3a075b97",
+    "langgraph__same-model-same-task-10job-3trial__gemini-2.5-flash__3a075b97",
+    "crewai__same-model-same-task-10job-3trial__gemini-2.5-flash__3a075b97",
+    "pydantic-ai__same-model-same-task-10job-3trial__gemini-2.5-flash__3a075b97",
+    "google-adk__same-model-same-task-10job-3trial__gemini-2.5-flash__3a075b97",
+    "mastra__same-model-same-task-10job-3trial__gemini-2.5-flash__3a075b97",
+    "vercel-ai-sdk__same-model-same-task-10job-3trial__gemini-2.5-flash__3a075b97"
+  ],
+  "candidate_same_model_comparison_groups": [{
+    "group_id": "same-model-same-task-10job-3trial__gemini-2.5-flash__3a075b97",
+    "observation_ids": [
+      "baseline-python__same-model-same-task-10job-3trial__gemini-2.5-flash__3a075b97",
+      "baseline-typescript__same-model-same-task-10job-3trial__gemini-2.5-flash__3a075b97",
+      "langgraph__same-model-same-task-10job-3trial__gemini-2.5-flash__3a075b97",
+      "crewai__same-model-same-task-10job-3trial__gemini-2.5-flash__3a075b97",
+      "pydantic-ai__same-model-same-task-10job-3trial__gemini-2.5-flash__3a075b97",
+      "google-adk__same-model-same-task-10job-3trial__gemini-2.5-flash__3a075b97",
+      "mastra__same-model-same-task-10job-3trial__gemini-2.5-flash__3a075b97",
+      "vercel-ai-sdk__same-model-same-task-10job-3trial__gemini-2.5-flash__3a075b97"
+    ],
+    "source_known_dimensions": [
+      "same explicit MODEL_NAME=gemini-2.5-flash",
+      "same Google generativelanguage OpenAI-compatible endpoint and single GEMINI_API_KEY contract",
+      "same hard MAX_STEPS=25 benchmark ceiling expressed through framework-specific controls",
+      "same ten fixed jobs and three trials per job per framework",
+      "same candidate dataset, prompts and four deterministic tool implementations",
+      "same output validation contract",
+      "same deterministic NDCG@3/Hit@1 scorer and gold relevance construction",
+      "all eight framework raw headline JSON files are committed and contain per-run model label, raw final output, parsed output, validity and telemetry"
+    ],
+    "explicit_unknown_or_nonidentical_dimensions": [
+      "exact Google service-side Gemini 2.5 Flash checkpoint/revision",
+      "exact installed upstream framework/library versions for the historical run are not recorded in the raw result files; dependency ranges and benchmark adapter revision are public",
+      "Python and TypeScript framework runtimes and provider/message serialization differ by design",
+      "framework-specific retry/event-loop behavior and invalid-run failure modes differ",
+      "raw headline files preserve final model output and per-run metrics but not complete internal tool-call/message trajectories",
+      "service-side stochasticity remains despite three trials per job",
+      "aggregate correctness and telemetry are computed over valid runs, whose counts differ across framework arms"
+    ],
+    "paper_eligibility": "not-assessed-by-W1"
+  }],
+  "provenance_strength": {
+    "class": "external-reproduced",
+    "headline_runs": 240,
+    "framework_arms": 8,
+    "jobs_per_arm": 10,
+    "trials_per_job": 3,
+    "public_raw_run_json": true,
+    "public_raw_final_model_outputs": true,
+    "public_per_run_deterministic_scores": true,
+    "public_internal_tool_message_trajectories": false,
+    "public_deterministic_scorer": true,
+    "public_dataset_and_tools": true,
+    "w1_treatment": "admitted from committed raw run JSON plus committed deterministic aggregate; framework ordering and source conclusions are not promoted"
+  },
+  "non_admission_dispositions": [
+    {"surface": "source leaderboard ordering and framework selection recommendations", "status": "not-promoted-by-W1", "reason": "W1 preserves eight factual rows and common-group provenance without ordering the frameworks or selecting a winner."},
+    {"surface": "JustifQ /5 as correctness evidence", "status": "auxiliary-only", "reason": "The source itself documents Gemini-on-Gemini self-preference concerns and uses the LLM judge only for prose-quality assessment. W1 treats deterministic NDCG@3/Hit@1 as the primary factual outcome and retains JustifQ only as publisher telemetry."},
+    {"surface": "Gemini 3.x/2.5-Pro thought-signature canary table", "status": "deferred-not-admitted-in-pass-024", "reason": "Those are separate one-trial compatibility canaries on different model families, not part of the completed Gemini 2.5 Flash headline comparison."}
+  ],
+  "validation": {
+    "status": "success",
+    "registry_observation_count_after": 207,
+    "commands_required": ["python system-observations/render_registry.py", "python scripts/admission_check.py <each of eight pass-24 raw records>", "python scripts/validate_repository.py"],
+    "results": [
+      {"workflow_run_id": 36657645075, "run_number": 281, "head_before_bot_registry_commit": "5c5be5e7baff0d6c4ac7a43c49b89073dfcb1f0f", "result": "success", "scope": "temporary write-enabled registry regeneration plus repository validation and eight record-specific admission checks"},
+      {"workflow_run_id": 36657732577, "run_number": 283, "head": "dce33730f1e788e08d955991ceb6a9f28ffacc0a", "result": "success", "scope": "standard read-only validation after restoring workflow blob 244ad9701f41e6122f37c0676a00e705cddd622f"}
+    ]
+  },
+  "handoff_boundary": {"structural_classification_performed": false, "historical_linkage_adjudicated": false, "comparison_tier_assigned": false, "statistical_interpretation_performed": false, "winner_declared": false}
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "same-model-same-task baseline-typescript",
+  "canonical_harness_id": null,
+  "published_implementation": {"system_compatibility": "benchmark-scaffolded", "historical_relation": "The pinned benchmark implements baseline-typescript as a raw OpenAI-SDK manual tool-calling loop. The benchmark adapter revision is pinned; exact installed package versions for the historical headline run are not recorded in the result file."},
+  "primary_sources": [
+    "https://github.com/tienedev/same-model-same-task/blob/3a075b974e99443854a14017178fde1ab40be6b5/README.md",
+    "https://github.com/tienedev/same-model-same-task/blob/3a075b974e99443854a14017178fde1ab40be6b5/results/summary.md",
+    "https://github.com/tienedev/same-model-same-task/blob/3a075b974e99443854a14017178fde1ab40be6b5/results/headline/baseline-typescript.json",
+    "https://github.com/tienedev/same-model-same-task/blob/3a075b974e99443854a14017178fde1ab40be6b5/package.json",
+    "https://github.com/tienedev/same-model-same-task/blob/3a075b974e99443854a14017178fde1ab40be6b5/harness/run_bench.py"
+  ],
+  "observations": [{
+    "observation_id": "baseline-typescript__same-model-same-task-10job-3trial__gemini-2.5-flash__3a075b97",
+    "kind": "system-benchmark-result",
+    "benchmark": {"family_id": "same-model-same-task-10job-3trial", "name": "same-model-same-task candidate-matching benchmark", "variant": "headline-10-jobs-3-trials", "task_count": 10, "primary_source": "https://github.com/tienedev/same-model-same-task/blob/3a075b974e99443854a14017178fde1ab40be6b5/README.md", "artifact_source": "https://github.com/tienedev/same-model-same-task/blob/3a075b974e99443854a14017178fde1ab40be6b5/results/headline/baseline-typescript.json"},
+    "result": {"date": null, "published_snapshot_date": "2026-05-11", "agent_label": "baseline-typescript", "harness_version": null, "harness_revision": "3a075b974e99443854a14017178fde1ab40be6b5", "benchmark_revision": "3a075b974e99443854a14017178fde1ab40be6b5", "model": "gemini-2.5-flash", "model_config": "Google Gemini OpenAI-compatible endpoint; shared GEMINI_API_KEY contract; MAX_STEPS=25; same four deterministic benchmark tools", "metric": "mean_ndcg_at_3_over_valid_runs", "value": 0.589, "total_runs": 30, "valid_runs": 29, "hit_at_1_rate_over_valid_runs": 0.690, "mean_justification_quality_1_to_5_source_reported": 3.00, "latency_p50_s_source_reported": 20.5, "latency_p95_s_source_reported": 32.7, "mean_input_tokens_source_reported": 5897, "mean_output_tokens_source_reported": 495, "mean_tool_calls_source_reported": 9.2, "estimated_cost_usd_per_valid_run_source_reported": 0.0177, "trials_per_job": 3},
+    "published_implementation": {"system_compatibility": "benchmark-scaffolded", "revision_match": "source-revision-known"},
+    "provenance": {"publisher": "Etienne Brun / same-model-same-task", "checked": true, "os_system": true, "public_logs": true, "public_trajectories": false, "raw_run_artifacts_public": true, "raw_result_blob_sha": "1d3c91388d20337728689d2e4dd34a0bdfbc379e", "public_result_surface": "committed 30-run JSON plus generated committed aggregate summary", "execution_environment": "10 fixed jobs x 3 trials; TypeScript adapter launched by shared run_bench.py subprocess; same model/provider contract and task/tool data across framework arms"},
+    "comparison": {"group": "same-model-same-task-10job-3trial__gemini-2.5-flash__3a075b97", "mode": "candidate-same-model", "scope": "tool-using-ranking-agent"},
+    "unknown_dimensions": ["exact Google service-side Gemini 2.5 Flash checkpoint/revision", "exact installed TypeScript OpenAI SDK/runtime dependency versions used by the historical headline run", "framework/runtime message serialization and retry behavior differ by implementation", "invalid-run causes differ across framework arms", "full internal tool-call/message trajectories are not preserved in the headline JSON", "service-side stochasticity remains despite three trials per job"],
+    "notes": "The source aggregation computes correctness and telemetry over valid runs only. W1 preserves the published aggregate and valid/total denominator without reproducing the source ordering."
+  }]
+}
