@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Claude Code",
+  "canonical_harness_id": "claude-code",
+  "canonical_assessment_ref": "assessments/claude-code.md",
+  "canonical_review_ref": "7dd06361110d4417f3edefaf075f41923f0e04c5",
+  "canonical_repository": "https://github.com/anthropics/claude-code",
+  "published_implementation": {"system_compatibility": "adapter-preserved", "historical_relation": "The fix round resumes the bare Claude Code run_02 repository at its pre-fix boundary under Claude Code 2.1.211 with no added overlay."},
+  "primary_sources": [
+    "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_02/FIX-ROUND.md",
+    "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_02/runs/07-fix-runlog.md",
+    "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_02/runs/07-fix-acceptance.txt",
+    "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_02/grades/final.md"
+  ],
+  "observations": [{
+    "observation_id": "claude-code__harness-eval-feedhub-run02-fix__claude-opus-4-8__7d3f74fe",
+    "kind": "system-benchmark-result",
+    "benchmark": {"family_id": "harness-eval-feedhub-run02-fix", "name": "harness-eval run_02.1 organic bug-fix round", "variant": "resume-own-work-shared-defect", "task_count": 1, "primary_source": "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_02/FIX-ROUND.md", "artifact_source": "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_02/runs/07-fix-acceptance.txt"},
+    "result": {"date": "2026-07-17", "agent_label": "07-baseline-claude-fix", "harness_version": "Claude Code 2.1.211", "harness_revision": null, "benchmark_revision": "7d3f74fe47f48db67c9ab0489ad4ba9170922f12", "model": "claude-opus-4-8", "model_config": "Claude Code requested and session-reported claude-opus-4-8; exact service-side checkpoint beyond published model id not independently pinned", "metric": "fix_acceptance_pass_rate", "value": 1.0, "pre_fix_full_suite_passed": 24, "pre_fix_full_suite_total": 26, "post_fix_core_passed": 14, "post_fix_core_total": 14, "post_fix_hard_passed": 12, "post_fix_hard_total": 12, "fix_addendum_passed": 3, "fix_addendum_total": 3, "trials": 1, "wall_time_seconds": 177, "runner_exit_code": 0},
+    "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "version-known"},
+    "provenance": {"publisher": "Ken Hiatt / harness-eval", "checked": true, "os_system": true, "public_logs": true, "public_trajectories": null, "raw_run_artifacts_public": true, "execution_environment": "single host kai; headless Claude Code 2.1.211; continued from pre-fix tag; sealed full suite plus three-test fix addendum; empty intervention log"},
+    "comparison": {"group": "harness-eval-feedhub-run02-fix__claude-opus-4-8__claude-code-2.1.211", "mode": "candidate-same-model", "scope": "coding-swe-recovery"},
+    "unknown_dimensions": ["trajectory variance at N=1", "exact upstream source revision corresponding to Claude Code 2.1.211", "Claude-runner profile MCP remained available while Copilot-side MCP conditions differed"],
+    "notes": "Bare runner control resumed from its own generated repository and passed the full frozen verification plus fix addendum after repair."
+  }]
+}
