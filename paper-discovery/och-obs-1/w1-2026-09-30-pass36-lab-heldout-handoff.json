@@ -101,6 +101,18 @@
       "scope": "all three observations",
       "source_reported": true,
       "detail": "The held-out test uses one rollout per task. The source separately reports a smaller dev variance study; W1 does not convert it into uncertainty for these test aggregates."
+    },
+    {
+      "event": "temporary-validation-control-first-attempt-failure",
+      "scope": "control infrastructure only",
+      "source_reported": false,
+      "detail": "Workflow run 36722490370 (run 341) failed before any job steps executed. No evidence admission or repository validation command ran in that attempt. The temporary workflow was aligned to the immediately preceding proven pass-35 control pattern before retry."
+    },
+    {
+      "event": "bot-authored-registry-commit-followup",
+      "scope": "control infrastructure only",
+      "source_reported": false,
+      "detail": "The synchronize event emitted by the github-actions bot registry commit produced workflow run 36722708825 (run 343) with conclusion action_required. It is not used as validation evidence; human-authored restored-standard-workflow run 344 is the post-generation control check."
     }
   ],
   "non_admission_dispositions": [
@@ -121,14 +133,38 @@
     }
   ],
   "validation": {
-    "status": "pending",
+    "status": "passed",
     "registry_observation_count_after": 275,
     "commands_required": [
       "python system-observations/render_registry.py",
       "python scripts/admission_check.py system-observations/meta-harness-lab-heldout-deepseek-v4-pro-first-party-reported-benchmark-scaffolded.json",
       "python scripts/validate_repository.py"
     ],
-    "results": []
+    "results": [
+      {
+        "stage": "write-enabled-admission",
+        "head_revision": "dbc10591d6be47990bac9e66101effa0df78573c",
+        "workflow_run_id": 36722679797,
+        "run_number": 342,
+        "conclusion": "success",
+        "detail": "Neutral registry regeneration, repository validation, post-closure validators, the pass-36 record-specific admission check, and the existing live admission loop all succeeded."
+      },
+      {
+        "stage": "generated-registry-state",
+        "head_revision": "4d2f21a3569a7c856dbbd038d27b0c1ebf2357d8",
+        "registry_observation_count": 275,
+        "conclusion": "generated"
+      },
+      {
+        "stage": "restored-standard-workflow",
+        "head_revision": "785ba54e0e57ecf57afb2731820c26bddd8a3dd2",
+        "workflow_blob": "244ad9701f41e6122f37c0676a00e705cddd622f",
+        "workflow_run_id": 36722938622,
+        "run_number": 344,
+        "conclusion": "success",
+        "detail": "Standard read-only validation workflow passed after the temporary generation/admission hook was removed."
+      }
+    ]
   },
   "handoff_boundary": {
     "structural_classification_performed": false,
