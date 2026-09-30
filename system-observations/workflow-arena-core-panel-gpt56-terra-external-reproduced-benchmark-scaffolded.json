@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Workflow Arena core workflow panel",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "benchmark-scaffolded",
+    "historical_relation": "The source studies workflow capability packs injected into a fixed Codex CLI execution harness. The five admitted arms share the same reported primary model and core eight-task panel, but the source aggregates multiple frozen campaigns rather than one single randomized scheduler batch. W1 preserves the workflow-arm identities without canonical harness linkage."
+  },
+  "primary_sources": [
+    "https://github.com/kvenux/workflow-arena/blob/40c7baee163c54b66ad0b8f8091c330cf5ef6b6a/reports/capability-task-score-matrix.csv",
+    "https://github.com/kvenux/workflow-arena/blob/40c7baee163c54b66ad0b8f8091c330cf5ef6b6a/reports/agentic-coding-workflows-technical-manuscript.md"
+  ],
+  "observations": [
+    {
+      "observation_id": "workflow-arena-bare__core8__gpt-5.6-terra-high__40c7baee",
+      "kind": "system-benchmark-panel-aggregate",
+      "benchmark": {
+        "name": "Workflow Arena eight-task core workflow panel",
+        "version": "2026-07-28-v0.2",
+        "primary_source": "https://github.com/kvenux/workflow-arena/blob/40c7baee163c54b66ad0b8f8091c330cf5ef6b6a/reports/agentic-coding-workflows-technical-manuscript.md",
+        "artifact_source": "https://github.com/kvenux/workflow-arena/blob/40c7baee163c54b66ad0b8f8091c330cf5ef6b6a/reports/capability-task-score-matrix.csv",
+        "task_set": ["cli_item_list_fields", "eslint_preserve_caught_error", "pytest_plugin_entry_points", "pytest_addini_type_expressions", "bat_sanitize", "sqlmodel_field_constraints", "axum_custom_executor", "prometheus_utf8_negotiation"],
+        "task_count": 8
+      },
+      "result": {
+        "publisher": "kvenux/workflow-arena",
+        "publication_revision": "40c7baee163c54b66ad0b8f8091c330cf5ef6b6a",
+        "workflow_arm": "bare",
+        "treatment": "terse",
+        "model": "gpt-5.6-terra",
+        "reasoning_effort": "high",
+        "metric": "treatment_label_blinded_judge_score_macro_mean",
+        "value": 73.54,
+        "task_scores": {"cli_item_list_fields":79.67,"eslint_preserve_caught_error":54.83,"pytest_plugin_entry_points":95.0,"pytest_addini_type_expressions":79.0,"bat_sanitize":85.67,"sqlmodel_field_constraints":85.0,"axum_custom_executor":72.83,"prometheus_utf8_negotiation":36.33},
+        "coverage": "8/8",
+        "average_recorded_minutes_per_run": 8.14,
+        "average_candidate_session_tokens_millions_per_run": 2.22,
+        "average_candidate_plus_operator_api_equivalent_usd_per_run": 1.08
+      },
+      "execution": {
+        "candidate_runtime": "Codex CLI",
+        "repetitions_per_task": 3,
+        "total_candidate_runs": 24,
+        "evaluator": "two independent treatment-label-blinded model judges; per-run judge mean, then task mean, then equal-weight eight-task macro mean",
+        "environment": "task-specific frozen baseline commit in isolated worktree; no remote/upstream history; network and web search disabled; isolated CODEX_HOME; hidden ground truth, reference implementation, rubric, and focused tests unavailable to candidate",
+        "timeout_or_run_budget": null,
+        "reset_and_adaptation": "fresh independent candidate runs; failures, timeouts, and incomplete trajectories retained"
+      },
+      "comparison": {"group":"workflow-arena-core8__gpt-5.6-terra-high__40c7baee","mode":"same-model-workflow-arm-panel","scope":"repository-level-software-engineering"},
+      "unknown_dimensions": ["exact Codex CLI build/version shared by all historical campaigns", "task-specific frozen baseline commit identifiers are not carried in the aggregate matrix", "campaign-level timing semantics are not fully uniform across all historical campaigns"],
+      "notes": "Bare injects no external capability pack. The aggregate is descriptive evidence over a preselected diagnostic panel, not a population estimate."
+    },
+    {
+      "observation_id": "workflow-arena-superpowers-6.1.1__core8__gpt-5.6-terra-high__40c7baee",
+      "kind": "system-benchmark-panel-aggregate",
+      "benchmark": {"name":"Workflow Arena eight-task core workflow panel","version":"2026-07-28-v0.2","primary_source":"https://github.com/kvenux/workflow-arena/blob/40c7baee163c54b66ad0b8f8091c330cf5ef6b6a/reports/agentic-coding-workflows-technical-manuscript.md","artifact_source":"https://github.com/kvenux/workflow-arena/blob/40c7baee163c54b66ad0b8f8091c330cf5ef6b6a/reports/capability-task-score-matrix.csv","task_set":["cli_item_list_fields","eslint_preserve_caught_error","pytest_plugin_entry_points","pytest_addini_type_expressions","bat_sanitize","sqlmodel_field_constraints","axum_custom_executor","prometheus_utf8_negotiation"],"task_count":8},
+      "result": {"publisher":"kvenux/workflow-arena","publication_revision":"40c7baee163c54b66ad0b8f8091c330cf5ef6b6a","workflow_arm":"superpowers-6.1.1","treatment":"full","frozen_capability_revision":"d884ae04edebef577e82ff7c4e143debd0bbec99","model":"gpt-5.6-terra","reasoning_effort":"high","metric":"treatment_label_blinded_judge_score_macro_mean","value":84.08,"task_scores":{"cli_item_list_fields":100.0,"eslint_preserve_caught_error":98.17,"pytest_plugin_entry_points":91.33,"pytest_addini_type_expressions":89.33,"bat_sanitize":85.0,"sqlmodel_field_constraints":85.67,"axum_custom_executor":80.5,"prometheus_utf8_negotiation":42.67},"coverage":"8/8","average_recorded_minutes_per_run":58.41,"average_candidate_session_tokens_millions_per_run":23.44,"average_candidate_plus_operator_api_equivalent_usd_per_run":9.65},
+      "execution": {"candidate_runtime":"Codex CLI","repetitions_per_task":3,"total_candidate_runs":24,"evaluator":"two independent treatment-label-blinded model judges; per-run judge mean, then task mean, then equal-weight eight-task macro mean","environment":"task-specific frozen baseline commit in isolated worktree; no remote/upstream history; network and web search disabled; isolated CODEX_HOME; fixed local capability snapshot; hidden ground truth, reference implementation, rubric, and focused tests unavailable to candidate","timeout_or_run_budget":null,"reset_and_adaptation":"fresh independent candidate runs; failures, timeouts, and incomplete trajectories retained"},
+      "comparison": {"group":"workflow-arena-core8__gpt-5.6-terra-high__40c7baee","mode":"same-model-workflow-arm-panel","scope":"repository-level-software-engineering"},
+      "unknown_dimensions": ["exact Codex CLI build/version shared by all historical campaigns", "task-specific frozen baseline commit identifiers are not carried in the aggregate matrix", "campaign-level timing semantics are not fully uniform across all historical campaigns"],
+      "notes": "The source describes this as a forced full workflow. W1 preserves the aggregate outcome and does not attribute it to any individual workflow component."
+    },
+    {
+      "observation_id": "workflow-arena-grill-me__core8__gpt-5.6-terra-high__40c7baee",
+      "kind": "system-benchmark-panel-aggregate",
+      "benchmark": {"name":"Workflow Arena eight-task core workflow panel","version":"2026-07-28-v0.2","primary_source":"https://github.com/kvenux/workflow-arena/blob/40c7baee163c54b66ad0b8f8091c330cf5ef6b6a/reports/agentic-coding-workflows-technical-manuscript.md","artifact_source":"https://github.com/kvenux/workflow-arena/blob/40c7baee163c54b66ad0b8f8091c330cf5ef6b6a/reports/capability-task-score-matrix.csv","task_set":["cli_item_list_fields","eslint_preserve_caught_error","pytest_plugin_entry_points","pytest_addini_type_expressions","bat_sanitize","sqlmodel_field_constraints","axum_custom_executor","prometheus_utf8_negotiation"],"task_count":8},
+      "result": {"publisher":"kvenux/workflow-arena","publication_revision":"40c7baee163c54b66ad0b8f8091c330cf5ef6b6a","workflow_arm":"mattpocock-grill-me","treatment":"grill-me","frozen_capability_revision_prefix":"ed37663","model":"gpt-5.6-terra","reasoning_effort":"high","metric":"treatment_label_blinded_judge_score_macro_mean","value":80.30,"task_scores":{"cli_item_list_fields":97.67,"eslint_preserve_caught_error":99.20,"pytest_plugin_entry_points":93.83,"pytest_addini_type_expressions":92.83,"bat_sanitize":68.50,"sqlmodel_field_constraints":81.67,"axum_custom_executor":81.0,"prometheus_utf8_negotiation":27.67},"coverage":"8/8","average_recorded_minutes_per_run":13.45,"average_candidate_session_tokens_millions_per_run":3.31,"average_candidate_plus_operator_api_equivalent_usd_per_run":2.55},
+      "execution": {"candidate_runtime":"Codex CLI","repetitions_per_task":3,"total_candidate_runs":24,"evaluator":"two independent treatment-label-blinded model judges; per-run judge mean, then task mean, then equal-weight eight-task macro mean","environment":"task-specific frozen baseline commit in isolated worktree; no remote/upstream history; network and web search disabled; isolated CODEX_HOME; fixed local capability snapshot; hidden ground truth, reference implementation, rubric, and focused tests unavailable to candidate","timeout_or_run_budget":null,"reset_and_adaptation":"fresh independent candidate runs; failures, timeouts, and incomplete trajectories retained"},
+      "comparison": {"group":"workflow-arena-core8__gpt-5.6-terra-high__40c7baee","mode":"same-model-workflow-arm-panel","scope":"repository-level-software-engineering"},
+      "unknown_dimensions": ["full 40-hex Grill Me source revision because the public manuscript reports only prefix ed37663", "exact Codex CLI build/version shared by all historical campaigns", "task-specific frozen baseline commit identifiers are not carried in the aggregate matrix", "campaign-level timing semantics are not fully uniform across all historical campaigns"],
+      "notes": "W1 preserves the source-reported short capability revision rather than expanding it to an unverified full commit."
+    },
+    {
+      "observation_id": "workflow-arena-openspec-core__core8__gpt-5.6-terra-high__40c7baee",
+      "kind": "system-benchmark-panel-aggregate",
+      "benchmark": {"name":"Workflow Arena eight-task core workflow panel","version":"2026-07-28-v0.2","primary_source":"https://github.com/kvenux/workflow-arena/blob/40c7baee163c54b66ad0b8f8091c330cf5ef6b6a/reports/agentic-coding-workflows-technical-manuscript.md","artifact_source":"https://github.com/kvenux/workflow-arena/blob/40c7baee163c54b66ad0b8f8091c330cf5ef6b6a/reports/capability-task-score-matrix.csv","task_set":["cli_item_list_fields","eslint_preserve_caught_error","pytest_plugin_entry_points","pytest_addini_type_expressions","bat_sanitize","sqlmodel_field_constraints","axum_custom_executor","prometheus_utf8_negotiation"],"task_count":8},
+      "result": {"publisher":"kvenux/workflow-arena","publication_revision":"40c7baee163c54b66ad0b8f8091c330cf5ef6b6a","workflow_arm":"fission-openspec","treatment":"core-propose-apply","frozen_capability_revision_prefix":"19d4171","frozen_capability_version":"1.6.0","model":"gpt-5.6-terra","reasoning_effort":"high","metric":"treatment_label_blinded_judge_score_macro_mean","value":71.42,"task_scores":{"cli_item_list_fields":81.17,"eslint_preserve_caught_error":54.33,"pytest_plugin_entry_points":90.0,"pytest_addini_type_expressions":78.67,"bat_sanitize":91.17,"sqlmodel_field_constraints":73.5,"axum_custom_executor":71.17,"prometheus_utf8_negotiation":31.33},"coverage":"8/8","average_recorded_minutes_per_run":13.07,"average_candidate_session_tokens_millions_per_run":3.91,"average_candidate_plus_operator_api_equivalent_usd_per_run":1.68},
+      "execution": {"candidate_runtime":"Codex CLI","repetitions_per_task":3,"total_candidate_runs":24,"evaluator":"two independent treatment-label-blinded model judges; per-run judge mean, then task mean, then equal-weight eight-task macro mean","environment":"task-specific frozen baseline commit in isolated worktree; no remote/upstream history; network and web search disabled; isolated CODEX_HOME; fixed local capability snapshot; hidden ground truth, reference implementation, rubric, and focused tests unavailable to candidate","timeout_or_run_budget":null,"reset_and_adaptation":"fresh independent candidate runs; failures, timeouts, and incomplete trajectories retained"},
+      "comparison": {"group":"workflow-arena-core8__gpt-5.6-terra-high__40c7baee","mode":"same-model-workflow-arm-panel","scope":"repository-level-software-engineering"},
+      "unknown_dimensions": ["full 40-hex OpenSpec source revision because the public manuscript reports only prefix 19d4171", "exact Codex CLI build/version shared by all historical campaigns", "task-specific frozen baseline commit identifiers are not carried in the aggregate matrix", "campaign-level timing semantics are not fully uniform across all historical campaigns"],
+      "notes": "The source identifies the official core propose/apply treatment; W1 makes no component-level interpretation."
+    },
+    {
+      "observation_id": "workflow-arena-ponytail-full__core8__gpt-5.6-terra-high__40c7baee",
+      "kind": "system-benchmark-panel-aggregate",
+      "benchmark": {"name":"Workflow Arena eight-task core workflow panel","version":"2026-07-28-v0.2","primary_source":"https://github.com/kvenux/workflow-arena/blob/40c7baee163c54b66ad0b8f8091c330cf5ef6b6a/reports/agentic-coding-workflows-technical-manuscript.md","artifact_source":"https://github.com/kvenux/workflow-arena/blob/40c7baee163c54b66ad0b8f8091c330cf5ef6b6a/reports/capability-task-score-matrix.csv","task_set":["cli_item_list_fields","eslint_preserve_caught_error","pytest_plugin_entry_points","pytest_addini_type_expressions","bat_sanitize","sqlmodel_field_constraints","axum_custom_executor","prometheus_utf8_negotiation"],"task_count":8},
+      "result": {"publisher":"kvenux/workflow-arena","publication_revision":"40c7baee163c54b66ad0b8f8091c330cf5ef6b6a","workflow_arm":"ponytail-16f2980","treatment":"full","frozen_capability_revision_prefix":"16f2980","declared_capability_version":"4.8.4","model":"gpt-5.6-terra","reasoning_effort":"high","metric":"treatment_label_blinded_judge_score_macro_mean","value":72.23,"task_scores":{"cli_item_list_fields":80.50,"eslint_preserve_caught_error":51.0,"pytest_plugin_entry_points":90.50,"pytest_addini_type_expressions":77.33,"bat_sanitize":92.83,"sqlmodel_field_constraints":79.17,"axum_custom_executor":67.17,"prometheus_utf8_negotiation":39.33},"coverage":"8/8","average_recorded_minutes_per_run":11.33,"average_candidate_session_tokens_millions_per_run":3.21,"average_candidate_plus_operator_api_equivalent_usd_per_run":1.42},
+      "execution": {"candidate_runtime":"Codex CLI","repetitions_per_task":3,"total_candidate_runs":24,"evaluator":"two independent treatment-label-blinded model judges; per-run judge mean, then task mean, then equal-weight eight-task macro mean","environment":"task-specific frozen baseline commit in isolated worktree; no remote/upstream history; network and web search disabled; isolated CODEX_HOME; fixed local capability snapshot; hidden ground truth, reference implementation, rubric, and focused tests unavailable to candidate","timeout_or_run_budget":null,"reset_and_adaptation":"fresh independent candidate runs; failures, timeouts, and incomplete trajectories retained"},
+      "comparison": {"group":"workflow-arena-core8__gpt-5.6-terra-high__40c7baee","mode":"same-model-workflow-arm-panel","scope":"repository-level-software-engineering"},
+      "unknown_dimensions": ["full 40-hex Ponytail source revision because the public manuscript reports only prefix 16f2980", "exact Codex CLI build/version shared by all historical campaigns", "task-specific frozen baseline commit identifiers are not carried in the aggregate matrix", "campaign-level timing semantics are not fully uniform across all historical campaigns"],
+      "notes": "The source calls this a non-interactive full treatment. W1 preserves the published arm without inferring mechanism."
+    }
+  ]
+}
