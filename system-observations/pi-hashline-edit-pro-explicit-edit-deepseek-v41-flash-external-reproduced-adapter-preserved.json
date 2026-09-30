@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Pi Hashline Edit Pro under Explicit Edit Benchmark",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "adapter-preserved",
+    "historical_relation": "The accepted public bundle names harness family pi-hashline-edit-pro, harness version 4.4.3, Pi agent version 0.87.1, harness-native transport, and a pi-default harness kind. Its profile leaves sourceCommit null, so W1 preserves the published implementation identity without inferring an exact source revision or canonical historical linkage."
+  },
+  "primary_sources": [
+    "https://huggingface.co/datasets/alexshpunt/explicit-edit-benchmark/commit/7dc2b3bfaf7eb0688a0188e769e78109ec2e7290",
+    "https://huggingface.co/datasets/alexshpunt/explicit-edit-benchmark/blob/7dc2b3bfaf7eb0688a0188e769e78109ec2e7290/source/accepted/831b5ee1f189f15d563684b616e3d505649ea9be1976ceb3cd77f27c868b71b7/manifest.json",
+    "https://huggingface.co/datasets/alexshpunt/explicit-edit-benchmark/blob/7dc2b3bfaf7eb0688a0188e769e78109ec2e7290/source/accepted/831b5ee1f189f15d563684b616e3d505649ea9be1976ceb3cd77f27c868b71b7/configurations.jsonl",
+    "https://huggingface.co/datasets/alexshpunt/explicit-edit-benchmark/blob/7dc2b3bfaf7eb0688a0188e769e78109ec2e7290/source/accepted/831b5ee1f189f15d563684b616e3d505649ea9be1976ceb3cd77f27c868b71b7/profiles.jsonl",
+    "https://huggingface.co/datasets/alexshpunt/explicit-edit-benchmark/blob/7dc2b3bfaf7eb0688a0188e769e78109ec2e7290/source/accepted/831b5ee1f189f15d563684b616e3d505649ea9be1976ceb3cd77f27c868b71b7/trials.jsonl",
+    "https://github.com/alexshpunt/explicit-edit-benchmark/blob/5827e3fb65845f4b76adb06e5919d94ec4ffd5cf/docs/methodology.md"
+  ],
+  "observations": [
+    {
+      "observation_id": "pi-hashline-edit-pro__explicit-edit-v1-226__deepseek-v4.1-flash__7dc2b3bf",
+      "kind": "system-benchmark-result-from-accepted-bundle",
+      "benchmark": {
+        "name": "Explicit Edit v1 226-task accepted run",
+        "version": "1",
+        "contract": "explicit-edit-v1",
+        "primary_source": "https://huggingface.co/datasets/alexshpunt/explicit-edit-benchmark/commit/7dc2b3bfaf7eb0688a0188e769e78109ec2e7290",
+        "artifact_source": "https://huggingface.co/datasets/alexshpunt/explicit-edit-benchmark/blob/7dc2b3bfaf7eb0688a0188e769e78109ec2e7290/source/accepted/831b5ee1f189f15d563684b616e3d505649ea9be1976ceb3cd77f27c868b71b7/trials.jsonl",
+        "task_count": 226,
+        "task_set_sha256": "80f793e69c53a8e768165d8460daec9d714b86da9989c6d4e1cf3c8f79d8ef69",
+        "verifier_sha256": "8bd4be15c886bba84e8a6fa46576c43f2ca0f02d2536d98403f97361914a166d"
+      },
+      "result": {
+        "publisher": "alexshpunt/explicit-edit-benchmark",
+        "public_snapshot_date": "2026-09-28",
+        "publication_revision": "7dc2b3bfaf7eb0688a0188e769e78109ec2e7290",
+        "submission_id": "831b5ee1f189f15d563684b616e3d505649ea9be1976ceb3cd77f27c868b71b7",
+        "client_run_id": "explicit-edit-2026-09-28T17-55-45.431Z",
+        "owner_id": "Yugimob",
+        "purpose": "exploratory",
+        "source_verification_status": "unverified",
+        "harness_label": "pi-hashline-edit-pro",
+        "harness_version": "4.4.3",
+        "agent_family": "pi",
+        "agent_version": "0.87.1",
+        "model": "deepseek/deepseek-flash",
+        "model_family": "deepseek-v4.1-flash",
+        "model_version": "deepseek-v4.1-flash",
+        "provider": "deepseek",
+        "thinking": "low",
+        "transport": "harness-native",
+        "first_exact_metric": "first_exact_success_rate",
+        "first_exact_value": 0.995575221238938,
+        "first_exact_success_count": 225,
+        "final_exact_metric": "final_exact_success_rate",
+        "final_exact_value": 1.0,
+        "final_exact_success_count": 226,
+        "total_trials": 226,
+        "source_quality_score": 0.9966814159292036,
+        "recovery_gain_count": 1
+      },
+      "execution": {
+        "environment": null,
+        "evaluator": "Explicit Edit byte-exact whole-tree verifier bound by verifier_sha256",
+        "repetitions_per_task": 1,
+        "oracle_recoveries_allowed": 5,
+        "retry_failures": 0,
+        "timeout_seconds_per_round": 300,
+        "concurrency": 20,
+        "total_rounds": 227,
+        "tool_calls": 1585,
+        "reset_and_adaptation": "One initial trial was recorded for each of the 226 tasks. The source methodology defines Oracle recovery as continuation in the same session and workspace after a failed exact check; this run records one additional recovery round and no fresh-trial retries.",
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "explicit-edit-v1__deepseek-v4.1-flash-deepseek__7dc2b3bf",
+        "mode": "single-public-observation",
+        "scope": "deterministic-byte-exact-editing"
+      },
+      "unknown_dimensions": [
+        "host machine and operating-system details for this accepted community run",
+        "exact harness source commit because the accepted profile reports sourceCommit as null",
+        "service-side model revision beyond the published deepseek-v4.1-flash label",
+        "independent execution verification because the accepted submission explicitly reports verification as unverified"
+      ],
+      "notes": "The dataset accepted and normalized this exploratory community submission, but the submission metadata says verification=unverified. W1 preserves that distinction and uses the immutable accepted bundle as public observation evidence rather than treating acceptance as independent verification."
+    }
+  ]
+}
