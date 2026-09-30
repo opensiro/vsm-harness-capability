@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Cursor in OpenBench Grok 4.5 15-task release matrix",
+  "canonical_harness_id": null,
+  "published_implementation": {"system_compatibility": "adapter-preserved", "historical_relation": "OpenBench release matrix exercises Cursor in isolated benchmark workspaces; the source archive is pinned at f0400e46 and the result-sealed publish bundle at c6872f39. The release page flags cross-group image-digest and timeout differences, so W1 preserves those dimensions as unresolved."},
+  "primary_sources": ["https://github.com/minghinmatthewlam/openbench/blob/c6872f393263ae9217e1c2c44111bec72ecfe3bc/docs/releases/2026-07-20-grok45/index.html", "https://github.com/minghinmatthewlam/openbench/blob/c6872f393263ae9217e1c2c44111bec72ecfe3bc/docs/releases/2026-07-20-grok45/results.jsonl", "https://github.com/minghinmatthewlam/openbench/blob/c6872f393263ae9217e1c2c44111bec72ecfe3bc/docs/releases/2026-07-20-grok45/provenance.json", "https://github.com/minghinmatthewlam/openbench/blob/c6872f393263ae9217e1c2c44111bec72ecfe3bc/docs/releases/2026-07-20-grok45/README.md", "https://github.com/minghinmatthewlam/openbench/blob/f0400e4698a16742b2cb290bd4f4ca07b9d01142/data/grok45-2026-07-20/grok45-final.jsonl"],
+  "observations": [{
+    "observation_id": "cursor__openbench-grok45-release15__grok-4.5__c6872f39",
+    "kind": "system-benchmark-result-from-release-counts",
+    "benchmark": {"family_id": "openbench-grok45-release15", "name": "OpenBench Grok 4.5 15-task release matrix", "variant": "cursor-grok-4.5", "task_count": 15, "primary_source": "https://github.com/minghinmatthewlam/openbench/blob/c6872f393263ae9217e1c2c44111bec72ecfe3bc/docs/releases/2026-07-20-grok45/index.html", "artifact_source": "https://github.com/minghinmatthewlam/openbench/blob/c6872f393263ae9217e1c2c44111bec72ecfe3bc/docs/releases/2026-07-20-grok45/results.jsonl"},
+    "result": {"date": "2026-07-20", "published_snapshot_date": "2026-07-26", "agent_label": "cursor", "harness_version": "2026.07.09-a3815c0", "harness_revision": null, "benchmark_revision": "c6872f393263ae9217e1c2c44111bec72ecfe3bc", "source_archive_revision": "f0400e4698a16742b2cb290bd4f4ca07b9d01142", "model": "grok-4.5", "model_config": "Source-reported grok-4.5; native harness defaults retained. Exact hosted/service-side checkpoint and routing are not independently pinned.", "metric": "source_countable_success_rate", "value": 0.9111111111, "successes": 41, "countable_rows": 45, "scheduled_rows": 45, "excluded_infra_or_rate_limited_rows": 0, "task_count": 15, "trials_per_task": 3},
+    "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "executed-version-source-reported"},
+    "provenance": {"publisher": "OpenBench / minghinmatthewlam", "checked": true, "raw_run_artifacts_public": true, "public_trajectories": false, "public_result_surface": "result-sealed scrubbed JSONL plus SHA-bound provenance/task digests", "results_sha256": "3905ac339eea53b2e66fd2eb6b3a670174d364a40111777d4428619aba3f0081", "execution_environment": "15 archived tasks; n=3 trials per task; deterministic OpenBench checkers; infrastructure/rate-limit failures excluded from countable denominator"},
+    "comparison": {"group": "openbench-grok45-release15__grok-4.5__c6872f39", "mode": "candidate-same-model", "scope": "coding-agent-swe"},
+    "unknown_dimensions": ["publisher release page flags image_digest differences across groups", "publisher release page flags timeout_s differences across groups", "exact service-side checkpoint/routing beyond the grok-4.5 label", "harness-specific defaults and serving behavior differ by design", "provider/account load state"],
+    "notes": "W1 preserves the per-arm countable correctness result only. Source cross-group provenance warnings remain explicit; no matched-cell adjudication, ranking, or token-efficiency interpretation is performed."
+  }]
+}
