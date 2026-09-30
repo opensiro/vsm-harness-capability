@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "first-party-reported",
+  "system_name": "harness-bench Pilot 2 Claude Code harness ablation",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "benchmark-scaffolded",
+    "historical_relation": "The study invokes Claude Code headlessly in isolated throwaway target-repository copies and experimentally adds benchmark-defined done-gate, schema-output, and reviewer-loop layers. The arms are experimental configurations rather than canonical historical harness revisions."
+  },
+  "primary_sources": [
+    "https://github.com/tdrml/harness-bench/blob/f2fb12cc28ac90dce6eba873788b5632d6fc5431/README.md",
+    "https://github.com/tdrml/harness-bench/blob/f2fb12cc28ac90dce6eba873788b5632d6fc5431/results/pilot2.jsonl",
+    "https://github.com/tdrml/harness-bench/blob/f2fb12cc28ac90dce6eba873788b5632d6fc5431/runner/run-pilot2.mjs",
+    "https://github.com/tdrml/harness-bench/blob/6161e2ae3f69eb12a9bf77aa6019c8ea79cf92de/SPEC.md",
+    "https://github.com/tdrml/harness-bench/commit/6161e2ae3f69eb12a9bf77aa6019c8ea79cf92de",
+    "https://github.com/tdrml/harness-bench/commit/8564f68b9245125f8f055e414b31ed10a73131f3"
+  ],
+  "observations": [
+    {
+      "observation_id": "harness-bench__pilot2__sonnet-a0__f2fb12cc",
+      "kind": "controlled-harness-ablation-result",
+      "benchmark": {
+        "name": "harness-bench Pilot 2 eight-task controlled ablation",
+        "version": "pilot2-v1.1",
+        "task_set": ["d2", "c1", "c2", "b1", "b2", "b3", "f1", "f2"],
+        "primary_source": "https://github.com/tdrml/harness-bench/blob/f2fb12cc28ac90dce6eba873788b5632d6fc5431/README.md",
+        "artifact_source": "https://github.com/tdrml/harness-bench/blob/f2fb12cc28ac90dce6eba873788b5632d6fc5431/results/pilot2.jsonl"
+      },
+      "result": {
+        "date": "2026-07-31",
+        "model": "claude-sonnet-5",
+        "arm": "A0",
+        "arm_description": "bare prompt; agent self-reports completion",
+        "target_revision": "c62bcf6420c24c7e43c078d72aade6afcf25a765",
+        "metric": "deterministic_success_rate",
+        "value": 1.0,
+        "success_count": 8,
+        "graded_run_count": 8,
+        "silent_failure_count": 0,
+        "total_cost_usd": 2.42,
+        "median_wall_seconds": 83
+      },
+      "execution": {
+        "evaluator": "visible target-repository test suite plus tamper check plus task-specific held-out verification",
+        "repetitions_per_task": 1,
+        "primary_timeout_seconds": 1500,
+        "primary_max_turns": 80,
+        "per_run_cost_cap_usd": 6,
+        "global_cost_ceiling_usd": 200,
+        "reset_policy": "fresh throwaway copy from the pinned pristine target before each run",
+        "human_intervention": null
+      },
+      "comparison": {"group": "harness-bench-pilot2__sonnet-5__f2fb12cc", "mode": "controlled-ablation-candidate", "scope": "single-session-software-engineering"},
+      "unknown_dimensions": ["exact Claude Code CLI version used for Pilot 2", "exact service-side revision behind claude-sonnet-5"]
+    },
+    {
+      "observation_id": "harness-bench__pilot2__sonnet-a1__f2fb12cc",
+      "kind": "controlled-harness-ablation-result",
+      "benchmark": {
+        "name": "harness-bench Pilot 2 eight-task controlled ablation",
+        "version": "pilot2-v1.1",
+        "task_set": ["d2", "c1", "c2", "b1", "b2", "b3", "f1", "f2"],
+        "primary_source": "https://github.com/tdrml/harness-bench/blob/f2fb12cc28ac90dce6eba873788b5632d6fc5431/README.md",
+        "artifact_source": "https://github.com/tdrml/harness-bench/blob/f2fb12cc28ac90dce6eba873788b5632d6fc5431/results/pilot2.jsonl"
+      },
+      "result": {
+        "date": "2026-07-31",
+        "model": "claude-sonnet-5",
+        "arm": "A1",
+        "arm_description": "A0 plus deterministic Claude Code Stop hook that can block completion until the full suite is green, with a three-block bound",
+        "target_revision": "c62bcf6420c24c7e43c078d72aade6afcf25a765",
+        "metric": "deterministic_success_rate",
+        "value": 1.0,
+        "success_count": 8,
+        "graded_run_count": 8,
+        "silent_failure_count": 0,
+        "total_cost_usd": 2.08,
+        "median_wall_seconds": 106
+      },
+      "execution": {
+        "evaluator": "visible target-repository test suite plus tamper check plus task-specific held-out verification",
+        "repetitions_per_task": 1,
+        "primary_timeout_seconds": 1500,
+        "primary_max_turns": 80,
+        "per_run_cost_cap_usd": 6,
+        "global_cost_ceiling_usd": 200,
+        "reset_policy": "fresh throwaway copy from the pinned pristine target before each run",
+        "human_intervention": null
+      },
+      "comparison": {"group": "harness-bench-pilot2__sonnet-5__f2fb12cc", "mode": "controlled-ablation-candidate", "scope": "single-session-software-engineering"},
+      "unknown_dimensions": ["exact Claude Code CLI version used for Pilot 2", "exact service-side revision behind claude-sonnet-5"]
+    },
+    {
+      "observation_id": "harness-bench__pilot2__sonnet-full__f2fb12cc",
+      "kind": "controlled-harness-ablation-result",
+      "benchmark": {
+        "name": "harness-bench Pilot 2 eight-task controlled ablation",
+        "version": "pilot2-v1.1",
+        "task_set": ["d2", "c1", "c2", "b1", "b2", "b3", "f1", "f2"],
+        "primary_source": "https://github.com/tdrml/harness-bench/blob/f2fb12cc28ac90dce6eba873788b5632d6fc5431/README.md",
+        "artifact_source": "https://github.com/tdrml/harness-bench/blob/f2fb12cc28ac90dce6eba873788b5632d6fc5431/results/pilot2.jsonl"
+      },
+      "result": {
+        "date": "2026-07-31",
+        "model": "claude-sonnet-5",
+        "arm": "FULL",
+        "arm_description": "A1 plus schema-forced primary result contract and adversarial reviewer with at most one revision round",
+        "target_revision": "c62bcf6420c24c7e43c078d72aade6afcf25a765",
+        "metric": "deterministic_success_rate",
+        "value": 1.0,
+        "success_count": 8,
+        "graded_run_count": 8,
+        "silent_failure_count": 0,
+        "total_cost_usd": 4.05,
+        "median_wall_seconds": 151
+      },
+      "execution": {
+        "evaluator": "visible target-repository test suite plus tamper check plus task-specific held-out verification",
+        "repetitions_per_task": 1,
+        "primary_timeout_seconds": 1500,
+        "primary_max_turns": 80,
+        "review_timeout_seconds": 600,
+        "review_turn_budget": "changed from 4 to 20 during Pilot 2 and journaled in-place; early and later FULL runs therefore do not share an identical reviewer budget",
+        "per_run_cost_cap_usd": 6,
+        "global_cost_ceiling_usd": 200,
+        "reset_policy": "fresh throwaway copy from the pinned pristine target before each run",
+        "human_intervention": null
+      },
+      "comparison": {"group": "harness-bench-pilot2__sonnet-5__f2fb12cc", "mode": "controlled-ablation-candidate", "scope": "single-session-software-engineering"},
+      "unknown_dimensions": ["exact Claude Code CLI version used for Pilot 2", "exact service-side revision behind claude-sonnet-5", "which aggregate FULL rows precede versus follow the reviewer-budget patch without parsing the journal sequence into a new post-hoc subgroup"]
+    },
+    {
+      "observation_id": "harness-bench__pilot2__haiku-a0__f2fb12cc",
+      "kind": "controlled-harness-ablation-result",
+      "benchmark": {
+        "name": "harness-bench Pilot 2 eight-task controlled ablation",
+        "version": "pilot2-v1.1",
+        "task_set": ["d2", "c1", "c2", "b1", "b2", "b3", "f1", "f2"],
+        "primary_source": "https://github.com/tdrml/harness-bench/blob/f2fb12cc28ac90dce6eba873788b5632d6fc5431/README.md",
+        "artifact_source": "https://github.com/tdrml/harness-bench/blob/f2fb12cc28ac90dce6eba873788b5632d6fc5431/results/pilot2.jsonl"
+      },
+      "result": {
+        "date": "2026-07-31",
+        "model": "claude-haiku-4-5-20251001",
+        "arm": "A0",
+        "arm_description": "bare prompt; agent self-reports completion",
+        "target_revision": "c62bcf6420c24c7e43c078d72aade6afcf25a765",
+        "metric": "deterministic_success_rate",
+        "value": 1.0,
+        "success_count": 8,
+        "graded_run_count": 8,
+        "silent_failure_count": 0,
+        "total_cost_usd": 1.01,
+        "median_wall_seconds": 157
+      },
+      "execution": {
+        "evaluator": "visible target-repository test suite plus tamper check plus task-specific held-out verification",
+        "repetitions_per_task": 1,
+        "primary_timeout_seconds": 1500,
+        "primary_max_turns": 80,
+        "per_run_cost_cap_usd": 6,
+        "global_cost_ceiling_usd": 200,
+        "reset_policy": "fresh throwaway copy from the pinned pristine target before each run",
+        "human_intervention": null
+      },
+      "comparison": {"group": "harness-bench-pilot2__haiku-4-5__f2fb12cc", "mode": "controlled-ablation-candidate", "scope": "single-session-software-engineering"},
+      "unknown_dimensions": ["exact Claude Code CLI version used for Pilot 2", "exact service-side revision behind claude-haiku-4-5-20251001"]
+    },
+    {
+      "observation_id": "harness-bench__pilot2__haiku-full__f2fb12cc",
+      "kind": "controlled-harness-ablation-result",
+      "benchmark": {
+        "name": "harness-bench Pilot 2 eight-task controlled ablation",
+        "version": "pilot2-v1.1",
+        "task_set": ["d2", "c1", "c2", "b1", "b2", "b3", "f1", "f2"],
+        "primary_source": "https://github.com/tdrml/harness-bench/blob/f2fb12cc28ac90dce6eba873788b5632d6fc5431/README.md",
+        "artifact_source": "https://github.com/tdrml/harness-bench/blob/f2fb12cc28ac90dce6eba873788b5632d6fc5431/results/pilot2.jsonl"
+      },
+      "result": {
+        "date": "2026-07-31",
+        "model": "claude-haiku-4-5-20251001",
+        "arm": "FULL",
+        "arm_description": "A1 plus schema-forced primary result contract and adversarial reviewer with at most one revision round",
+        "target_revision": "c62bcf6420c24c7e43c078d72aade6afcf25a765",
+        "metric": "deterministic_success_rate",
+        "value": 1.0,
+        "success_count": 7,
+        "graded_run_count": 7,
+        "scheduled_task_count": 8,
+        "unrun_task_ids": ["f2"],
+        "silent_failure_count": 0,
+        "total_cost_usd": 1.56,
+        "median_wall_seconds": 274
+      },
+      "execution": {
+        "evaluator": "visible target-repository test suite plus tamper check plus task-specific held-out verification",
+        "repetitions_per_task": 1,
+        "primary_timeout_seconds": 1500,
+        "primary_max_turns": 80,
+        "review_timeout_seconds": 600,
+        "review_turn_budget": "changed from 4 to 20 during Pilot 2 and journaled in-place; early and later FULL runs therefore do not share an identical reviewer budget",
+        "per_run_cost_cap_usd": 6,
+        "global_cost_ceiling_usd": 200,
+        "reset_policy": "fresh throwaway copy from the pinned pristine target before each run",
+        "human_intervention": null
+      },
+      "comparison": {"group": "harness-bench-pilot2__haiku-4-5__f2fb12cc", "mode": "controlled-ablation-candidate", "scope": "single-session-software-engineering"},
+      "unknown_dimensions": ["exact Claude Code CLI version used for Pilot 2", "exact service-side revision behind claude-haiku-4-5-20251001", "reason the f2 haiku FULL cell was not run beyond the source statement that this cell is missing", "which aggregate FULL rows precede versus follow the reviewer-budget patch without parsing the journal sequence into a new post-hoc subgroup"]
+    }
+  ]
+}
