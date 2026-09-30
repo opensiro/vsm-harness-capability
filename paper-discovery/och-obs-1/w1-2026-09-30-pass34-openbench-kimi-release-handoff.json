@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "manifest_id": "och-obs-1-w1-2026-09-30-pass34-openbench-kimi-release",
+  "recorded_at": "2026-09-30",
+  "work_item": {"repository": "opensiro/vsm-harness-capability", "issue": 93, "role": "W1 public-evidence discovery and neutral admission"},
+  "protocol": {"id": "OCH-OBS-1", "version": "1.0.0", "repository": "opensiro/vsm-harness-research", "revision": "5462ffadffd7189ae10e44e22d357bc6162a6038", "collection_cutoff_utc": "2026-10-20T23:59:59Z"},
+  "checkpoint_parent": {"capability_main_revision": "72d8d88b04326aa46841f12a300638ab2f6ecc42", "registry_observation_count_before": 265, "prior_handoffs_mutated": false},
+  "collection_state": {"status": "active", "pass_number": 34, "cutoff_reached": false, "note": "Pass 31 remains independently occupied and is not modified or treated as completed by this handoff."},
+  "discovery_pass": {
+    "pass_id": "w1-pass-034-openbench-kimi-release15",
+    "method": "Direction-blind admission of three Kimi K3 release observations from OpenBench's committed 15-task matrix. W1 preserves the publisher's per-arm release denominators, 1200-second cap, exclusions, mixed-version warning, and the separate matched-cell denominator discrepancy without deciding which denominator is paper-eligible.",
+    "source_repository": "https://github.com/minghinmatthewlam/openbench",
+    "source_archive_revision": "f0400e4698a16742b2cb290bd4f4ca07b9d01142",
+    "dashboard_revision": "ddb2658342e67120f29eff3997c7c25ff0bf2441",
+    "source_archive_path": "data/kimi-k3-2026-07-20/kimi.jsonl",
+    "source_archive_rows": 135,
+    "benchmark_family": "openbench-kimi-release15",
+    "model": "kimi-k3",
+    "scheduled_tasks": 15,
+    "trials_per_task": 3,
+    "scheduled_rows_per_arm": 45,
+    "timeout_seconds": 1200,
+    "metric": "source_countable_success_rate_at_1200s_cap",
+    "source_artifacts": [
+      "https://github.com/minghinmatthewlam/openbench/blob/ddb2658342e67120f29eff3997c7c25ff0bf2441/docs/releases/2026-07-20-kimi-k3/index.html",
+      "https://github.com/minghinmatthewlam/openbench/blob/f0400e4698a16742b2cb290bd4f4ca07b9d01142/data/kimi-k3-2026-07-20/kimi.jsonl",
+      "https://github.com/minghinmatthewlam/openbench/blob/db193457a3d9128cd4d01fd839c2a890c186c9ac/docs/analysis-2026-07.md"
+    ]
+  },
+  "reused_existing_observation_ids": [],
+  "newly_admitted_observation_ids": [
+    "grokbuild__openbench-kimi-release15__kimi-k3__ddb26583",
+    "opencode__openbench-kimi-release15__kimi-k3__ddb26583",
+    "pi__openbench-kimi-release15__kimi-k3__ddb26583"
+  ],
+  "candidate_same_model_comparison_groups": [{
+    "group_id": "openbench-kimi-release15__kimi-k3__ddb26583",
+    "observation_ids": [
+      "grokbuild__openbench-kimi-release15__kimi-k3__ddb26583",
+      "opencode__openbench-kimi-release15__kimi-k3__ddb26583",
+      "pi__openbench-kimi-release15__kimi-k3__ddb26583"
+    ],
+    "source_known_dimensions": ["same source-reported kimi-k3 model label", "same archived 15-task set", "three scheduled trials per task", "1200-second cap", "deterministic checkers", "same source policy for excluding infrastructure/rate-limit failures"],
+    "explicit_unknown_or_nonidentical_dimensions": ["publisher explicitly flags mixed host/container harness versions and version sources", "release page per-arm denominators differ from the publisher's matched-cell analysis for GrokBuild and OpenCode", "exact service-side checkpoint/routing is not independently pinned", "native harness defaults and prompting/tool/context behavior differ by design"],
+    "paper_eligibility": "not-assessed-by-W1"
+  }],
+  "provenance_strength": {"class": "external-reproduced", "public_raw_source_archive": true, "public_static_release_page": true, "sealed_release_results_file": false, "sealed_release_provenance_file": false, "public_full_agent_trajectories": false, "publisher_noncomparable_provenance_warning": true, "w1_treatment": "admit factual release observations because the raw 135-row source archive is immutable in Git; preserve the missing sealed bundle and mixed-version caveats explicitly"},
+  "protocol_deviations_and_failures": [
+    {"event": "source-mixed-version-provenance-warning", "scope": "all three harness/model groups", "source_reported": true, "detail": "The Kimi release page flags harness_version and harness_version_source as mixed within group; W1 does not normalize historical versions."},
+    {"event": "release-vs-matched-denominator-difference", "scope": "GrokBuild and OpenCode", "source_reported": true, "detail": "Release page reports GrokBuild 32/45 and OpenCode 31/45, while publisher analysis reports matched-cell values 29/39 and 27/39; Pi is 25/39 on both. W1 preserves the release counts and records the discrepancy without adjudicating matched-cell eligibility."},
+    {"event": "planned-rescue-not-executed", "scope": "Kimi K3 matrix", "source_reported": true, "detail": "Publisher analysis states a planned 2400-second rescue rerun could not be executed because the Moonshot balance was exhausted; no rescue result is admitted."},
+    {"event": "no-sealed-release-bundle", "scope": "Kimi release surface", "source_reported": false, "detail": "Unlike later sealed OpenBench bundles, this release directory exposes only index.html. W1 therefore pins the immutable raw source archive at f0400e46 as the evidence artifact and does not invent a results SHA or provenance manifest."}
+  ],
+  "non_admission_dispositions": [
+    {"surface": "publisher ranking/efficiency interpretation", "status": "not-promoted-by-W1", "reason": "Outside W1 boundary."},
+    {"surface": "matched-cell 29/39 and 27/39 alternate aggregate values", "status": "not-admitted-as-separate-observations", "reason": "They are alternate aggregation of the same archived run rows; W1 avoids duplicate raw observations and leaves matched-cell selection to downstream adjudication."}
+  ],
+  "validation": {
+    "status": "pending",
+    "registry_observation_count_after": null,
+    "commands_required": [
+      "python system-observations/render_registry.py",
+      "python scripts/admission_check.py system-observations/grokbuild-openbench-kimi-release15-external-reproduced-adapter-preserved.json",
+      "python scripts/admission_check.py system-observations/opencode-openbench-kimi-release15-external-reproduced-adapter-preserved.json",
+      "python scripts/admission_check.py system-observations/pi-openbench-kimi-release15-external-reproduced-adapter-preserved.json",
+      "python scripts/validate_repository.py"
+    ],
+    "results": []
+  },
+  "handoff_boundary": {"structural_classification_performed": false, "historical_linkage_adjudicated": false, "comparison_tier_assigned": false, "statistical_interpretation_performed": false, "winner_declared": false}
+}
