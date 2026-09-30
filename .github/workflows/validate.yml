@@ -6,22 +6,40 @@ on:
     branches: [main]
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   repository-contract:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Regenerate neutral registry views
+        run: python system-observations/render_registry.py
+      - name: Commit generated registry views on PR branch
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        run: |
+          if git diff --quiet -- system-observations/registry.psv system-observations/REGISTRY.md; then
+            echo "registry views already current"
+            exit 0
+          fi
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add system-observations/registry.psv system-observations/REGISTRY.md
+          git commit -m "regenerate neutral observation registry"
+          git push origin "HEAD:${GITHUB_HEAD_REF}"
       - run: python scripts/validate_repository.py
       - name: Validate Capability-native post-closure contract
         run: python vsm-projections/benchmark-family-map/validate_post_closure.py
       - name: Validate specialized AHO post-closure evidence
         run: python vsm-projections/s4/post-closure-deltas/validate.py
-      - name: Exercise live evidence admission path
+      - name: Exercise pass-54 harness-perf evidence admission
+        run: python scripts/admission_check.py system-observations/harness-perf-codex-proxy-fix-external-reproduced-adapter-preserved.json
+      - name: Exercise existing live evidence admission path
         run: |
           for record in \
             system-observations/claude-code-wildclawbench-external-reproduced-adapter-preserved.json \
