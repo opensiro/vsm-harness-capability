@@ -118,13 +118,39 @@
       "reason": "The accepted submission explicitly records verification as unverified; W1 preserves that status."
     }
   ],
-  "protocol_deviations_and_failures": [],
+  "protocol_deviations_and_failures": [
+    {
+      "event": "exact-head-registry-materialization-and-admission",
+      "run_number": 393,
+      "run_id": 36750437102,
+      "head_sha": "434ab97a58de30d9ea174565c781b9b0a955a634",
+      "generated_registry_head_sha": "abd41b58415c1d5497ac5834ca685d1477c35e26",
+      "conclusion": "success",
+      "detail": "The bounded write-enabled workflow rendered 300 observations, materialized the generated registry commit, passed repository validators, the pass-48 Explicit Edit admission check, and the existing live admission path."
+    },
+    {
+      "event": "bot-generated-workflow-run",
+      "run_number": 394,
+      "run_id": 36750463608,
+      "head_sha": "abd41b58415c1d5497ac5834ca685d1477c35e26",
+      "conclusion": "action_required",
+      "evidence_rejected": false,
+      "detail": "GitHub did not automatically execute the workflow for the bot-authored generated-registry commit; this was superseded by explicit restoration of the standard read-only workflow and a fresh validation."
+    },
+    {
+      "event": "standard-read-only-validation-restored",
+      "run_number": 395,
+      "run_id": 36750749944,
+      "head_sha": "eb339cb9dbabd28a14c25c8c4a956681fe99d425",
+      "conclusion": "success"
+    }
+  ],
   "validation": {
-    "status": "pending",
-    "registry_observation_count_after": null,
-    "evidence_admission_run": null,
-    "generated_registry_head_sha": null,
-    "standard_read_only_validation_run": null,
+    "status": "passed",
+    "registry_observation_count_after": 300,
+    "evidence_admission_run": 36750437102,
+    "generated_registry_head_sha": "abd41b58415c1d5497ac5834ca685d1477c35e26",
+    "standard_read_only_validation_run": 36750749944,
     "standard_workflow_blob_sha": "244ad9701f41e6122f37c0676a00e705cddd622f"
   },
   "handoff_boundary": {
