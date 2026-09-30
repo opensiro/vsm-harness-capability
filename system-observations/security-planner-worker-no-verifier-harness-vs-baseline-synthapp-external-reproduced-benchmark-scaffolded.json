@@ -6,7 +6,7 @@
   "canonical_harness_id": null,
   "published_implementation": {
     "system_compatibility": "benchmark-scaffolded",
-    "historical_relation": "The public study defines this benchmark-local ablation with planner=true and verifier=false. W1 records the implementation condition without mapping the role names to VSM functions."
+    "historical_relation": "The public study defines this benchmark-local ablation with planner=true and verifier=false. W1 records the implementation condition as published."
   },
   "primary_sources": [
     "https://github.com/theteatoast/harness-vs-baseline/blob/7b3c842a02ef8a006662e6f0db39a1cd223f082c/README.md",
@@ -54,6 +54,6 @@
     },
     "comparison": {"group": "harness-vs-baseline-synthapp__glm-5.3-flash__7b3c842a", "mode": "candidate-same-model", "scope": "security-static-analysis"},
     "unknown_dimensions": ["exact OpenRouter backend/provider route and service-side GLM checkpoint", "exact execution date", "raw trajectory, F1 and cost for this ablation row", "trial count beyond the published result row", "run-specific cache state"],
-    "notes": "This is the source-defined verifier-off ablation. W1 records the condition and published metrics only; it does not infer a causal VSM mechanism from the stage name."
+    "notes": "This is the source-defined verifier-off ablation. W1 records the condition and published metrics without mechanism attribution."
   }]
 }
