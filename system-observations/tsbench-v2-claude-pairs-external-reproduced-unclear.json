@@ -52,8 +52,8 @@
         "human_intervention": null
       },
       "comparison": {
-        "group": "tsbench-v2-swelancer5__claude-sonnet-4-6__dcf7d44f",
-        "mode": "same-model-candidate",
+        "group": "tsbench-v2-swelancer5__claude-sonnet-label-pair__dcf7d44f",
+        "mode": "source-model-label-near-match-candidate",
         "scope": "real-world-typescript-monorepo"
       },
       "unknown_dimensions": [
@@ -61,9 +61,10 @@
         "exact execution commit for the historical Claude Code run",
         "exact service-side Claude Sonnet 4.6 snapshot/serving path",
         "exact per-exercise timeout used by the historical run",
+        "whether source model identifiers claude-sonnet-4-6 and claude-sonnet-4.6 denote the same service-side model",
         "whether source provider metadata has identical semantics across Claude Code and Copilot CLI"
       ],
-      "notes": "The source result metadata labels provider as openai although the current pinned Claude agent config declares Anthropic as its default provider. W1 preserves the historical result field and does not repair or reinterpret it."
+      "notes": "The source result metadata labels model as claude-sonnet-4-6 and provider as openai although the current pinned Claude agent config declares Anthropic as its default provider. W1 preserves those historical fields and does not repair or reinterpret them."
     },
     {
       "observation_id": "github-copilot-cli__tsbench-v2-swelancer5__claude-sonnet-4-6__dcf7d44f",
@@ -82,7 +83,7 @@
         "publication_revision": "dcf7d44fa47f05a2849090e5e16fe67e8af96eff",
         "execution_revision": "7e56a2f8d014599f833cb6bae1ca54105aea6e39",
         "workflow_run_id": 24081204504,
-        "model": "claude-sonnet-4-6",
+        "model": "claude-sonnet-4.6",
         "source_provider_metadata": "anthropic",
         "metric": "source_overall_success_rate",
         "value": 0.8,
@@ -100,17 +101,18 @@
         "human_intervention": null
       },
       "comparison": {
-        "group": "tsbench-v2-swelancer5__claude-sonnet-4-6__dcf7d44f",
-        "mode": "same-model-candidate",
+        "group": "tsbench-v2-swelancer5__claude-sonnet-label-pair__dcf7d44f",
+        "mode": "source-model-label-near-match-candidate",
         "scope": "real-world-typescript-monorepo"
       },
       "unknown_dimensions": [
         "exact GitHub Copilot CLI version used in this historical run",
         "exact service-side Claude Sonnet 4.6 snapshot/serving path selected by Copilot",
         "exact per-exercise timeout used by the historical run",
+        "whether source model identifiers claude-sonnet-4-6 and claude-sonnet-4.6 denote the same service-side model",
         "whether source provider metadata has identical semantics across Claude Code and Copilot CLI"
       ],
-      "notes": "The committed result binds this run to GitHub Actions run 24081204504 at execution revision 7e56a2f8d014599f833cb6bae1ca54105aea6e39. The pinned Copilot config selects the model through COPILOT_MODEL and GitHub authentication rather than the Claude Code API environment path."
+      "notes": "The committed result binds this run to GitHub Actions run 24081204504 at execution revision 7e56a2f8d014599f833cb6bae1ca54105aea6e39 and labels the model claude-sonnet-4.6. The pinned Copilot config selects the model through COPILOT_MODEL and GitHub authentication rather than the Claude Code API environment path."
     },
     {
       "observation_id": "claude-code__tsbench-v2-swelancer5__claude-opus-4-6__dcf7d44f",
@@ -176,7 +178,7 @@
         "publication_revision": "dcf7d44fa47f05a2849090e5e16fe67e8af96eff",
         "execution_revision": "c30791cc21b9e765fa9744fd38f83408b4223917",
         "workflow_run_id": 24085684611,
-        "model": "claude-opus-4-6",
+        "model": "claude-opus-4.6",
         "source_provider_metadata": "anthropic",
         "metric": "source_overall_success_rate",
         "value": 0.4,
@@ -194,17 +196,18 @@
         "human_intervention": null
       },
       "comparison": {
-        "group": "tsbench-v2-swelancer5__claude-opus-4-6__dcf7d44f",
-        "mode": "same-model-candidate",
+        "group": "tsbench-v2-swelancer5__claude-opus-label-pair__dcf7d44f",
+        "mode": "source-model-label-near-match-candidate",
         "scope": "real-world-typescript-monorepo"
       },
       "unknown_dimensions": [
         "exact GitHub Copilot CLI version used in this historical run",
         "exact service-side Claude Opus 4.6 snapshot/serving path selected by Copilot",
         "exact per-exercise timeout used by the historical run",
+        "whether source model identifiers claude-opus-4-6 and claude-opus-4.6 denote the same service-side model",
         "whether the Anthropic provider label denotes materially identical serving/authentication across the two harnesses"
       ],
-      "notes": "The committed result binds this run to GitHub Actions run 24085684611 at execution revision c30791cc21b9e765fa9744fd38f83408b4223917. The pinned Copilot config selects the model through COPILOT_MODEL and GitHub authentication."
+      "notes": "The committed result binds this run to GitHub Actions run 24085684611 at execution revision c30791cc21b9e765fa9744fd38f83408b4223917 and labels the model claude-opus-4.6. The pinned Copilot config selects the model through COPILOT_MODEL and GitHub authentication."
     }
   ]
 }
