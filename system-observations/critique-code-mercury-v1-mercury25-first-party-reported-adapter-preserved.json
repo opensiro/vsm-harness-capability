@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "first-party-reported",
+  "system_name": "CritiqueCode",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "adapter-preserved",
+    "historical_relation": "The benchmark publisher executes CritiqueCode 0.1.13+bench through its local benchmark adapter. A five-line positive-budget helper fix in the CritiqueCode E2B extension is explicitly documented and preserved by the source. W1 records this benchmark-specific implementation without inferring a canonical product revision."
+  },
+  "primary_sources": [
+    "https://github.com/repath500/mercury-harness-benchmark/blob/868e1e2f2ba8660e583d42de706bfc08267a9e87/reports/mercury-v1/STUDY.md",
+    "https://github.com/repath500/mercury-harness-benchmark/blob/868e1e2f2ba8660e583d42de706bfc08267a9e87/reports/mercury-v1/mercury-v1.json",
+    "https://github.com/repath500/mercury-harness-benchmark/blob/868e1e2f2ba8660e583d42de706bfc08267a9e87/benchmarks/mercury_v1/benchmark.yaml",
+    "https://github.com/repath500/mercury-harness-benchmark/blob/868e1e2f2ba8660e583d42de706bfc08267a9e87/benchmarks/mercury_v1/selection.json",
+    "https://github.com/repath500/mercury-harness-benchmark/tree/868e1e2f2ba8660e583d42de706bfc08267a9e87/benchmarks/mercury_v1/results/mercury-v1/canonical",
+    "https://github.com/repath500/mercury-harness-benchmark/blob/868e1e2f2ba8660e583d42de706bfc08267a9e87/benchmarks/mercury_v1/results/mercury-v1/launcher/run-plan.json"
+  ],
+  "observations": [
+    {
+      "observation_id": "critique-code__mercury-v1-featbench10__mercury-2.5-preview__868e1e2f",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "name": "Mercury Harness Benchmark V1 / FeatBench v1.0 frozen 10-task block",
+        "primary_source": "https://github.com/repath500/mercury-harness-benchmark/blob/868e1e2f2ba8660e583d42de706bfc08267a9e87/reports/mercury-v1/STUDY.md",
+        "artifact_source": "https://github.com/repath500/mercury-harness-benchmark/tree/868e1e2f2ba8660e583d42de706bfc08267a9e87/benchmarks/mercury_v1/results/mercury-v1/canonical"
+      },
+      "result": {
+        "date": "2026-09-03",
+        "agent_label": "CritiqueCode",
+        "harness_version": "0.1.13+bench",
+        "harness_revision": "868e1e2f2ba8660e583d42de706bfc08267a9e87",
+        "benchmark_revision": "FeatBench v1.0 / frozen task list at source revision 868e1e2f2ba8660e583d42de706bfc08267a9e87",
+        "model": "inception/mercury-2.5-preview",
+        "model_config": "OpenRouter route; CritiqueCode author/repair runtime through the benchmark adapter; source-documented five-line positive-budget helper fix present in the benchmark implementation",
+        "metric": "externally_verified_resolution_rate",
+        "value": 0.8,
+        "resolved": 8,
+        "tasks": 10,
+        "rollouts_per_task": 1,
+        "agent_timeout_minutes": 60
+      },
+      "execution": {
+        "environment": "Harbor 0.22.0 + E2B Python SDK 2.46.4; fresh single-container sandbox per trial",
+        "human_intervention": false,
+        "concurrency": 2,
+        "reset_policy": "fresh sandbox for every task-harness trial",
+        "evaluator": "FeatBench external F2P + P2P verifier",
+        "cpu_policy_observed": "8 tasks declared 2 CPUs / 4 GB RAM and 2 SmolAgents tasks declared 8 CPUs / 8 GB RAM; CPU-only but not a fixed-vCPU lease"
+      },
+      "comparison": {
+        "group": "mercury-v1-featbench10__mercury-2.5-preview__868e1e2f",
+        "mode": "same-model-candidate",
+        "scope": "repository-feature-engineering"
+      },
+      "unknown_dimensions": [
+        "exact service-side Mercury 2.5 Preview checkpoint behind OpenRouter",
+        "provider-side routing/load state across trials"
+      ],
+      "notes": "The publisher is associated with CritiqueCode, so this arm is retained as first-party-reported. The benchmark-specific helper fix is explicit source evidence and is not hidden or normalized away by W1. One canonical rollout per task. Cost figures are not admitted by W1 because only 19 of 40 trials had a complete OpenRouter generation ledger and the remaining 21 used catalog estimates."
+    }
+  ]
+}
