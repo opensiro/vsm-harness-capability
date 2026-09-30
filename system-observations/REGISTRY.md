@@ -5,7 +5,7 @@ Status: **generated, experimental, non-normative**
 Generated from the raw JSON records in this directory by `render_registry.py`.
 Raw evidence payloads remain only in the raw record; this table is an identity/provenance projection, not a second result database.
 
-Raw observations: **196**
+Raw observations: **199**
 
 | System | Canonical harness | Observation | Evidence surface(s) | Kind | Provenance | Compatibility | Raw record |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -186,6 +186,9 @@ Raw observations: **196**
 | SkillEvolBench benchmark organization | — | `skillevolbench-frozen-deployment-protocol-2026` | SkillEvolBench frozen-deployment protocol | `persistent-adaptation-study` | `first-party-reported` | `benchmark-scaffolded` | [skillevolbench.json](skillevolbench.json) |
 | SkillRevise | — | `skillrevise-alfworld-principle-absorption-heldout-2026` | ALFWorld; SkillRevise ALFWorld principle-absorption calibration-to-heldout evaluation | `persistent-principle-memory-calibration-heldout-study` | `first-party-reported` | `native-system` | [skillrevise.json](skillrevise.json) |
 | SkillRevise | — | `skillrevise-trace-conditioned-skill-revision-2026` | SkillsBench; SkillLearnBench-Random; SWE-Skills-Bench-Hard; SkillRevise main benchmark study across SkillsBench, SkillLearnBench-Random, and SWE-Skills-Bench-Hard | `persistent-skill-revision-study` | `first-party-reported` | `native-system` | [skillrevise.json](skillrevise.json) |
+| sql-agent-eval gpt-4o-mini strategy arms | — | `sql-agentic-retry__sql-agent-eval-20q__gpt-4o-mini__e4fecfd4` | sql-agent-eval deterministic 20-question text-to-SQL benchmark | `system-benchmark-result` | `external-reproduced` | `benchmark-scaffolded` | [sql-agent-eval-gpt4o-mini-strategies-external-reproduced-benchmark-scaffolded.json](sql-agent-eval-gpt4o-mini-strategies-external-reproduced-benchmark-scaffolded.json) |
+| sql-agent-eval gpt-4o-mini strategy arms | — | `sql-baseline-no-schema__sql-agent-eval-20q__gpt-4o-mini__e4fecfd4` | sql-agent-eval deterministic 20-question text-to-SQL benchmark | `system-benchmark-result` | `external-reproduced` | `benchmark-scaffolded` | [sql-agent-eval-gpt4o-mini-strategies-external-reproduced-benchmark-scaffolded.json](sql-agent-eval-gpt4o-mini-strategies-external-reproduced-benchmark-scaffolded.json) |
+| sql-agent-eval gpt-4o-mini strategy arms | — | `sql-schema-aware__sql-agent-eval-20q__gpt-4o-mini__e4fecfd4` | sql-agent-eval deterministic 20-question text-to-SQL benchmark | `system-benchmark-result` | `external-reproduced` | `benchmark-scaffolded` | [sql-agent-eval-gpt4o-mini-strategies-external-reproduced-benchmark-scaffolded.json](sql-agent-eval-gpt4o-mini-strategies-external-reproduced-benchmark-scaffolded.json) |
 | Squad | [squad](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/squad.md) | `squad-marble-aligned-coordination-ablation` | MARBLE aligned four-domain re-run | `native-mechanism-ablation` | `first-party-reported` | `native-system` | [squad.json](squad.json) |
 | Squad | [squad](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/squad.md) | `squad-marble-completion-ablation` | MARBLE factorial ablation | `native-mechanism-ablation` | `first-party-reported` | `native-system` | [squad.json](squad.json) |
 | Squad | [squad](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/squad.md) | `squad-shared-state-conflict-attenuation-2026-03` | immutable first-party repository history plus first-party public operational case study | `operational-history-witness` | `first-party-reported` | `native-system` | [squad-operational-history.json](squad-operational-history.json) |
