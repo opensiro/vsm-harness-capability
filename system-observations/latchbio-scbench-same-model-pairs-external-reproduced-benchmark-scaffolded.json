@@ -1,0 +1,320 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "LatchBio scBench same-model harness rows",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "benchmark-scaffolded",
+    "historical_relation": "The source identifies Claude Code, mini-swe-agent, and OpenAI Codex harness lanes executed through scBench via latch-eval-tools. Exact historical harness package versions are not published in the aggregate result table, so W1 preserves source harness labels without canonical historical linkage."
+  },
+  "primary_sources": [
+    "https://github.com/latchbio/scbench/blob/0bc34032bfa402dad29fc40b4cf10ea8fc03193e/README.md",
+    "https://github.com/latchbio/scbench/blob/0bc34032bfa402dad29fc40b4cf10ea8fc03193e/results/model_results.csv",
+    "https://github.com/latchbio/scbench/blob/0bc34032bfa402dad29fc40b4cf10ea8fc03193e/scbench/cli.py",
+    "https://github.com/latchbio/scbench/blob/0bc34032bfa402dad29fc40b4cf10ea8fc03193e/pyproject.toml"
+  ],
+  "observations": [
+    {
+      "observation_id": "claude-code__scbench-195__claude-opus-4-8__0bc34032",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "name": "scBench 195-evaluation aggregate",
+        "version": "scbench 0.1.0 source snapshot",
+        "task_set": "195 single-cell RNA-seq evaluations across 6 platforms and 6 task categories; full evaluation set withheld by publisher, 6 canonical examples public",
+        "primary_source": "https://github.com/latchbio/scbench/blob/0bc34032bfa402dad29fc40b4cf10ea8fc03193e/README.md",
+        "artifact_source": "https://github.com/latchbio/scbench/blob/0bc34032bfa402dad29fc40b4cf10ea8fc03193e/results/model_results.csv"
+      },
+      "result": {
+        "publisher": "LatchBio",
+        "publication_revision": "0bc34032bfa402dad29fc40b4cf10ea8fc03193e",
+        "publication_date": "2026-06-10",
+        "harness_label": "claude-code",
+        "harness_version": "unknown",
+        "model": "claude-opus-4-8",
+        "metric": "source_accuracy_percent",
+        "value": 57.95,
+        "n": 195,
+        "ci_lower_percent": 51.62,
+        "ci_upper_percent": 64.27,
+        "source_cost_usd": 1.4792,
+        "source_duration_s": 702.2
+      },
+      "execution": {
+        "environment": "scBench EvalRunner with deterministic task graders and latch-eval-tools harness adapter",
+        "evaluator": "task-specific deterministic scBench grader",
+        "budget": null,
+        "timeout_seconds": null,
+        "repetitions": null,
+        "reset_policy": "EvalRunner creates a task workspace; exact historical batch reset policy beyond the published runner implementation is not asserted",
+        "adaptation_policy": null,
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "scbench-195__claude-opus-4-8__0bc34032",
+        "mode": "same-model-candidate",
+        "scope": "single-cell-rna-seq-analysis"
+      },
+      "unknown_dimensions": [
+        "exact Claude Code version",
+        "exact model service snapshot and inference settings",
+        "historical repetition policy used to produce the aggregate row",
+        "historical timeout and token/turn budget",
+        "full 195-task prompt/data payload",
+        "precise semantics of the aggregate Cost ($) and Duration (s) columns beyond the source labels"
+      ]
+    },
+    {
+      "observation_id": "mini-swe-agent__scbench-195__claude-opus-4-8__0bc34032",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "name": "scBench 195-evaluation aggregate",
+        "version": "scbench 0.1.0 source snapshot",
+        "task_set": "195 single-cell RNA-seq evaluations across 6 platforms and 6 task categories; full evaluation set withheld by publisher, 6 canonical examples public",
+        "primary_source": "https://github.com/latchbio/scbench/blob/0bc34032bfa402dad29fc40b4cf10ea8fc03193e/README.md",
+        "artifact_source": "https://github.com/latchbio/scbench/blob/0bc34032bfa402dad29fc40b4cf10ea8fc03193e/results/model_results.csv"
+      },
+      "result": {
+        "publisher": "LatchBio",
+        "publication_revision": "0bc34032bfa402dad29fc40b4cf10ea8fc03193e",
+        "publication_date": "2026-06-10",
+        "harness_label": "mini-swe-agent",
+        "harness_version": "unknown",
+        "model": "claude-opus-4-8",
+        "metric": "source_accuracy_percent",
+        "value": 57.44,
+        "n": 195,
+        "ci_lower_percent": null,
+        "ci_upper_percent": null,
+        "source_cost_usd": 1.7,
+        "source_duration_s": 1494.0
+      },
+      "execution": {
+        "environment": "scBench EvalRunner with deterministic task graders and latch-eval-tools harness adapter",
+        "evaluator": "task-specific deterministic scBench grader",
+        "budget": null,
+        "timeout_seconds": null,
+        "repetitions": null,
+        "reset_policy": "EvalRunner creates a task workspace; exact historical batch reset policy beyond the published runner implementation is not asserted",
+        "adaptation_policy": null,
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "scbench-195__claude-opus-4-8__0bc34032",
+        "mode": "same-model-candidate",
+        "scope": "single-cell-rna-seq-analysis"
+      },
+      "unknown_dimensions": [
+        "exact mini-swe-agent version",
+        "exact model service snapshot and inference settings",
+        "historical repetition policy used to produce the aggregate row",
+        "historical timeout and token/turn budget",
+        "full 195-task prompt/data payload",
+        "reason confidence interval fields are absent for this source row",
+        "precise semantics of the aggregate Cost ($) and Duration (s) columns beyond the source labels"
+      ]
+    },
+    {
+      "observation_id": "mini-swe-agent__scbench-195__claude-opus-4-7__0bc34032",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "name": "scBench 195-evaluation aggregate",
+        "version": "scbench 0.1.0 source snapshot",
+        "task_set": "195 single-cell RNA-seq evaluations across 6 platforms and 6 task categories; full evaluation set withheld by publisher, 6 canonical examples public",
+        "primary_source": "https://github.com/latchbio/scbench/blob/0bc34032bfa402dad29fc40b4cf10ea8fc03193e/README.md",
+        "artifact_source": "https://github.com/latchbio/scbench/blob/0bc34032bfa402dad29fc40b4cf10ea8fc03193e/results/model_results.csv"
+      },
+      "result": {
+        "publisher": "LatchBio",
+        "publication_revision": "0bc34032bfa402dad29fc40b4cf10ea8fc03193e",
+        "publication_date": "2026-06-10",
+        "harness_label": "mini-swe-agent",
+        "harness_version": "unknown",
+        "model": "claude-opus-4-7",
+        "metric": "source_accuracy_percent",
+        "value": 55.21,
+        "n": 195,
+        "ci_lower_percent": 48.85,
+        "ci_upper_percent": 61.57,
+        "source_cost_usd": 1.5378,
+        "source_duration_s": 818.8
+      },
+      "execution": {
+        "environment": "scBench EvalRunner with deterministic task graders and latch-eval-tools harness adapter",
+        "evaluator": "task-specific deterministic scBench grader",
+        "budget": null,
+        "timeout_seconds": null,
+        "repetitions": null,
+        "reset_policy": "EvalRunner creates a task workspace; exact historical batch reset policy beyond the published runner implementation is not asserted",
+        "adaptation_policy": null,
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "scbench-195__claude-opus-4-7__0bc34032",
+        "mode": "same-model-candidate",
+        "scope": "single-cell-rna-seq-analysis"
+      },
+      "unknown_dimensions": [
+        "exact mini-swe-agent version",
+        "exact model service snapshot and inference settings",
+        "historical repetition policy used to produce the aggregate row",
+        "historical timeout and token/turn budget",
+        "full 195-task prompt/data payload",
+        "precise semantics of the aggregate Cost ($) and Duration (s) columns beyond the source labels"
+      ]
+    },
+    {
+      "observation_id": "claude-code__scbench-195__claude-opus-4-7__0bc34032",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "name": "scBench 195-evaluation aggregate",
+        "version": "scbench 0.1.0 source snapshot",
+        "task_set": "195 single-cell RNA-seq evaluations across 6 platforms and 6 task categories; full evaluation set withheld by publisher, 6 canonical examples public",
+        "primary_source": "https://github.com/latchbio/scbench/blob/0bc34032bfa402dad29fc40b4cf10ea8fc03193e/README.md",
+        "artifact_source": "https://github.com/latchbio/scbench/blob/0bc34032bfa402dad29fc40b4cf10ea8fc03193e/results/model_results.csv"
+      },
+      "result": {
+        "publisher": "LatchBio",
+        "publication_revision": "0bc34032bfa402dad29fc40b4cf10ea8fc03193e",
+        "publication_date": "2026-06-10",
+        "harness_label": "claude-code",
+        "harness_version": "unknown",
+        "model": "claude-opus-4-7",
+        "metric": "source_accuracy_percent",
+        "value": 54.02,
+        "n": 195,
+        "ci_lower_percent": 47.66,
+        "ci_upper_percent": 60.38,
+        "source_cost_usd": 1.1465,
+        "source_duration_s": 851.3
+      },
+      "execution": {
+        "environment": "scBench EvalRunner with deterministic task graders and latch-eval-tools harness adapter",
+        "evaluator": "task-specific deterministic scBench grader",
+        "budget": null,
+        "timeout_seconds": null,
+        "repetitions": null,
+        "reset_policy": "EvalRunner creates a task workspace; exact historical batch reset policy beyond the published runner implementation is not asserted",
+        "adaptation_policy": null,
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "scbench-195__claude-opus-4-7__0bc34032",
+        "mode": "same-model-candidate",
+        "scope": "single-cell-rna-seq-analysis"
+      },
+      "unknown_dimensions": [
+        "exact Claude Code version",
+        "exact model service snapshot and inference settings",
+        "historical repetition policy used to produce the aggregate row",
+        "historical timeout and token/turn budget",
+        "full 195-task prompt/data payload",
+        "precise semantics of the aggregate Cost ($) and Duration (s) columns beyond the source labels"
+      ]
+    },
+    {
+      "observation_id": "mini-swe-agent__scbench-195__gpt-5.5__0bc34032",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "name": "scBench 195-evaluation aggregate",
+        "version": "scbench 0.1.0 source snapshot",
+        "task_set": "195 single-cell RNA-seq evaluations across 6 platforms and 6 task categories; full evaluation set withheld by publisher, 6 canonical examples public",
+        "primary_source": "https://github.com/latchbio/scbench/blob/0bc34032bfa402dad29fc40b4cf10ea8fc03193e/README.md",
+        "artifact_source": "https://github.com/latchbio/scbench/blob/0bc34032bfa402dad29fc40b4cf10ea8fc03193e/results/model_results.csv"
+      },
+      "result": {
+        "publisher": "LatchBio",
+        "publication_revision": "0bc34032bfa402dad29fc40b4cf10ea8fc03193e",
+        "publication_date": "2026-06-10",
+        "harness_label": "mini-swe-agent",
+        "harness_version": "unknown",
+        "model": "gpt-5.5",
+        "metric": "source_accuracy_percent",
+        "value": 57.95,
+        "n": 195,
+        "ci_lower_percent": 51.56,
+        "ci_upper_percent": 64.34,
+        "source_cost_usd": 1.1136,
+        "source_duration_s": 707.1
+      },
+      "execution": {
+        "environment": "scBench EvalRunner with deterministic task graders and latch-eval-tools harness adapter",
+        "evaluator": "task-specific deterministic scBench grader",
+        "budget": null,
+        "timeout_seconds": null,
+        "repetitions": null,
+        "reset_policy": "EvalRunner creates a task workspace; exact historical batch reset policy beyond the published runner implementation is not asserted",
+        "adaptation_policy": null,
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "scbench-195__gpt-5.5__0bc34032",
+        "mode": "same-model-candidate",
+        "scope": "single-cell-rna-seq-analysis"
+      },
+      "unknown_dimensions": [
+        "exact mini-swe-agent version",
+        "exact model service snapshot and inference settings",
+        "historical repetition policy used to produce the aggregate row",
+        "historical timeout and token/turn budget",
+        "full 195-task prompt/data payload",
+        "precise semantics of the aggregate Cost ($) and Duration (s) columns beyond the source labels"
+      ]
+    },
+    {
+      "observation_id": "openai-codex__scbench-195__gpt-5.5__0bc34032",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "name": "scBench 195-evaluation aggregate",
+        "version": "scbench 0.1.0 source snapshot",
+        "task_set": "195 single-cell RNA-seq evaluations across 6 platforms and 6 task categories; full evaluation set withheld by publisher, 6 canonical examples public",
+        "primary_source": "https://github.com/latchbio/scbench/blob/0bc34032bfa402dad29fc40b4cf10ea8fc03193e/README.md",
+        "artifact_source": "https://github.com/latchbio/scbench/blob/0bc34032bfa402dad29fc40b4cf10ea8fc03193e/results/model_results.csv"
+      },
+      "result": {
+        "publisher": "LatchBio",
+        "publication_revision": "0bc34032bfa402dad29fc40b4cf10ea8fc03193e",
+        "publication_date": "2026-06-10",
+        "harness_label": "openai-codex",
+        "harness_version": "unknown",
+        "model": "gpt-5.5",
+        "metric": "source_accuracy_percent",
+        "value": 57.78,
+        "n": 195,
+        "ci_lower_percent": 51.29,
+        "ci_upper_percent": 64.26,
+        "source_cost_usd": 2.4685,
+        "source_duration_s": 512.8
+      },
+      "execution": {
+        "environment": "scBench EvalRunner with deterministic task graders and latch-eval-tools harness adapter",
+        "evaluator": "task-specific deterministic scBench grader",
+        "budget": null,
+        "timeout_seconds": null,
+        "repetitions": null,
+        "reset_policy": "EvalRunner creates a task workspace; exact historical batch reset policy beyond the published runner implementation is not asserted",
+        "adaptation_policy": null,
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "scbench-195__gpt-5.5__0bc34032",
+        "mode": "same-model-candidate",
+        "scope": "single-cell-rna-seq-analysis"
+      },
+      "unknown_dimensions": [
+        "exact OpenAI Codex version",
+        "exact model service snapshot and inference settings",
+        "historical repetition policy used to produce the aggregate row",
+        "historical timeout and token/turn budget",
+        "full 195-task prompt/data payload",
+        "precise semantics of the aggregate Cost ($) and Duration (s) columns beyond the source labels"
+      ]
+    }
+  ],
+  "source_limitations": [
+    "The full 195-evaluation benchmark payload is withheld by the publisher to reduce training contamination; six canonical examples are public.",
+    "The pinned aggregate table does not publish exact harness package versions, historical model-serving revisions, timeout/budget policy, or repetition count.",
+    "The source publishes aggregate accuracy, confidence intervals where available, cost, duration, and N; W1 does not infer undocumented aggregation semantics.",
+    "The source runner binds harness labels to latch-eval-tools adapter functions and uses task-specific deterministic graders, but this does not establish standalone harness equivalence outside scBench."
+  ]
+}
