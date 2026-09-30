@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Pi CLI in OpenBench Terminal-Bench frontier tier",
+  "canonical_harness_id": null,
+  "published_implementation": {"system_compatibility": "adapter-preserved", "historical_relation": "The pinned OpenBench frontier dataset invokes the native Pi CLI in a Docker benchmark lane using the openai-codex provider, gpt-5.5, and medium thinking. The later binding methodology quarantines cancel-async-tasks for all datasets; W1 therefore derives the retained-task result directly from the committed raw rows."},
+  "primary_sources": [
+    "https://github.com/minghinmatthewlam/openbench/blob/6250bcd072d39ae7ab692c9db8ffac7ffb8fda68/data/tb-frontier-2026-07-05/results.jsonl",
+    "https://github.com/minghinmatthewlam/openbench/blob/6250bcd072d39ae7ab692c9db8ffac7ffb8fda68/data/tb-frontier-2026-07-05/README.md",
+    "https://github.com/minghinmatthewlam/openbench/blob/db4ba29f5a8364ecad61e62e96a8e703aa05437f/data/tb-open-n3-2026-07-09/tb-open-n3-methodology-notes.md"
+  ],
+  "observations": [{
+    "observation_id": "pi__openbench-tb-frontier-noncancel__gpt-5.5-medium__6250bcd0",
+    "kind": "system-benchmark-result-derived-from-public-rows",
+    "benchmark": {"family_id": "openbench-tb-frontier-noncancel", "name": "OpenBench Terminal-Bench frontier tier excluding quarantined cancel-async-tasks", "variant": "pi-gpt-5.5-medium", "task_count": 4, "primary_source": "https://github.com/minghinmatthewlam/openbench/blob/6250bcd072d39ae7ab692c9db8ffac7ffb8fda68/data/tb-frontier-2026-07-05/README.md", "artifact_source": "https://github.com/minghinmatthewlam/openbench/blob/6250bcd072d39ae7ab692c9db8ffac7ffb8fda68/data/tb-frontier-2026-07-05/results.jsonl"},
+    "result": {"date": "2026-07-05", "published_snapshot_date": "2026-07-06", "agent_label": "pi", "harness_version": "0.80.3", "harness_revision": null, "benchmark_revision": "6250bcd072d39ae7ab692c9db8ffac7ffb8fda68", "methodology_revision": "db4ba29f5a8364ecad61e62e96a8e703aa05437f", "model": "gpt-5.5-medium", "model_config": "Pi openai-codex provider; model gpt-5.5; thinking medium; Docker lane", "metric": "mechanically_recomputed_raw_success_rate_excluding_quarantined_task", "value": 0.75, "successes": 9, "retained_rows": 12, "source_all_task_successes": 12, "source_all_task_rows": 15, "quarantined_task": "cancel-async-tasks", "source_quarantined_task_successes": 3, "source_quarantined_task_rows": 3, "derivation": "12-3 successes over 15-3 rows"},
+    "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "executed-version-source-reported"},
+    "provenance": {"publisher": "OpenBench / minghinmatthewlam", "checked": true, "raw_run_artifacts_public": true, "public_trajectories": false, "public_result_surface": "committed scrubbed 45-row JSONL and README per-task solve matrix", "execution_environment": "single macOS host; Docker execution lane; 1800 second per-run cap; three trials per task"},
+    "comparison": {"group": "openbench-tb-frontier-noncancel__gpt-5.5-medium__6250bcd0", "mode": "candidate-same-model", "scope": "terminal-swe"},
+    "unknown_dimensions": ["exact service-side gpt-5.5 checkpoint beyond published canonical identity", "exact Pi source commit corresponding to CLI 0.80.3", "provider/account-side routing state"],
+    "notes": "W1 uses raw success flags for the four retained tasks. The later reward-hacking correction is explicitly scoped by the source to gpt-5.6-sol and is not back-projected onto this dataset."
+  }]
+}
