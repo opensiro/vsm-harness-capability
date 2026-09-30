@@ -1,0 +1,295 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "ts-bench v2 April 2026 context panel",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "unclear",
+    "historical_relation": "The source executes named Codex CLI, Gemini CLI, and Claude Code agent harnesses through ts-bench v2, but all six committed result records report harness version as unknown and do not bind a historical execution revision. W1 preserves the published harness labels without canonical historical linkage."
+  },
+  "primary_sources": [
+    "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/articles/ts-bench-v2-coding-agent-benchmark.md",
+    "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/public/data/results/codex-gpt-5.4.json",
+    "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/public/data/results/codex-gpt-5.4-mini.json",
+    "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/public/data/results/gemini-gemini-3.1-pro-preview.json",
+    "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/public/data/results/gemini-gemini-2.5-flash.json",
+    "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/public/data/results/gemini-gemini-3-flash-preview.json",
+    "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/public/data/results/claude-claude-haiku-4-5.json"
+  ],
+  "observations": [
+    {
+      "observation_id": "codex__tsbench-v2-swelancer5__gpt-5.4__dcf7d44f",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "name": "ts-bench v2 SWE-Lancer five-task snapshot",
+        "version": "1.1.0",
+        "task_set": ["14958", "15815_1", "15193", "14268", "20079"],
+        "primary_source": "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/articles/ts-bench-v2-coding-agent-benchmark.md",
+        "artifact_source": "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/public/data/results/codex-gpt-5.4.json"
+      },
+      "result": {
+        "date": "2026-04-05",
+        "agent_label": "codex",
+        "harness_version": "unknown",
+        "publication_revision": "dcf7d44fa47f05a2849090e5e16fe67e8af96eff",
+        "execution_revision": null,
+        "model": "gpt-5.4",
+        "source_provider_metadata": "openai",
+        "metric": "source_overall_success_rate",
+        "value": 0.6,
+        "success_count": 3,
+        "task_count": 5,
+        "agent_success_count": 5,
+        "test_success_count": 3
+      },
+      "execution": {
+        "environment": "ts-bench v2 Docker SWE-Lancer environment using the source-defined broken task state and official task test harness",
+        "evaluator": "official SWE-Lancer task test harness as invoked by ts-bench v2",
+        "repetitions": 1,
+        "timeout_seconds": null,
+        "reset_policy": "source-defined SWE-Lancer broken task state; exact historical container reuse/reset details beyond the published v2 procedure are not asserted",
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "tsbench-v2-swelancer5__context-panel__dcf7d44f",
+        "mode": "single-arm-context",
+        "scope": "real-world-typescript-monorepo"
+      },
+      "unknown_dimensions": [
+        "exact Codex CLI version used in the historical run",
+        "exact execution revision for the historical run",
+        "exact service-side GPT-5.4 snapshot and serving route",
+        "exact historical per-exercise timeout"
+      ]
+    },
+    {
+      "observation_id": "codex__tsbench-v2-swelancer5__gpt-5.4-mini__dcf7d44f",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "name": "ts-bench v2 SWE-Lancer five-task snapshot",
+        "version": "1.1.0",
+        "task_set": ["14958", "15815_1", "15193", "14268", "20079"],
+        "primary_source": "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/articles/ts-bench-v2-coding-agent-benchmark.md",
+        "artifact_source": "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/public/data/results/codex-gpt-5.4-mini.json"
+      },
+      "result": {
+        "date": "2026-04-05",
+        "agent_label": "codex",
+        "harness_version": "unknown",
+        "publication_revision": "dcf7d44fa47f05a2849090e5e16fe67e8af96eff",
+        "execution_revision": null,
+        "model": "gpt-5.4-mini",
+        "source_provider_metadata": "openai",
+        "metric": "source_overall_success_rate",
+        "value": 0.0,
+        "success_count": 0,
+        "task_count": 5,
+        "agent_success_count": 5,
+        "test_success_count": 0
+      },
+      "execution": {
+        "environment": "ts-bench v2 Docker SWE-Lancer environment using the source-defined broken task state and official task test harness",
+        "evaluator": "official SWE-Lancer task test harness as invoked by ts-bench v2",
+        "repetitions": 1,
+        "timeout_seconds": null,
+        "reset_policy": "source-defined SWE-Lancer broken task state; exact historical container reuse/reset details beyond the published v2 procedure are not asserted",
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "tsbench-v2-swelancer5__context-panel__dcf7d44f",
+        "mode": "single-arm-context",
+        "scope": "real-world-typescript-monorepo"
+      },
+      "unknown_dimensions": [
+        "exact Codex CLI version used in the historical run",
+        "exact execution revision for the historical run",
+        "exact service-side GPT-5.4 Mini snapshot and serving route",
+        "exact historical per-exercise timeout"
+      ]
+    },
+    {
+      "observation_id": "gemini-cli__tsbench-v2-swelancer5__gemini-3.1-pro-preview__dcf7d44f",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "name": "ts-bench v2 SWE-Lancer five-task snapshot",
+        "version": "1.1.0",
+        "task_set": ["14958", "15815_1", "15193", "14268", "20079"],
+        "primary_source": "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/articles/ts-bench-v2-coding-agent-benchmark.md",
+        "artifact_source": "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/public/data/results/gemini-gemini-3.1-pro-preview.json"
+      },
+      "result": {
+        "date": "2026-04-05",
+        "agent_label": "gemini",
+        "harness_version": "unknown",
+        "publication_revision": "dcf7d44fa47f05a2849090e5e16fe67e8af96eff",
+        "execution_revision": null,
+        "model": "gemini-3.1-pro-preview",
+        "source_provider_metadata": "google",
+        "metric": "source_overall_success_rate",
+        "value": 0.6,
+        "success_count": 3,
+        "task_count": 5,
+        "agent_success_count": 5,
+        "test_success_count": 3
+      },
+      "execution": {
+        "environment": "ts-bench v2 Docker SWE-Lancer environment using the source-defined broken task state and official task test harness",
+        "evaluator": "official SWE-Lancer task test harness as invoked by ts-bench v2",
+        "repetitions": 1,
+        "timeout_seconds": null,
+        "reset_policy": "source-defined SWE-Lancer broken task state; exact historical container reuse/reset details beyond the published v2 procedure are not asserted",
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "tsbench-v2-swelancer5__context-panel__dcf7d44f",
+        "mode": "single-arm-context",
+        "scope": "real-world-typescript-monorepo"
+      },
+      "unknown_dimensions": [
+        "exact Gemini CLI version used in the historical run",
+        "exact execution revision for the historical run",
+        "exact service-side Gemini 3.1 Pro Preview snapshot and serving route",
+        "exact historical per-exercise timeout"
+      ]
+    },
+    {
+      "observation_id": "gemini-cli__tsbench-v2-swelancer5__gemini-2.5-flash__dcf7d44f",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "name": "ts-bench v2 SWE-Lancer five-task snapshot",
+        "version": "1.1.0",
+        "task_set": ["14958", "15815_1", "15193", "14268", "20079"],
+        "primary_source": "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/articles/ts-bench-v2-coding-agent-benchmark.md",
+        "artifact_source": "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/public/data/results/gemini-gemini-2.5-flash.json"
+      },
+      "result": {
+        "date": "2026-04-05",
+        "agent_label": "gemini",
+        "harness_version": "unknown",
+        "publication_revision": "dcf7d44fa47f05a2849090e5e16fe67e8af96eff",
+        "execution_revision": null,
+        "model": "gemini-2.5-flash",
+        "source_provider_metadata": "google",
+        "metric": "source_overall_success_rate",
+        "value": 0.4,
+        "success_count": 2,
+        "task_count": 5,
+        "agent_success_count": 5,
+        "test_success_count": 2
+      },
+      "execution": {
+        "environment": "ts-bench v2 Docker SWE-Lancer environment using the source-defined broken task state and official task test harness",
+        "evaluator": "official SWE-Lancer task test harness as invoked by ts-bench v2",
+        "repetitions": 1,
+        "timeout_seconds": null,
+        "reset_policy": "source-defined SWE-Lancer broken task state; exact historical container reuse/reset details beyond the published v2 procedure are not asserted",
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "tsbench-v2-swelancer5__context-panel__dcf7d44f",
+        "mode": "single-arm-context",
+        "scope": "real-world-typescript-monorepo"
+      },
+      "unknown_dimensions": [
+        "exact Gemini CLI version used in the historical run",
+        "exact execution revision for the historical run",
+        "exact service-side Gemini 2.5 Flash snapshot and serving route",
+        "exact historical per-exercise timeout"
+      ]
+    },
+    {
+      "observation_id": "gemini-cli__tsbench-v2-swelancer5__gemini-3-flash-preview__dcf7d44f",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "name": "ts-bench v2 SWE-Lancer five-task snapshot",
+        "version": "1.1.0",
+        "task_set": ["14958", "15815_1", "15193", "14268", "20079"],
+        "primary_source": "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/articles/ts-bench-v2-coding-agent-benchmark.md",
+        "artifact_source": "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/public/data/results/gemini-gemini-3-flash-preview.json"
+      },
+      "result": {
+        "date": "2026-04-05",
+        "agent_label": "gemini",
+        "harness_version": "unknown",
+        "publication_revision": "dcf7d44fa47f05a2849090e5e16fe67e8af96eff",
+        "execution_revision": null,
+        "model": "gemini-3-flash-preview",
+        "source_provider_metadata": "google",
+        "metric": "source_overall_success_rate",
+        "value": 0.2,
+        "success_count": 1,
+        "task_count": 5,
+        "agent_success_count": 4,
+        "test_success_count": 1
+      },
+      "execution": {
+        "environment": "ts-bench v2 Docker SWE-Lancer environment using the source-defined broken task state and official task test harness",
+        "evaluator": "official SWE-Lancer task test harness as invoked by ts-bench v2",
+        "repetitions": 1,
+        "timeout_seconds": null,
+        "reset_policy": "source-defined SWE-Lancer broken task state; exact historical container reuse/reset details beyond the published v2 procedure are not asserted",
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "tsbench-v2-swelancer5__context-panel__dcf7d44f",
+        "mode": "single-arm-context",
+        "scope": "real-world-typescript-monorepo"
+      },
+      "unknown_dimensions": [
+        "exact Gemini CLI version used in the historical run",
+        "exact execution revision for the historical run",
+        "exact service-side Gemini 3 Flash Preview snapshot and serving route",
+        "exact historical per-exercise timeout"
+      ],
+      "notes": "The source summary reports agentSuccessCount 4/5 and testSuccessCount 1/5; W1 preserves this distinction rather than treating every unsuccessful cell as only an evaluator failure."
+    },
+    {
+      "observation_id": "claude-code__tsbench-v2-swelancer5__claude-haiku-4-5__dcf7d44f",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "name": "ts-bench v2 SWE-Lancer five-task snapshot",
+        "version": "1.1.0",
+        "task_set": ["14958", "15815_1", "15193", "14268", "20079"],
+        "primary_source": "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/articles/ts-bench-v2-coding-agent-benchmark.md",
+        "artifact_source": "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/public/data/results/claude-claude-haiku-4-5.json"
+      },
+      "result": {
+        "date": "2026-04-04",
+        "agent_label": "claude",
+        "harness_version": "unknown",
+        "publication_revision": "dcf7d44fa47f05a2849090e5e16fe67e8af96eff",
+        "execution_revision": null,
+        "model": "claude-haiku-4-5",
+        "source_provider_metadata": "openai",
+        "metric": "source_overall_success_rate",
+        "value": 0.2,
+        "success_count": 1,
+        "task_count": 5,
+        "agent_success_count": 5,
+        "test_success_count": 1
+      },
+      "execution": {
+        "environment": "ts-bench v2 Docker SWE-Lancer environment using the source-defined broken task state and official task test harness",
+        "evaluator": "official SWE-Lancer task test harness as invoked by ts-bench v2",
+        "repetitions": 1,
+        "timeout_seconds": null,
+        "reset_policy": "source-defined SWE-Lancer broken task state; exact historical container reuse/reset details beyond the published v2 procedure are not asserted",
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "tsbench-v2-swelancer5__context-panel__dcf7d44f",
+        "mode": "single-arm-context",
+        "scope": "real-world-typescript-monorepo"
+      },
+      "unknown_dimensions": [
+        "exact Claude Code version used in the historical run",
+        "exact execution revision for the historical run",
+        "exact service-side Claude Haiku 4.5 snapshot and serving route",
+        "exact historical per-exercise timeout",
+        "meaning of source provider metadata openai for this Claude Code run"
+      ],
+      "notes": "The source result metadata labels provider as openai. W1 preserves the literal field and does not infer the historical serving route."
+    }
+  ]
+}
