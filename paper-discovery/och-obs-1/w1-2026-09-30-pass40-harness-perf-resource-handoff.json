@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "manifest_id": "och-obs-1-w1-2026-09-30-pass40-harness-perf-resource",
+  "recorded_at": "2026-09-30",
+  "work_item": {
+    "repository": "opensiro/vsm-harness-capability",
+    "issue": 93,
+    "role": "W1 public-evidence discovery and neutral admission"
+  },
+  "protocol": {
+    "id": "OCH-OBS-1",
+    "version": "1.0.0",
+    "repository": "opensiro/vsm-harness-research",
+    "revision": "5462ffadffd7189ae10e44e22d357bc6162a6038",
+    "collection_cutoff_utc": "2026-10-20T23:59:59Z"
+  },
+  "checkpoint_parent": {
+    "capability_main_revision": "faec8af4534796b52fda46802f3632dcb54dac3d",
+    "registry_observation_count_before": 290,
+    "prior_handoffs_mutated": false
+  },
+  "collection_state": {
+    "status": "active",
+    "pass_number": 40,
+    "cutoff_reached": false,
+    "note": "Issue #93 remains active through the frozen collection cutoff."
+  },
+  "discovery_pass": {
+    "pass_id": "w1-pass-040-harness-perf-resource",
+    "method": "Direction-blind admission of one pinned six-harness resource-overhead batch. The benchmark uses a local scripted mock rather than a real model, three serial runs per harness, and reports the median run. W1 preserves process-resource measurements and publisher beta CU values without treating them as task-quality outcomes or universal efficiency scores.",
+    "source_repository": "https://github.com/KonghaYao/harness-perf-benchmark",
+    "source_revision": "e89a895a27a6634bded08f93c886b1a70bb15d63",
+    "batch_label": "codex-proxy-fix",
+    "workload": "100 scripted tool-use turns; local protocol-matched mock; no real model inference",
+    "runs_per_harness": 3,
+    "aggregation": "median end-to-end run",
+    "timeout_ms": 1800000,
+    "sampling_interval_ms": 100,
+    "machine": "macOS; Apple Silicon; 18 cores",
+    "raw_per_run_artifacts_committed": false
+  },
+  "reused_existing_observation_ids": [],
+  "newly_admitted_observation_ids": [
+    "pi__harness-perf-codex-proxy-fix__scripted-mock__e89a895a",
+    "codex__harness-perf-codex-proxy-fix__scripted-mock__e89a895a",
+    "claude-code__harness-perf-codex-proxy-fix__scripted-mock__e89a895a",
+    "deepseek-harness__harness-perf-codex-proxy-fix__scripted-mock__e89a895a",
+    "minimax-code__harness-perf-codex-proxy-fix__scripted-mock__e89a895a",
+    "peri__harness-perf-codex-proxy-fix__scripted-mock__e89a895a"
+  ],
+  "candidate_comparison_groups": [
+    {
+      "group_id": "harness-perf-codex-proxy-fix__scripted-mock__e89a895a",
+      "observation_count": 6,
+      "source_known_dimensions": [
+        "same source batch label",
+        "same 100-turn scripted workload family",
+        "same physical machine and serial batch execution",
+        "three runs per harness with median aggregation",
+        "100 ms process-tree sampling"
+      ],
+      "explicit_unknown_or_nonidentical_dimensions": [
+        "protocol adapters and tool schemas differ by harness",
+        "no real model identity exists for this benchmark",
+        "raw per-run data and logs are not committed",
+        "Codex uses a documented benchmark-side dead-proxy treatment",
+        "publisher also maintains peri",
+        "source beta CU weighting is project-defined"
+      ],
+      "paper_eligibility": "not-assessed-by-W1"
+    }
+  ],
+  "provenance_strength": {
+    "immutable_source_revision": true,
+    "committed_methodology_and_aggregate_table": true,
+    "committed_raw_per_run_artifacts": false,
+    "publisher_overlap_for_peri": true,
+    "w1_treatment": "admit factual source-reported resource measurements; separate first-party peri provenance from externally measured harness rows"
+  },
+  "protocol_deviations_and_failures": [
+    {
+      "event": "read-only-admission-validation",
+      "run_number": 376,
+      "run_id": 36736341075,
+      "head_sha": "01f1bd72aba171200f71dd61b9812384f172e787",
+      "conclusion": "success",
+      "detail": "Renderer, repository validators, pass-40 admission checks, and existing live admission checks passed; generated registry views were uploaded as workflow artifact 11107102502."
+    },
+    {
+      "event": "blocked-workflow-token-registry-push",
+      "run_number": 377,
+      "run_id": 36738446495,
+      "head_sha": "53e898ebb3f5dc02f250ccd9dab1db906a75a166",
+      "conclusion": "failure",
+      "evidence_rejected": false,
+      "detail": "Registry regeneration succeeded, but the temporary GitHub Actions bot push was blocked before repository/admission steps. The branch was restored to its prior read-only validation surface; no raw evidence changed."
+    },
+    {
+      "event": "read-only-surface-restored",
+      "run_number": 378,
+      "run_id": 36738858140,
+      "head_sha": "605c4f6bbc3598578f54c890fb4ff7df453ad42b",
+      "conclusion": "success"
+    }
+  ],
+  "non_admission_dispositions": [
+    {
+      "surface": "publisher ordering and winner language",
+      "status": "not-promoted-by-W1",
+      "reason": "W1 does not reproduce outcome ranking or winner claims."
+    },
+    {
+      "surface": "source beta CU as universal harness score",
+      "status": "not-promoted-by-W1",
+      "reason": "CU is a project-defined weighted resource metric and this batch contains no task-quality outcome."
+    },
+    {
+      "surface": "model-backed capability comparison",
+      "status": "not-applicable",
+      "reason": "The batch deliberately uses a local scripted mock and performs no real model inference."
+    }
+  ],
+  "validation": {
+    "status": "pending-registry-materialization",
+    "expected_registry_observation_count_after": 296,
+    "validated_generated_registry_artifact_id": 11107102502,
+    "evidence_admission_run": 36736341075
+  },
+  "handoff_boundary": {
+    "structural_classification_performed": false,
+    "historical_linkage_adjudicated": false,
+    "matched_cell_eligibility_assigned": false,
+    "comparison_tier_assigned": false,
+    "statistical_interpretation_performed": false,
+    "winner_declared": false,
+    "paper_claim_made": false
+  }
+}
