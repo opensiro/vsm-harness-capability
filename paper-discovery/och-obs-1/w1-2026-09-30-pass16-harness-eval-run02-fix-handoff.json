@@ -52,10 +52,13 @@
     {"surface": "voided ATV-Phoenix fix attempt without intended Phoenix spine", "status": "not-admitted", "reason": "The source explicitly voided the spineless attempt, reset staging to pre-fix, restored Phoenix approval, and reran; only the valid rerun is preserved."}
   ],
   "validation": {
-    "status": "pending",
+    "status": "success",
     "registry_observation_count_after": 172,
     "commands_required": ["python system-observations/render_registry.py", "python scripts/admission_check.py <each of six pass-16 raw records>", "python scripts/validate_repository.py"],
-    "results": []
+    "results": [
+      {"workflow_run_id": 36651279551, "run_number": 237, "head_before_bot_registry_commit": "be75f5aeafba6294d0c47bc916d971cdf1ef1546", "result": "success", "scope": "temporary write-enabled registry regeneration plus repository validation and six record-specific admission checks"},
+      {"workflow_run_id": 36651347629, "run_number": 239, "head": "5b9b033a1628d89a447b0fa27ae615fb78fbf69d", "result": "success", "scope": "standard read-only validation after restoring workflow blob 244ad9701f41e6122f37c0676a00e705cddd622f"}
+    ]
   },
   "handoff_boundary": {"structural_classification_performed": false, "historical_linkage_adjudicated": false, "comparison_tier_assigned": false, "statistical_interpretation_performed": false, "winner_declared": false}
 }
