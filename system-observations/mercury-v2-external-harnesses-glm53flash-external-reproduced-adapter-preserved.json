@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Mercury Harness Benchmark V2 external harness arms",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "adapter-preserved",
+    "historical_relation": "The benchmark executes named harnesses through Harbor or benchmark adapters while preserving each harness's normal prompt, context handling, temperature, tool strategy, and termination behavior. W1 does not adjudicate canonical historical linkage or infer exact upstream source revisions from display labels alone."
+  },
+  "primary_sources": [
+    "https://github.com/repath500/mercury-harness-benchmark/blob/868e1e2f2ba8660e583d42de706bfc08267a9e87/reports/mercury-v2/STUDY.md",
+    "https://github.com/repath500/mercury-harness-benchmark/blob/868e1e2f2ba8660e583d42de706bfc08267a9e87/reports/mercury-v2/mercury-v2.json",
+    "https://github.com/repath500/mercury-harness-benchmark/blob/868e1e2f2ba8660e583d42de706bfc08267a9e87/benchmarks/mercury_v2/benchmark.yaml",
+    "https://github.com/repath500/mercury-harness-benchmark/blob/868e1e2f2ba8660e583d42de706bfc08267a9e87/benchmarks/mercury_v2/oracle-gate.json",
+    "https://github.com/repath500/mercury-harness-benchmark/tree/868e1e2f2ba8660e583d42de706bfc08267a9e87/benchmarks/mercury_v2/results/mercury-v2"
+  ],
+  "observations": [
+    {
+      "observation_id": "pi__mercury-v2-featbench20__glm-5.3-flash__868e1e2f",
+      "kind": "system-benchmark-result",
+      "benchmark": {"name": "Mercury Harness Benchmark V2 / FeatBench v1.0 frozen 20-task block", "primary_source": "https://github.com/repath500/mercury-harness-benchmark/blob/868e1e2f2ba8660e583d42de706bfc08267a9e87/reports/mercury-v2/STUDY.md", "artifact_source": "https://github.com/repath500/mercury-harness-benchmark/tree/868e1e2f2ba8660e583d42de706bfc08267a9e87/benchmarks/mercury_v2/results/mercury-v2"},
+      "result": {"date": "2026-09-04", "agent_label": "Pi (vanilla)", "harness_version": null, "benchmark_revision": "FeatBench v1.0 / frozen task list at source revision 868e1e2f2ba8660e583d42de706bfc08267a9e87", "model": "z-ai/glm-5.3-flash", "model_config": "OpenRouter route; harness-default reasoning and native harness behavior", "metric": "externally_verified_resolution_rate", "value": 0.95, "resolved": 19, "tasks": 20, "rollouts_per_task": 1, "agent_timeout_minutes": 60},
+      "execution": {"environment": "Harbor + E2B fresh single-container sandbox per trial", "human_intervention": false, "concurrency": 2, "reset_policy": "fresh sandbox for every task-harness trial", "evaluator": "FeatBench external F2P + P2P verifier", "cpu_policy_observed": "17 tasks used 2 CPUs and 3 tasks used 8 CPUs; planned fixed 10-CPU override was not applied"},
+      "comparison": {"group": "mercury-v2-featbench20__glm-5.3-flash__868e1e2f", "mode": "same-model-candidate", "scope": "repository-feature-engineering"},
+      "unknown_dimensions": ["exact upstream Pi package/source revision exercised", "exact service-side GLM-5.3-Flash checkpoint behind OpenRouter", "whether any of this harness's trials were among the seven verifier-only recovery trials"],
+      "notes": "One rollout per task. Seven trials in the full 140-trial matrix used verifier-only replay after Harbor artifact-collection stalls; model inference was not rerun. W1 preserves this matrix-level recovery caveat without assigning unreported per-harness recovery counts."
+    },
+    {
+      "observation_id": "oh-my-pi__mercury-v2-featbench20__glm-5.3-flash__868e1e2f",
+      "kind": "system-benchmark-result",
+      "benchmark": {"name": "Mercury Harness Benchmark V2 / FeatBench v1.0 frozen 20-task block", "primary_source": "https://github.com/repath500/mercury-harness-benchmark/blob/868e1e2f2ba8660e583d42de706bfc08267a9e87/reports/mercury-v2/STUDY.md", "artifact_source": "https://github.com/repath500/mercury-harness-benchmark/tree/868e1e2f2ba8660e583d42de706bfc08267a9e87/benchmarks/mercury_v2/results/mercury-v2"},
+      "result": {"date": "2026-09-04", "agent_label": "Oh My Pi", "harness_version": null, "benchmark_revision": "FeatBench v1.0 / frozen task list at source revision 868e1e2f2ba8660e583d42de706bfc08267a9e87", "model": "z-ai/glm-5.3-flash", "model_config": "OpenRouter route; custom Harbor adapter preserving native model/tool behavior", "metric": "externally_verified_resolution_rate", "value": 1.0, "resolved": 20, "tasks": 20, "rollouts_per_task": 1, "agent_timeout_minutes": 60},
+      "execution": {"environment": "Harbor + E2B fresh single-container sandbox per trial", "human_intervention": false, "concurrency": 2, "reset_policy": "fresh sandbox for every task-harness trial", "evaluator": "FeatBench external F2P + P2P verifier", "cpu_policy_observed": "17 tasks used 2 CPUs and 3 tasks used 8 CPUs; planned fixed 10-CPU override was not applied"},
+      "comparison": {"group": "mercury-v2-featbench20__glm-5.3-flash__868e1e2f", "mode": "same-model-candidate", "scope": "repository-feature-engineering"},
+      "unknown_dimensions": ["exact upstream Oh My Pi package/source revision exercised", "exact service-side GLM-5.3-Flash checkpoint behind OpenRouter", "whether any of this harness's trials were among the seven verifier-only recovery trials"],
+      "notes": "One rollout per task; matrix-level verifier-only recovery and CPU-policy discrepancies are preserved without post-hoc normalization."
+    },
+    {
+      "observation_id": "claude-code__mercury-v2-featbench20__glm-5.3-flash__868e1e2f",
+      "kind": "system-benchmark-result",
+      "benchmark": {"name": "Mercury Harness Benchmark V2 / FeatBench v1.0 frozen 20-task block", "primary_source": "https://github.com/repath500/mercury-harness-benchmark/blob/868e1e2f2ba8660e583d42de706bfc08267a9e87/reports/mercury-v2/STUDY.md", "artifact_source": "https://github.com/repath500/mercury-harness-benchmark/tree/868e1e2f2ba8660e583d42de706bfc08267a9e87/benchmarks/mercury_v2/results/mercury-v2"},
+      "result": {"date": "2026-09-04", "agent_label": "Claude Code", "harness_version": null, "benchmark_revision": "FeatBench v1.0 / frozen task list at source revision 868e1e2f2ba8660e583d42de706bfc08267a9e87", "model": "z-ai/glm-5.3-flash", "model_config": "Mercury routed through OpenRouter Anthropic-compatible endpoint; source records compatibility events rather than silently substituting another model", "metric": "externally_verified_resolution_rate", "value": 0.95, "resolved": 19, "tasks": 20, "rollouts_per_task": 1, "agent_timeout_minutes": 60},
+      "execution": {"environment": "Harbor + E2B fresh single-container sandbox per trial", "human_intervention": false, "concurrency": 2, "reset_policy": "fresh sandbox for every task-harness trial", "evaluator": "FeatBench external F2P + P2P verifier", "cpu_policy_observed": "17 tasks used 2 CPUs and 3 tasks used 8 CPUs; planned fixed 10-CPU override was not applied"},
+      "comparison": {"group": "mercury-v2-featbench20__glm-5.3-flash__868e1e2f", "mode": "same-model-candidate", "scope": "repository-feature-engineering"},
+      "unknown_dimensions": ["exact Claude Code CLI version/source revision exercised", "exact service-side GLM-5.3-Flash checkpoint behind OpenRouter", "whether any of this harness's trials were among the seven verifier-only recovery trials"],
+      "notes": "One rollout per task; compatibility/API events are retained by the source. W1 does not infer equivalence beyond the source-pinned model label and route."
+    },
+    {
+      "observation_id": "codex__mercury-v2-featbench20__glm-5.3-flash__868e1e2f",
+      "kind": "system-benchmark-result",
+      "benchmark": {"name": "Mercury Harness Benchmark V2 / FeatBench v1.0 frozen 20-task block", "primary_source": "https://github.com/repath500/mercury-harness-benchmark/blob/868e1e2f2ba8660e583d42de706bfc08267a9e87/reports/mercury-v2/STUDY.md", "artifact_source": "https://github.com/repath500/mercury-harness-benchmark/tree/868e1e2f2ba8660e583d42de706bfc08267a9e87/benchmarks/mercury_v2/results/mercury-v2"},
+      "result": {"date": "2026-09-04", "agent_label": "Codex", "harness_version": null, "benchmark_revision": "FeatBench v1.0 / frozen task list at source revision 868e1e2f2ba8660e583d42de706bfc08267a9e87", "model": "z-ai/glm-5.3-flash", "model_config": "Harbor Codex adapter preserving full openrouter/z-ai/glm-5.3-flash model path", "metric": "externally_verified_resolution_rate", "value": 0.75, "resolved": 15, "tasks": 20, "rollouts_per_task": 1, "agent_timeout_minutes": 60},
+      "execution": {"environment": "Harbor + E2B fresh single-container sandbox per trial", "human_intervention": false, "concurrency": 2, "reset_policy": "fresh sandbox for every task-harness trial", "evaluator": "FeatBench external F2P + P2P verifier", "cpu_policy_observed": "17 tasks used 2 CPUs and 3 tasks used 8 CPUs; planned fixed 10-CPU override was not applied"},
+      "comparison": {"group": "mercury-v2-featbench20__glm-5.3-flash__868e1e2f", "mode": "same-model-candidate", "scope": "repository-feature-engineering"},
+      "unknown_dimensions": ["exact Codex CLI version/source revision exercised", "exact service-side GLM-5.3-Flash checkpoint behind OpenRouter", "whether any of this harness's trials were among the seven verifier-only recovery trials"],
+      "notes": "Resolution only is admitted. Source-reported zero provider total_cost for Codex is not promoted by W1 because native trajectory telemetry recorded substantial token use and the source explicitly warns against interpreting zero as free inference."
+    },
+    {
+      "observation_id": "deepseek-harness__mercury-v2-featbench20__glm-5.3-flash__868e1e2f",
+      "kind": "system-benchmark-result",
+      "benchmark": {"name": "Mercury Harness Benchmark V2 / FeatBench v1.0 frozen 20-task block", "primary_source": "https://github.com/repath500/mercury-harness-benchmark/blob/868e1e2f2ba8660e583d42de706bfc08267a9e87/reports/mercury-v2/STUDY.md", "artifact_source": "https://github.com/repath500/mercury-harness-benchmark/tree/868e1e2f2ba8660e583d42de706bfc08267a9e87/benchmarks/mercury_v2/results/mercury-v2"},
+      "result": {"date": "2026-09-04", "agent_label": "DeepSeek Harness", "harness_version": null, "benchmark_revision": "FeatBench v1.0 / frozen task list at source revision 868e1e2f2ba8660e583d42de706bfc08267a9e87", "model": "z-ai/glm-5.3-flash", "model_config": "official deepseek-ai/deepseek-harness package; dsh --profile headless; OpenRouter through Pi-compatible provider bundle", "metric": "externally_verified_resolution_rate", "value": 1.0, "resolved": 20, "tasks": 20, "rollouts_per_task": 1, "agent_timeout_minutes": 60},
+      "execution": {"environment": "Harbor + E2B fresh single-container sandbox per trial", "human_intervention": false, "concurrency": 2, "reset_policy": "fresh sandbox for every task-harness trial", "evaluator": "FeatBench external F2P + P2P verifier", "cpu_policy_observed": "17 tasks used 2 CPUs and 3 tasks used 8 CPUs; planned fixed 10-CPU override was not applied"},
+      "comparison": {"group": "mercury-v2-featbench20__glm-5.3-flash__868e1e2f", "mode": "same-model-candidate", "scope": "repository-feature-engineering"},
+      "unknown_dimensions": ["exact deepseek-harness package/source revision exercised", "exact service-side GLM-5.3-Flash checkpoint behind OpenRouter", "whether any of this harness's trials were among the seven verifier-only recovery trials"],
+      "notes": "The source identifies the package and headless execution path but does not provide an exact upstream package revision in the aggregate study table; W1 leaves that linkage unresolved."
+    },
+    {
+      "observation_id": "opencode__mercury-v2-featbench20__glm-5.3-flash__868e1e2f",
+      "kind": "system-benchmark-result",
+      "benchmark": {"name": "Mercury Harness Benchmark V2 / FeatBench v1.0 frozen 20-task block", "primary_source": "https://github.com/repath500/mercury-harness-benchmark/blob/868e1e2f2ba8660e583d42de706bfc08267a9e87/reports/mercury-v2/STUDY.md", "artifact_source": "https://github.com/repath500/mercury-harness-benchmark/tree/868e1e2f2ba8660e583d42de706bfc08267a9e87/benchmarks/mercury_v2/results/mercury-v2"},
+      "result": {"date": "2026-09-04", "agent_label": "OpenCode", "harness_version": null, "benchmark_revision": "FeatBench v1.0 / frozen task list at source revision 868e1e2f2ba8660e583d42de706bfc08267a9e87", "model": "z-ai/glm-5.3-flash", "model_config": "Harbor OpenCode adapter in headless/non-interactive mode; OpenRouter provider; Mercury model", "metric": "externally_verified_resolution_rate", "value": 0.9, "resolved": 18, "tasks": 20, "rollouts_per_task": 1, "agent_timeout_minutes": 60},
+      "execution": {"environment": "Harbor + E2B fresh single-container sandbox per trial", "human_intervention": false, "concurrency": 2, "reset_policy": "fresh sandbox for every task-harness trial", "evaluator": "FeatBench external F2P + P2P verifier", "cpu_policy_observed": "17 tasks used 2 CPUs and 3 tasks used 8 CPUs; planned fixed 10-CPU override was not applied"},
+      "comparison": {"group": "mercury-v2-featbench20__glm-5.3-flash__868e1e2f", "mode": "same-model-candidate", "scope": "repository-feature-engineering"},
+      "unknown_dimensions": ["exact OpenCode CLI version/source revision exercised", "exact service-side GLM-5.3-Flash checkpoint behind OpenRouter", "whether any of this harness's trials were among the seven verifier-only recovery trials"],
+      "notes": "One rollout per task; matrix-level recovery and CPU-policy discrepancies are retained as limitations rather than normalized away."
+    }
+  ]
+}
