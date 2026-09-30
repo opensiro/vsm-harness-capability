@@ -27,3 +27,22 @@ Core rules:
 - general capability is not an average over domains;
 - domain-specific assessment is a separate downstream system-in-focus;
 - preserve historical experiment artifacts as history rather than active workflow.
+
+## Track A downstream queue
+
+For the active observational paper study, repetitive W2→W3→W4 routing is owned by the non-normative cross-repository queue in `opensiro/vsm-harness-research`:
+
+```text
+paper/studies/obs-harness-assoc/v0.1.0/TRACK_A_QUEUE.md
+paper/studies/obs-harness-assoc/v0.1.0/track-a-queue.v0.1.json
+```
+
+Stable fresh-chat prompt:
+
+```text
+Execute the next admitted Track A queue item in opensiro/vsm-harness-research.
+Follow paper/studies/obs-harness-assoc/v0.1.0/TRACK_A_QUEUE.md exactly.
+Use a fresh independent context, claim and execute exactly one item, then stop at its defined boundary.
+```
+
+The queue does not change this repository's ownership boundary. W1 remains capability-owned, W2 remains bounded historical-linkage work under issue #94, and raw observations remain stored only here. W3/W4 are research-repository work. The queue is routing/control only and must not be treated as scientific evidence or as authority to perform W5/Gate B/W6.
