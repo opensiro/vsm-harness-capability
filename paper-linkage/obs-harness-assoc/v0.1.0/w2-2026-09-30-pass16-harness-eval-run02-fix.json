@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "artifact_id": "obs-harness-assoc-w2-2026-09-30-pass16-harness-eval-run02-fix",
+  "artifact_version": "1.0.0",
+  "recorded_at_utc": "2026-09-30T20:22:00Z",
+  "work_item": {"repository": "opensiro/vsm-harness-capability", "issue": 94, "role": "fresh independent W2 historical system/revision linkage"},
+  "execution": {"capability_start_revision": "9529f5e2c3e326ead47a789afa0ca367e54fb69c", "w2_execution_revision": "9529f5e2c3e326ead47a789afa0ca367e54fb69c", "research_claim_revision": "58c8a08425cb2367e5f59085273997f6ef661dc7", "research_batch_claim": "queue-claims/track-a-batch/W2_LINK/pass14+pass15+pass16+pass17+pass18", "branch": "issue-94-w2-batch-pass14-pass15-pass16-pass17-pass18", "fresh_independent_context": true, "member_key": "pass16", "raw_score_payload_copied": false},
+  "protocol": {"study_id": "OBS-HARNESS-ASSOC", "version": "0.1.0", "protocol_sha256": "17f51d4f35f0eb5a665122238c505ad6c8e3db7c8b937dac7ecbae35a3ac49a4", "grade_mapping": {"exact-historical-match": "L1", "bounded-compatible": "L2", "unresolved": "L3"}, "current_state_substitution_forbidden": true},
+  "upstream": {"w1_issue": 93, "w1_handoff_path": "paper-discovery/och-obs-1/w1-2026-09-30-pass16-harness-eval-run02-fix-handoff.json", "w1_manifest_id": "och-obs-1-w1-2026-09-30-pass16-harness-eval-run02-fix", "w1_pass_id": "w1-pass-016-harness-eval-run02-fix"},
+  "preconditions": {"neutral_registry_revision": "9529f5e2c3e326ead47a789afa0ca367e54fb69c", "source_identity_present": true, "registry_identity_check": "all routed IDs were admitted by W1 record-specific validation and are present in the generated neutral registry at the execution revision", "prior_governing_w2_artifact_found": false},
+  "evidence": {
+    "benchmark": "kenhia/harness-eval@7d3f74fe47f48db67c9ab0489ad4ba9170922f12:_eval/run_02/FIX-ROUND.md",
+    "copilot_1_0_71": "github/copilot-cli@95a1abac0b87a871d3d697d9226ec51032716ec7 (tag v1.0.71)",
+    "claude_2_1_211": "anthropics/claude-code@7152261a408d61fa8149072754a0c4c47765f27a (tag v2.1.211)",
+    "overlay_note": "the recovery round preserves run_02 harness identities; StarterKit, Phoenix, kprojects and gstack remain without supportable immutable public overlay bindings"
+  },
+  "decisions": [
+    {"observation_id": "copilot-atv-starterkit__harness-eval-feedhub-run02-fix__claude-opus-4.8__7d3f74fe", "linkage_state": "unresolved", "grade": "L3", "historical_identity": {"base_runner_version": "1.0.71", "base_runner_revision": "95a1abac0b87a871d3d697d9226ec51032716ec7", "overlay_version": "2.6.3", "overlay_revision": null}, "basis": "base runner is exact but exercised StarterKit overlay is not immutably bound"},
+    {"observation_id": "copilot-atv-phoenix__harness-eval-feedhub-run02-fix__claude-opus-4.8__7d3f74fe", "linkage_state": "unresolved", "grade": "L3", "historical_identity": {"base_runner_version": "1.0.71", "base_runner_revision": "95a1abac0b87a871d3d697d9226ec51032716ec7", "overlay_revision": null}, "basis": "valid Phoenix rerun is preserved, but immutable overlay implementation identity is unresolved"},
+    {"observation_id": "copilot-kprojects__harness-eval-feedhub-run02-fix__claude-opus-4.8__7d3f74fe", "linkage_state": "unresolved", "grade": "L3", "historical_identity": {"base_runner_version": "1.0.71", "base_runner_revision": "95a1abac0b87a871d3d697d9226ec51032716ec7", "overlay_source_label": "kprojects@b3c5af8", "overlay_revision": null}, "basis": "short overlay revision label could not be independently resolved to an immutable public object"},
+    {"observation_id": "copilot-bare__harness-eval-feedhub-run02-fix__claude-opus-4.8__7d3f74fe", "linkage_state": "exact-historical-match", "grade": "L1", "historical_identity": {"base_runner_version": "1.0.71", "base_runner_revision": "95a1abac0b87a871d3d697d9226ec51032716ec7", "overlay": null}, "basis": "bare control uses exact Copilot CLI version resolved to immutable tag commit"},
+    {"observation_id": "claude-code-gstack__harness-eval-feedhub-run02-fix__claude-opus-4-8__7d3f74fe", "linkage_state": "unresolved", "grade": "L3", "historical_identity": {"base_runner_version": "2.1.211", "base_runner_revision": "7152261a408d61fa8149072754a0c4c47765f27a", "overlay_version": "1.60.1.0", "overlay_revision": null}, "basis": "base Claude Code revision is exact but exercised gstack overlay revision is not published"},
+    {"observation_id": "claude-code__harness-eval-feedhub-run02-fix__claude-opus-4-8__7d3f74fe", "canonical_harness_id": "claude-code", "linkage_state": "exact-historical-match", "grade": "L1", "historical_identity": {"base_runner_version": "2.1.211", "base_runner_revision": "7152261a408d61fa8149072754a0c4c47765f27a", "overlay": null}, "basis": "bare Claude Code control uses exact source-recorded CLI version resolved to immutable tag commit"}
+  ],
+  "summary": {"L1": 2, "L2": 0, "L3": 4},
+  "boundary": {"w3": false, "w4": false, "statistics": false, "outcome_interpretation": false, "paper_claims": false}
+}
