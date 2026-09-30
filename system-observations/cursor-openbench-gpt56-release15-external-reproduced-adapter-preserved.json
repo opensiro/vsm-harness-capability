@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Cursor CLI in OpenBench GPT-5.6 15-task release matrix",
+  "canonical_harness_id": null,
+  "published_implementation": {"system_compatibility": "adapter-preserved", "historical_relation": "OpenBench release matrix exercises the native Cursor CLI in isolated benchmark workspaces. The release source was archived at f0400e46, scrubbed at b17a5435 without changing integrity fields, and provenance/task digests were completed at c85834bc."},
+  "primary_sources": [
+    "https://github.com/minghinmatthewlam/openbench/blob/c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a/docs/releases/2026-07-21-gpt56/index.html",
+    "https://github.com/minghinmatthewlam/openbench/blob/c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a/docs/releases/2026-07-21-gpt56/results.jsonl",
+    "https://github.com/minghinmatthewlam/openbench/blob/c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a/docs/releases/2026-07-21-gpt56/provenance.json",
+    "https://github.com/minghinmatthewlam/openbench/blob/c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a/data/gpt56-2026-07-21/methodology.md"
+  ],
+  "observations": [{
+    "observation_id": "cursor__openbench-gpt56-release15__gpt-5.6-sol__c85834bc",
+    "kind": "system-benchmark-result-from-release-counts",
+    "benchmark": {"family_id": "openbench-gpt56-release15", "name": "OpenBench GPT-5.6 15-task release matrix", "variant": "cursor-gpt-5.6-sol", "task_count": 15, "primary_source": "https://github.com/minghinmatthewlam/openbench/blob/c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a/docs/releases/2026-07-21-gpt56/index.html", "artifact_source": "https://github.com/minghinmatthewlam/openbench/blob/c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a/docs/releases/2026-07-21-gpt56/results.jsonl"},
+    "result": {"date": "2026-07-20", "published_snapshot_date": "2026-07-21", "provenance_completion_date": "2026-07-23", "agent_label": "cursor", "harness_version": null, "harness_revision": null, "benchmark_revision": "c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a", "source_archive_revision": "f0400e4698a16742b2cb290bd4f4ca07b9d01142", "source_scrub_revision": "b17a54351fd6e4a5a909b70aef5bdabc3ecbe27b", "model": "gpt-5.6-sol", "model_config": "Published canonical gpt-5.6-sol via Cursor's own hosted deployment; harness defaults; exact service-side checkpoint/sampling not independently pinned.", "metric": "source_hack_adjusted_countable_success_rate", "value": 0.8604651163, "successes": 37, "countable_rows": 43, "scheduled_rows": 45, "excluded_infra_or_rate_limited_rows": 2, "task_count": 15, "trials_per_task": 3},
+    "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "executed-version-unavailable-source-reported"},
+    "provenance": {"publisher": "OpenBench / minghinmatthewlam", "checked": true, "raw_run_artifacts_public": true, "public_trajectories": false, "public_result_surface": "scrubbed release results JSONL, release page, and SHA-bound provenance/task digests", "execution_environment": "15 admission-gated tasks; n=3 trials per harness/task; 2400 second timeout; deterministic checkers; source hack-adjusted scoring; infra and rate_limited rows excluded from countable denominator"},
+    "comparison": {"group": "openbench-gpt56-release15__gpt-5.6-sol__c85834bc", "mode": "candidate-same-model", "scope": "coding-agent-swe"},
+    "unknown_dimensions": ["exact service-side checkpoint beyond published canonical gpt-5.6-sol identity", "harness-specific default sampling/settings were deliberately not clamped by the source", "provider/account-side routing and load state", "Cursor serving path differs from the subscription endpoint used by the source six-arm methodology group"],
+    "notes": "W1 preserves the source's hack-adjusted countable correctness surface only. The source reports no Cursor CLI version and explicitly states Cursor uses its own hosted GPT-5.6 deployment. No ranking, confidence-interval interpretation, or efficiency claim is promoted."
+  }]
+}
