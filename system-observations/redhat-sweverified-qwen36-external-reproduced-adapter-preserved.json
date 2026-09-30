@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Coding Agent Bench Qwen3.6 SWE-bench Verified matrix",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "adapter-preserved",
+    "historical_relation": "The source runs named coding harnesses through Harbor against one self-hosted RedHatAI/Qwen3.6-35B-A3B-NVFP4 deployment. W1 preserves source harness labels without historical canonical linkage."
+  },
+  "primary_sources": [
+    "https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/README.md",
+    "https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Qwen3.6_35b_NVFP4_Pi.md",
+    "https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Qwen3.6_35b_NVFP4_Qwen_Code.md",
+    "https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Qwen3.6_35b_NVFP4_Claude_Code.md",
+    "https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Qwen3.6_35b_NVFP4_OpenClaw.md",
+    "https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Qwen3.6_35b_NVFP4_OpenCode.md"
+  ],
+  "observations": [
+    {
+      "observation_id": "pi__redhat-sweverified500__qwen3.6-35b-a3b-nvfp4__1389cc6e",
+      "kind": "system-benchmark-result",
+      "benchmark": {"name":"SWE-bench Verified 500-task Harbor run","version":"source-500-task-snapshot","primary_source":"https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Qwen3.6_35b_NVFP4_Pi.md","artifact_source":"https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Qwen3.6_35b_NVFP4_Pi.md"},
+      "result": {"job_name":"2026-05-08__08-38-16","model":"RedHatAI/Qwen3.6-35B-A3B-NVFP4","harness_label":"Pi","metric":"source_pass_at_1","value":0.65,"task_count":500,"success_count":325,"initial_error_count":6,"estimated_cost_usd":38.16},
+      "execution": {"environment":"Docker via Harbor","hardware":"2x A100 40GB","model_max_len":262144,"generation_defaults":{"temperature":1.0,"top_p":0.95,"top_k":20},"attempts":1,"concurrency":9,"evaluator":"SWE-bench Verified verifier through Harbor","model_serving":"self-hosted vLLM","human_intervention":null},
+      "comparison": {"group":"redhat-sweverified500__qwen3.6-35b-a3b-nvfp4__1389cc6e","mode":"fixed-model-candidate","scope":"swe-bench-verified"},
+      "unknown_dimensions":["exact Pi harness version","exact upstream SWE-bench Verified dataset commit; source documentation links the Harbor latest dataset identity rather than an immutable dataset revision"],
+      "notes":"The source summary line reports 325 successes / 169 failures / 4 errors while the embedded result.json reports six errors. W1 preserves the 65.0% score and 500-task identity and does not repair the conflicting error breakdown."
+    },
+    {
+      "observation_id": "qwen-code__redhat-sweverified500__qwen3.6-35b-a3b-nvfp4__1389cc6e",
+      "kind": "system-benchmark-result",
+      "benchmark": {"name":"SWE-bench Verified 500-task Harbor run","version":"source-500-task-snapshot","primary_source":"https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Qwen3.6_35b_NVFP4_Qwen_Code.md","artifact_source":"https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Qwen3.6_35b_NVFP4_Qwen_Code.md"},
+      "result": {"job_name":"2026-05-26__12-57-53","model":"RedHatAI/Qwen3.6-35B-A3B-NVFP4","harness_label":"Qwen Code","metric":"source_pass_at_1","value":0.638,"task_count":500,"initial_error_count":11,"estimated_cost_usd":36.74},
+      "execution": {"environment":"Docker via Harbor","hardware":"2x A100 40GB","model_max_len":262144,"generation_defaults":{"temperature":1.0,"top_p":0.95,"top_k":20},"attempts":1,"concurrency":8,"evaluator":"SWE-bench Verified verifier through Harbor","model_serving":"self-hosted vLLM","human_intervention":null},
+      "comparison": {"group":"redhat-sweverified500__qwen3.6-35b-a3b-nvfp4__1389cc6e","mode":"fixed-model-candidate","scope":"swe-bench-verified"},
+      "unknown_dimensions":["exact Qwen Code harness version","exact upstream SWE-bench Verified dataset commit","the source run was resumed for selected setup/agent errors; W1 does not reconstruct per-task resume history"]
+    },
+    {
+      "observation_id": "claude-code__redhat-sweverified500__qwen3.6-35b-a3b-nvfp4__1389cc6e",
+      "kind": "system-benchmark-result",
+      "benchmark": {"name":"SWE-bench Verified 500-task Harbor run","version":"source-500-task-snapshot","primary_source":"https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Qwen3.6_35b_NVFP4_Claude_Code.md","artifact_source":"https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Qwen3.6_35b_NVFP4_Claude_Code.md"},
+      "result": {"job_name":"2026-04-29__15-15-07","model":"RedHatAI/Qwen3.6-35B-A3B-NVFP4","harness_label":"Claude Code","metric":"source_pass_at_1","value":0.632,"task_count":500,"success_count":316,"initial_error_count":1,"estimated_cost_usd":48.0},
+      "execution": {"environment":"Docker via Harbor","hardware":"2x A100 40GB","model_max_len":262144,"generation_defaults":{"temperature":1.0,"top_p":0.95,"top_k":20},"attempts":1,"evaluator":"SWE-bench Verified verifier through Harbor","model_serving":"self-hosted vLLM","human_intervention":null},
+      "comparison": {"group":"redhat-sweverified500__qwen3.6-35b-a3b-nvfp4__1389cc6e","mode":"fixed-model-candidate","scope":"swe-bench-verified"},
+      "unknown_dimensions":["exact Claude Code harness version","exact upstream SWE-bench Verified dataset commit"]
+    },
+    {
+      "observation_id": "openclaw__redhat-sweverified500__qwen3.6-35b-a3b-nvfp4__1389cc6e",
+      "kind": "system-benchmark-result",
+      "benchmark": {"name":"SWE-bench Verified 500-task Harbor run","version":"source-500-task-snapshot","primary_source":"https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Qwen3.6_35b_NVFP4_OpenClaw.md","artifact_source":"https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Qwen3.6_35b_NVFP4_OpenClaw.md"},
+      "result": {"job_name":"2026-05-06__09-29-06","model":"RedHatAI/Qwen3.6-35B-A3B-NVFP4","harness_label":"OpenClaw","metric":"source_pass_at_1","value":0.588,"task_count":500,"initial_error_count":41,"estimated_cost_usd":33.44},
+      "execution": {"environment":"Docker via Harbor","hardware":"2x A100 40GB","model_max_len":262144,"generation_defaults":{"temperature":1.0,"top_p":0.95,"top_k":20},"attempts":1,"evaluator":"SWE-bench Verified verifier through Harbor","model_serving":"self-hosted vLLM","human_intervention":null},
+      "comparison": {"group":"redhat-sweverified500__qwen3.6-35b-a3b-nvfp4__1389cc6e","mode":"fixed-model-candidate","scope":"swe-bench-verified"},
+      "unknown_dimensions":["exact OpenClaw harness version","exact upstream SWE-bench Verified dataset commit"],
+      "notes":"The source file name and Harness field identify OpenClaw, while the Markdown H1 mistakenly says OpenCode. W1 preserves the explicit Harness field as the run identity and records the heading discrepancy."
+    },
+    {
+      "observation_id": "opencode__redhat-sweverified500__qwen3.6-35b-a3b-nvfp4__1389cc6e",
+      "kind": "system-benchmark-result",
+      "benchmark": {"name":"SWE-bench Verified 500-task Harbor run","version":"source-500-task-snapshot","primary_source":"https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Qwen3.6_35b_NVFP4_OpenCode.md","artifact_source":"https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Qwen3.6_35b_NVFP4_OpenCode.md"},
+      "result": {"job_name":"2026-05-06__09-29-06","model":"RedHatAI/Qwen3.6-35B-A3B-NVFP4","harness_label":"OpenCode","metric":"source_pass_at_1","value":0.548,"task_count":500,"success_count":274,"initial_error_count":52,"estimated_cost_usd":66.53},
+      "execution": {"environment":"Docker via Harbor","hardware":"2x A100 40GB","model_max_len":262144,"generation_defaults":{"temperature":1.0,"top_p":0.95,"top_k":20},"attempts":1,"evaluator":"SWE-bench Verified verifier through Harbor","model_serving":"self-hosted vLLM","human_intervention":null},
+      "comparison": {"group":"redhat-sweverified500__qwen3.6-35b-a3b-nvfp4__1389cc6e","mode":"fixed-model-candidate","scope":"swe-bench-verified"},
+      "unknown_dimensions":["exact OpenCode harness version","exact upstream SWE-bench Verified dataset commit"],
+      "notes":"The source summary reports 274 successes / 225 failures / 4 errors, which does not arithmetically sum to the stated 500-task population. W1 retains the published 54.8% score and does not infer a corrected breakdown."
+    }
+  ]
+}
