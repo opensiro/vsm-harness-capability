@@ -87,19 +87,53 @@
       "detail": "Renderer, repository validators, pass-40 admission checks, and existing live admission checks passed; generated registry views were uploaded as workflow artifact 11107102502."
     },
     {
-      "event": "blocked-workflow-token-registry-push",
+      "event": "non-fast-forward-generated-registry-push",
       "run_number": 377,
       "run_id": 36738446495,
       "head_sha": "53e898ebb3f5dc02f250ccd9dab1db906a75a166",
       "conclusion": "failure",
       "evidence_rejected": false,
-      "detail": "Registry regeneration succeeded, but the temporary GitHub Actions bot push was blocked before repository/admission steps. The branch was restored to its prior read-only validation surface; no raw evidence changed."
+      "detail": "Registry regeneration succeeded and the workflow token had contents:write, but actions/checkout had checked out the synthetic PR merge ref while the branch head advanced. The resulting generated commit could not fast-forward the PR branch. No raw evidence changed."
     },
     {
       "event": "read-only-surface-restored",
       "run_number": 378,
       "run_id": 36738858140,
       "head_sha": "605c4f6bbc3598578f54c890fb4ff7df453ad42b",
+      "conclusion": "success"
+    },
+    {
+      "event": "standard-validation-before-materialization",
+      "run_number": 380,
+      "run_id": 36739458077,
+      "head_sha": "d16058ea96ac4e141cb484e83078a73a59afb571",
+      "conclusion": "failure",
+      "evidence_rejected": false,
+      "detail": "Standard repository validation correctly failed because append-only raw observations had been added while generated registry views were still stale."
+    },
+    {
+      "event": "exact-head-registry-materialization-and-admission",
+      "run_number": 383,
+      "run_id": 36746967891,
+      "head_sha": "f267aafa8ee2d83523f789b94f5e29f74ae15de7",
+      "generated_registry_head_sha": "b31a3af7b42f3d5ee9979289679073c16d6bf12a",
+      "conclusion": "success",
+      "detail": "The temporary workflow checked out the exact PR head branch, rendered 296 observations, fast-forwarded the generated registry commit, passed repository validators, pass-40 admission checks, and the existing live admission path."
+    },
+    {
+      "event": "bot-generated-workflow-run",
+      "run_number": 384,
+      "run_id": 36746995636,
+      "head_sha": "b31a3af7b42f3d5ee9979289679073c16d6bf12a",
+      "conclusion": "action_required",
+      "evidence_rejected": false,
+      "detail": "GitHub did not automatically execute the workflow for the bot-authored generated-registry commit; this was superseded by explicit restoration of the standard workflow and a fresh read-only validation."
+    },
+    {
+      "event": "standard-read-only-validation-restored",
+      "run_number": 385,
+      "run_id": 36747074095,
+      "head_sha": "cc48a20015431010a84e12cc7dd5252e34c71f39",
       "conclusion": "success"
     }
   ],
@@ -121,10 +155,13 @@
     }
   ],
   "validation": {
-    "status": "pending-registry-materialization",
-    "expected_registry_observation_count_after": 296,
+    "status": "passed",
+    "registry_observation_count_after": 296,
     "validated_generated_registry_artifact_id": 11107102502,
-    "evidence_admission_run": 36736341075
+    "evidence_admission_run": 36746967891,
+    "generated_registry_head_sha": "b31a3af7b42f3d5ee9979289679073c16d6bf12a",
+    "standard_read_only_validation_run": 36747074095,
+    "standard_workflow_blob_sha": "244ad9701f41e6122f37c0676a00e705cddd622f"
   },
   "handoff_boundary": {
     "structural_classification_performed": false,
