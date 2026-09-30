@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "manifest_id": "och-obs-1-w1-2026-09-30-pass50-workflow-arena-core-panel",
+  "recorded_at": "2026-09-30",
+  "work_item": {
+    "repository": "opensiro/vsm-harness-capability",
+    "issue": 93,
+    "role": "W1 public-evidence discovery and neutral admission"
+  },
+  "protocol": {
+    "id": "OCH-OBS-1",
+    "version": "1.0.0",
+    "repository": "opensiro/vsm-harness-research",
+    "revision": "5462ffadffd7189ae10e44e22d357bc6162a6038",
+    "collection_cutoff_utc": "2026-10-20T23:59:59Z"
+  },
+  "checkpoint_parent": {
+    "capability_main_revision": "6eacb1127b9eaf5c40e83b110b3849438003de07",
+    "registry_observation_count_before": 304,
+    "prior_handoffs_mutated": false
+  },
+  "collection_state": {
+    "status": "active",
+    "pass_number": 50,
+    "cutoff_reached": false,
+    "note": "Issue #93 remains active through the frozen collection cutoff."
+  },
+  "discovery_pass": {
+    "pass_id": "w1-pass-050-workflow-arena-core-panel",
+    "method": "Direction-blind discovery of committed Workflow Arena aggregate reports and methodology. W1 admitted five workflow arms sharing the source-reported primary model, high reasoning setting, eight-task diagnostic panel, three runs per task, and blinded-judge aggregation. MatrixSpec arms were not included because the source documents a different operator interaction protocol and retrospective representative-arm selection.",
+    "source_repository": "https://github.com/kvenux/workflow-arena",
+    "source_revision": "40c7baee163c54b66ad0b8f8091c330cf5ef6b6a",
+    "source_matrix": "reports/capability-task-score-matrix.csv",
+    "source_methodology": "reports/agentic-coding-workflows-technical-manuscript.md",
+    "benchmark_surface": "eight frozen repository-level coding tasks; five admitted Codex CLI workflow arms; three independent candidate runs per task/arm",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": "high",
+    "task_count": 8,
+    "repetitions_per_task": 3,
+    "candidate_runs_per_arm": 24
+  },
+  "reused_existing_observation_ids": [],
+  "newly_admitted_observation_ids": [
+    "workflow-arena-bare__core8__gpt-5.6-terra-high__40c7baee",
+    "workflow-arena-superpowers-6.1.1__core8__gpt-5.6-terra-high__40c7baee",
+    "workflow-arena-grill-me__core8__gpt-5.6-terra-high__40c7baee",
+    "workflow-arena-openspec-core__core8__gpt-5.6-terra-high__40c7baee",
+    "workflow-arena-ponytail-full__core8__gpt-5.6-terra-high__40c7baee"
+  ],
+  "candidate_comparison_groups": [
+    {
+      "group_id": "workflow-arena-core8__gpt-5.6-terra-high__40c7baee",
+      "observation_ids": [
+        "workflow-arena-bare__core8__gpt-5.6-terra-high__40c7baee",
+        "workflow-arena-superpowers-6.1.1__core8__gpt-5.6-terra-high__40c7baee",
+        "workflow-arena-grill-me__core8__gpt-5.6-terra-high__40c7baee",
+        "workflow-arena-openspec-core__core8__gpt-5.6-terra-high__40c7baee",
+        "workflow-arena-ponytail-full__core8__gpt-5.6-terra-high__40c7baee"
+      ],
+      "source_known_dimensions": [
+        "primary model gpt-5.6-terra",
+        "high reasoning",
+        "same eight named diagnostic tasks",
+        "three independent candidate runs per task and arm",
+        "Codex CLI candidate runtime",
+        "candidate network and web search disabled",
+        "isolated worktrees and CODEX_HOME",
+        "two treatment-label-blinded model judges",
+        "equal-weight eight-task macro aggregation"
+      ],
+      "explicit_unknown_or_nonidentical_dimensions": [
+        "exact Codex CLI build/version across all historical campaigns",
+        "aggregate matrix does not carry each task baseline commit identifier",
+        "campaign-recorded timing semantics are not fully uniform across historical campaigns",
+        "workflow arms differ by injected capability and some use Ground Truth operator interaction",
+        "full source commits for Grill Me, OpenSpec, and Ponytail are exposed only as short prefixes in the public methodology"
+      ],
+      "paper_eligibility": "not-assessed-by-W1"
+    }
+  ],
+  "provenance_strength": {
+    "repository_revision_pinned": true,
+    "machine_readable_aggregate_matrix_committed": true,
+    "methodology_committed": true,
+    "task_panel_named": true,
+    "model_and_reasoning_reported": true,
+    "repetition_count_reported": true,
+    "blinded_evaluation_reported": true,
+    "run_level_core_matrix_fully_normalized_in_one_public_table": false,
+    "single_randomized_scheduler_batch": false
+  },
+  "non_admission_dispositions": [
+    {
+      "surface": "MatrixSpec L0/L1/S0/S1 horizontal comparisons",
+      "status": "deferred",
+      "reason": "The public methodology documents a different artifact-audit operator protocol and retrospective representative-arm selection; W1 does not silently fold those arms into this five-arm comparison group."
+    },
+    {
+      "surface": "Workflow Arena author interpretations and quality/cost winner language",
+      "status": "not-promoted-by-W1",
+      "reason": "W1 preserves the reported raw panel metrics and source limitations without adopting rankings, mechanism claims, or general-performance conclusions."
+    },
+    {
+      "surface": "component-level causal effects inside Superpowers or other workflow packs",
+      "status": "not-promoted-by-W1",
+      "reason": "The core panel compares bundled workflow treatments and is not a component-randomized experiment."
+    }
+  ],
+  "protocol_deviations_and_failures": [],
+  "validation": {
+    "status": "pending",
+    "registry_observation_count_after": null,
+    "evidence_admission_run": null,
+    "generated_registry_head_sha": null,
+    "standard_read_only_validation_run": null,
+    "standard_workflow_blob_sha": "244ad9701f41e6122f37c0676a00e705cddd622f"
+  },
+  "handoff_boundary": {
+    "structural_classification_performed": false,
+    "historical_linkage_adjudicated": false,
+    "matched_cell_eligibility_assigned": false,
+    "comparison_tier_assigned": false,
+    "statistical_interpretation_performed": false,
+    "winner_declared": false,
+    "paper_claim_made": false
+  }
+}
