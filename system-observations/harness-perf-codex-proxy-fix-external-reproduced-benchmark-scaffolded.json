@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "harness-perf-benchmark codex-proxy-fix external harnesses",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "benchmark-scaffolded",
+    "historical_relation": "The benchmark publisher executes released third-party coding harness CLIs against a local scripted mock through harness-specific provider/protocol adapters and isolated configuration directories. These are real harness processes under a benchmark scaffold, not model-backed task-quality runs."
+  },
+  "primary_sources": [
+    "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/README.md",
+    "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/docs/perf-compare.md",
+    "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/scripts/perf/score.ts"
+  ],
+  "observations": [
+    {
+      "observation_id": "pi__harness-perf-codex-proxy-fix__scripted-mock__e89a895a",
+      "kind": "harness-resource-overhead-benchmark-result",
+      "benchmark": {
+        "name": "harness-perf-benchmark codex-proxy-fix batch",
+        "primary_source": "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/README.md",
+        "artifact_source": "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/docs/perf-compare.md"
+      },
+      "result": {
+        "date": "2026-09-19",
+        "batch_label": "codex-proxy-fix",
+        "harness": "pi",
+        "harness_version": "0.85.1",
+        "model": null,
+        "model_surface": "local scripted llm-mock; no real model inference",
+        "primary_metric": "source_beta_cu_1to1",
+        "primary_value": 1.271,
+        "cpu_mean_percent": 65.5,
+        "cpu_peak_percent": 128.8,
+        "rss_mean_mb": 186.2,
+        "rss_peak_mb": 234.4
+      },
+      "execution": {
+        "workload": "100 scripted tool-use turns with approximately 4 KB response content per turn; pi uses a harness-specific generated script long enough to exercise 100 tool rounds",
+        "mock": "local scripted mock endpoint with harness-matched protocol and tool schema; no model inference, network latency, GPU, or external service resources included",
+        "machine": "macOS; Apple Silicon; 18 cores; source reports batch load average 2.9-3.8",
+        "sampling_interval_ms": 100,
+        "sampling_scope": "harness process tree via proc_pid_rusage",
+        "runs": 3,
+        "aggregation": "median end-to-end run selected from three serial runs",
+        "timeout_ms": 1800000,
+        "reset_policy": "each harness runs in its own isolated playground/configuration sandbox; batch runs were serial",
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "harness-perf-codex-proxy-fix__scripted-mock__e89a895a",
+        "mode": "shared-scripted-mock-resource-overhead",
+        "scope": "harness-process-resource-overhead"
+      },
+      "unknown_dimensions": [
+        "raw per-run data and logs are not committed in the pinned repository tree",
+        "no real model identity exists for this batch",
+        "protocol adapters and tool schemas differ by harness",
+        "the source-defined CU weighting is a beta project metric rather than an external standard"
+      ],
+      "notes": "The source defines CU as 1.0 times measured core-seconds plus 1.0 times measured GB-seconds. W1 preserves the published CU and resource readings without reproducing the source ordering or treating CU as task quality."
+    },
+    {
+      "observation_id": "codex__harness-perf-codex-proxy-fix__scripted-mock__e89a895a",
+      "kind": "harness-resource-overhead-benchmark-result",
+      "benchmark": {
+        "name": "harness-perf-benchmark codex-proxy-fix batch",
+        "primary_source": "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/README.md",
+        "artifact_source": "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/docs/perf-compare.md"
+      },
+      "result": {
+        "date": "2026-09-19",
+        "batch_label": "codex-proxy-fix",
+        "harness": "Codex CLI",
+        "harness_version": "0.155.1",
+        "model": null,
+        "model_surface": "local scripted llm-mock; no real model inference",
+        "primary_metric": "source_beta_cu_1to1",
+        "primary_value": 1.383,
+        "cpu_mean_percent": 10.5,
+        "cpu_peak_percent": 26.0,
+        "rss_mean_mb": 123.4,
+        "rss_peak_mb": 163.7
+      },
+      "execution": {
+        "workload": "100 scripted tool-use turns with approximately 4 KB response content per turn",
+        "mock": "local scripted mock endpoint through the benchmark's OpenAI Responses adapter; no model inference, network latency, GPU, or external service resources included",
+        "machine": "macOS; Apple Silicon; 18 cores; source reports batch load average 2.9-3.8",
+        "sampling_interval_ms": 100,
+        "sampling_scope": "harness process tree via proc_pid_rusage",
+        "runs": 3,
+        "aggregation": "median end-to-end run selected from three serial runs",
+        "timeout_ms": 1800000,
+        "reset_policy": "isolated CODEX_HOME/provider override; batch runs were serial",
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "harness-perf-codex-proxy-fix__scripted-mock__e89a895a",
+        "mode": "shared-scripted-mock-resource-overhead",
+        "scope": "harness-process-resource-overhead"
+      },
+      "unknown_dimensions": [
+        "raw per-run data and logs are not committed in the pinned repository tree",
+        "no real model identity exists for this batch",
+        "protocol adapters and tool schemas differ by harness",
+        "the Codex integration includes a benchmark-side dead-proxy treatment to remove a documented post-run chatgpt.com timeout",
+        "the source-defined CU weighting is a beta project metric rather than an external standard"
+      ],
+      "notes": "The source states that this complete batch was rerun after the Codex proxy treatment so all six unmarked rows remain from one batch. W1 preserves that intervention as a benchmark condition rather than interpreting its effect."
+    },
+    {
+      "observation_id": "claude-code__harness-perf-codex-proxy-fix__scripted-mock__e89a895a",
+      "kind": "harness-resource-overhead-benchmark-result",
+      "benchmark": {
+        "name": "harness-perf-benchmark codex-proxy-fix batch",
+        "primary_source": "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/README.md",
+        "artifact_source": "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/docs/perf-compare.md"
+      },
+      "result": {
+        "date": "2026-09-19",
+        "batch_label": "codex-proxy-fix",
+        "harness": "Claude Code",
+        "harness_version": "2.1.277",
+        "model": null,
+        "model_surface": "local scripted llm-mock; no real model inference",
+        "primary_metric": "source_beta_cu_1to1",
+        "primary_value": 2.828,
+        "cpu_mean_percent": 71.8,
+        "cpu_peak_percent": 122.4,
+        "rss_mean_mb": 310.9,
+        "rss_peak_mb": 351.0
+      },
+      "execution": {
+        "workload": "100 scripted tool-use turns with approximately 4 KB response content per turn",
+        "mock": "local scripted mock endpoint through the benchmark's Anthropic Messages adapter; no model inference, network latency, GPU, or external service resources included",
+        "machine": "macOS; Apple Silicon; 18 cores; source reports batch load average 2.9-3.8",
+        "sampling_interval_ms": 100,
+        "sampling_scope": "harness process tree via proc_pid_rusage",
+        "runs": 3,
+        "aggregation": "median end-to-end run selected from three serial runs",
+        "timeout_ms": 1800000,
+        "reset_policy": "isolated HOME and CLAUDE_CONFIG_DIR; batch runs were serial",
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "harness-perf-codex-proxy-fix__scripted-mock__e89a895a",
+        "mode": "shared-scripted-mock-resource-overhead",
+        "scope": "harness-process-resource-overhead"
+      },
+      "unknown_dimensions": [
+        "raw per-run data and logs are not committed in the pinned repository tree",
+        "no real model identity exists for this batch",
+        "protocol adapters and tool schemas differ by harness",
+        "the source-defined CU weighting is a beta project metric rather than an external standard"
+      ],
+      "notes": "The observed resource measurements cover the harness process tree under the benchmark's scripted mock workload; they are not a correctness or capability outcome."
+    },
+    {
+      "observation_id": "deepseek-harness__harness-perf-codex-proxy-fix__scripted-mock__e89a895a",
+      "kind": "harness-resource-overhead-benchmark-result",
+      "benchmark": {
+        "name": "harness-perf-benchmark codex-proxy-fix batch",
+        "primary_source": "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/README.md",
+        "artifact_source": "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/docs/perf-compare.md"
+      },
+      "result": {
+        "date": "2026-09-19",
+        "batch_label": "codex-proxy-fix",
+        "harness": "DeepSeek Harness (dsh)",
+        "harness_version": "0.1.5-rc.2",
+        "model": null,
+        "model_surface": "local scripted llm-mock; no real model inference",
+        "primary_metric": "source_beta_cu_1to1",
+        "primary_value": 3.101,
+        "cpu_mean_percent": 46.3,
+        "cpu_peak_percent": 128.0,
+        "rss_mean_mb": 185.6,
+        "rss_peak_mb": 231.2
+      },
+      "execution": {
+        "workload": "100 scripted tool-use turns with approximately 4 KB response content per turn",
+        "mock": "local scripted mock endpoint through an OpenAI Chat Completions integration; no model inference, network latency, GPU, or external service resources included",
+        "machine": "macOS; Apple Silicon; 18 cores; source reports batch load average 2.9-3.8",
+        "sampling_interval_ms": 100,
+        "sampling_scope": "harness process tree via proc_pid_rusage",
+        "runs": 3,
+        "aggregation": "median end-to-end run selected from three serial runs",
+        "timeout_ms": 1800000,
+        "reset_policy": "isolated DSH_HOME/provider environment; batch runs were serial",
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "harness-perf-codex-proxy-fix__scripted-mock__e89a895a",
+        "mode": "shared-scripted-mock-resource-overhead",
+        "scope": "harness-process-resource-overhead"
+      },
+      "unknown_dimensions": [
+        "raw per-run data and logs are not committed in the pinned repository tree",
+        "no real model identity exists for this batch",
+        "protocol adapters and tool schemas differ by harness",
+        "the source-defined CU weighting is a beta project metric rather than an external standard"
+      ],
+      "notes": "The observed resource measurements cover the harness process tree under the benchmark's scripted mock workload; they are not a correctness or capability outcome."
+    },
+    {
+      "observation_id": "minimax-code__harness-perf-codex-proxy-fix__scripted-mock__e89a895a",
+      "kind": "harness-resource-overhead-benchmark-result",
+      "benchmark": {
+        "name": "harness-perf-benchmark codex-proxy-fix batch",
+        "primary_source": "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/README.md",
+        "artifact_source": "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/docs/perf-compare.md"
+      },
+      "result": {
+        "date": "2026-09-19",
+        "batch_label": "codex-proxy-fix",
+        "harness": "MiniMax Code",
+        "harness_version": "0.4.12",
+        "model": null,
+        "model_surface": "local scripted llm-mock; no real model inference",
+        "primary_metric": "source_beta_cu_1to1",
+        "primary_value": 31.995,
+        "cpu_mean_percent": 98.1,
+        "cpu_peak_percent": 177.8,
+        "rss_mean_mb": 617.6,
+        "rss_peak_mb": 892.0
+      },
+      "execution": {
+        "workload": "100 scripted tool-use turns with approximately 4 KB response content per turn",
+        "mock": "local scripted mock endpoint through an OpenAI Chat Completions integration; no model inference, network latency, GPU, or external service resources included",
+        "machine": "macOS; Apple Silicon; 18 cores; source reports batch load average 2.9-3.8",
+        "sampling_interval_ms": 100,
+        "sampling_scope": "harness process tree via proc_pid_rusage",
+        "runs": 3,
+        "aggregation": "median end-to-end run selected from three serial runs",
+        "timeout_ms": 1800000,
+        "reset_policy": "isolated MINIMAX_DATA_DIR/provider configuration; batch runs were serial",
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "harness-perf-codex-proxy-fix__scripted-mock__e89a895a",
+        "mode": "shared-scripted-mock-resource-overhead",
+        "scope": "harness-process-resource-overhead"
+      },
+      "unknown_dimensions": [
+        "raw per-run data and logs are not committed in the pinned repository tree",
+        "no real model identity exists for this batch",
+        "protocol adapters and tool schemas differ by harness",
+        "the source-defined CU weighting is a beta project metric rather than an external standard"
+      ],
+      "notes": "The observed resource measurements cover the harness process tree under the benchmark's scripted mock workload; they are not a correctness or capability outcome."
+    }
+  ]
+}
