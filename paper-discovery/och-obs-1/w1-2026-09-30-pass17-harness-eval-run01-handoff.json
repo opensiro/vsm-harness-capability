@@ -55,6 +55,14 @@
     {"surface": "cross-runner seven-way field", "status": "not-pooled-by-W1", "reason": "Copilot CLI and Claude Code are explicit runner covariates with non-comparable efficiency units and unpinned tool-build equality; W1 routes runner-family groups separately."},
     {"surface": "source subjective/consensus weighted ranking", "status": "preserved-only-as-auxiliary-telemetry", "reason": "W1 admits the factual objective 12/12 acceptance results but does not reproduce or adopt the source's ordering as a W1 conclusion."}
   ],
-  "validation": {"status": "pending", "registry_observation_count_after": 179, "commands_required": ["python system-observations/render_registry.py", "python scripts/admission_check.py <each of seven pass-17 raw records>", "python scripts/validate_repository.py"], "results": []},
+  "validation": {
+    "status": "success",
+    "registry_observation_count_after": 179,
+    "commands_required": ["python system-observations/render_registry.py", "python scripts/admission_check.py <each of seven pass-17 raw records>", "python scripts/validate_repository.py"],
+    "results": [
+      {"workflow_run_id": 36651917333, "run_number": 242, "head_before_bot_registry_commit": "248305730b98b37e5d7076eb6f20560fd3d8abea", "result": "success", "scope": "temporary write-enabled registry regeneration plus repository validation and seven record-specific admission checks"},
+      {"workflow_run_id": 36651995396, "run_number": 244, "head": "441e5baa113fea4e2573ab783ca9521b4f62eadc", "result": "success", "scope": "standard read-only validation after restoring workflow blob 244ad9701f41e6122f37c0676a00e705cddd622f"}
+    ]
+  },
   "handoff_boundary": {"structural_classification_performed": false, "historical_linkage_adjudicated": false, "comparison_tier_assigned": false, "statistical_interpretation_performed": false, "winner_declared": false}
 }
