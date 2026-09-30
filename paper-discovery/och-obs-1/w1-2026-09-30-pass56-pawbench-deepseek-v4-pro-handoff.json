@@ -95,6 +95,19 @@
       "event": "openclaw-source-counter-inconsistency",
       "scope": "OpenClaw observation",
       "detail": "The committed source reports tasks=150 and tasks_total=150 while also reporting tasks_missing=3. W1 preserves all counters verbatim and does not repair the source."
+    },
+    {
+      "event": "generated-view-git-push-failure",
+      "run_number": 433,
+      "run_id": 36766353264,
+      "head_sha": "4e3b14e203e8d418c3335b72bfe5942cc91a215b",
+      "conclusion": "failure",
+      "detail": "Registry rendering succeeded, but the temporary workflow failed while attempting to push generated views. Repository and live-admission steps were therefore not reached in this run; no evidence rejection occurred."
+    },
+    {
+      "event": "split-generated-view-persistence",
+      "run_numbers": [435, 437, 438],
+      "detail": "The contents-API persistence path first committed registry.psv and then encountered a large-shell-argument failure for REGISTRY.md. Payload construction was changed to file-based Python encoding; run 438 then persisted the remaining generated view and completed all validation and live-admission steps successfully."
     }
   ],
   "non_admission_dispositions": [
@@ -110,9 +123,63 @@
     }
   ],
   "validation": {
-    "status": "pending",
-    "registry_observation_count_after": null,
-    "results": []
+    "status": "passed",
+    "registry_observation_count_after": 329,
+    "results": [
+      {
+        "kind": "initial-generated-view-push-control-failure",
+        "run_number": 433,
+        "run_id": 36766353264,
+        "head_sha": "4e3b14e203e8d418c3335b72bfe5942cc91a215b",
+        "conclusion": "failure",
+        "evidence_rejected": false
+      },
+      {
+        "kind": "worktree-render-and-live-admission-run",
+        "run_number": 434,
+        "run_id": 36766494431,
+        "head_sha": "a23f36d5efd6a9416defc67ba8b478e58a97353b",
+        "conclusion": "success"
+      },
+      {
+        "kind": "partial-generated-registry-persistence",
+        "run_number": 435,
+        "run_id": 36766711493,
+        "head_sha": "6552a82347118b4b07117bd5bd358e8bdcaf2ce4",
+        "conclusion": "failure",
+        "generated_registry_psv_commit": "5c51d7b87c54e42a4d627e80fb4b2672a4dc870e",
+        "evidence_rejected": false
+      },
+      {
+        "kind": "large-generated-view-persistence-control-failure",
+        "run_number": 437,
+        "run_id": 36766874726,
+        "head_sha": "1d495645cf57d3f9db9e378f230514485232330a",
+        "conclusion": "failure",
+        "evidence_rejected": false
+      },
+      {
+        "kind": "write-enabled-admission-and-generated-view-run",
+        "run_number": 438,
+        "run_id": 36766996253,
+        "head_sha": "8227df6d7f9a462481d9d7beb771b9d5798a6ba7",
+        "conclusion": "success",
+        "generated_registry_markdown_commit": "5319315220ac082318b66aa0d63bc085b673333d",
+        "observation_count": 329
+      },
+      {
+        "kind": "standard-workflow-restored",
+        "head_sha": "22642ac60956a809e7c68b293f6566f1b9b3debe",
+        "workflow_blob_sha": "244ad9701f41e6122f37c0676a00e705cddd622f"
+      },
+      {
+        "kind": "standard-read-only-validation-run",
+        "run_number": 440,
+        "run_id": 36767112032,
+        "head_sha": "22642ac60956a809e7c68b293f6566f1b9b3debe",
+        "conclusion": "success"
+      }
+    ]
   },
   "handoff_boundary": {
     "structural_classification_performed": false,
