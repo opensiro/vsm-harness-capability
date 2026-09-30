@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "manifest_id": "och-obs-1-w1-2026-09-30-pass17-harness-eval-run01",
+  "recorded_at": "2026-09-30",
+  "work_item": {"repository": "opensiro/vsm-harness-capability", "issue": 93, "role": "W1 public-evidence discovery and neutral admission"},
+  "protocol": {"id": "OCH-OBS-1", "version": "1.0.0", "repository": "opensiro/vsm-harness-research", "revision": "5462ffadffd7189ae10e44e22d357bc6162a6038", "collection_cutoff_utc": "2026-10-20T23:59:59Z"},
+  "checkpoint_parent": {"capability_main_revision": "17764d6e6bf76783e17b7ae38dd114dbd5f6c79f", "registry_observation_count_before": 172, "prior_handoffs_mutated": false},
+  "collection_state": {"status": "active", "documented_discovery_passes_completed_after_this_checkpoint": 17, "cutoff_reached": false},
+  "discovery_pass": {
+    "pass_id": "w1-pass-017-harness-eval-run01",
+    "method": "Direction-blind admission of harness-eval run_01/run_1.5 as a distinct small-greenfield evidence surface. The primary W1 result is the source-adjudicated objective acceptance outcome: all seven cells passed all 12 checks. Source consensus weighted totals and efficiency telemetry are retained only as auxiliary published fields and are not used for W1 ordering.",
+    "source_repository": "https://github.com/kenhia/harness-eval",
+    "source_revision": "7d3f74fe47f48db67c9ab0489ad4ba9170922f12",
+    "run_date": "2026-07-15",
+    "source_artifacts": [
+      "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_01/report/whitepaper.md",
+      "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_01/grades/final.md",
+      "https://github.com/kenhia/harness-eval/tree/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_01/runs",
+      "https://github.com/kenhia/harness-eval/tree/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/run-output/run_01"
+    ]
+  },
+  "reused_existing_observation_ids": [],
+  "newly_admitted_observation_ids": [
+    "copilot-atv-starterkit__harness-eval-loglens-run01__claude-opus-4.8__7d3f74fe",
+    "copilot-atv-phoenix__harness-eval-loglens-run01__claude-opus-4.8__7d3f74fe",
+    "copilot-working-skill-repo__harness-eval-loglens-run01__claude-opus-4.8__7d3f74fe",
+    "copilot-kprojects__harness-eval-loglens-run01__claude-opus-4.8__7d3f74fe",
+    "copilot-bare__harness-eval-loglens-run01__claude-opus-4.8__7d3f74fe",
+    "claude-code-gstack__harness-eval-loglens-run01__claude-opus-4-8__7d3f74fe",
+    "claude-code__harness-eval-loglens-run01__claude-opus-4-8__7d3f74fe"
+  ],
+  "candidate_same_model_comparison_groups": [
+    {
+      "group_id": "harness-eval-loglens-run01__claude-opus-4.8__copilot-cli-family",
+      "observation_ids": [
+        "copilot-atv-starterkit__harness-eval-loglens-run01__claude-opus-4.8__7d3f74fe",
+        "copilot-atv-phoenix__harness-eval-loglens-run01__claude-opus-4.8__7d3f74fe",
+        "copilot-working-skill-repo__harness-eval-loglens-run01__claude-opus-4.8__7d3f74fe",
+        "copilot-kprojects__harness-eval-loglens-run01__claude-opus-4.8__7d3f74fe",
+        "copilot-bare__harness-eval-loglens-run01__claude-opus-4.8__7d3f74fe"
+      ],
+      "source_known_dimensions": ["same GitHub Copilot CLI runner family", "same runlog-reported claude-opus-4.8 model label", "same single host kai and 2026-07-15 field date", "same frozen loglens specification and prompt body", "same objective 12-check acceptance framework after source adjudication", "one trial per cell", "zero interventions"],
+      "explicit_unknown_or_nonidentical_dimensions": ["exact GitHub Copilot CLI build", "exact service-side Claude Opus 4.8 checkpoint/provider route", "harness-specific go command and installed overlay differ by design", "MCP availability is not identical across all cells", "N=1 trajectory variance", "one ambiguous boundary-semantics fixture required source adjudication"],
+      "paper_eligibility": "not-assessed-by-W1"
+    },
+    {
+      "group_id": "harness-eval-loglens-run01__claude-opus-4-8__claude-code-family",
+      "observation_ids": ["claude-code-gstack__harness-eval-loglens-run01__claude-opus-4-8__7d3f74fe", "claude-code__harness-eval-loglens-run01__claude-opus-4-8__7d3f74fe"],
+      "source_known_dimensions": ["same Claude Code runner family", "same runlog-reported claude-opus-4-8 primary model label", "same single host kai and 2026-07-15 field date", "same frozen loglens specification", "same objective 12-check acceptance framework after source adjudication", "one trial per cell", "zero interventions"],
+      "explicit_unknown_or_nonidentical_dimensions": ["exact Claude Code build is formally unrecorded in both run logs", "source says both should match but does not mechanically pin that equality", "exact service-side Claude Opus 4.8 checkpoint", "gstack overlay changes prompt/process/tool use by design", "N=1 trajectory variance"],
+      "paper_eligibility": "not-assessed-by-W1"
+    }
+  ],
+  "non_admission_dispositions": [
+    {"surface": "cross-runner seven-way field", "status": "not-pooled-by-W1", "reason": "Copilot CLI and Claude Code are explicit runner covariates with non-comparable efficiency units and unpinned tool-build equality; W1 routes runner-family groups separately."},
+    {"surface": "source subjective/consensus weighted ranking", "status": "preserved-only-as-auxiliary-telemetry", "reason": "W1 admits the factual objective 12/12 acceptance results but does not reproduce or adopt the source's ordering as a W1 conclusion."}
+  ],
+  "validation": {"status": "pending", "registry_observation_count_after": 179, "commands_required": ["python system-observations/render_registry.py", "python scripts/admission_check.py <each of seven pass-17 raw records>", "python scripts/validate_repository.py"], "results": []},
+  "handoff_boundary": {"structural_classification_performed": false, "historical_linkage_adjudicated": false, "comparison_tier_assigned": false, "statistical_interpretation_performed": false, "winner_declared": false}
+}
