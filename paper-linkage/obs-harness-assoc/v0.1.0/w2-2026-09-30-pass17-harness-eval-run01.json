@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "artifact_id": "obs-harness-assoc-w2-2026-09-30-pass17-harness-eval-run01",
+  "artifact_version": "1.0.0",
+  "recorded_at_utc": "2026-09-30T20:23:00Z",
+  "work_item": {"repository": "opensiro/vsm-harness-capability", "issue": 94, "role": "fresh independent W2 historical system/revision linkage"},
+  "execution": {"capability_start_revision": "9529f5e2c3e326ead47a789afa0ca367e54fb69c", "w2_execution_revision": "9529f5e2c3e326ead47a789afa0ca367e54fb69c", "research_claim_revision": "58c8a08425cb2367e5f59085273997f6ef661dc7", "research_batch_claim": "queue-claims/track-a-batch/W2_LINK/pass14+pass15+pass16+pass17+pass18", "branch": "issue-94-w2-batch-pass14-pass15-pass16-pass17-pass18", "fresh_independent_context": true, "member_key": "pass17", "raw_score_payload_copied": false},
+  "protocol": {"study_id": "OBS-HARNESS-ASSOC", "version": "0.1.0", "protocol_sha256": "17f51d4f35f0eb5a665122238c505ad6c8e3db7c8b937dac7ecbae35a3ac49a4", "grade_mapping": {"exact-historical-match": "L1", "bounded-compatible": "L2", "unresolved": "L3"}, "current_state_substitution_forbidden": true},
+  "upstream": {"w1_issue": 93, "w1_handoff_path": "paper-discovery/och-obs-1/w1-2026-09-30-pass17-harness-eval-run01-handoff.json", "w1_manifest_id": "och-obs-1-w1-2026-09-30-pass17-harness-eval-run01", "w1_pass_id": "w1-pass-017-harness-eval-run01"},
+  "preconditions": {"neutral_registry_revision": "9529f5e2c3e326ead47a789afa0ca367e54fb69c", "source_identity_present": true, "registry_identity_check": "all routed IDs were admitted by W1 record-specific validation and are present in the generated neutral registry at the execution revision", "prior_governing_w2_artifact_found": false},
+  "evidence": {
+    "benchmark": "kenhia/harness-eval@7d3f74fe47f48db67c9ab0489ad4ba9170922f12:_eval/run_01/report/whitepaper.md and run logs",
+    "runner_limitation": "W1 and the frozen source record only Copilot CLI / Claude Code runner families for run_01; exact historical builds are not mechanically pinned",
+    "working_skill_overlay": "Irtechie/working-skill-repo@34804ea1502a5c3ec7a63b97e7a0652b20136564 is independently resolvable, but an exact overlay cannot upgrade a system whose base runner identity remains unresolved"
+  },
+  "decisions": [
+    {"observation_id": "copilot-atv-starterkit__harness-eval-loglens-run01__claude-opus-4.8__7d3f74fe", "linkage_state": "unresolved", "grade": "L3", "historical_identity": {"base_runner_family": "GitHub Copilot CLI", "base_runner_version": null, "overlay_revision": null}, "basis": "exact historical base runner build is unrecorded; current or neighboring run versions are not substituted"},
+    {"observation_id": "copilot-atv-phoenix__harness-eval-loglens-run01__claude-opus-4.8__7d3f74fe", "linkage_state": "unresolved", "grade": "L3", "historical_identity": {"base_runner_family": "GitHub Copilot CLI", "base_runner_version": null, "overlay_revision": null}, "basis": "exact historical base runner build and immutable Phoenix overlay revision are unresolved"},
+    {"observation_id": "copilot-working-skill-repo__harness-eval-loglens-run01__claude-opus-4.8__7d3f74fe", "linkage_state": "unresolved", "grade": "L3", "historical_identity": {"base_runner_family": "GitHub Copilot CLI", "base_runner_version": null, "overlay_repository": "Irtechie/working-skill-repo", "overlay_revision": "34804ea1502a5c3ec7a63b97e7a0652b20136564"}, "basis": "overlay commit is exact, but the exercised system remains unresolved because the base Copilot CLI build is not pinned"},
+    {"observation_id": "copilot-kprojects__harness-eval-loglens-run01__claude-opus-4.8__7d3f74fe", "linkage_state": "unresolved", "grade": "L3", "historical_identity": {"base_runner_family": "GitHub Copilot CLI", "base_runner_version": null, "overlay_revision": null}, "basis": "exact base runner and supportable immutable overlay identities are unresolved"},
+    {"observation_id": "copilot-bare__harness-eval-loglens-run01__claude-opus-4.8__7d3f74fe", "linkage_state": "unresolved", "grade": "L3", "historical_identity": {"base_runner_family": "GitHub Copilot CLI", "base_runner_version": null, "overlay": null}, "basis": "bare system family is known but the exact historical Copilot CLI build is not recorded"},
+    {"observation_id": "claude-code-gstack__harness-eval-loglens-run01__claude-opus-4-8__7d3f74fe", "linkage_state": "unresolved", "grade": "L3", "historical_identity": {"base_runner_family": "Claude Code", "base_runner_version": null, "overlay_version": "1.60.1.0", "overlay_revision": null}, "basis": "source does not mechanically pin the Claude Code build and the gstack overlay revision is also unresolved"},
+    {"observation_id": "claude-code__harness-eval-loglens-run01__claude-opus-4-8__7d3f74fe", "canonical_harness_id": "claude-code", "linkage_state": "unresolved", "grade": "L3", "historical_identity": {"base_runner_family": "Claude Code", "base_runner_version": null, "overlay": null}, "basis": "source says the two Claude-family cells should match but does not mechanically bind the historical CLI build; no neighboring/current version is substituted"}
+  ],
+  "summary": {"L1": 0, "L2": 0, "L3": 7, "terminal_at_w2": true},
+  "boundary": {"w3": false, "w4": false, "statistics": false, "outcome_interpretation": false, "paper_claims": false}
+}

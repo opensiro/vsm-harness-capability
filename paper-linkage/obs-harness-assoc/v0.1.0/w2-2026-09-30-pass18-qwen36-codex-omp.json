@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "artifact_id": "obs-harness-assoc-w2-2026-09-30-pass18-qwen36-codex-omp",
+  "artifact_version": "1.0.0",
+  "recorded_at_utc": "2026-09-30T20:24:00Z",
+  "work_item": {"repository": "opensiro/vsm-harness-capability", "issue": 94, "role": "fresh independent W2 historical system/revision linkage"},
+  "execution": {"capability_start_revision": "9529f5e2c3e326ead47a789afa0ca367e54fb69c", "w2_execution_revision": "9529f5e2c3e326ead47a789afa0ca367e54fb69c", "research_claim_revision": "58c8a08425cb2367e5f59085273997f6ef661dc7", "research_batch_claim": "queue-claims/track-a-batch/W2_LINK/pass14+pass15+pass16+pass17+pass18", "branch": "issue-94-w2-batch-pass14-pass15-pass16-pass17-pass18", "fresh_independent_context": true, "member_key": "pass18", "raw_score_payload_copied": false},
+  "protocol": {"study_id": "OBS-HARNESS-ASSOC", "version": "0.1.0", "protocol_sha256": "17f51d4f35f0eb5a665122238c505ad6c8e3db7c8b937dac7ecbae35a3ac49a4", "grade_mapping": {"exact-historical-match": "L1", "bounded-compatible": "L2", "unresolved": "L3"}, "current_state_substitution_forbidden": true},
+  "upstream": {"w1_issue": 93, "w1_handoff_path": "paper-discovery/och-obs-1/w1-2026-09-30-pass18-qwen36-codex-omp-handoff.json", "w1_manifest_id": "och-obs-1-w1-2026-09-30-pass18-qwen36-codex-omp", "w1_pass_id": "w1-pass-018-qwen36-fp8-codex-omp"},
+  "preconditions": {"neutral_registry_revision": "9529f5e2c3e326ead47a789afa0ca367e54fb69c", "source_identity_present": true, "registry_identity_check": "both routed IDs were admitted by W1 record-specific validation and are present in the generated neutral registry at the execution revision", "prior_governing_w2_artifact_found": false},
+  "evidence": {
+    "benchmark": "aarora79/agentic-coding-harness-benchmarks@04d86ba5fecfbb9d3deadc395efd6014f78397dd",
+    "codex_setup": "docs/codex-setup.md plus committed run summary records Codex 0.153.4",
+    "codex_upstream": "openai/codex@62f90c88bc0c14755f3300ee4f1525061beea035 (annotated tag rust-v0.153.4)",
+    "omp_setup": "docs/omp-setup.md plus committed run summary records OMP 18.0.10",
+    "omp_upstream": "can1357/oh-my-pi@2a3f2bd53a612d1352a0d997462056ef342895ca (tag v18.0.10)"
+  },
+  "decisions": [
+    {"observation_id": "codex__agentic-coding-harness-mcp-gateway-v2__qwen3.6-35b-a3b-fp8__04d86ba5", "canonical_harness_id": "codex", "linkage_state": "exact-historical-match", "grade": "L1", "historical_identity": {"harness_version": "0.153.4", "upstream_repository": "openai/codex", "immutable_tag": "rust-v0.153.4", "upstream_commit": "62f90c88bc0c14755f3300ee4f1525061beea035", "benchmark_revision": "04d86ba5fecfbb9d3deadc395efd6014f78397dd"}, "basis": "benchmark setup/run evidence records the exact CLI version and the upstream annotated release tag resolves to an immutable commit"},
+    {"observation_id": "omp__agentic-coding-harness-mcp-gateway-v2__qwen3.6-35b-a3b-fp8__04d86ba5", "canonical_harness_id": "oh-my-pi", "linkage_state": "exact-historical-match", "grade": "L1", "historical_identity": {"harness_version": "18.0.10", "upstream_repository": "can1357/oh-my-pi", "immutable_tag": "v18.0.10", "upstream_commit": "2a3f2bd53a612d1352a0d997462056ef342895ca", "benchmark_revision": "04d86ba5fecfbb9d3deadc395efd6014f78397dd"}, "basis": "benchmark setup/run evidence records the exact OMP version and the upstream release tag resolves to an immutable commit"}
+  ],
+  "source_exclusion_note": "publisher do-not-include status and its benchmark-specific caveats are preserved as W1/source metadata; W2 historical linkage does not convert them into a paper eligibility judgment",
+  "summary": {"L1": 2, "L2": 0, "L3": 0},
+  "boundary": {"w3": false, "w4": false, "statistics": false, "outcome_interpretation": false, "paper_claims": false}
+}
