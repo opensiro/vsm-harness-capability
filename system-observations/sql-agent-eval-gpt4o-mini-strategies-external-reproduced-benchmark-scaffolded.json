@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "sql-agent-eval gpt-4o-mini strategy arms",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "benchmark-scaffolded",
+    "historical_relation": "The pinned repository implements all three text-to-SQL strategies in the same public benchmark harness. W1 records them as benchmark-defined strategy arms rather than canonical harness identities."
+  },
+  "primary_sources": [
+    "https://github.com/thomaslabarriere/sql-agent-eval/blob/e4fecfd426291d7e46cf84aae645b35bd2788159/docs/gpt4o-run.txt",
+    "https://github.com/thomaslabarriere/sql-agent-eval/blob/e4fecfd426291d7e46cf84aae645b35bd2788159/src/agent/llmAgent.ts",
+    "https://github.com/thomaslabarriere/sql-agent-eval/blob/e4fecfd426291d7e46cf84aae645b35bd2788159/src/strategies.ts",
+    "https://github.com/thomaslabarriere/sql-agent-eval/blob/e4fecfd426291d7e46cf84aae645b35bd2788159/src/scenarios/gold.ts"
+  ],
+  "observations": [
+    {
+      "observation_id": "sql-baseline-no-schema__sql-agent-eval-20q__gpt-4o-mini__e4fecfd4",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "sql-agent-eval-20q",
+        "name": "sql-agent-eval deterministic 20-question text-to-SQL benchmark",
+        "variant": "baseline-no-schema",
+        "task_count": 20,
+        "primary_source": "https://github.com/thomaslabarriere/sql-agent-eval/blob/e4fecfd426291d7e46cf84aae645b35bd2788159/docs/gpt4o-run.txt",
+        "artifact_source": "https://github.com/thomaslabarriere/sql-agent-eval/blob/e4fecfd426291d7e46cf84aae645b35bd2788159/docs/gpt4o-run.txt"
+      },
+      "result": {
+        "date": "2026-09-22",
+        "agent_label": "baseline",
+        "harness_version": "sql-agent-eval 0.1.0",
+        "harness_revision": "e4fecfd426291d7e46cf84aae645b35bd2788159",
+        "benchmark_revision": "e4fecfd426291d7e46cf84aae645b35bd2788159",
+        "model": "gpt-4o-mini",
+        "model_config": "OpenAI chat.completions; model gpt-4o-mini; temperature 0; JSON response format; no schema supplied",
+        "metric": "execution_accuracy",
+        "value": 0.45,
+        "correct": 9,
+        "wrong_result": 1,
+        "sql_error": 0,
+        "schema_hallucination": 10,
+        "ambiguous_question": 0,
+        "errors_high_confidence_share": 1.0,
+        "questions": 20
+      },
+      "published_implementation": {"system_compatibility": "benchmark-scaffolded", "revision_match": "source-revision-known"},
+      "provenance": {
+        "publisher": "Thomas Labarriere / sql-agent-eval",
+        "checked": true,
+        "os_system": true,
+        "public_logs": true,
+        "public_trajectories": false,
+        "raw_run_artifacts_public": false,
+        "public_result_surface": "committed live-run report with per-strategy outcome counts; benchmark, prompts, strategies and deterministic verifier are public",
+        "execution_environment": "same generated DuckDB dataset and same 20 benchmark questions; one source-reported live run"
+      },
+      "comparison": {"group": "sql-agent-eval-20q__gpt-4o-mini__20260922", "mode": "candidate-same-model", "scope": "text-to-sql"},
+      "unknown_dimensions": ["exact OpenAI service-side gpt-4o-mini snapshot/revision", "request-level raw responses and token telemetry", "trajectory variance beyond the one published run", "run-order and transient service-state effects"],
+      "notes": "The baseline strategy receives the question without database schema. W1 preserves the source-published outcome counts without interpreting strategy superiority."
+    },
+    {
+      "observation_id": "sql-schema-aware__sql-agent-eval-20q__gpt-4o-mini__e4fecfd4",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "sql-agent-eval-20q",
+        "name": "sql-agent-eval deterministic 20-question text-to-SQL benchmark",
+        "variant": "schema-aware",
+        "task_count": 20,
+        "primary_source": "https://github.com/thomaslabarriere/sql-agent-eval/blob/e4fecfd426291d7e46cf84aae645b35bd2788159/docs/gpt4o-run.txt",
+        "artifact_source": "https://github.com/thomaslabarriere/sql-agent-eval/blob/e4fecfd426291d7e46cf84aae645b35bd2788159/docs/gpt4o-run.txt"
+      },
+      "result": {
+        "date": "2026-09-22",
+        "agent_label": "schema",
+        "harness_version": "sql-agent-eval 0.1.0",
+        "harness_revision": "e4fecfd426291d7e46cf84aae645b35bd2788159",
+        "benchmark_revision": "e4fecfd426291d7e46cf84aae645b35bd2788159",
+        "model": "gpt-4o-mini",
+        "model_config": "OpenAI chat.completions; model gpt-4o-mini; temperature 0; JSON response format; explicit database schema supplied",
+        "metric": "execution_accuracy",
+        "value": 0.85,
+        "correct": 17,
+        "wrong_result": 2,
+        "sql_error": 0,
+        "schema_hallucination": 1,
+        "ambiguous_question": 0,
+        "errors_high_confidence_share": 1.0,
+        "questions": 20,
+        "gold_sql_mutation_kill_rate_source_reported": 1.0,
+        "gold_sql_mutants_killed_source_reported": 42
+      },
+      "published_implementation": {"system_compatibility": "benchmark-scaffolded", "revision_match": "source-revision-known"},
+      "provenance": {
+        "publisher": "Thomas Labarriere / sql-agent-eval",
+        "checked": true,
+        "os_system": true,
+        "public_logs": true,
+        "public_trajectories": false,
+        "raw_run_artifacts_public": false,
+        "public_result_surface": "committed live-run report with per-strategy outcome counts and schema-arm scorecard; benchmark, prompts, strategies and deterministic verifier are public",
+        "execution_environment": "same generated DuckDB dataset and same 20 benchmark questions; one source-reported live run"
+      },
+      "comparison": {"group": "sql-agent-eval-20q__gpt-4o-mini__20260922", "mode": "candidate-same-model", "scope": "text-to-sql"},
+      "unknown_dimensions": ["exact OpenAI service-side gpt-4o-mini snapshot/revision", "request-level raw responses and token telemetry", "trajectory variance beyond the one published run", "run-order and transient service-state effects"],
+      "notes": "The schema-aware strategy supplies the explicit schema but does not execute-and-retry model output. W1 preserves the source-published outcome counts without interpreting strategy superiority."
+    },
+    {
+      "observation_id": "sql-agentic-retry__sql-agent-eval-20q__gpt-4o-mini__e4fecfd4",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "sql-agent-eval-20q",
+        "name": "sql-agent-eval deterministic 20-question text-to-SQL benchmark",
+        "variant": "schema-plus-execution-error-retry",
+        "task_count": 20,
+        "primary_source": "https://github.com/thomaslabarriere/sql-agent-eval/blob/e4fecfd426291d7e46cf84aae645b35bd2788159/docs/gpt4o-run.txt",
+        "artifact_source": "https://github.com/thomaslabarriere/sql-agent-eval/blob/e4fecfd426291d7e46cf84aae645b35bd2788159/docs/gpt4o-run.txt"
+      },
+      "result": {
+        "date": "2026-09-22",
+        "agent_label": "agentic",
+        "harness_version": "sql-agent-eval 0.1.0",
+        "harness_revision": "e4fecfd426291d7e46cf84aae645b35bd2788159",
+        "benchmark_revision": "e4fecfd426291d7e46cf84aae645b35bd2788159",
+        "model": "gpt-4o-mini",
+        "model_config": "OpenAI chat.completions; model gpt-4o-mini; temperature 0; JSON response format; explicit schema supplied; generated SQL is probed and retried once only when execution fails, with the execution error returned to the model",
+        "metric": "execution_accuracy",
+        "value": 0.85,
+        "correct": 17,
+        "wrong_result": 3,
+        "sql_error": 0,
+        "schema_hallucination": 0,
+        "ambiguous_question": 0,
+        "errors_high_confidence_share": 1.0,
+        "questions": 20
+      },
+      "published_implementation": {"system_compatibility": "benchmark-scaffolded", "revision_match": "source-revision-known"},
+      "provenance": {
+        "publisher": "Thomas Labarriere / sql-agent-eval",
+        "checked": true,
+        "os_system": true,
+        "public_logs": true,
+        "public_trajectories": false,
+        "raw_run_artifacts_public": false,
+        "public_result_surface": "committed live-run report with per-strategy outcome counts; benchmark, prompts, strategies and deterministic verifier are public",
+        "execution_environment": "same generated DuckDB dataset and same 20 benchmark questions; one source-reported live run"
+      },
+      "comparison": {"group": "sql-agent-eval-20q__gpt-4o-mini__20260922", "mode": "candidate-same-model", "scope": "text-to-sql"},
+      "unknown_dimensions": ["exact OpenAI service-side gpt-4o-mini snapshot/revision", "request-level raw responses and token telemetry", "trajectory variance beyond the one published run", "run-order and transient service-state effects", "number of questions that actually triggered the retry is not reported in the committed summary"],
+      "notes": "The agentic strategy adds an execution probe and at most one retry after an execution error; it does not receive correctness feedback. W1 preserves the source-published outcome counts without interpreting strategy superiority."
+    }
+  ]
+}
