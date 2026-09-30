@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "artifact_id": "obs-harness-assoc-w2-2026-09-30-pass10-openbench-m45",
+  "artifact_version": "1.0.0",
+  "recorded_at_utc": "2026-09-30T20:01:05Z",
+  "work_item": {"repository":"opensiro/vsm-harness-capability","issue":94,"role":"fresh independent W2 historical system/revision linkage"},
+  "execution": {"capability_start_revision":"23985172b4886b7ce0ff5b71834b71fd47da6030","w2_execution_revision":"23985172b4886b7ce0ff5b71834b71fd47da6030","branch":"issue-94-w2-batch-pass9-pass10-pass11-pass12-pass13","queue_claim":"opensiro/vsm-harness-research:queue-claims/track-a-batch/W2_LINK/pass9+pass10+pass11+pass12+pass13","fresh_independent_context":true,"raw_score_payload_copied":false},
+  "protocol": {"study_id":"OBS-HARNESS-ASSOC","version":"0.1.0","protocol_sha256":"17f51d4f35f0eb5a665122238c505ad6c8e3db7c8b937dac7ecbae35a3ac49a4","grade_mapping":{"exact-historical-match":"L1","bounded-compatible":"L2","unresolved":"L3"},"current_state_substitution_forbidden":true},
+  "upstream": {"w1_issue":93,"w1_handoff_path":"paper-discovery/och-obs-1/w1-2026-09-30-pass10-openbench-m45-handoff.json","w1_handoff_blob_sha":"5b12f144bc29c1ae65a38efb3c98e2b5fa5c1ae7","w1_manifest_id":"och-obs-1-w1-2026-09-30-pass10-openbench-m45"},
+  "preconditions": {"neutral_registry_revision":"23985172b4886b7ce0ff5b71834b71fd47da6030","neutral_registry_blob_sha":"712378c75b29dce206951d78a7c8a0f29a124cb1","handoff_source_identity_present":true,"prior_paper_specific_w2_decision_found":false,"registry_occurrence_counts":{"codex__openbench-m45-hard3__gpt-5.5-medium__8215e65a":1,"pi__openbench-m45-hard3__gpt-5.5-medium__8215e65a":1,"opencode__openbench-m45-hard3__gpt-5.5-medium__8215e65a":1,"cursor-agent__openbench-m45-hard3__gpt-5.5-medium__8215e65a":1}},
+  "evidence_catalog": {
+    "openbench_source":"minghinmatthewlam/openbench@8215e65a2c45ca6d3bdc88eb1ee086767c66ad5e:data/m4.5-2026-07-03/results.jsonl",
+    "codex_upstream":"openai/codex tag rust-v0.142.5 -> 26de83036893982690254decce8604c8b366de2b",
+    "pi_upstream":"earendil-works/pi tag v0.79.5 -> 6561cb2b6b2a748c9f70ba3b6cf068dc9f86d62a",
+    "opencode_upstream":"anomalyco/opencode tag v1.17.13 -> 10c894b965edd40930dae4490fdcaeec8b508166"
+  },
+  "decisions": [
+    {
+      "observation_id":"codex__openbench-m45-hard3__gpt-5.5-medium__8215e65a",
+      "canonical_harness_id":"codex",
+      "exercised_system_identity":"Codex CLI 0.142.5",
+      "linkage_state":"exact-historical-match",
+      "w0_grade":"L1",
+      "historical_identity":{"harness_version":"0.142.5","upstream_repository":"openai/codex","immutable_tag":"rust-v0.142.5","upstream_commit":"26de83036893982690254decce8604c8b366de2b","binding_type":"benchmark-reported exact version independently resolved to immutable upstream tag/commit"},
+      "evidence_references":["https://github.com/minghinmatthewlam/openbench/blob/8215e65a2c45ca6d3bdc88eb1ee086767c66ad5e/data/m4.5-2026-07-03/results.jsonl","https://github.com/openai/codex/tree/rust-v0.142.5","https://github.com/openai/codex/commit/26de83036893982690254decce8604c8b366de2b"],
+      "unresolved_dimensions":[],"contradictions_or_discrepancies":[],"decision_basis":"The immutable OpenBench log records Codex CLI 0.142.5; upstream tag rust-v0.142.5 resolves to an immutable commit, establishing exact historical implementation identity."
+    },
+    {
+      "observation_id":"pi__openbench-m45-hard3__gpt-5.5-medium__8215e65a",
+      "canonical_harness_id":"pi",
+      "exercised_system_identity":"Pi 0.79.5",
+      "linkage_state":"exact-historical-match",
+      "w0_grade":"L1",
+      "historical_identity":{"harness_version":"0.79.5","upstream_repository":"earendil-works/pi","immutable_tag":"v0.79.5","upstream_commit":"6561cb2b6b2a748c9f70ba3b6cf068dc9f86d62a","binding_type":"benchmark-reported exact version independently resolved to immutable upstream tag/commit"},
+      "evidence_references":["https://github.com/minghinmatthewlam/openbench/blob/8215e65a2c45ca6d3bdc88eb1ee086767c66ad5e/data/m4.5-2026-07-03/results.jsonl","https://github.com/earendil-works/pi/tree/v0.79.5","https://github.com/earendil-works/pi/commit/6561cb2b6b2a748c9f70ba3b6cf068dc9f86d62a"],
+      "unresolved_dimensions":[],"contradictions_or_discrepancies":[],"decision_basis":"The immutable OpenBench log records Pi 0.79.5; upstream tag v0.79.5 resolves to an immutable commit."
+    },
+    {
+      "observation_id":"opencode__openbench-m45-hard3__gpt-5.5-medium__8215e65a",
+      "canonical_harness_id":"opencode",
+      "exercised_system_identity":"OpenCode 1.17.13",
+      "linkage_state":"exact-historical-match",
+      "w0_grade":"L1",
+      "historical_identity":{"harness_version":"1.17.13","upstream_repository":"anomalyco/opencode","immutable_tag":"v1.17.13","upstream_commit":"10c894b965edd40930dae4490fdcaeec8b508166","binding_type":"benchmark-reported exact version independently resolved to immutable upstream tag/commit"},
+      "evidence_references":["https://github.com/minghinmatthewlam/openbench/blob/8215e65a2c45ca6d3bdc88eb1ee086767c66ad5e/data/m4.5-2026-07-03/results.jsonl","https://github.com/anomalyco/opencode/tree/v1.17.13","https://github.com/anomalyco/opencode/commit/10c894b965edd40930dae4490fdcaeec8b508166"],
+      "unresolved_dimensions":[],"contradictions_or_discrepancies":[],"decision_basis":"The immutable OpenBench log records OpenCode 1.17.13; upstream tag v1.17.13 resolves to an immutable commit."
+    },
+    {
+      "observation_id":"cursor-agent__openbench-m45-hard3__gpt-5.5-medium__8215e65a",
+      "canonical_harness_id":null,
+      "exercised_system_identity":"Cursor Agent build 2026.07.01-41b2de7",
+      "linkage_state":"exact-historical-match",
+      "w0_grade":"L1",
+      "historical_identity":{"harness_version":"2026.07.01-41b2de7","upstream_repository":null,"immutable_tag":null,"upstream_commit":null,"binding_type":"source-reported exact distributed build identity preserved in immutable public benchmark evidence"},
+      "evidence_references":["https://github.com/minghinmatthewlam/openbench/blob/8215e65a2c45ca6d3bdc88eb1ee086767c66ad5e/data/m4.5-2026-07-03/results.jsonl"],
+      "unresolved_dimensions":["canonical OpenSiro harness linkage","public upstream source-repository commit corresponding to the distributed Cursor Agent build is not established"],
+      "contradictions_or_discrepancies":[],
+      "decision_basis":"The immutable benchmark evidence identifies the exercised Cursor Agent with exact build string 2026.07.01-41b2de7. OBS-HARNESS-ASSOC L1 permits an equivalent reconstructable implementation/configuration identity; no present-day Cursor state is substituted."
+    }
+  ],
+  "summary": {"decision_count":4,"L1":4,"L2":0,"L3":0,"handoff_terminal_at_w2":false},
+  "boundary": {"w3_performed":false,"w4_performed":false,"outcome_interpretation_performed":false,"paper_claims":false}
+}
