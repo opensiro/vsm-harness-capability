@@ -66,6 +66,14 @@
     {"surface": "publisher claim that harness differences caused the score spread", "status": "not-promoted-by-W1", "reason": "W1 records only the published scores, benchmark identity, source-declared same model and known/unknown execution dimensions; causal interpretation is downstream."},
     {"surface": "cross-agent score ordering", "status": "not-promoted-by-W1", "reason": "W1 does not declare a winner or interpret score direction."}
   ],
-  "validation": {"status": "pending", "registry_observation_count_after": 184, "commands_required": ["python system-observations/render_registry.py", "python scripts/admission_check.py <each of three pass-19 raw records>", "python scripts/validate_repository.py"], "results": []},
+  "validation": {
+    "status": "success",
+    "registry_observation_count_after": 184,
+    "commands_required": ["python system-observations/render_registry.py", "python scripts/admission_check.py <each of three pass-19 raw records>", "python scripts/validate_repository.py"],
+    "results": [
+      {"workflow_run_id": 36653347866, "run_number": 254, "head_before_bot_registry_commit": "b7abd452f4ef155393a05d7bb96edab97308540b", "result": "success", "scope": "temporary write-enabled registry regeneration plus repository validation and three record-specific admission checks"},
+      {"workflow_run_id": 36653465355, "run_number": 256, "head": "76f999d6d0e3320b2b1e82554377aa4d2493aeb7", "result": "success", "scope": "standard read-only validation after restoring workflow blob 244ad9701f41e6122f37c0676a00e705cddd622f"}
+    ]
+  },
   "handoff_boundary": {"structural_classification_performed": false, "historical_linkage_adjudicated": false, "comparison_tier_assigned": false, "statistical_interpretation_performed": false, "winner_declared": false}
 }
