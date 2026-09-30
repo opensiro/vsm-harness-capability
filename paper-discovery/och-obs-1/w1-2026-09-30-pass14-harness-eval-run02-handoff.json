@@ -39,48 +39,15 @@
         "copilot-kprojects__harness-eval-feedhub-run02__claude-opus-4.8__7d3f74fe",
         "copilot-bare__harness-eval-feedhub-run02__claude-opus-4.8__7d3f74fe"
       ],
-      "source_known_dimensions": [
-        "same GitHub Copilot CLI 1.0.71 runner",
-        "same runlog-reported claude-opus-4.8 model label",
-        "same frozen feedhub project specification and source-defined per-harness prompt body",
-        "same single host kai and 2026-07-16 field date",
-        "same headless execution mode",
-        "same sealed post-S1 executable acceptance suite with 14 core and 12 hard checks",
-        "same one-run-per-cell policy",
-        "zero recorded human interventions"
-      ],
-      "explicit_unknown_or_nonidentical_dimensions": [
-        "exact service-side Claude Opus 4.8 checkpoint/provider route",
-        "harness prompt prefix/command and installed overlay differ by design",
-        "trajectory variance is large and N=1 per cell",
-        "some cells record real-HOME leak-canary touches",
-        "auxiliary AI-credit units are source-local and not used by W1 as a normalized metric"
-      ],
+      "source_known_dimensions": ["same GitHub Copilot CLI 1.0.71 runner", "same runlog-reported claude-opus-4.8 model label", "same frozen feedhub project specification and source-defined per-harness prompt body", "same single host kai and 2026-07-16 field date", "same headless execution mode", "same sealed post-S1 executable acceptance suite with 14 core and 12 hard checks", "same one-run-per-cell policy", "zero recorded human interventions"],
+      "explicit_unknown_or_nonidentical_dimensions": ["exact service-side Claude Opus 4.8 checkpoint/provider route", "harness prompt prefix/command and installed overlay differ by design", "trajectory variance is large and N=1 per cell", "some cells record real-HOME leak-canary touches", "auxiliary AI-credit units are source-local and not used by W1 as a normalized metric"],
       "paper_eligibility": "not-assessed-by-W1"
     },
     {
       "group_id": "harness-eval-feedhub-run02__claude-opus-4.8__claude-code-family",
-      "observation_ids": [
-        "claude-code-gstack__harness-eval-feedhub-run02__claude-opus-4-8__7d3f74fe",
-        "claude-code__harness-eval-feedhub-run02__claude-opus-4-8__7d3f74fe"
-      ],
-      "source_known_dimensions": [
-        "same Claude Code runner family",
-        "same runlog-reported claude-opus-4-8 model label",
-        "same frozen feedhub project specification",
-        "same single host kai and 2026-07-16 field date",
-        "same headless execution mode",
-        "same sealed post-S1 executable acceptance suite",
-        "same one-run-per-cell policy",
-        "zero recorded human interventions"
-      ],
-      "explicit_unknown_or_nonidentical_dimensions": [
-        "Claude Code auto-updated between cells: gstack used 2.1.209 and bare control used 2.1.211",
-        "exact service-side Claude Opus 4.8 checkpoint",
-        "gstack 1.60.1.0 overlay changes prompt/process/tool use by design",
-        "trajectory variance is large and N=1 per cell",
-        "gstack cell records real-HOME leak-canary touches"
-      ],
+      "observation_ids": ["claude-code-gstack__harness-eval-feedhub-run02__claude-opus-4-8__7d3f74fe", "claude-code__harness-eval-feedhub-run02__claude-opus-4-8__7d3f74fe"],
+      "source_known_dimensions": ["same Claude Code runner family", "same runlog-reported claude-opus-4-8 model label", "same frozen feedhub project specification", "same single host kai and 2026-07-16 field date", "same headless execution mode", "same sealed post-S1 executable acceptance suite", "same one-run-per-cell policy", "zero recorded human interventions"],
+      "explicit_unknown_or_nonidentical_dimensions": ["Claude Code auto-updated between cells: gstack used 2.1.209 and bare control used 2.1.211", "exact service-side Claude Opus 4.8 checkpoint", "gstack 1.60.1.0 overlay changes prompt/process/tool use by design", "trajectory variance is large and N=1 per cell", "gstack cell records real-HOME leak-canary touches"],
       "paper_eligibility": "not-assessed-by-W1"
     }
   ],
@@ -91,19 +58,13 @@
     {"surface": "zzq2000/Hackathon-24h-Bench cross-agent HTTP/Kimi-K2.5 table", "status": "not-admitted-in-pass-014", "reason": "Pinned public README reports Claude Code/OpenCode/Cline results, but W1 did not locate a committed raw per-run result artifact supporting those three published rows. README/figure evidence remains discoverable but was not promoted into a raw neutral observation in this pass."}
   ],
   "validation": {
-    "status": "pending",
-    "commands_required": [
-      "python system-observations/render_registry.py",
-      "python scripts/admission_check.py system-observations/copilot-atv-starterkit-harness-eval-run02-external-reproduced-unclear.json",
-      "python scripts/admission_check.py system-observations/copilot-atv-phoenix-harness-eval-run02-external-reproduced-unclear.json",
-      "python scripts/admission_check.py system-observations/copilot-working-skill-repo-harness-eval-run02-external-reproduced-unclear.json",
-      "python scripts/admission_check.py system-observations/copilot-kprojects-harness-eval-run02-external-reproduced-unclear.json",
-      "python scripts/admission_check.py system-observations/copilot-bare-harness-eval-run02-external-reproduced-unclear.json",
-      "python scripts/admission_check.py system-observations/claude-code-gstack-harness-eval-run02-external-reproduced-unclear.json",
-      "python scripts/admission_check.py system-observations/claude-code-bare-harness-eval-run02-external-reproduced-adapter-preserved.json",
-      "python scripts/validate_repository.py"
-    ],
-    "results": []
+    "status": "success",
+    "registry_observation_count_after": 159,
+    "commands_required": ["python system-observations/render_registry.py", "python scripts/admission_check.py <each of seven pass-14 raw records>", "python scripts/validate_repository.py"],
+    "results": [
+      {"workflow_run_id": 36649429874, "run_number": 206, "head_before_bot_registry_commit": "654218572ba124a31abf65edb4513c55a8bc160f", "result": "success", "scope": "temporary write-enabled registry regeneration plus repository validation and seven record-specific admission checks"},
+      {"workflow_run_id": 36649507243, "run_number": 208, "head": "a4a2a0728e1390ab24dd74d8f96a7b7c04c46371", "result": "success", "scope": "standard read-only validation after restoring workflow blob 244ad9701f41e6122f37c0676a00e705cddd622f"}
+    ]
   },
   "handoff_boundary": {"structural_classification_performed": false, "historical_linkage_adjudicated": false, "comparison_tier_assigned": false, "statistical_interpretation_performed": false, "winner_declared": false}
 }
