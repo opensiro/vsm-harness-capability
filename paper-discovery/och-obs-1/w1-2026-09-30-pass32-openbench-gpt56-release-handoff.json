@@ -61,20 +61,28 @@
     {"surface": "token-efficiency comparison", "status": "not-promoted-by-W1", "reason": "Source token bases are not uniform enough for W1 to create a neutral efficiency comparison."}
   ],
   "validation": {
-    "status": "pending",
-    "registry_observation_count_after": null,
+    "status": "passed",
+    "registry_observation_count_after": 260,
+    "generated_registry_commit": "47040d56b2867d0f2d5036e3f10fac356fd16d52",
+    "standard_workflow_blob": "244ad9701f41e6122f37c0676a00e705cddd622f",
     "commands_required": [
       "python system-observations/render_registry.py",
-      "python scripts/admission_check.py system-observations/cursor-openbench-gpt56-release-external-reproduced-adapter-preserved.json",
-      "python scripts/admission_check.py system-observations/grokbuild-openbench-gpt56-release-external-reproduced-adapter-preserved.json",
-      "python scripts/admission_check.py system-observations/devin-openbench-gpt56-release-external-reproduced-adapter-preserved.json",
-      "python scripts/admission_check.py system-observations/claude-openbench-gpt56-release-external-reproduced-adapter-preserved.json",
-      "python scripts/admission_check.py system-observations/opencode-openbench-gpt56-release-external-reproduced-adapter-preserved.json",
-      "python scripts/admission_check.py system-observations/pi-openbench-gpt56-release-external-reproduced-adapter-preserved.json",
-      "python scripts/admission_check.py system-observations/codex-openbench-gpt56-release-external-reproduced-adapter-preserved.json",
+      "python scripts/admission_check.py system-observations/cursor-openbench-gpt56-release15-external-reproduced-adapter-preserved.json",
+      "python scripts/admission_check.py system-observations/grokbuild-openbench-gpt56-release15-external-reproduced-adapter-preserved.json",
+      "python scripts/admission_check.py system-observations/devin-openbench-gpt56-release15-external-reproduced-adapter-preserved.json",
+      "python scripts/admission_check.py system-observations/claude-openbench-gpt56-release15-external-reproduced-adapter-preserved.json",
+      "python scripts/admission_check.py system-observations/opencode-openbench-gpt56-release15-external-reproduced-adapter-preserved.json",
+      "python scripts/admission_check.py system-observations/pi-openbench-gpt56-release15-external-reproduced-adapter-preserved.json",
+      "python scripts/admission_check.py system-observations/codex-openbench-gpt56-release15-external-reproduced-adapter-preserved.json",
       "python scripts/validate_repository.py"
     ],
-    "results": []
+    "results": [
+      {"run_id": 36714552591, "status": "failed-infrastructure", "detail": "Registry rendering succeeded; temporary write-enabled workflow could not push its generated commit because checkout was detached. No evidence admission result was inferred from this run."},
+      {"run_id": 36714840998, "status": "partial", "head_after_registry_generation": "47040d56b2867d0f2d5036e3f10fac356fd16d52", "detail": "Registry regeneration and repository validators passed; temporary admission loop then referenced pass-32 filenames without the release15 suffix and failed before providing pass-32 admission evidence."},
+      {"run_id": 36715017209, "status": "failed-validation-harness", "detail": "Isolated admission workflow still used the same incorrect filename form; failure was a missing validation target, not a record rejection."},
+      {"run_id": 36715289370, "status": "passed", "head": "12ab862a93732a75186ec1b029b90c3309133ad3", "detail": "Repository validator, both post-closure validators, all seven pass-32 admission checks, and the existing live admission path passed."},
+      {"run_id": 36715382417, "status": "passed", "head": "6e7dd6b657222ee7210087312b4a75e57db05d22", "detail": "Standard read-only workflow restored byte-for-byte and all standard validation steps passed."}
+    ]
   },
   "handoff_boundary": {"structural_classification_performed": false, "historical_linkage_adjudicated": false, "comparison_tier_assigned": false, "statistical_interpretation_performed": false, "winner_declared": false}
 }
