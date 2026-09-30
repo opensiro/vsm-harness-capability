@@ -79,7 +79,7 @@
     "repetition_count_published": true,
     "environment_and_sampler_published": true,
     "real_model_inference_present": false,
-    "individual_sample_to-summary mapping independently recomputed": false
+    "individual_sample_to_summary mapping independently recomputed": false
   },
   "non_admission_dispositions": [
     {
@@ -98,13 +98,39 @@
       "reason": "The benchmark uses a scripted local mock and explicitly excludes real model inference; the admitted evidence is resource-overhead evidence only."
     }
   ],
-  "protocol_deviations_and_failures": [],
+  "protocol_deviations_and_failures": [
+    {
+      "event": "exact-head-registry-materialization-and-admission",
+      "run_number": 423,
+      "run_id": 36761578218,
+      "head_sha": "ebb8143efc0d03a87f586f421e146361dd011523",
+      "generated_registry_head_sha": "24bb48ee173bda4ce434a25d73cd66fe190a4524",
+      "conclusion": "success",
+      "detail": "The bounded write-enabled workflow rendered 326 observations, materialized the generated registry commit, passed repository validators, the pass-54 harness-perf admission check, and the existing live admission path."
+    },
+    {
+      "event": "bot-generated-workflow-run",
+      "run_number": 424,
+      "run_id": 36761603397,
+      "head_sha": "24bb48ee173bda4ce434a25d73cd66fe190a4524",
+      "conclusion": "action_required",
+      "evidence_rejected": false,
+      "detail": "GitHub did not automatically execute the workflow for the bot-authored generated-registry commit; this was superseded by explicit restoration of the standard read-only workflow and a fresh validation."
+    },
+    {
+      "event": "standard-read-only-validation-restored",
+      "run_number": 425,
+      "run_id": 36761728774,
+      "head_sha": "16f369ee9a89ecef3bfc6ded2595f34050a032f9",
+      "conclusion": "success"
+    }
+  ],
   "validation": {
-    "status": "pending",
-    "registry_observation_count_after": null,
-    "evidence_admission_run": null,
-    "generated_registry_head_sha": null,
-    "standard_read_only_validation_run": null,
+    "status": "passed",
+    "registry_observation_count_after": 326,
+    "evidence_admission_run": 36761578218,
+    "generated_registry_head_sha": "24bb48ee173bda4ce434a25d73cd66fe190a4524",
+    "standard_read_only_validation_run": 36761728774,
     "standard_workflow_blob_sha": "244ad9701f41e6122f37c0676a00e705cddd622f"
   },
   "handoff_boundary": {
