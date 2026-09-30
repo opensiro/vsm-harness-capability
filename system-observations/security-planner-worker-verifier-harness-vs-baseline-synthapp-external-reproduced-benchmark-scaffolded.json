@@ -6,7 +6,7 @@
   "canonical_harness_id": null,
   "published_implementation": {
     "system_compatibility": "benchmark-scaffolded",
-    "historical_relation": "The public study implements a benchmark-local Planner/Worker/Verifier security-audit harness from scratch in Python. W1 records that exercised system as benchmark-scaffolded and does not map role names to VSM functions."
+    "historical_relation": "The public study implements a benchmark-local Planner/Worker/Verifier security-audit harness from scratch in Python. W1 records that exercised system as benchmark-scaffolded."
   },
   "primary_sources": [
     "https://github.com/theteatoast/harness-vs-baseline/blob/7b3c842a02ef8a006662e6f0db39a1cd223f082c/README.md",
@@ -58,7 +58,7 @@
       },
       "comparison": {"group": "harness-vs-baseline-synthapp__glm-5.3-flash__7b3c842a", "mode": "candidate-same-model", "scope": "security-static-analysis"},
       "unknown_dimensions": ["exact OpenRouter backend/provider route and service-side GLM checkpoint", "exact execution date", "raw trajectory and token totals", "trial count beyond the published result row", "run-specific cache state"],
-      "notes": "W1 records the named benchmark-local stages only as implementation identity; no VSM classification is inferred from Planner/Worker/Verifier terminology."
+      "notes": "The Planner/Worker/Verifier labels are retained only as source implementation terminology."
     },
     {
       "observation_id": "security-planner-worker-verifier__harness-vs-baseline-synthapp__llama-3.1-8b-instruct__7b3c842a",
