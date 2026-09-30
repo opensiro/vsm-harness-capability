@@ -22,19 +22,19 @@ jobs:
       - name: Validate specialized AHO post-closure evidence
         run: python vsm-projections/s4/post-closure-deltas/validate.py
       - name: Admission — Cursor GPT-5.6 release
-        run: python scripts/admission_check.py system-observations/cursor-openbench-gpt56-release-external-reproduced-adapter-preserved.json
+        run: python scripts/admission_check.py system-observations/cursor-openbench-gpt56-release15-external-reproduced-adapter-preserved.json
       - name: Admission — GrokBuild GPT-5.6 release
-        run: python scripts/admission_check.py system-observations/grokbuild-openbench-gpt56-release-external-reproduced-adapter-preserved.json
+        run: python scripts/admission_check.py system-observations/grokbuild-openbench-gpt56-release15-external-reproduced-adapter-preserved.json
       - name: Admission — Devin GPT-5.6 release
-        run: python scripts/admission_check.py system-observations/devin-openbench-gpt56-release-external-reproduced-adapter-preserved.json
+        run: python scripts/admission_check.py system-observations/devin-openbench-gpt56-release15-external-reproduced-adapter-preserved.json
       - name: Admission — Claude GPT-5.6 release
-        run: python scripts/admission_check.py system-observations/claude-openbench-gpt56-release-external-reproduced-adapter-preserved.json
+        run: python scripts/admission_check.py system-observations/claude-openbench-gpt56-release15-external-reproduced-adapter-preserved.json
       - name: Admission — OpenCode GPT-5.6 release
-        run: python scripts/admission_check.py system-observations/opencode-openbench-gpt56-release-external-reproduced-adapter-preserved.json
+        run: python scripts/admission_check.py system-observations/opencode-openbench-gpt56-release15-external-reproduced-adapter-preserved.json
       - name: Admission — Pi GPT-5.6 release
-        run: python scripts/admission_check.py system-observations/pi-openbench-gpt56-release-external-reproduced-adapter-preserved.json
+        run: python scripts/admission_check.py system-observations/pi-openbench-gpt56-release15-external-reproduced-adapter-preserved.json
       - name: Admission — Codex GPT-5.6 release
-        run: python scripts/admission_check.py system-observations/codex-openbench-gpt56-release-external-reproduced-adapter-preserved.json
+        run: python scripts/admission_check.py system-observations/codex-openbench-gpt56-release15-external-reproduced-adapter-preserved.json
       - name: Exercise existing live evidence admission path
         run: |
           for record in \
