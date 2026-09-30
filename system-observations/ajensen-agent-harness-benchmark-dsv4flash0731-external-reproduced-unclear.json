@@ -1,0 +1,256 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Agent Harness Token-Consumption Benchmark / DeepSeek V4 Flash 0731",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "unclear",
+    "historical_relation": "The benchmark executes named Codex, OpenCode, OpenClaw, Pi, and Hermes harnesses against one pinned local model and one pinned software task. Exact historical harness versions are not published, so W1 preserves display identities without canonical linkage."
+  },
+  "primary_sources": [
+    "https://github.com/ajensenwaud/agent-harness-benchmark/blob/69fcb964b2a3692ed39d9a94518b5493d341e557/README.md",
+    "https://github.com/ajensenwaud/agent-harness-benchmark/blob/69fcb964b2a3692ed39d9a94518b5493d341e557/gen_deliverables.py",
+    "https://github.com/ajensenwaud/agent-harness-benchmark/blob/69fcb964b2a3692ed39d9a94518b5493d341e557/runner/run_one.sh",
+    "https://github.com/ajensenwaud/agent-harness-benchmark/blob/69fcb964b2a3692ed39d9a94518b5493d341e557/runner/setup_configs.sh",
+    "https://github.com/ajensenwaud/agent-harness-benchmark/blob/69fcb964b2a3692ed39d9a94518b5493d341e557/run_hermes_gx10.sh"
+  ],
+  "observations": [
+    {
+      "observation_id": "codex__ajensen-harnessbug5__deepseek-v4-flash-0731__69fcb964",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "name": "Agent Harness Token-Consumption Benchmark / hermes-agent reasoning-roundtrip bug",
+        "version": "69fcb964b2a3692ed39d9a94518b5493d341e557",
+        "task_set": ["hermes-agent@3a8d95a93bdc reasoning sidecar fork/branch bug"],
+        "primary_source": "https://github.com/ajensenwaud/agent-harness-benchmark/blob/69fcb964b2a3692ed39d9a94518b5493d341e557/README.md",
+        "artifact_source": "https://github.com/ajensenwaud/agent-harness-benchmark/blob/69fcb964b2a3692ed39d9a94518b5493d341e557/gen_deliverables.py"
+      },
+      "result": {
+        "publication_date": "2026-08-23",
+        "harness_label": "Codex",
+        "harness_version": "unknown",
+        "model": "DeepSeek V4 Flash 0731",
+        "model_artifact": "0xSero/deepseek-v4-flash-0731-spark EXL3 3.0 bpw",
+        "metric": "objective_test_pass_rate",
+        "success_count": 4,
+        "trial_count": 5,
+        "value": 0.8,
+        "mean_total_tokens": 1051919,
+        "sd_total_tokens": 228788,
+        "median_total_tokens": 993509,
+        "mean_calls": 14.2
+      },
+      "execution": {
+        "hardware": "single NVIDIA DGX Spark GB10 SM121, 128 GiB unified memory",
+        "model_context_window": 384000,
+        "max_num_seqs": 1,
+        "reasoning": "forced off",
+        "timeout_seconds": 3600,
+        "repetitions": 5,
+        "reset_policy": "fresh workdir extracted from immutable task tarball for every run; per-run meter log removed before execution",
+        "evaluator": "pytest on tests/hermes_state/test_reasoning_roundtrip.py and tests/cli/test_branch_command.py",
+        "execution_surface": "runner container; custom benchmark provider routes Codex Responses API through common metering proxy"
+      },
+      "comparison": {
+        "group": "ajensen-harnessbug5__deepseek-v4-flash-0731__69fcb964",
+        "mode": "same-model-candidate",
+        "scope": "single-cross-module-software-bug"
+      },
+      "unknown_dimensions": [
+        "exact Codex CLI version used in the historical runs",
+        "exact runner container package versions because the committed Dockerfile is truncated",
+        "random seed or deterministic decoding settings beyond source-enforced thinking:false and fixed max-token cap"
+      ]
+    },
+    {
+      "observation_id": "opencode__ajensen-harnessbug5__deepseek-v4-flash-0731__69fcb964",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "name": "Agent Harness Token-Consumption Benchmark / hermes-agent reasoning-roundtrip bug",
+        "version": "69fcb964b2a3692ed39d9a94518b5493d341e557",
+        "task_set": ["hermes-agent@3a8d95a93bdc reasoning sidecar fork/branch bug"],
+        "primary_source": "https://github.com/ajensenwaud/agent-harness-benchmark/blob/69fcb964b2a3692ed39d9a94518b5493d341e557/README.md",
+        "artifact_source": "https://github.com/ajensenwaud/agent-harness-benchmark/blob/69fcb964b2a3692ed39d9a94518b5493d341e557/gen_deliverables.py"
+      },
+      "result": {
+        "publication_date": "2026-08-23",
+        "harness_label": "OpenCode",
+        "harness_version": "unknown",
+        "model": "DeepSeek V4 Flash 0731",
+        "model_artifact": "0xSero/deepseek-v4-flash-0731-spark EXL3 3.0 bpw",
+        "metric": "objective_test_pass_rate",
+        "success_count": 5,
+        "trial_count": 5,
+        "value": 1.0,
+        "mean_total_tokens": 1304741,
+        "sd_total_tokens": 297355,
+        "median_total_tokens": 1202916,
+        "mean_calls": 29.8
+      },
+      "execution": {
+        "hardware": "single NVIDIA DGX Spark GB10 SM121, 128 GiB unified memory",
+        "model_context_window": 384000,
+        "max_num_seqs": 1,
+        "reasoning": "forced off",
+        "timeout_seconds": 3600,
+        "repetitions": 5,
+        "reset_policy": "fresh workdir extracted from immutable task tarball for every run; per-run meter log removed before execution",
+        "evaluator": "pytest on tests/hermes_state/test_reasoning_roundtrip.py and tests/cli/test_branch_command.py",
+        "execution_surface": "runner container; OpenCode points at common OpenAI-compatible metering proxy"
+      },
+      "comparison": {
+        "group": "ajensen-harnessbug5__deepseek-v4-flash-0731__69fcb964",
+        "mode": "same-model-candidate",
+        "scope": "single-cross-module-software-bug"
+      },
+      "unknown_dimensions": [
+        "exact OpenCode version used in the historical runs",
+        "exact runner container package versions because the committed Dockerfile is truncated",
+        "random seed or deterministic decoding settings beyond source-enforced thinking:false and fixed max-token cap"
+      ]
+    },
+    {
+      "observation_id": "openclaw__ajensen-harnessbug5__deepseek-v4-flash-0731__69fcb964",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "name": "Agent Harness Token-Consumption Benchmark / hermes-agent reasoning-roundtrip bug",
+        "version": "69fcb964b2a3692ed39d9a94518b5493d341e557",
+        "task_set": ["hermes-agent@3a8d95a93bdc reasoning sidecar fork/branch bug"],
+        "primary_source": "https://github.com/ajensenwaud/agent-harness-benchmark/blob/69fcb964b2a3692ed39d9a94518b5493d341e557/README.md",
+        "artifact_source": "https://github.com/ajensenwaud/agent-harness-benchmark/blob/69fcb964b2a3692ed39d9a94518b5493d341e557/gen_deliverables.py"
+      },
+      "result": {
+        "publication_date": "2026-08-23",
+        "harness_label": "OpenClaw",
+        "harness_version": "unknown",
+        "model": "DeepSeek V4 Flash 0731",
+        "model_artifact": "0xSero/deepseek-v4-flash-0731-spark EXL3 3.0 bpw",
+        "metric": "objective_test_pass_rate",
+        "success_count": 3,
+        "trial_count": 5,
+        "value": 0.6,
+        "mean_total_tokens": 552604,
+        "sd_total_tokens": 493389,
+        "median_total_tokens": 336862,
+        "mean_calls": 10.4
+      },
+      "execution": {
+        "hardware": "single NVIDIA DGX Spark GB10 SM121, 128 GiB unified memory",
+        "model_context_window": 384000,
+        "max_num_seqs": 1,
+        "reasoning": "forced off",
+        "timeout_seconds": 3600,
+        "repetitions": 5,
+        "reset_policy": "fresh workdir extracted from immutable task tarball for every run; per-run meter log removed before execution",
+        "evaluator": "pytest on tests/hermes_state/test_reasoning_roundtrip.py and tests/cli/test_branch_command.py",
+        "execution_surface": "runner container; OpenClaw points at common metering proxy"
+      },
+      "comparison": {
+        "group": "ajensen-harnessbug5__deepseek-v4-flash-0731__69fcb964",
+        "mode": "same-model-candidate",
+        "scope": "single-cross-module-software-bug"
+      },
+      "unknown_dimensions": [
+        "exact OpenClaw version used in the historical runs",
+        "exact runner container package versions because the committed Dockerfile is truncated",
+        "random seed or deterministic decoding settings beyond source-enforced thinking:false and fixed max-token cap"
+      ]
+    },
+    {
+      "observation_id": "pi__ajensen-harnessbug5__deepseek-v4-flash-0731__69fcb964",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "name": "Agent Harness Token-Consumption Benchmark / hermes-agent reasoning-roundtrip bug",
+        "version": "69fcb964b2a3692ed39d9a94518b5493d341e557",
+        "task_set": ["hermes-agent@3a8d95a93bdc reasoning sidecar fork/branch bug"],
+        "primary_source": "https://github.com/ajensenwaud/agent-harness-benchmark/blob/69fcb964b2a3692ed39d9a94518b5493d341e557/README.md",
+        "artifact_source": "https://github.com/ajensenwaud/agent-harness-benchmark/blob/69fcb964b2a3692ed39d9a94518b5493d341e557/gen_deliverables.py"
+      },
+      "result": {
+        "publication_date": "2026-08-23",
+        "harness_label": "Pi",
+        "harness_version": "unknown",
+        "model": "DeepSeek V4 Flash 0731",
+        "model_artifact": "0xSero/deepseek-v4-flash-0731-spark EXL3 3.0 bpw",
+        "metric": "objective_test_pass_rate",
+        "success_count": 5,
+        "trial_count": 5,
+        "value": 1.0,
+        "mean_total_tokens": 1312391,
+        "sd_total_tokens": 189710,
+        "median_total_tokens": 1312170,
+        "mean_calls": 35.0
+      },
+      "execution": {
+        "hardware": "single NVIDIA DGX Spark GB10 SM121, 128 GiB unified memory",
+        "model_context_window": 384000,
+        "max_num_seqs": 1,
+        "reasoning": "forced off",
+        "timeout_seconds": 3600,
+        "repetitions": 5,
+        "reset_policy": "fresh workdir extracted from immutable task tarball for every run; per-run meter log removed before execution",
+        "evaluator": "pytest on tests/hermes_state/test_reasoning_roundtrip.py and tests/cli/test_branch_command.py",
+        "execution_surface": "runner container; Pi uses common OpenAI-compatible metering proxy"
+      },
+      "comparison": {
+        "group": "ajensen-harnessbug5__deepseek-v4-flash-0731__69fcb964",
+        "mode": "same-model-candidate",
+        "scope": "single-cross-module-software-bug"
+      },
+      "unknown_dimensions": [
+        "exact Pi version used in the historical runs",
+        "exact runner container package versions because the committed Dockerfile is truncated",
+        "random seed or deterministic decoding settings beyond source-enforced thinking:false and fixed max-token cap"
+      ]
+    },
+    {
+      "observation_id": "hermes__ajensen-harnessbug5__deepseek-v4-flash-0731__69fcb964",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "name": "Agent Harness Token-Consumption Benchmark / hermes-agent reasoning-roundtrip bug",
+        "version": "69fcb964b2a3692ed39d9a94518b5493d341e557",
+        "task_set": ["hermes-agent@3a8d95a93bdc reasoning sidecar fork/branch bug"],
+        "primary_source": "https://github.com/ajensenwaud/agent-harness-benchmark/blob/69fcb964b2a3692ed39d9a94518b5493d341e557/README.md",
+        "artifact_source": "https://github.com/ajensenwaud/agent-harness-benchmark/blob/69fcb964b2a3692ed39d9a94518b5493d341e557/gen_deliverables.py"
+      },
+      "result": {
+        "publication_date": "2026-08-23",
+        "harness_label": "Hermes",
+        "harness_version": "unknown",
+        "model": "DeepSeek V4 Flash 0731",
+        "model_artifact": "0xSero/deepseek-v4-flash-0731-spark EXL3 3.0 bpw",
+        "metric": "objective_test_pass_rate",
+        "success_count": 5,
+        "trial_count": 5,
+        "value": 1.0,
+        "mean_total_tokens": 1520793,
+        "sd_total_tokens": 1125219,
+        "median_total_tokens": 1297894,
+        "mean_calls": 27.6
+      },
+      "execution": {
+        "hardware": "single NVIDIA DGX Spark GB10 SM121, 128 GiB unified memory",
+        "model_context_window": 384000,
+        "max_num_seqs": 1,
+        "reasoning": "forced off",
+        "timeout_seconds": 3600,
+        "repetitions": 5,
+        "reset_policy": "fresh workdir extracted from immutable task tarball for every run; per-run meter log removed before execution",
+        "evaluator": "pytest on tests/hermes_state/test_reasoning_roundtrip.py and tests/cli/test_branch_command.py",
+        "execution_surface": "native execution on the DGX Spark host rather than the runner container; common metering proxy and same task tarball are retained"
+      },
+      "comparison": {
+        "group": "ajensen-harnessbug5__deepseek-v4-flash-0731__69fcb964",
+        "mode": "same-model-candidate",
+        "scope": "single-cross-module-software-bug"
+      },
+      "unknown_dimensions": [
+        "exact Hermes version used in the historical runs",
+        "whether native-versus-container execution changes any material tool/runtime behavior beyond documented file isolation",
+        "random seed or deterministic decoding settings beyond source-enforced thinking:false and fixed max-token cap"
+      ],
+      "notes": "Hermes is not execution-surface-identical to the other four arms: the source runs it natively on the same DGX Spark while Codex, OpenCode, OpenClaw, and Pi use the runner container. W1 preserves this as a material comparability limitation."
+    }
+  ]
+}

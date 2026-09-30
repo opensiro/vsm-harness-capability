@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "manifest_id": "och-obs-1-w1-2026-09-30-pass53-ajensen-harness-token-benchmark",
+  "recorded_at": "2026-09-30",
+  "work_item": {
+    "repository": "opensiro/vsm-harness-capability",
+    "issue": 93,
+    "role": "W1 public-evidence discovery and neutral admission"
+  },
+  "protocol": {
+    "id": "OCH-OBS-1",
+    "version": "1.0.0",
+    "repository": "opensiro/vsm-harness-research",
+    "revision": "5462ffadffd7189ae10e44e22d357bc6162a6038",
+    "collection_cutoff_utc": "2026-10-20T23:59:59Z"
+  },
+  "checkpoint_parent": {
+    "capability_main_revision": "2fe365e7da029af6090b67fb2f9a5cff68a1fcf1",
+    "registry_observation_count_before": 315,
+    "prior_handoffs_mutated": false
+  },
+  "collection_state": {
+    "status": "active",
+    "pass_number": 53,
+    "cutoff_reached": false
+  },
+  "discovery_pass": {
+    "pass_id": "w1-pass-053-ajensen-harness-token-benchmark",
+    "method": "Direction-blind discovery and admission of a public repeated same-model cross-harness benchmark with committed raw-run tuples, runner scripts, task identity, objective test gate, and immutable repository revision.",
+    "source_repository": "https://github.com/ajensenwaud/agent-harness-benchmark",
+    "source_revision": "69fcb964b2a3692ed39d9a94518b5493d341e557",
+    "publication_date": "2026-08-23",
+    "benchmark_family": "agent-harness-token-consumption-benchmark",
+    "task_identity": "hermes-agent@3a8d95a93bdc reasoning sidecar fork/branch bug",
+    "model": "DeepSeek V4 Flash 0731",
+    "model_artifact": "0xSero/deepseek-v4-flash-0731-spark EXL3 3.0 bpw",
+    "hardware": "single NVIDIA DGX Spark GB10 SM121, 128 GiB unified memory",
+    "context_window": 384000,
+    "reasoning_policy": "thinking:false / reasoning none forced by source benchmark",
+    "timeout_seconds": 3600,
+    "repetitions_per_harness": 5,
+    "harness_labels": ["Codex", "OpenCode", "OpenClaw", "Pi", "Hermes"],
+    "historical_harness_versions": "unknown",
+    "evaluator": "objective pytest gate over tests/hermes_state/test_reasoning_roundtrip.py and tests/cli/test_branch_command.py",
+    "reset_policy": "fresh workdir extracted from immutable task tarball for each run; per-run metering log reset",
+    "raw_run_source": "https://github.com/ajensenwaud/agent-harness-benchmark/blob/69fcb964b2a3692ed39d9a94518b5493d341e557/gen_deliverables.py"
+  },
+  "reused_existing_observation_ids": [],
+  "newly_admitted_observation_ids": [
+    "codex__ajensen-harnessbug5__deepseek-v4-flash-0731__69fcb964",
+    "opencode__ajensen-harnessbug5__deepseek-v4-flash-0731__69fcb964",
+    "openclaw__ajensen-harnessbug5__deepseek-v4-flash-0731__69fcb964",
+    "pi__ajensen-harnessbug5__deepseek-v4-flash-0731__69fcb964",
+    "hermes__ajensen-harnessbug5__deepseek-v4-flash-0731__69fcb964"
+  ],
+  "candidate_comparison_groups": [
+    {
+      "group_id": "ajensen-harnessbug5__deepseek-v4-flash-0731__69fcb964",
+      "observation_ids": [
+        "codex__ajensen-harnessbug5__deepseek-v4-flash-0731__69fcb964",
+        "opencode__ajensen-harnessbug5__deepseek-v4-flash-0731__69fcb964",
+        "openclaw__ajensen-harnessbug5__deepseek-v4-flash-0731__69fcb964",
+        "pi__ajensen-harnessbug5__deepseek-v4-flash-0731__69fcb964",
+        "hermes__ajensen-harnessbug5__deepseek-v4-flash-0731__69fcb964"
+      ],
+      "w1_status": "candidate-only; no matched-cell eligibility adjudication"
+    }
+  ],
+  "provenance_strength": {
+    "class": "external-reproduced-repeated-run-artifacts",
+    "immutable_source_revision": true,
+    "committed_raw_run_tuples": true,
+    "committed_aggregate_workbook": true,
+    "committed_runner_and_evaluator_scripts": true,
+    "historical_harness_versions_recovered": false,
+    "historical_model_server_binary_revision_recovered": false
+  },
+  "protocol_deviations_and_failures": [
+    {
+      "event": "harness-versions-unpublished",
+      "scope": "all five observations",
+      "detail": "The source names each harness but does not publish the exact CLI/package versions used in the benchmark runs."
+    },
+    {
+      "event": "runner-dockerfile-truncated",
+      "scope": "Codex, OpenCode, OpenClaw, Pi",
+      "detail": "The committed runner/Dockerfile contains a truncated FROM line and does not recover exact installed package versions. W1 does not infer them from current releases."
+    },
+    {
+      "event": "hermes-native-execution-surface",
+      "scope": "Hermes observation",
+      "detail": "Hermes is run natively on the DGX Spark while the other four harnesses run in the runner container. The same model server, metering proxy, immutable task tarball, timeout, task prompt, and objective test gate are retained, but execution-surface equivalence is not assumed."
+    },
+    {
+      "event": "single-task-benchmark",
+      "scope": "all five observations",
+      "detail": "Five repetitions are available per harness, but all repetitions target one cross-module software bug. W1 makes no generalization beyond the published surface."
+    }
+  ],
+  "non_admission_dispositions": [
+    {
+      "surface": "aws-samples/sample-agentic-coding-harness-benchmarks current multi-harness runner documentation",
+      "status": "not-admitted-as-new-cross-harness-result",
+      "reason": "The current AWS sample tree documents a multi-harness runner, but its commit history explicitly says the per-harness result reports from the earlier source fork were not imported. Existing source-fork observations are reused elsewhere rather than duplicated from documentation-only AWS surfaces."
+    },
+    {
+      "surface": "Aider arm",
+      "status": "source-excluded",
+      "reason": "The source benchmark excludes Aider because its tested pair-programming workflow would require human staging of files, so no result is invented or reconstructed."
+    },
+    {
+      "surface": "publisher interpretive headline and harness ordering",
+      "status": "not-promoted-by-W1",
+      "reason": "W1 preserves factual pass counts and token aggregates without adopting the source's evaluative interpretation or declaring a preferred harness."
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "registry_observation_count_after": 320,
+    "results": [
+      {
+        "kind": "write-enabled-admission-and-registry-run",
+        "run_number": 418,
+        "run_id": 36757503807,
+        "head_sha": "8e91285fc30c9eecfa1833df51c45b1ad6d58b3b",
+        "conclusion": "success",
+        "generated_registry_commit": "60cd4c3bc7c96a755c672d8352dc5623194d7926"
+      },
+      {
+        "kind": "generated-registry",
+        "commit": "60cd4c3bc7c96a755c672d8352dc5623194d7926",
+        "observation_count": 320
+      },
+      {
+        "kind": "standard-workflow-restored",
+        "head_sha": "907f15ba21f009b2566366eaefd74408d97e919e",
+        "workflow_blob_sha": "244ad9701f41e6122f37c0676a00e705cddd622f"
+      },
+      {
+        "kind": "standard-read-only-validation-run",
+        "run_number": 420,
+        "run_id": 36757686538,
+        "head_sha": "907f15ba21f009b2566366eaefd74408d97e919e",
+        "conclusion": "success"
+      }
+    ]
+  },
+  "handoff_boundary": {
+    "structural_classification_performed": false,
+    "historical_linkage_adjudicated": false,
+    "matched_cell_eligibility_assigned": false,
+    "statistical_interpretation_performed": false,
+    "winner_declared": false,
+    "paper_claim_made": false
+  }
+}
