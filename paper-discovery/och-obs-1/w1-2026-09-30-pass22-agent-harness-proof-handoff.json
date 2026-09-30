@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "manifest_id": "och-obs-1-w1-2026-09-30-pass22-agent-harness-proof",
+  "recorded_at": "2026-09-30",
+  "work_item": {"repository": "opensiro/vsm-harness-capability", "issue": 93, "role": "W1 public-evidence discovery and neutral admission"},
+  "protocol": {"id": "OCH-OBS-1", "version": "1.0.0", "repository": "opensiro/vsm-harness-research", "revision": "5462ffadffd7189ae10e44e22d357bc6162a6038", "collection_cutoff_utc": "2026-10-20T23:59:59Z"},
+  "checkpoint_parent": {"capability_main_revision": "513860e10f4702cdb27254d3f73fc1a1f18d5fa4", "registry_observation_count_before": 193, "prior_handoffs_mutated": false},
+  "collection_state": {"status": "active", "documented_discovery_passes_completed_after_this_checkpoint": 22, "cutoff_reached": false},
+  "discovery_pass": {
+    "pass_id": "w1-pass-022-agent-harness-proof-deepseek-v41",
+    "method": "Direction-blind admission of the three DeepSeek V4.1 Flash lanes from a pinned sanitized proof package. All three frozen candidate outputs are evaluated by the same post-hoc eval_v3 suite. W1 preserves hard eval-v3 pass counts as the primary neutral metric and retains hidden-v2 passes, source score totals and elapsed sums only as auxiliary source telemetry.",
+    "source_repository": "https://github.com/hcsolakoglu/agent-harness-benchmark-proof",
+    "source_revision": "4f06e0d2afc1bc15bb1f7a5fb937ff7d1e091db1",
+    "field_dates": ["2026-09-10", "2026-09-11"],
+    "export_date": "2026-09-14",
+    "source_artifacts": [
+      "https://github.com/hcsolakoglu/agent-harness-benchmark-proof/blob/4f06e0d2afc1bc15bb1f7a5fb937ff7d1e091db1/README.md",
+      "https://github.com/hcsolakoglu/agent-harness-benchmark-proof/blob/4f06e0d2afc1bc15bb1f7a5fb937ff7d1e091db1/results/eval_v3_all_lanes.txt",
+      "https://github.com/hcsolakoglu/agent-harness-benchmark-proof/blob/4f06e0d2afc1bc15bb1f7a5fb937ff7d1e091db1/results/revised_harness_scores.csv",
+      "https://github.com/hcsolakoglu/agent-harness-benchmark-proof/blob/4f06e0d2afc1bc15bb1f7a5fb937ff7d1e091db1/runners/run_one_task.sh",
+      "https://github.com/hcsolakoglu/agent-harness-benchmark-proof/blob/4f06e0d2afc1bc15bb1f7a5fb937ff7d1e091db1/runners/run_hermes_task.sh",
+      "https://github.com/hcsolakoglu/agent-harness-benchmark-proof/blob/4f06e0d2afc1bc15bb1f7a5fb937ff7d1e091db1/runners/run_dsh_task.sh",
+      "https://github.com/hcsolakoglu/agent-harness-benchmark-proof/blob/4f06e0d2afc1bc15bb1f7a5fb937ff7d1e091db1/manifests/redaction_manifest.json",
+      "https://github.com/hcsolakoglu/agent-harness-benchmark-proof/blob/4f06e0d2afc1bc15bb1f7a5fb937ff7d1e091db1/SHA256SUMS.txt"
+    ]
+  },
+  "reused_existing_observation_ids": [],
+  "newly_admitted_observation_ids": [
+    "commandcode-direct__agent-harness-proof-10task-evalv3__deepseek-v4.1-flash__4f06e0d2",
+    "hermes-commandcode__agent-harness-proof-10task-evalv3__deepseek-v4.1-flash__4f06e0d2",
+    "deepseek-harness-commandcode__agent-harness-proof-10task-evalv3__deepseek-v4.1-flash__4f06e0d2"
+  ],
+  "candidate_same_model_comparison_groups": [{
+    "group_id": "agent-harness-proof-10task-evalv3__deepseek-v4.1-flash__commandcode__4f06e0d2",
+    "observation_ids": [
+      "commandcode-direct__agent-harness-proof-10task-evalv3__deepseek-v4.1-flash__4f06e0d2",
+      "hermes-commandcode__agent-harness-proof-10task-evalv3__deepseek-v4.1-flash__4f06e0d2",
+      "deepseek-harness-commandcode__agent-harness-proof-10task-evalv3__deepseek-v4.1-flash__4f06e0d2"
+    ],
+    "source_known_dimensions": [
+      "same published model slug deepseek/deepseek-v4.1-flash",
+      "same CommandCode provider family",
+      "reasoning effort max in all three runners",
+      "same frozen 10 task set and agent-visible task/public-test inputs",
+      "same frozen candidate outputs evaluated under the same eval_v3 suite",
+      "candidate workspaces isolated from benchmark state",
+      "one stochastic candidate-generation run per lane"
+    ],
+    "explicit_unknown_or_nonidentical_dimensions": [
+      "exact service-side DeepSeek V4.1 Flash checkpoint behind the published model slug",
+      "exact CommandCode package/source revision",
+      "exact Hermes and DeepSeek Harness package/source revisions",
+      "runner-native control loops, tool surfaces and turn policies differ by study design",
+      "raw unsanitized traces remain local; public traces are sanitized exports with hash-linked redaction provenance",
+      "eval_v3 was authored after candidate generation and applied to frozen outputs rather than used to regenerate all candidates",
+      "trajectory variance beyond n=1 per lane"
+    ],
+    "paper_eligibility": "not-assessed-by-W1"
+  }],
+  "provenance_strength": {
+    "class": "external-reproduced",
+    "public_frozen_candidates": true,
+    "public_evaluator_outputs": true,
+    "public_result_tables": true,
+    "public_sanitized_trajectories": true,
+    "public_raw_unsanitized_trajectories": false,
+    "public_hash_and_redaction_manifests": true,
+    "w1_treatment": "admitted from the pinned sanitized proof package; sanitized trajectories are inspectable and hash-bound, while raw local traces remain explicitly unavailable"
+  },
+  "non_admission_dispositions": [
+    {"surface": "Ondemand-OSS/harness-arena@1e99d236b2ab833da9d3835e76fa3780b98a2465", "status": "evidence-unavailable-for-neutral-result-admission", "reason": "The public repository implements same-model blind harness comparison and derived Elo computation, but real dataset inputs, deliverables and judge results are stored in gitignored local extras and/or MongoDB. No committed immutable result state was located in this pass."},
+    {"surface": "PromtEngineer/Harness-Bench@a2f7b4789d29c29aa182bf4746716def450ade1e", "status": "protocol-without-public-executed-comparison", "reason": "The repository publishes a 40-task harness benchmark, deterministic checkers and strict matched-variable protocol, but W1 located no committed executed harness-comparison result artifact at the pinned revision."},
+    {"surface": "source lane ordering and claims about harness differences", "status": "not-promoted-by-W1", "reason": "W1 preserves each lane's factual eval-v3 result and auxiliary telemetry without reproducing an ordering, winner label, or causal harness interpretation."},
+    {"surface": "raw local traces", "status": "unavailable-publicly", "reason": "The source explicitly publishes sanitized trace copies only. Redaction manifests bind source and sanitized SHA-256 values without exposing redacted values."}
+  ],
+  "validation": {
+    "status": "pending",
+    "registry_observation_count_after": 196,
+    "commands_required": ["python system-observations/render_registry.py", "python scripts/admission_check.py <each of three pass-22 raw records>", "python scripts/validate_repository.py"],
+    "results": []
+  },
+  "handoff_boundary": {"structural_classification_performed": false, "historical_linkage_adjudicated": false, "comparison_tier_assigned": false, "statistical_interpretation_performed": false, "winner_declared": false}
+}
