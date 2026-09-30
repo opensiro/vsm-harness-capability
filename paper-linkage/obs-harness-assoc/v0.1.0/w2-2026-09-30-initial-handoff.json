@@ -1,0 +1,308 @@
+{
+  "schema_version": 1,
+  "artifact_id": "obs-harness-assoc-w2-2026-09-30-initial-handoff",
+  "artifact_version": "1.0.0",
+  "recorded_at_utc": "2026-09-30T16:42:27Z",
+  "work_item": {
+    "repository": "opensiro/vsm-harness-capability",
+    "issue": 94,
+    "role": "fresh independent Track A W2 historical system/revision linkage"
+  },
+  "execution": {
+    "capability_start_revision": "faec8af4534796b52fda46802f3632dcb54dac3d",
+    "w2_execution_revision": "faec8af4534796b52fda46802f3632dcb54dac3d",
+    "branch": "issue-94-w2-initial-handoff-linkage",
+    "fresh_independent_context": true,
+    "bounded_handoff": "paper-discovery/och-obs-1/w1-2026-09-29-handoff.json",
+    "processed_group_ids": [
+      "existing-pawbench-v1.0__qwen3.6-35b-a3b",
+      "existing-wildclawbench__gpt-5.4",
+      "agentic-coding-swe2__glm-4.7__6a4a430b",
+      "agentic-coding-swe2__minimax-m2.1__6a4a430b",
+      "agentic-coding-swe2__minimax-m2.5__6a4a430b"
+    ],
+    "explicitly_not_processed": ["W1 pass 3", "W1 pass 4", "W1 pass 32", "all later W1 handoffs"],
+    "raw_score_payload_copied": false,
+    "explicitly_not_performed": {
+      "w3_structural_projection": true,
+      "w4_matched_cell_adjudication": true,
+      "w5_selection_analysis": true,
+      "gate_b": true,
+      "w6_statistics": true,
+      "outcome_interpretation": true,
+      "benchmark_ranking": true,
+      "paper_claims": true
+    }
+  },
+  "protocol": {
+    "study_id": "OBS-HARNESS-ASSOC",
+    "version": "0.1.0",
+    "research_freeze_revision": "ac6b63deb1c9163ec25e1be74e61314629ade112",
+    "protocol_sha256": "17f51d4f35f0eb5a665122238c505ad6c8e3db7c8b937dac7ecbae35a3ac49a4",
+    "authority_reconciliation": {
+      "issue": 233,
+      "pr": 234,
+      "merge": "66c526481a4433d04cf28c24e874212a839cbde9",
+      "disposition": "OBS-HARNESS-ASSOC-governing"
+    },
+    "historical_w1_routing": {
+      "protocol_id": "OCH-OBS-1",
+      "version": "1.0.0",
+      "revision": "5462ffadffd7189ae10e44e22d357bc6162a6038",
+      "treatment": "preserved unchanged as historical neutral-evidence provenance only; not governing for this W2 adjudication"
+    },
+    "grade_mapping": {
+      "exact-historical-match": "L1",
+      "bounded-compatible": "L2",
+      "unresolved": "L3"
+    },
+    "current_state_substitution_forbidden": true
+  },
+  "upstream": {
+    "w1_issue": 93,
+    "w1_handoff_path": "paper-discovery/och-obs-1/w1-2026-09-29-handoff.json",
+    "w1_manifest_id": "och-obs-1-w1-2026-09-29",
+    "w1_initial_handoff_revision": "6f3a1a4dcbf553adb7514721050ca7c3bdc78d73",
+    "w1_evidence_admission_revision": "68999d4f247daf1fb61dcc12a68425df7b8fe976"
+  },
+  "preconditions": {
+    "expected_observation_count": 13,
+    "neutral_registry_revision": "faec8af4534796b52fda46802f3632dcb54dac3d",
+    "registry_occurrence_counts": {
+      "hermes-agent__pawbench-v1.0__qwen3.6-35b-a3b__20260529": 1,
+      "openclaw__pawbench-v1.0__qwen3.6-35b-a3b__20260529": 1,
+      "qwenpaw__pawbench-v1.0__qwen3.6-35b-a3b__20260529": 1,
+      "claude-code__wildclawbench-harness-comparison__gpt-5.4": 1,
+      "codex__wildclawbench-harness-comparison__gpt-5.4": 1,
+      "hermes-agent__wildclawbench-harness-comparison__gpt-5.4": 1,
+      "openclaw__wildclawbench-harness-comparison__gpt-5.4": 1,
+      "claude-code__agentic-coding-swe2__glm-4.7__6a4a430b": 1,
+      "pi__agentic-coding-swe2__glm-4.7__6a4a430b": 1,
+      "claude-code__agentic-coding-swe2__minimax-m2.1__6a4a430b": 1,
+      "pi__agentic-coding-swe2__minimax-m2.1__6a4a430b": 1,
+      "claude-code__agentic-coding-swe2__minimax-m2.5__6a4a430b": 1,
+      "pi__agentic-coding-swe2__minimax-m2.5__6a4a430b": 1
+    },
+    "registry_wrapper_note": "Connector search exposes the same raw registry text in content and structuredContent.content; two connector matches correspond to one underlying PSV row after exact-row inspection.",
+    "w1_source_identity_present": true,
+    "prior_same_protocol_w2_decision_found": false,
+    "prior_decision_check": "At execution start the governing-study linkage directory contained only pass-32 and pass-4 artifacts; neither covers this bounded handoff."
+  },
+  "evidence_catalog": {
+    "pawbench": "agentscope-ai/PawBench@0f794a8bb6c27aa9ee4091b2691fa30e4ed9cc8f",
+    "pawbench_hermes": "docker/Dockerfile.pawbench-hermes pins hermes-agent 2026.4.23",
+    "pawbench_openclaw": "docker/Dockerfile.pawbench-openclaw pins openclaw 2026.4.24",
+    "pawbench_qwenpaw": "docker/Dockerfile.pawbench-qwenpaw pins qwenpaw 1.1.3",
+    "wildclawbench": "InternLM/WildClawBench@8e1fde746584ae1a9c49b70526d49a7a572625cd",
+    "agentic_coding": "aarora79/agentic-coding-harness-benchmarks@6a4a430bc6b78521131d245c5d26e42d7b9c123e"
+  },
+  "decisions": [
+    {
+      "observation_id": "hermes-agent__pawbench-v1.0__qwen3.6-35b-a3b__20260529",
+      "group_id": "existing-pawbench-v1.0__qwen3.6-35b-a3b",
+      "canonical_harness_id": "hermes-agent",
+      "canonical_assessment_ref": "16bddc88dd325c5eef27c2cc71bbb14c16b870aa",
+      "linkage_state": "exact-historical-match",
+      "w0_grade": "L1",
+      "historical_identity": {
+        "harness_version": "2026.4.23",
+        "benchmark_installation_binding": "hermes-agent==2026.4.23",
+        "upstream_repository": "NousResearch/hermes-agent",
+        "immutable_release_or_tag": "v2026.4.23",
+        "upstream_commit": "bf196a3fc0fd1f79353369e8732051db275c6276"
+      },
+      "unresolved_dimensions": [],
+      "decision_basis": "Pinned PawBench build configuration fixes the exact package version; the upstream release/tag resolves to an immutable commit.",
+      "canonical_temporal_relation": "canonical assessment is identity context only; no current-state substitution"
+    },
+    {
+      "observation_id": "openclaw__pawbench-v1.0__qwen3.6-35b-a3b__20260529",
+      "group_id": "existing-pawbench-v1.0__qwen3.6-35b-a3b",
+      "canonical_harness_id": "openclaw",
+      "canonical_assessment_ref": "387da5edaa9d6c6cfcfc15e167fe2e46d8647d86",
+      "linkage_state": "exact-historical-match",
+      "w0_grade": "L1",
+      "historical_identity": {
+        "harness_version": "2026.4.24",
+        "benchmark_installation_binding": "openclaw@2026.4.24",
+        "upstream_repository": "openclaw/openclaw",
+        "immutable_release_or_tag": "v2026.4.24",
+        "upstream_tag_object": "6507387f433deb0e7beb22abb4625a40f3b6b97e",
+        "upstream_commit": "cbcfdf62c7297bda66009ea7476f053c3e9addab"
+      },
+      "unresolved_dimensions": [],
+      "decision_basis": "Pinned PawBench build configuration fixes the exact npm version; the annotated upstream tag resolves to an immutable commit.",
+      "canonical_temporal_relation": "canonical assessment is identity context only; no current-state substitution"
+    },
+    {
+      "observation_id": "qwenpaw__pawbench-v1.0__qwen3.6-35b-a3b__20260529",
+      "group_id": "existing-pawbench-v1.0__qwen3.6-35b-a3b",
+      "canonical_harness_id": "qwenpaw",
+      "canonical_assessment_ref": "8af8b6e31a837a0e19ee6c9fffaf1c6b44b5f9ec",
+      "linkage_state": "exact-historical-match",
+      "w0_grade": "L1",
+      "historical_identity": {
+        "harness_version": "1.1.3",
+        "benchmark_installation_binding": "qwenpaw==1.1.3",
+        "upstream_repository": "agentscope-ai/QwenPaw",
+        "immutable_release_or_tag": "v1.1.3",
+        "upstream_commit": "aa324e3bc75a0be6c51e0c744b452596c8916f6d"
+      },
+      "unresolved_dimensions": [],
+      "decision_basis": "Pinned PawBench build configuration fixes the exact package version; upstream v1.1.3 resolves to an immutable commit.",
+      "canonical_temporal_relation": "canonical assessment is identity context only; no current-state substitution"
+    },
+    {
+      "observation_id": "claude-code__wildclawbench-harness-comparison__gpt-5.4",
+      "group_id": "existing-wildclawbench__gpt-5.4",
+      "canonical_harness_id": "claude-code",
+      "canonical_assessment_ref": "7dd06361110d4417f3edefaf075f41923f0e04c5",
+      "linkage_state": "unresolved",
+      "w0_grade": "L3",
+      "historical_identity": {"benchmark_revision": "8e1fde746584ae1a9c49b70526d49a7a572625cd", "adapter_image_tag": "wildclawbench-claudecode-ubuntu:v0.2", "upstream_harness_version": null, "upstream_harness_revision": null},
+      "unresolved_dimensions": ["exact upstream harness package/version", "exact upstream repository revision", "immutable container digest/build provenance", "row execution date"],
+      "decision_basis": "Dedicated adapter/image proves the Claude Code execution family but no immutable upstream harness binding or bounded-compatible version interval is public.",
+      "canonical_temporal_relation": "canonical assessment is identity context only; no current-state substitution"
+    },
+    {
+      "observation_id": "codex__wildclawbench-harness-comparison__gpt-5.4",
+      "group_id": "existing-wildclawbench__gpt-5.4",
+      "canonical_harness_id": "codex",
+      "canonical_assessment_ref": "b974893c90048d147207ae9004489c02f3116426",
+      "linkage_state": "unresolved",
+      "w0_grade": "L3",
+      "historical_identity": {"benchmark_revision": "8e1fde746584ae1a9c49b70526d49a7a572625cd", "adapter_image_tag": "wildclawbench-codex-ubuntu:v0.0", "upstream_harness_version": null, "upstream_harness_revision": null},
+      "unresolved_dimensions": ["exact upstream harness package/version", "exact upstream repository revision", "immutable container digest/build provenance", "row execution date"],
+      "decision_basis": "Dedicated adapter invokes codex exec but the image tag does not bind an exact or bounded-compatible upstream Codex revision.",
+      "canonical_temporal_relation": "canonical assessment is identity context only; no current-state substitution"
+    },
+    {
+      "observation_id": "hermes-agent__wildclawbench-harness-comparison__gpt-5.4",
+      "group_id": "existing-wildclawbench__gpt-5.4",
+      "canonical_harness_id": "hermes-agent",
+      "canonical_assessment_ref": "16bddc88dd325c5eef27c2cc71bbb14c16b870aa",
+      "linkage_state": "unresolved",
+      "w0_grade": "L3",
+      "historical_identity": {"benchmark_revision": "8e1fde746584ae1a9c49b70526d49a7a572625cd", "adapter_image_tag": "wildclawbench-hermes-agent:v0.5", "upstream_harness_version": null, "upstream_harness_revision": null},
+      "unresolved_dimensions": ["exact upstream harness package/version", "exact upstream repository revision", "immutable container digest/build provenance", "row execution date"],
+      "decision_basis": "Dedicated Hermes backend executes the installed Hermes runtime, but no exact or bounded-compatible upstream version/revision is public.",
+      "canonical_temporal_relation": "canonical assessment is identity context only; no current-state substitution"
+    },
+    {
+      "observation_id": "openclaw__wildclawbench-harness-comparison__gpt-5.4",
+      "group_id": "existing-wildclawbench__gpt-5.4",
+      "canonical_harness_id": "openclaw",
+      "canonical_assessment_ref": "387da5edaa9d6c6cfcfc15e167fe2e46d8647d86",
+      "linkage_state": "unresolved",
+      "w0_grade": "L3",
+      "historical_identity": {"benchmark_revision": "8e1fde746584ae1a9c49b70526d49a7a572625cd", "adapter_image_tag": "wildclawbench-ubuntu:v1.3", "upstream_harness_version": null, "upstream_harness_revision": null},
+      "unresolved_dimensions": ["exact upstream harness package/version", "exact upstream repository revision", "immutable container digest/build provenance", "row execution date"],
+      "decision_basis": "Dedicated OpenClaw gateway/agent backend proves the execution family, but no exact or bounded-compatible upstream version/revision is public.",
+      "canonical_temporal_relation": "canonical assessment is identity context only; no current-state substitution"
+    },
+    {
+      "observation_id": "claude-code__agentic-coding-swe2__glm-4.7__6a4a430b",
+      "group_id": "agentic-coding-swe2__glm-4.7__6a4a430b",
+      "display_harness_identity": "Claude Code",
+      "canonical_harness_id": null,
+      "linkage_state": "unresolved",
+      "w0_grade": "L3",
+      "historical_identity": {"benchmark_revision": "6a4a430bc6b78521131d245c5d26e42d7b9c123e", "harness_version": null, "harness_revision": null, "result_execution_date": null},
+      "unresolved_dimensions": ["exact upstream harness release/version", "exact upstream repository revision", "historical canonical-harness binding", "result execution date"],
+      "decision_basis": "Pinned snapshot names Claude Code but exposes no installed historical release/revision or bounded-compatible interval; current state is not substituted."
+    },
+    {
+      "observation_id": "pi__agentic-coding-swe2__glm-4.7__6a4a430b",
+      "group_id": "agentic-coding-swe2__glm-4.7__6a4a430b",
+      "display_harness_identity": "Pi",
+      "canonical_harness_id": null,
+      "linkage_state": "unresolved",
+      "w0_grade": "L3",
+      "historical_identity": {"benchmark_revision": "6a4a430bc6b78521131d245c5d26e42d7b9c123e", "harness_version": null, "harness_revision": null, "result_execution_date": null},
+      "unresolved_dimensions": ["exact upstream harness release/version", "exact upstream repository revision", "historical canonical-harness binding", "result execution date"],
+      "decision_basis": "Pinned snapshot names Pi but exposes no installed historical release/revision or bounded-compatible interval; current state is not substituted."
+    },
+    {
+      "observation_id": "claude-code__agentic-coding-swe2__minimax-m2.1__6a4a430b",
+      "group_id": "agentic-coding-swe2__minimax-m2.1__6a4a430b",
+      "display_harness_identity": "Claude Code",
+      "canonical_harness_id": null,
+      "linkage_state": "unresolved",
+      "w0_grade": "L3",
+      "historical_identity": {"benchmark_revision": "6a4a430bc6b78521131d245c5d26e42d7b9c123e", "harness_version": null, "harness_revision": null, "result_execution_date": null},
+      "unresolved_dimensions": ["exact upstream harness release/version", "exact upstream repository revision", "historical canonical-harness binding", "result execution date"],
+      "decision_basis": "Pinned snapshot names Claude Code but exposes no installed historical release/revision or bounded-compatible interval; current state is not substituted."
+    },
+    {
+      "observation_id": "pi__agentic-coding-swe2__minimax-m2.1__6a4a430b",
+      "group_id": "agentic-coding-swe2__minimax-m2.1__6a4a430b",
+      "display_harness_identity": "Pi",
+      "canonical_harness_id": null,
+      "linkage_state": "unresolved",
+      "w0_grade": "L3",
+      "historical_identity": {"benchmark_revision": "6a4a430bc6b78521131d245c5d26e42d7b9c123e", "harness_version": null, "harness_revision": null, "result_execution_date": null},
+      "unresolved_dimensions": ["exact upstream harness release/version", "exact upstream repository revision", "historical canonical-harness binding", "result execution date"],
+      "decision_basis": "Pinned snapshot names Pi but exposes no installed historical release/revision or bounded-compatible interval; current state is not substituted."
+    },
+    {
+      "observation_id": "claude-code__agentic-coding-swe2__minimax-m2.5__6a4a430b",
+      "group_id": "agentic-coding-swe2__minimax-m2.5__6a4a430b",
+      "display_harness_identity": "Claude Code",
+      "canonical_harness_id": null,
+      "linkage_state": "unresolved",
+      "w0_grade": "L3",
+      "historical_identity": {"benchmark_revision": "6a4a430bc6b78521131d245c5d26e42d7b9c123e", "harness_version": null, "harness_revision": null, "result_execution_date": null},
+      "unresolved_dimensions": ["exact upstream harness release/version", "exact upstream repository revision", "historical canonical-harness binding", "result execution date"],
+      "decision_basis": "Pinned snapshot names Claude Code but exposes no installed historical release/revision or bounded-compatible interval; current state is not substituted."
+    },
+    {
+      "observation_id": "pi__agentic-coding-swe2__minimax-m2.5__6a4a430b",
+      "group_id": "agentic-coding-swe2__minimax-m2.5__6a4a430b",
+      "display_harness_identity": "Pi",
+      "canonical_harness_id": null,
+      "linkage_state": "unresolved",
+      "w0_grade": "L3",
+      "historical_identity": {"benchmark_revision": "6a4a430bc6b78521131d245c5d26e42d7b9c123e", "harness_version": null, "harness_revision": null, "result_execution_date": null},
+      "unresolved_dimensions": ["exact upstream harness release/version", "exact upstream repository revision", "historical canonical-harness binding", "result execution date"],
+      "decision_basis": "Pinned snapshot names Pi but exposes no installed historical release/revision or bounded-compatible interval; current state is not substituted."
+    }
+  ],
+  "operational_deviations": [
+    {
+      "repository": "opensiro/vsm-harness-capability",
+      "issue": 138,
+      "title": "TEMP accidental no-op",
+      "cause": "connector routing error during W2 execution",
+      "disposition": "closed immediately as not_planned",
+      "research_content": "none",
+      "scientific_effect": "none"
+    }
+  ],
+  "batch_summary": {
+    "input_groups": 5,
+    "input_observations": 13,
+    "L1": 3,
+    "L2": 0,
+    "L3": 10,
+    "group_results": {
+      "existing-pawbench-v1.0__qwen3.6-35b-a3b": {"L1": 3, "L2": 0, "L3": 0},
+      "existing-wildclawbench__gpt-5.4": {"L1": 0, "L2": 0, "L3": 4},
+      "agentic-coding-swe2__glm-4.7__6a4a430b": {"L1": 0, "L2": 0, "L3": 2},
+      "agentic-coding-swe2__minimax-m2.1__6a4a430b": {"L1": 0, "L2": 0, "L3": 2},
+      "agentic-coding-swe2__minimax-m2.5__6a4a430b": {"L1": 0, "L2": 0, "L3": 2}
+    }
+  },
+  "boundary": {
+    "w2_complete_for_bounded_initial_handoff": true,
+    "issue_94_remains_open_for_other_admitted_batches": true,
+    "w3_performed": false,
+    "w4_performed": false,
+    "w5_performed": false,
+    "gate_b_performed": false,
+    "w6_performed": false,
+    "outcome_direction_or_magnitude_used": false,
+    "benchmark_ranking_performed": false,
+    "paper_claims_made": false,
+    "next_control_action": "return to Track A control plane"
+  }
+}
