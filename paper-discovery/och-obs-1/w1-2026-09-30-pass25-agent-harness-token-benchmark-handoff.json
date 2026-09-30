@@ -79,10 +79,14 @@
     {"surface": "source headline that reliability rather than cost is the real differentiator", "status": "not-promoted-by-W1", "reason": "W1 preserves pass rates and token/call/wall-time telemetry separately. It does not form a composite or promote the publisher's evaluative interpretation."}
   ],
   "validation": {
-    "status": "pending",
+    "status": "succeeded",
     "registry_observation_count_after": 212,
     "commands_required": ["python system-observations/render_registry.py", "python scripts/admission_check.py system-observations/agent-harness-token-benchmark-deepseek-v4-flash-external-reproduced-unclear.json", "python scripts/validate_repository.py"],
-    "results": []
+    "results": [
+      {"gate": "write-enabled-admission", "workflow_run_id": 36658790405, "run_number": 286, "head_revision": "d9fd530fc184577a18772234e3d559bfcd327ee1", "conclusion": "success", "checks": ["registry regeneration", "repository validation", "post-closure validators", "record-specific admission check"]},
+      {"gate": "bot-registry-retrigger", "workflow_run_id": 36658805750, "run_number": 287, "head_revision": "a590bf60f8e0675809753bf8e9e27d78a4df20b5", "conclusion": "action_required", "jobs_created": false, "treatment": "infrastructure/control event only; the successful admission run is #286 and no second admission result is inferred from this retrigger"},
+      {"gate": "restored-standard-workflow", "workflow_run_id": 36668873927, "run_number": 288, "head_revision": "141012fe2647014a3ee5b5573db25f1f825e3852", "conclusion": "success", "workflow_blob_sha": "244ad9701f41e6122f37c0676a00e705cddd622f", "checks": ["repository validation", "post-closure validators", "standard live evidence checks"]}
+    ]
   },
   "handoff_boundary": {"structural_classification_performed": false, "historical_linkage_adjudicated": false, "comparison_tier_assigned": false, "statistical_interpretation_performed": false, "winner_declared": false}
 }
