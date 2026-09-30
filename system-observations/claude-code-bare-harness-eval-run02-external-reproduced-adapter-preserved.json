@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Claude Code",
+  "canonical_harness_id": "claude-code",
+  "canonical_assessment_ref": "assessments/claude-code.md",
+  "canonical_review_ref": "7dd06361110d4417f3edefaf075f41923f0e04c5",
+  "canonical_repository": "https://github.com/anthropics/claude-code",
+  "published_implementation": {"system_compatibility": "adapter-preserved", "historical_relation": "The pinned study directly records the bare control as Claude Code 2.1.211 under a clean fake-HOME profile with no added harness overlay. The package version is known; exact upstream source revision is not asserted."},
+  "primary_sources": [
+    "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_02/README.md",
+    "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_02/runs/07-runlog.md",
+    "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_02/runs/07-acceptance.txt",
+    "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_02/grades/final.md"
+  ],
+  "observations": [{
+    "observation_id": "claude-code__harness-eval-feedhub-run02__claude-opus-4-8__7d3f74fe",
+    "kind": "system-benchmark-result",
+    "benchmark": {"family_id": "harness-eval-feedhub-run02", "name": "harness-eval run_02 feedhub build round", "variant": "frozen-build-round", "task_count": 1, "primary_source": "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_02/README.md", "artifact_source": "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_02/runs/07-acceptance.txt"},
+    "result": {"date": "2026-07-16", "agent_label": "07-baseline-claude", "harness_version": "Claude Code 2.1.211", "harness_revision": null, "benchmark_revision": "7d3f74fe47f48db67c9ab0489ad4ba9170922f12", "model": "claude-opus-4-8", "model_config": "source-requested Claude Opus 4.8 via Claude Code; run log records claude-opus-4-8 usage; exact service checkpoint not published", "metric": "acceptance_test_pass_rate", "value": 0.9230769230769231, "acceptance_passed": 24, "acceptance_total": 26, "core_passed": 13, "core_total": 14, "hard_passed": 11, "hard_total": 12, "trials": 1, "consensus_weighted_score_source_reported": 84.5, "wall_time_seconds": 2169, "runner_exit_code": 0},
+    "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "version-known"},
+    "provenance": {"publisher": "Ken Hiatt / harness-eval", "checked": true, "os_system": true, "public_logs": true, "public_trajectories": null, "raw_run_artifacts_public": true, "execution_environment": "single host kai; headless Claude Code 2.1.211; fake HOME claude-clean profile; frozen feedhub prompt/spec; sealed executable acceptance suite; zero recorded interventions"},
+    "comparison": {"group": "harness-eval-feedhub-run02__claude-opus-4.8__claude-code-family", "mode": "candidate-same-model", "scope": "coding-swe"},
+    "unknown_dimensions": ["exact service-side Claude Opus 4.8 checkpoint", "exact upstream source revision corresponding to Claude Code 2.1.211", "Claude Code runner differs from gstack cell by patch version 2.1.211 versus 2.1.209", "trajectory variance at N=1"],
+    "notes": "Bare same-runner-family control for the Claude group. Source explicitly reports auto-update drift between the two cells; W1 preserves the version difference and performs no ranking or causal interpretation."
+  }]
+}

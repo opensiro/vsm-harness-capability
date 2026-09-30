@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "GitHub Copilot CLI + kprojects",
+  "canonical_harness_id": null,
+  "published_implementation": {"system_compatibility": "unclear", "historical_relation": "The pinned study records GitHub Copilot CLI 1.0.71 with kprojects installed from source revision b3c5af8 using install.sh --agent both. W1 preserves the composite setup without inferring canonical identity."},
+  "primary_sources": [
+    "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_02/README.md",
+    "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_02/runs/04-runlog.md",
+    "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_02/runs/04-acceptance.txt",
+    "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_02/grades/final.md"
+  ],
+  "observations": [{
+    "observation_id": "copilot-kprojects__harness-eval-feedhub-run02__claude-opus-4.8__7d3f74fe",
+    "kind": "system-benchmark-result",
+    "benchmark": {"family_id": "harness-eval-feedhub-run02", "name": "harness-eval run_02 feedhub build round", "variant": "frozen-build-round", "task_count": 1, "primary_source": "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_02/README.md", "artifact_source": "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_02/runs/04-acceptance.txt"},
+    "result": {"date": "2026-07-16", "agent_label": "04-kprojects", "harness_version": "kprojects@b3c5af8; GitHub Copilot CLI 1.0.71", "harness_revision": "b3c5af8", "benchmark_revision": "7d3f74fe47f48db67c9ab0489ad4ba9170922f12", "model": "claude-opus-4.8", "model_config": "source-requested and Copilot session-reported claude-opus-4.8; exact service checkpoint/routing not published", "metric": "acceptance_test_pass_rate", "value": 0.9230769230769231, "acceptance_passed": 24, "acceptance_total": 26, "core_passed": 13, "core_total": 14, "hard_passed": 11, "hard_total": 12, "trials": 1, "consensus_weighted_score_source_reported": 75.0, "wall_time_seconds": 1238, "premium_requests": 15, "runner_exit_code": 0},
+    "published_implementation": {"system_compatibility": "unclear", "revision_match": "source-revision-known"},
+    "provenance": {"publisher": "Ken Hiatt / harness-eval", "checked": true, "os_system": null, "public_logs": true, "public_trajectories": null, "raw_run_artifacts_public": true, "execution_environment": "single host kai; headless GitHub Copilot CLI 1.0.71; fake HOME clean profile; frozen feedhub prompt/spec; sealed executable acceptance suite; zero recorded interventions"},
+    "comparison": {"group": "harness-eval-feedhub-run02__claude-opus-4.8__copilot-cli-1.0.71", "mode": "candidate-same-model", "scope": "coding-swe"},
+    "unknown_dimensions": ["exact service-side Claude Opus 4.8 checkpoint and provider route", "trajectory variance at N=1", "material effect of real-HOME leak-canary touch recorded for this cell"],
+    "notes": "Source marks run_02 preliminary at N=1 per cell. W1 preserves the mechanical acceptance result and auxiliary consensus score without ranking or causal interpretation."
+  }]
+}
