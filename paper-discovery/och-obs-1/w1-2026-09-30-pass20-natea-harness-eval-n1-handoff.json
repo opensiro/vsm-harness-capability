@@ -69,10 +69,13 @@
     {"surface": "referenced runs/combined-n1 raw evidence directory", "status": "unavailable-in-pinned-git-tree", "reason": "The committed leaderboard states that results.json, scorecards, grades and transcripts exist under runs/, but the pinned repository tree does not publish that directory."}
   ],
   "validation": {
-    "status": "pending",
+    "status": "success",
     "registry_observation_count_after": 188,
     "commands_required": ["python system-observations/render_registry.py", "python scripts/admission_check.py <each of four pass-20 raw records>", "python scripts/validate_repository.py"],
-    "results": []
+    "results": [
+      {"workflow_run_id": 36654002415, "run_number": 259, "head_before_bot_registry_commit": "fd70e2837a588a31f5ec54115e3a18a1c888f1e5", "result": "success", "scope": "temporary write-enabled registry regeneration plus repository validation and four record-specific admission checks"},
+      {"workflow_run_id": 36654099695, "run_number": 261, "head": "9ef8c0fdbd81d1554fe28b45eae067dbe10a2eb9", "result": "success", "scope": "standard read-only validation after restoring workflow blob 244ad9701f41e6122f37c0676a00e705cddd622f"}
+    ]
   },
   "handoff_boundary": {"structural_classification_performed": false, "historical_linkage_adjudicated": false, "comparison_tier_assigned": false, "statistical_interpretation_performed": false, "winner_declared": false}
 }
