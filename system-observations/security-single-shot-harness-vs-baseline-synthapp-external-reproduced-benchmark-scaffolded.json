@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "harness-vs-baseline single-shot security audit arm",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "benchmark-scaffolded",
+    "historical_relation": "The public study defines this arm as one whole-codebase prompt followed by one list of findings. It is a benchmark-local control implementation, not linked by W1 to a canonical harness identity."
+  },
+  "primary_sources": [
+    "https://github.com/theteatoast/harness-vs-baseline/blob/7b3c842a02ef8a006662e6f0db39a1cd223f082c/README.md",
+    "https://github.com/theteatoast/harness-vs-baseline/blob/7b3c842a02ef8a006662e6f0db39a1cd223f082c/BENCHMARKING.md",
+    "https://github.com/theteatoast/harness-vs-baseline/blob/7b3c842a02ef8a006662e6f0db39a1cd223f082c/configs/default.yaml",
+    "https://github.com/theteatoast/harness-vs-baseline/blob/7b3c842a02ef8a006662e6f0db39a1cd223f082c/configs/weak.yaml",
+    "https://github.com/theteatoast/harness-vs-baseline/blob/7b3c842a02ef8a006662e6f0db39a1cd223f082c/secagent/corpus/scorer.py"
+  ],
+  "observations": [
+    {
+      "observation_id": "security-single-shot__harness-vs-baseline-synthapp__glm-5.3-flash__7b3c842a",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "harness-vs-baseline-synthapp",
+        "name": "harness-vs-baseline synthetic security-audit benchmark",
+        "variant": "single-shot-baseline",
+        "task_count": 1,
+        "primary_source": "https://github.com/theteatoast/harness-vs-baseline/blob/7b3c842a02ef8a006662e6f0db39a1cd223f082c/README.md",
+        "artifact_source": "https://github.com/theteatoast/harness-vs-baseline/blob/7b3c842a02ef8a006662e6f0db39a1cd223f082c/README.md"
+      },
+      "result": {
+        "date": null,
+        "published_snapshot_date": "2026-09-22",
+        "agent_label": "baseline-single-shot",
+        "harness_version": null,
+        "harness_revision": "7b3c842a02ef8a006662e6f0db39a1cd223f082c",
+        "benchmark_revision": "7b3c842a02ef8a006662e6f0db39a1cd223f082c",
+        "model": "z-ai/glm-5.3-flash",
+        "model_config": "OpenRouter model z-ai/glm-5.3-flash; temperature 0.2; reasoning max_tokens 3000; max_tokens 300000; wall_clock_s 900",
+        "metric": "vulnerability_recall",
+        "value": 1.0,
+        "precision_source_reported": 0.81,
+        "f1_source_reported": 0.90,
+        "cost_usd_source_reported": 0.0112,
+        "known_vulnerabilities": 99,
+        "non_exploitable_decoys": 75,
+        "decoys_wrongly_flagged_source_reported": 23
+      },
+      "published_implementation": {"system_compatibility": "benchmark-scaffolded", "revision_match": "source-revision-known"},
+      "provenance": {
+        "publisher": "theteatoast / harness-vs-baseline",
+        "checked": true,
+        "os_system": true,
+        "public_logs": false,
+        "public_trajectories": false,
+        "raw_run_artifacts_public": false,
+        "public_result_surface": "committed README result table; repository documentation says trajectories live under results/, but the pinned Git tree excludes results/ and does not contain results/RESULTS.md",
+        "execution_environment": "source-declared OpenRouter execution over generated synthapp; deterministic ground truth and objective scorer are public"
+      },
+      "comparison": {"group": "harness-vs-baseline-synthapp__glm-5.3-flash__7b3c842a", "mode": "candidate-same-model", "scope": "security-static-analysis"},
+      "unknown_dimensions": ["exact OpenRouter backend/provider route and service-side GLM checkpoint", "exact execution date", "raw trajectory and token totals", "trial count beyond the published result row", "run-specific cache state"],
+      "notes": "W1 preserves the published recall/precision/F1/cost values without promoting the source's causal or deployment interpretation."
+    },
+    {
+      "observation_id": "security-single-shot__harness-vs-baseline-synthapp__llama-3.1-8b-instruct__7b3c842a",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "harness-vs-baseline-synthapp",
+        "name": "harness-vs-baseline synthetic security-audit benchmark",
+        "variant": "single-shot-baseline",
+        "task_count": 1,
+        "primary_source": "https://github.com/theteatoast/harness-vs-baseline/blob/7b3c842a02ef8a006662e6f0db39a1cd223f082c/README.md",
+        "artifact_source": "https://github.com/theteatoast/harness-vs-baseline/blob/7b3c842a02ef8a006662e6f0db39a1cd223f082c/README.md"
+      },
+      "result": {
+        "date": null,
+        "published_snapshot_date": "2026-09-22",
+        "agent_label": "baseline-single-shot",
+        "harness_version": null,
+        "harness_revision": "7b3c842a02ef8a006662e6f0db39a1cd223f082c",
+        "benchmark_revision": "7b3c842a02ef8a006662e6f0db39a1cd223f082c",
+        "model": "meta-llama/llama-3.1-8b-instruct",
+        "model_config": "OpenRouter model meta-llama/llama-3.1-8b-instruct; temperature 0.2; max_tokens 300000; wall_clock_s 900",
+        "metric": "vulnerability_recall",
+        "value": 0.16,
+        "precision_source_reported": 0.06,
+        "f1_source_reported": 0.09,
+        "cost_usd_source_reported": 0.0036,
+        "known_vulnerabilities": 99,
+        "non_exploitable_decoys": 75
+      },
+      "published_implementation": {"system_compatibility": "benchmark-scaffolded", "revision_match": "source-revision-known"},
+      "provenance": {
+        "publisher": "theteatoast / harness-vs-baseline",
+        "checked": true,
+        "os_system": true,
+        "public_logs": false,
+        "public_trajectories": false,
+        "raw_run_artifacts_public": false,
+        "public_result_surface": "committed README result table; repository documentation says trajectories live under results/, but the pinned Git tree excludes results/ and does not contain results/RESULTS.md",
+        "execution_environment": "source-declared OpenRouter execution over generated synthapp; deterministic ground truth and objective scorer are public"
+      },
+      "comparison": {"group": "harness-vs-baseline-synthapp__llama-3.1-8b-instruct__7b3c842a", "mode": "candidate-same-model", "scope": "security-static-analysis"},
+      "unknown_dimensions": ["exact OpenRouter backend/provider route and service-side Llama checkpoint", "exact execution date", "raw trajectory and token totals", "trial count beyond the published result row", "run-specific cache state"],
+      "notes": "W1 preserves the published recall/precision/F1/cost values without promoting the source's causal or deployment interpretation."
+    }
+  ]
+}
