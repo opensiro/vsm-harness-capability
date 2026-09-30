@@ -34,10 +34,10 @@ For the active observational paper study, repetitive W2→W3→W4 routing is own
 
 ```text
 paper/studies/obs-harness-assoc/v0.1.0/TRACK_A_QUEUE.md
-paper/studies/obs-harness-assoc/v0.1.0/track-a-queue.v0.2.json
+paper/studies/obs-harness-assoc/v0.1.0/track-a-queue.v0.3.json
 ```
 
-Active queue semantics are **bounded same-stage batches of up to 5 handoffs per fresh role context**. Every handoff keeps its own exact input binding and append-only scientific artifact; W2/W3/W4 roles must not be mixed in one chat.
+Active queue semantics are **bounded same-stage batches of up to 5 handoffs with handoff-local busy-skip parallelism**. Every handoff keeps its own exact input binding and append-only scientific artifact; W2/W3/W4 roles must not be mixed in one chat. A claimed/executing handoff is busy and may be skipped for routing to another free handoff; scientific/control blockers remain global STOP conditions.
 
 Stable fresh-chat prompt:
 
