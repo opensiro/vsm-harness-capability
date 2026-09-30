@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "first-party-reported",
+  "system_name": "peri in harness-perf-benchmark codex-proxy-fix batch",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "benchmark-scaffolded",
+    "historical_relation": "The benchmark publisher also maintains KonghaYao/peri, so this row is first-party-reported for the measured harness. The benchmark executes the released peri CLI against the same local scripted mock family through its benchmark integration; it is not a model-backed task-quality run."
+  },
+  "primary_sources": [
+    "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/README.md",
+    "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/docs/perf-compare.md",
+    "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/scripts/perf/score.ts",
+    "https://github.com/KonghaYao/peri"
+  ],
+  "observations": [
+    {
+      "observation_id": "peri__harness-perf-codex-proxy-fix__scripted-mock__e89a895a",
+      "kind": "harness-resource-overhead-benchmark-result",
+      "benchmark": {
+        "name": "harness-perf-benchmark codex-proxy-fix batch",
+        "primary_source": "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/README.md",
+        "artifact_source": "https://github.com/KonghaYao/harness-perf-benchmark/blob/e89a895a27a6634bded08f93c886b1a70bb15d63/docs/perf-compare.md"
+      },
+      "result": {
+        "date": "2026-09-19",
+        "batch_label": "codex-proxy-fix",
+        "harness": "peri",
+        "harness_version": "3.17.0",
+        "model": null,
+        "model_surface": "local scripted llm-mock; no real model inference",
+        "primary_metric": "source_beta_cu_1to1",
+        "primary_value": 2.102,
+        "cpu_mean_percent": 32.6,
+        "cpu_peak_percent": 43.7,
+        "rss_mean_mb": 54.7,
+        "rss_peak_mb": 71.7
+      },
+      "execution": {
+        "workload": "100 scripted tool-use turns with approximately 4 KB response content per turn",
+        "mock": "local scripted mock endpoint through the benchmark's OpenAI Chat Completions integration; no model inference, network latency, GPU, or external service resources included",
+        "machine": "macOS; Apple Silicon; 18 cores; source reports batch load average 2.9-3.8",
+        "sampling_interval_ms": 100,
+        "sampling_scope": "harness process tree via proc_pid_rusage",
+        "runs": 3,
+        "aggregation": "median end-to-end run selected from three serial runs",
+        "timeout_ms": 1800000,
+        "reset_policy": "isolated peri session database/runtime settings; batch runs were serial",
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "harness-perf-codex-proxy-fix__scripted-mock__e89a895a",
+        "mode": "shared-scripted-mock-resource-overhead",
+        "scope": "harness-process-resource-overhead"
+      },
+      "unknown_dimensions": [
+        "raw per-run data and logs are not committed in the pinned repository tree",
+        "no real model identity exists for this batch",
+        "protocol adapters and tool schemas differ by harness",
+        "the benchmark publisher is also the measured peri project's maintainer",
+        "the source-defined CU weighting is a beta project metric rather than an external standard"
+      ],
+      "notes": "This row is separated from the five external harness observations because the benchmark publisher is also the peri project maintainer. W1 preserves the source CU/resource readings without interpreting them as a task-quality result."
+    }
+  ]
+}
