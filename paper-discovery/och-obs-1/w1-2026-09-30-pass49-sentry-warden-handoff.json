@@ -15,8 +15,8 @@
     "collection_cutoff_utc": "2026-10-20T23:59:59Z"
   },
   "checkpoint_parent": {
-    "capability_main_revision": "c170318aaabf4572d5bf149c3595fd89b2fb6596",
-    "registry_observation_count_before": 299,
+    "capability_main_revision": "a51768fd3ee721539569927987b48270d00a4f64",
+    "registry_observation_count_before": 300,
     "prior_handoffs_mutated": false
   },
   "collection_state": {
@@ -125,7 +125,13 @@
       "reason": "The committed corpus explicitly states that current per-finding SHAs were inferred from capture timestamps and should be backfilled from stronger historical sources."
     }
   ],
-  "protocol_deviations_and_failures": [],
+  "protocol_deviations_and_failures": [
+    {
+      "event": "concurrent-pass-48-merge-before-admission",
+      "conclusion": "resolved-without-evidence-reinterpretation",
+      "detail": "Pass 48 merged after pass 49 branch creation. An early generated-registry commit on the stale branch was discarded from the effective tree. Pass 49 was merged with current main a51768fd3ee721539569927987b48270d00a4f64 as tree base before final admission, preserving the pass-48 observation and changing the parent registry count from 299 to 300."
+    }
+  ],
   "validation": {
     "status": "pending",
     "registry_observation_count_after": null,
