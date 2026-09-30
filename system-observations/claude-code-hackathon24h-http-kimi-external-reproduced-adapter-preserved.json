@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Claude Code",
+  "canonical_harness_id": "claude-code",
+  "canonical_assessment_ref": "assessments/claude-code.md",
+  "canonical_review_ref": "7dd06361110d4417f3edefaf075f41923f0e04c5",
+  "canonical_repository": "https://github.com/anthropics/claude-code",
+  "published_implementation": {
+    "system_compatibility": "adapter-preserved",
+    "historical_relation": "The pinned Hackathon-24h snapshot names Claude Code as one of the three exercised harness frameworks and its Docker recipe invokes the native @anthropic-ai/claude-code CLI. The historical package version is not pinned because the image recipe installed @latest."
+  },
+  "primary_sources": [
+    "https://github.com/zzq2000/Hackathon-24h-Bench/blob/d3a9c3b6569488098ca2dd0596b73e2e14d2f650/README.md",
+    "https://github.com/zzq2000/Hackathon-24h-Bench/blob/d3a9c3b6569488098ca2dd0596b73e2e14d2f650/Dockerfile.agents",
+    "https://github.com/zzq2000/Hackathon-24h-Bench/blob/d3a9c3b6569488098ca2dd0596b73e2e14d2f650/config/providers.yaml",
+    "https://github.com/zzq2000/Hackathon-24h-Bench/blob/d3a9c3b6569488098ca2dd0596b73e2e14d2f650/benchmarks/implementations/http_bench.py"
+  ],
+  "observations": [{
+    "observation_id": "claude-code__hackathon24h-http__kimi-k2.5__d3a9c3b6",
+    "kind": "system-benchmark-result",
+    "benchmark": {
+      "family_id": "hackathon24h-http-server",
+      "name": "Hackathon-24h HTTP Server",
+      "variant": "cross-agent-kimi-k2.5-24h",
+      "task_count": 47,
+      "primary_source": "https://github.com/zzq2000/Hackathon-24h-Bench/blob/d3a9c3b6569488098ca2dd0596b73e2e14d2f650/README.md",
+      "artifact_source": "https://github.com/zzq2000/Hackathon-24h-Bench/blob/d3a9c3b6569488098ca2dd0596b73e2e14d2f650/README.md"
+    },
+    "result": {
+      "date": null,
+      "published_snapshot_date": "2026-04-08",
+      "agent_label": "Claude Code",
+      "harness_version": null,
+      "harness_revision": null,
+      "benchmark_revision": "d3a9c3b6569488098ca2dd0596b73e2e14d2f650",
+      "model": "Kimi-K2.5",
+      "model_config": "publisher labels the cross-agent field as the same underlying Kimi-K2.5 model; source model catalog maps kimi-k2.5 to Moonshot, but the historical per-run provider/base-URL/checkpoint route is not preserved in the published result table",
+      "metric": "final_24h_test_score_percent",
+      "value": 85.1,
+      "final_passed": 40,
+      "test_points": 47,
+      "peak_score_percent": 87.2,
+      "peak_passed": 41,
+      "iterations_24h": 188,
+      "run_window_hours": 24,
+      "evaluator_suites": ["h1spec", "CISPA http-conformance", "TechEmpower FrameworkBenchmarks"]
+    },
+    "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "unknown"},
+    "provenance": {
+      "publisher": "Hackathon-24h Bench authors",
+      "checked": true,
+      "os_system": true,
+      "public_logs": false,
+      "public_trajectories": false,
+      "raw_run_artifacts_public": false,
+      "public_result_surface": "pinned README cross-agent table plus public benchmark/controller/evaluator implementation",
+      "execution_environment": "publisher-described Docker-isolated agent loop with host-side periodic test loop and anonymized feedback; 24-hour comparison window"
+    },
+    "comparison": {"group": "hackathon24h-http-server__kimi-k2.5__24h__d3a9c3b6", "mode": "candidate-same-model", "scope": "coding-swe"},
+    "unknown_dimensions": [
+      "exact Claude Code package/source revision because the pinned Dockerfile installs @latest",
+      "exact Kimi-K2.5 service-side checkpoint/revision",
+      "exact historical provider/base-URL/auth route used for this run",
+      "exact experiment run date, host hardware, and container image digest",
+      "session reset, compaction, retry, and adaptation details not reconstructable from a raw run log",
+      "publisher's identical-conditions statement is not independently verifiable from committed per-run artifacts"
+    ],
+    "notes": "This is pinned public result-table evidence without committed raw run logs or trajectories. W1 preserves the published result and unknowns without interpreting score direction."
+  }]
+}
