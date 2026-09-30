@@ -43,6 +43,15 @@
     {"surface": "source efficiency/headline comparisons", "status": "not-promoted-by-W1", "reason": "W1 admits retained-task raw correctness only and does not reproduce wall-time/token rankings or comparative conclusions."},
     {"surface": "gpt-5.6-sol reward-hacking correction", "status": "not-back-projected", "reason": "The binding methodology scopes that transcript-audit reclassification to gpt-5.6-sol; W1 does not invent equivalent labels for this gpt-5.5-medium dataset."}
   ],
-  "validation": {"status": "pending", "registry_observation_count_after": 253, "commands_required": ["python system-observations/render_registry.py", "python scripts/admission_check.py system-observations/pi-openbench-tb-frontier-gpt55-external-reproduced-adapter-preserved.json", "python scripts/admission_check.py system-observations/codex-openbench-tb-frontier-gpt55-external-reproduced-adapter-preserved.json", "python scripts/admission_check.py system-observations/opencode-openbench-tb-frontier-gpt55-external-reproduced-adapter-preserved.json", "python scripts/validate_repository.py"], "results": []},
+  "validation": {
+    "status": "passed",
+    "registry_observation_count_after": 253,
+    "commands_required": ["python system-observations/render_registry.py", "python scripts/admission_check.py system-observations/pi-openbench-tb-frontier-gpt55-external-reproduced-adapter-preserved.json", "python scripts/admission_check.py system-observations/codex-openbench-tb-frontier-gpt55-external-reproduced-adapter-preserved.json", "python scripts/admission_check.py system-observations/opencode-openbench-tb-frontier-gpt55-external-reproduced-adapter-preserved.json", "python scripts/validate_repository.py"],
+    "results": [
+      {"stage": "write-enabled-admission", "head_revision": "600ae05e935331f250804c26ef7ddf34f0fd1ec8", "workflow_run_id": 36706893812, "run_number": 311, "conclusion": "success"},
+      {"stage": "generated-registry-state", "head_revision": "4dac676e4ff74c18ec484f9064d01c14a86155eb", "registry_observation_count": 253, "conclusion": "generated"},
+      {"stage": "restored-standard-workflow", "head_revision": "371cfd7f2289736ff4ed95d6c3eb6c460183b5d6", "workflow_blob": "244ad9701f41e6122f37c0676a00e705cddd622f", "workflow_run_id": 36707027016, "run_number": 313, "conclusion": "success"}
+    ]
+  },
   "handoff_boundary": {"structural_classification_performed": false, "historical_linkage_adjudicated": false, "comparison_tier_assigned": false, "statistical_interpretation_performed": false, "winner_declared": false}
 }
