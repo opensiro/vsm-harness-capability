@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "harness-token-efficiency corrected Terminal-Bench pilot",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "adapter-preserved",
+    "historical_relation": "The source invokes the installed Claude Code, OpenCode, and Pi CLIs directly while stripping operator-specific plugins, shared skills, global instructions, and other personal configuration identified during contamination audits. Exact historical CLI versions are not recovered by W1."
+  },
+  "primary_sources": [
+    "https://github.com/nmlemus/harness-token-efficiency/blob/09a4060170566e7c1d75643b70514f2778744fd8/README.md",
+    "https://github.com/nmlemus/harness-token-efficiency/blob/09a4060170566e7c1d75643b70514f2778744fd8/PREREGISTRATION.md",
+    "https://github.com/nmlemus/harness-token-efficiency/blob/09a4060170566e7c1d75643b70514f2778744fd8/analysis/pilot-summary.md",
+    "https://github.com/nmlemus/harness-token-efficiency/blob/09a4060170566e7c1d75643b70514f2778744fd8/scripts/run_trial.py",
+    "https://github.com/nmlemus/harness-token-efficiency/tree/09a4060170566e7c1d75643b70514f2778744fd8/runs"
+  ],
+  "observations": [
+    {
+      "observation_id": "claude-code__harness-token-efficiency-tb19__claude-sonnet-5__09a40601",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "name": "harness-token-efficiency corrected Terminal-Bench 19-task pilot",
+        "version": "corrected-2026-09-07",
+        "task_set": [
+          "aimo-airline-departures",
+          "analyze-access-logs",
+          "assign-seats",
+          "bank-trans-filter",
+          "count-call-stack",
+          "countdown-game",
+          "cross-entropy-method",
+          "csv-to-parquet",
+          "fix-permissions",
+          "grid-pattern-transform",
+          "hello-world",
+          "heterogeneous-dates",
+          "ilp-solver",
+          "log-summary",
+          "mahjong-winninghand",
+          "pandas-etl",
+          "recover-obfuscated-files",
+          "schedule-vacation",
+          "sha-puzzle"
+        ],
+        "primary_source": "https://github.com/nmlemus/harness-token-efficiency/blob/09a4060170566e7c1d75643b70514f2778744fd8/README.md",
+        "artifact_source": "https://github.com/nmlemus/harness-token-efficiency/tree/09a4060170566e7c1d75643b70514f2778744fd8/runs"
+      },
+      "result": {
+        "date": "2026-09-07",
+        "harness_label": "Claude Code",
+        "harness_version": "unknown",
+        "publication_revision": "09a4060170566e7c1d75643b70514f2778744fd8",
+        "model": "claude-sonnet-5",
+        "metric": "task_trial_success_rate",
+        "value": 0.8771929824561403,
+        "success_count": 50,
+        "trial_count": 57,
+        "relative_geometric_mean_total_tokens_vs_pi": 9.8
+      },
+      "execution": {
+        "environment": "host-based execution without Docker in isolated per-trial workspaces adapted from Terminal-Bench task directories",
+        "evaluator": "each task's own hidden test suite, executed after the harness call",
+        "repetitions_per_task": 3,
+        "timeout_seconds": 360,
+        "reset_policy": "fresh per-trial workspace copied from the selected task inputs; prior harness state is not inherited through the workspace",
+        "isolation_policy": "operator-specific Claude Code plugins, global instructions, custom agents, MCP configuration, and slash-command surface are stripped or disabled for the subprocess and restored afterward",
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "harness-token-efficiency-tb19__claude-sonnet-5__09a40601",
+        "mode": "same-source-model-label-candidate",
+        "scope": "terminal-bench-host-adapted"
+      },
+      "unknown_dimensions": [
+        "exact Claude Code CLI version used for the corrected trials",
+        "exact service-side revision behind the source model label claude-sonnet-5",
+        "temperature or equivalent sampling control was not uniformly controllable across harnesses",
+        "Claude Code used a Pro/Max subscription OAuth path while Pi and OpenCode used Anthropic Console API keys"
+      ],
+      "notes": "Only the corrected runs/ corpus is represented. Earlier contaminated Claude Code trials remain in the source repository under separate provenance directories and are not promoted by this observation."
+    },
+    {
+      "observation_id": "opencode__harness-token-efficiency-tb19__claude-sonnet-5__09a40601",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "name": "harness-token-efficiency corrected Terminal-Bench 19-task pilot",
+        "version": "corrected-2026-09-07",
+        "task_set": [
+          "aimo-airline-departures",
+          "analyze-access-logs",
+          "assign-seats",
+          "bank-trans-filter",
+          "count-call-stack",
+          "countdown-game",
+          "cross-entropy-method",
+          "csv-to-parquet",
+          "fix-permissions",
+          "grid-pattern-transform",
+          "hello-world",
+          "heterogeneous-dates",
+          "ilp-solver",
+          "log-summary",
+          "mahjong-winninghand",
+          "pandas-etl",
+          "recover-obfuscated-files",
+          "schedule-vacation",
+          "sha-puzzle"
+        ],
+        "primary_source": "https://github.com/nmlemus/harness-token-efficiency/blob/09a4060170566e7c1d75643b70514f2778744fd8/README.md",
+        "artifact_source": "https://github.com/nmlemus/harness-token-efficiency/tree/09a4060170566e7c1d75643b70514f2778744fd8/runs"
+      },
+      "result": {
+        "date": "2026-09-07",
+        "harness_label": "OpenCode",
+        "harness_version": "unknown",
+        "publication_revision": "09a4060170566e7c1d75643b70514f2778744fd8",
+        "model": "anthropic/claude-sonnet-5",
+        "metric": "task_trial_success_rate",
+        "value": 0.8771929824561403,
+        "success_count": 50,
+        "trial_count": 57,
+        "relative_geometric_mean_total_tokens_vs_pi": 5.83
+      },
+      "execution": {
+        "environment": "host-based execution without Docker in isolated per-trial workspaces adapted from Terminal-Bench task directories",
+        "evaluator": "each task's own hidden test suite, executed after the harness call",
+        "repetitions_per_task": 3,
+        "timeout_seconds": 360,
+        "reset_policy": "fresh per-trial workspace copied from the selected task inputs; prior harness state is not inherited through the workspace",
+        "isolation_policy": "XDG_CONFIG_HOME is redirected and the operator's cross-tool Claude/agents skill directories are moved aside for the OpenCode subprocess, then restored",
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "harness-token-efficiency-tb19__claude-sonnet-5__09a40601",
+        "mode": "source-asserted-same-model-candidate",
+        "scope": "terminal-bench-host-adapted"
+      },
+      "unknown_dimensions": [
+        "exact OpenCode CLI version used for the corrected trials",
+        "exact service-side revision behind the source model label anthropic/claude-sonnet-5",
+        "whether provider-prefixed and bare source model identifiers resolve to a byte-identical service-side model",
+        "temperature or equivalent sampling control was not uniformly controllable across harnesses",
+        "OpenCode used an Anthropic Console API key while Claude Code used a Pro/Max subscription OAuth path"
+      ],
+      "notes": "Only the corrected isolated run is represented. Earlier OpenCode diagnostic and contaminated-environment measurements are preserved by the source but are not promoted as benchmark outcomes here."
+    },
+    {
+      "observation_id": "pi__harness-token-efficiency-tb19__claude-sonnet-5__09a40601",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "name": "harness-token-efficiency corrected Terminal-Bench 19-task pilot",
+        "version": "corrected-2026-09-07",
+        "task_set": [
+          "aimo-airline-departures",
+          "analyze-access-logs",
+          "assign-seats",
+          "bank-trans-filter",
+          "count-call-stack",
+          "countdown-game",
+          "cross-entropy-method",
+          "csv-to-parquet",
+          "fix-permissions",
+          "grid-pattern-transform",
+          "hello-world",
+          "heterogeneous-dates",
+          "ilp-solver",
+          "log-summary",
+          "mahjong-winninghand",
+          "pandas-etl",
+          "recover-obfuscated-files",
+          "schedule-vacation",
+          "sha-puzzle"
+        ],
+        "primary_source": "https://github.com/nmlemus/harness-token-efficiency/blob/09a4060170566e7c1d75643b70514f2778744fd8/README.md",
+        "artifact_source": "https://github.com/nmlemus/harness-token-efficiency/tree/09a4060170566e7c1d75643b70514f2778744fd8/runs"
+      },
+      "result": {
+        "date": "2026-09-07",
+        "harness_label": "Pi",
+        "harness_version": "unknown",
+        "publication_revision": "09a4060170566e7c1d75643b70514f2778744fd8",
+        "model": "claude-sonnet-5",
+        "metric": "task_trial_success_rate",
+        "value": 0.8771929824561403,
+        "success_count": 50,
+        "trial_count": 57,
+        "relative_geometric_mean_total_tokens_vs_pi": 1.0
+      },
+      "execution": {
+        "environment": "host-based execution without Docker in isolated per-trial workspaces adapted from Terminal-Bench task directories",
+        "evaluator": "each task's own hidden test suite, executed after the harness call",
+        "repetitions_per_task": 3,
+        "timeout_seconds": 360,
+        "reset_policy": "fresh per-trial workspace copied from the selected task inputs; prior harness state is not inherited through the workspace",
+        "isolation_policy": "Pi is invoked with no-skills, no-extensions, no-prompt-templates, and no-context-files controls; its corrected trials use the source-described Console API-key swap",
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "harness-token-efficiency-tb19__claude-sonnet-5__09a40601",
+        "mode": "same-source-model-label-candidate",
+        "scope": "terminal-bench-host-adapted"
+      },
+      "unknown_dimensions": [
+        "exact Pi CLI version used for the corrected trials",
+        "exact service-side revision behind the source model label claude-sonnet-5",
+        "temperature or equivalent sampling control was not uniformly controllable across harnesses",
+        "Pi used an Anthropic Console API key while Claude Code used a Pro/Max subscription OAuth path"
+      ],
+      "notes": "The corrected Pi corpus replaces 57 earlier trials that the source archived after discovering automatic shared-skill loading and a non-compliant credential path. Those superseded trials are not represented here."
+    }
+  ]
+}
