@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Coding Agent Bench Qwen3.6 Terminal-Bench matrix",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "adapter-preserved",
+    "historical_relation": "The source runs named coding harnesses through Harbor against one self-hosted RedHatAI/Qwen3.6-35B-A3B-NVFP4 deployment on Terminal-Bench 2.0. Historical harness versions are not published."
+  },
+  "primary_sources": [
+    "https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/README.md",
+    "https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/Terminal_Bench_Qwen3.6_35b_NVFP4_Pi.md",
+    "https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/Terminal_Bench_Qwen3.6_35b_NVFP4_OpenCode.md",
+    "https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/Terminal_Bench_Qwen3.6_35b_NVFP4_OpenClaw.md"
+  ],
+  "observations": [
+    {
+      "observation_id":"pi__redhat-terminalbench2-89__qwen3.6-35b-a3b-nvfp4__1389cc6e",
+      "kind":"system-benchmark-result",
+      "benchmark":{"name":"Terminal-Bench 2.0 89-task Harbor run","version":"source-89-task-snapshot","primary_source":"https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/Terminal_Bench_Qwen3.6_35b_NVFP4_Pi.md","artifact_source":"https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/Terminal_Bench_Qwen3.6_35b_NVFP4_Pi.md"},
+      "result":{"job_name":"2026-06-08__14-30-39","model":"RedHatAI/Qwen3.6-35B-A3B-NVFP4","harness_label":"Pi","metric":"source_pass_at_1","value":0.36,"task_count":89,"initial_error_count":14,"estimated_cost_usd":11.11},
+      "execution":{"environment":"Docker via Harbor","hardware":"2x A100 40GB","model_max_len":262144,"generation_defaults":{"temperature":1.0,"top_p":0.95,"top_k":20},"attempts":1,"evaluator":"Terminal-Bench 2.0 verifier through Harbor","model_serving":"self-hosted vLLM","human_intervention":null},
+      "comparison":{"group":"redhat-terminalbench2-89__qwen3.6-35b-a3b-nvfp4__1389cc6e","mode":"fixed-model-candidate","scope":"terminal-bench-2.0"},
+      "unknown_dimensions":["exact Pi harness version","exact upstream Terminal-Bench 2.0 dataset revision"],
+      "notes":"The repository summary leaderboard labels this family N=87, while the run-specific sheet identifies the public Terminal-Bench 2.0 dataset as 89 tasks. W1 uses the run-specific 89-task identity and does not reinterpret the leaderboard denominator."
+    },
+    {
+      "observation_id":"opencode__redhat-terminalbench2-89__qwen3.6-35b-a3b-nvfp4__1389cc6e",
+      "kind":"system-benchmark-result",
+      "benchmark":{"name":"Terminal-Bench 2.0 89-task Harbor run","version":"source-89-task-snapshot","primary_source":"https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/Terminal_Bench_Qwen3.6_35b_NVFP4_OpenCode.md","artifact_source":"https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/Terminal_Bench_Qwen3.6_35b_NVFP4_OpenCode.md"},
+      "result":{"job_name":"2026-06-08__09-33-24","model":"RedHatAI/Qwen3.6-35B-A3B-NVFP4","harness_label":"OpenCode","metric":"source_pass_at_1","value":0.303,"task_count":89,"initial_error_count":16,"estimated_cost_usd":11.47},
+      "execution":{"environment":"Docker via Harbor","hardware":"2x A100 40GB","model_max_len":262144,"harness_context_limit":196500,"harness_output_limit":65500,"generation_defaults":{"temperature":1.0,"top_p":0.95,"top_k":20},"attempts":1,"evaluator":"Terminal-Bench 2.0 verifier through Harbor","model_serving":"self-hosted vLLM","human_intervention":null},
+      "comparison":{"group":"redhat-terminalbench2-89__qwen3.6-35b-a3b-nvfp4__1389cc6e","mode":"fixed-model-candidate","scope":"terminal-bench-2.0"},
+      "unknown_dimensions":["exact OpenCode harness version","exact upstream Terminal-Bench 2.0 dataset revision"],
+      "notes":"OpenCode's source config exposes a 196500-token harness context and 65500-token output limit while the model server publishes max length 262144. The repository summary leaderboard labels the family N=87; the run sheet identifies 89 tasks."
+    },
+    {
+      "observation_id":"openclaw__redhat-terminalbench2-89__qwen3.6-35b-a3b-nvfp4__1389cc6e",
+      "kind":"system-benchmark-result",
+      "benchmark":{"name":"Terminal-Bench 2.0 89-task Harbor run","version":"source-89-task-snapshot","primary_source":"https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/Terminal_Bench_Qwen3.6_35b_NVFP4_OpenClaw.md","artifact_source":"https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/Terminal_Bench_Qwen3.6_35b_NVFP4_OpenClaw.md"},
+      "result":{"job_name":"2026-06-10__10-26-03","model":"RedHatAI/Qwen3.6-35B-A3B-NVFP4","harness_label":"OpenClaw","metric":"source_pass_at_1","value":0.202,"task_count":89,"initial_error_count":11,"estimated_cost_usd":9.86},
+      "execution":{"environment":"Docker via Harbor","hardware":"2x A100 40GB","model_max_len":262144,"generation_defaults":{"temperature":1.0,"top_p":0.95,"top_k":20},"attempts":1,"evaluator":"Terminal-Bench 2.0 verifier through Harbor","model_serving":"self-hosted vLLM","human_intervention":null},
+      "comparison":{"group":"redhat-terminalbench2-89__qwen3.6-35b-a3b-nvfp4__1389cc6e","mode":"fixed-model-candidate","scope":"terminal-bench-2.0"},
+      "unknown_dimensions":["exact OpenClaw harness version","exact upstream Terminal-Bench 2.0 dataset revision"],
+      "notes":"The repository summary leaderboard labels this family N=87, while the run-specific sheet identifies 89 tasks. W1 preserves the run-specific identity and source score."
+    }
+  ]
+}
