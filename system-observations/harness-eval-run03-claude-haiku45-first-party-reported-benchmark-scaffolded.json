@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "first-party-reported",
+  "system_name": "harness-eval run 03 Claude Code-runner cells on Claude Haiku 4.5",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "benchmark-scaffolded",
+    "historical_relation": "The pinned harness-eval run 03 compares a gstack profile and a bare control on Claude Code while holding the source-declared Claude Haiku 4.5 model id, frozen loglens prompts, executable acceptance suite, and runner family fixed. W1 treats the cells as benchmark-scaffolded observations and does not merge their same-model group with the Copilot-runner cells."
+  },
+  "primary_sources": [
+    "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/cells.tsv",
+    "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/acceptance.md",
+    "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/report/whitepaper.md"
+  ],
+  "observations": [
+    {
+      "observation_id": "gstack__harness-eval-run03-loglens__claude-haiku-4-5-20251001-claude__7d3f74fe",
+      "kind": "system-benchmark-result",
+      "benchmark": {"family_id": "harness-eval-run03-loglens", "name": "harness-eval run 03 frozen loglens scenario", "variant": "06-gstack-claude-code", "task_count": 1, "primary_source": "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/report/whitepaper.md", "artifact_source": "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/runs/06-acceptance.txt"},
+      "result": {"date": "2026-07-23", "published_snapshot_date": "2026-07-23", "agent_label": "gstack", "harness_version": "1.60.1.0", "harness_revision": null, "benchmark_revision": "7d3f74fe47f48db67c9ab0489ad4ba9170922f12", "runner": "Claude Code", "runner_version": "2.1.217", "model": "Claude Haiku 4.5", "model_config": "Claude Code model id claude-haiku-4-5-20251001; source reports model verified in session metrics with no silent fallback", "metric": "source_reported_executable_core_acceptance_rate", "value": 0.75, "core_passes": 9, "core_checks": 12, "hard_passes": 8, "hard_checks": 9, "trials": 1},
+      "published_implementation": {"system_compatibility": "benchmark-scaffolded", "revision_match": "version-source-reported"},
+      "provenance": {"publisher": "Ken Hiatt / harness-eval", "checked": true, "raw_run_artifacts_public": true, "public_trajectories": false, "public_result_surface": "committed final worktree, acceptance output, runlog, frozen prompts/suite and final report"},
+      "comparison": {"group": "harness-eval-run03-claude-code__claude-haiku-4-5-20251001__7d3f74fe", "mode": "candidate-same-model", "scope": "coding-swe"},
+      "unknown_dimensions": ["exact gstack source commit behind version 1.60.1.0", "exact provider-side checkpoint beyond explicit model id", "single run per cell"],
+      "notes": "Final tally is after source suite corrections. W1 preserves core/hard acceptance and does not promote weighted total or source mechanism claims."
+    },
+    {
+      "observation_id": "bare-claude-code__harness-eval-run03-loglens__claude-haiku-4-5-20251001-claude__7d3f74fe",
+      "kind": "system-benchmark-result",
+      "benchmark": {"family_id": "harness-eval-run03-loglens", "name": "harness-eval run 03 frozen loglens scenario", "variant": "07-bare-claude-code-control", "task_count": 1, "primary_source": "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/report/whitepaper.md", "artifact_source": "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/runs/07-acceptance.txt"},
+      "result": {"date": "2026-07-23", "published_snapshot_date": "2026-07-23", "agent_label": "none (control)", "harness_version": null, "harness_revision": null, "benchmark_revision": "7d3f74fe47f48db67c9ab0489ad4ba9170922f12", "runner": "Claude Code", "runner_version": "2.1.217", "model": "Claude Haiku 4.5", "model_config": "Claude Code model id claude-haiku-4-5-20251001; source reports model verified in session metrics with no silent fallback", "metric": "source_reported_executable_core_acceptance_rate", "value": 0.9166666667, "core_passes": 11, "core_checks": 12, "hard_passes": 4, "hard_checks": 9, "trials": 1},
+      "published_implementation": {"system_compatibility": "benchmark-scaffolded", "revision_match": "runner-control"},
+      "provenance": {"publisher": "Ken Hiatt / harness-eval", "checked": true, "raw_run_artifacts_public": true, "public_trajectories": false, "public_result_surface": "committed final worktree, acceptance output, runlog, frozen prompts/suite and final report"},
+      "comparison": {"group": "harness-eval-run03-claude-code__claude-haiku-4-5-20251001__7d3f74fe", "mode": "candidate-same-model", "scope": "coding-swe"},
+      "unknown_dimensions": ["exact provider-side checkpoint beyond explicit model id", "single run per cell"],
+      "notes": "Bare same-runner control. W1 does not convert the gstack/control difference into a causal harness claim."
+    }
+  ]
+}
