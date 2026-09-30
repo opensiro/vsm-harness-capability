@@ -115,9 +115,35 @@
     }
   ],
   "validation": {
-    "status": "pending",
-    "registry_observation_count_after": null,
-    "results": []
+    "status": "passed",
+    "registry_observation_count_after": 320,
+    "results": [
+      {
+        "kind": "write-enabled-admission-and-registry-run",
+        "run_number": 418,
+        "run_id": 36757503807,
+        "head_sha": "8e91285fc30c9eecfa1833df51c45b1ad6d58b3b",
+        "conclusion": "success",
+        "generated_registry_commit": "60cd4c3bc7c96a755c672d8352dc5623194d7926"
+      },
+      {
+        "kind": "generated-registry",
+        "commit": "60cd4c3bc7c96a755c672d8352dc5623194d7926",
+        "observation_count": 320
+      },
+      {
+        "kind": "standard-workflow-restored",
+        "head_sha": "907f15ba21f009b2566366eaefd74408d97e919e",
+        "workflow_blob_sha": "244ad9701f41e6122f37c0676a00e705cddd622f"
+      },
+      {
+        "kind": "standard-read-only-validation-run",
+        "run_number": 420,
+        "run_id": 36757686538,
+        "head_sha": "907f15ba21f009b2566366eaefd74408d97e919e",
+        "conclusion": "success"
+      }
+    ]
   },
   "handoff_boundary": {
     "structural_classification_performed": false,
