@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "first-party-reported",
+  "system_name": "harness-eval run 03 Copilot-runner cells on Claude Haiku 4.5",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "benchmark-scaffolded",
+    "historical_relation": "The pinned harness-eval run 03 applies five distinct harness/profile configurations to Copilot CLI while holding the source-declared Claude Haiku 4.5 model id, frozen loglens prompts, executable acceptance suite, and runner family fixed. W1 treats each cell as a benchmark-scaffolded system observation rather than asserting canonical harness linkage."
+  },
+  "primary_sources": [
+    "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/cells.tsv",
+    "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/acceptance.md",
+    "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/report/whitepaper.md"
+  ],
+  "observations": [
+    {
+      "observation_id": "atv-starterkit__harness-eval-run03-loglens__claude-haiku-4.5-copilot__7d3f74fe",
+      "kind": "system-benchmark-result",
+      "benchmark": {"family_id": "harness-eval-run03-loglens", "name": "harness-eval run 03 frozen loglens scenario", "variant": "01-atv-starterkit-copilot", "task_count": 1, "primary_source": "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/report/whitepaper.md", "artifact_source": "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/runs/01-acceptance.txt"},
+      "result": {"date": "2026-07-23", "published_snapshot_date": "2026-07-23", "agent_label": "ATV-StarterKit 2.6.3", "harness_version": "2.6.3", "harness_revision": null, "benchmark_revision": "7d3f74fe47f48db67c9ab0489ad4ba9170922f12", "runner": "Copilot CLI", "runner_version": "1.0.73", "model": "Claude Haiku 4.5", "model_config": "Copilot model id claude-haiku-4.5; source reports model verified in session metrics with no silent fallback", "metric": "source_reported_executable_core_acceptance_rate", "value": 0.9166666667, "core_passes": 11, "core_checks": 12, "hard_passes": 4, "hard_checks": 9, "trials": 1},
+      "published_implementation": {"system_compatibility": "benchmark-scaffolded", "revision_match": "version-source-reported"},
+      "provenance": {"publisher": "Ken Hiatt / harness-eval", "checked": true, "raw_run_artifacts_public": true, "public_trajectories": false, "public_result_surface": "committed final worktree, acceptance output, runlog, frozen prompts/suite and final report"},
+      "comparison": {"group": "harness-eval-run03-copilot__claude-haiku-4.5__7d3f74fe", "mode": "candidate-same-model", "scope": "coding-swe"},
+      "unknown_dimensions": ["exact upstream StarterKit source commit behind version 2.6.3", "exact provider-side Haiku checkpoint beyond runner model id", "single run per cell"],
+      "notes": "Final tally is after the source's documented S1/S2 suite corrections and delta re-grading. W1 does not use the subjective weighted total."
+    },
+    {
+      "observation_id": "atv-phoenix__harness-eval-run03-loglens__claude-haiku-4.5-copilot__7d3f74fe",
+      "kind": "system-benchmark-result",
+      "benchmark": {"family_id": "harness-eval-run03-loglens", "name": "harness-eval run 03 frozen loglens scenario", "variant": "02-atv-phoenix-copilot", "task_count": 1, "primary_source": "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/report/whitepaper.md", "artifact_source": "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/runs/02-acceptance.txt"},
+      "result": {"date": "2026-07-23", "published_snapshot_date": "2026-07-23", "agent_label": "ATV-Phoenix", "harness_version": null, "harness_revision": null, "benchmark_revision": "7d3f74fe47f48db67c9ab0489ad4ba9170922f12", "runner": "Copilot CLI", "runner_version": "1.0.73", "model": "Claude Haiku 4.5", "model_config": "Copilot model id claude-haiku-4.5; source reports model verified in session metrics with no silent fallback", "metric": "source_reported_executable_core_acceptance_rate", "value": 0.75, "core_passes": 9, "core_checks": 12, "hard_passes": 4, "hard_checks": 9, "trials": 1},
+      "published_implementation": {"system_compatibility": "benchmark-scaffolded", "revision_match": "unknown"},
+      "provenance": {"publisher": "Ken Hiatt / harness-eval", "checked": true, "raw_run_artifacts_public": true, "public_trajectories": false, "public_result_surface": "committed final worktree, acceptance output, runlog, frozen prompts/suite and final report"},
+      "comparison": {"group": "harness-eval-run03-copilot__claude-haiku-4.5__7d3f74fe", "mode": "candidate-same-model", "scope": "coding-swe"},
+      "unknown_dimensions": ["exact ATV-Phoenix source/version identity", "exact provider-side Haiku checkpoint beyond runner model id", "single run per cell"],
+      "notes": "Final tally is after source suite corrections; W1 does not use weighted total or source directional interpretation."
+    },
+    {
+      "observation_id": "working-skill-repo__harness-eval-run03-loglens__claude-haiku-4.5-copilot__7d3f74fe",
+      "kind": "system-benchmark-result",
+      "benchmark": {"family_id": "harness-eval-run03-loglens", "name": "harness-eval run 03 frozen loglens scenario", "variant": "03-working-skill-repo-copilot", "task_count": 1, "primary_source": "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/report/whitepaper.md", "artifact_source": "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/runs/03-acceptance.txt"},
+      "result": {"date": "2026-07-23", "published_snapshot_date": "2026-07-23", "agent_label": "working-skill-repo (KB)", "harness_version": null, "harness_revision": "34804ea", "benchmark_revision": "7d3f74fe47f48db67c9ab0489ad4ba9170922f12", "runner": "Copilot CLI", "runner_version": "1.0.73", "model": "Claude Haiku 4.5", "model_config": "Copilot model id claude-haiku-4.5; source reports model verified in session metrics with no silent fallback", "metric": "source_reported_executable_core_acceptance_rate", "value": 1.0, "core_passes": 12, "core_checks": 12, "hard_passes": 8, "hard_checks": 9, "trials": 1},
+      "published_implementation": {"system_compatibility": "benchmark-scaffolded", "revision_match": "source-reported-revision"},
+      "provenance": {"publisher": "Ken Hiatt / harness-eval", "checked": true, "raw_run_artifacts_public": true, "public_trajectories": false, "public_result_surface": "committed final worktree, acceptance output, runlog, frozen prompts/suite and final report"},
+      "comparison": {"group": "harness-eval-run03-copilot__claude-haiku-4.5__7d3f74fe", "mode": "candidate-same-model", "scope": "coding-swe"},
+      "unknown_dimensions": ["full upstream repository identity behind abbreviated source revision", "exact provider-side Haiku checkpoint beyond runner model id", "single run per cell"],
+      "notes": "Final tally includes the source's S2 correction that moved this cell from 10/12 to 12/12; both affected cells were delta re-graded by both graders."
+    },
+    {
+      "observation_id": "kprojects__harness-eval-run03-loglens__claude-haiku-4.5-copilot__7d3f74fe",
+      "kind": "system-benchmark-result",
+      "benchmark": {"family_id": "harness-eval-run03-loglens", "name": "harness-eval run 03 frozen loglens scenario", "variant": "04-kprojects-copilot", "task_count": 1, "primary_source": "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/report/whitepaper.md", "artifact_source": "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/runs/04-acceptance.txt"},
+      "result": {"date": "2026-07-23", "published_snapshot_date": "2026-07-23", "agent_label": "kprojects", "harness_version": null, "harness_revision": null, "benchmark_revision": "7d3f74fe47f48db67c9ab0489ad4ba9170922f12", "runner": "Copilot CLI", "runner_version": "1.0.73", "model": "Claude Haiku 4.5", "model_config": "Copilot model id claude-haiku-4.5; source reports model verified in session metrics with no silent fallback", "metric": "source_reported_executable_core_acceptance_rate", "value": 0.9166666667, "core_passes": 11, "core_checks": 12, "hard_passes": 8, "hard_checks": 9, "trials": 1},
+      "published_implementation": {"system_compatibility": "benchmark-scaffolded", "revision_match": "unknown"},
+      "provenance": {"publisher": "Ken Hiatt / harness-eval", "checked": true, "raw_run_artifacts_public": true, "public_trajectories": false, "public_result_surface": "committed final worktree, acceptance output, runlog, frozen prompts/suite and final report"},
+      "comparison": {"group": "harness-eval-run03-copilot__claude-haiku-4.5__7d3f74fe", "mode": "candidate-same-model", "scope": "coding-swe"},
+      "unknown_dimensions": ["exact kprojects source revision used in the run", "exact provider-side Haiku checkpoint beyond runner model id", "single run per cell"],
+      "notes": "The eval author wrote this contender; source flags that lack of blinding as a threat to validity. W1 preserves objective acceptance only."
+    },
+    {
+      "observation_id": "bare-copilot__harness-eval-run03-loglens__claude-haiku-4.5-copilot__7d3f74fe",
+      "kind": "system-benchmark-result",
+      "benchmark": {"family_id": "harness-eval-run03-loglens", "name": "harness-eval run 03 frozen loglens scenario", "variant": "05-bare-copilot-control", "task_count": 1, "primary_source": "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/report/whitepaper.md", "artifact_source": "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/runs/05-acceptance.txt"},
+      "result": {"date": "2026-07-23", "published_snapshot_date": "2026-07-23", "agent_label": "none (control)", "harness_version": null, "harness_revision": null, "benchmark_revision": "7d3f74fe47f48db67c9ab0489ad4ba9170922f12", "runner": "Copilot CLI", "runner_version": "1.0.73", "model": "Claude Haiku 4.5", "model_config": "Copilot model id claude-haiku-4.5; source reports model verified in session metrics with no silent fallback", "metric": "source_reported_executable_core_acceptance_rate", "value": 0.75, "core_passes": 9, "core_checks": 12, "hard_passes": 4, "hard_checks": 9, "trials": 1},
+      "published_implementation": {"system_compatibility": "benchmark-scaffolded", "revision_match": "runner-control"},
+      "provenance": {"publisher": "Ken Hiatt / harness-eval", "checked": true, "raw_run_artifacts_public": true, "public_trajectories": false, "public_result_surface": "committed final worktree, acceptance output, runlog, frozen prompts/suite and final report"},
+      "comparison": {"group": "harness-eval-run03-copilot__claude-haiku-4.5__7d3f74fe", "mode": "candidate-same-model", "scope": "coding-swe"},
+      "unknown_dimensions": ["exact provider-side Haiku checkpoint beyond runner model id", "single run per cell"],
+      "notes": "Bare same-runner control. W1 does not convert differences versus this control into a causal harness effect."
+    }
+  ]
+}
