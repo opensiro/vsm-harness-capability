@@ -5,7 +5,7 @@ Status: **generated, experimental, non-normative**
 Generated from the raw JSON records in this directory by `render_registry.py`.
 Raw evidence payloads remain only in the raw record; this table is an identity/provenance projection, not a second result database.
 
-Raw observations: **286**
+Raw observations: **290**
 
 | System | Canonical harness | Observation | Evidence surface(s) | Kind | Provenance | Compatibility | Raw record |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -289,6 +289,10 @@ Raw observations: **286**
 | The Specification Gap benchmark organization | — | `specification-gap-recovery-2026-03` | The Specification Gap / AmbigClass 2×2 conflict-recovery experiment | `benchmark-defined-coordination-ablation` | `first-party-reported` | `benchmark-scaffolded` | [specification-gap.json](specification-gap.json) |
 | TheAppliedScientist | [appliedscientist](https://github.com/opensiro/vsm-harness-index/blob/main/assessments/appliedscientist.md) | `appliedscientist-iterative-review-2026-09` | AppliedScientist iterative reviewer-guided revision study (30 papers) | `iterative-review-revision-study` | `first-party-reported` | `native-system` | [appliedscientist.json](appliedscientist.json) |
 | TrueCall + tau2-bench | — | `truecall-tau2-retail-silent-failure-2026-06` | TrueCall tau2-bench silent-failure verification | `system-benchmark-result` | `first-party-reported` | `benchmark-scaffolded` | [truecall-tau2-silent-failure.json](truecall-tau2-silent-failure.json) |
+| ts-bench v2 Claude-model harness pairs | — | `claude-code__tsbench-v2-swelancer5__claude-opus-4-6__dcf7d44f` | ts-bench v2 SWE-Lancer five-task snapshot | `system-benchmark-result` | `external-reproduced` | `unclear` | [tsbench-v2-claude-pairs-external-reproduced-unclear.json](tsbench-v2-claude-pairs-external-reproduced-unclear.json) |
+| ts-bench v2 Claude-model harness pairs | — | `claude-code__tsbench-v2-swelancer5__claude-sonnet-4-6__dcf7d44f` | ts-bench v2 SWE-Lancer five-task snapshot | `system-benchmark-result` | `external-reproduced` | `unclear` | [tsbench-v2-claude-pairs-external-reproduced-unclear.json](tsbench-v2-claude-pairs-external-reproduced-unclear.json) |
+| ts-bench v2 Claude-model harness pairs | — | `github-copilot-cli__tsbench-v2-swelancer5__claude-opus-4-6__dcf7d44f` | ts-bench v2 SWE-Lancer five-task snapshot | `system-benchmark-result` | `external-reproduced` | `unclear` | [tsbench-v2-claude-pairs-external-reproduced-unclear.json](tsbench-v2-claude-pairs-external-reproduced-unclear.json) |
+| ts-bench v2 Claude-model harness pairs | — | `github-copilot-cli__tsbench-v2-swelancer5__claude-sonnet-4-6__dcf7d44f` | ts-bench v2 SWE-Lancer five-task snapshot | `system-benchmark-result` | `external-reproduced` | `unclear` | [tsbench-v2-claude-pairs-external-reproduced-unclear.json](tsbench-v2-claude-pairs-external-reproduced-unclear.json) |
 | v4-flash-factorial bare-loop control | — | `v4-flash-factorial-bare-loop__deepseek-v4-flash-0731__ud-iq1-s__402167b0` | v4-flash-factorial SWE-bench Verified 30-task factorial | `system-benchmark-result` | `first-party-reported` | `benchmark-scaffolded` | [v4-flash-factorial-bare-loop-control.json](v4-flash-factorial-bare-loop-control.json) |
 | v4-flash-factorial bare-loop control | — | `v4-flash-factorial-bare-loop__deepseek-v4-flash-0731__ud-q2-k-xl__402167b0` | v4-flash-factorial SWE-bench Verified 30-task factorial | `system-benchmark-result` | `first-party-reported` | `benchmark-scaffolded` | [v4-flash-factorial-bare-loop-control.json](v4-flash-factorial-bare-loop-control.json) |
 | v4-flash-factorial bare-loop control | — | `v4-flash-factorial-bare-loop__deepseek-v4-flash-0731__ud-q8-k-xl__402167b0` | v4-flash-factorial SWE-bench Verified 30-task factorial | `system-benchmark-result` | `first-party-reported` | `benchmark-scaffolded` | [v4-flash-factorial-bare-loop-control.json](v4-flash-factorial-bare-loop-control.json) |

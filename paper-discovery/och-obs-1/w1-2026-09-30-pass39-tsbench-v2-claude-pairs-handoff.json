@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "manifest_id": "och-obs-1-w1-2026-09-30-pass39-tsbench-v2-claude-pairs",
+  "recorded_at": "2026-09-30",
+  "work_item": {
+    "repository": "opensiro/vsm-harness-capability",
+    "issue": 93,
+    "role": "W1 public-evidence discovery and neutral admission"
+  },
+  "protocol": {
+    "id": "OCH-OBS-1",
+    "version": "1.0.0",
+    "repository": "opensiro/vsm-harness-research",
+    "revision": "5462ffadffd7189ae10e44e22d357bc6162a6038",
+    "collection_cutoff_utc": "2026-10-20T23:59:59Z"
+  },
+  "checkpoint_parent": {
+    "capability_main_revision": "f46909cbae825bdc6249804fe2a40ef8c33ab98a",
+    "registry_observation_count_before": 286,
+    "prior_handoffs_mutated": false
+  },
+  "collection_state": {
+    "status": "active",
+    "pass_number": 39,
+    "cutoff_reached": false,
+    "note": "No active pass-39 W1 branch was present when this batch was started. Issue #93 remains active through the frozen cutoff."
+  },
+  "discovery_pass": {
+    "pass_id": "w1-pass-039-tsbench-v2-claude-label-pairs",
+    "method": "Direction-blind admission of four committed ts-bench v2 result records. W1 preserves literal source model labels, source provider metadata, unknown historical harness versions, known Copilot workflow-run bindings, and missing Claude Code execution revisions without adjudicating whether punctuation-near model labels denote identical service-side models.",
+    "source_repository": "https://github.com/laiso/ts-bench",
+    "source_publication_revision": "dcf7d44fa47f05a2849090e5e16fe67e8af96eff",
+    "benchmark_family": "ts-bench-v2-swelancer5",
+    "benchmark_version": "1.1.0",
+    "task_ids": ["14958", "15815_1", "15193", "14268", "20079"],
+    "task_count": 5,
+    "harness_labels": ["Claude Code", "GitHub Copilot CLI"],
+    "historical_harness_versions": "unknown in all four committed result records",
+    "repetitions_per_harness_model_task": 1,
+    "historical_timeout_seconds": null,
+    "environment": "ts-bench v2 Docker SWE-Lancer environment using the source-defined broken task state and official task test harness",
+    "result_artifacts": [
+      "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/public/data/results/claude-claude-sonnet-4-6.json",
+      "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/public/data/results/copilot-claude-sonnet-4.6.json",
+      "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/public/data/results/claude-claude-opus-4-6.json",
+      "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/public/data/results/copilot-claude-opus-4.6.json"
+    ],
+    "execution_bindings": [
+      {
+        "observation_id": "github-copilot-cli__tsbench-v2-swelancer5__claude-sonnet-4-6__dcf7d44f",
+        "workflow_run_id": 24081204504,
+        "execution_revision": "7e56a2f8d014599f833cb6bae1ca54105aea6e39"
+      },
+      {
+        "observation_id": "github-copilot-cli__tsbench-v2-swelancer5__claude-opus-4-6__dcf7d44f",
+        "workflow_run_id": 24085684611,
+        "execution_revision": "c30791cc21b9e765fa9744fd38f83408b4223917"
+      }
+    ],
+    "missing_execution_bindings": [
+      "Claude Code / claude-sonnet-4-6 historical execution revision",
+      "Claude Code / claude-opus-4-6 historical execution revision"
+    ]
+  },
+  "reused_existing_observation_ids": [],
+  "newly_admitted_observation_ids": [
+    "claude-code__tsbench-v2-swelancer5__claude-sonnet-4-6__dcf7d44f",
+    "github-copilot-cli__tsbench-v2-swelancer5__claude-sonnet-4-6__dcf7d44f",
+    "claude-code__tsbench-v2-swelancer5__claude-opus-4-6__dcf7d44f",
+    "github-copilot-cli__tsbench-v2-swelancer5__claude-opus-4-6__dcf7d44f"
+  ],
+  "candidate_comparison_groups": [
+    {
+      "group_id": "tsbench-v2-swelancer5__claude-sonnet-label-pair__dcf7d44f",
+      "observation_ids": [
+        "claude-code__tsbench-v2-swelancer5__claude-sonnet-4-6__dcf7d44f",
+        "github-copilot-cli__tsbench-v2-swelancer5__claude-sonnet-4-6__dcf7d44f"
+      ],
+      "source_known_dimensions": [
+        "same benchmark version 1.1.0",
+        "same five published SWE-Lancer task IDs",
+        "one result per task for each harness record",
+        "same source-defined objective test-success semantics"
+      ],
+      "explicit_unknown_or_nonidentical_dimensions": [
+        "literal source model labels differ: claude-sonnet-4-6 versus claude-sonnet-4.6",
+        "source provider metadata differs: openai versus anthropic",
+        "exact service-side model identity and serving route are unresolved",
+        "historical harness versions are unknown",
+        "Claude Code execution revision is not bound while Copilot is bound to workflow run 24081204504",
+        "authentication and harness invocation paths differ",
+        "historical per-exercise timeout is not recovered"
+      ],
+      "model_identity_equivalence": "unresolved-by-W1",
+      "paper_eligibility": "not-assessed-by-W1"
+    },
+    {
+      "group_id": "tsbench-v2-swelancer5__claude-opus-label-pair__dcf7d44f",
+      "observation_ids": [
+        "claude-code__tsbench-v2-swelancer5__claude-opus-4-6__dcf7d44f",
+        "github-copilot-cli__tsbench-v2-swelancer5__claude-opus-4-6__dcf7d44f"
+      ],
+      "source_known_dimensions": [
+        "same benchmark version 1.1.0",
+        "same five published SWE-Lancer task IDs",
+        "one result per task for each harness record",
+        "same source-defined objective test-success semantics",
+        "both result records label provider as anthropic"
+      ],
+      "explicit_unknown_or_nonidentical_dimensions": [
+        "literal source model labels differ: claude-opus-4-6 versus claude-opus-4.6",
+        "shared provider label does not establish identical serving or authentication",
+        "exact service-side model identity and serving route are unresolved",
+        "historical harness versions are unknown",
+        "Claude Code execution revision is not bound while Copilot is bound to workflow run 24085684611",
+        "authentication and harness invocation paths differ",
+        "historical per-exercise timeout is not recovered"
+      ],
+      "model_identity_equivalence": "unresolved-by-W1",
+      "paper_eligibility": "not-assessed-by-W1"
+    }
+  ],
+  "provenance_strength": {
+    "class": "external-reproduced-with-partial-run-binding",
+    "immutable_publication_revision": true,
+    "public_per_run_result_json": true,
+    "public_task_level_outcomes": true,
+    "public_agent_configs_at_publication_revision": true,
+    "copilot_workflow_runs_public_and_revision_bound": true,
+    "claude_code_execution_revisions_recovered": false,
+    "historical_harness_versions_recovered": false,
+    "w1_treatment": "admit factual per-record outcome summaries while preserving literal metadata and unresolved identity dimensions"
+  },
+  "protocol_deviations_and_failures": [
+    {
+      "event": "initial-schema-validation-failure",
+      "run_number": 365,
+      "run_id": 36730262131,
+      "head_sha": "19c07fc476a79619b0c0471a131c40fdd0d1f517",
+      "conclusion": "failure",
+      "detail": "The neutral registry renderer stopped because the new structured benchmark objects omitted the required artifact_source field. No evidence admission result was reached. The field was added using the already cited committed result JSON."
+    },
+    {
+      "event": "source-model-label-punctuation-nonidentity",
+      "scope": "both Claude model pairs",
+      "detail": "The Claude Code and Copilot result artifacts use hyphen versus dot forms for Sonnet and Opus model labels. W1 preserves those literals and leaves service-side identity equivalence unresolved."
+    },
+    {
+      "event": "sonnet-provider-metadata-nonidentity",
+      "scope": "Sonnet pair",
+      "detail": "The Claude Code Sonnet record reports provider openai while the Copilot Sonnet record reports anthropic. W1 does not normalize these fields."
+    },
+    {
+      "event": "single-run-small-snapshot",
+      "scope": "all four observations",
+      "detail": "Each harness/model record contains one outcome per each of five tasks; no repeated stochastic trials are published in this snapshot."
+    },
+    {
+      "event": "historical-timeout-unrecovered",
+      "scope": "all four observations",
+      "detail": "Current workflow defaults are not back-projected into the April 2026 runs. Historical per-exercise timeout remains unknown."
+    }
+  ],
+  "non_admission_dispositions": [
+    {
+      "surface": "publisher tier labels and leaderboard ordering",
+      "status": "not-promoted-by-W1",
+      "reason": "W1 preserves objective source outcomes but does not reproduce evaluative tier/ranking conclusions."
+    },
+    {
+      "surface": "same-model equivalence for the two Claude label pairs",
+      "status": "unresolved",
+      "reason": "Literal model IDs differ and serving/authentication paths are not proven identical; W1 does not adjudicate historical model identity."
+    },
+    {
+      "surface": "duration comparison",
+      "status": "not-promoted-by-W1",
+      "reason": "Harness/authentication paths differ and this pass performs no efficiency interpretation."
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "registry_observation_count_after": 290,
+    "results": [
+      {
+        "kind": "initial-schema-control-failure",
+        "run_number": 365,
+        "run_id": 36730262131,
+        "head_sha": "19c07fc476a79619b0c0471a131c40fdd0d1f517",
+        "conclusion": "failure",
+        "evidence_rejected": false
+      },
+      {
+        "kind": "write-enabled-admission-and-registry-run",
+        "run_number": 366,
+        "run_id": 36730777531,
+        "head_sha": "8d302b7efbe01a7f75d50ac7304fec086c374e3d",
+        "conclusion": "success",
+        "generated_registry_commit": "6b66827c1b60bf1a938a43f59b934d3174bb5f37"
+      },
+      {
+        "kind": "generated-registry",
+        "commit": "6b66827c1b60bf1a938a43f59b934d3174bb5f37",
+        "observation_count": 290
+      },
+      {
+        "kind": "corrected-literal-read-only-readmission",
+        "run_number": 371,
+        "run_id": 36732023687,
+        "head_sha": "eced84ae1f220a89b43702fc1b4bcab67f3d5b98",
+        "conclusion": "success",
+        "registry_regeneration_zero_diff": true
+      },
+      {
+        "kind": "standard-workflow-restored",
+        "head_sha": "08947551d2f6b1d54e53e02dff24097b927e2eac",
+        "workflow_blob_sha": "244ad9701f41e6122f37c0676a00e705cddd622f"
+      },
+      {
+        "kind": "standard-read-only-validation-run",
+        "run_number": 372,
+        "run_id": 36732372459,
+        "head_sha": "08947551d2f6b1d54e53e02dff24097b927e2eac",
+        "conclusion": "success"
+      }
+    ]
+  },
+  "handoff_boundary": {
+    "structural_classification_performed": false,
+    "historical_linkage_adjudicated": false,
+    "model_identity_equivalence_adjudicated": false,
+    "matched_cell_eligibility_assigned": false,
+    "comparison_tier_assigned": false,
+    "statistical_interpretation_performed": false,
+    "winner_declared": false,
+    "paper_claim_made": false
+  }
+}
