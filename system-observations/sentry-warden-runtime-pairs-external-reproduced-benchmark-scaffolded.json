@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Sentry Warden benchmark runtime pairs",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "benchmark-scaffolded",
+    "historical_relation": "The source runs Pi and a Claude runtime inside the Warden security-review benchmark pipeline. These are Warden-scaffolded runtime lanes, not asserted by W1 to be stock standalone harness products or canonically linked historical revisions."
+  },
+  "primary_sources": [
+    "https://github.com/getsentry/warden/blob/06b388607f1947d64b7e63ffc54407c492c5ab65/packages/docs/src/content/docs/benchmarking.mdx",
+    "https://github.com/getsentry/warden/blob/06b388607f1947d64b7e63ffc54407c492c5ab65/packages/docs/src/data/benchmarking/sentry-vulnerability-corpus.json",
+    "https://github.com/getsentry/warden/blob/06b388607f1947d64b7e63ffc54407c492c5ab65/packages/docs/src/data/benchmarking/analyses/sonnet-4-6-runtime-comparison.json",
+    "https://github.com/getsentry/warden/blob/06b388607f1947d64b7e63ffc54407c492c5ab65/packages/docs/src/data/benchmarking/analyses/opus-4-8-high-runtime-comparison.json",
+    "https://github.com/getsentry/warden/blob/06b388607f1947d64b7e63ffc54407c492c5ab65/packages/docs/src/data/benchmarking/results/sentry-security-review-pi-sonnet-4-6-traced-corpus-2026-06-03-001.json",
+    "https://github.com/getsentry/warden/blob/06b388607f1947d64b7e63ffc54407c492c5ab65/packages/docs/src/data/benchmarking/results/sentry-security-review-claude-sonnet-4-6-traced-corpus-2026-06-04-001.json",
+    "https://github.com/getsentry/warden/blob/06b388607f1947d64b7e63ffc54407c492c5ab65/packages/docs/src/data/benchmarking/results/sentry-security-review-pi-opus-4-8-high-traced-corpus-2026-06-05-001.json",
+    "https://github.com/getsentry/warden/blob/06b388607f1947d64b7e63ffc54407c492c5ab65/packages/docs/src/data/benchmarking/results/sentry-security-review-claude-opus-4-8-high-traced-corpus-2026-06-05-001.json"
+  ],
+  "observations": [
+    {
+      "observation_id": "warden-claude-runtime__sentry-vuln86__claude-sonnet-4-6__06b38860",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "name": "Sentry Warden vulnerability-corpus runtime comparison",
+        "version": "Warden 0.36.1 / corpus updated 2026-05-28",
+        "task_set": "86 validated known vulnerabilities across 79 files and 6 historical Sentry commits; 156 analysis chunks",
+        "primary_source": "https://github.com/getsentry/warden/blob/06b388607f1947d64b7e63ffc54407c492c5ab65/packages/docs/src/data/benchmarking/analyses/sonnet-4-6-runtime-comparison.json",
+        "artifact_source": "https://github.com/getsentry/warden/blob/06b388607f1947d64b7e63ffc54407c492c5ab65/packages/docs/src/data/benchmarking/results/sentry-security-review-claude-sonnet-4-6-traced-corpus-2026-06-04-001.json"
+      },
+      "result": {
+        "date": "2026-06-04",
+        "publisher": "Sentry",
+        "run_id": "sentry-security-review-claude-sonnet-4-6-traced-corpus-2026-06-04-001",
+        "runtime_label": "claude",
+        "warden_version": "0.36.1",
+        "skill": "@sentry/warden:security-review@0.36.1",
+        "model": "claude-sonnet-4-6",
+        "reasoning_level": "high",
+        "metric": "known_corpus_recall",
+        "value": 0.27906976744186046,
+        "known_found": 24,
+        "known_finding_count": 86,
+        "findings_total": 32,
+        "chunks_analyzed": 156,
+        "chunks_failed": 0,
+        "total_cost_usd": 103.59261104999999,
+        "scan_input_tokens": 42264775,
+        "scan_output_tokens": 889761
+      },
+      "execution": {
+        "environment": "Warden security-review benchmark over pinned historical getsentry/sentry commits",
+        "evaluator": "Warden known-corpus semantic scoring with finding verification enabled by benchmark configuration",
+        "budget": "Recorded provider total cost USD 103.59261104999999; no W1-normalized common budget asserted",
+        "timeout_seconds": null,
+        "repetitions": 1,
+        "parallelism": 4,
+        "trace_capture": "complete across 6 shards / 156 chunks; raw JSONL withheld by publisher pending sensitive-data review",
+        "reset_policy": "Each corpus shard is evaluated against its source-published historical Sentry checkout SHA and corpus-file target set",
+        "adaptation_policy": null,
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "sentry-warden-sonnet46-runtime-source-match__06b38860",
+        "mode": "source-presented-runtime-comparison-candidate",
+        "scope": "known-vulnerability-recognition"
+      },
+      "unknown_dimensions": [
+        "exact Claude runtime package/version outside Warden's runtime label",
+        "exact service-side Claude Sonnet 4.6 snapshot",
+        "benchmark timeout/turn ceiling if any for this historical run",
+        "whether the unprefixed and anthropic-prefixed source model identifiers are byte-identical service routes"
+      ],
+      "notes": "The publisher presents this row as the Claude runtime side of a Sonnet 4.6 runtime comparison. W1 preserves the exact source model label and does not assign paper matched-cell eligibility."
+    },
+    {
+      "observation_id": "warden-pi-runtime__sentry-vuln86__anthropic-claude-sonnet-4-6__06b38860",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "name": "Sentry Warden vulnerability-corpus runtime comparison",
+        "version": "Warden 0.36.1 / corpus updated 2026-05-28",
+        "task_set": "86 validated known vulnerabilities across 79 files and 6 historical Sentry commits; 156 analysis chunks",
+        "primary_source": "https://github.com/getsentry/warden/blob/06b388607f1947d64b7e63ffc54407c492c5ab65/packages/docs/src/data/benchmarking/analyses/sonnet-4-6-runtime-comparison.json",
+        "artifact_source": "https://github.com/getsentry/warden/blob/06b388607f1947d64b7e63ffc54407c492c5ab65/packages/docs/src/data/benchmarking/results/sentry-security-review-pi-sonnet-4-6-traced-corpus-2026-06-03-001.json"
+      },
+      "result": {
+        "date": "2026-06-03",
+        "publisher": "Sentry",
+        "run_id": "sentry-security-review-pi-sonnet-4-6-traced-corpus-2026-06-03-001",
+        "runtime_label": "pi",
+        "warden_version": "0.36.1",
+        "skill": "@sentry/warden:security-review@0.36.1",
+        "model": "anthropic/claude-sonnet-4-6",
+        "reasoning_level": "pi-default-medium",
+        "metric": "known_corpus_recall",
+        "value": 0.29069767441860467,
+        "known_found": 25,
+        "known_finding_count": 86,
+        "findings_total": 32,
+        "chunks_analyzed": 156,
+        "chunks_failed": 0,
+        "total_cost_usd": 19.8405752,
+        "scan_input_tokens": 6668001,
+        "scan_output_tokens": 365046
+      },
+      "execution": {
+        "environment": "Warden security-review benchmark over pinned historical getsentry/sentry commits",
+        "evaluator": "Warden known-corpus semantic scoring with finding verification enabled by benchmark configuration",
+        "budget": "Recorded provider total cost USD 19.8405752; no W1-normalized common budget asserted",
+        "timeout_seconds": null,
+        "repetitions": 1,
+        "parallelism": 4,
+        "trace_capture": "complete across 6 shards / 156 chunks; raw JSONL withheld by publisher pending sensitive-data review",
+        "reset_policy": "Each corpus shard is evaluated against its source-published historical Sentry checkout SHA and corpus-file target set",
+        "adaptation_policy": null,
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "sentry-warden-sonnet46-runtime-source-match__06b38860",
+        "mode": "source-presented-runtime-comparison-candidate",
+        "scope": "known-vulnerability-recognition"
+      },
+      "unknown_dimensions": [
+        "exact Pi package/version outside Warden's runtime label",
+        "exact service-side Claude Sonnet 4.6 snapshot",
+        "benchmark timeout/turn ceiling if any for this historical run",
+        "whether the unprefixed and anthropic-prefixed source model identifiers are byte-identical service routes"
+      ],
+      "notes": "The source records Pi's reasoning level as pi-default-medium while the Claude runtime row records high. W1 preserves that non-identical configuration and does not infer causal runtime isolation."
+    },
+    {
+      "observation_id": "warden-claude-runtime__sentry-vuln86__claude-opus-4-8-high__06b38860",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "name": "Sentry Warden vulnerability-corpus runtime comparison",
+        "version": "Warden 0.36.1 / corpus updated 2026-05-28",
+        "task_set": "86 validated known vulnerabilities across 79 files and 6 historical Sentry commits; 156 analysis chunks",
+        "primary_source": "https://github.com/getsentry/warden/blob/06b388607f1947d64b7e63ffc54407c492c5ab65/packages/docs/src/data/benchmarking/analyses/opus-4-8-high-runtime-comparison.json",
+        "artifact_source": "https://github.com/getsentry/warden/blob/06b388607f1947d64b7e63ffc54407c492c5ab65/packages/docs/src/data/benchmarking/results/sentry-security-review-claude-opus-4-8-high-traced-corpus-2026-06-05-001.json"
+      },
+      "result": {
+        "date": "2026-06-05",
+        "publisher": "Sentry",
+        "run_id": "sentry-security-review-claude-opus-4-8-high-traced-corpus-2026-06-05-001",
+        "runtime_label": "claude",
+        "warden_version": "0.36.1",
+        "skill": "security-review",
+        "model": "claude-opus-4-8",
+        "reasoning_level": "high",
+        "metric": "known_corpus_recall",
+        "value": 0.19767441860465115,
+        "known_found": 17,
+        "known_finding_count": 86,
+        "findings_total": 17,
+        "chunks_analyzed": 156,
+        "chunks_failed": 0,
+        "total_cost_usd": 79.559748,
+        "scan_input_tokens": 22499304,
+        "scan_output_tokens": 308283
+      },
+      "execution": {
+        "environment": "Warden security-review benchmark over pinned historical getsentry/sentry commits",
+        "evaluator": "Warden known-corpus semantic scoring with finding verification enabled by benchmark configuration",
+        "budget": "Recorded provider total cost USD 79.559748; no W1-normalized common budget asserted",
+        "timeout_seconds": null,
+        "repetitions": 1,
+        "parallelism": 4,
+        "trace_capture": "complete across 6 shards / 156 chunks; raw JSONL withheld by publisher pending sensitive-data review",
+        "reset_policy": "Each corpus shard is evaluated against its source-published historical Sentry checkout SHA and corpus-file target set",
+        "adaptation_policy": null,
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "sentry-warden-opus48-high-runtime-source-match__06b38860",
+        "mode": "source-presented-runtime-comparison-candidate",
+        "scope": "known-vulnerability-recognition"
+      },
+      "unknown_dimensions": [
+        "exact Claude runtime package/version outside Warden's runtime label",
+        "exact service-side Claude Opus 4.8 snapshot",
+        "benchmark timeout/turn ceiling if any for this historical run",
+        "whether the unprefixed and anthropic-prefixed source model identifiers are byte-identical service routes"
+      ],
+      "notes": "This is one stable traced run with zero failed chunks. W1 preserves the source row without ranking or causal interpretation."
+    },
+    {
+      "observation_id": "warden-pi-runtime__sentry-vuln86__anthropic-claude-opus-4-8-high__06b38860",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "name": "Sentry Warden vulnerability-corpus runtime comparison",
+        "version": "Warden 0.36.1 / corpus updated 2026-05-28",
+        "task_set": "86 validated known vulnerabilities across 79 files and 6 historical Sentry commits; 156 analysis chunks",
+        "primary_source": "https://github.com/getsentry/warden/blob/06b388607f1947d64b7e63ffc54407c492c5ab65/packages/docs/src/data/benchmarking/analyses/opus-4-8-high-runtime-comparison.json",
+        "artifact_source": "https://github.com/getsentry/warden/blob/06b388607f1947d64b7e63ffc54407c492c5ab65/packages/docs/src/data/benchmarking/results/sentry-security-review-pi-opus-4-8-high-traced-corpus-2026-06-05-001.json"
+      },
+      "result": {
+        "date": "2026-06-05",
+        "publisher": "Sentry",
+        "run_id": "sentry-security-review-pi-opus-4-8-high-traced-corpus-2026-06-05-001",
+        "runtime_label": "pi",
+        "warden_version": "0.36.1",
+        "skill": "security-review",
+        "model": "anthropic/claude-opus-4-8",
+        "reasoning_level": "high",
+        "metric": "known_corpus_recall",
+        "value": 0.2441860465116279,
+        "known_found": 21,
+        "known_finding_count": 86,
+        "findings_total": 24,
+        "chunks_analyzed": 156,
+        "chunks_failed": 0,
+        "total_cost_usd": 21.312897000000003,
+        "scan_input_tokens": 5170716,
+        "scan_output_tokens": 316284
+      },
+      "execution": {
+        "environment": "Warden security-review benchmark over pinned historical getsentry/sentry commits",
+        "evaluator": "Warden known-corpus semantic scoring with finding verification enabled by benchmark configuration",
+        "budget": "Recorded provider total cost USD 21.312897000000003; no W1-normalized common budget asserted",
+        "timeout_seconds": null,
+        "repetitions": 1,
+        "parallelism": 4,
+        "trace_capture": "complete across 6 shards / 156 chunks; raw JSONL withheld by publisher pending sensitive-data review",
+        "reset_policy": "Each corpus shard is evaluated against its source-published historical Sentry checkout SHA and corpus-file target set",
+        "adaptation_policy": null,
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "sentry-warden-opus48-high-runtime-source-match__06b38860",
+        "mode": "source-presented-runtime-comparison-candidate",
+        "scope": "known-vulnerability-recognition"
+      },
+      "unknown_dimensions": [
+        "exact Pi package/version outside Warden's runtime label",
+        "exact service-side Claude Opus 4.8 snapshot",
+        "benchmark timeout/turn ceiling if any for this historical run",
+        "whether the unprefixed and anthropic-prefixed source model identifiers are byte-identical service routes"
+      ],
+      "notes": "This is one stable traced run with zero failed chunks. W1 preserves the source row without ranking or causal interpretation."
+    }
+  ],
+  "source_limitations": [
+    "The publisher states these are single-run samples rather than deterministic model rankings.",
+    "Raw JSONL traces are withheld pending sensitive-data review; committed sanitized result metadata and aggregate analyses are public.",
+    "The corpus file states that current per-finding SHAs were inferred from capture timestamps and should be backfilled from stronger historical sources, although benchmark runs themselves target six explicit historical checkout SHAs.",
+    "The Sonnet runtime pair does not hold recorded reasoning configuration identical: Claude is high while Pi is pi-default-medium.",
+    "Model identifiers differ by source runtime namespace: Claude rows are unprefixed while Pi rows use the anthropic/ prefix."
+  ]
+}
