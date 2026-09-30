@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "manifest_id": "och-obs-1-w1-2026-09-30-pass26-openbench-m4",
+  "recorded_at": "2026-09-30",
+  "work_item": {"repository": "opensiro/vsm-harness-capability", "issue": 93, "role": "W1 public-evidence discovery and neutral admission"},
+  "protocol": {"id": "OCH-OBS-1", "version": "1.0.0", "repository": "opensiro/vsm-harness-research", "revision": "5462ffadffd7189ae10e44e22d357bc6162a6038", "collection_cutoff_utc": "2026-10-20T23:59:59Z"},
+  "checkpoint_parent": {"capability_main_revision": "fb5ae0ee1f489f7243d0acbbfaf0fb8aecc30f12", "registry_observation_count_before": 212, "prior_handoffs_mutated": false},
+  "collection_state": {"status": "active", "documented_discovery_passes_completed_after_this_checkpoint": 26, "cutoff_reached": false},
+  "discovery_pass": {
+    "pass_id": "w1-pass-026-openbench-m4-open-models",
+    "method": "Direction-blind admission of the eight Pi/OpenCode harness-by-model cells from the committed OpenBench M4 matrix. Each model pair shares the same three benchmark tasks and three trials per task. W1 preserves the source-reported nine-cell mean objective score and source timing/token telemetry without cleaning failure rows, changing denominators, or reproducing source ordering claims.",
+    "source_repository": "https://github.com/minghinmatthewlam/openbench",
+    "source_revision": "397d68c958df831128e68101640968e9b0be89e5",
+    "published_snapshot_date": "2026-07-03",
+    "source_artifacts": [
+      "https://github.com/minghinmatthewlam/openbench/blob/397d68c958df831128e68101640968e9b0be89e5/data/m4-2026-07-03/results.jsonl",
+      "https://github.com/minghinmatthewlam/openbench/blob/397d68c958df831128e68101640968e9b0be89e5/data/m4-2026-07-03/README.md",
+      "https://github.com/minghinmatthewlam/openbench/blob/397d68c958df831128e68101640968e9b0be89e5/RESULTS.md",
+      "https://github.com/minghinmatthewlam/openbench/blob/397d68c958df831128e68101640968e9b0be89e5/bench/adapters/pi.py",
+      "https://github.com/minghinmatthewlam/openbench/blob/397d68c958df831128e68101640968e9b0be89e5/bench/adapters/opencode.py"
+    ]
+  },
+  "reused_existing_observation_ids": [],
+  "newly_admitted_observation_ids": [
+    "pi__openbench-m4-hard3__glm-5.2__397d68c9",
+    "opencode__openbench-m4-hard3__glm-5.2__397d68c9",
+    "pi__openbench-m4-hard3__deepseek-v4-flash__397d68c9",
+    "opencode__openbench-m4-hard3__deepseek-v4-flash__397d68c9",
+    "pi__openbench-m4-hard3__kimi-k2.7-code__397d68c9",
+    "opencode__openbench-m4-hard3__kimi-k2.7-code__397d68c9",
+    "pi__openbench-m4-hard3__glm-4.7-flash__397d68c9",
+    "opencode__openbench-m4-hard3__glm-4.7-flash__397d68c9"
+  ],
+  "candidate_same_model_comparison_groups": [
+    {"group_id": "openbench-m4-hard3__glm-5.2__397d68c9", "observation_ids": ["pi__openbench-m4-hard3__glm-5.2__397d68c9", "opencode__openbench-m4-hard3__glm-5.2__397d68c9"], "source_known_dimensions": ["same published model id glm-5.2", "same first-party Z.ai provider family", "same three tasks", "three trials per task", "same 900 second timeout", "same local benchmark runner and objective task checkers"], "explicit_unknown_or_nonidentical_dimensions": ["exact service-side model checkpoint", "exact source commit for each reported CLI package version", "native harness prompting, context management and tool-loop behavior differ by design", "provider-side load and routing state"], "paper_eligibility": "not-assessed-by-W1"},
+    {"group_id": "openbench-m4-hard3__deepseek-v4-flash__397d68c9", "observation_ids": ["pi__openbench-m4-hard3__deepseek-v4-flash__397d68c9", "opencode__openbench-m4-hard3__deepseek-v4-flash__397d68c9"], "source_known_dimensions": ["same published model id deepseek-v4-flash", "same first-party DeepSeek provider family", "same three tasks", "three trials per task", "same 900 second timeout", "same local benchmark runner and objective task checkers"], "explicit_unknown_or_nonidentical_dimensions": ["exact service-side model checkpoint", "exact source commit for each reported CLI package version", "native harness prompting, context management and tool-loop behavior differ by design", "provider-side load and routing state"], "paper_eligibility": "not-assessed-by-W1"},
+    {"group_id": "openbench-m4-hard3__kimi-k2.7-code__397d68c9", "observation_ids": ["pi__openbench-m4-hard3__kimi-k2.7-code__397d68c9", "opencode__openbench-m4-hard3__kimi-k2.7-code__397d68c9"], "source_known_dimensions": ["same published model id kimi-k2.7-code", "same first-party Moonshot provider family", "same three tasks", "three trials per task", "same 900 second timeout", "same local benchmark runner and objective task checkers"], "explicit_unknown_or_nonidentical_dimensions": ["exact service-side model checkpoint", "exact source commit for each reported CLI package version", "native harness prompting, context management and tool-loop behavior differ by design", "one OpenCode cell is a documented timeout-handler adapter exception", "provider-side load and routing state"], "paper_eligibility": "not-assessed-by-W1"},
+    {"group_id": "openbench-m4-hard3__glm-4.7-flash__397d68c9", "observation_ids": ["pi__openbench-m4-hard3__glm-4.7-flash__397d68c9", "opencode__openbench-m4-hard3__glm-4.7-flash__397d68c9"], "source_known_dimensions": ["same published model id glm-4.7-flash", "same first-party Z.ai provider family", "same three tasks", "three trials per task", "same 900 second timeout", "same local benchmark runner and objective task checkers"], "explicit_unknown_or_nonidentical_dimensions": ["exact service-side model checkpoint", "exact source commit for each reported CLI package version", "native harness prompting, context management and tool-loop behavior differ by design", "seven OpenCode cells are documented timeout-handler adapter exceptions", "Pi token aggregate is source-marked unreliable", "provider-side load and routing state"], "paper_eligibility": "not-assessed-by-W1"}
+  ],
+  "provenance_strength": {"class": "external-reproduced", "public_per_cell_rows": true, "public_harness_versions": true, "public_adapter_implementation": true, "public_objective_scores_and_checker_exit": true, "public_full_agent_trajectories": false, "w1_treatment": "admitted from the historical M4 publication commit with all eight harness-by-model cells preserved; documented adapter exceptions remain in the source nine-cell result surface and are not silently removed"},
+  "protocol_deviations_and_failures": [
+    {"event": "background-run-reaped", "scope": "matrix execution", "source_reported": true, "detail": "The first long-lived background run was externally reaped after 43 of 72 real cells. The benchmark resumed by run_id and skipped completed cells; the source reports no lost rows."},
+    {"event": "opencode-timeout-handler-exceptions", "scope": "8 of 72 real cells", "source_reported": true, "detail": "A historical OpenCode adapter timeout handler attempted bytes-plus-string concatenation. The committed rows retain these exceptions with completed=false and score 0: seven GLM-4.7-Flash OpenCode cells and one Kimi OpenCode cell."}
+  ],
+  "non_admission_dispositions": [
+    {"surface": "danielwilliford/agent-harness-routing-benchmark@a614844a7762b0624da8993a9f43ac286a94e121", "status": "identity-insufficient-for-result-admission", "reason": "Published routing measurements intentionally generalize lane/model identities and remove raw private inputs, so the exercised systems cannot be pinned without inventing historical identity."},
+    {"surface": "outsourc-e/bench-loop-web@69f9fbb6449394ac42f83517ce12f489faab3e10", "status": "deferred-historical-implementation-unknown", "reason": "The committed fallback leaderboard contains concrete qwen3:8b agent-only rows, but those runs predate the first public BenchLoop CLI commit; W1 did not back-project later implementation code onto the historical rows."},
+    {"surface": "datamindedacademy/how-much-do-you-bench@0a9144726b5af57ac5e36efa675137795382f6c1", "status": "protocol-without-public-scored-result", "reason": "The repository fixes model/gateway and publishes the benchmark scaffold, while scored hidden-suite outcomes remain on the grading service/instructor side and no immutable committed result surface was located."},
+    {"surface": "Arlieeee/Dura-Agent@74fb7a4e8b44a5a0a185fe5d32408f43f4bc9d87", "status": "deferred-weaker-summary-evidence", "reason": "The repository publishes a controlled four-configuration same-model benchmark and aggregate tables, but raw run JSON and full traces are gitignored. It remains a candidate for a separate weaker-evidence pass rather than being conflated with OpenBench M4's committed per-cell data."},
+    {"surface": "OpenBench publisher ordering and mechanism claims", "status": "not-promoted-by-W1", "reason": "W1 records the eight factual result surfaces, failure taxonomy and auxiliary telemetry only; interpretation of comparative direction or mechanism is downstream."}
+  ],
+  "validation": {
+    "status": "succeeded",
+    "registry_observation_count_after": 220,
+    "commands_required": ["python system-observations/render_registry.py", "python scripts/admission_check.py system-observations/pi-openbench-m4-open-models-external-reproduced-adapter-preserved.json", "python scripts/admission_check.py system-observations/opencode-openbench-m4-open-models-external-reproduced-adapter-preserved.json", "python scripts/validate_repository.py"],
+    "results": [
+      {"gate": "write-enabled-admission", "workflow_run_id": 36669629427, "run_number": 291, "head_revision": "75870c9442a45cd6caf2d912afffe3273ab296da", "conclusion": "success", "checks": ["registry regeneration", "repository validation", "post-closure validators", "Pi record-specific admission check", "OpenCode record-specific admission check"]},
+      {"gate": "restored-standard-workflow", "workflow_run_id": 36669722412, "run_number": 293, "head_revision": "04541ae6dd66f629189a24f2cec9fb6e01d36893", "conclusion": "success", "workflow_blob_sha": "244ad9701f41e6122f37c0676a00e705cddd622f", "checks": ["repository validation", "post-closure validators", "standard live evidence checks"]}
+    ]
+  },
+  "handoff_boundary": {"structural_classification_performed": false, "historical_linkage_adjudicated": false, "comparison_tier_assigned": false, "statistical_interpretation_performed": false, "winner_declared": false}
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Pi CLI under OpenBench M4",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "adapter-preserved",
+    "historical_relation": "The pinned OpenBench M4 runner invokes the native Pi CLI headlessly and registers first-party open-model providers through a temporary Pi provider extension. The committed result rows report Pi 0.79.5; no canonical historical linkage is asserted here."
+  },
+  "primary_sources": [
+    "https://github.com/minghinmatthewlam/openbench/blob/397d68c958df831128e68101640968e9b0be89e5/data/m4-2026-07-03/results.jsonl",
+    "https://github.com/minghinmatthewlam/openbench/blob/397d68c958df831128e68101640968e9b0be89e5/data/m4-2026-07-03/README.md",
+    "https://github.com/minghinmatthewlam/openbench/blob/397d68c958df831128e68101640968e9b0be89e5/RESULTS.md",
+    "https://github.com/minghinmatthewlam/openbench/blob/397d68c958df831128e68101640968e9b0be89e5/bench/adapters/pi.py"
+  ],
+  "observations": [
+    {
+      "observation_id": "pi__openbench-m4-hard3__glm-5.2__397d68c9",
+      "kind": "system-benchmark-result",
+      "benchmark": {"family_id": "openbench-m4-hard3", "name": "OpenBench M4 open-model matrix", "variant": "pi-glm-5.2", "task_count": 3, "primary_source": "https://github.com/minghinmatthewlam/openbench/blob/397d68c958df831128e68101640968e9b0be89e5/data/m4-2026-07-03/results.jsonl", "artifact_source": "https://github.com/minghinmatthewlam/openbench/blob/397d68c958df831128e68101640968e9b0be89e5/RESULTS.md"},
+      "result": {"date": "2026-07-03", "published_snapshot_date": "2026-07-03", "agent_label": "pi", "harness_version": "0.79.5", "harness_revision": null, "benchmark_revision": "397d68c958df831128e68101640968e9b0be89e5", "model": "glm-5.2", "model_config": "Z.ai first-party endpoint registered as Pi provider zai; model id glm-5.2; local execution; timeout 900s", "metric": "source_reported_mean_objective_score_over_9_cells", "value": 1.0, "tasks": 3, "trials_per_task": 3, "total_cells": 9, "known_adapter_exception_cells": 0, "mean_wall_seconds_source_reported": 162, "mean_tokens_source_reported": 17200},
+      "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "version-reported-source-revision-known"},
+      "provenance": {"publisher": "OpenBench / minghinmatthewlam", "checked": true, "os_system": true, "public_logs": true, "public_trajectories": false, "raw_run_artifacts_public": true, "public_result_surface": "committed 75-row M4 JSONL with per-cell task, trial, command, checker outcome, score, timing, tokens and harness version", "execution_environment": "single local host; sequential resumable run; fresh task workspaces; objective task checkers; first-party Z.ai API"},
+      "comparison": {"group": "openbench-m4-hard3__glm-5.2__397d68c9", "mode": "candidate-same-model", "scope": "coding-swe"},
+      "unknown_dimensions": ["exact service-side GLM-5.2 checkpoint behind the published model id", "exact Pi source commit corresponding to reported CLI version 0.79.5", "provider-side load and routing state"],
+      "notes": "The value is the source table's mean objective score over all nine task-trial cells. Timing and token values are retained as auxiliary source telemetry."
+    },
+    {
+      "observation_id": "pi__openbench-m4-hard3__deepseek-v4-flash__397d68c9",
+      "kind": "system-benchmark-result",
+      "benchmark": {"family_id": "openbench-m4-hard3", "name": "OpenBench M4 open-model matrix", "variant": "pi-deepseek-v4-flash", "task_count": 3, "primary_source": "https://github.com/minghinmatthewlam/openbench/blob/397d68c958df831128e68101640968e9b0be89e5/data/m4-2026-07-03/results.jsonl", "artifact_source": "https://github.com/minghinmatthewlam/openbench/blob/397d68c958df831128e68101640968e9b0be89e5/RESULTS.md"},
+      "result": {"date": "2026-07-03", "published_snapshot_date": "2026-07-03", "agent_label": "pi", "harness_version": "0.79.5", "harness_revision": null, "benchmark_revision": "397d68c958df831128e68101640968e9b0be89e5", "model": "deepseek-v4-flash", "model_config": "DeepSeek first-party endpoint registered as Pi provider deepseek; model id deepseek-v4-flash; local execution; timeout 900s", "metric": "source_reported_mean_objective_score_over_9_cells", "value": 1.0, "tasks": 3, "trials_per_task": 3, "total_cells": 9, "known_adapter_exception_cells": 0, "mean_wall_seconds_source_reported": 28, "mean_tokens_source_reported": 8100},
+      "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "version-reported-source-revision-known"},
+      "provenance": {"publisher": "OpenBench / minghinmatthewlam", "checked": true, "os_system": true, "public_logs": true, "public_trajectories": false, "raw_run_artifacts_public": true, "public_result_surface": "committed 75-row M4 JSONL with per-cell task, trial, command, checker outcome, score, timing, tokens and harness version", "execution_environment": "single local host; sequential resumable run; fresh task workspaces; objective task checkers; first-party DeepSeek API"},
+      "comparison": {"group": "openbench-m4-hard3__deepseek-v4-flash__397d68c9", "mode": "candidate-same-model", "scope": "coding-swe"},
+      "unknown_dimensions": ["exact service-side DeepSeek V4 Flash checkpoint behind the published model id", "exact Pi source commit corresponding to reported CLI version 0.79.5", "provider-side load and routing state"],
+      "notes": "The value is the source table's mean objective score over all nine task-trial cells. Timing and token values are retained as auxiliary source telemetry."
+    },
+    {
+      "observation_id": "pi__openbench-m4-hard3__kimi-k2.7-code__397d68c9",
+      "kind": "system-benchmark-result",
+      "benchmark": {"family_id": "openbench-m4-hard3", "name": "OpenBench M4 open-model matrix", "variant": "pi-kimi-k2.7-code", "task_count": 3, "primary_source": "https://github.com/minghinmatthewlam/openbench/blob/397d68c958df831128e68101640968e9b0be89e5/data/m4-2026-07-03/results.jsonl", "artifact_source": "https://github.com/minghinmatthewlam/openbench/blob/397d68c958df831128e68101640968e9b0be89e5/RESULTS.md"},
+      "result": {"date": "2026-07-03", "published_snapshot_date": "2026-07-03", "agent_label": "pi", "harness_version": "0.79.5", "harness_revision": null, "benchmark_revision": "397d68c958df831128e68101640968e9b0be89e5", "model": "kimi-k2.7-code", "model_config": "Moonshot first-party endpoint registered as Pi provider moonshot; model id kimi-k2.7-code; local execution; timeout 900s", "metric": "source_reported_mean_objective_score_over_9_cells", "value": 1.0, "tasks": 3, "trials_per_task": 3, "total_cells": 9, "known_adapter_exception_cells": 0, "mean_wall_seconds_source_reported": 68, "mean_tokens_source_reported": 8700},
+      "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "version-reported-source-revision-known"},
+      "provenance": {"publisher": "OpenBench / minghinmatthewlam", "checked": true, "os_system": true, "public_logs": true, "public_trajectories": false, "raw_run_artifacts_public": true, "public_result_surface": "committed 75-row M4 JSONL with per-cell task, trial, command, checker outcome, score, timing, tokens and harness version", "execution_environment": "single local host; sequential resumable run; fresh task workspaces; objective task checkers; first-party Moonshot API"},
+      "comparison": {"group": "openbench-m4-hard3__kimi-k2.7-code__397d68c9", "mode": "candidate-same-model", "scope": "coding-swe"},
+      "unknown_dimensions": ["exact service-side Kimi K2.7 Code checkpoint behind the published model id", "exact Pi source commit corresponding to reported CLI version 0.79.5", "provider-side load and routing state"],
+      "notes": "The value is the source table's mean objective score over all nine task-trial cells. Timing and token values are retained as auxiliary source telemetry."
+    },
+    {
+      "observation_id": "pi__openbench-m4-hard3__glm-4.7-flash__397d68c9",
+      "kind": "system-benchmark-result",
+      "benchmark": {"family_id": "openbench-m4-hard3", "name": "OpenBench M4 open-model matrix", "variant": "pi-glm-4.7-flash", "task_count": 3, "primary_source": "https://github.com/minghinmatthewlam/openbench/blob/397d68c958df831128e68101640968e9b0be89e5/data/m4-2026-07-03/results.jsonl", "artifact_source": "https://github.com/minghinmatthewlam/openbench/blob/397d68c958df831128e68101640968e9b0be89e5/RESULTS.md"},
+      "result": {"date": "2026-07-03", "published_snapshot_date": "2026-07-03", "agent_label": "pi", "harness_version": "0.79.5", "harness_revision": null, "benchmark_revision": "397d68c958df831128e68101640968e9b0be89e5", "model": "glm-4.7-flash", "model_config": "Z.ai first-party endpoint registered as Pi provider zai; model id glm-4.7-flash; local execution; timeout 900s", "metric": "source_reported_mean_objective_score_over_9_cells", "value": 0.47, "tasks": 3, "trials_per_task": 3, "total_cells": 9, "known_adapter_exception_cells": 0, "mean_wall_seconds_source_reported": 102, "mean_tokens_source_reported": null, "token_telemetry_status": "source-reported-unreliable"},
+      "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "version-reported-source-revision-known"},
+      "provenance": {"publisher": "OpenBench / minghinmatthewlam", "checked": true, "os_system": true, "public_logs": true, "public_trajectories": false, "raw_run_artifacts_public": true, "public_result_surface": "committed 75-row M4 JSONL with per-cell task, trial, command, checker outcome, score, timing, tokens and harness version", "execution_environment": "single local host; sequential resumable run; fresh task workspaces; objective task checkers; first-party Z.ai API"},
+      "comparison": {"group": "openbench-m4-hard3__glm-4.7-flash__397d68c9", "mode": "candidate-same-model", "scope": "coding-swe"},
+      "unknown_dimensions": ["exact service-side GLM-4.7-Flash checkpoint behind the published model id", "exact Pi source commit corresponding to reported CLI version 0.79.5", "provider-side load and routing state", "reliable cross-cell Pi token total for this model"],
+      "notes": "The source marks Pi token counts for this model implausibly small and erratic. W1 therefore preserves no aggregate token value for this observation."
+    }
+  ]
+}
