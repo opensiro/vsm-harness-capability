@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "manifest_id": "och-obs-1-w1-2026-09-30-pass29-dura-agent",
+  "recorded_at": "2026-09-30",
+  "work_item": {"repository": "opensiro/vsm-harness-capability", "issue": 93, "role": "W1 public-evidence discovery and neutral admission"},
+  "protocol": {"id": "OCH-OBS-1", "version": "1.0.0", "repository": "opensiro/vsm-harness-research", "revision": "5462ffadffd7189ae10e44e22d357bc6162a6038", "collection_cutoff_utc": "2026-10-20T23:59:59Z"},
+  "checkpoint_parent": {"capability_main_revision": "98315b120e30adaaabf2f80f1f303d54e9bf4e2d", "registry_observation_count_before": 239, "prior_handoffs_mutated": false},
+  "collection_state": {"status": "active", "documented_discovery_passes_completed_after_this_checkpoint": 29, "cutoff_reached": false},
+  "discovery_pass": {
+    "pass_id": "w1-pass-029-dura-agent-controlled-benchmark",
+    "method": "Direction-blind admission of 11 aggregate observations from the pinned Dura-Agent controlled benchmark. Eight observations preserve the 17-task, three-sample hand-built panel across raw, react-min, my-agent and the benchmark-scaffolded Pi loop for two model labels. Three additional observations preserve the source-reported HumanEval v4-flash surface with its unequal completed sample counts. W1 does not reconstruct unavailable per-run rows, infer omitted HumanEval outcomes, or promote publisher comparative conclusions.",
+    "source_repository": "https://github.com/Arlieeee/Dura-Agent",
+    "source_revision": "74fb7a4e8b44a5a0a185fe5d32408f43f4bc9d87",
+    "published_snapshot_date": "2026-07-26",
+    "source_artifacts": [
+      "https://github.com/Arlieeee/Dura-Agent/blob/74fb7a4e8b44a5a0a185fe5d32408f43f4bc9d87/BENCHMARK.md",
+      "https://github.com/Arlieeee/Dura-Agent/blob/74fb7a4e8b44a5a0a185fe5d32408f43f4bc9d87/packages/bench/results/latest.md",
+      "https://github.com/Arlieeee/Dura-Agent/blob/74fb7a4e8b44a5a0a185fe5d32408f43f4bc9d87/.gitignore"
+    ]
+  },
+  "newly_admitted_observation_ids": [
+    "dura-raw__dura-handbuilt17__v4-flash__74fb7a4e",
+    "dura-react-min__dura-handbuilt17__v4-flash__74fb7a4e",
+    "dura-my-agent__dura-handbuilt17__v4-flash__74fb7a4e",
+    "pi-dura-loop__dura-handbuilt17__v4-flash__74fb7a4e",
+    "dura-raw__dura-handbuilt17__v4-pro__74fb7a4e",
+    "dura-react-min__dura-handbuilt17__v4-pro__74fb7a4e",
+    "dura-my-agent__dura-handbuilt17__v4-pro__74fb7a4e",
+    "pi-dura-loop__dura-handbuilt17__v4-pro__74fb7a4e",
+    "dura-raw__humaneval60__v4-flash__74fb7a4e",
+    "dura-react-min__humaneval60__v4-flash__74fb7a4e",
+    "dura-my-agent__humaneval60__v4-flash__74fb7a4e"
+  ],
+  "candidate_same_model_comparison_groups": [
+    {
+      "group_id": "dura-handbuilt17__v4-flash__74fb7a4e",
+      "observation_ids": ["dura-raw__dura-handbuilt17__v4-flash__74fb7a4e", "dura-react-min__dura-handbuilt17__v4-flash__74fb7a4e", "dura-my-agent__dura-handbuilt17__v4-flash__74fb7a4e", "pi-dura-loop__dura-handbuilt17__v4-flash__74fb7a4e"],
+      "source_known_dimensions": ["same task prompts", "same initial sandbox reset", "same maxSteps=15", "same timeout=240s", "same deterministic grader", "same provider implementation and endpoint", "same benchmark tool implementations", "17 tasks", "three source-reported samples per task", "thinking disabled"],
+      "explicit_unknown_or_nonidentical_dimensions": ["exact service-side v4-flash checkpoint", "raw per-cell run rows and full trajectories are not committed", "exact run timestamps", "execution-layer behavior differs by design", "Pi arm substitutes benchmark tools and prompt for Pi-native surfaces"],
+      "paper_eligibility": "not-assessed-by-W1"
+    },
+    {
+      "group_id": "dura-handbuilt17__v4-pro__74fb7a4e",
+      "observation_ids": ["dura-raw__dura-handbuilt17__v4-pro__74fb7a4e", "dura-react-min__dura-handbuilt17__v4-pro__74fb7a4e", "dura-my-agent__dura-handbuilt17__v4-pro__74fb7a4e", "pi-dura-loop__dura-handbuilt17__v4-pro__74fb7a4e"],
+      "source_known_dimensions": ["same task prompts", "same initial sandbox reset", "same maxSteps=15", "same timeout=240s", "same deterministic grader", "same provider implementation and endpoint", "same benchmark tool implementations", "17 tasks", "three source-reported samples per task", "thinking disabled"],
+      "explicit_unknown_or_nonidentical_dimensions": ["exact service-side v4-pro checkpoint", "raw per-cell run rows and full trajectories are not committed", "exact run timestamps", "execution-layer behavior differs by design", "Pi arm substitutes benchmark tools and prompt for Pi-native surfaces"],
+      "paper_eligibility": "not-assessed-by-W1"
+    },
+    {
+      "group_id": "dura-humaneval60__v4-flash__74fb7a4e",
+      "observation_ids": ["dura-raw__humaneval60__v4-flash__74fb7a4e", "dura-react-min__humaneval60__v4-flash__74fb7a4e", "dura-my-agent__humaneval60__v4-flash__74fb7a4e"],
+      "source_known_dimensions": ["same published v4-flash model label", "same HumanEval benchmark surface", "protocol requested 60 tasks"],
+      "explicit_unknown_or_nonidentical_dimensions": ["source-reported completed sample counts differ: raw 60, react-min 47, my-agent 39", "run deadlocked partway", "identity of all omitted tasks is not recoverable from the aggregate table", "raw per-run records unavailable", "exact service-side v4-flash checkpoint"],
+      "paper_eligibility": "not-assessed-by-W1"
+    }
+  ],
+  "provenance_strength": {
+    "classes": ["first-party-reported", "external-reproduced"],
+    "public_aggregate_result_tables": true,
+    "public_benchmark_implementation": true,
+    "public_raw_per_run_results": false,
+    "public_full_agent_trajectories": false,
+    "w1_treatment": "aggregate source values are admitted with explicit summary-only provenance; no per-run reconstruction or uncertainty estimate is invented"
+  },
+  "protocol_deviations_and_failures": [
+    {"event": "raw-result-unavailability", "scope": "benchmark runs", "source_reported": true, "detail": "The repository gitignores packages/bench/results/run-*.json and report-*.md; committed aggregate tables remain available."},
+    {"event": "humaneval-deadlock", "scope": "HumanEval v4-flash surface", "source_reported": true, "detail": "The source states the run deadlocked partway. Reported sample counts are raw 60, react-min 47 and my-agent 39; W1 preserves the asymmetry and does not extrapolate."},
+    {"event": "pi-benchmark-substitutions", "scope": "Pi arm", "source_reported": true, "detail": "The Pi Agent loop uses Dura benchmark tools wrapped as AgentTools and the same coding prompt as my-agent, not Pi CLI's own tools or prompt."}
+  ],
+  "non_admission_dispositions": [
+    {"surface": "publisher comparative conclusions and ranking language", "status": "not-promoted-by-W1", "reason": "W1 admits source-reported factual aggregates only; statistical-tie, mechanism, marginal-value and generalization claims remain downstream questions."},
+    {"surface": "HumanEval balanced comparison", "status": "not-constructed", "reason": "The source reports unequal completed sample counts after deadlock; W1 does not impute missing rows or force a common denominator."}
+  ],
+  "validation": {
+    "status": "passed",
+    "registry_observation_count_after": 250,
+    "commands_required": ["python system-observations/render_registry.py", "python scripts/admission_check.py system-observations/dura-agent-my-agent-benchmark-first-party-reported-native-system.json", "python scripts/admission_check.py system-observations/dura-react-min-benchmark-first-party-reported-benchmark-scaffolded.json", "python scripts/admission_check.py system-observations/dura-raw-baseline-benchmark-first-party-reported-benchmark-scaffolded.json", "python scripts/admission_check.py system-observations/pi-dura-benchmark-external-reproduced-benchmark-scaffolded.json", "python scripts/validate_repository.py"],
+    "results": [
+      {"stage": "write-enabled-admission", "head_revision": "0ffbaf296680d51624da3e67ba7730285f7803f0", "workflow_run_id": 36706151859, "run_number": 306, "conclusion": "success", "detail": "Registry renderer, repository validators, post-closure validators and all four pass-29 record-specific admission checks succeeded."},
+      {"stage": "generated-registry-state", "head_revision": "2c7b9621e9d191dcef496e84d4276d2ff592aa8b", "registry_observation_count": 250, "conclusion": "generated"},
+      {"stage": "restored-standard-workflow", "head_revision": "4abcbc8e074fbdc8a7016f4db597972a9c587c6f", "workflow_blob": "244ad9701f41e6122f37c0676a00e705cddd622f", "workflow_run_id": 36706243317, "run_number": 308, "conclusion": "success"}
+    ]
+  },
+  "handoff_boundary": {"structural_classification_performed": false, "historical_linkage_adjudicated": false, "comparison_tier_assigned": false, "statistical_interpretation_performed": false, "winner_declared": false}
+}
