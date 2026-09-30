@@ -117,10 +117,40 @@
       "reason": "The source documents a distinct Anthropic-compatible proxy path and V4 Flash sub-agent calls."
     }
   ],
-  "protocol_deviations_and_failures": [],
+  "protocol_deviations_and_failures": [
+    {
+      "event": "exact-head-registry-materialization-and-admission",
+      "run_number": 388,
+      "run_id": 36748406436,
+      "head_sha": "7ac2ea19fc345ab79e6d6250d38081f71d32a74d",
+      "generated_registry_head_sha": "7936e25025ffdb9aef7542e725c66dc2f0dee0f4",
+      "conclusion": "success",
+      "detail": "The temporary exact-head workflow rendered 299 observations, materialized the generated registry commit, passed repository validators, the pass-47 realbench admission check, and the existing live admission path."
+    },
+    {
+      "event": "bot-generated-workflow-run",
+      "run_number": 389,
+      "run_id": 36748432540,
+      "head_sha": "7936e25025ffdb9aef7542e725c66dc2f0dee0f4",
+      "conclusion": "action_required",
+      "evidence_rejected": false,
+      "detail": "GitHub did not automatically execute the workflow for the bot-authored generated-registry commit; this was superseded by explicit restoration of the standard workflow and a fresh read-only validation."
+    },
+    {
+      "event": "standard-read-only-validation-restored",
+      "run_number": 390,
+      "run_id": 36748547874,
+      "head_sha": "2d8f5178a509010b1be9f98a68fddc5920d0b0dd",
+      "conclusion": "success"
+    }
+  ],
   "validation": {
-    "status": "pending",
-    "expected_registry_observation_count_after": 299
+    "status": "passed",
+    "registry_observation_count_after": 299,
+    "evidence_admission_run": 36748406436,
+    "generated_registry_head_sha": "7936e25025ffdb9aef7542e725c66dc2f0dee0f4",
+    "standard_read_only_validation_run": 36748547874,
+    "standard_workflow_blob_sha": "244ad9701f41e6122f37c0676a00e705cddd622f"
   },
   "handoff_boundary": {
     "structural_classification_performed": false,
