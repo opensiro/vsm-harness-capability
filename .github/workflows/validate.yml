@@ -6,7 +6,7 @@ on:
     branches: [main]
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   repository-contract:
@@ -16,6 +16,20 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Regenerate neutral registry views
+        run: python system-observations/render_registry.py
+      - name: Commit generated registry views on PR branch
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        run: |
+          if git diff --quiet -- system-observations/registry.psv system-observations/REGISTRY.md; then
+            echo "registry views already current"
+            exit 0
+          fi
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add system-observations/registry.psv system-observations/REGISTRY.md
+          git commit -m "regenerate neutral observation registry"
+          git push origin "HEAD:${GITHUB_HEAD_REF}"
       - run: python scripts/validate_repository.py
       - name: Validate Capability-native post-closure contract
         run: python vsm-projections/benchmark-family-map/validate_post_closure.py
@@ -28,7 +42,14 @@ jobs:
             system-observations/codex-wildclawbench-external-reproduced-adapter-preserved.json \
             system-observations/hermes-agent-wildclawbench-external-reproduced-adapter-preserved.json \
             system-observations/openclaw-wildclawbench-external-reproduced-adapter-preserved.json \
-            system-observations/skillrevise.json
+            system-observations/skillrevise.json \
+            system-observations/cursor-openbench-gpt56-release-external-reproduced-adapter-preserved.json \
+            system-observations/grokbuild-openbench-gpt56-release-external-reproduced-adapter-preserved.json \
+            system-observations/devin-openbench-gpt56-release-external-reproduced-adapter-preserved.json \
+            system-observations/claude-openbench-gpt56-release-external-reproduced-adapter-preserved.json \
+            system-observations/opencode-openbench-gpt56-release-external-reproduced-adapter-preserved.json \
+            system-observations/pi-openbench-gpt56-release-external-reproduced-adapter-preserved.json \
+            system-observations/codex-openbench-gpt56-release-external-reproduced-adapter-preserved.json
           do
             python scripts/admission_check.py "$record"
           done
