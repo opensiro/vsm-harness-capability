@@ -25,7 +25,8 @@
         "name": "ts-bench v2 SWE-Lancer five-task snapshot",
         "version": "1.1.0",
         "task_set": ["14958", "15815_1", "15193", "14268", "20079"],
-        "primary_source": "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/public/data/results/claude-claude-sonnet-4-6.json"
+        "primary_source": "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/articles/ts-bench-v2-coding-agent-benchmark.md",
+        "artifact_source": "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/public/data/results/claude-claude-sonnet-4-6.json"
       },
       "result": {
         "date": "2026-04-04",
@@ -71,7 +72,8 @@
         "name": "ts-bench v2 SWE-Lancer five-task snapshot",
         "version": "1.1.0",
         "task_set": ["14958", "15815_1", "15193", "14268", "20079"],
-        "primary_source": "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/public/data/results/copilot-claude-sonnet-4.6.json"
+        "primary_source": "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/articles/ts-bench-v2-coding-agent-benchmark.md",
+        "artifact_source": "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/public/data/results/copilot-claude-sonnet-4.6.json"
       },
       "result": {
         "date": "2026-04-07",
@@ -80,7 +82,7 @@
         "publication_revision": "dcf7d44fa47f05a2849090e5e16fe67e8af96eff",
         "execution_revision": "7e56a2f8d014599f833cb6bae1ca54105aea6e39",
         "workflow_run_id": 24081204504,
-        "model": "claude-sonnet-4.6",
+        "model": "claude-sonnet-4-6",
         "source_provider_metadata": "anthropic",
         "metric": "source_overall_success_rate",
         "value": 0.8,
@@ -117,7 +119,8 @@
         "name": "ts-bench v2 SWE-Lancer five-task snapshot",
         "version": "1.1.0",
         "task_set": ["14958", "15815_1", "15193", "14268", "20079"],
-        "primary_source": "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/public/data/results/claude-claude-opus-4-6.json"
+        "primary_source": "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/articles/ts-bench-v2-coding-agent-benchmark.md",
+        "artifact_source": "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/public/data/results/claude-claude-opus-4-6.json"
       },
       "result": {
         "date": "2026-04-05",
@@ -163,7 +166,8 @@
         "name": "ts-bench v2 SWE-Lancer five-task snapshot",
         "version": "1.1.0",
         "task_set": ["14958", "15815_1", "15193", "14268", "20079"],
-        "primary_source": "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/public/data/results/copilot-claude-opus-4.6.json"
+        "primary_source": "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/articles/ts-bench-v2-coding-agent-benchmark.md",
+        "artifact_source": "https://github.com/laiso/ts-bench/blob/dcf7d44fa47f05a2849090e5e16fe67e8af96eff/public/data/results/copilot-claude-opus-4.6.json"
       },
       "result": {
         "date": "2026-04-07",
