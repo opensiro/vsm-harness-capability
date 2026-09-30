@@ -37,15 +37,7 @@
     {"group_id": "openbench-m4-hard3__kimi-k2.7-code__397d68c9", "observation_ids": ["pi__openbench-m4-hard3__kimi-k2.7-code__397d68c9", "opencode__openbench-m4-hard3__kimi-k2.7-code__397d68c9"], "source_known_dimensions": ["same published model id kimi-k2.7-code", "same first-party Moonshot provider family", "same three tasks", "three trials per task", "same 900 second timeout", "same local benchmark runner and objective task checkers"], "explicit_unknown_or_nonidentical_dimensions": ["exact service-side model checkpoint", "exact source commit for each reported CLI package version", "native harness prompting, context management and tool-loop behavior differ by design", "one OpenCode cell is a documented timeout-handler adapter exception", "provider-side load and routing state"], "paper_eligibility": "not-assessed-by-W1"},
     {"group_id": "openbench-m4-hard3__glm-4.7-flash__397d68c9", "observation_ids": ["pi__openbench-m4-hard3__glm-4.7-flash__397d68c9", "opencode__openbench-m4-hard3__glm-4.7-flash__397d68c9"], "source_known_dimensions": ["same published model id glm-4.7-flash", "same first-party Z.ai provider family", "same three tasks", "three trials per task", "same 900 second timeout", "same local benchmark runner and objective task checkers"], "explicit_unknown_or_nonidentical_dimensions": ["exact service-side model checkpoint", "exact source commit for each reported CLI package version", "native harness prompting, context management and tool-loop behavior differ by design", "seven OpenCode cells are documented timeout-handler adapter exceptions", "Pi token aggregate is source-marked unreliable", "provider-side load and routing state"], "paper_eligibility": "not-assessed-by-W1"}
   ],
-  "provenance_strength": {
-    "class": "external-reproduced",
-    "public_per_cell_rows": true,
-    "public_harness_versions": true,
-    "public_adapter_implementation": true,
-    "public_objective_scores_and_checker_exit": true,
-    "public_full_agent_trajectories": false,
-    "w1_treatment": "admitted from the historical M4 publication commit with all eight harness-by-model cells preserved; documented adapter exceptions remain in the source nine-cell result surface and are not silently removed"
-  },
+  "provenance_strength": {"class": "external-reproduced", "public_per_cell_rows": true, "public_harness_versions": true, "public_adapter_implementation": true, "public_objective_scores_and_checker_exit": true, "public_full_agent_trajectories": false, "w1_treatment": "admitted from the historical M4 publication commit with all eight harness-by-model cells preserved; documented adapter exceptions remain in the source nine-cell result surface and are not silently removed"},
   "protocol_deviations_and_failures": [
     {"event": "background-run-reaped", "scope": "matrix execution", "source_reported": true, "detail": "The first long-lived background run was externally reaped after 43 of 72 real cells. The benchmark resumed by run_id and skipped completed cells; the source reports no lost rows."},
     {"event": "opencode-timeout-handler-exceptions", "scope": "8 of 72 real cells", "source_reported": true, "detail": "A historical OpenCode adapter timeout handler attempted bytes-plus-string concatenation. The committed rows retain these exceptions with completed=false and score 0: seven GLM-4.7-Flash OpenCode cells and one Kimi OpenCode cell."}
@@ -57,6 +49,14 @@
     {"surface": "Arlieeee/Dura-Agent@74fb7a4e8b44a5a0a185fe5d32408f43f4bc9d87", "status": "deferred-weaker-summary-evidence", "reason": "The repository publishes a controlled four-configuration same-model benchmark and aggregate tables, but raw run JSON and full traces are gitignored. It remains a candidate for a separate weaker-evidence pass rather than being conflated with OpenBench M4's committed per-cell data."},
     {"surface": "OpenBench publisher ordering and mechanism claims", "status": "not-promoted-by-W1", "reason": "W1 records the eight factual result surfaces, failure taxonomy and auxiliary telemetry only; interpretation of comparative direction or mechanism is downstream."}
   ],
-  "validation": {"status": "pending", "registry_observation_count_after": 220, "commands_required": ["python system-observations/render_registry.py", "python scripts/admission_check.py system-observations/pi-openbench-m4-open-models-external-reproduced-adapter-preserved.json", "python scripts/admission_check.py system-observations/opencode-openbench-m4-open-models-external-reproduced-adapter-preserved.json", "python scripts/validate_repository.py"], "results": []},
+  "validation": {
+    "status": "succeeded",
+    "registry_observation_count_after": 220,
+    "commands_required": ["python system-observations/render_registry.py", "python scripts/admission_check.py system-observations/pi-openbench-m4-open-models-external-reproduced-adapter-preserved.json", "python scripts/admission_check.py system-observations/opencode-openbench-m4-open-models-external-reproduced-adapter-preserved.json", "python scripts/validate_repository.py"],
+    "results": [
+      {"gate": "write-enabled-admission", "workflow_run_id": 36669629427, "run_number": 291, "head_revision": "75870c9442a45cd6caf2d912afffe3273ab296da", "conclusion": "success", "checks": ["registry regeneration", "repository validation", "post-closure validators", "Pi record-specific admission check", "OpenCode record-specific admission check"]},
+      {"gate": "restored-standard-workflow", "workflow_run_id": 36669722412, "run_number": 293, "head_revision": "04541ae6dd66f629189a24f2cec9fb6e01d36893", "conclusion": "success", "workflow_blob_sha": "244ad9701f41e6122f37c0676a00e705cddd622f", "checks": ["repository validation", "post-closure validators", "standard live evidence checks"]}
+    ]
+  },
   "handoff_boundary": {"structural_classification_performed": false, "historical_linkage_adjudicated": false, "comparison_tier_assigned": false, "statistical_interpretation_performed": false, "winner_declared": false}
 }
