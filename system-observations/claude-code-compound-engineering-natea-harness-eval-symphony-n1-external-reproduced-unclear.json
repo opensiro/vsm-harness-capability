@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Claude Code + Compound Engineering 3.12.0",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "unclear",
+    "historical_relation": "The pinned study registry installs Compound Engineering 3.12.0 as a Claude Code plugin and uses Claude Code 2.1.170 in the shared trial image. W1 preserves this composite system without inferring canonical linkage for the overlay."
+  },
+  "primary_sources": [
+    "https://github.com/natea/harness-eval/blob/881464040744465a20074b2a5d795075062ded32/docs/LEADERBOARD-n1.md",
+    "https://github.com/natea/harness-eval/blob/881464040744465a20074b2a5d795075062ded32/config/registry.yaml",
+    "https://github.com/natea/harness-eval/blob/881464040744465a20074b2a5d795075062ded32/infra/trial-image/Dockerfile"
+  ],
+  "observations": [{
+    "observation_id": "claude-code-compound-engineering__natea-harness-eval-symphony-n1__opus-4.6__88146404",
+    "kind": "system-benchmark-result",
+    "benchmark": {
+      "family_id": "natea-harness-eval-symphony-n1",
+      "name": "harness-eval Symphony daemon n=1 baseline",
+      "variant": "claude-code-opus-4.6-daytona",
+      "task_count": 1,
+      "primary_source": "https://github.com/natea/harness-eval/blob/881464040744465a20074b2a5d795075062ded32/docs/LEADERBOARD-n1.md",
+      "artifact_source": "https://github.com/natea/harness-eval/blob/881464040744465a20074b2a5d795075062ded32/docs/LEADERBOARD-n1.md"
+    },
+    "result": {
+      "date": "2026-06-10",
+      "agent_label": "compound-engineering",
+      "harness_version": "Compound Engineering 3.12.0; Claude Code 2.1.170",
+      "harness_revision": null,
+      "benchmark_revision": "881464040744465a20074b2a5d795075062ded32",
+      "model": "Claude Opus 4.6",
+      "model_config": "Claude Code 2.1.170 + Opus 4.6 in a Daytona sandbox; exact service-side model checkpoint beyond the published model label is not pinned",
+      "metric": "prd_adherence_score_0_100",
+      "value": 75.79,
+      "trials": 1,
+      "frozen_test_plan_steps": 22,
+      "code_quality_score_0_100_source_reported": 60,
+      "composite_score_source_reported": 50.14,
+      "speed_normalized_source_reported": 27.5,
+      "spend_normalized_source_reported": 0,
+      "agent_time_minutes_source_reported": 28.2,
+      "cost_equiv_usd_source_reported": 17.94,
+      "turns_source_reported": 128
+    },
+    "published_implementation": {"system_compatibility": "unclear", "revision_match": "version-known"},
+    "provenance": {
+      "publisher": "Nate Aune / harness-eval",
+      "checked": true,
+      "os_system": null,
+      "public_logs": false,
+      "public_trajectories": false,
+      "raw_run_artifacts_public": false,
+      "public_result_surface": "committed docs/LEADERBOARD-n1.md; README references runs/combined-n1 artifacts, but that run directory is not present in the pinned Git tree",
+      "execution_environment": "source-declared Daytona sandbox; shared Claude Code 2.1.170 trial image; Opus 4.6 worker; frozen 22-step test plan; blind code-quality judge; n=1"
+    },
+    "comparison": {"group": "natea-harness-eval-symphony-n1__claude-code-2.1.170__opus-4.6__88146404", "mode": "candidate-same-model", "scope": "coding-framework-overlay"},
+    "unknown_dimensions": [
+      "exact service-side Claude Opus 4.6 checkpoint/revision",
+      "exact Daytona snapshot/image digest used for the published run",
+      "raw per-trial workspace, transcript, grades.json and results.json are not present in the pinned Git tree",
+      "historical Compound Engineering source commit corresponding to plugin version 3.12.0",
+      "trajectory variance because n=1"
+    ],
+    "notes": "W1 preserves source-published absolute PRD adherence and auxiliary telemetry without reproducing the source ranking or inferring a framework effect. Speed/spend are source-local within-run normalizations."
+  }]
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "manifest_id": "och-obs-1-w1-2026-09-30-pass20-natea-harness-eval-n1",
+  "recorded_at": "2026-09-30",
+  "work_item": {"repository": "opensiro/vsm-harness-capability", "issue": 93, "role": "W1 public-evidence discovery and neutral admission"},
+  "protocol": {"id": "OCH-OBS-1", "version": "1.0.0", "repository": "opensiro/vsm-harness-research", "revision": "5462ffadffd7189ae10e44e22d357bc6162a6038", "collection_cutoff_utc": "2026-10-20T23:59:59Z"},
+  "checkpoint_parent": {"capability_main_revision": "c3385bc483979b7494043c51af24bbfa1b65f1c8", "registry_observation_count_before": 184, "prior_handoffs_mutated": false},
+  "collection_state": {"status": "active", "documented_discovery_passes_completed_after_this_checkpoint": 20, "cutoff_reached": false},
+  "discovery_pass": {
+    "pass_id": "w1-pass-020-natea-harness-eval-symphony-n1",
+    "method": "Direction-blind admission of the committed n=1 Symphony daemon leaderboard as weaker published-table evidence. Four framework overlays were run under source-declared shared Claude Code 2.1.170 + Claude Opus 4.6, one target/spec, Daytona isolation and a frozen 22-step evaluator. W1 uses the source-published absolute PRD-adherence score as the primary neutral metric and preserves quality/time/cost/turn/composite fields only as auxiliary source telemetry.",
+    "source_repository": "https://github.com/natea/harness-eval",
+    "source_revision": "881464040744465a20074b2a5d795075062ded32",
+    "published_snapshot_date": "2026-06-10",
+    "source_artifacts": [
+      "https://github.com/natea/harness-eval/blob/881464040744465a20074b2a5d795075062ded32/docs/LEADERBOARD-n1.md",
+      "https://github.com/natea/harness-eval/blob/881464040744465a20074b2a5d795075062ded32/config/registry.yaml",
+      "https://github.com/natea/harness-eval/blob/881464040744465a20074b2a5d795075062ded32/infra/trial-image/Dockerfile",
+      "https://github.com/natea/harness-eval/blob/881464040744465a20074b2a5d795075062ded32/targets/symphony-daemon/PRD.md"
+    ]
+  },
+  "reused_existing_observation_ids": [],
+  "newly_admitted_observation_ids": [
+    "claude-code-superpowers__natea-harness-eval-symphony-n1__opus-4.6__88146404",
+    "claude-code-gsd__natea-harness-eval-symphony-n1__opus-4.6__88146404",
+    "claude-code-compound-engineering__natea-harness-eval-symphony-n1__opus-4.6__88146404",
+    "claude-code-agent-skills__natea-harness-eval-symphony-n1__opus-4.6__88146404"
+  ],
+  "candidate_same_model_comparison_groups": [{
+    "group_id": "natea-harness-eval-symphony-n1__claude-code-2.1.170__opus-4.6__88146404",
+    "observation_ids": [
+      "claude-code-superpowers__natea-harness-eval-symphony-n1__opus-4.6__88146404",
+      "claude-code-gsd__natea-harness-eval-symphony-n1__opus-4.6__88146404",
+      "claude-code-compound-engineering__natea-harness-eval-symphony-n1__opus-4.6__88146404",
+      "claude-code-agent-skills__natea-harness-eval-symphony-n1__opus-4.6__88146404"
+    ],
+    "source_known_dimensions": [
+      "same source-declared Claude Opus 4.6 worker model",
+      "same pinned Claude Code 2.1.170 runner image",
+      "same Symphony daemon PRD and rendered base prompt",
+      "same source-declared Daytona isolation class",
+      "same frozen 22-step PRD-adherence test plan",
+      "same blind code-quality judging design",
+      "framework versions pinned in the source registry",
+      "one trial per framework overlay"
+    ],
+    "explicit_unknown_or_nonidentical_dimensions": [
+      "exact service-side Claude Opus 4.6 checkpoint/revision",
+      "exact Daytona snapshot/image digest used by each historical run",
+      "framework-prescribed command/session wrappers differ by study design",
+      "raw per-trial results.json, grades.json, transcripts and archived workspaces referenced by the leaderboard are not present in the pinned Git tree",
+      "trajectory variance at n=1",
+      "speed and spend are min-max normalized within this source run and are not cross-run absolute metrics"
+    ],
+    "paper_eligibility": "not-assessed-by-W1"
+  }],
+  "provenance_strength": {
+    "class": "external-reproduced",
+    "public_result_table": true,
+    "public_protocol_and_registry": true,
+    "public_trial_image_recipe": true,
+    "public_raw_run_logs": false,
+    "public_trajectories": false,
+    "w1_treatment": "admitted as pinned published-table evidence; missing raw run directory remains an explicit limitation"
+  },
+  "non_admission_dispositions": [
+    {"surface": "source leaderboard ordering and framework winner claims", "status": "not-promoted-by-W1", "reason": "W1 preserves individual published result fields but does not reproduce or endorse the source ordering, winner labels or causal framework interpretation."},
+    {"surface": "source speed/spend normalized scores as general metrics", "status": "auxiliary-only", "reason": "The source defines speed and spend by within-run min-max normalization. W1 preserves them only as source telemetry and does not compare them across evidence surfaces."},
+    {"surface": "referenced runs/combined-n1 raw evidence directory", "status": "unavailable-in-pinned-git-tree", "reason": "The committed leaderboard states that results.json, scorecards, grades and transcripts exist under runs/, but the pinned repository tree does not publish that directory."}
+  ],
+  "validation": {
+    "status": "success",
+    "registry_observation_count_after": 188,
+    "commands_required": ["python system-observations/render_registry.py", "python scripts/admission_check.py <each of four pass-20 raw records>", "python scripts/validate_repository.py"],
+    "results": [
+      {"workflow_run_id": 36654002415, "run_number": 259, "head_before_bot_registry_commit": "fd70e2837a588a31f5ec54115e3a18a1c888f1e5", "result": "success", "scope": "temporary write-enabled registry regeneration plus repository validation and four record-specific admission checks"},
+      {"workflow_run_id": 36654099695, "run_number": 261, "head": "9ef8c0fdbd81d1554fe28b45eae067dbe10a2eb9", "result": "success", "scope": "standard read-only validation after restoring workflow blob 244ad9701f41e6122f37c0676a00e705cddd622f"}
+    ]
+  },
+  "handoff_boundary": {"structural_classification_performed": false, "historical_linkage_adjudicated": false, "comparison_tier_assigned": false, "statistical_interpretation_performed": false, "winner_declared": false}
+}
