@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "realbench DeepSeek V4 Pro harness snapshot",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "unclear",
+    "historical_relation": "The pinned publication executes released coding-agent CLIs through thin shell wrappers. OpenCode and Pi target DeepSeek V4 Pro directly with the same DeepSeek API-key source; the Claude Code arm uses the DeepSeek Anthropic-compatible proxy and its native telemetry also reports DeepSeek V4 Flash sub-agent calls. W1 preserves those source-level differences and does not adjudicate historical canonical linkage."
+  },
+  "primary_sources": [
+    "https://github.com/512banque/realbench/blob/cd3354b6858931ee1a307c02fca8da9126ef7443/README.md",
+    "https://github.com/512banque/realbench/blob/cd3354b6858931ee1a307c02fca8da9126ef7443/FAQ.md",
+    "https://github.com/512banque/realbench/blob/cd3354b6858931ee1a307c02fca8da9126ef7443/METHODOLOGY.md",
+    "https://github.com/512banque/realbench/blob/cd3354b6858931ee1a307c02fca8da9126ef7443/results/runs-en-135.jsonl",
+    "https://github.com/512banque/realbench/blob/cd3354b6858931ee1a307c02fca8da9126ef7443/scripts/curate-en-135.py",
+    "https://github.com/512banque/realbench/blob/cd3354b6858931ee1a307c02fca8da9126ef7443/runner.py",
+    "https://github.com/512banque/realbench/blob/cd3354b6858931ee1a307c02fca8da9126ef7443/agents/opencode.sh",
+    "https://github.com/512banque/realbench/blob/cd3354b6858931ee1a307c02fca8da9126ef7443/agents/pi-ds4pro.sh",
+    "https://github.com/512banque/realbench/blob/cd3354b6858931ee1a307c02fca8da9126ef7443/agents/claude-deepseek.sh"
+  ],
+  "observations": [
+    {
+      "observation_id": "opencode__realbench-en27x5__deepseek-v4-pro__cd3354b6",
+      "kind": "system-benchmark-result-from-published-counts",
+      "benchmark": {
+        "name": "realbench comparable EN 27-task x 5-run snapshot",
+        "primary_source": "https://github.com/512banque/realbench/blob/cd3354b6858931ee1a307c02fca8da9126ef7443/README.md",
+        "artifact_source": "https://github.com/512banque/realbench/blob/cd3354b6858931ee1a307c02fca8da9126ef7443/results/runs-en-135.jsonl",
+        "curation_source": "https://github.com/512banque/realbench/blob/cd3354b6858931ee1a307c02fca8da9126ef7443/scripts/curate-en-135.py",
+        "task_count": 27,
+        "runs_per_task": 5,
+        "scheduled_runs": 135,
+        "task_set": [
+          "001-fizzbuzz", "002-fix-bug", "003-implement-spec", "004-laravel-migrate", "005-race-condition", "006-lru-race", "007-deadlock", "008-debounce-leak", "009-refactor-god-controller", "010-goroutine-leak", "011-channel-deadlock", "012-context-propagation", "013-extract-package", "014-promise-race-leak", "015-react-effect-cleanup", "016-event-emitter-memory", "017-tokio-select-cancel", "018-arc-mutex-deadlock", "019-chained-bugs", "020-ambiguous-cache", "021-retry-orchestrator", "022-state-machine", "023-config-merger", "024-caddy-intercept-header", "025-policy-override", "026-effective-date", "027-no-rule-canary"
+        ]
+      },
+      "result": {
+        "publisher": "512banque/realbench",
+        "public_snapshot_date": "2026-05-26",
+        "publication_revision": "cd3354b6858931ee1a307c02fca8da9126ef7443",
+        "harness_label": "opencode-DS4pro",
+        "harness_version": null,
+        "model": "deepseek-v4-pro",
+        "serving_path": "direct DeepSeek provider",
+        "metric": "strict_success_rate",
+        "value": 0.9777777777777777,
+        "success_count": 132,
+        "total_runs": 135
+      },
+      "execution": {
+        "environment": "Apple M2 Max; 12 CPU cores; 32 GB RAM; macOS 26.2 (25C56); local APFS SSD",
+        "evaluator": "task-local deterministic verify.sh; verifier hashes protect benchmark-owned files",
+        "repetitions_per_task": 5,
+        "runner_default_timeout_seconds": 600,
+        "snapshot_timeout_seconds": null,
+        "reset_policy": "fresh task workspace copy per run; _reference is not copied into the working directory; separate process tree per run",
+        "harness_invocation": "opencode run --model deepseek/deepseek-v4-pro --format json",
+        "model_configuration": "direct DeepSeek V4 Pro; no explicit reasoning-effort pin is present in the pinned wrapper",
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "realbench-en27x5__deepseek-v4-pro-direct__cd3354b6",
+        "mode": "same-direct-backend-candidate",
+        "scope": "mixed-language-software-engineering"
+      },
+      "unknown_dimensions": [
+        "exact historical OpenCode CLI version for the published snapshot",
+        "whether the published snapshot used the runner default 600-second timeout or an override",
+        "exact service-side DeepSeek V4 Pro revision",
+        "reasoning-effort equivalence with the Pi arm",
+        "the publication snapshot is a deterministic curated slice of a larger exploratory run log rather than an immutable append-only event log"
+      ],
+      "notes": "The curator keeps the first five valid English-prompt records per public agent/task cell after the documented prompt-language cutoff and drops runner-infrastructure records that never reached an agent/verify exit code. Agent timeouts remain failures."
+    },
+    {
+      "observation_id": "pi-ds4pro__realbench-en27x5__deepseek-v4-pro__cd3354b6",
+      "kind": "system-benchmark-result-from-published-counts",
+      "benchmark": {
+        "name": "realbench comparable EN 27-task x 5-run snapshot",
+        "primary_source": "https://github.com/512banque/realbench/blob/cd3354b6858931ee1a307c02fca8da9126ef7443/README.md",
+        "artifact_source": "https://github.com/512banque/realbench/blob/cd3354b6858931ee1a307c02fca8da9126ef7443/results/runs-en-135.jsonl",
+        "curation_source": "https://github.com/512banque/realbench/blob/cd3354b6858931ee1a307c02fca8da9126ef7443/scripts/curate-en-135.py",
+        "task_count": 27,
+        "runs_per_task": 5,
+        "scheduled_runs": 135,
+        "task_set": [
+          "001-fizzbuzz", "002-fix-bug", "003-implement-spec", "004-laravel-migrate", "005-race-condition", "006-lru-race", "007-deadlock", "008-debounce-leak", "009-refactor-god-controller", "010-goroutine-leak", "011-channel-deadlock", "012-context-propagation", "013-extract-package", "014-promise-race-leak", "015-react-effect-cleanup", "016-event-emitter-memory", "017-tokio-select-cancel", "018-arc-mutex-deadlock", "019-chained-bugs", "020-ambiguous-cache", "021-retry-orchestrator", "022-state-machine", "023-config-merger", "024-caddy-intercept-header", "025-policy-override", "026-effective-date", "027-no-rule-canary"
+        ]
+      },
+      "result": {
+        "publisher": "512banque/realbench",
+        "public_snapshot_date": "2026-05-26",
+        "publication_revision": "cd3354b6858931ee1a307c02fca8da9126ef7443",
+        "harness_label": "pi-ds4pro",
+        "harness_version": null,
+        "model": "deepseek-v4-pro",
+        "serving_path": "direct DeepSeek provider",
+        "metric": "strict_success_rate",
+        "value": 0.9703703703703703,
+        "success_count": 131,
+        "total_runs": 135
+      },
+      "execution": {
+        "environment": "Apple M2 Max; 12 CPU cores; 32 GB RAM; macOS 26.2 (25C56); local APFS SSD",
+        "evaluator": "task-local deterministic verify.sh; verifier hashes protect benchmark-owned files",
+        "repetitions_per_task": 5,
+        "runner_default_timeout_seconds": 600,
+        "snapshot_timeout_seconds": null,
+        "reset_policy": "fresh task workspace copy per run; _reference is not copied into the working directory; separate process tree per run",
+        "harness_invocation": "pi -p --provider deepseek --model deepseek-v4-pro --mode json --no-session --thinking high",
+        "model_configuration": "direct DeepSeek V4 Pro with Pi thinking mode explicitly set to high",
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "realbench-en27x5__deepseek-v4-pro-direct__cd3354b6",
+        "mode": "same-direct-backend-candidate",
+        "scope": "mixed-language-software-engineering"
+      },
+      "unknown_dimensions": [
+        "exact historical Pi CLI version for the published snapshot",
+        "whether the published snapshot used the runner default 600-second timeout or an override",
+        "exact service-side DeepSeek V4 Pro revision",
+        "reasoning-effort equivalence with the OpenCode arm",
+        "the publication snapshot is a deterministic curated slice of a larger exploratory run log rather than an immutable append-only event log"
+      ],
+      "notes": "The curator keeps the first five valid English-prompt records per public agent/task cell after the documented prompt-language cutoff and drops runner-infrastructure records that never reached an agent/verify exit code. Agent timeouts remain failures."
+    },
+    {
+      "observation_id": "claude-deepseek__realbench-en27x5__deepseek-v4-pro-primary__cd3354b6",
+      "kind": "system-benchmark-result-from-published-counts",
+      "benchmark": {
+        "name": "realbench comparable EN 27-task x 5-run snapshot",
+        "primary_source": "https://github.com/512banque/realbench/blob/cd3354b6858931ee1a307c02fca8da9126ef7443/README.md",
+        "artifact_source": "https://github.com/512banque/realbench/blob/cd3354b6858931ee1a307c02fca8da9126ef7443/results/runs-en-135.jsonl",
+        "curation_source": "https://github.com/512banque/realbench/blob/cd3354b6858931ee1a307c02fca8da9126ef7443/scripts/curate-en-135.py",
+        "task_count": 27,
+        "runs_per_task": 5,
+        "scheduled_runs": 135,
+        "task_set": [
+          "001-fizzbuzz", "002-fix-bug", "003-implement-spec", "004-laravel-migrate", "005-race-condition", "006-lru-race", "007-deadlock", "008-debounce-leak", "009-refactor-god-controller", "010-goroutine-leak", "011-channel-deadlock", "012-context-propagation", "013-extract-package", "014-promise-race-leak", "015-react-effect-cleanup", "016-event-emitter-memory", "017-tokio-select-cancel", "018-arc-mutex-deadlock", "019-chained-bugs", "020-ambiguous-cache", "021-retry-orchestrator", "022-state-machine", "023-config-merger", "024-caddy-intercept-header", "025-policy-override", "026-effective-date", "027-no-rule-canary"
+        ]
+      },
+      "result": {
+        "publisher": "512banque/realbench",
+        "public_snapshot_date": "2026-05-26",
+        "publication_revision": "cd3354b6858931ee1a307c02fca8da9126ef7443",
+        "harness_label": "claude-deepseek",
+        "harness_version": "2.1.141",
+        "primary_model_surface": "deepseek-v4-pro[1m]",
+        "additional_native_model_surface": "deepseek-v4-flash sub-agent calls",
+        "serving_path": "DeepSeek Anthropic-compatible proxy through Claude Code",
+        "metric": "strict_success_rate",
+        "value": 0.9481481481481482,
+        "success_count": 128,
+        "total_runs": 135
+      },
+      "execution": {
+        "environment": "Apple M2 Max; 12 CPU cores; 32 GB RAM; macOS 26.2 (25C56); local APFS SSD",
+        "evaluator": "task-local deterministic verify.sh; verifier hashes protect benchmark-owned files",
+        "repetitions_per_task": 5,
+        "runner_default_timeout_seconds": 600,
+        "snapshot_timeout_seconds": null,
+        "reset_policy": "fresh task workspace copy per run; _reference is not copied into the working directory; separate process tree per run",
+        "harness_invocation": "claude -p --output-format json --permission-mode bypassPermissions --no-session-persistence with ANTHROPIC_BASE_URL/AUTH_TOKEN redirected to DeepSeek's Anthropic-compatible proxy",
+        "model_configuration": "primary DeepSeek V4 Pro surface through proxy; source native telemetry also reports DeepSeek V4 Flash sub-agent calls",
+        "human_intervention": null
+      },
+      "comparison": {
+        "group": "realbench-en27x5__deepseek-v4-pro-related-proxy__cd3354b6",
+        "mode": "related-primary-backend-observation",
+        "scope": "mixed-language-software-engineering"
+      },
+      "unknown_dimensions": [
+        "whether the published snapshot used the runner default 600-second timeout or an override",
+        "exact service-side DeepSeek V4 Pro and V4 Flash revisions",
+        "fraction and task distribution of work performed through V4 Flash sub-agent calls",
+        "comparability of the Anthropic-compatible proxy route to the direct DeepSeek provider used by OpenCode and Pi",
+        "the publication snapshot is a deterministic curated slice of a larger exploratory run log rather than an immutable append-only event log"
+      ],
+      "notes": "This observation is preserved as related public evidence but is not placed in the direct-provider candidate group because the source documents a different proxy route and additional V4 Flash sub-agent traffic."
+    }
+  ]
+}

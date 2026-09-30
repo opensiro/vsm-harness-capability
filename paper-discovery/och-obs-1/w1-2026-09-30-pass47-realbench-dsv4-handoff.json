@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "manifest_id": "och-obs-1-w1-2026-09-30-pass47-realbench-dsv4",
+  "recorded_at": "2026-09-30",
+  "work_item": {
+    "repository": "opensiro/vsm-harness-capability",
+    "issue": 93,
+    "role": "W1 public-evidence discovery and neutral admission"
+  },
+  "protocol": {
+    "id": "OCH-OBS-1",
+    "version": "1.0.0",
+    "repository": "opensiro/vsm-harness-research",
+    "revision": "5462ffadffd7189ae10e44e22d357bc6162a6038",
+    "collection_cutoff_utc": "2026-10-20T23:59:59Z"
+  },
+  "checkpoint_parent": {
+    "capability_main_revision": "9dfa178351fe0269d8ab04b6ab938fd517b6b7e8",
+    "registry_observation_count_before": 296,
+    "prior_handoffs_mutated": false
+  },
+  "collection_state": {
+    "status": "active",
+    "pass_number": 47,
+    "cutoff_reached": false,
+    "note": "Issue #93 remains active through the frozen collection cutoff."
+  },
+  "discovery_pass": {
+    "pass_id": "w1-pass-047-realbench-dsv4",
+    "method": "Direction-blind admission from the pinned realbench comparable English-prompt publication snapshot. W1 preserves the direct DeepSeek V4 Pro OpenCode and Pi observations as a candidate comparison group and preserves the Claude Code proxy arm separately because the source documents a different serving route plus DeepSeek V4 Flash sub-agent traffic.",
+    "source_repository": "https://github.com/512banque/realbench",
+    "source_revision": "cd3354b6858931ee1a307c02fca8da9126ef7443",
+    "public_snapshot_date": "2026-05-26",
+    "benchmark_surface": "27 software-engineering tasks x five comparable English-prompt runs per harness; deterministic task-local verification",
+    "environment": "Apple M2 Max; 12 CPU cores; 32 GB RAM; macOS 26.2 (25C56); local APFS SSD",
+    "runner_default_timeout_seconds": 600,
+    "snapshot_timeout_override": null,
+    "curation": "Committed curator selects the first five valid English-prompt records per public agent/task cell after the source-defined prompt-language boundary; runner-infrastructure records that never reached agent/verify exit codes are excluded; agent timeouts remain strict failures."
+  },
+  "reused_existing_observation_ids": [],
+  "newly_admitted_observation_ids": [
+    "opencode__realbench-en27x5__deepseek-v4-pro__cd3354b6",
+    "pi-ds4pro__realbench-en27x5__deepseek-v4-pro__cd3354b6",
+    "claude-deepseek__realbench-en27x5__deepseek-v4-pro-primary__cd3354b6"
+  ],
+  "candidate_comparison_groups": [
+    {
+      "group_id": "realbench-en27x5__deepseek-v4-pro-direct__cd3354b6",
+      "observation_ids": [
+        "opencode__realbench-en27x5__deepseek-v4-pro__cd3354b6",
+        "pi-ds4pro__realbench-en27x5__deepseek-v4-pro__cd3354b6"
+      ],
+      "source_known_dimensions": [
+        "same pinned public snapshot revision",
+        "same 27-task benchmark surface",
+        "five selected comparable English-prompt runs per task",
+        "same deterministic task-local verifier",
+        "same published machine/environment",
+        "fresh task workspace per run",
+        "same direct DeepSeek V4 Pro provider/model label"
+      ],
+      "explicit_unknown_or_nonidentical_dimensions": [
+        "Pi explicitly pins thinking=high while the OpenCode wrapper does not pin an equivalent reasoning-effort setting",
+        "exact historical OpenCode and Pi CLI versions are unresolved",
+        "exact service-side DeepSeek V4 Pro revision is unresolved",
+        "the snapshot invocation timeout is unresolved even though runner default is 600 seconds",
+        "the publication snapshot is a deterministic curated slice of a larger exploratory run log"
+      ],
+      "paper_eligibility": "not-assessed-by-W1"
+    },
+    {
+      "group_id": "realbench-en27x5__deepseek-v4-pro-related-proxy__cd3354b6",
+      "observation_ids": [
+        "claude-deepseek__realbench-en27x5__deepseek-v4-pro-primary__cd3354b6"
+      ],
+      "source_known_dimensions": [
+        "same pinned public snapshot revision",
+        "same 27-task benchmark surface",
+        "same deterministic verifier and published machine"
+      ],
+      "explicit_unknown_or_nonidentical_dimensions": [
+        "Claude Code uses the DeepSeek Anthropic-compatible proxy rather than the direct provider path",
+        "source native telemetry reports DeepSeek V4 Flash sub-agent calls in addition to the primary V4 Pro surface",
+        "the fraction and task distribution of work performed by V4 Flash sub-agents is unresolved"
+      ],
+      "paper_eligibility": "not-assessed-by-W1",
+      "w1_boundary_note": "Preserved as related evidence but not merged into the direct-provider candidate group."
+    }
+  ],
+  "provenance_strength": {
+    "immutable_source_revision": true,
+    "committed_comparable_result_rows": true,
+    "committed_deterministic_curator": true,
+    "committed_runner_and_wrappers": true,
+    "harness_versions_fully_bound": false,
+    "snapshot_timeout_fully_bound": false
+  },
+  "non_admission_dispositions": [
+    {
+      "surface": "publisher ranking or winner language",
+      "status": "not-promoted-by-W1",
+      "reason": "W1 preserves factual outcomes but does not rank harnesses or select a winner."
+    },
+    {
+      "surface": "token, turn, wall-clock, or cost ordering as a universal efficiency conclusion",
+      "status": "not-promoted-by-W1",
+      "reason": "Native accounting surfaces differ by harness and W1 does not interpret them as a common causal efficiency measure."
+    },
+    {
+      "surface": "same-backend results as proof of a harness causal effect",
+      "status": "not-promoted-by-W1",
+      "reason": "The source preserves relevant comparison candidates, but reasoning configuration, historical versions, service revision, and other dimensions remain unresolved."
+    },
+    {
+      "surface": "Claude Code proxy arm merged into the direct OpenCode/Pi candidate group",
+      "status": "not-promoted-by-W1",
+      "reason": "The source documents a distinct Anthropic-compatible proxy path and V4 Flash sub-agent calls."
+    }
+  ],
+  "protocol_deviations_and_failures": [
+    {
+      "event": "exact-head-registry-materialization-and-admission",
+      "run_number": 388,
+      "run_id": 36748406436,
+      "head_sha": "7ac2ea19fc345ab79e6d6250d38081f71d32a74d",
+      "generated_registry_head_sha": "7936e25025ffdb9aef7542e725c66dc2f0dee0f4",
+      "conclusion": "success",
+      "detail": "The temporary exact-head workflow rendered 299 observations, materialized the generated registry commit, passed repository validators, the pass-47 realbench admission check, and the existing live admission path."
+    },
+    {
+      "event": "bot-generated-workflow-run",
+      "run_number": 389,
+      "run_id": 36748432540,
+      "head_sha": "7936e25025ffdb9aef7542e725c66dc2f0dee0f4",
+      "conclusion": "action_required",
+      "evidence_rejected": false,
+      "detail": "GitHub did not automatically execute the workflow for the bot-authored generated-registry commit; this was superseded by explicit restoration of the standard workflow and a fresh read-only validation."
+    },
+    {
+      "event": "standard-read-only-validation-restored",
+      "run_number": 390,
+      "run_id": 36748547874,
+      "head_sha": "2d8f5178a509010b1be9f98a68fddc5920d0b0dd",
+      "conclusion": "success"
+    }
+  ],
+  "validation": {
+    "status": "passed",
+    "registry_observation_count_after": 299,
+    "evidence_admission_run": 36748406436,
+    "generated_registry_head_sha": "7936e25025ffdb9aef7542e725c66dc2f0dee0f4",
+    "standard_read_only_validation_run": 36748547874,
+    "standard_workflow_blob_sha": "244ad9701f41e6122f37c0676a00e705cddd622f"
+  },
+  "handoff_boundary": {
+    "structural_classification_performed": false,
+    "historical_linkage_adjudicated": false,
+    "matched_cell_eligibility_assigned": false,
+    "comparison_tier_assigned": false,
+    "statistical_interpretation_performed": false,
+    "winner_declared": false,
+    "paper_claim_made": false
+  }
+}
