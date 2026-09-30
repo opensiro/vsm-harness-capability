@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Coding Agent Bench Qwen3.6 SWE-bench Pro Ansible matrix",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "adapter-preserved",
+    "historical_relation": "The source runs named coding harnesses through Harbor against one self-hosted RedHatAI/Qwen3.6-35B-A3B-NVFP4 deployment on the 96-task Ansible subset of SWE-bench Pro. Historical harness versions are not published."
+  },
+  "primary_sources": [
+    "https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/README.md",
+    "https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Pro_Ansible_Qwen3.6_35b_NVFP4_Pi.md",
+    "https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Pro_Ansible_Qwen3.6_35b_NVFP4_Qwen_Code.md",
+    "https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Pro_Ansible_Qwen3.6_35b_NVFP4_Claude_Code.md",
+    "https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Pro_Ansible_Qwen3.6_35b_NVFP4_OpenClaw.md",
+    "https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Pro_Ansible_Qwen3.6_35b_NVFP4_OpenCode.md"
+  ],
+  "observations": [
+    {
+      "observation_id":"pi__redhat-swepro-ansible96__qwen3.6-35b-a3b-nvfp4__1389cc6e",
+      "kind":"system-benchmark-result",
+      "benchmark":{"name":"SWE-bench Pro Ansible 96-task Harbor run","version":"source-96-task-snapshot","primary_source":"https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Pro_Ansible_Qwen3.6_35b_NVFP4_Pi.md","artifact_source":"https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Pro_Ansible_Qwen3.6_35b_NVFP4_Pi.md"},
+      "result":{"job_name":"2026-05-11__19-41-51","model":"RedHatAI/Qwen3.6-35B-A3B-NVFP4","harness_label":"Pi","metric":"source_pass_at_1","value":0.479,"task_count":96,"initial_error_count":6,"estimated_cost_usd":13.47},
+      "execution":{"environment":"Docker via Harbor","hardware":"2x A100 40GB","model_max_len":262144,"generation_defaults":{"temperature":1.0,"top_p":0.95,"top_k":20},"attempts":1,"evaluator":"SWE-bench Pro Ansible verifier through Harbor","model_serving":"self-hosted vLLM","human_intervention":null},
+      "comparison":{"group":"redhat-swepro-ansible96__qwen3.6-35b-a3b-nvfp4__1389cc6e","mode":"fixed-model-candidate","scope":"swe-bench-pro-ansible"},
+      "unknown_dimensions":["exact Pi harness version","exact upstream SWE-bench Pro dataset revision"]
+    },
+    {
+      "observation_id":"claude-code__redhat-swepro-ansible96__qwen3.6-35b-a3b-nvfp4__1389cc6e",
+      "kind":"system-benchmark-result",
+      "benchmark":{"name":"SWE-bench Pro Ansible 96-task Harbor run","version":"source-96-task-snapshot","primary_source":"https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Pro_Ansible_Qwen3.6_35b_NVFP4_Claude_Code.md","artifact_source":"https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Pro_Ansible_Qwen3.6_35b_NVFP4_Claude_Code.md"},
+      "result":{"job_name":"2026-05-12__09-28-42","model":"RedHatAI/Qwen3.6-35B-A3B-NVFP4","harness_label":"Claude Code","metric":"source_pass_at_1","value":0.458,"task_count":96,"initial_error_count":6,"estimated_cost_usd":9.64},
+      "execution":{"environment":"Docker via Harbor","hardware":"2x A100 40GB","model_max_len":262144,"generation_defaults":{"temperature":1.0,"top_p":0.95,"top_k":20},"attempts":1,"evaluator":"SWE-bench Pro Ansible verifier through Harbor","model_serving":"self-hosted vLLM","human_intervention":null},
+      "comparison":{"group":"redhat-swepro-ansible96__qwen3.6-35b-a3b-nvfp4__1389cc6e","mode":"fixed-model-candidate","scope":"swe-bench-pro-ansible"},
+      "unknown_dimensions":["exact Claude Code harness version","exact upstream SWE-bench Pro dataset revision"],
+      "notes":"The run-specific sheet reports 45.8%, while the repository leaderboard reports 45.6%. The sheet H1 and command identify SWE-bench Pro Ansible, while one copied Dataset line incorrectly names SWE-bench Verified 500. W1 preserves the run-sheet score and the explicit command/H1 benchmark identity and records both documentation mismatches."
+    },
+    {
+      "observation_id":"qwen-code__redhat-swepro-ansible96__qwen3.6-35b-a3b-nvfp4__1389cc6e",
+      "kind":"system-benchmark-result",
+      "benchmark":{"name":"SWE-bench Pro Ansible 96-task Harbor run","version":"source-96-task-snapshot","primary_source":"https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Pro_Ansible_Qwen3.6_35b_NVFP4_Qwen_Code.md","artifact_source":"https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Pro_Ansible_Qwen3.6_35b_NVFP4_Qwen_Code.md"},
+      "result":{"job_name":"2026-05-26__09-51-40","model":"RedHatAI/Qwen3.6-35B-A3B-NVFP4","harness_label":"Qwen Code","metric":"source_pass_at_1","value":0.438,"task_count":96,"initial_error_count":29,"estimated_cost_usd":9.34},
+      "execution":{"environment":"Docker via Harbor","hardware":"2x A100 40GB","model_max_len":262144,"generation_defaults":{"temperature":1.0,"top_p":0.95,"top_k":20},"attempts":1,"evaluator":"SWE-bench Pro Ansible verifier through Harbor","model_serving":"self-hosted vLLM","human_intervention":null},
+      "comparison":{"group":"redhat-swepro-ansible96__qwen3.6-35b-a3b-nvfp4__1389cc6e","mode":"fixed-model-candidate","scope":"swe-bench-pro-ansible"},
+      "unknown_dimensions":["exact Qwen Code harness version","exact upstream SWE-bench Pro dataset revision"]
+    },
+    {
+      "observation_id":"openclaw__redhat-swepro-ansible96__qwen3.6-35b-a3b-nvfp4__1389cc6e",
+      "kind":"system-benchmark-result",
+      "benchmark":{"name":"SWE-bench Pro Ansible 96-task Harbor run","version":"source-96-task-snapshot","primary_source":"https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Pro_Ansible_Qwen3.6_35b_NVFP4_OpenClaw.md","artifact_source":"https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Pro_Ansible_Qwen3.6_35b_NVFP4_OpenClaw.md"},
+      "result":{"job_name":"2026-06-01__10-32-15","model":"RedHatAI/Qwen3.6-35B-A3B-NVFP4","harness_label":"OpenClaw","metric":"source_pass_at_1","value":0.406,"task_count":96,"initial_error_count":23,"estimated_cost_usd":9.4},
+      "execution":{"environment":"Docker via Harbor","hardware":"2x A100 40GB","model_max_len":262144,"generation_defaults":{"temperature":1.0,"top_p":0.95,"top_k":20},"attempts":1,"evaluator":"SWE-bench Pro Ansible verifier through Harbor","model_serving":"self-hosted vLLM","human_intervention":null},
+      "comparison":{"group":"redhat-swepro-ansible96__qwen3.6-35b-a3b-nvfp4__1389cc6e","mode":"fixed-model-candidate","scope":"swe-bench-pro-ansible"},
+      "unknown_dimensions":["exact OpenClaw harness version","exact upstream SWE-bench Pro dataset revision"]
+    },
+    {
+      "observation_id":"opencode__redhat-swepro-ansible96__qwen3.6-35b-a3b-nvfp4__1389cc6e",
+      "kind":"system-benchmark-result",
+      "benchmark":{"name":"SWE-bench Pro Ansible 96-task Harbor run","version":"source-96-task-snapshot","primary_source":"https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Pro_Ansible_Qwen3.6_35b_NVFP4_OpenCode.md","artifact_source":"https://github.com/redhat-et/coding_agent_bench/blob/1389cc6e9c272a207c2e48b90ac6693955e6f7da/benchmarks/SWE_Bench_Pro_Ansible_Qwen3.6_35b_NVFP4_OpenCode.md"},
+      "result":{"job_name":"2026-05-13__14-06-00","model":"RedHatAI/Qwen3.6-35B-A3B-NVFP4","harness_label":"OpenCode","metric":"source_pass_at_1","value":0.375,"task_count":96,"initial_error_count":20,"estimated_cost_usd":12.11},
+      "execution":{"environment":"Docker via Harbor","hardware":"2x A100 40GB","model_max_len":262144,"generation_defaults":{"temperature":1.0,"top_p":0.95,"top_k":20},"attempts":1,"evaluator":"SWE-bench Pro Ansible verifier through Harbor","model_serving":"self-hosted vLLM","human_intervention":null},
+      "comparison":{"group":"redhat-swepro-ansible96__qwen3.6-35b-a3b-nvfp4__1389cc6e","mode":"fixed-model-candidate","scope":"swe-bench-pro-ansible"},
+      "unknown_dimensions":["exact OpenCode harness version","exact upstream SWE-bench Pro dataset revision"]
+    }
+  ]
+}
