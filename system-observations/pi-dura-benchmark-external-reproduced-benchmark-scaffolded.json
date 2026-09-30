@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Pi Agent loop under Dura-Agent benchmark substitutions",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "benchmark-scaffolded",
+    "historical_relation": "The pinned benchmark exercises the real third-party Pi Agent loop but deliberately substitutes the Dura benchmark's shared tool implementations wrapped as Pi AgentTools and the same coding prompt used by my-agent. This measures Pi's loop under benchmark substitutions, not Pi CLI out of the box; canonical linkage is therefore not asserted."
+  },
+  "primary_sources": [
+    "https://github.com/Arlieeee/Dura-Agent/blob/74fb7a4e8b44a5a0a185fe5d32408f43f4bc9d87/BENCHMARK.md",
+    "https://github.com/Arlieeee/Dura-Agent/blob/74fb7a4e8b44a5a0a185fe5d32408f43f4bc9d87/.gitignore"
+  ],
+  "observations": [
+    {
+      "observation_id": "pi-dura-loop__dura-handbuilt17__v4-flash__74fb7a4e",
+      "kind": "system-benchmark-result",
+      "benchmark": {"family_id": "dura-handbuilt17", "name": "Dura-Agent 17 hand-built tasks", "variant": "pi-loop-v4-flash-3-samples", "task_count": 17, "primary_source": "https://github.com/Arlieeee/Dura-Agent/blob/74fb7a4e8b44a5a0a185fe5d32408f43f4bc9d87/BENCHMARK.md", "artifact_source": "https://github.com/Arlieeee/Dura-Agent/blob/74fb7a4e8b44a5a0a185fe5d32408f43f4bc9d87/BENCHMARK.md"},
+      "result": {"published_snapshot_date": "2026-07-26", "agent_label": "pi", "harness_version": null, "harness_revision": null, "benchmark_revision": "74fb7a4e8b44a5a0a185fe5d32408f43f4bc9d87", "model": "v4-flash", "metric": "source_reported_completion", "value": 0.962, "samples_per_task": 3, "cells": 51, "max_steps": 15, "timeout_seconds": 240},
+      "published_implementation": {"system_compatibility": "benchmark-scaffolded", "revision_match": "unknown"},
+      "provenance": {"publisher": "Arlieeee / Dura-Agent", "checked": true, "raw_run_artifacts_public": false, "public_trajectories": false, "public_result_surface": "committed BENCHMARK.md aggregate table; raw run-*.json and full traces gitignored"},
+      "comparison": {"group": "dura-handbuilt17__v4-flash__74fb7a4e", "mode": "candidate-same-model", "scope": "coding-swe"},
+      "unknown_dimensions": ["exact Pi package/source revision exercised by the benchmark", "exact service-side v4-flash checkpoint", "raw per-cell run records unavailable"],
+      "notes": "Pi Agent loop only under Dura tool/prompt substitutions; this is not evidence for the Pi CLI or Pi's native tool/prompt surface."
+    },
+    {
+      "observation_id": "pi-dura-loop__dura-handbuilt17__v4-pro__74fb7a4e",
+      "kind": "system-benchmark-result",
+      "benchmark": {"family_id": "dura-handbuilt17", "name": "Dura-Agent 17 hand-built tasks", "variant": "pi-loop-v4-pro-3-samples", "task_count": 17, "primary_source": "https://github.com/Arlieeee/Dura-Agent/blob/74fb7a4e8b44a5a0a185fe5d32408f43f4bc9d87/BENCHMARK.md", "artifact_source": "https://github.com/Arlieeee/Dura-Agent/blob/74fb7a4e8b44a5a0a185fe5d32408f43f4bc9d87/BENCHMARK.md"},
+      "result": {"published_snapshot_date": "2026-07-26", "agent_label": "pi", "harness_version": null, "harness_revision": null, "benchmark_revision": "74fb7a4e8b44a5a0a185fe5d32408f43f4bc9d87", "model": "v4-pro", "metric": "source_reported_completion", "value": 1.0, "samples_per_task": 3, "cells": 51, "max_steps": 15, "timeout_seconds": 240},
+      "published_implementation": {"system_compatibility": "benchmark-scaffolded", "revision_match": "unknown"},
+      "provenance": {"publisher": "Arlieeee / Dura-Agent", "checked": true, "raw_run_artifacts_public": false, "public_trajectories": false, "public_result_surface": "committed BENCHMARK.md aggregate table; raw run-*.json and full traces gitignored"},
+      "comparison": {"group": "dura-handbuilt17__v4-pro__74fb7a4e", "mode": "candidate-same-model", "scope": "coding-swe"},
+      "unknown_dimensions": ["exact Pi package/source revision exercised by the benchmark", "exact service-side v4-pro checkpoint", "raw per-cell run records unavailable"],
+      "notes": "Pi Agent loop only under Dura tool/prompt substitutions; this is not evidence for the Pi CLI or Pi's native tool/prompt surface."
+    }
+  ]
+}
