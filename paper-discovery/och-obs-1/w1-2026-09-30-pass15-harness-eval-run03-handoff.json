@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "manifest_id": "och-obs-1-w1-2026-09-30-pass15-harness-eval-run03",
+  "recorded_at": "2026-09-30",
+  "work_item": {"repository": "opensiro/vsm-harness-capability", "issue": 93, "role": "W1 public-evidence discovery and neutral admission"},
+  "protocol": {"id": "OCH-OBS-1", "version": "1.0.0", "repository": "opensiro/vsm-harness-research", "revision": "5462ffadffd7189ae10e44e22d357bc6162a6038", "collection_cutoff_utc": "2026-10-20T23:59:59Z"},
+  "checkpoint_parent": {"capability_main_revision": "09777e24e5d0dbe60c8743c58773b5f8a8de5d21", "registry_observation_count_before": 159, "prior_handoffs_mutated": false},
+  "collection_state": {"status": "active", "documented_discovery_passes_completed_after_this_checkpoint": 15, "cutoff_reached": false},
+  "discovery_pass": {
+    "pass_id": "w1-pass-015-harness-eval-run03",
+    "method": "Direction-blind admission of the frozen harness-eval run_03 loglens Haiku-tier field. W1 preserves only the final post-S1/S2 executable acceptance tallies as the primary factual metric and keeps source consensus weighted totals as auxiliary telemetry. Source cross-tier harness-minus-control deltas and interpretations are not promoted into W1 results.",
+    "source_repository": "https://github.com/kenhia/harness-eval",
+    "source_revision": "7d3f74fe47f48db67c9ab0489ad4ba9170922f12",
+    "run_window": "2026-07-22 through 2026-07-23",
+    "source_artifacts": [
+      "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/README.md",
+      "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/cells.tsv",
+      "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/grades/final.md",
+      "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/DEFECTS.md",
+      "https://github.com/kenhia/harness-eval/tree/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/runs"
+    ]
+  },
+  "reused_existing_observation_ids": [],
+  "newly_admitted_observation_ids": [
+    "copilot-atv-starterkit__harness-eval-loglens-run03__claude-haiku-4.5__7d3f74fe",
+    "copilot-atv-phoenix__harness-eval-loglens-run03__claude-haiku-4.5__7d3f74fe",
+    "copilot-working-skill-repo__harness-eval-loglens-run03__claude-haiku-4.5__7d3f74fe",
+    "copilot-kprojects__harness-eval-loglens-run03__claude-haiku-4.5__7d3f74fe",
+    "copilot-bare__harness-eval-loglens-run03__claude-haiku-4.5__7d3f74fe",
+    "claude-code-gstack__harness-eval-loglens-run03__claude-haiku-4-5-20251001__7d3f74fe",
+    "claude-code__harness-eval-loglens-run03__claude-haiku-4-5-20251001__7d3f74fe"
+  ],
+  "candidate_same_model_comparison_groups": [
+    {
+      "group_id": "harness-eval-loglens-run03__claude-haiku-4.5__copilot-cli-1.0.73",
+      "observation_ids": [
+        "copilot-atv-starterkit__harness-eval-loglens-run03__claude-haiku-4.5__7d3f74fe",
+        "copilot-atv-phoenix__harness-eval-loglens-run03__claude-haiku-4.5__7d3f74fe",
+        "copilot-working-skill-repo__harness-eval-loglens-run03__claude-haiku-4.5__7d3f74fe",
+        "copilot-kprojects__harness-eval-loglens-run03__claude-haiku-4.5__7d3f74fe",
+        "copilot-bare__harness-eval-loglens-run03__claude-haiku-4.5__7d3f74fe"
+      ],
+      "source_known_dimensions": ["same GitHub Copilot CLI 1.0.73 runner", "same requested and session-reported claude-haiku-4.5 model label", "same frozen run_01-derived loglens specification and source-defined per-harness prompt files", "same host kai and headless execution policy", "same corrected executable acceptance suite with 12 core and 9 hard checks", "same one-final-run-per-cell policy", "empty recorded interventions sections"],
+      "explicit_unknown_or_nonidentical_dimensions": ["exact service-side Claude Haiku 4.5 checkpoint/provider route", "harness prompts and overlay/tool/process layers differ by design", "cells 01-04 ran on 2026-07-22 while clean resumed cell 05 ran on 2026-07-23", "trajectory variance at N=1 per final cell", "cell 05 clean final run records real-HOME leak-canary touches", "manual runlog completion fields remained templated and are not used as evidence"],
+      "paper_eligibility": "not-assessed-by-W1"
+    },
+    {
+      "group_id": "harness-eval-loglens-run03__claude-haiku-4-5-20251001__claude-code-2.1.217",
+      "observation_ids": ["claude-code-gstack__harness-eval-loglens-run03__claude-haiku-4-5-20251001__7d3f74fe", "claude-code__harness-eval-loglens-run03__claude-haiku-4-5-20251001__7d3f74fe"],
+      "source_known_dimensions": ["same Claude Code 2.1.217 runner version", "same requested and session-reported claude-haiku-4-5-20251001 model id", "same frozen run_01-derived loglens specification", "same host kai and 2026-07-23 field date", "same headless execution policy", "same corrected executable acceptance suite", "same one-run-per-final-cell policy", "empty recorded interventions sections"],
+      "explicit_unknown_or_nonidentical_dimensions": ["gstack 1.60.1.0 overlay changes prompt/process/tool use by design", "immutable gstack source revision not published", "trajectory variance at N=1", "both run logs record real-HOME leak-canary touches", "manual runlog completion fields remained templated and are not used as evidence"],
+      "paper_eligibility": "not-assessed-by-W1"
+    }
+  ],
+  "protocol_events": [
+    {"event": "S1", "classification": "evaluator-defect-repaired", "effect": "project-root assumption caused false 0/12 and 0/9 on nested projects; suite was repaired and affected/completed cells re-run; final observations use corrected tallies"},
+    {"event": "S2/S2b", "classification": "evaluator-defect-repaired", "effect": "option-placement fallback and Justfile case assumption produced false failures; suite was repaired, all seven cells re-run for acceptance, and affected grading updated; final observations use corrected tallies"},
+    {"event": "I1", "classification": "protocol-deviation-voided", "effect": "cell 05 first attempt was interrupted by controller/SSH death; partial worktree archived, staging reset to pre-run, no runlog admitted; only clean resumed attempt is represented"}
+  ],
+  "non_admission_dispositions": [
+    {"surface": "run_03 cross-tier harness-minus-control deltas against run_01", "status": "not-promoted-by-W1", "reason": "Those are source analysis/interpretation across model tiers. W1 records the underlying run_03 observations only and leaves cross-tier statistical/causal interpretation to downstream independent analysis."},
+    {"surface": "voided cell-05 first attempt", "status": "not-admitted", "reason": "Controller interruption terminated the attempt before a valid runlog; source explicitly voided it, archived partial state, reset to pre-run, and reran cleanly."}
+  ],
+  "validation": {
+    "status": "success",
+    "registry_observation_count_after": 166,
+    "commands_required": ["python system-observations/render_registry.py", "python scripts/admission_check.py <each of seven pass-15 raw records>", "python scripts/validate_repository.py"],
+    "results": [
+      {"workflow_run_id": 36650211802, "run_number": 219, "head": "517453fe8a2079abe0d46244eeb813856abdb847", "result": "failure-before-registry-write", "scope": "temporary write-enabled admission gate", "reason": "neutral-prose guard rejected evaluator-defect labels in raw notes; representation was rewritten to implementation-neutral prose without changing observation values or source provenance"},
+      {"workflow_run_id": 36650472320, "run_number": 224, "head_before_bot_registry_commit": "1225d5f2e3817b41557184991c225e96f4c3ce05", "result": "success", "scope": "temporary write-enabled registry regeneration plus repository validation and seven record-specific admission checks"},
+      {"workflow_run_id": 36650547837, "run_number": 226, "head": "2a200b1d5a326ce1ec531f924e2c61ac8faaf71a", "result": "success", "scope": "standard read-only validation after restoring workflow blob 244ad9701f41e6122f37c0676a00e705cddd622f"}
+    ]
+  },
+  "handoff_boundary": {"structural_classification_performed": false, "historical_linkage_adjudicated": false, "comparison_tier_assigned": false, "statistical_interpretation_performed": false, "winner_declared": false}
+}

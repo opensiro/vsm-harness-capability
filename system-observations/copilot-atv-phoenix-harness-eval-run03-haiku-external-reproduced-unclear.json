@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "GitHub Copilot CLI + ATV-Phoenix",
+  "canonical_harness_id": null,
+  "published_implementation": {"system_compatibility": "unclear", "historical_relation": "The pinned study records GitHub Copilot CLI 1.0.73 with the Phoenix profile and states run_03 held harness versions fixed relative to run_02. No immutable Phoenix package/source revision is preserved."},
+  "primary_sources": [
+    "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/README.md",
+    "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/cells.tsv",
+    "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/runs/02-runlog.md",
+    "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/runs/02-acceptance.txt",
+    "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/grades/final.md",
+    "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/DEFECTS.md"
+  ],
+  "observations": [{
+    "observation_id": "copilot-atv-phoenix__harness-eval-loglens-run03__claude-haiku-4.5__7d3f74fe",
+    "kind": "system-benchmark-result",
+    "benchmark": {"family_id": "harness-eval-loglens-run03", "name": "harness-eval run_03 loglens Haiku tier", "variant": "frozen-haiku-field-post-s1-s2", "task_count": 1, "primary_source": "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/README.md", "artifact_source": "https://github.com/kenhia/harness-eval/blob/7d3f74fe47f48db67c9ab0489ad4ba9170922f12/_eval/run_03/runs/02-acceptance.txt"},
+    "result": {"date": "2026-07-22", "agent_label": "02-atv-phoenix", "harness_version": "Phoenix profile version unknown; GitHub Copilot CLI 1.0.73", "harness_revision": null, "benchmark_revision": "7d3f74fe47f48db67c9ab0489ad4ba9170922f12", "model": "claude-haiku-4.5", "model_config": "Copilot requested and session-reported claude-haiku-4.5; exact service checkpoint/provider route not published", "metric": "acceptance_test_pass_rate", "value": 0.6190476190476191, "acceptance_passed": 13, "acceptance_total": 21, "core_passed": 9, "core_total": 12, "hard_passed": 4, "hard_total": 9, "trials": 1, "consensus_weighted_score_source_reported": 50.25, "wall_time_seconds": 389, "runner_exit_code": 0},
+    "published_implementation": {"system_compatibility": "unclear", "revision_match": "unknown"},
+    "provenance": {"publisher": "Ken Hiatt / harness-eval", "checked": true, "os_system": null, "public_logs": true, "public_trajectories": null, "raw_run_artifacts_public": true, "execution_environment": "single host kai; headless GitHub Copilot CLI 1.0.73; frozen run_01-derived loglens prompt; corrected executable acceptance suite; empty intervention log"},
+    "comparison": {"group": "harness-eval-loglens-run03__claude-haiku-4.5__copilot-cli-1.0.73", "mode": "candidate-same-model", "scope": "coding-swe"},
+    "unknown_dimensions": ["exact service-side Claude Haiku 4.5 checkpoint/provider route", "immutable Phoenix profile/package revision", "trajectory variance at N=1", "manual runlog completion fields were left templated and are not treated as evidence"],
+    "notes": "Final acceptance tally uses the corrected suite after documented evaluator repairs. W1 preserves the mechanical tally and auxiliary source score without cross-tier interpretation."
+  }]
+}
