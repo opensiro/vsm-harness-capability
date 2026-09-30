@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "DeepSeek Harness + CommandCode",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "unclear",
+    "historical_relation": "The pinned proof package preserves the benchmark-local DeepSeek Harness runner, frozen candidate outputs, evaluator outputs, sanitized traces, and export hashes. The export does not pin the exact DeepSeek Harness package/source revision, so W1 leaves canonical linkage unresolved."
+  },
+  "primary_sources": [
+    "https://github.com/hcsolakoglu/agent-harness-benchmark-proof/blob/4f06e0d2afc1bc15bb1f7a5fb937ff7d1e091db1/README.md",
+    "https://github.com/hcsolakoglu/agent-harness-benchmark-proof/blob/4f06e0d2afc1bc15bb1f7a5fb937ff7d1e091db1/runners/run_dsh_task.sh",
+    "https://github.com/hcsolakoglu/agent-harness-benchmark-proof/blob/4f06e0d2afc1bc15bb1f7a5fb937ff7d1e091db1/results/revised_harness_scores.csv",
+    "https://github.com/hcsolakoglu/agent-harness-benchmark-proof/blob/4f06e0d2afc1bc15bb1f7a5fb937ff7d1e091db1/results/eval_v3_all_lanes.txt",
+    "https://github.com/hcsolakoglu/agent-harness-benchmark-proof/blob/4f06e0d2afc1bc15bb1f7a5fb937ff7d1e091db1/manifests/redaction_manifest.json",
+    "https://github.com/hcsolakoglu/agent-harness-benchmark-proof/blob/4f06e0d2afc1bc15bb1f7a5fb937ff7d1e091db1/SHA256SUMS.txt"
+  ],
+  "observations": [{
+    "observation_id": "deepseek-harness-commandcode__agent-harness-proof-10task-evalv3__deepseek-v4.1-flash__4f06e0d2",
+    "kind": "system-benchmark-result",
+    "benchmark": {
+      "family_id": "agent-harness-proof-10task-evalv3",
+      "name": "Agent Harness Benchmark Proof 10-task coding benchmark",
+      "variant": "deepseek-harness-commandcode-frozen-candidate-eval-v3",
+      "task_count": 10,
+      "primary_source": "https://github.com/hcsolakoglu/agent-harness-benchmark-proof/blob/4f06e0d2afc1bc15bb1f7a5fb937ff7d1e091db1/README.md",
+      "artifact_source": "https://github.com/hcsolakoglu/agent-harness-benchmark-proof/blob/4f06e0d2afc1bc15bb1f7a5fb937ff7d1e091db1/results/eval_v3_all_lanes.txt"
+    },
+    "result": {
+      "date": "2026-09-11",
+      "agent_label": "DeepSeek V4.1 Flash DeepSeek Harness CommandCode",
+      "harness_version": null,
+      "harness_revision": null,
+      "benchmark_revision": "4f06e0d2afc1bc15bb1f7a5fb937ff7d1e091db1",
+      "model": "deepseek/deepseek-v4.1-flash",
+      "model_config": "DeepSeek Harness headless runner over CommandCode provider; model deepseek/deepseek-v4.1-flash; reasoning effort max; context window 1000000; maxTokens 65536; danger-full-access; isolated bwrap workspace",
+      "metric": "eval_v3_hard_pass_rate",
+      "value": 0.9,
+      "hard_eval_v3_passes": 9,
+      "hard_eval_v3_total": 10,
+      "hidden_v2_passes_source_reported": 10,
+      "hidden_v2_total": 10,
+      "total_500_source_reported": 450,
+      "elapsed_sum_s_source_reported": 1245,
+      "stochastic_runs_per_lane_source_reported": 1
+    },
+    "published_implementation": {"system_compatibility": "unclear", "revision_match": "unknown"},
+    "provenance": {
+      "publisher": "hcsolakoglu / Agent Harness Benchmark Proof",
+      "checked": true,
+      "os_system": null,
+      "public_logs": true,
+      "public_trajectories": true,
+      "raw_run_artifacts_public": false,
+      "public_result_surface": "frozen candidate export plus eval_v3 per-task results, revised lane score table, sanitized JSONL traces, SHA256SUMS and redaction manifest",
+      "trace_surface": "traces/dsv4.1-flash_dsh-commandcode/*.jsonl",
+      "trace_example_sha256": "47b1438d7e8352c58989aea5e7d71e869682518922df31372ad028ac8d820371",
+      "execution_environment": "fresh task copy; bubblewrap isolation; benchmark state hidden under tmpfs; isolated DSH home; DSH telemetry disabled"
+    },
+    "comparison": {"group": "agent-harness-proof-10task-evalv3__deepseek-v4.1-flash__commandcode__4f06e0d2", "mode": "candidate-same-model", "scope": "coding-swe"},
+    "unknown_dimensions": [
+      "exact DeepSeek Harness package/source revision",
+      "exact CommandCode package/source revision",
+      "exact service-side DeepSeek V4.1 Flash checkpoint behind the CommandCode model slug",
+      "raw unsanitized trace files are local and not committed",
+      "trajectory variance beyond the single stochastic lane run",
+      "eval_v3 was created after candidate generation and applied to the frozen candidate outputs"
+    ],
+    "notes": "W1 preserves the source's eval_v3 pass count and auxiliary lane telemetry without reproducing a lane ranking or attributing differences to the harness."
+  }]
+}
