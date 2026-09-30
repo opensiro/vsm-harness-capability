@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Devin CLI in OpenBench GPT-5.6 15-task release matrix",
+  "canonical_harness_id": null,
+  "published_implementation": {"system_compatibility": "adapter-preserved", "historical_relation": "The OpenBench release/provenance surfaces include Devin as a seventh native CLI arm. Adjacent methodology.md formally names six non-Devin arms, so W1 preserves Devin as release-bound evidence without extending that six-arm identity statement."},
+  "primary_sources": ["https://github.com/minghinmatthewlam/openbench/blob/c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a/docs/releases/2026-07-21-gpt56/index.html", "https://github.com/minghinmatthewlam/openbench/blob/c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a/docs/releases/2026-07-21-gpt56/results.jsonl", "https://github.com/minghinmatthewlam/openbench/blob/c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a/docs/releases/2026-07-21-gpt56/provenance.json", "https://github.com/minghinmatthewlam/openbench/blob/c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a/docs/analysis-2026-07.md"],
+  "observations": [{
+    "observation_id": "devin__openbench-gpt56-release15__gpt-5.6-sol__c85834bc",
+    "kind": "system-benchmark-result-from-release-counts",
+    "benchmark": {"family_id": "openbench-gpt56-release15", "name": "OpenBench GPT-5.6 15-task release matrix", "variant": "devin-gpt-5.6-sol", "task_count": 15, "primary_source": "https://github.com/minghinmatthewlam/openbench/blob/c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a/docs/releases/2026-07-21-gpt56/index.html", "artifact_source": "https://github.com/minghinmatthewlam/openbench/blob/c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a/docs/releases/2026-07-21-gpt56/results.jsonl"},
+    "result": {"date": "2026-07-20", "published_snapshot_date": "2026-07-21", "provenance_completion_date": "2026-07-23", "agent_label": "devin", "harness_version": "3000.2.17 (2c489dfc)", "harness_revision": null, "benchmark_revision": "c85834bcf96dd74a0d2a8a7fb3209ec6c23d585a", "source_archive_revision": "f0400e4698a16742b2cb290bd4f4ca07b9d01142", "source_scrub_revision": "b17a54351fd6e4a5a909b70aef5bdabc3ecbe27b", "model": "gpt-5.6-sol", "model_config": "Published canonical gpt-5.6-sol on the release surface; exact Devin serving/model-route details are not covered by methodology.md's six-arm identical-model statement.", "metric": "source_hack_adjusted_countable_success_rate", "value": 0.8, "successes": 36, "countable_rows": 45, "scheduled_rows": 45, "excluded_infra_or_rate_limited_rows": 0, "task_count": 15, "trials_per_task": 3},
+    "published_implementation": {"system_compatibility": "adapter-preserved", "revision_match": "executed-version-source-reported"},
+    "provenance": {"publisher": "OpenBench / minghinmatthewlam", "checked": true, "raw_run_artifacts_public": true, "public_trajectories": false, "public_result_surface": "scrubbed release results JSONL, release page, and SHA-bound provenance/task digests", "execution_environment": "15 tasks; n=3; 2400 second cap; deterministic checkers; source hack-adjusted scoring; source notes the first contaminated Devin arm was discarded and rerun under isolated HOME"},
+    "comparison": {"group": "openbench-gpt56-release15__gpt-5.6-sol__c85834bc", "mode": "candidate-same-model", "scope": "coding-agent-swe"},
+    "unknown_dimensions": ["exact service-side checkpoint beyond published canonical gpt-5.6-sol identity", "harness-specific default sampling/settings were deliberately not clamped by the source", "provider/account-side routing and load state", "Devin serving/model-route details are not covered by methodology.md's six-arm identical-model statement"],
+    "notes": "Release-bound Devin evidence is preserved without silently extending the six-arm methodology statement. No ranking or efficiency claim is promoted."
+  }]
+}
