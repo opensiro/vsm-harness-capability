@@ -96,10 +96,14 @@
     {"surface": "Planner/Worker/Verifier terminology as VSM evidence", "status": "not-classified-by-W1", "reason": "Role names are not evidence of VSM functions; structural classification is outside the W1 boundary."}
   ],
   "validation": {
-    "status": "pending",
+    "status": "success",
     "registry_observation_count_after": 193,
     "commands_required": ["python system-observations/render_registry.py", "python scripts/admission_check.py <each of three pass-21 raw records>", "python scripts/validate_repository.py"],
-    "results": []
+    "results": [
+      {"workflow_run_id": 36654775084, "run_number": 264, "head": "16b528e73803efad24fcf998558ca86aea660248", "result": "failure-before-admission", "scope": "renderer neutral-prose guard rejected VSM meta-commentary in two raw records; no registry commit or admission checks executed"},
+      {"workflow_run_id": 36654907725, "run_number": 266, "head_before_bot_registry_commit": "d4fedc63898295fb454aa3459170b6a198fc325b", "result": "success", "scope": "temporary write-enabled registry regeneration plus repository validation and three record-specific admission checks after moving classification meta-commentary out of raw evidence"},
+      {"workflow_run_id": 36654983883, "run_number": 268, "head": "e22bb62aaee342faf9c611b94849ac0ced1c6782", "result": "success", "scope": "standard read-only validation after restoring workflow blob 244ad9701f41e6122f37c0676a00e705cddd622f"}
+    ]
   },
   "handoff_boundary": {"structural_classification_performed": false, "historical_linkage_adjudicated": false, "comparison_tier_assigned": false, "statistical_interpretation_performed": false, "winner_declared": false}
 }
