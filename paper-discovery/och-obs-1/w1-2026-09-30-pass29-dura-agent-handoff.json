@@ -71,6 +71,15 @@
     {"surface": "publisher comparative conclusions and ranking language", "status": "not-promoted-by-W1", "reason": "W1 admits source-reported factual aggregates only; statistical-tie, mechanism, marginal-value and generalization claims remain downstream questions."},
     {"surface": "HumanEval balanced comparison", "status": "not-constructed", "reason": "The source reports unequal completed sample counts after deadlock; W1 does not impute missing rows or force a common denominator."}
   ],
-  "validation": {"status": "pending", "registry_observation_count_after": 250, "commands_required": ["python system-observations/render_registry.py", "python scripts/admission_check.py system-observations/dura-agent-my-agent-benchmark-first-party-reported-native-system.json", "python scripts/admission_check.py system-observations/dura-react-min-benchmark-first-party-reported-benchmark-scaffolded.json", "python scripts/admission_check.py system-observations/dura-raw-baseline-benchmark-first-party-reported-benchmark-scaffolded.json", "python scripts/admission_check.py system-observations/pi-dura-benchmark-external-reproduced-benchmark-scaffolded.json", "python scripts/validate_repository.py"], "results": []},
+  "validation": {
+    "status": "passed",
+    "registry_observation_count_after": 250,
+    "commands_required": ["python system-observations/render_registry.py", "python scripts/admission_check.py system-observations/dura-agent-my-agent-benchmark-first-party-reported-native-system.json", "python scripts/admission_check.py system-observations/dura-react-min-benchmark-first-party-reported-benchmark-scaffolded.json", "python scripts/admission_check.py system-observations/dura-raw-baseline-benchmark-first-party-reported-benchmark-scaffolded.json", "python scripts/admission_check.py system-observations/pi-dura-benchmark-external-reproduced-benchmark-scaffolded.json", "python scripts/validate_repository.py"],
+    "results": [
+      {"stage": "write-enabled-admission", "head_revision": "0ffbaf296680d51624da3e67ba7730285f7803f0", "workflow_run_id": 36706151859, "run_number": 306, "conclusion": "success", "detail": "Registry renderer, repository validators, post-closure validators and all four pass-29 record-specific admission checks succeeded."},
+      {"stage": "generated-registry-state", "head_revision": "2c7b9621e9d191dcef496e84d4276d2ff592aa8b", "registry_observation_count": 250, "conclusion": "generated"},
+      {"stage": "restored-standard-workflow", "head_revision": "4abcbc8e074fbdc8a7016f4db597972a9c587c6f", "workflow_blob": "244ad9701f41e6122f37c0676a00e705cddd622f", "workflow_run_id": 36706243317, "run_number": 308, "conclusion": "success"}
+    ]
+  },
   "handoff_boundary": {"structural_classification_performed": false, "historical_linkage_adjudicated": false, "comparison_tier_assigned": false, "statistical_interpretation_performed": false, "winner_declared": false}
 }
