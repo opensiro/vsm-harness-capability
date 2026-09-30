@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "OMP (oh-my-pi)",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "unclear",
+    "historical_relation": "The pinned source documents benchmark results produced with oh-my-pi v18.0.10. OMP is a public fork of the pi coding agent, but W1 does not collapse that fork into the canonical Pi identity."
+  },
+  "primary_sources": [
+    "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/04d86ba5fecfbb9d3deadc395efd6014f78397dd/benchmarks/swe-benchmark-data/do-not-include/README.md",
+    "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/04d86ba5fecfbb9d3deadc395efd6014f78397dd/benchmarks/swe-benchmark-data/do-not-include/qwen3.6-35b-fp8/omp/swe3/mcp-gateway-registry-v2/run-summary.json",
+    "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/04d86ba5fecfbb9d3deadc395efd6014f78397dd/self-hosted/vllm/models/qwen3.6-35b-a3b-fp8.md",
+    "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/04d86ba5fecfbb9d3deadc395efd6014f78397dd/docs/omp-setup.md"
+  ],
+  "observations": [{
+    "observation_id": "omp__agentic-coding-harness-mcp-gateway-v2__qwen3.6-35b-a3b-fp8__04d86ba5",
+    "kind": "system-benchmark-result",
+    "benchmark": {
+      "family_id": "agentic-coding-harness-mcp-gateway-v2",
+      "name": "Agentic Coding Harness Benchmarks / mcp-gateway-registry-v2 / swe3",
+      "variant": "do-not-include-qwen3.6-35b-fp8",
+      "task_count": 21,
+      "primary_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/04d86ba5fecfbb9d3deadc395efd6014f78397dd/benchmarks/swe-benchmark-data/do-not-include/qwen3.6-35b-fp8/omp/swe3/mcp-gateway-registry-v2/run-summary.json",
+      "artifact_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/tree/04d86ba5fecfbb9d3deadc395efd6014f78397dd/benchmarks/swe-benchmark-data/do-not-include/qwen3.6-35b-fp8/omp/swe3/mcp-gateway-registry-v2"
+    },
+    "result": {
+      "date": "2026-09-10",
+      "agent_label": "omp",
+      "harness_version": "oh-my-pi v18.0.10",
+      "harness_revision": null,
+      "benchmark_revision": "04d86ba5fecfbb9d3deadc395efd6014f78397dd",
+      "model": "Qwen/Qwen3.6-35B-A3B-FP8",
+      "model_config": "served as qwen3.6-35b-fp8; vLLM 0.29.0; 1x L40S on g6e.4xlarge; TP=1; native context 262144; kv-cache fp8; qwen3_coder tool parser; thinking left enabled; endpoint provider",
+      "metric": "mean_task_score_excl_failed",
+      "value": 59.23,
+      "tasks": 21,
+      "scored": 21,
+      "failed": 0,
+      "artifacts_produced": 126,
+      "artifacts_expected": 126,
+      "judge_model": "openai.gpt-5.6-sol",
+      "judge_reasoning_effort": "high",
+      "judge_provider": "codex-exec",
+      "token_total_per_task_source_reported": 10186260,
+      "hardware_derived_cost_per_task_source_reported_usd": 0.5555
+    },
+    "published_implementation": {"system_compatibility": "unclear", "revision_match": "version-known"},
+    "provenance": {
+      "publisher": "Amit Arora et al. / agentic-coding-harness-benchmarks",
+      "checked": true,
+      "os_system": true,
+      "public_logs": false,
+      "public_trajectories": false,
+      "raw_run_artifacts_public": true,
+      "execution_environment": "self-hosted single-tenant endpoint path; g6e.4xlarge single L40S; swe3; mcp-gateway-registry-v2; 21 scored tasks; task-level metrics/eval artifacts committed"
+    },
+    "comparison": {
+      "group": "agentic-coding-harness-mcp-gateway-v2__qwen3.6-35b-a3b-fp8__g6e.4xlarge__ctx262144",
+      "mode": "candidate-same-model",
+      "scope": "coding-swe"
+    },
+    "unknown_dimensions": [
+      "immutable Hugging Face checkpoint revision for Qwen/Qwen3.6-35B-A3B-FP8",
+      "exact OMP upstream source revision corresponding to v18.0.10",
+      "whether any endpoint state outside the committed run artifacts differed across the two run dates",
+      "task-order effects across serial runs"
+    ],
+    "notes": "The publisher intentionally nests this run under do-not-include so it is excluded from frontier/charts because the hardware cost basis differs from the canonical fleet and the FP8 configuration is not directly comparable with the BF16 configuration. W1 preserves that source exclusion status. OMP reports cache fields as a partition of input tokens; compare normalized total_tokens rather than raw input-token fields across harnesses."
+  }]
+}
