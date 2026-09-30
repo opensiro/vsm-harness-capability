@@ -87,10 +87,13 @@
     {"surface": "Gemini 3.x/2.5-Pro thought-signature canary table", "status": "deferred-not-admitted-in-pass-024", "reason": "Those are separate one-trial compatibility canaries on different model families, not part of the completed Gemini 2.5 Flash headline comparison."}
   ],
   "validation": {
-    "status": "pending",
+    "status": "success",
     "registry_observation_count_after": 207,
     "commands_required": ["python system-observations/render_registry.py", "python scripts/admission_check.py <each of eight pass-24 raw records>", "python scripts/validate_repository.py"],
-    "results": []
+    "results": [
+      {"workflow_run_id": 36657645075, "run_number": 281, "head_before_bot_registry_commit": "5c5be5e7baff0d6c4ac7a43c49b89073dfcb1f0f", "result": "success", "scope": "temporary write-enabled registry regeneration plus repository validation and eight record-specific admission checks"},
+      {"workflow_run_id": 36657732577, "run_number": 283, "head": "dce33730f1e788e08d955991ceb6a9f28ffacc0a", "result": "success", "scope": "standard read-only validation after restoring workflow blob 244ad9701f41e6122f37c0676a00e705cddd622f"}
+    ]
   },
   "handoff_boundary": {"structural_classification_performed": false, "historical_linkage_adjudicated": false, "comparison_tier_assigned": false, "statistical_interpretation_performed": false, "winner_declared": false}
 }
