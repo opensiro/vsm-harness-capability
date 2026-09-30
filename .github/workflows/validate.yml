@@ -6,7 +6,7 @@ on:
     branches: [main]
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   repository-contract:
@@ -16,47 +16,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Regenerate neutral registry views
-        run: python system-observations/render_registry.py
-      - name: Persist generated registry views through contents API
-        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          set -euo pipefail
-          for file in system-observations/registry.psv system-observations/REGISTRY.md; do
-            if git diff --quiet -- "$file"; then
-              echo "$file already current"
-              continue
-            fi
-            sha="$(git rev-parse "HEAD:$file")"
-            export FILE_TO_PERSIST="$file"
-            export FILE_SHA="$sha"
-            export TARGET_BRANCH="$GITHUB_HEAD_REF"
-            python - <<'PY'
-          import base64
-          import json
-          import os
-          from pathlib import Path
-
-          path = Path(os.environ["FILE_TO_PERSIST"])
-          payload = {
-              "message": "regenerate neutral observation registry",
-              "content": base64.b64encode(path.read_bytes()).decode("ascii"),
-              "branch": os.environ["TARGET_BRANCH"],
-              "sha": os.environ["FILE_SHA"],
-          }
-          Path("/tmp/contents-payload.json").write_text(json.dumps(payload), encoding="utf-8")
-          PY
-            curl --fail-with-body -sS \
-              -X PUT \
-              -H "Accept: application/vnd.github+json" \
-              -H "Authorization: Bearer $GH_TOKEN" \
-              -H "X-GitHub-Api-Version: 2022-11-28" \
-              "https://api.github.com/repos/$GITHUB_REPOSITORY/contents/$file" \
-              --data-binary @/tmp/contents-payload.json >/tmp/contents-response.json
-            cat /tmp/contents-response.json
-          done
       - run: python scripts/validate_repository.py
       - name: Validate Capability-native post-closure contract
         run: python vsm-projections/benchmark-family-map/validate_post_closure.py
@@ -69,7 +28,6 @@ jobs:
             system-observations/codex-wildclawbench-external-reproduced-adapter-preserved.json \
             system-observations/hermes-agent-wildclawbench-external-reproduced-adapter-preserved.json \
             system-observations/openclaw-wildclawbench-external-reproduced-adapter-preserved.json \
-            system-observations/pawbench-deepseek-v4-pro-external-reproduced-benchmark-scaffolded.json \
             system-observations/skillrevise.json
           do
             python scripts/admission_check.py "$record"
