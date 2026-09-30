@@ -74,10 +74,13 @@
     {"surface": "raw local traces", "status": "unavailable-publicly", "reason": "The source explicitly publishes sanitized trace copies only. Redaction manifests bind source and sanitized SHA-256 values without exposing redacted values."}
   ],
   "validation": {
-    "status": "pending",
+    "status": "success",
     "registry_observation_count_after": 196,
     "commands_required": ["python system-observations/render_registry.py", "python scripts/admission_check.py <each of three pass-22 raw records>", "python scripts/validate_repository.py"],
-    "results": []
+    "results": [
+      {"workflow_run_id": 36655908376, "run_number": 271, "head_before_bot_registry_commit": "a4056e723b97f9d5107b55991cc14631c174f89d", "result": "success", "scope": "temporary write-enabled registry regeneration plus repository validation and three record-specific admission checks"},
+      {"workflow_run_id": 36655993731, "run_number": 273, "head": "940e640d066befe28682202ec16585001f1f97b3", "result": "success", "scope": "standard read-only validation after restoring workflow blob 244ad9701f41e6122f37c0676a00e705cddd622f"}
+    ]
   },
   "handoff_boundary": {"structural_classification_performed": false, "historical_linkage_adjudicated": false, "comparison_tier_assigned": false, "statistical_interpretation_performed": false, "winner_declared": false}
 }
