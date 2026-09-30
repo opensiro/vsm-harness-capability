@@ -56,16 +56,15 @@
     {"surface": "matched-cell 29/39 and 27/39 alternate aggregate values", "status": "not-admitted-as-separate-observations", "reason": "They are alternate aggregation of the same archived run rows; W1 avoids duplicate raw observations and leaves matched-cell selection to downstream adjudication."}
   ],
   "validation": {
-    "status": "pending",
-    "registry_observation_count_after": null,
-    "commands_required": [
-      "python system-observations/render_registry.py",
-      "python scripts/admission_check.py system-observations/grokbuild-openbench-kimi-release15-external-reproduced-adapter-preserved.json",
-      "python scripts/admission_check.py system-observations/opencode-openbench-kimi-release15-external-reproduced-adapter-preserved.json",
-      "python scripts/admission_check.py system-observations/pi-openbench-kimi-release15-external-reproduced-adapter-preserved.json",
-      "python scripts/validate_repository.py"
-    ],
-    "results": []
+    "status": "passed",
+    "registry_observation_count_after": 268,
+    "standard_workflow_blob_sha": "244ad9701f41e6122f37c0676a00e705cddd622f",
+    "results": [
+      {"workflow_run_id": 36718313748, "head_sha": "728109c715a16bf136ba81b2ef54455e9f1682dd", "status": "success", "scope": "write-enabled registry regeneration, repository validators, three pass-34 admission checks, existing live admission path"},
+      {"generated_registry_commit": "2841d9e1c7e1b5000df297220590107b5d5cce9d", "registry_observation_count": 268, "status": "generated"},
+      {"workflow_run_id": 36718342635, "head_sha": "2841d9e1c7e1b5000df297220590107b5d5cce9d", "status": "action_required", "scope": "bot-authored follow-up trigger under temporary write-enabled workflow; preserved as infrastructure state, not evidence rejection"},
+      {"workflow_run_id": 36718451285, "head_sha": "7240116d086b3471c3e04932d09315a047b9f119", "status": "success", "scope": "restored standard read-only workflow: repository validator, post-closure validators, existing live admission path"}
+    ]
   },
   "handoff_boundary": {"structural_classification_performed": false, "historical_linkage_adjudicated": false, "comparison_tier_assigned": false, "statistical_interpretation_performed": false, "winner_declared": false}
 }
