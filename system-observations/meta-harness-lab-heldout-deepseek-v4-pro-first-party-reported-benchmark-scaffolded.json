@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-30",
+  "evidence_source_class": "first-party-reported",
+  "system_name": "Meta-Harness LAB benchmark harness variants",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "benchmark-scaffolded",
+    "historical_relation": "The pinned study repository implements the three reported LAB harness variants directly around the vendored Harvey LAB environment. They are benchmark-defined variants rather than canonical third-party CLI products, so no canonical harness linkage is asserted by this record."
+  },
+  "primary_sources": [
+    "https://github.com/JoelNiklaus/harness-optimization/blob/c98a168014412c2333fca635cdcc0c6c901c0ade/legal_agent_bench/README.md",
+    "https://github.com/JoelNiklaus/harness-optimization/blob/c98a168014412c2333fca635cdcc0c6c901c0ade/legal_agent_bench/agents/baseline_vanilla.py",
+    "https://github.com/JoelNiklaus/harness-optimization/blob/c98a168014412c2333fca635cdcc0c6c901c0ade/legal_agent_bench/agents/deliverable_landing_gate.py",
+    "https://github.com/JoelNiklaus/harness-optimization/blob/c98a168014412c2333fca635cdcc0c6c901c0ade/legal_agent_bench/agents/matter_audit_allwork.py",
+    "https://github.com/JoelNiklaus/harness-optimization/blob/c98a168014412c2333fca635cdcc0c6c901c0ade/legal_agent_bench/splits/lab_split.json",
+    "https://huggingface.co/buckets/joelniklaus/LAB-results/tree/results/test"
+  ],
+  "observations": [
+    {
+      "observation_id": "baseline-vanilla__lab-heldout100__deepseek-v4-pro-together__c98a1680",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "lab-heldout100",
+        "name": "Legal Agent Benchmark held-out 100-task test split",
+        "variant": "baseline-vanilla",
+        "task_count": 100,
+        "primary_source": "https://github.com/JoelNiklaus/harness-optimization/blob/c98a168014412c2333fca635cdcc0c6c901c0ade/legal_agent_bench/README.md",
+        "artifact_source": "https://huggingface.co/buckets/joelniklaus/LAB-results/tree/results/test/baseline"
+      },
+      "result": {
+        "date": null,
+        "published_snapshot_date": "2026-08-12",
+        "agent_label": "baseline_vanilla",
+        "harness_version": null,
+        "harness_revision": "c98a168014412c2333fca635cdcc0c6c901c0ade",
+        "benchmark_revision": "c98a168014412c2333fca635cdcc0c6c901c0ade",
+        "model": "deepseek-ai/DeepSeek-V4-Pro:together",
+        "model_config": "DeepSeek-V4-Pro via Hugging Face Inference Providers with provider route pinned to together; temperature 0; max turns 200; host-mode no-sandbox execution; LAB judge claude-sonnet-4-6",
+        "metric": "source_reported_pooled_criterion_pass_rate",
+        "value": 0.634,
+        "all_pass_rate": 0.0,
+        "tasks": 100,
+        "rollouts_per_task": 1,
+        "retry_policy": "source reports transient provider failures (5xx, 429, stream drops) were re-run before final reporting"
+      },
+      "published_implementation": {
+        "system_compatibility": "benchmark-scaffolded",
+        "revision_match": "exact-study-revision"
+      },
+      "provenance": {
+        "publisher": "Joel Niklaus / harness-optimization",
+        "checked": true,
+        "public_code": true,
+        "public_split": true,
+        "public_run_artifacts": true,
+        "public_proposer_traces": true,
+        "immutable_aggregate_source": "legal_agent_bench/README.md at c98a168014412c2333fca635cdcc0c6c901c0ade"
+      },
+      "comparison": {
+        "group": "lab-heldout100__deepseek-v4-pro-together__c98a1680",
+        "mode": "matched-model-candidate",
+        "scope": "legal-agent"
+      },
+      "unknown_dimensions": [
+        "exact service-side DeepSeek-V4-Pro checkpoint behind the provider route",
+        "provider-side routing and load state during each rollout",
+        "immutable content revision for the mutable public result bucket"
+      ],
+      "notes": "Held-out test result only. The pinned source states harnesses were developed on dev and were not selected on test. W1 records the source-reported aggregate without downstream eligibility or causal interpretation."
+    },
+    {
+      "observation_id": "deliverable-landing-gate__lab-heldout100__deepseek-v4-pro-together__c98a1680",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "lab-heldout100",
+        "name": "Legal Agent Benchmark held-out 100-task test split",
+        "variant": "deliverable-landing-gate",
+        "task_count": 100,
+        "primary_source": "https://github.com/JoelNiklaus/harness-optimization/blob/c98a168014412c2333fca635cdcc0c6c901c0ade/legal_agent_bench/README.md",
+        "artifact_source": "https://huggingface.co/buckets/joelniklaus/LAB-results/tree/results/test/deliverable_landing_gate"
+      },
+      "result": {
+        "date": null,
+        "published_snapshot_date": "2026-08-12",
+        "agent_label": "deliverable_landing_gate",
+        "harness_version": null,
+        "harness_revision": "c98a168014412c2333fca635cdcc0c6c901c0ade",
+        "benchmark_revision": "c98a168014412c2333fca635cdcc0c6c901c0ade",
+        "model": "deepseek-ai/DeepSeek-V4-Pro:together",
+        "model_config": "DeepSeek-V4-Pro via Hugging Face Inference Providers with provider route pinned to together; temperature 0; max turns 200; host-mode no-sandbox execution; LAB judge claude-sonnet-4-6",
+        "metric": "source_reported_pooled_criterion_pass_rate",
+        "value": 0.769,
+        "all_pass_rate": 0.02,
+        "tasks": 100,
+        "rollouts_per_task": 1,
+        "retry_policy": "source reports transient provider failures (5xx, 429, stream drops) were re-run before final reporting"
+      },
+      "published_implementation": {
+        "system_compatibility": "benchmark-scaffolded",
+        "revision_match": "exact-study-revision"
+      },
+      "provenance": {
+        "publisher": "Joel Niklaus / harness-optimization",
+        "checked": true,
+        "public_code": true,
+        "public_split": true,
+        "public_run_artifacts": true,
+        "public_proposer_traces": true,
+        "immutable_aggregate_source": "legal_agent_bench/README.md at c98a168014412c2333fca635cdcc0c6c901c0ade"
+      },
+      "comparison": {
+        "group": "lab-heldout100__deepseek-v4-pro-together__c98a1680",
+        "mode": "matched-model-candidate",
+        "scope": "legal-agent"
+      },
+      "unknown_dimensions": [
+        "exact service-side DeepSeek-V4-Pro checkpoint behind the provider route",
+        "provider-side routing and load state during each rollout",
+        "immutable content revision for the mutable public result bucket"
+      ],
+      "notes": "Held-out test result only. The pinned source states harnesses were developed on dev and were not selected on test. W1 records the source-reported aggregate without downstream eligibility or causal interpretation."
+    },
+    {
+      "observation_id": "matter-audit-allwork__lab-heldout100__deepseek-v4-pro-together__c98a1680",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "lab-heldout100",
+        "name": "Legal Agent Benchmark held-out 100-task test split",
+        "variant": "matter-audit-allwork",
+        "task_count": 100,
+        "primary_source": "https://github.com/JoelNiklaus/harness-optimization/blob/c98a168014412c2333fca635cdcc0c6c901c0ade/legal_agent_bench/README.md",
+        "artifact_source": "https://huggingface.co/buckets/joelniklaus/LAB-results/tree/results/test/matter_audit_allwork"
+      },
+      "result": {
+        "date": null,
+        "published_snapshot_date": "2026-08-12",
+        "agent_label": "matter_audit_allwork",
+        "harness_version": null,
+        "harness_revision": "c98a168014412c2333fca635cdcc0c6c901c0ade",
+        "benchmark_revision": "c98a168014412c2333fca635cdcc0c6c901c0ade",
+        "model": "deepseek-ai/DeepSeek-V4-Pro:together",
+        "model_config": "DeepSeek-V4-Pro via Hugging Face Inference Providers with provider route pinned to together; temperature 0; max turns 200; host-mode no-sandbox execution; LAB judge claude-sonnet-4-6",
+        "metric": "source_reported_pooled_criterion_pass_rate",
+        "value": 0.801,
+        "all_pass_rate": 0.05,
+        "tasks": 100,
+        "rollouts_per_task": 1,
+        "retry_policy": "source reports transient provider failures (5xx, 429, stream drops) were re-run before final reporting"
+      },
+      "published_implementation": {
+        "system_compatibility": "benchmark-scaffolded",
+        "revision_match": "exact-study-revision"
+      },
+      "provenance": {
+        "publisher": "Joel Niklaus / harness-optimization",
+        "checked": true,
+        "public_code": true,
+        "public_split": true,
+        "public_run_artifacts": true,
+        "public_proposer_traces": true,
+        "immutable_aggregate_source": "legal_agent_bench/README.md at c98a168014412c2333fca635cdcc0c6c901c0ade"
+      },
+      "comparison": {
+        "group": "lab-heldout100__deepseek-v4-pro-together__c98a1680",
+        "mode": "matched-model-candidate",
+        "scope": "legal-agent"
+      },
+      "unknown_dimensions": [
+        "exact service-side DeepSeek-V4-Pro checkpoint behind the provider route",
+        "provider-side routing and load state during each rollout",
+        "immutable content revision for the mutable public result bucket"
+      ],
+      "notes": "Held-out test result only. The pinned source states harnesses were developed on dev and were not selected on test. W1 records the source-reported aggregate without downstream eligibility or causal interpretation."
+    }
+  ]
+}
