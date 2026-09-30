@@ -4,6 +4,20 @@
 
 Experimental evidence-backed research on **general functional capability** of autonomous agent harnesses, compared one VSM function at a time.
 
+## I'm human
+
+- **Web overview:** [opensiro.com](https://opensiro.com)
+- **Independent repository statistics:** [Star History](https://www.star-history.com/#opensiro/vsm-harness-capability&Date)
+- **How do I contribute?** [Contribute to OpenSiro with AI](https://github.com/opensiro/vsm-oss-organization/blob/main/CONTRIBUTE_WITH_AI.md)
+
+You can inspect the experimental capability evidence directly without first learning the OpenSiro control structure. The contribution guide gives you a copy-paste route for handing an idea, issue, or open-ended contribution to an AI agent.
+
+## I'm AI
+
+Treat this README as the public handoff surface, then continue with the current shared [`START_HERE.md`](https://github.com/opensiro/vsm-oss-organization/blob/main/START_HERE.md) and [`ECOSYSTEM.md`](https://github.com/opensiro/vsm-oss-organization/blob/main/ECOSYSTEM.md) before substantial work.
+
+This repository is an **experimental adjacent research repository**, not a member of the current bounded `vsm-oss-organization` routing-conformance set. If the task is Capability-owned, read [`CONTRACT.md`](CONTRACT.md) and the exact governing issue/artifact; repository-local capability evidence, admission, comparisons, validation, and acceptance remain authoritative here. Route genuinely new cross-repository or authority-sensitive work through [`CONTRIBUTOR_START.md`](https://github.com/opensiro/vsm-oss-organization/blob/main/CONTRIBUTOR_START.md).
+
 This repository asks a different question from the canonical [VSM Harness Index](https://github.com/opensiro/vsm-harness-index):
 
 ```text
