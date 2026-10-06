@@ -191,6 +191,31 @@
       "event": "one-candidate-arm-has-source-reported-failure",
       "scope": "qwen3.6-35b pi arm",
       "detail": "The pinned pi run reports 4 scored tasks and 1 failed task out of 5. W1 preserves the source mean and failure count without imputing the failed task or changing the publisher's metric."
+    },
+    {
+      "event": "exact-head-registry-materialization-and-admission",
+      "run_number": 457,
+      "run_id": 37544172595,
+      "head_sha": "cd21f7310590f6b80fbc217b497f8a36cb844e40",
+      "generated_registry_head_sha": "be0fe20dc5c5045fa69c988adf57c7a3fda09cfa",
+      "conclusion": "success",
+      "detail": "The bounded write-enabled workflow rendered 353 observations, materialized the generated registry commit, passed repository validators, the pass-56 admission check, and the existing live admission path."
+    },
+    {
+      "event": "bot-generated-workflow-run",
+      "run_number": 458,
+      "run_id": 37544194263,
+      "head_sha": "be0fe20dc5c5045fa69c988adf57c7a3fda09cfa",
+      "conclusion": "action_required",
+      "evidence_rejected": false,
+      "detail": "GitHub did not automatically execute the workflow for the bot-authored generated-registry commit; this does not reject evidence and was superseded by restoration of the standard read-only workflow and a fresh validation."
+    },
+    {
+      "event": "standard-read-only-validation-restored",
+      "run_number": 459,
+      "run_id": 37544305559,
+      "head_sha": "e4e47e6e7c3538f01150a479d94c1243f92427d8",
+      "conclusion": "success"
     }
   ],
   "non_admission_dispositions": [
@@ -211,11 +236,12 @@
     }
   ],
   "validation": {
-    "status": "pending",
-    "registry_observation_count_after_expected": 353,
-    "evidence_admission_run": null,
-    "generated_registry_head_sha": null,
-    "standard_read_only_validation_run": null
+    "status": "passed",
+    "registry_observation_count_after": 353,
+    "evidence_admission_run": 37544172595,
+    "generated_registry_head_sha": "be0fe20dc5c5045fa69c988adf57c7a3fda09cfa",
+    "standard_read_only_validation_run": 37544305559,
+    "standard_workflow_blob_sha": "244ad9701f41e6122f37c0676a00e705cddd622f"
   },
   "handoff_boundary": {
     "structural_classification_performed": false,
