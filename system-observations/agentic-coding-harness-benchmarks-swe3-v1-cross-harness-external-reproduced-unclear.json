@@ -1,0 +1,1513 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-07",
+  "evidence_source_class": "external-reproduced",
+  "system_name": "Agentic Coding Harness Benchmarks /swe3 v1 Claude Code vs pi",
+  "canonical_harness_id": null,
+  "published_implementation": {
+    "system_compatibility": "unclear",
+    "historical_relation": "The pinned source executes named Claude Code and pi harnesses through its benchmark runner on the same five-task /swe3 dataset surface. Exact historical harness binary/package versions are not serialized in the admitted run summaries, and W1 does not adjudicate canonical historical linkage."
+  },
+  "primary_sources": [
+    "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/docs/agentic-coding-swe-comparison-swe3.md",
+    "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/benchmarks/docs/harness-reference.md"
+  ],
+  "observations": [
+    {
+      "observation_id": "claude-code__agentic-coding-swe3-v1__claude-opus-5__2e31825d",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "agentic-coding-harness-benchmarks-swe3-v1",
+        "name": "Agentic Coding Harness Benchmarks /swe3 / mcp-gateway-registry v1",
+        "variant": "five-task-cross-harness",
+        "task_count": 5,
+        "primary_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/docs/agentic-coding-swe-comparison-swe3.md",
+        "artifact_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/benchmarks/swe-benchmark-data/claude-opus-5/claude-code/swe3/mcp-gateway-registry/run-summary.json"
+      },
+      "result": {
+        "date": "2026-08-04",
+        "agent_label": "Claude Code",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "target_repository_ref": "1.24.4",
+        "model": "us.anthropic.claude-opus-5[1m]",
+        "model_config": "provider=bedrock; instance_type=t3.medium; tensor_parallel_size=source-null; precision=source-null; context_window=source-null",
+        "metric": "mean_task_score_excl_failed",
+        "value": 70.76,
+        "tasks": 5,
+        "scored": 5,
+        "failed": 0,
+        "mean_cost_usd_excl_failed_source_field": 24.05,
+        "tokens_processed_source_task_sum": 175129430,
+        "judge_model": "openai.gpt-5.6-sol",
+        "judge_provider": "codex-exec",
+        "judge_reasoning_effort": "high",
+        "judge_repo_grounded": true
+      },
+      "execution_environment": {
+        "provider": "bedrock",
+        "instance_type": "t3.medium",
+        "tensor_parallel_size": null,
+        "precision": null,
+        "context_window": null
+      },
+      "budget_timeout_repetition": null,
+      "adaptation_reset_policy": null,
+      "provenance": {
+        "publisher": "aarora79/agentic-coding-harness-benchmarks",
+        "checked": true,
+        "immutable_source_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "public_logs": null,
+        "public_trajectories": null,
+        "raw_run_artifacts_public": true
+      },
+      "comparison": {
+        "group": "agentic-coding-swe3-v1__claude-opus-5__2e31825d",
+        "mode": "candidate-same-model",
+        "scope": "coding-swe"
+      },
+      "unknown_dimensions": [
+        "exact historical Claude Code binary/package version used by this run",
+        "complete historical runner configuration beyond fields serialized in run-summary.json",
+        "task-level retry/top-up history beyond what is serialized in the committed result artifacts",
+        "adaptation/reset state outside the source repository's committed artifacts",
+        "whether the reported runner host instance type is a material execution difference for the managed model endpoint"
+      ],
+      "notes": "W1 records the pinned run-summary result and source-reported execution metadata only. Candidate grouping does not establish matched-cell eligibility; material configuration differences remain explicit for independent downstream adjudication."
+    },
+    {
+      "observation_id": "pi__agentic-coding-swe3-v1__claude-opus-5__2e31825d",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "agentic-coding-harness-benchmarks-swe3-v1",
+        "name": "Agentic Coding Harness Benchmarks /swe3 / mcp-gateway-registry v1",
+        "variant": "five-task-cross-harness",
+        "task_count": 5,
+        "primary_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/docs/agentic-coding-swe-comparison-swe3.md",
+        "artifact_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/benchmarks/swe-benchmark-data/claude-opus-5/pi/swe3/mcp-gateway-registry/run-summary.json"
+      },
+      "result": {
+        "date": "2026-08-05",
+        "agent_label": "pi",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "target_repository_ref": "1.24.4",
+        "model": "us.anthropic.claude-opus-5[1m]",
+        "model_config": "provider=bedrock; instance_type=g6e.12xlarge; tensor_parallel_size=source-null; precision=source-null; context_window=source-null",
+        "metric": "mean_task_score_excl_failed",
+        "value": 75.72,
+        "tasks": 5,
+        "scored": 5,
+        "failed": 0,
+        "mean_cost_usd_excl_failed_source_field": 8.28,
+        "tokens_processed_source_task_sum": 49988863,
+        "judge_model": "openai.gpt-5.6-sol",
+        "judge_provider": "codex-exec",
+        "judge_reasoning_effort": "high",
+        "judge_repo_grounded": true
+      },
+      "execution_environment": {
+        "provider": "bedrock",
+        "instance_type": "g6e.12xlarge",
+        "tensor_parallel_size": null,
+        "precision": null,
+        "context_window": null
+      },
+      "budget_timeout_repetition": null,
+      "adaptation_reset_policy": null,
+      "provenance": {
+        "publisher": "aarora79/agentic-coding-harness-benchmarks",
+        "checked": true,
+        "immutable_source_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "public_logs": null,
+        "public_trajectories": null,
+        "raw_run_artifacts_public": true
+      },
+      "comparison": {
+        "group": "agentic-coding-swe3-v1__claude-opus-5__2e31825d",
+        "mode": "candidate-same-model",
+        "scope": "coding-swe"
+      },
+      "unknown_dimensions": [
+        "exact historical pi binary/package version used by this run",
+        "complete historical runner configuration beyond fields serialized in run-summary.json",
+        "task-level retry/top-up history beyond what is serialized in the committed result artifacts",
+        "adaptation/reset state outside the source repository's committed artifacts",
+        "whether the reported runner host instance type is a material execution difference for the managed model endpoint"
+      ],
+      "notes": "W1 records the pinned run-summary result and source-reported execution metadata only. Candidate grouping does not establish matched-cell eligibility; material configuration differences remain explicit for independent downstream adjudication."
+    },
+    {
+      "observation_id": "claude-code__agentic-coding-swe3-v1__claude-opus-4-8__2e31825d",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "agentic-coding-harness-benchmarks-swe3-v1",
+        "name": "Agentic Coding Harness Benchmarks /swe3 / mcp-gateway-registry v1",
+        "variant": "five-task-cross-harness",
+        "task_count": 5,
+        "primary_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/docs/agentic-coding-swe-comparison-swe3.md",
+        "artifact_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/benchmarks/swe-benchmark-data/claude-opus-4-8/claude-code/swe3/mcp-gateway-registry/run-summary.json"
+      },
+      "result": {
+        "date": "2026-08-03",
+        "agent_label": "Claude Code",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "target_repository_ref": "1.24.4",
+        "model": "us.anthropic.claude-opus-4-8",
+        "model_config": "provider=bedrock; instance_type=t3.medium; tensor_parallel_size=source-null; precision=source-null; context_window=source-null",
+        "metric": "mean_task_score_excl_failed",
+        "value": 69.24,
+        "tasks": 5,
+        "scored": 5,
+        "failed": 0,
+        "mean_cost_usd_excl_failed_source_field": 9.9,
+        "tokens_processed_source_task_sum": 57048657,
+        "judge_model": "openai.gpt-5.6-sol",
+        "judge_provider": "codex-exec",
+        "judge_reasoning_effort": "high",
+        "judge_repo_grounded": true
+      },
+      "execution_environment": {
+        "provider": "bedrock",
+        "instance_type": "t3.medium",
+        "tensor_parallel_size": null,
+        "precision": null,
+        "context_window": null
+      },
+      "budget_timeout_repetition": null,
+      "adaptation_reset_policy": null,
+      "provenance": {
+        "publisher": "aarora79/agentic-coding-harness-benchmarks",
+        "checked": true,
+        "immutable_source_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "public_logs": null,
+        "public_trajectories": null,
+        "raw_run_artifacts_public": true
+      },
+      "comparison": {
+        "group": "agentic-coding-swe3-v1__claude-opus-4-8__2e31825d",
+        "mode": "candidate-same-model",
+        "scope": "coding-swe"
+      },
+      "unknown_dimensions": [
+        "exact historical Claude Code binary/package version used by this run",
+        "complete historical runner configuration beyond fields serialized in run-summary.json",
+        "task-level retry/top-up history beyond what is serialized in the committed result artifacts",
+        "adaptation/reset state outside the source repository's committed artifacts",
+        "whether the reported runner host instance type is a material execution difference for the managed model endpoint"
+      ],
+      "notes": "W1 records the pinned run-summary result and source-reported execution metadata only. Candidate grouping does not establish matched-cell eligibility; material configuration differences remain explicit for independent downstream adjudication."
+    },
+    {
+      "observation_id": "pi__agentic-coding-swe3-v1__claude-opus-4-8__2e31825d",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "agentic-coding-harness-benchmarks-swe3-v1",
+        "name": "Agentic Coding Harness Benchmarks /swe3 / mcp-gateway-registry v1",
+        "variant": "five-task-cross-harness",
+        "task_count": 5,
+        "primary_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/docs/agentic-coding-swe-comparison-swe3.md",
+        "artifact_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/benchmarks/swe-benchmark-data/claude-opus-4-8/pi/swe3/mcp-gateway-registry/run-summary.json"
+      },
+      "result": {
+        "date": "2026-08-05",
+        "agent_label": "pi",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "target_repository_ref": "1.24.4",
+        "model": "us.anthropic.claude-opus-4-8[1m]",
+        "model_config": "provider=bedrock; instance_type=g6e.12xlarge; tensor_parallel_size=source-null; precision=source-null; context_window=source-null",
+        "metric": "mean_task_score_excl_failed",
+        "value": 60.68,
+        "tasks": 5,
+        "scored": 5,
+        "failed": 0,
+        "mean_cost_usd_excl_failed_source_field": 4.6,
+        "tokens_processed_source_task_sum": 22522083,
+        "judge_model": "openai.gpt-5.6-sol",
+        "judge_provider": "codex-exec",
+        "judge_reasoning_effort": "high",
+        "judge_repo_grounded": true
+      },
+      "execution_environment": {
+        "provider": "bedrock",
+        "instance_type": "g6e.12xlarge",
+        "tensor_parallel_size": null,
+        "precision": null,
+        "context_window": null
+      },
+      "budget_timeout_repetition": null,
+      "adaptation_reset_policy": null,
+      "provenance": {
+        "publisher": "aarora79/agentic-coding-harness-benchmarks",
+        "checked": true,
+        "immutable_source_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "public_logs": null,
+        "public_trajectories": null,
+        "raw_run_artifacts_public": true
+      },
+      "comparison": {
+        "group": "agentic-coding-swe3-v1__claude-opus-4-8__2e31825d",
+        "mode": "candidate-same-model",
+        "scope": "coding-swe"
+      },
+      "unknown_dimensions": [
+        "exact historical pi binary/package version used by this run",
+        "complete historical runner configuration beyond fields serialized in run-summary.json",
+        "task-level retry/top-up history beyond what is serialized in the committed result artifacts",
+        "adaptation/reset state outside the source repository's committed artifacts",
+        "whether the reported runner host instance type is a material execution difference for the managed model endpoint"
+      ],
+      "notes": "W1 records the pinned run-summary result and source-reported execution metadata only. Candidate grouping does not establish matched-cell eligibility; material configuration differences remain explicit for independent downstream adjudication."
+    },
+    {
+      "observation_id": "claude-code__agentic-coding-swe3-v1__claude-sonnet-5__2e31825d",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "agentic-coding-harness-benchmarks-swe3-v1",
+        "name": "Agentic Coding Harness Benchmarks /swe3 / mcp-gateway-registry v1",
+        "variant": "five-task-cross-harness",
+        "task_count": 5,
+        "primary_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/docs/agentic-coding-swe-comparison-swe3.md",
+        "artifact_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/benchmarks/swe-benchmark-data/claude-sonnet-5/claude-code/swe3/mcp-gateway-registry/run-summary.json"
+      },
+      "result": {
+        "date": "2026-08-04",
+        "agent_label": "Claude Code",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "target_repository_ref": "1.24.4",
+        "model": "us.anthropic.claude-sonnet-5",
+        "model_config": "provider=bedrock; instance_type=t3.medium; tensor_parallel_size=source-null; precision=source-null; context_window=source-null",
+        "metric": "mean_task_score_excl_failed",
+        "value": 68.04,
+        "tasks": 5,
+        "scored": 5,
+        "failed": 0,
+        "mean_cost_usd_excl_failed_source_field": 24.64,
+        "tokens_processed_source_task_sum": 341572730,
+        "judge_model": "openai.gpt-5.6-sol",
+        "judge_provider": "codex-exec",
+        "judge_reasoning_effort": "high",
+        "judge_repo_grounded": true
+      },
+      "execution_environment": {
+        "provider": "bedrock",
+        "instance_type": "t3.medium",
+        "tensor_parallel_size": null,
+        "precision": null,
+        "context_window": null
+      },
+      "budget_timeout_repetition": null,
+      "adaptation_reset_policy": null,
+      "provenance": {
+        "publisher": "aarora79/agentic-coding-harness-benchmarks",
+        "checked": true,
+        "immutable_source_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "public_logs": null,
+        "public_trajectories": null,
+        "raw_run_artifacts_public": true
+      },
+      "comparison": {
+        "group": "agentic-coding-swe3-v1__claude-sonnet-5__2e31825d",
+        "mode": "candidate-same-model",
+        "scope": "coding-swe"
+      },
+      "unknown_dimensions": [
+        "exact historical Claude Code binary/package version used by this run",
+        "complete historical runner configuration beyond fields serialized in run-summary.json",
+        "task-level retry/top-up history beyond what is serialized in the committed result artifacts",
+        "adaptation/reset state outside the source repository's committed artifacts",
+        "whether the reported runner host instance type is a material execution difference for the managed model endpoint"
+      ],
+      "notes": "W1 records the pinned run-summary result and source-reported execution metadata only. Candidate grouping does not establish matched-cell eligibility; material configuration differences remain explicit for independent downstream adjudication."
+    },
+    {
+      "observation_id": "pi__agentic-coding-swe3-v1__claude-sonnet-5__2e31825d",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "agentic-coding-harness-benchmarks-swe3-v1",
+        "name": "Agentic Coding Harness Benchmarks /swe3 / mcp-gateway-registry v1",
+        "variant": "five-task-cross-harness",
+        "task_count": 5,
+        "primary_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/docs/agentic-coding-swe-comparison-swe3.md",
+        "artifact_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/benchmarks/swe-benchmark-data/claude-sonnet-5/pi/swe3/mcp-gateway-registry/run-summary.json"
+      },
+      "result": {
+        "date": "2026-08-05",
+        "agent_label": "pi",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "target_repository_ref": "1.24.4",
+        "model": "us.anthropic.claude-sonnet-5",
+        "model_config": "provider=bedrock; instance_type=g6e.12xlarge; tensor_parallel_size=source-null; precision=source-null; context_window=source-null",
+        "metric": "mean_task_score_excl_failed",
+        "value": 66.52,
+        "tasks": 5,
+        "scored": 5,
+        "failed": 0,
+        "mean_cost_usd_excl_failed_source_field": 3.81,
+        "tokens_processed_source_task_sum": 67031177,
+        "judge_model": "openai.gpt-5.6-sol",
+        "judge_provider": "codex-exec",
+        "judge_reasoning_effort": "high",
+        "judge_repo_grounded": true
+      },
+      "execution_environment": {
+        "provider": "bedrock",
+        "instance_type": "g6e.12xlarge",
+        "tensor_parallel_size": null,
+        "precision": null,
+        "context_window": null
+      },
+      "budget_timeout_repetition": null,
+      "adaptation_reset_policy": null,
+      "provenance": {
+        "publisher": "aarora79/agentic-coding-harness-benchmarks",
+        "checked": true,
+        "immutable_source_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "public_logs": null,
+        "public_trajectories": null,
+        "raw_run_artifacts_public": true
+      },
+      "comparison": {
+        "group": "agentic-coding-swe3-v1__claude-sonnet-5__2e31825d",
+        "mode": "candidate-same-model",
+        "scope": "coding-swe"
+      },
+      "unknown_dimensions": [
+        "exact historical pi binary/package version used by this run",
+        "complete historical runner configuration beyond fields serialized in run-summary.json",
+        "task-level retry/top-up history beyond what is serialized in the committed result artifacts",
+        "adaptation/reset state outside the source repository's committed artifacts",
+        "whether the reported runner host instance type is a material execution difference for the managed model endpoint"
+      ],
+      "notes": "W1 records the pinned run-summary result and source-reported execution metadata only. Candidate grouping does not establish matched-cell eligibility; material configuration differences remain explicit for independent downstream adjudication."
+    },
+    {
+      "observation_id": "claude-code__agentic-coding-swe3-v1__glm-5.2__2e31825d",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "agentic-coding-harness-benchmarks-swe3-v1",
+        "name": "Agentic Coding Harness Benchmarks /swe3 / mcp-gateway-registry v1",
+        "variant": "five-task-cross-harness",
+        "task_count": 5,
+        "primary_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/docs/agentic-coding-swe-comparison-swe3.md",
+        "artifact_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/benchmarks/swe-benchmark-data/glm-5.2/claude-code/swe3/mcp-gateway-registry/run-summary.json"
+      },
+      "result": {
+        "date": "2026-08-04",
+        "agent_label": "Claude Code",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "target_repository_ref": "1.24.4",
+        "model": "glm-5.2",
+        "model_config": "provider=endpoint; instance_type=p5en.48xlarge; tensor_parallel_size=source-null; precision=source-null; context_window=200000",
+        "metric": "mean_task_score_excl_failed",
+        "value": 65.6,
+        "tasks": 5,
+        "scored": 5,
+        "failed": 0,
+        "mean_cost_usd_excl_failed_source_field": 88.25,
+        "tokens_processed_source_task_sum": 86779080,
+        "judge_model": "openai.gpt-5.6-sol",
+        "judge_provider": "codex-exec",
+        "judge_reasoning_effort": "high",
+        "judge_repo_grounded": true
+      },
+      "execution_environment": {
+        "provider": "endpoint",
+        "instance_type": "p5en.48xlarge",
+        "tensor_parallel_size": null,
+        "precision": null,
+        "context_window": 200000
+      },
+      "budget_timeout_repetition": null,
+      "adaptation_reset_policy": null,
+      "provenance": {
+        "publisher": "aarora79/agentic-coding-harness-benchmarks",
+        "checked": true,
+        "immutable_source_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "public_logs": null,
+        "public_trajectories": null,
+        "raw_run_artifacts_public": true
+      },
+      "comparison": {
+        "group": "agentic-coding-swe3-v1__glm-5.2__2e31825d",
+        "mode": "candidate-same-model",
+        "scope": "coding-swe"
+      },
+      "unknown_dimensions": [
+        "exact historical Claude Code binary/package version used by this run",
+        "complete historical runner configuration beyond fields serialized in run-summary.json",
+        "task-level retry/top-up history beyond what is serialized in the committed result artifacts",
+        "adaptation/reset state outside the source repository's committed artifacts"
+      ],
+      "notes": "W1 records the pinned run-summary result and source-reported execution metadata only. Candidate grouping does not establish matched-cell eligibility; material configuration differences remain explicit for independent downstream adjudication."
+    },
+    {
+      "observation_id": "pi__agentic-coding-swe3-v1__glm-5.2__2e31825d",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "agentic-coding-harness-benchmarks-swe3-v1",
+        "name": "Agentic Coding Harness Benchmarks /swe3 / mcp-gateway-registry v1",
+        "variant": "five-task-cross-harness",
+        "task_count": 5,
+        "primary_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/docs/agentic-coding-swe-comparison-swe3.md",
+        "artifact_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/benchmarks/swe-benchmark-data/glm-5.2/pi/swe3/mcp-gateway-registry/run-summary.json"
+      },
+      "result": {
+        "date": "2026-08-06",
+        "agent_label": "pi",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "target_repository_ref": "1.24.4",
+        "model": "glm-5.2",
+        "model_config": "provider=endpoint; instance_type=p5en.48xlarge; tensor_parallel_size=8; precision=FP8; context_window=300000",
+        "metric": "mean_task_score_excl_failed",
+        "value": 70.76,
+        "tasks": 5,
+        "scored": 5,
+        "failed": 0,
+        "mean_cost_usd_excl_failed_source_field": null,
+        "tokens_processed_source_task_sum": 41519145,
+        "judge_model": "openai.gpt-5.6-sol",
+        "judge_provider": "codex-exec",
+        "judge_reasoning_effort": "high",
+        "judge_repo_grounded": true
+      },
+      "execution_environment": {
+        "provider": "endpoint",
+        "instance_type": "p5en.48xlarge",
+        "tensor_parallel_size": 8,
+        "precision": "FP8",
+        "context_window": 300000
+      },
+      "budget_timeout_repetition": null,
+      "adaptation_reset_policy": null,
+      "provenance": {
+        "publisher": "aarora79/agentic-coding-harness-benchmarks",
+        "checked": true,
+        "immutable_source_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "public_logs": null,
+        "public_trajectories": null,
+        "raw_run_artifacts_public": true
+      },
+      "comparison": {
+        "group": "agentic-coding-swe3-v1__glm-5.2__2e31825d",
+        "mode": "candidate-same-model",
+        "scope": "coding-swe"
+      },
+      "unknown_dimensions": [
+        "exact historical pi binary/package version used by this run",
+        "complete historical runner configuration beyond fields serialized in run-summary.json",
+        "task-level retry/top-up history beyond what is serialized in the committed result artifacts",
+        "adaptation/reset state outside the source repository's committed artifacts"
+      ],
+      "notes": "W1 records the pinned run-summary result and source-reported execution metadata only. Candidate grouping does not establish matched-cell eligibility; material configuration differences remain explicit for independent downstream adjudication."
+    },
+    {
+      "observation_id": "claude-code__agentic-coding-swe3-v1__kimi-k2.7-code__2e31825d",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "agentic-coding-harness-benchmarks-swe3-v1",
+        "name": "Agentic Coding Harness Benchmarks /swe3 / mcp-gateway-registry v1",
+        "variant": "five-task-cross-harness",
+        "task_count": 5,
+        "primary_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/docs/agentic-coding-swe-comparison-swe3.md",
+        "artifact_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/benchmarks/swe-benchmark-data/kimi-k2.7-code/claude-code/swe3/mcp-gateway-registry/run-summary.json"
+      },
+      "result": {
+        "date": "2026-08-04",
+        "agent_label": "Claude Code",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "target_repository_ref": "1.24.4",
+        "model": "kimi-k2.7-code",
+        "model_config": "provider=endpoint; instance_type=p5en.48xlarge; tensor_parallel_size=source-null; precision=source-null; context_window=131072",
+        "metric": "mean_task_score_excl_failed",
+        "value": 55.44,
+        "tasks": 5,
+        "scored": 5,
+        "failed": 0,
+        "mean_cost_usd_excl_failed_source_field": 59.34,
+        "tokens_processed_source_task_sum": 57867567,
+        "judge_model": "openai.gpt-5.6-sol",
+        "judge_provider": "codex-exec",
+        "judge_reasoning_effort": "high",
+        "judge_repo_grounded": true
+      },
+      "execution_environment": {
+        "provider": "endpoint",
+        "instance_type": "p5en.48xlarge",
+        "tensor_parallel_size": null,
+        "precision": null,
+        "context_window": 131072
+      },
+      "budget_timeout_repetition": null,
+      "adaptation_reset_policy": null,
+      "provenance": {
+        "publisher": "aarora79/agentic-coding-harness-benchmarks",
+        "checked": true,
+        "immutable_source_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "public_logs": null,
+        "public_trajectories": null,
+        "raw_run_artifacts_public": true
+      },
+      "comparison": {
+        "group": "agentic-coding-swe3-v1__kimi-k2.7-code__2e31825d",
+        "mode": "candidate-same-model",
+        "scope": "coding-swe"
+      },
+      "unknown_dimensions": [
+        "exact historical Claude Code binary/package version used by this run",
+        "complete historical runner configuration beyond fields serialized in run-summary.json",
+        "task-level retry/top-up history beyond what is serialized in the committed result artifacts",
+        "adaptation/reset state outside the source repository's committed artifacts"
+      ],
+      "notes": "W1 records the pinned run-summary result and source-reported execution metadata only. Candidate grouping does not establish matched-cell eligibility; material configuration differences remain explicit for independent downstream adjudication."
+    },
+    {
+      "observation_id": "pi__agentic-coding-swe3-v1__kimi-k2.7-code__2e31825d",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "agentic-coding-harness-benchmarks-swe3-v1",
+        "name": "Agentic Coding Harness Benchmarks /swe3 / mcp-gateway-registry v1",
+        "variant": "five-task-cross-harness",
+        "task_count": 5,
+        "primary_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/docs/agentic-coding-swe-comparison-swe3.md",
+        "artifact_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/benchmarks/swe-benchmark-data/kimi-k2.7-code/pi/swe3/mcp-gateway-registry/run-summary.json"
+      },
+      "result": {
+        "date": "2026-08-06",
+        "agent_label": "pi",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "target_repository_ref": "1.24.4",
+        "model": "kimi-k2.7-code",
+        "model_config": "provider=endpoint; instance_type=p5en.48xlarge; tensor_parallel_size=8; precision=fp8; context_window=131072",
+        "metric": "mean_task_score_excl_failed",
+        "value": 60.68,
+        "tasks": 5,
+        "scored": 5,
+        "failed": 0,
+        "mean_cost_usd_excl_failed_source_field": 0,
+        "tokens_processed_source_task_sum": 51016645,
+        "judge_model": "openai.gpt-5.6-sol",
+        "judge_provider": "codex-exec",
+        "judge_reasoning_effort": "high",
+        "judge_repo_grounded": true
+      },
+      "execution_environment": {
+        "provider": "endpoint",
+        "instance_type": "p5en.48xlarge",
+        "tensor_parallel_size": 8,
+        "precision": "fp8",
+        "context_window": 131072
+      },
+      "budget_timeout_repetition": null,
+      "adaptation_reset_policy": null,
+      "provenance": {
+        "publisher": "aarora79/agentic-coding-harness-benchmarks",
+        "checked": true,
+        "immutable_source_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "public_logs": null,
+        "public_trajectories": null,
+        "raw_run_artifacts_public": true
+      },
+      "comparison": {
+        "group": "agentic-coding-swe3-v1__kimi-k2.7-code__2e31825d",
+        "mode": "candidate-same-model",
+        "scope": "coding-swe"
+      },
+      "unknown_dimensions": [
+        "exact historical pi binary/package version used by this run",
+        "complete historical runner configuration beyond fields serialized in run-summary.json",
+        "task-level retry/top-up history beyond what is serialized in the committed result artifacts",
+        "adaptation/reset state outside the source repository's committed artifacts"
+      ],
+      "notes": "W1 records the pinned run-summary result and source-reported execution metadata only. Candidate grouping does not establish matched-cell eligibility; material configuration differences remain explicit for independent downstream adjudication."
+    },
+    {
+      "observation_id": "claude-code__agentic-coding-swe3-v1__deepseek-v3.2__2e31825d",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "agentic-coding-harness-benchmarks-swe3-v1",
+        "name": "Agentic Coding Harness Benchmarks /swe3 / mcp-gateway-registry v1",
+        "variant": "five-task-cross-harness",
+        "task_count": 5,
+        "primary_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/docs/agentic-coding-swe-comparison-swe3.md",
+        "artifact_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/benchmarks/swe-benchmark-data/deepseek-v3.2/claude-code/swe3/mcp-gateway-registry/run-summary.json"
+      },
+      "result": {
+        "date": "2026-08-04",
+        "agent_label": "Claude Code",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "target_repository_ref": "1.24.4",
+        "model": "deepseek-v3.2",
+        "model_config": "provider=endpoint; instance_type=p5en.48xlarge; tensor_parallel_size=source-null; precision=source-null; context_window=131072",
+        "metric": "mean_task_score_excl_failed",
+        "value": 53.72,
+        "tasks": 5,
+        "scored": 5,
+        "failed": 0,
+        "mean_cost_usd_excl_failed_source_field": 70.57,
+        "tokens_processed_source_task_sum": 68863552,
+        "judge_model": "openai.gpt-5.6-sol",
+        "judge_provider": "codex-exec",
+        "judge_reasoning_effort": "high",
+        "judge_repo_grounded": true
+      },
+      "execution_environment": {
+        "provider": "endpoint",
+        "instance_type": "p5en.48xlarge",
+        "tensor_parallel_size": null,
+        "precision": null,
+        "context_window": 131072
+      },
+      "budget_timeout_repetition": null,
+      "adaptation_reset_policy": null,
+      "provenance": {
+        "publisher": "aarora79/agentic-coding-harness-benchmarks",
+        "checked": true,
+        "immutable_source_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "public_logs": null,
+        "public_trajectories": null,
+        "raw_run_artifacts_public": true
+      },
+      "comparison": {
+        "group": "agentic-coding-swe3-v1__deepseek-v3.2__2e31825d",
+        "mode": "candidate-same-model",
+        "scope": "coding-swe"
+      },
+      "unknown_dimensions": [
+        "exact historical Claude Code binary/package version used by this run",
+        "complete historical runner configuration beyond fields serialized in run-summary.json",
+        "task-level retry/top-up history beyond what is serialized in the committed result artifacts",
+        "adaptation/reset state outside the source repository's committed artifacts"
+      ],
+      "notes": "W1 records the pinned run-summary result and source-reported execution metadata only. Candidate grouping does not establish matched-cell eligibility; material configuration differences remain explicit for independent downstream adjudication."
+    },
+    {
+      "observation_id": "pi__agentic-coding-swe3-v1__deepseek-v3.2__2e31825d",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "agentic-coding-harness-benchmarks-swe3-v1",
+        "name": "Agentic Coding Harness Benchmarks /swe3 / mcp-gateway-registry v1",
+        "variant": "five-task-cross-harness",
+        "task_count": 5,
+        "primary_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/docs/agentic-coding-swe-comparison-swe3.md",
+        "artifact_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/benchmarks/swe-benchmark-data/deepseek-v3.2/pi/swe3/mcp-gateway-registry/run-summary.json"
+      },
+      "result": {
+        "date": "2026-08-06",
+        "agent_label": "pi",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "target_repository_ref": "1.24.4",
+        "model": "deepseek-v3.2",
+        "model_config": "provider=endpoint; instance_type=p5en.48xlarge; tensor_parallel_size=8; precision=fp8; context_window=131072",
+        "metric": "mean_task_score_excl_failed",
+        "value": 54.44,
+        "tasks": 5,
+        "scored": 5,
+        "failed": 0,
+        "mean_cost_usd_excl_failed_source_field": null,
+        "tokens_processed_source_task_sum": 22345942,
+        "judge_model": "openai.gpt-5.6-sol",
+        "judge_provider": "codex-exec",
+        "judge_reasoning_effort": "high",
+        "judge_repo_grounded": true
+      },
+      "execution_environment": {
+        "provider": "endpoint",
+        "instance_type": "p5en.48xlarge",
+        "tensor_parallel_size": 8,
+        "precision": "fp8",
+        "context_window": 131072
+      },
+      "budget_timeout_repetition": null,
+      "adaptation_reset_policy": null,
+      "provenance": {
+        "publisher": "aarora79/agentic-coding-harness-benchmarks",
+        "checked": true,
+        "immutable_source_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "public_logs": null,
+        "public_trajectories": null,
+        "raw_run_artifacts_public": true
+      },
+      "comparison": {
+        "group": "agentic-coding-swe3-v1__deepseek-v3.2__2e31825d",
+        "mode": "candidate-same-model",
+        "scope": "coding-swe"
+      },
+      "unknown_dimensions": [
+        "exact historical pi binary/package version used by this run",
+        "complete historical runner configuration beyond fields serialized in run-summary.json",
+        "task-level retry/top-up history beyond what is serialized in the committed result artifacts",
+        "adaptation/reset state outside the source repository's committed artifacts"
+      ],
+      "notes": "W1 records the pinned run-summary result and source-reported execution metadata only. Candidate grouping does not establish matched-cell eligibility; material configuration differences remain explicit for independent downstream adjudication."
+    },
+    {
+      "observation_id": "claude-code__agentic-coding-swe3-v1__nemotron-ultra-550b__2e31825d",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "agentic-coding-harness-benchmarks-swe3-v1",
+        "name": "Agentic Coding Harness Benchmarks /swe3 / mcp-gateway-registry v1",
+        "variant": "five-task-cross-harness",
+        "task_count": 5,
+        "primary_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/docs/agentic-coding-swe-comparison-swe3.md",
+        "artifact_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/benchmarks/swe-benchmark-data/nemotron-ultra-550b/claude-code/swe3/mcp-gateway-registry/run-summary.json"
+      },
+      "result": {
+        "date": "2026-08-04",
+        "agent_label": "Claude Code",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "target_repository_ref": "1.24.4",
+        "model": "nemotron-ultra-550b",
+        "model_config": "provider=endpoint; instance_type=p5en.48xlarge; tensor_parallel_size=source-null; precision=source-null; context_window=200000",
+        "metric": "mean_task_score_excl_failed",
+        "value": 53.68,
+        "tasks": 5,
+        "scored": 5,
+        "failed": 0,
+        "mean_cost_usd_excl_failed_source_field": 96.91,
+        "tokens_processed_source_task_sum": 95603259,
+        "judge_model": "openai.gpt-5.6-sol",
+        "judge_provider": "codex-exec",
+        "judge_reasoning_effort": "high",
+        "judge_repo_grounded": true
+      },
+      "execution_environment": {
+        "provider": "endpoint",
+        "instance_type": "p5en.48xlarge",
+        "tensor_parallel_size": null,
+        "precision": null,
+        "context_window": 200000
+      },
+      "budget_timeout_repetition": null,
+      "adaptation_reset_policy": null,
+      "provenance": {
+        "publisher": "aarora79/agentic-coding-harness-benchmarks",
+        "checked": true,
+        "immutable_source_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "public_logs": null,
+        "public_trajectories": null,
+        "raw_run_artifacts_public": true
+      },
+      "comparison": {
+        "group": "agentic-coding-swe3-v1__nemotron-ultra-550b__2e31825d",
+        "mode": "candidate-same-model",
+        "scope": "coding-swe"
+      },
+      "unknown_dimensions": [
+        "exact historical Claude Code binary/package version used by this run",
+        "complete historical runner configuration beyond fields serialized in run-summary.json",
+        "task-level retry/top-up history beyond what is serialized in the committed result artifacts",
+        "adaptation/reset state outside the source repository's committed artifacts"
+      ],
+      "notes": "W1 records the pinned run-summary result and source-reported execution metadata only. Candidate grouping does not establish matched-cell eligibility; material configuration differences remain explicit for independent downstream adjudication."
+    },
+    {
+      "observation_id": "pi__agentic-coding-swe3-v1__nemotron-ultra-550b__2e31825d",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "agentic-coding-harness-benchmarks-swe3-v1",
+        "name": "Agentic Coding Harness Benchmarks /swe3 / mcp-gateway-registry v1",
+        "variant": "five-task-cross-harness",
+        "task_count": 5,
+        "primary_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/docs/agentic-coding-swe-comparison-swe3.md",
+        "artifact_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/benchmarks/swe-benchmark-data/nemotron-ultra-550b/pi/swe3/mcp-gateway-registry/run-summary.json"
+      },
+      "result": {
+        "date": "2026-08-06",
+        "agent_label": "pi",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "target_repository_ref": "1.24.4",
+        "model": "nemotron-ultra-550b",
+        "model_config": "provider=endpoint; instance_type=p5en.48xlarge; tensor_parallel_size=8; precision=nvfp4; context_window=200000",
+        "metric": "mean_task_score_excl_failed",
+        "value": 55.2,
+        "tasks": 5,
+        "scored": 5,
+        "failed": 0,
+        "mean_cost_usd_excl_failed_source_field": null,
+        "tokens_processed_source_task_sum": 68705331,
+        "judge_model": "openai.gpt-5.6-sol",
+        "judge_provider": "codex-exec",
+        "judge_reasoning_effort": "high",
+        "judge_repo_grounded": true
+      },
+      "execution_environment": {
+        "provider": "endpoint",
+        "instance_type": "p5en.48xlarge",
+        "tensor_parallel_size": 8,
+        "precision": "nvfp4",
+        "context_window": 200000
+      },
+      "budget_timeout_repetition": null,
+      "adaptation_reset_policy": null,
+      "provenance": {
+        "publisher": "aarora79/agentic-coding-harness-benchmarks",
+        "checked": true,
+        "immutable_source_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "public_logs": null,
+        "public_trajectories": null,
+        "raw_run_artifacts_public": true
+      },
+      "comparison": {
+        "group": "agentic-coding-swe3-v1__nemotron-ultra-550b__2e31825d",
+        "mode": "candidate-same-model",
+        "scope": "coding-swe"
+      },
+      "unknown_dimensions": [
+        "exact historical pi binary/package version used by this run",
+        "complete historical runner configuration beyond fields serialized in run-summary.json",
+        "task-level retry/top-up history beyond what is serialized in the committed result artifacts",
+        "adaptation/reset state outside the source repository's committed artifacts"
+      ],
+      "notes": "W1 records the pinned run-summary result and source-reported execution metadata only. Candidate grouping does not establish matched-cell eligibility; material configuration differences remain explicit for independent downstream adjudication."
+    },
+    {
+      "observation_id": "claude-code__agentic-coding-swe3-v1__devstral-2-123b__2e31825d",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "agentic-coding-harness-benchmarks-swe3-v1",
+        "name": "Agentic Coding Harness Benchmarks /swe3 / mcp-gateway-registry v1",
+        "variant": "five-task-cross-harness",
+        "task_count": 5,
+        "primary_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/docs/agentic-coding-swe-comparison-swe3.md",
+        "artifact_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/benchmarks/swe-benchmark-data/devstral-2-123b/claude-code/swe3/mcp-gateway-registry/run-summary.json"
+      },
+      "result": {
+        "date": "2026-08-05",
+        "agent_label": "Claude Code",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "target_repository_ref": "1.24.4",
+        "model": "devstral-2-123b",
+        "model_config": "provider=endpoint; instance_type=p5en.48xlarge; tensor_parallel_size=source-null; precision=source-null; context_window=262144",
+        "metric": "mean_task_score_excl_failed",
+        "value": 49.52,
+        "tasks": 5,
+        "scored": 5,
+        "failed": 0,
+        "mean_cost_usd_excl_failed_source_field": 28.77,
+        "tokens_processed_source_task_sum": 28207067,
+        "judge_model": "openai.gpt-5.6-sol",
+        "judge_provider": "codex-exec",
+        "judge_reasoning_effort": "high",
+        "judge_repo_grounded": true
+      },
+      "execution_environment": {
+        "provider": "endpoint",
+        "instance_type": "p5en.48xlarge",
+        "tensor_parallel_size": null,
+        "precision": null,
+        "context_window": 262144
+      },
+      "budget_timeout_repetition": null,
+      "adaptation_reset_policy": null,
+      "provenance": {
+        "publisher": "aarora79/agentic-coding-harness-benchmarks",
+        "checked": true,
+        "immutable_source_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "public_logs": null,
+        "public_trajectories": null,
+        "raw_run_artifacts_public": true
+      },
+      "comparison": {
+        "group": "agentic-coding-swe3-v1__devstral-2-123b__2e31825d",
+        "mode": "candidate-same-model",
+        "scope": "coding-swe"
+      },
+      "unknown_dimensions": [
+        "exact historical Claude Code binary/package version used by this run",
+        "complete historical runner configuration beyond fields serialized in run-summary.json",
+        "task-level retry/top-up history beyond what is serialized in the committed result artifacts",
+        "adaptation/reset state outside the source repository's committed artifacts"
+      ],
+      "notes": "W1 records the pinned run-summary result and source-reported execution metadata only. Candidate grouping does not establish matched-cell eligibility; material configuration differences remain explicit for independent downstream adjudication."
+    },
+    {
+      "observation_id": "pi__agentic-coding-swe3-v1__devstral-2-123b__2e31825d",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "agentic-coding-harness-benchmarks-swe3-v1",
+        "name": "Agentic Coding Harness Benchmarks /swe3 / mcp-gateway-registry v1",
+        "variant": "five-task-cross-harness",
+        "task_count": 5,
+        "primary_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/docs/agentic-coding-swe-comparison-swe3.md",
+        "artifact_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/benchmarks/swe-benchmark-data/devstral-2-123b/pi/swe3/mcp-gateway-registry/run-summary.json"
+      },
+      "result": {
+        "date": "2026-08-05",
+        "agent_label": "pi",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "target_repository_ref": "1.24.4",
+        "model": "devstral-2-123b",
+        "model_config": "provider=endpoint; instance_type=p5en.48xlarge; tensor_parallel_size=source-null; precision=source-null; context_window=262144",
+        "metric": "mean_task_score_excl_failed",
+        "value": 47.64,
+        "tasks": 5,
+        "scored": 5,
+        "failed": 0,
+        "mean_cost_usd_excl_failed_source_field": 0,
+        "tokens_processed_source_task_sum": 18792976,
+        "judge_model": "openai.gpt-5.6-sol",
+        "judge_provider": "codex-exec",
+        "judge_reasoning_effort": "high",
+        "judge_repo_grounded": true
+      },
+      "execution_environment": {
+        "provider": "endpoint",
+        "instance_type": "p5en.48xlarge",
+        "tensor_parallel_size": null,
+        "precision": null,
+        "context_window": 262144
+      },
+      "budget_timeout_repetition": null,
+      "adaptation_reset_policy": null,
+      "provenance": {
+        "publisher": "aarora79/agentic-coding-harness-benchmarks",
+        "checked": true,
+        "immutable_source_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "public_logs": null,
+        "public_trajectories": null,
+        "raw_run_artifacts_public": true
+      },
+      "comparison": {
+        "group": "agentic-coding-swe3-v1__devstral-2-123b__2e31825d",
+        "mode": "candidate-same-model",
+        "scope": "coding-swe"
+      },
+      "unknown_dimensions": [
+        "exact historical pi binary/package version used by this run",
+        "complete historical runner configuration beyond fields serialized in run-summary.json",
+        "task-level retry/top-up history beyond what is serialized in the committed result artifacts",
+        "adaptation/reset state outside the source repository's committed artifacts"
+      ],
+      "notes": "W1 records the pinned run-summary result and source-reported execution metadata only. Candidate grouping does not establish matched-cell eligibility; material configuration differences remain explicit for independent downstream adjudication."
+    },
+    {
+      "observation_id": "claude-code__agentic-coding-swe3-v1__minimax-m2.5__2e31825d",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "agentic-coding-harness-benchmarks-swe3-v1",
+        "name": "Agentic Coding Harness Benchmarks /swe3 / mcp-gateway-registry v1",
+        "variant": "five-task-cross-harness",
+        "task_count": 5,
+        "primary_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/docs/agentic-coding-swe-comparison-swe3.md",
+        "artifact_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/benchmarks/swe-benchmark-data/minimax-m2.5/claude-code/swe3/mcp-gateway-registry/run-summary.json"
+      },
+      "result": {
+        "date": "2026-08-05",
+        "agent_label": "Claude Code",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "target_repository_ref": "1.24.4",
+        "model": "minimax-m2.5",
+        "model_config": "provider=endpoint; instance_type=p5en.48xlarge; tensor_parallel_size=4; precision=fp8; context_window=196608",
+        "metric": "mean_task_score_excl_failed",
+        "value": 48.36,
+        "tasks": 5,
+        "scored": 5,
+        "failed": 0,
+        "mean_cost_usd_excl_failed_source_field": 39.51,
+        "tokens_processed_source_task_sum": 39029592,
+        "judge_model": "openai.gpt-5.6-sol",
+        "judge_provider": "codex-exec",
+        "judge_reasoning_effort": "high",
+        "judge_repo_grounded": true
+      },
+      "execution_environment": {
+        "provider": "endpoint",
+        "instance_type": "p5en.48xlarge",
+        "tensor_parallel_size": 4,
+        "precision": "fp8",
+        "context_window": 196608
+      },
+      "budget_timeout_repetition": null,
+      "adaptation_reset_policy": null,
+      "provenance": {
+        "publisher": "aarora79/agentic-coding-harness-benchmarks",
+        "checked": true,
+        "immutable_source_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "public_logs": null,
+        "public_trajectories": null,
+        "raw_run_artifacts_public": true
+      },
+      "comparison": {
+        "group": "agentic-coding-swe3-v1__minimax-m2.5__2e31825d",
+        "mode": "candidate-same-model",
+        "scope": "coding-swe"
+      },
+      "unknown_dimensions": [
+        "exact historical Claude Code binary/package version used by this run",
+        "complete historical runner configuration beyond fields serialized in run-summary.json",
+        "task-level retry/top-up history beyond what is serialized in the committed result artifacts",
+        "adaptation/reset state outside the source repository's committed artifacts"
+      ],
+      "notes": "W1 records the pinned run-summary result and source-reported execution metadata only. Candidate grouping does not establish matched-cell eligibility; material configuration differences remain explicit for independent downstream adjudication."
+    },
+    {
+      "observation_id": "pi__agentic-coding-swe3-v1__minimax-m2.5__2e31825d",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "agentic-coding-harness-benchmarks-swe3-v1",
+        "name": "Agentic Coding Harness Benchmarks /swe3 / mcp-gateway-registry v1",
+        "variant": "five-task-cross-harness",
+        "task_count": 5,
+        "primary_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/docs/agentic-coding-swe-comparison-swe3.md",
+        "artifact_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/benchmarks/swe-benchmark-data/minimax-m2.5/pi/swe3/mcp-gateway-registry/run-summary.json"
+      },
+      "result": {
+        "date": "2026-08-05",
+        "agent_label": "pi",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "target_repository_ref": "1.24.4",
+        "model": "minimax-m2.5",
+        "model_config": "provider=endpoint; instance_type=p5en.48xlarge; tensor_parallel_size=4; precision=fp8; context_window=196608",
+        "metric": "mean_task_score_excl_failed",
+        "value": 45.08,
+        "tasks": 5,
+        "scored": 5,
+        "failed": 0,
+        "mean_cost_usd_excl_failed_source_field": null,
+        "tokens_processed_source_task_sum": 21179892,
+        "judge_model": "openai.gpt-5.6-sol",
+        "judge_provider": "codex-exec",
+        "judge_reasoning_effort": "high",
+        "judge_repo_grounded": true
+      },
+      "execution_environment": {
+        "provider": "endpoint",
+        "instance_type": "p5en.48xlarge",
+        "tensor_parallel_size": 4,
+        "precision": "fp8",
+        "context_window": 196608
+      },
+      "budget_timeout_repetition": null,
+      "adaptation_reset_policy": null,
+      "provenance": {
+        "publisher": "aarora79/agentic-coding-harness-benchmarks",
+        "checked": true,
+        "immutable_source_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "public_logs": null,
+        "public_trajectories": null,
+        "raw_run_artifacts_public": true
+      },
+      "comparison": {
+        "group": "agentic-coding-swe3-v1__minimax-m2.5__2e31825d",
+        "mode": "candidate-same-model",
+        "scope": "coding-swe"
+      },
+      "unknown_dimensions": [
+        "exact historical pi binary/package version used by this run",
+        "complete historical runner configuration beyond fields serialized in run-summary.json",
+        "task-level retry/top-up history beyond what is serialized in the committed result artifacts",
+        "adaptation/reset state outside the source repository's committed artifacts"
+      ],
+      "notes": "W1 records the pinned run-summary result and source-reported execution metadata only. Candidate grouping does not establish matched-cell eligibility; material configuration differences remain explicit for independent downstream adjudication."
+    },
+    {
+      "observation_id": "claude-code__agentic-coding-swe3-v1__qwen3.6-35b__2e31825d",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "agentic-coding-harness-benchmarks-swe3-v1",
+        "name": "Agentic Coding Harness Benchmarks /swe3 / mcp-gateway-registry v1",
+        "variant": "five-task-cross-harness",
+        "task_count": 5,
+        "primary_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/docs/agentic-coding-swe-comparison-swe3.md",
+        "artifact_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/benchmarks/swe-benchmark-data/qwen3.6-35b/claude-code/swe3/mcp-gateway-registry/run-summary.json"
+      },
+      "result": {
+        "date": "2026-08-03",
+        "agent_label": "Claude Code",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "target_repository_ref": "1.24.4",
+        "model": "qwen3.6-35b",
+        "model_config": "provider=endpoint; instance_type=g6e.12xlarge; tensor_parallel_size=source-null; precision=source-null; context_window=200000",
+        "metric": "mean_task_score_excl_failed",
+        "value": 48.16,
+        "tasks": 5,
+        "scored": 5,
+        "failed": 0,
+        "mean_cost_usd_excl_failed_source_field": 38.92,
+        "tokens_processed_source_task_sum": 37817544,
+        "judge_model": "openai.gpt-5.6-sol",
+        "judge_provider": "codex-exec",
+        "judge_reasoning_effort": "high",
+        "judge_repo_grounded": true
+      },
+      "execution_environment": {
+        "provider": "endpoint",
+        "instance_type": "g6e.12xlarge",
+        "tensor_parallel_size": null,
+        "precision": null,
+        "context_window": 200000
+      },
+      "budget_timeout_repetition": null,
+      "adaptation_reset_policy": null,
+      "provenance": {
+        "publisher": "aarora79/agentic-coding-harness-benchmarks",
+        "checked": true,
+        "immutable_source_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "public_logs": null,
+        "public_trajectories": null,
+        "raw_run_artifacts_public": true
+      },
+      "comparison": {
+        "group": "agentic-coding-swe3-v1__qwen3.6-35b__2e31825d",
+        "mode": "candidate-same-model",
+        "scope": "coding-swe"
+      },
+      "unknown_dimensions": [
+        "exact historical Claude Code binary/package version used by this run",
+        "complete historical runner configuration beyond fields serialized in run-summary.json",
+        "task-level retry/top-up history beyond what is serialized in the committed result artifacts",
+        "adaptation/reset state outside the source repository's committed artifacts"
+      ],
+      "notes": "W1 records the pinned run-summary result and source-reported execution metadata only. Candidate grouping does not establish matched-cell eligibility; material configuration differences remain explicit for independent downstream adjudication."
+    },
+    {
+      "observation_id": "pi__agentic-coding-swe3-v1__qwen3.6-35b__2e31825d",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "agentic-coding-harness-benchmarks-swe3-v1",
+        "name": "Agentic Coding Harness Benchmarks /swe3 / mcp-gateway-registry v1",
+        "variant": "five-task-cross-harness",
+        "task_count": 5,
+        "primary_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/docs/agentic-coding-swe-comparison-swe3.md",
+        "artifact_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/benchmarks/swe-benchmark-data/qwen3.6-35b/pi/swe3/mcp-gateway-registry/run-summary.json"
+      },
+      "result": {
+        "date": "2026-08-06",
+        "agent_label": "pi",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "target_repository_ref": "1.24.4",
+        "model": "qwen3.6-35b",
+        "model_config": "provider=endpoint; instance_type=g6e.12xlarge; tensor_parallel_size=4; precision=BF16; context_window=200000",
+        "metric": "mean_task_score_excl_failed",
+        "value": 52.3,
+        "tasks": 5,
+        "scored": 4,
+        "failed": 1,
+        "mean_cost_usd_excl_failed_source_field": null,
+        "tokens_processed_source_task_sum": 19066601,
+        "judge_model": "openai.gpt-5.6-sol",
+        "judge_provider": "codex-exec",
+        "judge_reasoning_effort": "high",
+        "judge_repo_grounded": true
+      },
+      "execution_environment": {
+        "provider": "endpoint",
+        "instance_type": "g6e.12xlarge",
+        "tensor_parallel_size": 4,
+        "precision": "BF16",
+        "context_window": 200000
+      },
+      "budget_timeout_repetition": null,
+      "adaptation_reset_policy": null,
+      "provenance": {
+        "publisher": "aarora79/agentic-coding-harness-benchmarks",
+        "checked": true,
+        "immutable_source_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "public_logs": null,
+        "public_trajectories": null,
+        "raw_run_artifacts_public": true
+      },
+      "comparison": {
+        "group": "agentic-coding-swe3-v1__qwen3.6-35b__2e31825d",
+        "mode": "candidate-same-model",
+        "scope": "coding-swe"
+      },
+      "unknown_dimensions": [
+        "exact historical pi binary/package version used by this run",
+        "complete historical runner configuration beyond fields serialized in run-summary.json",
+        "task-level retry/top-up history beyond what is serialized in the committed result artifacts",
+        "adaptation/reset state outside the source repository's committed artifacts"
+      ],
+      "notes": "W1 records the pinned run-summary result and source-reported execution metadata only. Candidate grouping does not establish matched-cell eligibility; material configuration differences remain explicit for independent downstream adjudication."
+    },
+    {
+      "observation_id": "claude-code__agentic-coding-swe3-v1__qwen3-coder-480b__2e31825d",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "agentic-coding-harness-benchmarks-swe3-v1",
+        "name": "Agentic Coding Harness Benchmarks /swe3 / mcp-gateway-registry v1",
+        "variant": "five-task-cross-harness",
+        "task_count": 5,
+        "primary_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/docs/agentic-coding-swe-comparison-swe3.md",
+        "artifact_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/benchmarks/swe-benchmark-data/qwen3-coder-480b/claude-code/swe3/mcp-gateway-registry/run-summary.json"
+      },
+      "result": {
+        "date": "2026-08-05",
+        "agent_label": "Claude Code",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "target_repository_ref": "1.24.4",
+        "model": "qwen3-coder-480b",
+        "model_config": "provider=endpoint; instance_type=p5en.48xlarge; tensor_parallel_size=4; precision=fp8; context_window=200000",
+        "metric": "mean_task_score_excl_failed",
+        "value": 46.32,
+        "tasks": 5,
+        "scored": 5,
+        "failed": 0,
+        "mean_cost_usd_excl_failed_source_field": 58.19,
+        "tokens_processed_source_task_sum": 57520434,
+        "judge_model": "openai.gpt-5.6-sol",
+        "judge_provider": "codex-exec",
+        "judge_reasoning_effort": "high",
+        "judge_repo_grounded": true
+      },
+      "execution_environment": {
+        "provider": "endpoint",
+        "instance_type": "p5en.48xlarge",
+        "tensor_parallel_size": 4,
+        "precision": "fp8",
+        "context_window": 200000
+      },
+      "budget_timeout_repetition": null,
+      "adaptation_reset_policy": null,
+      "provenance": {
+        "publisher": "aarora79/agentic-coding-harness-benchmarks",
+        "checked": true,
+        "immutable_source_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "public_logs": null,
+        "public_trajectories": null,
+        "raw_run_artifacts_public": true
+      },
+      "comparison": {
+        "group": "agentic-coding-swe3-v1__qwen3-coder-480b__2e31825d",
+        "mode": "candidate-same-model",
+        "scope": "coding-swe"
+      },
+      "unknown_dimensions": [
+        "exact historical Claude Code binary/package version used by this run",
+        "complete historical runner configuration beyond fields serialized in run-summary.json",
+        "task-level retry/top-up history beyond what is serialized in the committed result artifacts",
+        "adaptation/reset state outside the source repository's committed artifacts"
+      ],
+      "notes": "W1 records the pinned run-summary result and source-reported execution metadata only. Candidate grouping does not establish matched-cell eligibility; material configuration differences remain explicit for independent downstream adjudication."
+    },
+    {
+      "observation_id": "pi__agentic-coding-swe3-v1__qwen3-coder-480b__2e31825d",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "agentic-coding-harness-benchmarks-swe3-v1",
+        "name": "Agentic Coding Harness Benchmarks /swe3 / mcp-gateway-registry v1",
+        "variant": "five-task-cross-harness",
+        "task_count": 5,
+        "primary_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/docs/agentic-coding-swe-comparison-swe3.md",
+        "artifact_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/benchmarks/swe-benchmark-data/qwen3-coder-480b/pi/swe3/mcp-gateway-registry/run-summary.json"
+      },
+      "result": {
+        "date": "2026-08-05",
+        "agent_label": "pi",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "target_repository_ref": "1.24.4",
+        "model": "qwen3-coder-480b",
+        "model_config": "provider=endpoint; instance_type=p5en.48xlarge; tensor_parallel_size=4; precision=fp8; context_window=200000",
+        "metric": "mean_task_score_excl_failed",
+        "value": 43.96,
+        "tasks": 5,
+        "scored": 5,
+        "failed": 0,
+        "mean_cost_usd_excl_failed_source_field": null,
+        "tokens_processed_source_task_sum": 44404980,
+        "judge_model": "openai.gpt-5.6-sol",
+        "judge_provider": "codex-exec",
+        "judge_reasoning_effort": "high",
+        "judge_repo_grounded": true
+      },
+      "execution_environment": {
+        "provider": "endpoint",
+        "instance_type": "p5en.48xlarge",
+        "tensor_parallel_size": 4,
+        "precision": "fp8",
+        "context_window": 200000
+      },
+      "budget_timeout_repetition": null,
+      "adaptation_reset_policy": null,
+      "provenance": {
+        "publisher": "aarora79/agentic-coding-harness-benchmarks",
+        "checked": true,
+        "immutable_source_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "public_logs": null,
+        "public_trajectories": null,
+        "raw_run_artifacts_public": true
+      },
+      "comparison": {
+        "group": "agentic-coding-swe3-v1__qwen3-coder-480b__2e31825d",
+        "mode": "candidate-same-model",
+        "scope": "coding-swe"
+      },
+      "unknown_dimensions": [
+        "exact historical pi binary/package version used by this run",
+        "complete historical runner configuration beyond fields serialized in run-summary.json",
+        "task-level retry/top-up history beyond what is serialized in the committed result artifacts",
+        "adaptation/reset state outside the source repository's committed artifacts"
+      ],
+      "notes": "W1 records the pinned run-summary result and source-reported execution metadata only. Candidate grouping does not establish matched-cell eligibility; material configuration differences remain explicit for independent downstream adjudication."
+    },
+    {
+      "observation_id": "claude-code__agentic-coding-swe3-v1__claude-haiku-4-5__2e31825d",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "agentic-coding-harness-benchmarks-swe3-v1",
+        "name": "Agentic Coding Harness Benchmarks /swe3 / mcp-gateway-registry v1",
+        "variant": "five-task-cross-harness",
+        "task_count": 5,
+        "primary_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/docs/agentic-coding-swe-comparison-swe3.md",
+        "artifact_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/benchmarks/swe-benchmark-data/claude-haiku-4-5/claude-code/swe3/mcp-gateway-registry/run-summary.json"
+      },
+      "result": {
+        "date": "2026-08-04",
+        "agent_label": "Claude Code",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "target_repository_ref": "1.24.4",
+        "model": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+        "model_config": "provider=bedrock; instance_type=t3.medium; tensor_parallel_size=source-null; precision=source-null; context_window=source-null",
+        "metric": "mean_task_score_excl_failed",
+        "value": 41.08,
+        "tasks": 5,
+        "scored": 5,
+        "failed": 0,
+        "mean_cost_usd_excl_failed_source_field": 0.8,
+        "tokens_processed_source_task_sum": 25364482,
+        "judge_model": "openai.gpt-5.6-sol",
+        "judge_provider": "codex-exec",
+        "judge_reasoning_effort": "high",
+        "judge_repo_grounded": true
+      },
+      "execution_environment": {
+        "provider": "bedrock",
+        "instance_type": "t3.medium",
+        "tensor_parallel_size": null,
+        "precision": null,
+        "context_window": null
+      },
+      "budget_timeout_repetition": null,
+      "adaptation_reset_policy": null,
+      "provenance": {
+        "publisher": "aarora79/agentic-coding-harness-benchmarks",
+        "checked": true,
+        "immutable_source_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "public_logs": null,
+        "public_trajectories": null,
+        "raw_run_artifacts_public": true
+      },
+      "comparison": {
+        "group": "agentic-coding-swe3-v1__claude-haiku-4-5__2e31825d",
+        "mode": "candidate-same-model",
+        "scope": "coding-swe"
+      },
+      "unknown_dimensions": [
+        "exact historical Claude Code binary/package version used by this run",
+        "complete historical runner configuration beyond fields serialized in run-summary.json",
+        "task-level retry/top-up history beyond what is serialized in the committed result artifacts",
+        "adaptation/reset state outside the source repository's committed artifacts",
+        "whether the reported runner host instance type is a material execution difference for the managed model endpoint"
+      ],
+      "notes": "W1 records the pinned run-summary result and source-reported execution metadata only. Candidate grouping does not establish matched-cell eligibility; material configuration differences remain explicit for independent downstream adjudication."
+    },
+    {
+      "observation_id": "pi__agentic-coding-swe3-v1__claude-haiku-4-5__2e31825d",
+      "kind": "system-benchmark-result",
+      "benchmark": {
+        "family_id": "agentic-coding-harness-benchmarks-swe3-v1",
+        "name": "Agentic Coding Harness Benchmarks /swe3 / mcp-gateway-registry v1",
+        "variant": "five-task-cross-harness",
+        "task_count": 5,
+        "primary_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/docs/agentic-coding-swe-comparison-swe3.md",
+        "artifact_source": "https://github.com/aarora79/agentic-coding-harness-benchmarks/blob/2e31825da0840b389928b31fbff0ebead174c96d/benchmarks/swe-benchmark-data/claude-haiku-4-5/pi/swe3/mcp-gateway-registry/run-summary.json"
+      },
+      "result": {
+        "date": "2026-08-05",
+        "agent_label": "pi",
+        "harness_version": null,
+        "harness_revision": null,
+        "benchmark_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "target_repository_ref": "1.24.4",
+        "model": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+        "model_config": "provider=bedrock; instance_type=g6e.12xlarge; tensor_parallel_size=source-null; precision=source-null; context_window=source-null",
+        "metric": "mean_task_score_excl_failed",
+        "value": 47.12,
+        "tasks": 5,
+        "scored": 5,
+        "failed": 0,
+        "mean_cost_usd_excl_failed_source_field": 0.64,
+        "tokens_processed_source_task_sum": 18071729,
+        "judge_model": "openai.gpt-5.6-sol",
+        "judge_provider": "codex-exec",
+        "judge_reasoning_effort": "high",
+        "judge_repo_grounded": true
+      },
+      "execution_environment": {
+        "provider": "bedrock",
+        "instance_type": "g6e.12xlarge",
+        "tensor_parallel_size": null,
+        "precision": null,
+        "context_window": null
+      },
+      "budget_timeout_repetition": null,
+      "adaptation_reset_policy": null,
+      "provenance": {
+        "publisher": "aarora79/agentic-coding-harness-benchmarks",
+        "checked": true,
+        "immutable_source_revision": "2e31825da0840b389928b31fbff0ebead174c96d",
+        "public_logs": null,
+        "public_trajectories": null,
+        "raw_run_artifacts_public": true
+      },
+      "comparison": {
+        "group": "agentic-coding-swe3-v1__claude-haiku-4-5__2e31825d",
+        "mode": "candidate-same-model",
+        "scope": "coding-swe"
+      },
+      "unknown_dimensions": [
+        "exact historical pi binary/package version used by this run",
+        "complete historical runner configuration beyond fields serialized in run-summary.json",
+        "task-level retry/top-up history beyond what is serialized in the committed result artifacts",
+        "adaptation/reset state outside the source repository's committed artifacts",
+        "whether the reported runner host instance type is a material execution difference for the managed model endpoint"
+      ],
+      "notes": "W1 records the pinned run-summary result and source-reported execution metadata only. Candidate grouping does not establish matched-cell eligibility; material configuration differences remain explicit for independent downstream adjudication."
+    }
+  ]
+}
