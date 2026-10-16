@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you reuse the experimental VSM functional-capability research methods or source artifacts, cite this repository and the exact Git commit used."
+title: "OpenSiro VSM Harness Capability"
+authors:
+  - name: "OpenSiro contributors"
+type: software
+abstract: >-
+  Experimental, non-normative research on evidence for the functional
+  capability of autonomous agent harnesses. Citation does not imply that
+  exploratory hypotheses or linked third-party benchmark results are confirmed.
+repository-code: "https://github.com/opensiro/vsm-harness-capability"
+url: "https://github.com/opensiro/vsm-harness-capability"
+keywords:
+  - "agent harness"
+  - "functional capability"
+  - "Viable System Model"
+  - "experimental research"
